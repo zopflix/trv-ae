@@ -9,12 +9,12 @@ export default function policyTravanyaPage() {
 
 export async function generateMetadata() {
     return {
-        title: 'Privacy Policy - Travanya',
-        description: 'Know Travanya privacy policy here to understand how we handle your information. Learn about our commitment to transparency and security. Your privacy matters to us',
+        title: 'Privacy Policy - Travanya.ae',
+        description: 'Explore Travanyas privacy policy here to learn how we manage your information. Discover our dedication to openness & safety. Your privacy is important to us!',
         keywords: ['privacy policy Travanya'],
         openGraph: {
-            title: 'Privacy Policy - Travanya',
-            description: "Know Travanya privacy policy here to understand how we handle your information. Learn about our commitment to transparency and security. Your privacy matters to us",
+            title: 'Privacy Policy - Travanya.ae',
+            description: "Explore Travanya's privacy policy here to learn how we manage your information. Discover our dedication to openness & safety. Your privacy is important to us!",
             url: 'https://www.travanya.com/privacy-policy',
         },
     }
