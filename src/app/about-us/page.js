@@ -8,12 +8,12 @@ export default function aboutTravanyaPage() {
 
 export async function generateMetadata() {
     return {
-        title: 'About Us - Travanya | Your Travel Companion',
-        description: 'Know about Travanya, your cherished travel companion. Delve into our mission, values, and dedication to crafting effortless travel experiences. Come, join the journey with us.',
+        title: 'About Us - Travanya.ae | Your Best Travel Partner',
+        description: 'Get familiar with Travanya, your trusted partner in travel adventures. Know about our purpose, principles & commitment to curating seamless travel encounters.',
         keywords: ['About Travanya'],
         openGraph: {
-            title: 'About Us - Travanya | Your Travel Companion',
-            description: "Know about Travanya, your cherished travel companion. Delve into our mission, values, and dedication to crafting effortless travel experiences. Come, join the journey with us.",
+            title: 'About Us - Travanya.ae | Your Best Travel Partner',
+            description: "Get familiar with Travanya, your trusted partner in travel adventures. Know about our purpose, principles & commitment to curating seamless travel encounters.",
             url: 'https://www.travanya.com/about-us',
         },
     }

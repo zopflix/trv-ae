@@ -22,7 +22,7 @@ export default function ContactUs() {
 
                                 </h2>
                             </div>
-                            <p className="text-center text-md-start">Looking to book flight tickets and holiday packages at budget-friendly prices? Connect with Travanya today for unbeatable holiday packages. We're here 24/7 to assist you with the best deals on airfares, hotels, packages, activities, and transportation. Use our live chat for quick responses and personalised guidance. Customise your tour packages with us – your journey, your way. So, why wait? Share your travel plans now with our experts.</p>
+                            <p className="text-center text-md-start fs-14">Searching for flight tickets and holiday packages at affordable prices? Talk to our travel experts today and get the cheapest airfares in addition to the right guidance on ticket pricing, hotel accommodation, things to do, and transportation. Our team is available 24*7 to assist you with the best and is also available on the live chat to answer all your questions quickly. We take care of all your travel needs together and also let you customise your tour packages the way you want. So what are you waiting for? Just pick up the phone and brief your travel plans to our experts.</p>
                         </div>
                         <div className="col-12 col-md-5">
                             <div className="row subHeading">
@@ -36,12 +36,12 @@ export default function ContactUs() {
 
                                     <p>
                                         <strong>Address</strong>
-                                        <br />Plot 16 HSIIDC IT Park, Sector 22, Panchkula, Haryana 134109, India
+                                        <br /><span className="fs-14">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</span>
                                     </p>
                                 </div>
                                 <div className="col-12 col-md-6">
                                     <p>
-                                        <strong>Email Address :</strong> info@travanya.com
+                                        <strong>Email Address :</strong> info@travanya.ae
                                     </p>
                                     <p>
                                         <strong>Contact N0 :</strong>  +91-800-023-5865

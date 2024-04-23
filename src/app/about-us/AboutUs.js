@@ -36,15 +36,10 @@ export default function AboutUs() {
                         <div className="col-sm-12 col-lg-6 py-3 py-md-0">
                             <div className="row subHeading">
                                 <h2 className="mb-0 fw-normal mb-2 d-flex align-items-center align-items-md-start flex-column">
-                                    <strong className="color-orange">Welcome to Travanya</strong>
+                                    <strong className="color-orange">Welcome to Travanya - Curating Timeless Travel Memories!</strong>
                                 </h2>
                             </div>
-                            <p className="text-center text-md-start">Travanya.com has been helping wanderlust souls accomplish their travel dreams since 2010. Over the years, it has successfully carved a niche in the travel industry by providing easy flight bookings, and end-to-end holiday packages. Available 24*7, our diligent travel agents strive hard to cater to the needs of the travellers by offering the most affordable flight tickets.</p>
-                            <p className="text-center text-md-start">Our professionals understand the requirements meticulously and aim at providing the best flight and holiday deals. Because we understand that bonds become strong when people travel along, we leave no stone unturned to give an experience that will be cherished for ages at a stretch. Travel memories are the best memories that a person can leave behind as a legacy and we know this to the fullest!</p>
-                        </div>
-                        <div className="col-12">
-                            <p className="text-center text-md-start">A perfect antidote for your travel bug, we are an agency you won’t regret putting your trust into. With us, you can be an equal part in choosing the colours and the thickness of the thread and we’ll make sure we knit it into something you can wear forever. We believe in transparency and fulfillling your travel needs at a cost-effective price without any hidden charges.</p>
-                            <p className="text-center text-md-start">We assure you that our easy flight booking process will give you experiences you would want to boast about to everybody around. We are confident about this because we take our mission which is to help travellers quench their thirst for globetrotting at the best prices very seriously. </p>
+                            <p className="text-center text-md-start">Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality. As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
                         </div>
                     </div>
                 </div>
@@ -57,7 +52,7 @@ export default function AboutUs() {
                     </div>
                     <div className="row">
                         <div className="col-12 offset-md-2 col-md-8">
-                            <p className="text-center text-white px-5">At Travanya, we envision redefining travel by crafting seamless journeys where every traveller is the protagonist. Our goal is to make travel a personalized, effortless experience, creating cherished memories and legacies. Transparency, affordability, and empowerment drive our vision for a new era of exploration.</p>
+                            <p className="text-center text-white px-5">At Travanya, we strive to revolutionise the travel experience by curating seamless journeys where every traveller takes centre stage. Our aim is to transform travel into a personalised, effortless adventure, nurturing unforgettable memories and lasting legacies. Transparency, affordability, and empowerment drive our vision for a new era of exploration.</p>
                         </div>
                     </div>
                 </div>
@@ -69,34 +64,34 @@ export default function AboutUs() {
                         <h2 className="mb-0 fw-normal">Why Choose <strong className="color-orange">Travanya?</strong></h2>
                     </div>
                     <div className="row">
-                        <div className="col-12 col-md-6 col-lg-4 p-4 d-flex">
+                        <div className="col-12 col-md-6 col-lg-4 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
-                                <h4>Expertise</h4>
-                                <p className="text-justify">At Travanya, our team of passionate travel enthusiasts and seasoned experts possesses extensive industry knowledge. We leverage this expertise to curate personalized itineraries that align with your travel desires.</p>
+                                <h4 className="fw-bold">Expertise</h4>
+                                <p className="text-justify fs-14">At Travanya, our team comprises passionate travel enthusiasts and seasoned experts with vast industry knowledge. We use this expertise to curate personalised itineraries that match your travel preferences.</p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-5 p-4 d-flex">
+                        <div className="col-12 col-md-6 col-lg-4 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
-                                <h4>Tailored Experiences</h4>
-                                <p className="text-justify">We understand the significance of personalization. Your journey with us is not just a trip; it's a tailored experience crafted to match your unique interests and preferences. We believe in creating memories that resonate with you.</p>
+                                <h4 className="fw-bold">Customised Experiences</h4>
+                                <p className="text-justify fs-14">Recognising the importance of personalisation, we ensure that your time with us transcends beyond a mere trip - it becomes a personalised experience tailored to your individual interests and preferences. Our goal is to craft memories that deeply resonate with you.</p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-3 p-4 d-flex">
+                        <div className="col-12 col-md-6 col-lg-4 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
-                                <h4>Global Reach</h4>
-                                <p className="text-justify">Travanya opens the door to a vast network of trusted partners and suppliers worldwide. This global reach ensures that your travel experiences are not only seamless but also secure, wherever your adventure takes you.</p>
+                                <h4 className="fw-bold">Global Reach</h4>
+                                <p className="text-justify fs-14">Travanya provides access to an extensive network of reliable partners and suppliers across the globe. This global presence guarantees that your travel adventures are not only smooth but also safe, no matter where your journey leads you.</p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-5 p-4 d-flex">
+                        <div className="col-12 col-md-6 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
-                                <h4>Customer Approach</h4>
-                                <p className="text-justify">Your satisfaction is our priority. We are dedicated to providing exceptional service and support throughout every step of your journey. At Travanya, it's not just about booking a trip; it's about creating a travel experience that exceeds your expectations. </p>
+                                <h4 className="fw-bold">Customer Focused</h4>
+                                <p className="text-justify fs-14">At Travanya, your satisfaction comes first. We are committed to delivering outstanding service and assistance at every stage of your journey. For us, it's not just about arranging a trip; it's about crafting a travel experience that goes above and beyond your expectations.</p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-12 col-lg-7 p-4 d-flex">
+                        <div className="col-12 col-md-6 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
-                                <h4>Sustainable Travel With Travanya</h4>
-                                <p className="text-justify">At Travanya, we uphold our responsibility to protect the planet. Committed to sustainability, we promote eco-friendly travel practices, collaborating seamlessly with environmentally conscious partners to diminish our ecological impact. Choose Travanya for a journey that respects and preserves the beauty of our world.</p>
+                                <h4 className="fw-bold">Sustainable Travel With Travanya</h4>
+                                <p className="text-justify fs-14">Travanya takes its commitment to environmental stewardship seriously. Through our dedication to sustainability, we advocate for eco-conscious travel behaviours and work closely with like-minded partners to minimise our ecological footprint. Opt for Travanya for a journey that honours and safeguards the natural beauty of our planet.</p>
                             </div>
                         </div>
                     </div>
@@ -109,13 +104,12 @@ export default function AboutUs() {
                         <div className="col-12 col-md-12">
                             <div className="row subHeading">
                                 <h2 className="mb-0 fw-normal mb-3">
-                                    Become A Part Of The
-                                    <strong className="color-orange"> Travanya Family</strong>
+                                    Become A Part Of The <strong className="color-orange"> Travanya Family</strong>
                                 </h2>
                             </div>
-                            <p>Immerse yourself in the Travanya experience, where each adventure is a chance to discover, grow, and create enduring memories. Allow us to be your trusted travel companion, navigating you through diverse landscapes and cultures across the globe.</p>
+                            <p>Start your travel journey with Travanya, where every expedition offers opportunities for exploration, personal development, and the making of lasting memories. Let us accompany you as your reliable travel partner, guiding you through a myriad of landscapes and cultures worldwide.</p>
                             <div className="col-12 col-lg-12">
-                                <em>So, leave the planning to us – we do it well. Your journey with Travanya is not just a trip; it's an experience designed for you, by us. </em>
+                                <em>So, leave the planning to us – it's our expertise. Your journey with Travanya is more than just a journey; it's a tailored experience crafted for you, by us.</em>
                             </div>
                         </div>
                     </div>
