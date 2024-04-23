@@ -1,0 +1,77 @@
+.userLoginForms .modal-dialog {
+    transform: translate(0px, -50%) !important;
+    top: 50%;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0px;
+}
+
+.FormGroup select,
+.FormGroup input {
+    font-size: 14px;
+    border-radius: 10px;
+    height: 45px;
+    padding-left: 55px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.FormGroup .PhoneNum input {
+    padding-left: 85px !important;
+}
+
+.FormGroup select:focus,
+.FormGroup select:hover,
+.FormGroup input:focus,
+.FormGroup input:hover {
+    border-color: var(--color-blue);
+    background-color: transparent;
+}
+
+.FormGroup .icon {
+    height: 40px;
+    padding: 6px 10px;
+    border-right: 1px solid #f3f3f9;
+    z-index: 1;
+}
+
+.FormGroup label {
+    font-size: 13px;
+}
+
+.FormGroup .enquireBtn {
+    height: 50px;
+    background: transparent linear-gradient(252deg, #FB825D 0%, #FE3D00 100%) 0% 0% no-repeat padding-box;
+    transition: 0.5s;
+}
+
+.FormGroup .enquireBtn:hover {
+    box-shadow: 0px 10px 20px #FAD9CD;
+}
+
+
+.HoliDayModifyForm .PhnEmail input{
+    height: 53px;
+}
+
+/* media start */
+
+@media(max-width:767px) {
+    .HoliDayModifyForm .PhnEmail{
+        border-top: 0px !important;
+    }
+}
+
+@media(max-width:991px) {
+    .userLoginForms .modal-dialog {
+        max-width: 500px;
+    }
+
+}
+
+@media(min-width:992px) {
+    .userLoginForms .modal-content .modal-body {
+        padding: 0;
+    }
+}

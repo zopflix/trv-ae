@@ -1,0 +1,231 @@
+:root {
+  --main-grey: #f3f3f7;
+}
+
+.custom-screen-active-splash-screen.border {
+  border-color: var(--color-blue) !important;
+  background-color: var(--color-light-blue);
+}
+
+.hr-line {
+  width: 100%;
+  height: 1px;
+  background-color: #f3f3f7;
+  display: inline-block;
+}
+
+.yello-bg {
+  background-color: #FFE9CC;
+}
+
+.border-yellow {
+  border: 1px solid #FF9300;
+}
+
+div.border-top-yellow {
+  border-top-color: #FF9300 !important;
+}
+
+div.border-bottom-yellow {
+  border-bottom-color: #FF9300 !important;
+}
+
+div.border-right-yellow {
+  border-right-color: #FF9300 !important;
+}
+
+.h-5 {
+  height: 5px;
+}
+
+.h-10 {
+  height: 10px;
+}
+
+.h-15 {
+  height: 15px;
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.h-30 {
+  height: 30px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.first-mat-box {
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+}
+
+.last-mat-box {
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+}
+
+.splash-code::before {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  -webkit-animation: shine .75s infinite;
+  animation: shine .75s infinite;
+}
+
+.splash-page {
+  overflow-x: hidden;
+}
+
+@keyframes shine {
+  0% {}
+
+  100% {
+    left: 125%;
+  }
+}
+
+/* .splash-page {
+  background-color: #f3f3f7;
+} */
+
+.splash-bg-grey {
+  background-color: var(--main-grey);
+}
+
+.splash-code hr {
+  background-color: var(--main-grey);
+}
+
+.tc-text {
+  color: transparent;
+}
+
+.splash-code {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.splash-air-progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.deeplink-splash .splash-air-progress-bar {
+  margin-top: 0px !important;
+  padding-top: 50px !important;
+}
+
+.splash-air-animation-bar {
+  animation: splash-air 20s;
+  animation-fill-mode: forwards;
+  background-color: #ff690f;
+  height: 10px;
+  position: relative;
+}
+
+.splash-air-animation-bar.go {
+  animation: splash-air-go 1s;
+  animation-fill-mode: forwards;
+}
+
+.splash-air-animation-bar::before {
+  position: absolute;
+  content: '/';
+  color: transparent;
+  background-image: url('https://assets.faremaze.com/animation-air-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right right;
+  /* animation: splash-air-icon 40s infinite; */
+  width: 40px;
+  height: 42px;
+  background-size: cover;
+  top: -16px;
+  right: 2px;
+  z-index: 2;
+}
+
+.splash-air-animation-bar::after {
+  position: absolute;
+  content: '/';
+  color: transparent;
+  width: 40px;
+  height: 10px;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  background-color: #f3f3f7;
+}
+
+@keyframes splash-air {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes splash-air-go {
+  from {
+    width: 90%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.flight_search.splash-ani {
+  padding-top: 0px;
+}
+
+@media(max-width:991px) {
+  .mob-hide {
+    display: none;
+  }
+
+  .splash-code::before {
+    display: none;
+  }
+}
+
+.SplashLoader {
+  margin: auto;
+  border: 10px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 10px solid var(--color-blue);
+  width: 150px;
+  height: 150px;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.SlashLoaderAir {
+  color: var(--color-blue);
+}

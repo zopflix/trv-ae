@@ -1,0 +1,978 @@
+:root {
+    --color-blue: #08537c;
+    --color-light-blue: #E8F7FF;
+    --color-orange: #e0552c;
+    --color-grey: #F5F6F8;
+    --color-red: red;
+    --color-green: green;
+}
+
+/* Header Css start */
+
+header {
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+header.sticky {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+    top: 0px;
+}
+
+.languageChanger {
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+header nav .nav-item a.title {
+    font-size: 20px;
+}
+
+header nav .nav-item a {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+header nav .nav-item ul li a {
+    color: #707070;
+}
+
+header nav .nav-item .dropdown-menu .col-lg-6 a {
+    opacity: 0.9;
+}
+
+header nav .nav-item>a {
+    padding: 20px 0px;
+}
+
+header nav .nav-item a:hover,
+header nav .nav-item a.active {
+    color: var(--color-orange) !important;
+}
+
+header nav .nav-item .dropdown-menu {
+    box-shadow: 0px 3px 10px #0000004D;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 60px;
+}
+
+header nav li.nav-item.dropdown,
+header nav {
+    position: unset !important;
+}
+
+header .container {
+    position: relative;
+}
+
+header nav .nav-item .dropdown-menu a:active {
+    background-color: var(--color-grey);
+    color: #000;
+}
+
+header nav .nav-item .accordion-header button::after {
+    width: 20px;
+    height: 15px;
+    background-position: right center;
+    background-size: 15px;
+}
+
+header nav .nav-item ul li a {
+    color: #707070;
+}
+
+header nav .nav-item .accordion-header button::after {
+    width: 20px;
+    height: 15px;
+    background-position: right center;
+    background-size: 15px;
+}
+
+header .accordion .accordion-button.collapsed .showLessbtn,
+header .accordion .accordion-button .readMorebtn {
+    display: none;
+}
+
+header .accordion .accordion-button.collapsed .readMorebtn {
+    display: block;
+}
+
+/* Header Css END */
+
+
+/* top flight details css start */
+
+.DealsTabs .nav-item .nav-link {
+    border-bottom: 2px solid #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.DealsTabs .nav-item .nav-link.active {
+    border-color: var(--color-orange);
+    color: var(--color-orange) !important;
+}
+
+.topFlightDetails .tab-content {
+    background-color: #FFF6F3;
+    padding: 20px;
+}
+
+.topFlightDetailsList {
+    padding: 15px 0px;
+    transition: 0.4s;
+}
+
+.topFlightDetailsList:hover {
+    box-shadow: 0px 16px 30px #FFC9B8;
+}
+
+.topFlightDetailsList h3 {
+    font-size: 20px;
+}
+
+/* top flight details css end */
+
+
+/* Domestic Flights css start */
+
+.DealsReviewBox {
+    width: 90%;
+    margin: -15px auto 0px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 5px 15px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.DubaiDealsBox {
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+}
+
+.DubaiDealsBox .cityDealsImg img {
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+.DubaiDealsBox:hover .cityDealsImg img {
+    transform: scale(1.2);
+}
+
+.blogBoxImg img {
+    border-radius: 10px;
+}
+
+/* Domestic Flights css end */
+
+.SubscribeNewsBox {
+    background-image: url('https://assets.shipratravel.com/trv/subscribe-img.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.SubscribeNewsForm input.mailField {
+    height: 55px;
+}
+
+.SubscribeNewsForm .form-check input {
+    border: 1px solid var(--color-orange);
+}
+
+.SubscribeNewsForm .form-check input:checked {
+    background-color: var(--color-orange) !important;
+    border-color: var(--color-orange) !important;
+}
+
+footer .main-logo img {
+    max-width: 200px;
+}
+
+footer ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 4px 0px;
+    display: inline-block;
+}
+
+footer ul li a:hover {
+    color: var(--color-orange);
+}
+
+.SubscribeNewsForm form button {
+    background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
+    font-size: 14px;
+}
+
+.footerPaymetnCArd {
+    max-width: 600px !important;
+}
+
+/* Slick Slider Css start */
+
+
+.slick-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-slider .slick-arrow {
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    color: transparent;
+    background-color: transparent;
+    border-radius: 50%;
+    background-image: url('https://assets.neofares.com/all-icon/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.slick-track .slick-slide {
+    float: left;
+    padding: 0px 10px;
+}
+
+.matrix-slider .slick-track .slick-slide {
+    padding: 0px !important;
+}
+
+.slick-slider .slick-arrow.slick-prev {
+    transform: rotate(180deg);
+}
+
+.slick-slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+}
+
+.packageBox .packageNum {
+    top: 30px;
+    right: 0px;
+    background-color: var(--color-blue);
+    padding: 8px 20px;
+    border-radius: 25px 0px 0px 25px;
+    font-size: 14px;
+}
+
+.packageBox .packageTitleBox {
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+    left: 15px;
+    right: 15px;
+    margin: auto;
+}
+
+/* Slick Slider Css end */
+
+.HolidayTitle {
+    background-color: #fff;
+    color: #333333;
+    padding: 12px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.HolidayCategoriesNavTabs .nav .nav-link.active .HolidayTitle,
+.HolidayCategoriesNavTabs .nav .nav-link:hover .HolidayTitle {
+    background-color: var(--color-orange);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.HolidayCategoriesNavTabs .nav .nav-link .HolidayThumImg {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.HolidayCategoriesNavTabs .nav .nav-link.active .HolidayThumImg,
+.HolidayCategoriesNavTabs .nav .nav-link:hover .HolidayThumImg {
+    border-radius: 50% !important;
+}
+
+.HolidayCategoriesPostImg {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.HolidayCategoriesPostImg img {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.HolidayCategoriesPostImg:hover img {
+    transform: scale(1.1);
+}
+
+.HolidayCategoriesPostImg .DealsReviewBox {
+    bottom: 15px !important;
+}
+
+.BlogBanner {
+    background-image: url('https://assets.shipratravel.com/trv/banner-fm.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.BlogBox a img.mainImg {
+    transition: 0.4s;
+}
+
+.BlogSearch input {
+    height: 60px;
+    border-right: 0px;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 14px;
+}
+
+.BlogSearch input:focus {
+    box-shadow: unset !important;
+    border-color: var(--color-blue);
+}
+
+.BlogSearch button {
+    background-color: var(--color-blue);
+    border: 0px;
+    border-radius: 0px 8px 8px 0px;
+    transition: 0.4s;
+}
+
+.BlogSearch button:hover {
+    background-color: var(--color-orange);
+}
+
+.BlogBox a:hover img.mainImg {
+    box-shadow: 10px 4px 15px #00000029;
+}
+
+.BlogSearchForm .FormConrrol input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.BlogSearchForm .FormConrrol label {
+    top: -7px;
+}
+
+.BlogSearchForm .FlightChangerBtn {
+    bottom: -32px;
+    z-index: 1;
+}
+
+.BlogSearchForm button.SearchBtn {
+    background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
+    font-size: 14px;
+}
+
+.TripBtn {
+    background-color: #FDF5F2;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.TripBtn button {
+    border-radius: 25px;
+    border: 0px;
+    font-size: 14px;
+    padding: 5px 15px;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.TripBtn button.active {
+    background-color: #fff !important;
+}
+
+.TripBtn button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.spaceDivider {
+    height: 30px;
+}
+
+.chooseBox .chooseBoxIcon {
+    height: 80px !important;
+    width: 80px !important;
+    padding-top: 20px;
+    transition: 0.4s;
+}
+
+.chooseBox .chooseBoxIcon:hover {
+    border-radius: 50% !important;
+}
+
+.BlogAuthorBox {
+    background: transparent linear-gradient(270deg, #12547C 0%, #27A4EF 100%) 0% 0% no-repeat padding-box;
+}
+
+.AuthorSocialAccount a {
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.AuthorSocialAccount a:hover {
+    opacity: 1;
+}
+
+.VisaFreeBox .packageTitleBox {
+    bottom: 20px;
+    width: 90%;
+}
+
+.VisaFreeBoxOverly {
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0px;
+    transition: 1s;
+    bottom: 0px;
+}
+
+.VisaFreeBox:hover .VisaFreeBoxOverly {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.VisaFreeBoxOverly .countryName {
+    transform: translate(0px, -50%);
+}
+
+.VisaFreeBox {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.VisaFreeBox img {
+    transition: 1s;
+    transform: scale(1);
+    height: 363px !important;
+}
+
+.VisaFreeBox:hover img {
+    transform: scale(1.2);
+}
+
+.innerPageTitle {
+    font-size: 50px;
+    background: url('https://assets.neofares.com/search-bg.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.vision-block {
+    background-image: url('https://assets.shipratravel.com/trv/banner-fm.webp');
+    background-attachment: fixed;
+    background-position: center, center;
+}
+
+.trv-card-2 {
+    border-radius: 4px;
+    background: var(--color-grey);
+    padding: 30px 40px 30px;
+    border: 1px solid var(--color-orange);
+    margin-bottom: 60px;
+    position: relative;
+    box-shadow: 0 10px 15px 0 var(--color-grey);
+    transition: .5s;
+}
+
+.trv-card-2 h4 {
+    position: relative;
+    top: 0px;
+    font-weight: 700;
+    /* font-size: 30px; */
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    color: var(--color-orange);
+    text-decoration: underline;
+}
+
+ul.trv-list-type-2 li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+ul.trv-list-type-2 li:after {
+    content: "";
+    width: 25px;
+    position: absolute;
+    height: 25px;
+    left: -31px;
+    background-image: url('https://assets.shipratravel.com/trv/icon/blogs-icon.png');
+    transform: rotate(0deg);
+    top: 0;
+    border-radius: 50px;
+    border: 1px solid #f05228;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 5px;
+}
+
+.air-bag-fee-detail a {
+    transition: 0.3s;
+}
+
+.air-bag-fee-detail a:hover {
+    color: var(--color-orange) !important;
+}
+
+.checkin-article a {
+    transition: 0.4s;
+}
+
+.checkin-article a:hover {
+    box-shadow: 0px 6px 14px #0000003D;
+}
+
+.SingleBlogList li {
+    background-position: left 10px;
+    background-image: url('https://assets.shipratravel.com/trv/icon/arrow-right-circle-icon.png');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    padding: 5px 0px 5px 30px;
+}
+
+.siteMapLink a {
+    transition: 0.3s;
+}
+
+.siteMapLink a:hover {
+    color: var(--color-orange) !important;
+}
+
+.siteMapLink a i {
+    transition: 0.3s;
+    margin-left: 1px !important;
+}
+
+.siteMapLink a:hover i {
+    margin-left: 5px !important;
+}
+
+.DotList li::marker {
+    background-color: var(--color-orange);
+    color: var(--color-orange);
+}
+
+.tab-content .slick-slider {
+    margin: 0px -15px;
+}
+
+.ReviewBar a {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.TopFlightDeals .slick-list {
+    margin: 0px -15px;
+}
+
+.NotFoundPage {
+    max-width: 1180px;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.DealsOfferBox .PromoCode {
+    border: 2px dashed #ABABAB !important;
+}
+
+.DealsOfferBox {
+    transition: 0.4s;
+}
+
+.DealsOfferBox:hover {
+    box-shadow: 0px 5px 15px #bfbfbf !important;
+}
+
+.GoogleReviews .viewContent {
+    overflow: auto;
+    height: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    width: 100%;
+}
+
+.PymentForm button {
+    background-color: var(--color-orange);
+    color: #fff;
+    border: 0px;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.PymentForm button:hover {
+    background-color: var(--color-blue);
+}
+
+/* Payment Method Css Start */
+
+.PaymentMethorMenu .nav-pills li {
+    padding: 10px 0px;
+}
+
+.PaymentMethorMenu .nav-pills li button {
+    width: 100%;
+    text-align: left;
+    color: #000;
+    background-color: transparent;
+    border-left: 3px solid transparent;
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.PaymentMethorMenu .nav-pills li button.active,
+.PaymentMethorMenu .nav-pills li button:hover {
+    background-color: var(--color-light-blue);
+    color: #000;
+    border-left-color: var(--color-blue);
+    color: var(--color-blue);
+}
+
+/* Payment Method Css end */
+
+/* media start */
+
+@media(max-width:767px) {
+
+    .VisaFreeBox img {
+        height: auto !important;
+    }
+
+    .ReviewBar a {
+        margin: 0px 10px;
+    }
+
+    .DealsTabs {
+        justify-content: start !important;
+    }
+
+    .topFlightDetails .tab-content {
+        padding: 10px 15px;
+    }
+
+    .topFlightDetailsList h3 {
+        font-size: 16px;
+    }
+
+    .SubscribeNewsForm h2 {
+        font-size: 16px !important;
+    }
+
+    .slick-slider .slick-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .subHeading h2 {
+        font-size: 24px;
+    }
+
+    div.HolidayCategoriesNavTabs {
+        padding: 10px !important;
+        border-radius: 5px !important;
+    }
+
+    .last-footer p {
+        font-size: 12px !important;
+    }
+
+    .BlogAuthorBox .AuthorName {
+        font-size: 18px !important;
+    }
+
+    .topFlightDetailsList .airLogo {
+        width: 40px !important;
+        margin-bottom: 10px;
+    }
+
+    .topFlightDetailsList .InquireBox {
+        background-color: #f1f7ff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .topFlightDetailsList .InquireBox button {
+        margin-top: 0px !important;
+        margin-left: 30px;
+        max-width: 100px;
+    }
+}
+
+@media(min-width:992px) {
+
+    body {
+        padding-top: 73px;
+    }
+
+    body html body {
+        padding-top: 0px !important;
+    }
+
+    .NotFoundPage>.row {
+        position: absolute;
+        top: 50%;
+        transform: translate(0px, -50%);
+    }
+
+    header nav .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .slick-slider .slick-arrow.slick-prev {
+        right: unset;
+        left: -40px;
+    }
+
+    .slick-slider .slick-arrow.slick-next {
+        right: -40px;
+    }
+
+    .neo-card-2 {
+        border-radius: 18px;
+        background: var(--color-light-blue);
+        padding: 40px 40px 20px;
+        border: 1px solid var(--color-blue);
+        margin-bottom: 60px;
+        position: relative;
+        box-shadow: 0 10px 15px 0 #eee;
+        transition: .5s;
+    }
+
+    .neo-card-2 h4 {
+        position: absolute;
+        top: -30px;
+        font-weight: 700;
+        font-size: 22px;
+        background: #fff;
+        padding: 10px 30px;
+        border-radius: 40px;
+        box-shadow: inset 0 -1px var(--color-blue);
+        color: var(--color-blue);
+    }
+
+    ul.neo-list-type-2 li {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    ul.neo-list-type-2 li:after {
+        content: "";
+        width: 25px;
+        position: absolute;
+        height: 25px;
+        left: -31px;
+        background-image: url('https://assets.neofares.com/all-icon/left.png');
+        transform: rotate(180deg);
+        top: 0;
+        border-radius: 50px;
+        border: 1px solid #00cdacb8;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 5px;
+    }
+
+    .HolidayTabContentWrap .tab-pane {
+        max-height: 530px;
+        overflow: auto;
+        padding: 0px 20px;
+    }
+
+    /* width */
+    .HolidayTabContentWrap .tab-pane::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .HolidayTabContentWrap .tab-pane::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    .HolidayTabContentWrap .tab-pane::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+
+    .SubscribeNewsForm {
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    .packageBox {
+        overflow: hidden;
+    }
+
+    .packageBox .packageImgBox {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .packageBox .packageImgBox img {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+
+    .packageBox:hover .packageImgBox img {
+        transform: scale(1);
+    }
+
+    .packageBox .packageNum {
+        right: -50%;
+        transition: 0.5s;
+    }
+
+    .packageBox:hover .packageNum {
+        right: 0px;
+    }
+}
+
+@media(max-width:991px) {
+
+    .TopFlightDeals .slick-track {
+        display: flex;
+    }
+
+    body {
+        padding-top: 48px;
+    }
+
+    body html body {
+        padding-top: 0px !important;
+    }
+
+    .HolidayCategoriesNavTabs .nav-pills {
+        flex-direction: unset !important;
+    }
+
+    .HolidayCategoriesNavTabs .nav-pills .nav-link {
+        width: auto !important;
+    }
+
+    .HolidayCategoriesNavTabs .nav-pills .nav-link .HolidayTitle {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .slick-slider .slick-arrow.slick-prev {
+        right: unset;
+        left: 0px;
+    }
+
+    .slick-slider .slick-arrow.slick-next {
+        right: 0px;
+    }
+
+    header .offcanvas-body .navbar-nav li a {
+        font-size: 14px;
+        color: #000;
+    }
+
+    header .offcanvas {
+        max-width: 280px;
+    }
+
+    header .offcanvas .offcanvas-title img {
+        width: 130px !important;
+    }
+
+    .neo-card-2 h4 {
+        font-size: 20px;
+        color: var(--color-blue);
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    .innerPageTitle {
+        font-size: 24px;
+    }
+
+    .neo-card-2 p {
+        font-size: 13px;
+    }
+
+    ul.neo-list-type-2 {
+        list-style: disc;
+        padding-left: 20px !important;
+    }
+
+    ul.neo-list-type-2 li {
+        font-size: 13px;
+        margin: 5px 0px;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+    .VisaFreeBox img {
+        height: 280px !important;
+    }
+
+    .BlogAuthorBox .AuthorName {
+        font-size: 20px !important;
+    }
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+    .topFlightDetailsList h3 {
+        font-size: 18px !important;
+    }
+}
+
+@media(min-width:992px) and (max-width:1399px) {
+
+    .VisaFreeBox img {
+        height: 340px !important;
+    }
+}

@@ -1,0 +1,608 @@
+:root {
+    --color-blue: #08537c;
+    --color-light-blue: #E8F7FF;
+    --color-orange: #e0552c;
+    --color-light-orange: #FDF5F2;
+    --color-grey: #F5F6F8;
+    --color-red: red;
+    --color-green: green;
+}
+
+/* Side Filter Css start */
+
+.SideFilter .accordion-button {
+    box-shadow: unset !important;
+}
+
+.SideFilter .accordion .accordion-item:nth-child(1) {
+    border-top: 0px !important;
+}
+
+.SideFilter .accordion-item {
+    border: 0px !important;
+    border-top: 1px solid #5757571F !important;
+    border-radius: 0px !important;
+}
+
+.breadcrumb .breadcrumb-item {
+    font-size: 14px;
+}
+
+.breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: var(--color-orange);
+}
+
+/* Side Filter Css end */
+
+.FlightInfoDetailWraper .nav-pills.InfoTabs .nav-link {
+    background-color: #fff !important;
+    color: var(--color-blue) !important;
+    border: 1px solid var(--color-blue) !important;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.FlightInfoDetailWraper .nav-pills.InfoTabs .nav-link.active,
+.FlightInfoDetailWraper .nav-pills.InfoTabs .nav-link:hover {
+    background-color: var(--color-orange) !important;
+    color: #fff !important;
+    border-color: var(--color-orange) !important;
+}
+
+.FlightInfoDetailWraper .nav-pills.departFlightTabs {
+    background-color: #E7EEF2 !important;
+    border-radius: 25px;
+}
+
+.FlightInfoDetailWraper .nav-pills.departFlightTabs .nav-link {
+    background-color: #E7EEF2 !important;
+    color: #3B3B3B !important;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 8px 30px;
+}
+
+.FlightInfoDetailWraper .nav-pills.departFlightTabs .nav-link.active {
+    background-color: var(--color-blue) !important;
+    color: #fff !important;
+}
+
+.DicsList {
+    list-style: disc;
+}
+
+.DicsList li {
+    font-size: 12px;
+    margin: 10px 0px;
+}
+
+.AccommadationBox {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.AccommadationBox.active {
+    background-color: var(--color-blue);
+}
+
+.AccommadationBox.active .buttonStyle5 {
+    background-color: green !important;
+    border-color: green !important;
+    color: #fff !important;
+}
+
+.AccommadationBox.active p {
+    color: #fff !important;
+}
+
+.InclusionsList {
+    list-style: disc;
+    padding-left: 20px !important;
+}
+
+.InclusionsList li {
+    font-size: 13px;
+    margin: 10px 0px;
+    opacity: 0.8;
+}
+
+.InclusionsList li::marker {
+    color: var(--color-orange);
+}
+
+.AccommadationSelectButton {
+    z-index: 9;
+}
+
+.FlightInfoSideBarWrap .dropdown-menu {
+    box-shadow: 0 20px 20px #20202030;
+}
+
+#Itinerary .accordion-item .accordion-header button::before {
+    content: '/';
+    color: transparent;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-orange);
+    transform: rotate(-40deg);
+    left: 65px;
+    position: absolute;
+    top: 26px;
+}
+
+.ItineraryAccordionMain {
+    position: relative;
+}
+
+.ItineraryAccordionMain::before {
+    content: '/';
+    color: transparent;
+    width: 1px;
+    bottom: 25px;
+    top: 25px;
+    background-color: transparent;
+    left: 69px;
+    position: absolute;
+    z-index: 1;
+    border-left: 1px dashed var(--color-orange);
+}
+
+.ItineraryAccordionMain .accordion-body {
+    padding-left: 85px;
+    padding-right: 0px;
+}
+
+.DayTextBox {
+    min-width: 70px;
+}
+
+.ItineraryAccordionMain ol li {
+    font-size: 14px;
+}
+
+.priceSummaryMobileStrip {
+    z-index: 9;
+}
+
+.offcanvas-body .FlightInfoSideBarWrap {
+    margin-top: 0px !important;
+}
+
+.offcanvas-body .FlightInfoSideBarWrap>.border {
+    border: 0px !important;
+    padding: 0px !important;
+}
+
+.priceSummaryMobileStrip .offcanvas {
+    max-width: unset;
+    width: 100% !important;
+    border-right: 0px !important;
+}
+
+.SeatSelectionModal .modal-dialog {
+    top: 50%;
+    transform: translate(0px, -50%) !important;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.SeatSelectionModal .nav .nav-item button {
+    font-size: 12px;
+    background-color: #fff;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: 0.4s;
+    margin-right: 5px !important;
+}
+
+.SeatSelectionModal .nav .nav-item button.active,
+.SeatSelectionModal .nav .nav-item button:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+}
+
+.SelectSeatDetail {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.SelectSeatDetail.active {
+    background-color: var(--color-green);
+    color: #fff;
+    border-color: var(--color-green) !important;
+}
+
+.SeatSelectBox {
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    margin: 5px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.AirlineSeatMainBox {
+    width: 245px;
+    margin: auto;
+}
+
+.SeatSelectCodeBox {
+    background-color: transparent;
+}
+
+.SeatNumberBox {
+    width: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.AirlineSeatBox {
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.AirlineSeatBox::-webkit-scrollbar {
+    width: 5px;
+}
+
+.AirlineSeatBox::-webkit-scrollbar-track {
+    background: var(--color-blue);
+}
+
+.AirlineSeatBox::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+    border-radius: 10px;
+}
+
+.HolidayPackageContent a {
+    color: var(--color-blue);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.HolidayPackageContent a:hover {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--color-blue);
+}
+
+.HolidayPackageContent p {
+    font-size: 14px;
+}
+
+.HolidayPackageContent ul li,
+.HolidayPackageContent ol li {
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+.HolidayPackageContent ul li strong,
+.HolidayPackageContent ol li strong {
+    color: var(--color-blue);
+}
+
+.HolidayPackageContent ul li::marker {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent img {
+    height: auto;
+}
+
+.HolidayPackageContent h1>strong,
+.HolidayPackageContent h2>strong,
+.HolidayPackageContent h3>strong {
+    font-weight: 700;
+}
+
+.HolidayPackageContent h1,
+.HolidayPackageContent h2,
+.HolidayPackageContent h3,
+.HolidayPackageContent h4,
+.HolidayPackageContent h5,
+.HolidayPackageContent h6 {
+    color: var(--color-blue);
+}
+
+.HolidayPackageContent h1 {
+    font-size: 30px;
+}
+
+.HolidayPackageContent h2 {
+    font-size: 26px;
+}
+
+.HolidayPackageContent h3 {
+    font-size: 22px;
+}
+
+.HolidayPackageContent h4 {
+    font-size: 18px;
+}
+
+.SeatTypeColorBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+
+.greenSeat {
+    background-color: #95F1BC;
+}
+
+.skyBlueSeat {
+    background-color: #C9E3FF;
+}
+
+.BlueSeat {
+    background-color: #2196F3;
+}
+
+.PinkSeat {
+    background-color: #DC39D0;
+}
+
+.GoldSeat {
+    background-color: #F2C77F;
+}
+
+.FaceColorSeat {
+    background-color: #F9CFBB;
+}
+
+.LightPurpleSeat {
+    background-color: #C7BFF9;
+}
+
+.DarkPurpleSeat {
+    background-color: #891E74;
+}
+
+.LightPinkSeat {
+    background-color: #E87FF7;
+}
+
+.AirplaneLeftPart img {
+    left: -375px;
+    top: 70%;
+}
+
+.AirplaneRightPart img {
+    right: -375px;
+    top: 70%;
+}
+
+.AirplaneBottomPart img {
+    margin-left: -268px;
+    width: 778px;
+}
+
+.closePopup {
+    z-index: 99;
+}
+
+.SeatSelectionDetailDropDown {
+    width: 270px;
+}
+
+#SquareOrangeList ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#SquareOrangeList ul li {
+    margin: 10px 0px;
+    position: relative;
+    padding-left: 12px;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+#SquareOrangeList ul li::before {
+    position: absolute;
+    content: '/';
+    color: transparent;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-orange);
+    transform: rotate(40deg);
+    left: 0px;
+    top: 8px;
+}
+
+.session-expired-popup .modal-dialog {
+    top: 50%;
+    transform: translate(0px, -50%) !important;
+}
+
+.ContactStrapMobile p {
+    animation: blinktext 1s linear infinite;
+}
+
+@keyframes blinktext {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ContactStrapMobilebox {
+    z-index: 9;
+}
+
+body.custom-listing .ContactStrapMobilebox {
+    display: none;
+}
+
+.MealsWrp .nav-pills .nav-link {
+    background-color: var(--color-grey) !important;
+    color: var(--color-blue) !important;
+    border: 1px solid var(--color-blue);
+    font-size: 12px !important;
+    margin-right: 10px;
+}
+
+.MealsWrp .nav-pills .nav-link.active,
+.MealsWrp .nav-pills .nav-link:hover {
+    background-color: var(--color-blue) !important;
+    color: #fff !important;
+}
+
+/* media start */
+
+@media(max-width:991px) {
+    .SeatSelectionModal .modal-body {
+        padding: 0;
+    }
+
+    .SeatSelectionModal .modal-content .AirlineSeatBox,
+    .SeatSelectionModal .modal-content {
+        border-radius: 0px;
+    }
+
+    .SeatDetailFlapbtn {
+        z-index: 9;
+    }
+
+    .SeatSelectionMobileFlap {
+        z-index: 9 !important;
+    }
+}
+
+@media(max-width:767px) {
+
+    .departCustomList {
+        padding-right: 5px !important;
+    }
+
+    .returnCustomList {
+        padding-left: 5px !important;
+    }
+
+    .slide-cont .air-icon {
+        margin: 3px !important;
+        width: 20px;
+    }
+
+    .holidayDetail .ContactStrapMobilebox {
+        display: none;
+    }
+
+    body.holidayDetail {
+        padding-bottom: 100px !important;
+    }
+
+
+    body.listing-page.oneway-listing {
+        padding-bottom: 50px;
+    }
+
+    .oneway-listing .filter-sub-heading.sticky {
+        bottom: 15px;
+    }
+
+    body {
+        padding-bottom: 60px;
+    }
+
+    .AccommadationSelectButton {
+        font-size: 14px;
+        padding: 10px 0px !important;
+    }
+
+    .breadcrumb .breadcrumb-item {
+        font-size: 11px;
+    }
+
+    div.SearchDetailsWraper {
+        padding: 15px 0px !important;
+        border-radius: 5px !important;
+    }
+
+    .SearchDetailsWraper .col-12.text-end {
+        text-align: left !important;
+        padding-top: 15px;
+    }
+
+    .FlightInfoDetailWraper .nav-pills.InfoTabs .nav-link {
+        font-size: 11px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .FlightInfoSideBarWrap {
+        margin-top: 40px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+    .modify-searchh .flightSearchWrp>.row {
+        margin: 0px;
+        padding-top: 10px;
+    }
+
+    .SeatSelectionModal .modal-dialog {
+        width: 100%;
+        max-width: 750px;
+        margin: 0px auto;
+    }
+
+    .AirplaneRightPart img {
+        right: -320px;
+    }
+
+    .AirplaneLeftPart img {
+        left: -320px;
+    }
+}
+
+@media(min-width:768px) {
+    .new-price-popup {
+        min-width: 500px;
+    }
+}
+
+@media(min-width:320px) and (max-width:767px) {
+
+    .SeatSelectionModal .modal-dialog {
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .AirplaneLeftPart,
+    .AirplaneRightPart {
+        display: none;
+    }
+}

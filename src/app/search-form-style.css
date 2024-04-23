@@ -1,0 +1,647 @@
+:root {
+    --color-blue: #08537c;
+    --color-orange: #e0552c;
+    --color-red: red;
+    --color-green: green;
+}
+
+/* main Form css start */
+
+.formTabsButton {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.formTabsButton li {
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #fff;
+    transition: 0.4s;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.formTabsButton li>div {
+    border-right: 1px solid #dee2e6;
+}
+
+.formTabsButton li.active>div {
+    border-right: 0px;
+}
+
+.formTabsButton li.active {
+    background: transparent linear-gradient(180deg, #E0572C 0%, #AE2B00 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 10px #0000004D;
+    margin-top: -10px;
+    height: 90px;
+}
+
+.formTabsButton li:hover {
+    background-color: #f3f3f9;
+    margin-top: -10px;
+    border-radius: 10px 10px 0px 0px;
+    height: 90px;
+}
+
+.formTabsButton li.active div {
+    color: #fff;
+}
+
+#mainSearchForm {
+    background-image: url('https://assets.shipratravel.com/trv/banner-fm.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.HolidDayForm #mainSearchForm {
+    background: transparent !important;
+    padding: 0px !important;
+}
+
+.HolidDayForm #mainSearchForm>.container {
+    padding: 0px !important;
+}
+
+.flightSearchTitle {
+    font-size: 50px;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fromTofromBox .cityLabel {
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.cityBoxDropDown .dropdown-menu {
+    transform: unset !important;
+    width: 300px;
+}
+
+.airPortName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SearchCityList {
+    transition: 0.3s;
+    padding: 10px 0px;
+}
+
+.SearchCityList:hover {
+    /* background-color: #f1f7ff; */
+    cursor: pointer;
+}
+
+.SearchCityList .airPortGroping a {
+    padding: 8px;
+    transition: 0.4s;
+}
+
+.SearchCityList .airPortGroping a:hover {
+    background-color: #f1f7ff;
+    cursor: pointer;
+}
+
+.SearchSectorTitle {
+    background-color: #f1f7ff;
+}
+
+.SearchCityBox input {
+    font-size: 14px;
+    width: 100%;
+    padding: 15px;
+}
+
+.SearchCityListBox {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.flightSearchWrp .form-check .form-check-input:focus {
+    box-shadow: unset;
+}
+
+.flightSearchWrp .form-check .form-check-input:checked {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.dateLabel span {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.trv-datepicker>.react-datepicker-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.trv-datepicker>.react-datepicker-wrapper div {
+    height: 100%;
+}
+
+.passenger-count-btn span {
+    border: 0;
+    height: 100%;
+    width: 60%;
+    left: 0;
+    position: relative !important;
+    text-align: center;
+    padding: 0;
+    width: 100% !important;
+    display: flex !important;
+    height: 30px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+.passenger-count-btn span input {
+    left: 0 !important;
+    width: 70% !important;
+    position: absolute !important;
+    height: 100% !important;
+    display: flex !important;
+    left: 15% !important;
+    border: none !important;
+    color: var(--color-blue);
+    padding: 0 !important;
+    text-align: center;
+}
+
+.passenger-count-btn span b:nth-child(2n),
+.passenger-count-btn span b:nth-child(odd) {
+    text-align: center;
+    cursor: default;
+    transition: all .1s ease 0s;
+    box-shadow: inset -1px -1px 3px rgba(0, 0, 0, .1), inset 1px 1px 3px hsla(0, 0%, 100%, .7);
+    width: 30% !important;
+    position: absolute !important;
+    height: 100% !important;
+    display: flex !important;
+    top: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    transition: .5s !important;
+}
+
+.passenger-count-btn span b:nth-child(2n) {
+    background: rgba(0, 0, 0, .1);
+    bottom: 2px;
+    border-radius: 0 0 2px 2px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-top: 0 solid rgba(0, 0, 0, .1);
+    right: 0 !important;
+    border: 0 !important;
+    left: 70% !important;
+    background: var(--color-light-orange) !important;
+}
+
+.passenger-count-btn span b:nth-child(odd) {
+    position: absolute;
+    background: rgba(0, 0, 0, .1);
+    left: 0;
+    height: 100%;
+    width: 30%;
+    top: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    order: 1;
+    background: red;
+    left: 0 !important;
+    border: 0 !important;
+    background: var(--color-light-orange) !important;
+}
+
+.passenger-count-btn .react-numeric-input b i {
+    display: none;
+}
+
+.passenger-count-btn span b:nth-child(2n):after,
+.passenger-count-btn span b:nth-child(odd):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-shadow: 0 3px 6px #00000029;
+    background-size: 10px;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+}
+
+.passenger-count-btn span b:nth-child(2n):after {
+    background-image: url('https://assets.neofares.com/all-icon/plus.svg');
+}
+
+.passenger-count-btn span b:nth-child(odd):after {
+    background-image: url('https://assets.neofares.com/all-icon/minus.svg');
+}
+
+.cityBoxDropDown .travelers-card {
+    width: 280px;
+    z-index: 999;
+    right: 0px;
+}
+
+/* datepicker css start */
+
+.react-datepicker__day {
+    border-radius: 50% !important;
+}
+
+.react-datepicker__day--keyboard-selected:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+}
+
+.react-datepicker .react-datepicker__navigation--previous {
+    left: 13px;
+    background-image: url('https://assets.faremaze.com/left-icon-arrow.png');
+}
+
+.react-datepicker .react-datepicker__navigation--next {
+    right: 13px;
+    background-image: url('https://assets.faremaze.com/right-icon-arrow.png');
+}
+
+.react-datepicker__navigation span::before {
+    display: none !important;
+}
+
+
+.react-datepicker {
+    border: 0 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+    width: 100%;
+}
+
+.react-datepicker__month-container {
+    width: 100%;
+}
+
+.react-datepicker__triangle::after,
+.react-datepicker__triangle::before {
+    display: none;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::after,
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
+.react-datepicker__year-read-view span.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view .react-datepicker__month-read-view--down-arrow,
+.react-datepicker__current-month,
+.react-datepicker .react-datepicker__navigation span::before,
+.react-datepicker__year-dropdown.react-datepicker__year-dropdown--scrollable .react-datepicker__year-option .react-datepicker__navigation--years,
+.react-datepicker__year-dropdown.react-datepicker__year-dropdown--scrollable .react-datepicker__year-option:first-child,
+.react-datepicker__year-dropdown {
+    display: none;
+}
+
+.react-datepicker-popper {
+    width: 280px;
+    z-index: 40 !important;
+}
+
+.react-datepicker .react-datepicker__navigation {
+    background-color: #fff;
+    border-radius: 10%;
+    text-align: center;
+    top: 6px;
+    background-position: center;
+    background-size: 8px;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    width: 25px;
+    height: 25px;
+}
+
+.react-datepicker__header {
+    padding: 0px !important;
+    background-color: #fff !important;
+}
+
+.react-datepicker__header .react-datepicker__header__dropdown {
+    color: #fff !important;
+    padding: 15px 0px !important;
+}
+
+.react-datepicker__month-read-view,
+.react-datepicker__year-read-view {
+    visibility: visible !important;
+}
+
+.react-datepicker__year-read-view span.react-datepicker__year-read-view--selected-year,
+.react-datepicker__month-dropdown-container--scroll span.react-datepicker__month-read-view--selected-month {
+    font-size: 18px;
+    color: #000;
+}
+
+.react-datepicker__month-dropdown-container--scroll,
+.react-datepicker__year-dropdown-container--scroll {
+    margin: 0 5px !important;
+}
+
+.react-datepicker__month-dropdown {
+    background-color: var(--color-light-blue) !important;
+}
+
+.react-datepicker__month-option {
+    color: var(--color-blue);
+}
+
+.react-datepicker__month-option:hover {
+    background-color: var(--color-blue) !important;
+    color: #fff;
+}
+
+.traveler-form .react-datepicker__year-dropdown {
+    display: block !important;
+    background-color: var(--color-light-blue) !important;
+}
+
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__year-option {
+    color: var(--color-blue);
+}
+
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__year-option:hover {
+    background-color: var(--color-blue) !important;
+    color: #fff;
+}
+
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation {
+    top: 0px;
+}
+
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-upcoming{
+    background-image: url('https://assets.shipratravel.com/trv/icon/top-arow-blue.png');
+}
+
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-previous{
+    background-image: url('https://assets.shipratravel.com/trv/icon/botttom-arow-blue.png');
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    width: 12% !important;
+    height: 32px !important;
+    border-radius: 10% !important;
+    line-height: 36px !important;
+}
+
+.react-datepicker__day-names {
+    background-color: var(--color-light-blue);
+}
+
+.react-datepicker__header .react-datepicker__header__dropdown {
+    padding: 4px 0px !important;
+}
+
+.react-datepicker__header .react-datepicker__header__dropdown {
+    padding: 4px 0px !important;
+}
+
+.react-datepicker__month {
+    margin: 6px 0px !important;
+}
+
+
+
+.react-datepicker__day--outside-month {
+    opacity: .5;
+}
+
+.react-datepicker__close-icon::after {
+    line-height: 1px !important;
+    padding: 0px !important;
+}
+
+
+/* datepicker css end */
+
+.FlightFlip {
+    z-index: 10;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: 0.4s;
+}
+
+.FlightFlip.active {
+    transform: rotate(180deg);
+}
+
+.DatePickerButton {
+    height: 100%;
+}
+
+.ReturnDatePicker .ReturnDateBOx {
+    position: relative;
+    z-index: 9;
+}
+
+/* media start */
+
+@media(max-width:767px) {
+
+    .trv-datepicker>.react-datepicker-wrapper {
+        bottom: 50%;
+    }
+
+    .DepartDatePicer .react-datepicker-popper {
+        transform: translate(0px, 100px) !important;
+    }
+
+    .ReturnDatePicker .react-datepicker-popper {
+        transform: translate(50px, 100px) !important;
+    }
+
+    .mainFlightSearchBox .mobForm.FieldB {
+        position: relative;
+    }
+
+    .mainFlightSearchBox .mobForm.FieldB .trv-datepicker {
+        position: unset !important;
+    }
+
+    .mainFlightSearchBox .FieldA {
+        padding: 0px;
+    }
+
+    .mainFlightSearchBox .FieldB .row .col-6:nth-child(1) {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .mainFlightSearchBox .FieldB .row .col-6:nth-child(2) {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .mainFlightSearchBox .FieldB .row .col-12 {
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .mainFlightSearchBox .FieldC {
+        padding: 0px;
+    }
+
+    .mainFlightSearchBox .FieldC .buttonStyle4 {
+        background: transparent linear-gradient(0deg, #1976af 0%, #46b8ff 100%) 0% 0% no-repeat padding-box;
+    }
+
+    .mainFlightSearchBox .FieldA .col-6 .bg-white {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .mainFlightSearchBox .FieldA .col-6 {
+        border: 0px !important;
+    }
+
+    .flightSearchWrp {
+        background-color: transparent !important;
+    }
+
+    .mainFlightSearchBox {
+        border: 0px !important;
+    }
+
+    .ToCodeSearchBox .dropdown-menu {
+        right: 0px !important;
+        left: unset !important;
+    }
+
+    .cityBoxDropDown .dropdown-menu {
+        min-width: 280px;
+    }
+
+    img.FlightFlip {
+        width: 40px !important;
+        height: 40px !important;
+        margin-right: -18px !important;
+    }
+
+    .ReturnDateBox p,
+    .DepartDateBox p {
+        font-size: 10px !important;
+    }
+
+    .fromTofromBoxLabel {
+        font-size: 10px !important;
+    }
+
+    div.mainFlightSearchBox {
+        padding: 0px 10px !important;
+        border: 0px !important;
+    }
+
+    .ReturnDateBox {
+        border-right: 0px !important;
+    }
+
+    .ToCodeSearchBox {
+        border-right: 0px !important;
+    }
+
+    .flightSearchTitle {
+        font-size: 24px;
+    }
+
+    .fromTofromBox .cityLabel,
+    .dateLabel span {
+        font-size: 20px;
+    }
+
+    .flightSearchWrp .form-check label {
+        font-size: 12px !important;
+    }
+
+    .cityBoxDropDown .dropdown-menu {
+        width: 100%;
+    }
+
+    div.flightSearchWrp {
+        padding: 0px 10px !important;
+        border-radius: 5px !important;
+        background: transparent !important;
+    }
+
+    .formTabsButton li {
+        width: 55px;
+        height: 50px !important;
+        padding-top: 5px;
+        margin-top: 0px !important;
+    }
+
+    .formTabsButton li:hover {
+        border-radius: 0px !important;
+        background-color: #fff !important;
+    }
+
+    .formTabsButton li img {
+        width: 15px !important;
+    }
+
+    .formTabsButton li div {
+        font-size: 10px;
+        margin-top: 5px !important;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+    .DepartDatePicer .react-datepicker-popper {
+        transform: translate(-50px, 100px) !important;
+    }
+
+    .flightSearchWrp {
+        padding: 20px !important;
+    }
+
+    .HoliDayModifyForm .flightSearchWrp {
+        padding: 0px !important;
+    }
+
+    .HoliDayModifyForm .flightSearchWrp .ToCodeSearchBox {
+        border-right: 0px !important;
+    }
+
+    .mobForm.FieldA .fromTofromBox>.row,
+    .mobForm.FieldB>.row {
+        margin: 0px !important;
+    }
+}
+
+@media(min-width:768px) {
+
+    img.FlightFlip {
+        margin-right: -18px !important;
+    }
+
+    .FromCodeSearchBox {
+        padding-right: 20px !important;
+    }
+
+    .ToCodeSearchBox {
+        padding-left: 20px !important;
+    }
+}
+
+@media(min-width:992px) {
+    .react-datepicker-popper {
+        transform: translate(0px, 70px) !important;
+    }
+}
+
+/* main Form css end */
