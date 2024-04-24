@@ -33,6 +33,7 @@ import { airlineLogoLoader, trvLoader } from "../helpers/imageKitLoader";
 import InnerHeader from "../components/inner-header";
 import ResultsSplashScreen from "../components/custom-splash-screen";
 import OffersMatrix from "../components/offer-matrix";
+import FlightInqueryForm from "../components/FlightInquery";
 
 export default function Listing() {
   const sortByOptions = [
@@ -96,6 +97,7 @@ export default function Listing() {
 
   const [newPrice, setNewPrice] = useState(0);
   const [openNewPriceModal, setOpenNewPriceModal] = useState(false);
+  const [openFlightEnquiryForm, setopenFlightEnquiryForm] = useState(false);
   const [tripType, setTripType] = useState(1);
   const [fromDate, setFromDate] = useState(
     new Date(new Date(new Date().setDate(new Date().getDate() + 1)))
@@ -2440,7 +2442,7 @@ export default function Listing() {
                                         <div className="air-flight-price text-end">
                                           <h2 className="mb-0 dgc">{numberFormat(avgPrice).split(".")[0]}</h2>
                                           <h6 className="mb-2 mt-2">{totalPassangers > 1 ? "Round Trip Per Traveler" : "Round Trip Per Adult"}</h6>
-                                          <button
+                                          {/* <button
                                             className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
                                             onClick={async () => {
                                               setShowSpinnerIndex(flightIndex);
@@ -2472,23 +2474,12 @@ export default function Listing() {
                                                 }, 1000);
                                               });
 
-                                            }}
+                                            }}>
+                                            {showSpinnerIndex === flightIndex ? (
+                                              <span className="spinner-border text-white" role="status"></span>) : (<span>Book</span>)}
+                                          </button> */}
 
-                                          >
-                                            {showSpinnerIndex ===
-                                              flightIndex ? (
-                                              <span
-                                                className="spinner-border text-white"
-                                                role="status"
-                                              ></span>
-                                            ) : (
-                                              <span>Book</span>
-                                            )}                                          </button>
-
-
-
-
-
+                                          <button type="button" className="buttonStyle3 border-0 float-end fs-14" onClick={() => { setopenFlightEnquiryForm(true); }}>Enquire Now</button>
 
                                           <div className="offcanvas offcanvas-end side-flap" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                             <div className="offcanvas-header border-bottom">
@@ -3088,6 +3079,21 @@ export default function Listing() {
             flight={selectedFlight}
             gotoCheckoutPage={gotoCheckoutPage}
           ></ChangePrice>
+        </Modal.Body>
+      </Modal>
+
+      <Modal className="FlightEnquiryForm centred-modal" show={openFlightEnquiryForm}>
+        <Modal.Body>
+          <Image
+            className="h-auto cursor-pointer position-absolute end-0 me-3"
+            loader={trvLoader}
+            src="icon/close.svg"
+            alt="close icon"
+            width={25}
+            height={20}
+            onClick={() => { setopenFlightEnquiryForm(false); }}
+          />
+          <FlightInqueryForm></FlightInqueryForm>
         </Modal.Body>
       </Modal>
     </>

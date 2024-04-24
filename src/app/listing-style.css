@@ -476,6 +476,12 @@ body.custom-listing .ContactStrapMobilebox {
     color: #fff !important;
 }
 
+.FlightEnquiryForm .modal-dialog{
+    width: 100%;
+    max-width: 800px;
+}
+
+
 /* media start */
 
 @media(max-width:991px) {
