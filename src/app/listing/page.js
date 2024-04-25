@@ -98,6 +98,9 @@ export default function Listing() {
   const [newPrice, setNewPrice] = useState(0);
   const [openNewPriceModal, setOpenNewPriceModal] = useState(false);
   const [openFlightEnquiryForm, setopenFlightEnquiryForm] = useState(false);
+  const [airportFromCity, setAirportFromCity] = useState("");
+  const [airportToCity, setAirportToCity] = useState("");
+
   const [tripType, setTripType] = useState(1);
   const [fromDate, setFromDate] = useState(
     new Date(new Date(new Date().setDate(new Date().getDate() + 1)))
@@ -1230,7 +1233,7 @@ export default function Listing() {
       traceId: flight.traceId,
       bookingToken: flight.bookingToken,
       userUniqueId: flight.userUniqueId,
-      portalId: 50,
+      portalId: 107,
     };
 
     if (!showContentLoader) {
@@ -1331,6 +1334,8 @@ export default function Listing() {
       };
     }
   }, [flights]);
+
+
 
   return (
     <>
@@ -2479,7 +2484,10 @@ export default function Listing() {
                                               <span className="spinner-border text-white" role="status"></span>) : (<span>Book</span>)}
                                           </button> */}
 
-                                          <button type="button" className="buttonStyle3 border-0 float-end fs-14" onClick={() => { setopenFlightEnquiryForm(true); }}>Enquire Now</button>
+                                          <button type="button" className="buttonStyle3 border-0 float-end fs-14" onClick={() => {
+                                             setopenFlightEnquiryForm(true);
+
+                                           }}>Enquire Now</button>
 
                                           <div className="offcanvas offcanvas-end side-flap" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                             <div className="offcanvas-header border-bottom">
@@ -3093,7 +3101,18 @@ export default function Listing() {
             height={20}
             onClick={() => { setopenFlightEnquiryForm(false); }}
           />
-          <FlightInqueryForm></FlightInqueryForm>
+          <FlightInqueryForm
+            data={{
+              fromCode: fromCode,
+              toCode: toCode,
+              fromLabel: fromLabel,
+              toLabel: toLabel,
+              fromDate: fromDate,
+              toDate: toDate,
+              tripType: tripType,
+              travelers: noOfPassengers,
+            }}
+          ></FlightInqueryForm>
         </Modal.Body>
       </Modal>
     </>

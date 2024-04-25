@@ -42,7 +42,7 @@ const searchFlights = async (data) => {
     data.utmTerm = data.utm_term;
     data.utmMedium = data.utm_medium;
     data.kayakClickId = data.kayakclickid;
-    data.portalId = 50;
+    data.portalId = 107;
 
     try {
         const response = await axios.post(apiURL + "Flights/SearchFlights", data);
@@ -51,6 +51,9 @@ const searchFlights = async (data) => {
         return [];
     }
 };
+
+
+
 
 const getMostSearchFlights = async (origin) => {
     try {

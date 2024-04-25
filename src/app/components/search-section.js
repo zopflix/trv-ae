@@ -248,7 +248,7 @@ export default function SearchSection(props) {
       noOfLapInfant: parseInt(infants),
       cabin: parseInt(cabinValue),
       segments: segments,
-      portalID: 50,
+      portalID: 107,
       utm_source: utmSouceValue,
       utm_term: utmTermValue,
       referer: referer,

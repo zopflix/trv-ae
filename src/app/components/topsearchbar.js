@@ -485,7 +485,7 @@ export default function Topsearch(props) {
       noOfLapInfant: parseInt(infants),
       cabin: parseInt(cabinToSend),
       segments: segments,
-      portalID: 50,
+      portalID: 107,
     };
 
     var formData = {

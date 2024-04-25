@@ -492,7 +492,7 @@ export default function HolidayEnquiryForm(props) {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-12 col-md-2 py-2 mobForm">
+                                                            {/* <div className="col-12 col-md-2 py-2 mobForm">
                                                                 <button className={isSearchInProgress ? "buttonStyle1 border-0 color-white fs-14 px-2 w-100 rounded-3 disabled-btn" : "buttonStyle1 border-0 color-white fs-14 fw-bold px-2 w-100 rounded-3"}
                                                                     disabled={isSearchInProgress} onClick={() => submitEnquiry()}>
                                                                     {isSearchInProgress
@@ -500,7 +500,7 @@ export default function HolidayEnquiryForm(props) {
                                                                         : <span>Enquire</span>
                                                                     }
                                                                 </button>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 }

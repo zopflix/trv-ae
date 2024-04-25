@@ -205,7 +205,7 @@ export default function DummyTicketForm() {
     let dataToSend = {
       contract: contract,
       dummyTravellers: travellers,
-      portalID: 50
+      portalID: 107
     };
 
     setInProgress(true);
@@ -255,7 +255,7 @@ export default function DummyTicketForm() {
       noOfLapInfant: parseInt(infants),
       cabin: parseInt(cabinValue),
       segments: segments,
-      portalId: 50
+      portalId: 107
     };
 
     if (prevPayload && data && data.tripType == prevPayload.tripType && data.noOfAdult == prevPayload.noOfAdult
