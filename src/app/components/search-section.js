@@ -146,23 +146,25 @@ export default function SearchSection(props) {
 
     let filteredRecords = [];
 
-    if (isOriginAirport) {
-      let indianAirports = airportList.filter(
-        (airport) => airport.country == "India"
-      );
+    // if (isOriginAirport) {
+    //   let indianAirports = airportList.filter(
+    //     (airport) => airport.country == "India"
+    //   );
 
-      filteredRecords = indianAirports.filter((airport) =>
+    //   filteredRecords = indianAirports.filter((airport) =>
+    //     srchCodeName.length == 3
+    //       ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
+    //       : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
+    //   );
+    // } else {
+      
+    // }
+
+    filteredRecords = airportList.filter((airport) =>
         srchCodeName.length == 3
           ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
           : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
       );
-    } else {
-      filteredRecords = airportList.filter((airport) =>
-        srchCodeName.length == 3
-          ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
-          : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
-      );
-    }
 
     if (filteredRecords.length >= 1) {
       if (isOriginAirport) setAirports(filteredRecords);
