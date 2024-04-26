@@ -57,6 +57,9 @@ export default function Topsearch(props) {
   const resultPageFromCode = props.setFromCode;
   const resultPageToCode = props.setToCode;
   const resultPageFromLabel = props.setFromLabel;
+  const resultPageFromCity = props.setFromCity;
+  const resultPageToCity = props.setToCity;
+
   const resultPageToLabel = props.setToLabel;
   const isModifyInProgress = props.isModifyInProgress;
 
@@ -67,6 +70,11 @@ export default function Topsearch(props) {
     if (fromAirport) {
       resultPageFromLabel(fromAirport.label);
       resultPageToLabel(toAirport.label);
+      resultPageFromCity(fromAirport.cityName)
+      resultPageToCity(toAirport.cityName)
+      resultPageFromCode(fromAirport.value)
+      resultPageToCode(toAirport.value)
+
       const currentSelectedFilters = localStorage.getItem(
         "currentSelectedFilters"
       );
@@ -109,23 +117,25 @@ export default function Topsearch(props) {
 
     let filteredRecords = [];
 
-    if (isOriginAirport) {
-      let indianAirports = airportList.filter(
-        (airport) => airport.country == "India"
-      );
+    // if (isOriginAirport) {
+    //   let indianAirports = airportList.filter(
+    //     (airport) => airport.country == "India"
+    //   );
 
-      filteredRecords = indianAirports.filter((airport) =>
-        srchCodeName.length == 3
-          ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
-          : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
-      );
-    } else {
-      filteredRecords = airportList.filter((airport) =>
-        srchCodeName.length == 3
-          ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
-          : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
-      );
-    }
+    //   filteredRecords = indianAirports.filter((airport) =>
+    //     srchCodeName.length == 3
+    //       ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
+    //       : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
+    //   );
+    // } else {
+     
+    // }
+
+    filteredRecords = airportList.filter((airport) =>
+    srchCodeName.length == 3
+      ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
+      : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
+  );
 
     if (filteredRecords.length >= 1) {
       if (isOriginAirport) setAirports(filteredRecords);
@@ -148,6 +158,7 @@ export default function Topsearch(props) {
       let splitedRoute = props.currentRoute.split("-");
       const fromCode = splitedRoute[1].toLocaleUpperCase();
       const toCode = splitedRoute[4].toLocaleUpperCase();
+
       let from = airports.find((z) => z.value == fromCode);
       let to = airports.find((z) => z.value == toCode);
 
@@ -177,9 +188,11 @@ export default function Topsearch(props) {
 
       resultPageFromCode(fromCode);
       resultPageFromLabel(from?.label);
+      resultPageFromCity(from?.cityName);
       setFromAirport(from);
       setToAirport(to);
       resultPageToLabel(to?.label);
+      resultPageFromCity(to?.cityName);
       resultPageToCode(toCode);
       setTripType(1);
       setFromDate(departDate)
@@ -458,6 +471,9 @@ export default function Topsearch(props) {
     resultPageFromLabel(fromAirport.label);
     resultPageToLabel(toAirport.label);
 
+    resultPageFromCity(fromAirport.cityName);
+    resultPageToCity(toAirport.cityName);
+
     if (!!toDate && tripType == 2) {
       segments.push({
         fromCode: toAirport.value,
@@ -483,7 +499,7 @@ export default function Topsearch(props) {
       noOfLapInfant: parseInt(infants),
       cabin: parseInt(cabinToSend),
       segments: segments,
-      portalID: 50,
+      portalID: 107,
     };
 
     var formData = {

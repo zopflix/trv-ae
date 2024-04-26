@@ -88,7 +88,7 @@ export default function HolidayForm(props) {
             noOfLapInfant: parseInt(infants),
             cabin: parseInt(1),
             segments: segments,
-            portalID: 50
+            portalID: 107
         };
         localStorage.setItem("searchData", data);
         let searchId = generateId(12);

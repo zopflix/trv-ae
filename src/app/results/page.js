@@ -92,6 +92,8 @@ export default function Results() {
   const [selectedReturnTimes, setSelectedReturnTimes] = useState([]);
   const [matrixAirlines, setMatrixAirlines] = useState([]);
   const [tripType, setTripType] = useState(1);
+  const [fromCity, setFromCity] = useState(null);
+  const [toCity, setToCity] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
   const [fromDate, setFromDate] = useState(
     new Date(new Date(new Date().setDate(new Date().getDate() + 1)))
@@ -1358,6 +1360,8 @@ export default function Results() {
           isFlightsLoading={isLoading}
           closeModifySearch={setMobSideFilterClicked}
           currentPage="listing"
+          setFromCity={setFromCity}
+          setToCity={setToCity}
         ></Topsearch>
       </div>
       {flights && flights.length > 0 && !isLoading && (

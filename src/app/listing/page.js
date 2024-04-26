@@ -52,8 +52,11 @@ export default function Listing() {
     slidesToScroll: isBrowser ? 4 : 2,
     speed: 500,
   };
+  const [inquiryPkg, setInquiryPkg] = useState();
 
   const [fromLabel, setFromLabel] = useState(null);
+  const [fromCity, setFromCity] = useState(null);
+  const [toCity, setToCity] = useState(null);
   const [toLabel, setToLabel] = useState(null);
   const [defaultSortOption, setDefaultSortOption] = useState(sortByOptions[0]);
   const [flights, setFlightsData] = useState([]);
@@ -80,7 +83,7 @@ export default function Listing() {
     connectingAirlines: null,
     stops: null,
   });
-  const [isSelectClicked, setIsSelectClicked] = useState(false)
+  const [isSelectClicked, setIsSelectClicked] = useState(false);
 
   const [selectedPureAirlines, setSelectedPureAirlines] = useState([]);
   const [selectedAirlines, setSelectedAirlines] = useState([]);
@@ -98,6 +101,9 @@ export default function Listing() {
   const [newPrice, setNewPrice] = useState(0);
   const [openNewPriceModal, setOpenNewPriceModal] = useState(false);
   const [openFlightEnquiryForm, setopenFlightEnquiryForm] = useState(false);
+  const [airportFromCity, setAirportFromCity] = useState("");
+  const [airportToCity, setAirportToCity] = useState("");
+
   const [tripType, setTripType] = useState(1);
   const [fromDate, setFromDate] = useState(
     new Date(new Date(new Date().setDate(new Date().getDate() + 1)))
@@ -105,6 +111,7 @@ export default function Listing() {
   const [toDate, setToDate] = useState(
     new Date(new Date(new Date().setDate(new Date().getDate() + 4)))
   );
+  
   const [noOfPassengers, setNoOfPassengers] = useState({
     adults: 0,
     children: 0,
@@ -113,6 +120,7 @@ export default function Listing() {
   });
   const [fromCode, setFromCode] = useState(null);
   const [toCode, setToCode] = useState(null);
+
 
 
   useEffect(() => {
@@ -177,7 +185,7 @@ export default function Listing() {
         let carrierContract = sortedResults.find(
           (x) =>
             x.trips[0].validatingCarrier.code ==
-            element.trips[0].validatingCarrier.code &&
+              element.trips[0].validatingCarrier.code &&
             !(
               x.trips[0].listOfFlight.every(
                 (z) =>
@@ -185,10 +193,10 @@ export default function Listing() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                  (z) =>
-                    z.marketingCarrier ==
-                    element.trips[0].validatingCarrier.code
-                )
+                    (z) =>
+                      z.marketingCarrier ==
+                      element.trips[0].validatingCarrier.code
+                  )
                 : true)
             )
         );
@@ -208,8 +216,8 @@ export default function Listing() {
             .every((x) => x == element.trips[0].validatingCarrier.code) &&
           (element.trips.length > 1
             ? element.trips[1].listOfFlight
-              .map((x) => x.marketingCarrier)
-              .every((x) => x == element.trips[0].validatingCarrier.code)
+                .map((x) => x.marketingCarrier)
+                .every((x) => x == element.trips[0].validatingCarrier.code)
             : true)
         );
         if (extendCarrier.connectingAirlines) carriers.push(extendCarrier);
@@ -242,10 +250,10 @@ export default function Listing() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                  (z) =>
-                    z.marketingCarrier ==
-                    element.trips[0].validatingCarrier.code
-                )
+                    (z) =>
+                      z.marketingCarrier ==
+                      element.trips[0].validatingCarrier.code
+                  )
                 : true)
           );
           if (purecarrierContract) {
@@ -484,7 +492,7 @@ export default function Listing() {
       if (
         selectedMatrixAirlineStop.name == value.name &&
         selectedMatrixAirlineStop.connectingAirlines ==
-        value.connectingAirlines &&
+          value.connectingAirlines &&
         selectedMatrixAirlineStop.stops == airlineStops
       ) {
       } else {
@@ -576,8 +584,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -592,8 +600,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -652,8 +660,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -668,8 +676,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -739,8 +747,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           if (
@@ -765,8 +773,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff1.push(...fFlights);
@@ -836,8 +844,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff1.push(...fFlights);
@@ -852,8 +860,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           if (
@@ -924,8 +932,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -940,8 +948,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -1001,8 +1009,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -1017,8 +1025,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -1203,9 +1211,9 @@ export default function Listing() {
   const isWithinTimeRange = (minTime, maxTime, departTime) => {
     return (
       Date.parse("01/01/2011 " + departTime) >=
-      Date.parse("01/01/2011 " + minTime) &&
+        Date.parse("01/01/2011 " + minTime) &&
       Date.parse("01/01/2011 " + departTime) <=
-      Date.parse("01/01/2011 " + maxTime)
+        Date.parse("01/01/2011 " + maxTime)
     );
   };
 
@@ -1230,7 +1238,7 @@ export default function Listing() {
       traceId: flight.traceId,
       bookingToken: flight.bookingToken,
       userUniqueId: flight.userUniqueId,
-      portalId: 50,
+      portalId: 107,
     };
 
     if (!showContentLoader) {
@@ -1278,6 +1286,8 @@ export default function Listing() {
     return flight;
   };
 
+  console.log("seleeeee", selectedFlight);
+
   const gotoCheckoutPage = (flight) => {
     const parm = new URLSearchParams(window.location.search);
 
@@ -1304,7 +1314,9 @@ export default function Listing() {
 
   useEffect(() => {
     if (showContentLoader) document.body.classList.add("filter-load");
-    else { document.body.classList.remove("filter-load"); }
+    else {
+      document.body.classList.remove("filter-load");
+    }
   }, [showContentLoader]);
 
   useEffect(() => {
@@ -1335,7 +1347,8 @@ export default function Listing() {
   return (
     <>
       <InnerHeader></InnerHeader>
-      {currentFilters && !isLoading &&
+      {currentFilters &&
+        !isLoading &&
         currentFilters.segments &&
         currentFilters.segments.length > 0 && (
           <div className="modify-aiport-breadcrumb bg-grey pt-2 pb-2 border-bottom desk-hide d-lg-none">
@@ -1364,41 +1377,79 @@ export default function Listing() {
               <div className="row align-items-center">
                 <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                   <div className="d-flex align-items-center">
-                    {currentFilters && currentFilters.segments && currentFilters.segments.length > 0 && (
-                      <>
-                        <h6 className="mb-0 fw-bolder">{currentFilters.segments[0].fromCode}</h6>
-                        {currentFilters.segments.length > 1 ? (
-                          <i className="fa-solid fa-arrow-right-arrow-left ms-2 me-2"></i>
-                        ) : (
-                          <i className="fa-solid fa-arrow-right ms-2 me-2"></i>
-                        )}
+                    {currentFilters &&
+                      currentFilters.segments &&
+                      currentFilters.segments.length > 0 && (
+                        <>
+                          <h6 className="mb-0 fw-bolder">
+                            {currentFilters.segments[0].fromCode}
+                          </h6>
+                          {currentFilters.segments.length > 1 ? (
+                            <i className="fa-solid fa-arrow-right-arrow-left ms-2 me-2"></i>
+                          ) : (
+                            <i className="fa-solid fa-arrow-right ms-2 me-2"></i>
+                          )}
 
-                        <h6 className="mb-0 fw-bolder">{currentFilters.segments[0].toCode}</h6>
-                      </>
-                    )}
+                          <h6 className="mb-0 fw-bolder">
+                            {currentFilters.segments[0].toCode}
+                          </h6>
+                        </>
+                      )}
                   </div>
                 </div>
                 <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start">
                   <span>
-                    {currentFilters && currentFilters.segments && currentFilters.segments.length > 0 && getFormattedDate4(currentFilters.segments[0].departureDate)}
-                    {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 && "- " + getFormattedDate4(currentFilters?.segments[1]?.departureDate)}
+                    {currentFilters &&
+                      currentFilters.segments &&
+                      currentFilters.segments.length > 0 &&
+                      getFormattedDate4(
+                        currentFilters.segments[0].departureDate
+                      )}
+                    {currentFilters &&
+                      currentFilters.segments &&
+                      currentFilters.segments.length > 1 &&
+                      "- " +
+                        getFormattedDate4(
+                          currentFilters?.segments[1]?.departureDate
+                        )}
                   </span>
                   {currentFilters && (
                     <>
-                      <span>{currentFilters.noOfAdult} Adult(s) {currentFilters.child > 0 && ", " + currentFilters.child + " Child"} {currentFilters.noOfLapInfant > 0 && ", " + currentFilters.noOfLapInfant + " Infants"} , {getDisplayCabin(parseInt(currentFilters.cabin))}</span>
-                      <span> {currentFilters.tripType == 2 ? "Round Trip" : "One Way"}</span>
+                      <span>
+                        {currentFilters.noOfAdult} Adult(s){" "}
+                        {currentFilters.child > 0 &&
+                          ", " + currentFilters.child + " Child"}{" "}
+                        {currentFilters.noOfLapInfant > 0 &&
+                          ", " + currentFilters.noOfLapInfant + " Infants"}{" "}
+                        , {getDisplayCabin(parseInt(currentFilters.cabin))}
+                      </span>
+                      <span>
+                        {" "}
+                        {currentFilters.tripType == 2
+                          ? "Round Trip"
+                          : "One Way"}
+                      </span>
                     </>
                   )}
                 </div>
                 <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-                  <i className="fa-regular fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
+                  <i
+                    className="fa-regular fa-pen-to-square float-end h4 mb-0"
+                    onClick={() =>
+                      setMobSideFilterClicked(!mobSideFilterClicked)
+                    }
+                  ></i>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-      <div className={mobSideFilterClicked ? "modify-searchh active" : "modify-searchh"}>
+      <div
+        className={
+          mobSideFilterClicked ? "modify-searchh active" : "modify-searchh"
+        }
+      >
         <Topsearch
           modifySearch={modifySearch}
           closeMobFilter={closeMobileFilter}
@@ -1411,6 +1462,8 @@ export default function Listing() {
           setFromCode={setFromCode}
           setToCode={setToCode}
           setFromLabel={setFromLabel}
+          setFromCity={setFromCity}
+          setToCity={setToCity}
           setToLabel={setToLabel}
           currentPage="listing"
           noOfPassengers={noOfPassengers}
@@ -1422,7 +1475,14 @@ export default function Listing() {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3">
                 <div className="sidebar-filter-btn mt-4 desk-hide">
-                  <h4 id="filterBySection" className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer" onClick={() => { document.body.classList.add("filter-open"); setOpenFilters(true); }}>
+                  <h4
+                    id="filterBySection"
+                    className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer"
+                    onClick={() => {
+                      document.body.classList.add("filter-open");
+                      setOpenFilters(true);
+                    }}
+                  >
                     <span className="icon me-2">
                       <span>
                         <Image
@@ -1438,11 +1498,23 @@ export default function Listing() {
                     <span className="sub-heading-title dgc">Filter By</span>
                   </h4>
                 </div>
-                <div className={openFilters ? "side-bar-air-filter br-5 mt-3 mb-4 active" : "side-bar-air-filter br-5 mt-3 mb-4"}>
+                <div
+                  className={
+                    openFilters
+                      ? "side-bar-air-filter br-5 mt-3 mb-4 active"
+                      : "side-bar-air-filter br-5 mt-3 mb-4"
+                  }
+                >
                   <div className="filter-items py-3 ps-3 pe-3 desk-hide">
                     <h4 className="filter-sub-heading d-flex mb-0 align-items-center justify-content-between">
                       <span className="sub-heading-title dgc">Filter By</span>
-                      <button className="transparent-btn sidebar-filter-close-btn" onClick={() => { setOpenFilters(false); document.body.classList.remove("filter-open"); }}>
+                      <button
+                        className="transparent-btn sidebar-filter-close-btn"
+                        onClick={() => {
+                          setOpenFilters(false);
+                          document.body.classList.remove("filter-open");
+                        }}
+                      >
                         <i className="fa-solid fa-xmark"></i>
                       </button>
                     </h4>
@@ -1464,11 +1536,18 @@ export default function Listing() {
                               />
                             </span>
                           </span>
-                          <span className="sub-heading-title dgc">Filter By</span>
+                          <span className="sub-heading-title dgc">
+                            Filter By
+                          </span>
                         </h4>
                       </div>
                       <div className="col-6 col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-5">
-                        <button className="transparent-btn float-end clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
+                        <button
+                          className="transparent-btn float-end clear-filter-btn"
+                          onClick={() => clearFilters()}
+                        >
+                          Reset Filters
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1485,7 +1564,13 @@ export default function Listing() {
 
                           {stopsFilters.map((stop, index) => {
                             return (
-                              <div className="form-check cursor-pointer" key={index} onClick={() => { applyFilters("stops", stop); }}>
+                              <div
+                                className="form-check cursor-pointer"
+                                key={index}
+                                onClick={() => {
+                                  applyFilters("stops", stop);
+                                }}
+                              >
                                 <input
                                   className="form-check-input cursor-pointer"
                                   type="checkbox"
@@ -1493,7 +1578,11 @@ export default function Listing() {
                                   checked={selectedStops.indexOf(stop) > -1}
                                   readOnly
                                 />
-                                <label className="form-check-label cursor-pointer dgc">{stop == 0 ? "Non Stop" : stop + (stop == 1 ? " Stop" : " Stops")}</label>
+                                <label className="form-check-label cursor-pointer dgc">
+                                  {stop == 0
+                                    ? "Non Stop"
+                                    : stop + (stop == 1 ? " Stop" : " Stops")}
+                                </label>
                               </div>
                             );
                           })}
@@ -1511,22 +1600,40 @@ export default function Listing() {
                               value={priceFilterValues}
                               minDistance={1}
                               step={1}
-                              onChange={(e) => { setPriceFilterValues(e); }}
-                              onAfterChange={(e) => { applyFilters("price", e); }}
+                              onChange={(e) => {
+                                setPriceFilterValues(e);
+                              }}
+                              onAfterChange={(e) => {
+                                applyFilters("price", e);
+                              }}
                             />
                             <div className="row mt-3">
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                <h6 className="mb-0 d-table">{numberFormat(Math.round(priceFilterValues[0])).split(".")[0]}</h6>
+                                <h6 className="mb-0 d-table">
+                                  {
+                                    numberFormat(
+                                      Math.round(priceFilterValues[0])
+                                    ).split(".")[0]
+                                  }
+                                </h6>
                               </div>
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
-                                <h6 className="mb-0 d-table float-end">{numberFormat(Math.round(priceFilterValues[1])).split(".")[0]}</h6>
+                                <h6 className="mb-0 d-table float-end">
+                                  {
+                                    numberFormat(
+                                      Math.round(priceFilterValues[1])
+                                    ).split(".")[0]
+                                  }
+                                </h6>
                               </div>
                             </div>
                           </div>
                         </div>
 
                         <div className="filter-items py-3 ps-3 pe-3">
-                          <h5 className="sub-title mb-0 dgc">Departure Duration</h5>
+                          <h5 className="sub-title mb-0 dgc">
+                            Departure Duration
+                          </h5>
                           <div className="price-slider pt-3">
                             <ReactSlider
                               className="horizontal-slider"
@@ -1536,92 +1643,170 @@ export default function Listing() {
                               max={24}
                               value={selectedTimeRange}
                               onChange={(e) => setSelectedTimeRange(e)}
-                              onAfterChange={(e) => { applyFilters("depart-time", e); }}
+                              onAfterChange={(e) => {
+                                applyFilters("depart-time", e);
+                              }}
                               step={1}
                               minDistance={1}
                             />
                             <div className="row mt-3">
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                <h6 className="mb-0 d-table">{formatTime(selectedTimeRange[0])}</h6>
+                                <h6 className="mb-0 d-table">
+                                  {formatTime(selectedTimeRange[0])}
+                                </h6>
                               </div>
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
-                                <h6 className="mb-0 d-table float-end">{selectedTimeRange[1] == 24 ? "23:59" : formatTime(selectedTimeRange[1])}</h6>
+                                <h6 className="mb-0 d-table float-end">
+                                  {selectedTimeRange[1] == 24
+                                    ? "23:59"
+                                    : formatTime(selectedTimeRange[1])}
+                                </h6>
                               </div>
                             </div>
                           </div>
                         </div>
-                        {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 && (
-                          <div className="filter-items py-3 ps-3 pe-3">
-                            <h5 className="sub-title mb-0 dgc">Return Duration</h5>
-                            <div className="price-slider pt-3">
-                              <ReactSlider
-                                className="horizontal-slider"
-                                thumbClassName="example-thumb"
-                                trackClassName="example-track"
-                                min={0}
-                                max={24}
-                                value={selectedReturnTimeRange}
-                                onChange={(e) => setSelectedReturnTimeRange(e)}
-                                onAfterChange={(e) => { applyFilters("return-time", e); }}
-                                step={1}
-                                minDistance={1}
-                              />
-                              <div className="row mt-3">
-                                <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                  <h6 className="mb-0 d-table">{formatTime(selectedReturnTimeRange[0])}</h6>
-                                </div>
-                                <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
-                                  <h6 className="mb-0 d-table float-end">{selectedReturnTimeRange[1] == 24 ? "23:59" : formatTime(selectedReturnTimeRange[1])}</h6>
+                        {currentFilters &&
+                          currentFilters.segments &&
+                          currentFilters.segments.length > 1 && (
+                            <div className="filter-items py-3 ps-3 pe-3">
+                              <h5 className="sub-title mb-0 dgc">
+                                Return Duration
+                              </h5>
+                              <div className="price-slider pt-3">
+                                <ReactSlider
+                                  className="horizontal-slider"
+                                  thumbClassName="example-thumb"
+                                  trackClassName="example-track"
+                                  min={0}
+                                  max={24}
+                                  value={selectedReturnTimeRange}
+                                  onChange={(e) =>
+                                    setSelectedReturnTimeRange(e)
+                                  }
+                                  onAfterChange={(e) => {
+                                    applyFilters("return-time", e);
+                                  }}
+                                  step={1}
+                                  minDistance={1}
+                                />
+                                <div className="row mt-3">
+                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <h6 className="mb-0 d-table">
+                                      {formatTime(selectedReturnTimeRange[0])}
+                                    </h6>
+                                  </div>
+                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
+                                    <h6 className="mb-0 d-table float-end">
+                                      {selectedReturnTimeRange[1] == 24
+                                        ? "23:59"
+                                        : formatTime(
+                                            selectedReturnTimeRange[1]
+                                          )}
+                                    </h6>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        )}
+                          )}
                         <div className="filter-items pt-3 pb-3 ps-3 pe-3">
                           <h5 className="sub-title mb-2 dgc">Sort By</h5>
                           <div className="form-check">
                             {sortByOptions.map((option, ix) => {
                               return (
-                                <div key={ix} onClick={() => { setDefaultSortOption(sortByOptions.find((x) => x.value == parseInt(option.value))); }}>
+                                <div
+                                  key={ix}
+                                  onClick={() => {
+                                    setDefaultSortOption(
+                                      sortByOptions.find(
+                                        (x) => x.value == parseInt(option.value)
+                                      )
+                                    );
+                                  }}
+                                >
                                   <input
                                     className="form-check-input cursor-pointer"
                                     type="radio"
                                     name="group1"
                                     value={option.value}
-                                    checked={option.value == defaultSortOption.value ? true : false}
+                                    checked={
+                                      option.value == defaultSortOption.value
+                                        ? true
+                                        : false
+                                    }
                                     readOnly
                                   />
-                                  <label className="form-check-label cursor-pointer dgc">{option.label}</label>
+                                  <label className="form-check-label cursor-pointer dgc">
+                                    {option.label}
+                                  </label>
                                 </div>
                               );
                             })}
                           </div>
                         </div>
-                        {pureValidatingCarriers && pureValidatingCarriers.length > 0 && (
-                          <div className="filter-items pt-3 pb-3 ps-3 pe-3">
-                            <h5 className="sub-title mb-2 dgc">Airlines</h5>
-                            <div className="form-check">
-                              {pureValidatingCarriers.map((carrier, ix) => {
-                                return (
-                                  <div key={ix} onClick={() => { applyFilters("pure-airline", carrier); }}>
-                                    <input className="form-check-input cursor-pointer" type="checkbox" checked={selectedPureAirlines.length > 0 && selectedPureAirlines.find((x) => x.name == carrier.name)} value={carrier.name} readOnly />
-                                    <label className="form-check-label cursor-pointer dgc">{carrier.name}</label>
-                                  </div>
-                                );
-                              })}
+                        {pureValidatingCarriers &&
+                          pureValidatingCarriers.length > 0 && (
+                            <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                              <h5 className="sub-title mb-2 dgc">Airlines</h5>
+                              <div className="form-check">
+                                {pureValidatingCarriers.map((carrier, ix) => {
+                                  return (
+                                    <div
+                                      key={ix}
+                                      onClick={() => {
+                                        applyFilters("pure-airline", carrier);
+                                      }}
+                                    >
+                                      <input
+                                        className="form-check-input cursor-pointer"
+                                        type="checkbox"
+                                        checked={
+                                          selectedPureAirlines.length > 0 &&
+                                          selectedPureAirlines.find(
+                                            (x) => x.name == carrier.name
+                                          )
+                                        }
+                                        value={carrier.name}
+                                        readOnly
+                                      />
+                                      <label className="form-check-label cursor-pointer dgc">
+                                        {carrier.name}
+                                      </label>
+                                    </div>
+                                  );
+                                })}
+                              </div>
                             </div>
-                          </div>
-                        )}
+                          )}
                         {validatingCarriers &&
                           validatingCarriers.length > 0 && (
                             <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0">
-                              <h5 className="sub-title mb-2 dgc">Multiple Airlines</h5>
+                              <h5 className="sub-title mb-2 dgc">
+                                Multiple Airlines
+                              </h5>
                               <div className="form-check">
                                 {validatingCarriers.map((carrier, ix) => {
                                   return (
-                                    <div key={ix} onClick={() => { applyFilters("airline", carrier); }}>
-                                      <input className="form-check-input cursor-pointer" type="checkbox" checked={selectedAirlines.length > 0 && selectedAirlines.find((x) => x.name == carrier.name)} value={carrier.name} readOnly />
-                                      <label className="form-check-label cursor-pointer dgc">{carrier.name}</label>
+                                    <div
+                                      key={ix}
+                                      onClick={() => {
+                                        applyFilters("airline", carrier);
+                                      }}
+                                    >
+                                      <input
+                                        className="form-check-input cursor-pointer"
+                                        type="checkbox"
+                                        checked={
+                                          selectedAirlines.length > 0 &&
+                                          selectedAirlines.find(
+                                            (x) => x.name == carrier.name
+                                          )
+                                        }
+                                        value={carrier.name}
+                                        readOnly
+                                      />
+                                      <label className="form-check-label cursor-pointer dgc">
+                                        {carrier.name}
+                                      </label>
                                       <Image
                                         className="multiple-airlines-logo ms-2"
                                         loader={trvLoader}
@@ -1639,14 +1824,18 @@ export default function Listing() {
                       </div>
                       <div className="filter-items pt-3 pb-0 border-0 d-lg-none fixed-bottom">
                         <div className="d-flex p-2">
-                          <button className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0 m-2"
+                          <button
+                            className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0 m-2"
                             onClick={() => {
                               setOpenFilters(false);
                               document.body.classList.remove("filter-open");
                               setShowContentLoader(true);
-                              setTimeout(() => { setShowContentLoader(false); }, 1000);
+                              setTimeout(() => {
+                                setShowContentLoader(false);
+                              }, 1000);
                             }}
-                          >Apply Filters
+                          >
+                            Apply Filters
                           </button>
                           <button
                             className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0 m-2 bg-orange"
@@ -1654,10 +1843,13 @@ export default function Listing() {
                               setOpenFilters(false);
                               document.body.classList.remove("filter-open");
                               setShowContentLoader(true);
-                              setTimeout(() => { setShowContentLoader(false); }, 1000);
+                              setTimeout(() => {
+                                setShowContentLoader(false);
+                              }, 1000);
                               clearFilters();
                             }}
-                          >Clear Filters
+                          >
+                            Clear Filters
                           </button>
                         </div>
                       </div>
@@ -1676,10 +1868,18 @@ export default function Listing() {
                       )}
                     </div> */}
                     <div className="col-8">
-                      {
-                        flights.length > 0 &&
-                        <p className='fs-14 fw-bold mb-2'>{flights[0].trips[0].listOfFlight[0].airportFromCity} to {flights[0].trips[0].listOfFlight[flights[0].trips[0].listOfFlight.length - 1].airportToCity} flights Starting @ Rs. {flights[0].totalPrice}</p>
-                      }
+                      {flights.length > 0 && (
+                        <p className="fs-14 fw-bold mb-2">
+                          {flights[0].trips[0].listOfFlight[0].airportFromCity}{" "}
+                          to{" "}
+                          {
+                            flights[0].trips[0].listOfFlight[
+                              flights[0].trips[0].listOfFlight.length - 1
+                            ].airportToCity
+                          }{" "}
+                          flights Starting @ Rs. {flights[0].totalPrice}
+                        </p>
+                      )}
                     </div>
                     <div className="col-12">
                       <OffersMatrix></OffersMatrix>
@@ -1692,14 +1892,53 @@ export default function Listing() {
                           <div className="matrix-sidebar w-100 ">
                             <div className="matrix-sidebar-box w-100">
                               <h4 className="mb-0">Airline</h4>
-                              {matrixAirlines.some((x) => x.nonStopFlights && x.nonStopFlights.length > 0) && (
-                                <h6 className={selectedMatrixStops.indexOf(0) > -1 ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active" : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"} onClick={() => applyMatrixFilter("stops", 0)}>Non Stop</h6>
+                              {matrixAirlines.some(
+                                (x) =>
+                                  x.nonStopFlights &&
+                                  x.nonStopFlights.length > 0
+                              ) && (
+                                <h6
+                                  className={
+                                    selectedMatrixStops.indexOf(0) > -1
+                                      ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active"
+                                      : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"
+                                  }
+                                  onClick={() => applyMatrixFilter("stops", 0)}
+                                >
+                                  Non Stop
+                                </h6>
                               )}
-                              {matrixAirlines.some((x) => x.oneStopFlights && x.oneStopFlights.length > 0) && (
-                                <h6 className={selectedMatrixStops.indexOf(1) > -1 ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active" : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"} onClick={() => applyMatrixFilter("stops", 1)}>1 Stop</h6>
+                              {matrixAirlines.some(
+                                (x) =>
+                                  x.oneStopFlights &&
+                                  x.oneStopFlights.length > 0
+                              ) && (
+                                <h6
+                                  className={
+                                    selectedMatrixStops.indexOf(1) > -1
+                                      ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active"
+                                      : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"
+                                  }
+                                  onClick={() => applyMatrixFilter("stops", 1)}
+                                >
+                                  1 Stop
+                                </h6>
                               )}
-                              {matrixAirlines.some((x) => x.multipleStopFlights && x.multipleStopFlights.length > 0) && (
-                                <h6 className={selectedMatrixStops.indexOf(2) > -1 ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active" : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"} onClick={() => applyMatrixFilter("stops", 2)}>2 Stops</h6>
+                              {matrixAirlines.some(
+                                (x) =>
+                                  x.multipleStopFlights &&
+                                  x.multipleStopFlights.length > 0
+                              ) && (
+                                <h6
+                                  className={
+                                    selectedMatrixStops.indexOf(2) > -1
+                                      ? "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2 active"
+                                      : "cursor-pointer fw-bold border-top mb-0 pt-2 pb-2"
+                                  }
+                                  onClick={() => applyMatrixFilter("stops", 2)}
+                                >
+                                  2 Stops
+                                </h6>
                               )}
                             </div>
                           </div>
@@ -1717,22 +1956,43 @@ export default function Listing() {
                                 return (
                                   <div className="slider-items" key={index}>
                                     <div className="">
-                                      <div className={selectedMatrixAirline.name == carrier.name && selectedMatrixAirline.connectingAirlines == carrier.connectingAirlines ? "bg-white slider-main-item-box cursor-pointer active" : "bg-white slider-main-item-box cursor-pointer"}>
-                                        <div className="slide-img" onClick={() => { applyMatrixFilter("airline", carrier); }}>
+                                      <div
+                                        className={
+                                          selectedMatrixAirline.name ==
+                                            carrier.name &&
+                                          selectedMatrixAirline.connectingAirlines ==
+                                            carrier.connectingAirlines
+                                            ? "bg-white slider-main-item-box cursor-pointer active"
+                                            : "bg-white slider-main-item-box cursor-pointer"
+                                        }
+                                      >
+                                        <div
+                                          className="slide-img"
+                                          onClick={() => {
+                                            applyMatrixFilter(
+                                              "airline",
+                                              carrier
+                                            );
+                                          }}
+                                        >
                                           {carrier.connectingAirlines ==
                                             true && (
-                                              <Image
-                                                className="air-icon w-auto"
-                                                loader={trvLoader}
-                                                src="icon/airplane-plus-icon.png"
-                                                alt="airplane-plus-icon"
-                                                width={176}
-                                                height={20}
-                                              />
-                                            )}
+                                            <Image
+                                              className="air-icon w-auto"
+                                              loader={trvLoader}
+                                              src="icon/airplane-plus-icon.png"
+                                              alt="airplane-plus-icon"
+                                              width={176}
+                                              height={20}
+                                            />
+                                          )}
                                           <Image
                                             loader={airlineLogoLoader}
-                                            src={"airline-logo/" + carrier.code + ".webp"}
+                                            src={
+                                              "airline-logo/" +
+                                              carrier.code +
+                                              ".webp"
+                                            }
                                             height="100"
                                             width="100"
                                             style={{ objectFit: "contain" }}
@@ -1742,27 +2002,112 @@ export default function Listing() {
                                           <label>{carrier.name}</label>
                                         </div>
                                         <div className="slide-cont">
-                                          {matrixAirlines.some((x) => x.nonStopFlights && x.nonStopFlights.length > 0) ? (carrier.nonStopFlights && carrier.nonStopFlights.length > 0 ? (
-                                            <h6 className={selectedMatrixStops.indexOf(0) > -1 || (selectedMatrixAirlineStop.name == carrier.name && selectedMatrixAirlineStop.connectingAirlines == carrier.connectingAirlines && selectedMatrixAirlineStop.stops == 0) ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active" : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"}
-                                              onClick={() => { applyMatrixFilter("airline-stops", carrier, 0); }}>
-                                              {numberFormat(Math.round(carrier.nonStopFlights[0].totalPrice) / totalPassengers).split(".")[0]}
-                                            </h6>
-                                          ) : (
-                                            <h6 className={selectedMatrixStops.indexOf(0) > -1 ? "cursor-pointer fw-bold matrix-one-stop price border-top mb-0 pt-2 pb-2 active" : "cursor-pointer fw-bold matrix-one-stop price border-top mb-0 pt-2 pb-2"}>--</h6>
-                                          )
+                                          {matrixAirlines.some(
+                                            (x) =>
+                                              x.nonStopFlights &&
+                                              x.nonStopFlights.length > 0
+                                          ) ? (
+                                            carrier.nonStopFlights &&
+                                            carrier.nonStopFlights.length >
+                                              0 ? (
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    0
+                                                  ) > -1 ||
+                                                  (selectedMatrixAirlineStop.name ==
+                                                    carrier.name &&
+                                                    selectedMatrixAirlineStop.connectingAirlines ==
+                                                      carrier.connectingAirlines &&
+                                                    selectedMatrixAirlineStop.stops ==
+                                                      0)
+                                                    ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                                onClick={() => {
+                                                  applyMatrixFilter(
+                                                    "airline-stops",
+                                                    carrier,
+                                                    0
+                                                  );
+                                                }}
+                                              >
+                                                {
+                                                  numberFormat(
+                                                    Math.round(
+                                                      carrier.nonStopFlights[0]
+                                                        .totalPrice
+                                                    ) / totalPassengers
+                                                  ).split(".")[0]
+                                                }
+                                              </h6>
+                                            ) : (
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    0
+                                                  ) > -1
+                                                    ? "cursor-pointer fw-bold matrix-one-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer fw-bold matrix-one-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                              >
+                                                --
+                                              </h6>
+                                            )
                                           ) : (
                                             <Fragment></Fragment>
                                           )}
                                           {matrixAirlines.some(
                                             (x) =>
-                                              x.oneStopFlights && x.oneStopFlights.length > 0
+                                              x.oneStopFlights &&
+                                              x.oneStopFlights.length > 0
                                           ) ? (
-                                            carrier.oneStopFlights && carrier.oneStopFlights.length >
+                                            carrier.oneStopFlights &&
+                                            carrier.oneStopFlights.length >
                                               0 ? (
-                                              <h6 className={selectedMatrixStops.indexOf(1) > -1 || (selectedMatrixAirlineStop.name == carrier.name && selectedMatrixAirlineStop.connectingAirlines == carrier.connectingAirlines && selectedMatrixAirlineStop.stops == 1) ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active" : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"}
-                                                onClick={() => { applyMatrixFilter("airline-stops", carrier, 1); }}>{numberFormat(Math.round(carrier.oneStopFlights[0].totalPrice) / totalPassengers).split(".")[0]}</h6>
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    1
+                                                  ) > -1 ||
+                                                  (selectedMatrixAirlineStop.name ==
+                                                    carrier.name &&
+                                                    selectedMatrixAirlineStop.connectingAirlines ==
+                                                      carrier.connectingAirlines &&
+                                                    selectedMatrixAirlineStop.stops ==
+                                                      1)
+                                                    ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                                onClick={() => {
+                                                  applyMatrixFilter(
+                                                    "airline-stops",
+                                                    carrier,
+                                                    1
+                                                  );
+                                                }}
+                                              >
+                                                {
+                                                  numberFormat(
+                                                    Math.round(
+                                                      carrier.oneStopFlights[0]
+                                                        .totalPrice
+                                                    ) / totalPassengers
+                                                  ).split(".")[0]
+                                                }
+                                              </h6>
                                             ) : (
-                                              <h6 className={selectedMatrixStops.indexOf(1) > -1 ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active" : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"}>--</h6>
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    1
+                                                  ) > -1
+                                                    ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                              >
+                                                --
+                                              </h6>
                                             )
                                           ) : (
                                             <Fragment></Fragment>
@@ -1772,25 +2117,53 @@ export default function Listing() {
                                               x.multipleStopFlights &&
                                               x.multipleStopFlights.length > 0
                                           ) ? (
-                                            carrier.multipleStopFlights && carrier.multipleStopFlights.length > 0 ? (
-                                              <h6 className={
-                                                selectedMatrixStops.indexOf(
-                                                  2
-                                                ) > -1 ||
+                                            carrier.multipleStopFlights &&
+                                            carrier.multipleStopFlights.length >
+                                              0 ? (
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    2
+                                                  ) > -1 ||
                                                   (selectedMatrixAirlineStop.name ==
                                                     carrier.name &&
                                                     selectedMatrixAirlineStop.connectingAirlines ==
-                                                    carrier.connectingAirlines &&
+                                                      carrier.connectingAirlines &&
                                                     selectedMatrixAirlineStop.stops >
-                                                    1)
-                                                  ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
-                                                  : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
-                                              }
-                                                onClick={() => { applyMatrixFilter("airline-stops", carrier, 2); }}>
-                                                {numberFormat(Math.round(carrier.multipleStopFlights[0].totalPrice) / totalPassengers).split(".")[0]}
+                                                      1)
+                                                    ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                                onClick={() => {
+                                                  applyMatrixFilter(
+                                                    "airline-stops",
+                                                    carrier,
+                                                    2
+                                                  );
+                                                }}
+                                              >
+                                                {
+                                                  numberFormat(
+                                                    Math.round(
+                                                      carrier
+                                                        .multipleStopFlights[0]
+                                                        .totalPrice
+                                                    ) / totalPassengers
+                                                  ).split(".")[0]
+                                                }
                                               </h6>
                                             ) : (
-                                              <h6 className={selectedMatrixStops.indexOf(2) > -1 ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active" : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"}>--</h6>
+                                              <h6
+                                                className={
+                                                  selectedMatrixStops.indexOf(
+                                                    2
+                                                  ) > -1
+                                                    ? "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2 active"
+                                                    : "cursor-pointer matrix-non-stop price border-top mb-0 pt-2 pb-2"
+                                                }
+                                              >
+                                                --
+                                              </h6>
                                             )
                                           ) : (
                                             <Fragment></Fragment>
@@ -1811,7 +2184,17 @@ export default function Listing() {
                   <div className="row">
                     <div className="col-sm-12">
                       <div className="mt-0 note-bar br-5 ps-3 pt-3 pe-3 pb-3">
-                        <p className="mb-0"><strong>Note:</strong> * All the fares displayed are for {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 ? "Round Trip" : "One Way"} and are in INR, inclusive of base fare, taxes and service fees.</p>
+                        <p className="mb-0">
+                          <strong>Note:</strong> * All the fares displayed are
+                          for{" "}
+                          {currentFilters &&
+                          currentFilters.segments &&
+                          currentFilters.segments.length > 1
+                            ? "Round Trip"
+                            : "One Way"}{" "}
+                          and are in INR, inclusive of base fare, taxes and
+                          service fees.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -2131,17 +2514,27 @@ export default function Listing() {
                           let returnLayoverCounter = 0;
 
                           if (flight.trips.length > 1) {
-                            hasReturnMultipleAirlines = !flight.trips[1].listOfFlight
-                              .map((x) => x.marketingCarrier)
-                              .every((x) => x == flight.trips[1].validatingCarrier.code);
+                            hasReturnMultipleAirlines =
+                              !flight.trips[1].listOfFlight
+                                .map((x) => x.marketingCarrier)
+                                .every(
+                                  (x) =>
+                                    x == flight.trips[1].validatingCarrier.code
+                                );
                             let returnDepartedDate = new Date(
                               flight.trips[1].listOfFlight[0].departeddate
                             );
                             let returnArrivalDate = new Date(
-                              flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].arrivalAt);
+                              flight.trips[1].listOfFlight[
+                                flight.trips[1].listOfFlight.length - 1
+                              ].arrivalAt
+                            );
                             let returnDifference =
-                              returnArrivalDate.getTime() - returnDepartedDate.getTime();
-                            returnTotalDays = Math.ceil(returnDifference / (1000 * 3600 * 24));
+                              returnArrivalDate.getTime() -
+                              returnDepartedDate.getTime();
+                            returnTotalDays = Math.ceil(
+                              returnDifference / (1000 * 3600 * 24)
+                            );
                           }
 
                           let flightPrice = Math.round(flight.totalPrice);
@@ -2149,24 +2542,36 @@ export default function Listing() {
                           let totalPax = 0;
                           flight.fareDetails.forEach((fare) => {
                             totalPax += fare.noofPax;
-                            if (fare.totalFareAmount > 0) { totalPassangers += fare.noofPax; }
+                            if (fare.totalFareAmount > 0) {
+                              totalPassangers += fare.noofPax;
+                            }
                           });
-                          let avgPrice = Math.round(flightPrice / totalPassangers);
+                          let avgPrice = Math.round(
+                            flightPrice / totalPassangers
+                          );
                           var displayOperatedBy = [
                             ...new Set(
                               flight.trips[0].listOfFlight
-                                .filter((x) => x.airlineName != x.operatedBy && !!x.operatedBy)
+                                .filter(
+                                  (x) =>
+                                    x.airlineName != x.operatedBy &&
+                                    !!x.operatedBy
+                                )
                                 .map((x) => x.operatedBy)
                             ),
                           ];
                           var displayRtrnOperatedBy = flight.trips.length >
                             1 && [
-                              ...new Set(
-                                flight.trips[1].listOfFlight
-                                  .filter((x) => x.airlineName != x.operatedBy && !!x.operatedBy)
-                                  .map((x) => x.operatedBy)
-                              ),
-                            ];
+                            ...new Set(
+                              flight.trips[1].listOfFlight
+                                .filter(
+                                  (x) =>
+                                    x.airlineName != x.operatedBy &&
+                                    !!x.operatedBy
+                                )
+                                .map((x) => x.operatedBy)
+                            ),
+                          ];
                           let showBaggageOptions = isPureAirline(flight);
                           let baggageOptions = null;
                           let isDomestic = isADomesticFlight(flight);
@@ -2182,7 +2587,10 @@ export default function Listing() {
                           // const isIndiaUsaPage = ((currentFilters?.segments[0]?.fromCountry == "United States") && (currentFilters?.segments[0]?.toCountry == "India")) || ((currentFilters?.segments[0]?.toCountry == "United States") && (currentFilters?.segments[0]?.fromCountry == "India"));
 
                           return (
-                            <div className="regular-flight-wrp" key={flightIndex}>
+                            <div
+                              className="regular-flight-wrp"
+                              key={flightIndex}
+                            >
                               {/* {(flightIndex == 1) && (isIndiaUsaPage) &&
                             <div className="fm-offer-banner row position-relative mt-3 cursor-pointer">
                               <a href='tel:+1-844-659-0101' onClick={async () => {
@@ -2193,316 +2601,743 @@ export default function Listing() {
                               </a>
                             </div>
                           } */}
-                              {currentFilters && currentFilters.segments && currentFilters.segments.length == 2 && flight && flight.trips && flight.trips.length > 1 && (
-                                <div className="regular-round-trip listing-com">
-                                  <div className="regular-flight-round-box mt-4 mb-4">
-                                    <div className="row align-items-center">
-                                      <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 col-xxl-10 both-flight-box">
-                                        <div className="color-white gds-code">{flight.gdsHiddenId}</div>
-                                        <div className="row align-items-center">
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
-                                            <div className="row">
-                                              <div className="col-sm-12">
-                                                <h2 className="digination-sub-title mb-3 dgc">Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
-                                              </div>
-                                            </div>
-                                            <div className="row align-items-center">
-                                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-4 col-xxl-3">
-                                                <div className="air-flight-logo text-start">
-                                                  <Image
-                                                    className="mb-1 h-auto"
-                                                    loader={airlineLogoLoader}
-                                                    src={"airline-logo/" + flight.trips[0].validatingCarrier.code + ".webp"}
-                                                    alt="airplane-plus-icon"
-                                                    width={35}
-                                                    height={43}
-                                                  />
-                                                  {hasDeptMultipleAirlines && (
-                                                    <Image
-                                                      className="air-icon w-auto"
-                                                      loader={trvLoader}
-                                                      src="icon/airplane-plus-icon.png"
-                                                      alt="airplane-plus-icon"
-                                                      width={176}
-                                                      height={20}
-                                                    />
-                                                  )}
-                                                  <span>{flight.trips[0].validatingCarrier.name}</span>
-                                                </div>
-                                              </div>
-                                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
-                                                <div className="row align-items-center">
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0"><span>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span></h6>
-                                                    <h4 className="airport-code mb-0 dgc">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">{flight.trips[0].listOfFlight[0].fromCode}</span>
-                                                        <span className="tooltip-hover-top">{flight.trips[0].listOfFlight[0].fromAirportName}</span>
-                                                      </span>
-                                                    </h4>
-                                                  </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
-                                                    <div className="from-to-from-digination">
-                                                      <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
-                                                      {flight.trips[0].listOfFlight.length <= 3 && (
-                                                        <h5 className="mb-0 text-center">
-                                                          {flight.trips[0].listOfFlight.map(
-                                                            (t, ix) => {
-                                                              if (ix >= flight.trips[0].listOfFlight.length - 1)
-                                                                return (
-                                                                  <Fragment key={ix}></Fragment>
-                                                                );
-                                                              return (
-                                                                <span key={ix}></span>
-                                                              );
-                                                            }
-                                                          )}
-                                                        </h5>
-                                                      )}
-                                                      <h6 className="airport-code mb-0 text-center">
-                                                        <span className="flight-plus-air">
-                                                          <span className="tooltip-box cursor-pointer">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</span>
-                                                          <span className="tooltip-hover-top">
-                                                            <ul className="flight-duration-ovelry p-0 m-0 text-start">
-                                                              <li><strong>Flight Duration:</strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
-                                                              {flight.trips[0].listOfFlight.map(
-                                                                (tf, ix) => {
-                                                                  if (
-                                                                    !!tf.displayLayOverTime
-                                                                  )
-                                                                    layoverCounter += 1;
-                                                                  return (
-                                                                    <Fragment key={ix}>
-                                                                      {!!tf.displayLayOverTime && (
-                                                                        <li><strong>Layover{layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
-                                                                      )}
-                                                                    </Fragment>
-                                                                  );
-                                                                }
-                                                              )}
-                                                            </ul>
-                                                          </span>
-                                                        </span>
-                                                      </h6>
-                                                      {/* <h6 className='text-center mb-0'>{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6> */}
-                                                    </div>
-                                                  </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0 text-end">
-                                                      <span>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
-                                                      {departDays > 0 && (
-                                                        <span className="flight-plus-air">
-                                                          <span className="tooltip-box cursor-pointer color-red">+ {departDays}</span>
-                                                          <span className="tooltip-hover-top"><strong>Flight Arrival -</strong> {getFormattedDate(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt)}</span>
-                                                        </span>
-                                                      )}
-                                                    </h6>
-                                                    {/* <h4 className='airport-code mb-0 dgc'>{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</h4> */}
-                                                    <h4 className="airport-code mb-0 dgc text-end">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</span>
-                                                        <span className="tooltip-hover-top">{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toAirportName}</span>
-                                                      </span>
-                                                    </h4>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            {displayOperatedBy && displayOperatedBy.length > 0 && (
+                              {currentFilters &&
+                                currentFilters.segments &&
+                                currentFilters.segments.length == 2 &&
+                                flight &&
+                                flight.trips &&
+                                flight.trips.length > 1 && (
+                                  <div className="regular-round-trip listing-com">
+                                    <div className="regular-flight-round-box mt-4 mb-4">
+                                      <div className="row align-items-center">
+                                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 col-xxl-10 both-flight-box">
+                                          <div className="color-white gds-code">
+                                            {flight.gdsHiddenId}
+                                          </div>
+                                          <div className="row align-items-center">
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
                                               <div className="row">
                                                 <div className="col-sm-12">
-                                                  <h6 className="operated-by mb-0 mt-3">Operated by: {displayOperatedBy.join(", ")}</h6>
+                                                  <h2 className="digination-sub-title mb-3 dgc">
+                                                    Departure |{" "}
+                                                    {getFormattedDate4(
+                                                      flight.trips[0]
+                                                        .listOfFlight[0]
+                                                        .departeddate
+                                                    )}
+                                                  </h2>
                                                 </div>
                                               </div>
-                                            )}
-                                          </div>
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 flight-round-box">
-                                            <div className="row">
-                                              <div className="col-sm-12">
-                                                <h2 className="digination-sub-title mb-3 dgc">Return | {getFormattedDate4(flight.trips[1].listOfFlight[0].departeddate)}</h2>
-                                              </div>
-                                            </div>
-                                            <div className="row align-items-center">
-                                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-4 col-xxl-3">
-                                                <div className="air-flight-logo text-start">
-                                                  <Image
-                                                    className="mb-1 h-auto"
-                                                    loader={airlineLogoLoader}
-                                                    src={"airline-logo/" + flight.trips[1].validatingCarrier.code + ".webp"}
-                                                    alt="airplane-plus-icon"
-                                                    width={35}
-                                                    height={43}
-                                                  />
-                                                  {hasReturnMultipleAirlines && (
+                                              <div className="row align-items-center">
+                                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-4 col-xxl-3">
+                                                  <div className="air-flight-logo text-start">
                                                     <Image
-                                                      className="air-icon w-auto"
-                                                      loader={trvLoader}
-                                                      src="icon/airplane-plus-icon.png"
+                                                      className="mb-1 h-auto"
+                                                      loader={airlineLogoLoader}
+                                                      src={
+                                                        "airline-logo/" +
+                                                        flight.trips[0]
+                                                          .validatingCarrier
+                                                          .code +
+                                                        ".webp"
+                                                      }
                                                       alt="airplane-plus-icon"
-                                                      width={176}
-                                                      height={20}
+                                                      width={35}
+                                                      height={43}
                                                     />
-                                                  )}
-                                                  <span>{flight.trips[1].validatingCarrier.name}</span>
-                                                </div>
-                                              </div>
-                                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
-                                                <div className="row align-items-center">
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0">
-                                                      <span>{getFormattedTime(flight.trips[1].listOfFlight[0].departureTime)}</span>
-                                                      <span className="flight-plus-air"></span>
-                                                    </h6>
-                                                    {/* <h4 className='airport-code mb-0 dgc'>{flight.trips[1].listOfFlight[0].fromCode}</h4> */}
-                                                    <h4 className="airport-code mb-0 dgc">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">{flight.trips[1].listOfFlight[0].fromCode}</span>
-                                                        <span className="tooltip-hover-top">{flight.trips[1].listOfFlight[0].fromAirportName}</span>
-                                                      </span>
-                                                    </h4>
+                                                    {hasDeptMultipleAirlines && (
+                                                      <Image
+                                                        className="air-icon w-auto"
+                                                        loader={trvLoader}
+                                                        src="icon/airplane-plus-icon.png"
+                                                        alt="airplane-plus-icon"
+                                                        width={176}
+                                                        height={20}
+                                                      />
+                                                    )}
+                                                    <span>
+                                                      {
+                                                        flight.trips[0]
+                                                          .validatingCarrier
+                                                          .name
+                                                      }
+                                                    </span>
                                                   </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
-                                                    <div className="from-to-from-digination">
-                                                      <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[1].totalTripTime)}</h6>
-                                                      {flight.trips[1].listOfFlight.length <= 3 && (
-                                                        <h5 className="mb-0 text-center">
-                                                          {flight.trips[1].listOfFlight.map(
-                                                            (t, ix) => {
-                                                              if (
-                                                                ix >= flight.trips[1].listOfFlight.length - 1)
-                                                                return (
-                                                                  <Fragment key={ix}></Fragment>
-                                                                );
-                                                              return (
-                                                                <span key={ix}></span>
-                                                              );
-                                                            }
+                                                </div>
+                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
+                                                  <div className="row align-items-center">
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[0]
+                                                              .listOfFlight[0]
+                                                              .departureTime
                                                           )}
-                                                        </h5>
-                                                      )}
-                                                      <h6 className="airport-code mb-0 text-center">
-                                                        <span className="flight-plus-air">
-                                                          <span className="tooltip-box cursor-pointer">{flight.trips[1].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[1].listOfFlight.length - 1 + (flight.trips[1].listOfFlight.length == 2 ? " Stop" : " Stops")}</span>
-                                                          <span className="tooltip-hover-top">
-                                                            <ul className="flight-duration-ovelry p-0 m-0 text-start">
-                                                              <li><strong>Flight Duration:</strong> {getDiffFromMinutes(flight.trips[1].totalTripTime)}</li>
-                                                              {flight.trips[1].listOfFlight.map(
-                                                                (tf, ix) => {
-                                                                  if (
-                                                                    !!tf.displayLayOverTime
-                                                                  )
-                                                                    returnLayoverCounter += 1;
-                                                                  return (
-                                                                    <Fragment key={ix}>
-                                                                      {!!tf.displayLayOverTime && (
-                                                                        <li><strong>Layover {returnLayoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
-                                                                      )}
-                                                                    </Fragment>
-                                                                  );
-                                                                }
-                                                              )}
-                                                            </ul>
-                                                          </span>
                                                         </span>
                                                       </h6>
+                                                      <h4 className="airport-code mb-0 dgc">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[0]
+                                                                .fromCode
+                                                            }
+                                                          </span>
+                                                          <span className="tooltip-hover-top">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[0]
+                                                                .fromAirportName
+                                                            }
+                                                          </span>
+                                                        </span>
+                                                      </h4>
                                                     </div>
-                                                  </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0 text-end">
-                                                      <span>{getFormattedTime(flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].arrivalTime)}</span>
-                                                      {returnTotalDays >
-                                                        0 && (
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                      <div className="from-to-from-digination">
+                                                        <h6 className="text-center mb-0">
+                                                          {getDiffFromMinutes(
+                                                            flight.trips[0]
+                                                              .totalTripTime
+                                                          )}
+                                                        </h6>
+                                                        {flight.trips[0]
+                                                          .listOfFlight
+                                                          .length <= 3 && (
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[0].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                    1
+                                                                )
+                                                                  return (
+                                                                    <Fragment
+                                                                      key={ix}
+                                                                    ></Fragment>
+                                                                  );
+                                                                return (
+                                                                  <span
+                                                                    key={ix}
+                                                                  ></span>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
+                                                        <h6 className="airport-code mb-0 text-center">
                                                           <span className="flight-plus-air">
-                                                            <span className="tooltip-box cursor-pointer color-red">+ {returnTotalDays}</span>
-                                                            <span className="tooltip-hover-top"><strong>Flight Arrival -</strong> {getFormattedDate(flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].arrivalAt)}</span>
+                                                            <span className="tooltip-box cursor-pointer">
+                                                              {flight.trips[0]
+                                                                .listOfFlight
+                                                                .length == 1
+                                                                ? "Non-Stop"
+                                                                : flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <ul className="flight-duration-ovelry p-0 m-0 text-start">
+                                                                <li>
+                                                                  <strong>
+                                                                    Flight
+                                                                    Duration:
+                                                                  </strong>{" "}
+                                                                  {getDiffFromMinutes(
+                                                                    flight
+                                                                      .trips[0]
+                                                                      .totalTripTime
+                                                                  )}
+                                                                </li>
+                                                                {flight.trips[0].listOfFlight.map(
+                                                                  (tf, ix) => {
+                                                                    if (
+                                                                      !!tf.displayLayOverTime
+                                                                    )
+                                                                      layoverCounter += 1;
+                                                                    return (
+                                                                      <Fragment
+                                                                        key={ix}
+                                                                      >
+                                                                        {!!tf.displayLayOverTime && (
+                                                                          <li>
+                                                                            <strong>
+                                                                              Layover
+                                                                              {
+                                                                                layoverCounter
+                                                                              }
+                                                                              :
+                                                                            </strong>{" "}
+                                                                            {
+                                                                              tf.displayLayOverTime
+                                                                            }
+                                                                            ,{" "}
+                                                                            {
+                                                                              tf.airportToCity
+                                                                            }
+                                                                          </li>
+                                                                        )}
+                                                                      </Fragment>
+                                                                    );
+                                                                  }
+                                                                )}
+                                                              </ul>
+                                                            </span>
+                                                          </span>
+                                                        </h6>
+                                                        {/* <h6 className='text-center mb-0'>{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6> */}
+                                                      </div>
+                                                    </div>
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0 text-end">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[0]
+                                                              .listOfFlight[
+                                                              flight.trips[0]
+                                                                .listOfFlight
+                                                                .length - 1
+                                                            ].arrivalTime
+                                                          )}
+                                                        </span>
+                                                        {departDays > 0 && (
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer color-red">
+                                                              + {departDays}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <strong>
+                                                                Flight Arrival -
+                                                              </strong>{" "}
+                                                              {getFormattedDate(
+                                                                flight.trips[0]
+                                                                  .listOfFlight[
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length - 1
+                                                                ].arrivalAt
+                                                              )}
+                                                            </span>
                                                           </span>
                                                         )}
-                                                    </h6>
-                                                    <h4 className="airport-code mb-0 dgc text-end">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">{flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].toCode}</span>
-                                                        <span className="tooltip-hover-top">{flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].toAirportName}</span>
-                                                      </span>
-                                                    </h4>
+                                                      </h6>
+                                                      {/* <h4 className='airport-code mb-0 dgc'>{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</h4> */}
+                                                      <h4 className="airport-code mb-0 dgc text-end">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[
+                                                                flight.trips[0]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toCode
+                                                            }
+                                                          </span>
+                                                          <span className="tooltip-hover-top">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[
+                                                                flight.trips[0]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toAirportName
+                                                            }
+                                                          </span>
+                                                        </span>
+                                                      </h4>
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
+                                              {displayOperatedBy &&
+                                                displayOperatedBy.length >
+                                                  0 && (
+                                                  <div className="row">
+                                                    <div className="col-sm-12">
+                                                      <h6 className="operated-by mb-0 mt-3">
+                                                        Operated by:{" "}
+                                                        {displayOperatedBy.join(
+                                                          ", "
+                                                        )}
+                                                      </h6>
+                                                    </div>
+                                                  </div>
+                                                )}
                                             </div>
-                                            {displayRtrnOperatedBy && displayRtrnOperatedBy.length > 0 && (
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 flight-round-box">
                                               <div className="row">
                                                 <div className="col-sm-12">
-                                                  <h6 className="operated-by mb-0 mt-3">Operated by: {displayRtrnOperatedBy.join(", ")}</h6>
+                                                  <h2 className="digination-sub-title mb-3 dgc">
+                                                    Return |{" "}
+                                                    {getFormattedDate4(
+                                                      flight.trips[1]
+                                                        .listOfFlight[0]
+                                                        .departeddate
+                                                    )}
+                                                  </h2>
                                                 </div>
                                               </div>
-                                            )}
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 ps-0">
-                                        <div className="air-flight-price text-end">
-                                          <h2 className="mb-0 dgc">{numberFormat(avgPrice).split(".")[0]}</h2>
-                                          <h6 className="mb-2 mt-2">{totalPassangers > 1 ? "Round Trip Per Traveler" : "Round Trip Per Adult"}</h6>
-                                          {/* <button
-                                            className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
-                                            onClick={async () => {
-                                              setShowSpinnerIndex(flightIndex);
-                                              let currentFlight = flight;
-                                              await trackMixpanelEvent("Listing_Itineary_Select", currentFlight);
-
-                                              currentFlight.departDays = departDays;
-                                              currentFlight.returnDays = returnTotalDays;
-                                              currentFlight.baggageOptions = baggageOptions;
-                                              currentFlight.totalPassangers = totalPax;
-                                              currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
-                                              currentFlight.avgPrice = avgPrice;
-                                              setSelectedFlight(currentFlight);
-
-                                              if (flight.gdsName == GDSNames.Tbo.toString()) {
-                                                localStorage.setItem("departFlight", JSON.stringify(flight));
-                                              } else {
-                                                window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
-                                              }
-                                              await checkPriceChangeInKiwi(currentFlight).then((flight) => {
-                                                if (!flight) {
-                                                  setShowSpinnerIndex(null);
-                                                  return;
-                                                }
-                                                setTimeout(() => {
-                                                  window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
-                                                  gotoCheckoutPage(flight);
-                                                  setShowSpinnerIndex(null);
-                                                }, 1000);
-                                              });
-
-                                            }}>
-                                            {showSpinnerIndex === flightIndex ? (
-                                              <span className="spinner-border text-white" role="status"></span>) : (<span>Book</span>)}
-                                          </button> */}
-
-                                          <button type="button" className="buttonStyle3 border-0 float-end fs-14" onClick={() => { setopenFlightEnquiryForm(true); }}>Enquire Now</button>
-
-                                          <div className="offcanvas offcanvas-end side-flap" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                            <div className="offcanvas-header border-bottom">
-                                              <h5 id="offcanvasRightLabel">Review Flight Details</h5>
-                                              <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                              <div className="row align-items-center">
+                                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-4 col-xxl-3">
+                                                  <div className="air-flight-logo text-start">
+                                                    <Image
+                                                      className="mb-1 h-auto"
+                                                      loader={airlineLogoLoader}
+                                                      src={
+                                                        "airline-logo/" +
+                                                        flight.trips[1]
+                                                          .validatingCarrier
+                                                          .code +
+                                                        ".webp"
+                                                      }
+                                                      alt="airplane-plus-icon"
+                                                      width={35}
+                                                      height={43}
+                                                    />
+                                                    {hasReturnMultipleAirlines && (
+                                                      <Image
+                                                        className="air-icon w-auto"
+                                                        loader={trvLoader}
+                                                        src="icon/airplane-plus-icon.png"
+                                                        alt="airplane-plus-icon"
+                                                        width={176}
+                                                        height={20}
+                                                      />
+                                                    )}
+                                                    <span>
+                                                      {
+                                                        flight.trips[1]
+                                                          .validatingCarrier
+                                                          .name
+                                                      }
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
+                                                  <div className="row align-items-center">
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[1]
+                                                              .listOfFlight[0]
+                                                              .departureTime
+                                                          )}
+                                                        </span>
+                                                        <span className="flight-plus-air"></span>
+                                                      </h6>
+                                                      {/* <h4 className='airport-code mb-0 dgc'>{flight.trips[1].listOfFlight[0].fromCode}</h4> */}
+                                                      <h4 className="airport-code mb-0 dgc">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[1]
+                                                                .listOfFlight[0]
+                                                                .fromCode
+                                                            }
+                                                          </span>
+                                                          <span className="tooltip-hover-top">
+                                                            {
+                                                              flight.trips[1]
+                                                                .listOfFlight[0]
+                                                                .fromAirportName
+                                                            }
+                                                          </span>
+                                                        </span>
+                                                      </h4>
+                                                    </div>
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                      <div className="from-to-from-digination">
+                                                        <h6 className="text-center mb-0">
+                                                          {getDiffFromMinutes(
+                                                            flight.trips[1]
+                                                              .totalTripTime
+                                                          )}
+                                                        </h6>
+                                                        {flight.trips[1]
+                                                          .listOfFlight
+                                                          .length <= 3 && (
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[1].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                    1
+                                                                )
+                                                                  return (
+                                                                    <Fragment
+                                                                      key={ix}
+                                                                    ></Fragment>
+                                                                  );
+                                                                return (
+                                                                  <span
+                                                                    key={ix}
+                                                                  ></span>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
+                                                        <h6 className="airport-code mb-0 text-center">
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer">
+                                                              {flight.trips[1]
+                                                                .listOfFlight
+                                                                .length == 1
+                                                                ? "Non-Stop"
+                                                                : flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <ul className="flight-duration-ovelry p-0 m-0 text-start">
+                                                                <li>
+                                                                  <strong>
+                                                                    Flight
+                                                                    Duration:
+                                                                  </strong>{" "}
+                                                                  {getDiffFromMinutes(
+                                                                    flight
+                                                                      .trips[1]
+                                                                      .totalTripTime
+                                                                  )}
+                                                                </li>
+                                                                {flight.trips[1].listOfFlight.map(
+                                                                  (tf, ix) => {
+                                                                    if (
+                                                                      !!tf.displayLayOverTime
+                                                                    )
+                                                                      returnLayoverCounter += 1;
+                                                                    return (
+                                                                      <Fragment
+                                                                        key={ix}
+                                                                      >
+                                                                        {!!tf.displayLayOverTime && (
+                                                                          <li>
+                                                                            <strong>
+                                                                              Layover{" "}
+                                                                              {
+                                                                                returnLayoverCounter
+                                                                              }
+                                                                              :
+                                                                            </strong>{" "}
+                                                                            {
+                                                                              tf.displayLayOverTime
+                                                                            }
+                                                                            ,{" "}
+                                                                            {
+                                                                              tf.airportToCity
+                                                                            }
+                                                                          </li>
+                                                                        )}
+                                                                      </Fragment>
+                                                                    );
+                                                                  }
+                                                                )}
+                                                              </ul>
+                                                            </span>
+                                                          </span>
+                                                        </h6>
+                                                      </div>
+                                                    </div>
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0 text-end">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[1]
+                                                              .listOfFlight[
+                                                              flight.trips[1]
+                                                                .listOfFlight
+                                                                .length - 1
+                                                            ].arrivalTime
+                                                          )}
+                                                        </span>
+                                                        {returnTotalDays >
+                                                          0 && (
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer color-red">
+                                                              +{" "}
+                                                              {returnTotalDays}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <strong>
+                                                                Flight Arrival -
+                                                              </strong>{" "}
+                                                              {getFormattedDate(
+                                                                flight.trips[1]
+                                                                  .listOfFlight[
+                                                                  flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length - 1
+                                                                ].arrivalAt
+                                                              )}
+                                                            </span>
+                                                          </span>
+                                                        )}
+                                                      </h6>
+                                                      <h4 className="airport-code mb-0 dgc text-end">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[1]
+                                                                .listOfFlight[
+                                                                flight.trips[1]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toCode
+                                                            }
+                                                          </span>
+                                                          <span className="tooltip-hover-top">
+                                                            {
+                                                              flight.trips[1]
+                                                                .listOfFlight[
+                                                                flight.trips[1]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toAirportName
+                                                            }
+                                                          </span>
+                                                        </span>
+                                                      </h4>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              {displayRtrnOperatedBy &&
+                                                displayRtrnOperatedBy.length >
+                                                  0 && (
+                                                  <div className="row">
+                                                    <div className="col-sm-12">
+                                                      <h6 className="operated-by mb-0 mt-3">
+                                                        Operated by:{" "}
+                                                        {displayRtrnOperatedBy.join(
+                                                          ", "
+                                                        )}
+                                                      </h6>
+                                                    </div>
+                                                  </div>
+                                                )}
                                             </div>
-                                            {selectedFlight && selectedFlight.totalPrice > 0 && (
-                                              <FlightDetailFlap
-                                                setLoader={setShowContentLoader}
-                                                selectedFlight={selectedFlight}
-                                                gotoCheckoutPage={gotoCheckoutPage}
-                                                checkPriceChangeInKiwi={checkPriceChangeInKiwi}
-                                                selectedTabIndex={0}
-                                              />
-                                            )}
+                                          </div>
+                                        </div>
+                                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 ps-0">
+                                          <div className="air-flight-price text-end">
+                                            <h2 className="mb-0 dgc">
+                                              {
+                                                numberFormat(avgPrice).split(
+                                                  "."
+                                                )[0]
+                                              }
+                                            </h2>
+                                            <h6 className="mb-2 mt-2">
+                                              {totalPassangers > 1
+                                                ? "Round Trip Per Traveler"
+                                                : "Round Trip Per Adult"}
+                                            </h6>
+                                            {/* <button
+                                              className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
+                                              onClick={async () => {
+                                                setShowSpinnerIndex(
+                                                  flightIndex
+                                                );
+                                                let currentFlight = flight;
+                                                await trackMixpanelEvent(
+                                                  "Listing_Itineary_Select",
+                                                  currentFlight
+                                                );
+
+                                                currentFlight.departDays =
+                                                  departDays;
+                                                currentFlight.returnDays =
+                                                  returnTotalDays;
+                                                currentFlight.baggageOptions =
+                                                  baggageOptions;
+                                                currentFlight.totalPassangers =
+                                                  totalPax;
+                                                currentFlight.displayCabin =
+                                                  getDisplayCabin(
+                                                    parseInt(
+                                                      currentFilters.cabin
+                                                    )
+                                                  );
+                                                currentFlight.avgPrice =
+                                                  avgPrice;
+                                                setSelectedFlight(
+                                                  currentFlight
+                                                );
+
+                                                if (
+                                                  flight.gdsName ==
+                                                  GDSNames.Tbo.toString()
+                                                ) {
+                                                  localStorage.setItem(
+                                                    "departFlight",
+                                                    JSON.stringify(flight)
+                                                  );
+                                                } else {
+                                                  window.localStorage.setItem(
+                                                    "currentFlight",
+                                                    CircularJSON.stringify(
+                                                      flight
+                                                    )
+                                                  );
+                                                }
+                                                await checkPriceChangeInKiwi(
+                                                  currentFlight
+                                                ).then((flight) => {
+                                                  if (!flight) {
+                                                    setShowSpinnerIndex(null);
+                                                    return;
+                                                  }
+                                                  setTimeout(() => {
+                                                    window.localStorage.setItem(
+                                                      "currentFlight",
+                                                      CircularJSON.stringify(
+                                                        flight
+                                                      )
+                                                    );
+                                                    gotoCheckoutPage(flight);
+                                                    setShowSpinnerIndex(null);
+                                                  }, 1000);
+                                                });
+                                              }}
+                                            >
+                                              {showSpinnerIndex ===
+                                              flightIndex ? (
+                                                <span
+                                                  className="spinner-border text-white"
+                                                  role="status"
+                                                ></span>
+                                              ) : (
+                                                <span>Book</span>
+                                              )}
+                                            </button> */}
+
+                                            <button
+                                              type="button"
+                                              className="buttonStyle3 border-0 float-end fs-14"
+                                              onClick={async () => {
+                                                let currentFlight = flight;
+                                                await trackMixpanelEvent(
+                                                  "Listing_Itineary_Select",
+                                                  currentFlight
+                                                );
+
+                                                currentFlight.departDays =
+                                                  departDays;
+                                                currentFlight.returnDays =
+                                                  returnTotalDays;
+                                                currentFlight.baggageOptions =
+                                                  baggageOptions;
+                                                currentFlight.totalPassangers =
+                                                  totalPax;
+                                                currentFlight.displayCabin =
+                                                  getDisplayCabin(
+                                                    parseInt(
+                                                      currentFilters.cabin
+                                                    )
+                                                  );
+                                                currentFlight.avgPrice =
+                                                  avgPrice;
+                                                setSelectedFlight(
+                                                  currentFlight
+                                                );
+
+                                                if (
+                                                  flight.gdsName ==
+                                                  GDSNames.Tbo.toString()
+                                                ) {
+                                                  localStorage.setItem(
+                                                    "departFlight",
+                                                    JSON.stringify(flight)
+                                                  );
+                                                } else {
+                                                  window.localStorage.setItem(
+                                                    "currentFlight",
+                                                    CircularJSON.stringify(
+                                                      flight
+                                                    )
+                                                  );
+                                                }
+
+                                                setopenFlightEnquiryForm(true);
+                                                setInquiryPkg(currentFlight);
+                                              }}
+                                            >
+                                              Enquire Now
+                                            </button>
+
+                                            <div
+                                              className="offcanvas offcanvas-end side-flap"
+                                              tabIndex="-1"
+                                              id="offcanvasRight"
+                                              aria-labelledby="offcanvasRightLabel"
+                                            >
+                                              <div className="offcanvas-header border-bottom">
+                                                <h5 id="offcanvasRightLabel">
+                                                  Review Flight Details
+                                                </h5>
+                                                <button
+                                                  type="button"
+                                                  className="btn-close text-reset"
+                                                  data-bs-dismiss="offcanvas"
+                                                  aria-label="Close"
+                                                ></button>
+                                              </div>
+                                              {selectedFlight &&
+                                                selectedFlight.totalPrice >
+                                                  0 && (
+                                                  <FlightDetailFlap
+                                                    setLoader={
+                                                      setShowContentLoader
+                                                    }
+                                                    selectedFlight={
+                                                      selectedFlight
+                                                    }
+                                                    gotoCheckoutPage={
+                                                      gotoCheckoutPage
+                                                    }
+                                                    checkPriceChangeInKiwi={
+                                                      checkPriceChangeInKiwi
+                                                    }
+                                                    selectedTabIndex={0}
+                                                  />
+                                                )}
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
 
-                                    {
-                                      baggageOptions &&
-                                      (
+                                      {baggageOptions && (
                                         <div className="air-flight-btn-and-bag mt-1 pt-2">
                                           <div className="row align-items-center">
                                             <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
@@ -2511,7 +3346,11 @@ export default function Listing() {
                                             <div className="col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4">
                                               <div className="air-flight-bag text-end">
                                                 <div className="dropdown dropdown-hover">
-                                                  <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                                  <button
+                                                    type="button"
+                                                    className="btn btn-primary dropdown-toggle"
+                                                    data-bs-toggle="dropdown"
+                                                  >
                                                     <div className="mob-hide">
                                                       <Image
                                                         className=""
@@ -2524,7 +3363,12 @@ export default function Listing() {
                                                       <Image
                                                         className=""
                                                         loader={trvLoader}
-                                                        src={baggageOptions.carryOnBag == "Chargeable" ? "icon/carry-on-chargeable.svg" : "icon/carry-on-included.svg"}
+                                                        src={
+                                                          baggageOptions.carryOnBag ==
+                                                          "Chargeable"
+                                                            ? "icon/carry-on-chargeable.svg"
+                                                            : "icon/carry-on-included.svg"
+                                                        }
                                                         alt="airplane-plus-icon"
                                                         width={25}
                                                         height={23}
@@ -2532,7 +3376,12 @@ export default function Listing() {
                                                       <Image
                                                         className=""
                                                         loader={trvLoader}
-                                                        src={baggageOptions.carryOnBag == "Chargeable" ? "icon/checked-chargeable.svg" : "icon/checked-included.svg"}
+                                                        src={
+                                                          baggageOptions.carryOnBag ==
+                                                          "Chargeable"
+                                                            ? "icon/checked-chargeable.svg"
+                                                            : "icon/checked-included.svg"
+                                                        }
                                                         alt="personal-item-included"
                                                         width={25}
                                                         height={23}
@@ -2560,8 +3409,14 @@ export default function Listing() {
                                                           width={25}
                                                           height={23}
                                                         />
-                                                        <h5 className="mb-0">Personal Item</h5>
-                                                        <h6 className="mb-0">{baggageOptions.personalItem}</h6>
+                                                        <h5 className="mb-0">
+                                                          Personal Item
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.personalItem
+                                                          }
+                                                        </h6>
                                                       </div>
                                                     </li>
                                                     <li>
@@ -2569,13 +3424,24 @@ export default function Listing() {
                                                         <Image
                                                           className=""
                                                           loader={trvLoader}
-                                                          src={baggageOptions.carryOnBag == "Chargeable" ? "icon/carry-on-chargeable.svg" : "icon/carry-on-included.svg"}
+                                                          src={
+                                                            baggageOptions.carryOnBag ==
+                                                            "Chargeable"
+                                                              ? "icon/carry-on-chargeable.svg"
+                                                              : "icon/carry-on-included.svg"
+                                                          }
                                                           alt="carry-on-included"
                                                           width={25}
                                                           height={23}
                                                         />
-                                                        <h5 className="mb-0">Carry-on Bag</h5>
-                                                        <h6 className="mb-0">{baggageOptions.carryOnBag}</h6>
+                                                        <h5 className="mb-0">
+                                                          Carry-on Bag
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.carryOnBag
+                                                          }
+                                                        </h6>
                                                       </div>
                                                     </li>
                                                     <li>
@@ -2583,13 +3449,24 @@ export default function Listing() {
                                                         <Image
                                                           className=""
                                                           loader={trvLoader}
-                                                          src={baggageOptions.checkedBag == "Chargeable" ? "icon/checked-chargeable.svg" : "icon/checked-included.svg"}
+                                                          src={
+                                                            baggageOptions.checkedBag ==
+                                                            "Chargeable"
+                                                              ? "icon/checked-chargeable.svg"
+                                                              : "icon/checked-included.svg"
+                                                          }
                                                           alt="checked-included"
                                                           width={25}
                                                           height={23}
                                                         />
-                                                        <h5 className="mb-0">Checked Bag</h5>
-                                                        <h6 className="mb-0">{baggageOptions.checkedBag}</h6>
+                                                        <h5 className="mb-0">
+                                                          Checked Bag
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.checkedBag
+                                                          }
+                                                        </h6>
                                                       </div>
                                                     </li>
                                                   </ul>
@@ -2598,281 +3475,451 @@ export default function Listing() {
                                             </div>
                                           </div>
                                         </div>
-                                      )
-                                    }
+                                      )}
+                                    </div>
                                   </div>
-                                </div>
-                              )}
-                              {currentFilters && currentFilters.segments && currentFilters.segments.length == 1 && (
-                                <div className="regular-one-trip listing-com">
-                                  <div className="regular-flight-round-box mt-4 mb-4">
-                                    <div className="row align-items-center">
-                                      <div className="col-sm-12">
-                                        <div className="color-white gds-code">{flight.gdsHiddenId}</div>
-                                      </div>
-                                      <div className="col-8 col-sm-8 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
-                                        <div className="row align-items-center">
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                            <div className="row">
-                                              <div className="col-sm-12">
-                                                <h2 className="digination-sub-title mb-3 dgc">Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
-                                              </div>
-                                            </div>
-                                            <div className="row align-items-center">
-                                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
-                                                <div className="air-flight-logo text-start">
-                                                  <Image
-                                                    className="mb-1 h-auto"
-                                                    loader={airlineLogoLoader}
-                                                    src={"airline-logo/" + flight.trips[0].validatingCarrier.code + ".webp"}
-                                                    alt="airplane-plus-icon"
-                                                    width={35}
-                                                    height={43}
-                                                  />
-                                                  {hasDeptMultipleAirlines && (
-                                                    <Image
-                                                      className="air-icon w-auto"
-                                                      loader={trvLoader}
-                                                      src="icon/airplane-plus-icon.png"
-                                                      alt="airplane-plus-icon"
-                                                      width={30}
-                                                      height={20}
-                                                    />
-                                                  )}
-                                                  <span>{flight.trips[0].validatingCarrier.name}</span>
+                                )}
+                              {currentFilters &&
+                                currentFilters.segments &&
+                                currentFilters.segments.length == 1 && (
+                                  <div className="regular-one-trip listing-com">
+                                    <div className="regular-flight-round-box mt-4 mb-4">
+                                      <div className="row align-items-center">
+                                        <div className="col-sm-12">
+                                          <div className="color-white gds-code">
+                                            {flight.gdsHiddenId}
+                                          </div>
+                                        </div>
+                                        <div className="col-8 col-sm-8 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                          <div className="row align-items-center">
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                              <div className="row">
+                                                <div className="col-sm-12">
+                                                  <h2 className="digination-sub-title mb-3 dgc">
+                                                    Departure |{" "}
+                                                    {getFormattedDate4(
+                                                      flight.trips[0]
+                                                        .listOfFlight[0]
+                                                        .departeddate
+                                                    )}
+                                                  </h2>
                                                 </div>
                                               </div>
-                                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
-                                                <div className="row align-items-center">
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0">
-                                                      <span>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
-                                                      <span className="flight-plus-air"></span>
-                                                    </h6>
-                                                    <h4 className="airport-code mb-0">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">
-                                                          {flight.trips[0].listOfFlight[0].fromCode}
-                                                        </span>
-                                                        <span className="tooltip-hover-top">
-                                                          {flight.trips[0].listOfFlight[0].fromAirportName}
-                                                        </span>
-                                                      </span>
-                                                    </h4>
+                                              <div className="row align-items-center">
+                                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                                  <div className="air-flight-logo text-start">
+                                                    <Image
+                                                      className="mb-1 h-auto"
+                                                      loader={airlineLogoLoader}
+                                                      src={
+                                                        "airline-logo/" +
+                                                        flight.trips[0]
+                                                          .validatingCarrier
+                                                          .code +
+                                                        ".webp"
+                                                      }
+                                                      alt="airplane-plus-icon"
+                                                      width={35}
+                                                      height={43}
+                                                    />
+                                                    {hasDeptMultipleAirlines && (
+                                                      <Image
+                                                        className="air-icon w-auto"
+                                                        loader={trvLoader}
+                                                        src="icon/airplane-plus-icon.png"
+                                                        alt="airplane-plus-icon"
+                                                        width={30}
+                                                        height={20}
+                                                      />
+                                                    )}
+                                                    <span>
+                                                      {
+                                                        flight.trips[0]
+                                                          .validatingCarrier
+                                                          .name
+                                                      }
+                                                    </span>
                                                   </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
-                                                    <div className="from-to-from-digination">
-                                                      <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
-                                                      {flight.trips[0].listOfFlight.length <= 3 && (
-                                                        <h5 className="mb-0 text-center">
-                                                          {flight.trips[0].listOfFlight.map(
-                                                            (t, ix) => {
-                                                              if (ix >= flight.trips[0].listOfFlight.length - 1)
-                                                                return (
-                                                                  <Fragment key={ix}></Fragment>
-                                                                );
-                                                              return (
-                                                                <>
-                                                                  <span key={ix}></span>
-                                                                </>
-                                                              );
-                                                            })}
-                                                        </h5>
-                                                      )}
-                                                      <h6 className="airport-code mb-0 text-center">
+                                                </div>
+                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                  <div className="row align-items-center">
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[0]
+                                                              .listOfFlight[0]
+                                                              .departureTime
+                                                          )}
+                                                        </span>
+                                                        <span className="flight-plus-air"></span>
+                                                      </h6>
+                                                      <h4 className="airport-code mb-0">
                                                         <span className="flight-plus-air">
-                                                          <span className="tooltip-box cursor-pointer">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</span>
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[0]
+                                                                .fromCode
+                                                            }
+                                                          </span>
                                                           <span className="tooltip-hover-top">
-                                                            <ul className="flight-duration-ovelry p-0 m-0 text-start">
-                                                              <li><strong>Flight Duration:</strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
-                                                              {flight.trips[0].listOfFlight.map(
-                                                                (tf, ix) => {
-                                                                  if (
-                                                                    !!tf.displayLayOverTime
-                                                                  )
-                                                                    layoverCounter += 1;
-                                                                  return (
-                                                                    <Fragment key={ix}>
-                                                                      {!!tf.displayLayOverTime && (
-                                                                        <li><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
-                                                                      )}
-                                                                    </Fragment>
-                                                                  );
-                                                                }
-                                                              )}
-                                                            </ul>
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[0]
+                                                                .fromAirportName
+                                                            }
                                                           </span>
                                                         </span>
+                                                      </h4>
+                                                    </div>
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                      <div className="from-to-from-digination">
+                                                        <h6 className="text-center mb-0">
+                                                          {getDiffFromMinutes(
+                                                            flight.trips[0]
+                                                              .totalTripTime
+                                                          )}
+                                                        </h6>
+                                                        {flight.trips[0]
+                                                          .listOfFlight
+                                                          .length <= 3 && (
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[0].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                    1
+                                                                )
+                                                                  return (
+                                                                    <Fragment
+                                                                      key={ix}
+                                                                    ></Fragment>
+                                                                  );
+                                                                return (
+                                                                  <>
+                                                                    <span
+                                                                      key={ix}
+                                                                    ></span>
+                                                                  </>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
+                                                        <h6 className="airport-code mb-0 text-center">
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer">
+                                                              {flight.trips[0]
+                                                                .listOfFlight
+                                                                .length == 1
+                                                                ? "Non-Stop"
+                                                                : flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <ul className="flight-duration-ovelry p-0 m-0 text-start">
+                                                                <li>
+                                                                  <strong>
+                                                                    Flight
+                                                                    Duration:
+                                                                  </strong>{" "}
+                                                                  {getDiffFromMinutes(
+                                                                    flight
+                                                                      .trips[0]
+                                                                      .totalTripTime
+                                                                  )}
+                                                                </li>
+                                                                {flight.trips[0].listOfFlight.map(
+                                                                  (tf, ix) => {
+                                                                    if (
+                                                                      !!tf.displayLayOverTime
+                                                                    )
+                                                                      layoverCounter += 1;
+                                                                    return (
+                                                                      <Fragment
+                                                                        key={ix}
+                                                                      >
+                                                                        {!!tf.displayLayOverTime && (
+                                                                          <li>
+                                                                            <strong>
+                                                                              Layover{" "}
+                                                                              {
+                                                                                layoverCounter
+                                                                              }
+                                                                              :
+                                                                            </strong>{" "}
+                                                                            {
+                                                                              tf.displayLayOverTime
+                                                                            }
+                                                                            ,{" "}
+                                                                            {
+                                                                              tf.airportToCity
+                                                                            }
+                                                                          </li>
+                                                                        )}
+                                                                      </Fragment>
+                                                                    );
+                                                                  }
+                                                                )}
+                                                              </ul>
+                                                            </span>
+                                                          </span>
+                                                        </h6>
+                                                      </div>
+                                                    </div>
+                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                      <h6 className="flight-time mb-0 text-end">
+                                                        <span>
+                                                          {getFormattedTime(
+                                                            flight.trips[0]
+                                                              .listOfFlight[
+                                                              flight.trips[0]
+                                                                .listOfFlight
+                                                                .length - 1
+                                                            ].arrivalTime
+                                                          )}
+                                                        </span>
+                                                        {departDays > 0 && (
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer color-red">
+                                                              + {departDays}
+                                                            </span>
+                                                            <span className="tooltip-hover-top">
+                                                              <strong>
+                                                                Flight Arrival -
+                                                              </strong>{" "}
+                                                              {getFormattedDate(
+                                                                flight.trips[0]
+                                                                  .listOfFlight[
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length - 1
+                                                                ].arrivalAt
+                                                              )}
+                                                            </span>
+                                                          </span>
+                                                        )}
+                                                      </h6>
+                                                      <h4 className="airport-code mb-0 dgc text-end">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[
+                                                                flight.trips[0]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toCode
+                                                            }
+                                                          </span>
+                                                          <span className="tooltip-hover-top">
+                                                            {
+                                                              flight.trips[0]
+                                                                .listOfFlight[
+                                                                flight.trips[0]
+                                                                  .listOfFlight
+                                                                  .length - 1
+                                                              ].toAirportName
+                                                            }
+                                                          </span>
+                                                        </span>
+                                                      </h4>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              {displayOperatedBy &&
+                                                displayOperatedBy.length >
+                                                  0 && (
+                                                  <div className="row">
+                                                    <div className="col-sm-12">
+                                                      <h6 className="operated-by mb-2 mt-3">
+                                                        Operated by:{" "}
+                                                        {displayOperatedBy.join(
+                                                          ", "
+                                                        )}
                                                       </h6>
                                                     </div>
                                                   </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                    <h6 className="flight-time mb-0 text-end">
-                                                      <span>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
-                                                      {departDays > 0 && (
-                                                        <span className="flight-plus-air">
-                                                          <span className="tooltip-box cursor-pointer color-red">+ {departDays}</span>
-                                                          <span className="tooltip-hover-top">
-                                                            <strong>Flight Arrival -</strong> {getFormattedDate(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt)}
-                                                          </span>
-                                                        </span>
-                                                      )}
-                                                    </h6>
-                                                    <h4 className="airport-code mb-0 dgc text-end">
-                                                      <span className="flight-plus-air">
-                                                        <span className="tooltip-box cursor-pointer">
-                                                          {flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}
-                                                        </span>
-                                                        <span className="tooltip-hover-top">
-                                                          {flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toAirportName}
-                                                        </span>
-                                                      </span>
-                                                    </h4>
-                                                  </div>
-                                                </div>
-                                              </div>
+                                                )}
                                             </div>
-                                            {displayOperatedBy &&
-                                              displayOperatedBy.length >
-                                              0 && (
-                                                <div className="row">
-                                                  <div className="col-sm-12">
-                                                    <h6 className="operated-by mb-2 mt-3">Operated by: {displayOperatedBy.join(", ")}</h6>
-                                                  </div>
-                                                </div>
-                                              )}
                                           </div>
                                         </div>
-                                      </div>
-                                      <div className="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
-                                        <div className="air-flight-price text-end">
-                                          <h2 className="mb-0 dgc">{numberFormat(avgPrice).split(".")[0]}</h2>
-                                          <h6 className="mb-2 mt-2">{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
-                                          <button
-                                            className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
-                                            type="button"
-
-                                            onClick={async () => {
-                                              setShowSpinnerIndex(flightIndex);
-                                              let currentFlight = flight;
-                                              await trackMixpanelEvent("Listing_Itineary_Select", currentFlight);
-
-                                              currentFlight.departDays = departDays;
-                                              currentFlight.baggageOptions = baggageOptions;
-                                              currentFlight.totalPassangers = totalPax;
-                                              currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
-                                              currentFlight.avgPrice = avgPrice;
-                                              setSelectedFlight(currentFlight);
-
-                                              if (flight.gdsName == GDSNames.Tbo.toString()) {
-                                                localStorage.setItem("departFlight", JSON.stringify(flight));
-                                              } else {
-                                                window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
+                                        <div className="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                          <div className="air-flight-price text-end">
+                                            <h2 className="mb-0 dgc">
+                                              {
+                                                numberFormat(avgPrice).split(
+                                                  "."
+                                                )[0]
                                               }
-                                              await checkPriceChangeInKiwi(currentFlight).then((flight) => {
-                                                if (!flight) {
-                                                  setShowSpinnerIndex(null);
-                                                  return;
+                                            </h2>
+                                            <h6 className="mb-2 mt-2">
+                                              {totalPassangers > 1
+                                                ? "Avg. Price Per Traveler"
+                                                : "Per Adult"}
+                                            </h6>
+                                            <button
+                                              className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
+                                              type="button"
+                                              onClick={async () => {
+                                                setShowSpinnerIndex(
+                                                  flightIndex
+                                                );
+                                                let currentFlight = flight;
+                                                await trackMixpanelEvent(
+                                                  "Listing_Itineary_Select",
+                                                  currentFlight
+                                                );
+
+                                                currentFlight.departDays =
+                                                  departDays;
+                                                currentFlight.baggageOptions =
+                                                  baggageOptions;
+                                                currentFlight.totalPassangers =
+                                                  totalPax;
+                                                currentFlight.displayCabin =
+                                                  getDisplayCabin(
+                                                    parseInt(
+                                                      currentFilters.cabin
+                                                    )
+                                                  );
+                                                currentFlight.avgPrice =
+                                                  avgPrice;
+                                                setSelectedFlight(
+                                                  currentFlight
+                                                );
+
+                                                if (
+                                                  flight.gdsName ==
+                                                  GDSNames.Tbo.toString()
+                                                ) {
+                                                  localStorage.setItem(
+                                                    "departFlight",
+                                                    JSON.stringify(flight)
+                                                  );
+                                                } else {
+                                                  window.localStorage.setItem(
+                                                    "currentFlight",
+                                                    CircularJSON.stringify(
+                                                      flight
+                                                    )
+                                                  );
                                                 }
-                                                setTimeout(() => {
-                                                  setShowSpinnerIndex(null);
-                                                  window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
-                                                  gotoCheckoutPage(flight);
-                                                }, 1000);
-                                              });
+                                                await checkPriceChangeInKiwi(
+                                                  currentFlight
+                                                ).then((flight) => {
+                                                  if (!flight) {
+                                                    setShowSpinnerIndex(null);
+                                                    return;
+                                                  }
+                                                  setTimeout(() => {
+                                                    setShowSpinnerIndex(null);
+                                                    window.localStorage.setItem(
+                                                      "currentFlight",
+                                                      CircularJSON.stringify(
+                                                        flight
+                                                      )
+                                                    );
+                                                    gotoCheckoutPage(flight);
+                                                  }, 1000);
+                                                });
 
-                                              // setShowContentLoader(true);
+                                                // setShowContentLoader(true);
 
-                                              // checkPriceChangeInKiwi(currentFlight).then((flight) => {
+                                                // checkPriceChangeInKiwi(currentFlight).then((flight) => {
 
-                                              //   setShowContentLoader(false);
+                                                //   setShowContentLoader(false);
 
-                                              //   if (!flight) {
-                                              //     return;
-                                              //   }
+                                                //   if (!flight) {
+                                                //     return;
+                                                //   }
 
-                                              //   window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
+                                                //   window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
 
-                                              //   gotoCheckoutPage(flight);
+                                                //   gotoCheckoutPage(flight);
 
-                                              // })
-                                            }}
-                                          >
-                                            {showSpinnerIndex ===
+                                                // })
+                                              }}
+                                            >
+                                              {showSpinnerIndex ===
                                               flightIndex ? (
-                                              <span
-                                                className="spinner-border text-white"
-                                                role="status"
-                                              ></span>
-                                            ) : (
-                                              <span>Book</span>
-                                            )}                                          </button>
-                                          <div className="offcanvas offcanvas-end side-flap" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                            <div className="offcanvas-header border-bottom">
-                                              <h5 id="offcanvasRightLabel">Review Flight Details</h5>
-                                              <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                <span
+                                                  className="spinner-border text-white"
+                                                  role="status"
+                                                ></span>
+                                              ) : (
+                                                <span>Book</span>
+                                              )}{" "}
+                                            </button>
+                                            <div
+                                              className="offcanvas offcanvas-end side-flap"
+                                              tabIndex="-1"
+                                              id="offcanvasRight"
+                                              aria-labelledby="offcanvasRightLabel"
+                                            >
+                                              <div className="offcanvas-header border-bottom">
+                                                <h5 id="offcanvasRightLabel">
+                                                  Review Flight Details
+                                                </h5>
+                                                <button
+                                                  type="button"
+                                                  className="btn-close text-reset"
+                                                  data-bs-dismiss="offcanvas"
+                                                  aria-label="Close"
+                                                ></button>
+                                              </div>
+                                              {selectedFlight &&
+                                                selectedFlight.totalPrice >
+                                                  0 && (
+                                                  <FlightDetailFlap
+                                                    setLoader={
+                                                      setShowContentLoader
+                                                    }
+                                                    selectedFlight={
+                                                      selectedFlight
+                                                    }
+                                                    gotoCheckoutPage={
+                                                      gotoCheckoutPage
+                                                    }
+                                                    checkPriceChangeInKiwi={
+                                                      checkPriceChangeInKiwi
+                                                    }
+                                                    selectedTabIndex={0}
+                                                  />
+                                                )}
                                             </div>
-                                            {selectedFlight && selectedFlight.totalPrice > 0 && (
-                                              <FlightDetailFlap
-                                                setLoader={setShowContentLoader}
-                                                selectedFlight={selectedFlight}
-                                                gotoCheckoutPage={gotoCheckoutPage}
-                                                checkPriceChangeInKiwi={checkPriceChangeInKiwi}
-                                                selectedTabIndex={0}
-                                              />
-                                            )}
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    {baggageOptions && (
-                                      <div className="air-flight-btn-and-bag mt-1 pt-2">
-                                        <div className="row align-items-center">
-                                          <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0"></div>
-                                          <div className="col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4">
-                                            <div className="air-flight-bag text-end">
-                                              <div className="dropdown dropdown-hover">
-                                                <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                                  <div className="mob-hide">
-                                                    <Image
-                                                      className=""
-                                                      loader={trvLoader}
-                                                      src="icon/personal-item-included.svg"
-                                                      alt="personal-item-included"
-                                                      width={25}
-                                                      height={23}
-                                                    />
-                                                    <Image
-                                                      className=""
-                                                      loader={trvLoader}
-                                                      src={baggageOptions.carryOnBag == "Chargeable" ? "icon/carry-on-chargeable.svg" : "icon/carry-on-included.svg"}
-                                                      alt="carry-on-included"
-                                                      width={25}
-                                                      height={23}
-                                                    />
-                                                    <Image
-                                                      className=""
-                                                      loader={trvLoader}
-                                                      src={baggageOptions.checkedBag == "Chargeable" ? "icon/checked-chargeable.svg" : "icon/checked-included.svg"}
-                                                      alt="checked-included"
-                                                      width={25}
-                                                      height={23}
-                                                    />
-                                                  </div>
-                                                  <div className="desk-hide">
-                                                    <Image
-                                                      className=""
-                                                      loader={trvLoader}
-                                                      src="icon/bag-icon-mobile.svg"
-                                                      alt="bag-icon-mobile"
-                                                      width={25}
-                                                      height={23}
-                                                    />
-                                                  </div>
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                  <li>
-                                                    <div className="air-flight-bag-details d-flex align-items-center">
+                                      {baggageOptions && (
+                                        <div className="air-flight-btn-and-bag mt-1 pt-2">
+                                          <div className="row align-items-center">
+                                            <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0"></div>
+                                            <div className="col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4">
+                                              <div className="air-flight-bag text-end">
+                                                <div className="dropdown dropdown-hover">
+                                                  <button
+                                                    type="button"
+                                                    className="btn btn-primary dropdown-toggle"
+                                                    data-bs-toggle="dropdown"
+                                                  >
+                                                    <div className="mob-hide">
                                                       <Image
                                                         className=""
                                                         loader={trvLoader}
@@ -2881,48 +3928,125 @@ export default function Listing() {
                                                         width={25}
                                                         height={23}
                                                       />
-                                                      <h5 className="mb-0">Personal Item</h5>
-                                                      <h6 className="mb-0">{baggageOptions.personalItem}</h6>
-                                                    </div>
-                                                  </li>
-                                                  <li>
-                                                    <div className="air-flight-bag-details d-flex align-items-center">
                                                       <Image
                                                         className=""
                                                         loader={trvLoader}
-                                                        src={baggageOptions.carryOnBag == "Chargeable" ? "icon/carry-on-chargeable.svg" : "icon/carry-on-included.svg"}
-                                                        alt="payment sucess icon"
-                                                        width={100}
-                                                        height={43}
+                                                        src={
+                                                          baggageOptions.carryOnBag ==
+                                                          "Chargeable"
+                                                            ? "icon/carry-on-chargeable.svg"
+                                                            : "icon/carry-on-included.svg"
+                                                        }
+                                                        alt="carry-on-included"
+                                                        width={25}
+                                                        height={23}
                                                       />
-                                                      <h5 className="mb-0">Carry-on Bag</h5>
-                                                      <h6 className="mb-0">{baggageOptions.carryOnBag}</h6>
-                                                    </div>
-                                                  </li>
-                                                  <li>
-                                                    <div className="air-flight-bag-details d-flex align-items-center">
                                                       <Image
                                                         className=""
                                                         loader={trvLoader}
-                                                        src={baggageOptions.checkedBag == "Chargeable" ? "icon/checked-chargeable.svg" : "icon/checked-included.svg"}
+                                                        src={
+                                                          baggageOptions.checkedBag ==
+                                                          "Chargeable"
+                                                            ? "icon/checked-chargeable.svg"
+                                                            : "icon/checked-included.svg"
+                                                        }
                                                         alt="checked-included"
                                                         width={25}
                                                         height={23}
                                                       />
-                                                      <h5 className="mb-0">Checked Bag</h5>
-                                                      <h6 className="mb-0">{baggageOptions.checkedBag}</h6>
                                                     </div>
-                                                  </li>
-                                                </ul>
+                                                    <div className="desk-hide">
+                                                      <Image
+                                                        className=""
+                                                        loader={trvLoader}
+                                                        src="icon/bag-icon-mobile.svg"
+                                                        alt="bag-icon-mobile"
+                                                        width={25}
+                                                        height={23}
+                                                      />
+                                                    </div>
+                                                  </button>
+                                                  <ul className="dropdown-menu">
+                                                    <li>
+                                                      <div className="air-flight-bag-details d-flex align-items-center">
+                                                        <Image
+                                                          className=""
+                                                          loader={trvLoader}
+                                                          src="icon/personal-item-included.svg"
+                                                          alt="personal-item-included"
+                                                          width={25}
+                                                          height={23}
+                                                        />
+                                                        <h5 className="mb-0">
+                                                          Personal Item
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.personalItem
+                                                          }
+                                                        </h6>
+                                                      </div>
+                                                    </li>
+                                                    <li>
+                                                      <div className="air-flight-bag-details d-flex align-items-center">
+                                                        <Image
+                                                          className=""
+                                                          loader={trvLoader}
+                                                          src={
+                                                            baggageOptions.carryOnBag ==
+                                                            "Chargeable"
+                                                              ? "icon/carry-on-chargeable.svg"
+                                                              : "icon/carry-on-included.svg"
+                                                          }
+                                                          alt="payment sucess icon"
+                                                          width={100}
+                                                          height={43}
+                                                        />
+                                                        <h5 className="mb-0">
+                                                          Carry-on Bag
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.carryOnBag
+                                                          }
+                                                        </h6>
+                                                      </div>
+                                                    </li>
+                                                    <li>
+                                                      <div className="air-flight-bag-details d-flex align-items-center">
+                                                        <Image
+                                                          className=""
+                                                          loader={trvLoader}
+                                                          src={
+                                                            baggageOptions.checkedBag ==
+                                                            "Chargeable"
+                                                              ? "icon/checked-chargeable.svg"
+                                                              : "icon/checked-included.svg"
+                                                          }
+                                                          alt="checked-included"
+                                                          width={25}
+                                                          height={23}
+                                                        />
+                                                        <h5 className="mb-0">
+                                                          Checked Bag
+                                                        </h5>
+                                                        <h6 className="mb-0">
+                                                          {
+                                                            baggageOptions.checkedBag
+                                                          }
+                                                        </h6>
+                                                      </div>
+                                                    </li>
+                                                  </ul>
+                                                </div>
                                               </div>
                                             </div>
                                           </div>
                                         </div>
-                                      </div>
-                                    )}
+                                      )}
+                                    </div>
                                   </div>
-                                </div>
-                              )}
+                                )}
                             </div>
                           );
                         })}
@@ -2941,10 +4065,21 @@ export default function Listing() {
                             height={43}
                           />
                           <h4 className="mb-2 mt-2">No Result found</h4>
-                          <p className="mb-0">for selected criteria. Please apply or change more filters.</p>
-                          <button className="btn-style1 active mb-3 mt-3" onClick={() => clearFilters()}>Reset all filters</button>
+                          <p className="mb-0">
+                            for selected criteria. Please apply or change more
+                            filters.
+                          </p>
+                          <button
+                            className="btn-style1 active mb-3 mt-3"
+                            onClick={() => clearFilters()}
+                          >
+                            Reset all filters
+                          </button>
                           <h6>or Call us at</h6>
-                          <a className="btn-style1 ps-3 pe-3" href={"tel:" + displayContactNumber}>
+                          <a
+                            className="btn-style1 ps-3 pe-3"
+                            href={"tel:" + displayContactNumber}
+                          >
                             <Image
                               className="w-auto h-auto"
                               loader={trvLoader}
@@ -2965,12 +4100,21 @@ export default function Listing() {
                           {filteredFlights &&
                             filteredFlights.length > 0 &&
                             itemsCounter <= filteredFlights.length && (
-                              <button className="transparent-btn active" onClick={() => { let endValue = itemsCounter + 10; setItemsCounter(endValue); }}>
+                              <button
+                                className="transparent-btn active"
+                                onClick={() => {
+                                  let endValue = itemsCounter + 10;
+                                  setItemsCounter(endValue);
+                                }}
+                              >
                                 <span>Show More</span>
                                 <i className="fa-solid fa-arrow-down ms-2"></i>
                               </button>
                             )}
-                          <button className="transparent-btn ms-2" onClick={() => window.scroll(0, 0)}>
+                          <button
+                            className="transparent-btn ms-2"
+                            onClick={() => window.scroll(0, 0)}
+                          >
                             <span>Back to Top</span>
                             <i className="fa-solid fa-arrow-up ms-2"></i>
                           </button>
@@ -3028,7 +4172,10 @@ export default function Listing() {
               height={544}
             />
             <h3>Oops! Got No Results? No worries.</h3>
-            <h4>Speak to our travel agents to catch the cheapest deals to your favorite destination.</h4>
+            <h4>
+              Speak to our travel agents to catch the cheapest deals to your
+              favorite destination.
+            </h4>
             <div className="callus">
               <h5>Ring A Bell On</h5>
               <a href={"tel:" + displayContactNumber}>
@@ -3046,7 +4193,9 @@ export default function Listing() {
             </div>
             <div className="uptooff">
               <h6>Up to</h6>
-              <h2><span>20%</span> Discount</h2>
+              <h2>
+                <span>20%</span> Discount
+              </h2>
               <h6 className="mt-0">on total value awaits!</h6>
             </div>
           </div>
@@ -3082,7 +4231,10 @@ export default function Listing() {
         </Modal.Body>
       </Modal>
 
-      <Modal className="FlightEnquiryForm centred-modal" show={openFlightEnquiryForm}>
+      <Modal
+        className="FlightEnquiryForm centred-modal"
+        show={openFlightEnquiryForm}
+      >
         <Modal.Body>
           <Image
             className="h-auto cursor-pointer position-absolute end-0 me-3"
@@ -3091,9 +4243,26 @@ export default function Listing() {
             alt="close icon"
             width={25}
             height={20}
-            onClick={() => { setopenFlightEnquiryForm(false); }}
+            onClick={() => {
+              setopenFlightEnquiryForm(false);
+            }}
           />
-          <FlightInqueryForm></FlightInqueryForm>
+          <FlightInqueryForm
+            data={{
+              fromCode: fromCode,
+              toCode: toCode,
+              fromLabel: fromLabel,
+              toLabel: toLabel,
+              fromDate: fromDate,
+              toDate: toDate,
+              tripType: tripType,
+              travelers: noOfPassengers,
+            }}
+            fromCity={fromCity}
+            toCity={toCity}
+            inquiryPkg={inquiryPkg}
+            setopenFlightEnquiryForm={setopenFlightEnquiryForm}
+          ></FlightInqueryForm>
         </Modal.Body>
       </Modal>
     </>

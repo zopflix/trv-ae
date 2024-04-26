@@ -1,8 +1,8 @@
 
-export const apiURL = 'https://api.shipratravel.com/flightSearch/api/';
-export const bookingAPIURL = 'https://api.shipratravel.com/flightbooking/api/';
-export const crmAPIURL = 'https://api-crm.superfares.com/api/';
-export const cmsAPIURL = 'https://api-cms.superfares.com/api/';
+export const apiURL = 'https://api-stg.shipratravel.com/flightSearch/api/';
+export const bookingAPIURL = 'https://api-stg.shipratravel.com/flightbooking/api/';
+export const crmAPIURL = 'https://api-stg-crm.superfares.com/api/';
+export const cmsAPIURL = 'https://api-stg-cms.superfares.com/api/';
 export const tenantId = 3;
 
 export const contactNumber = "+91-800-023-5865";

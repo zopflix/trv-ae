@@ -54,7 +54,7 @@ export async function POST(req, res) {
     txnId: params.get("txnId"),
     refNumber: formData.get("bank_ref_num"),
     aPIValidationKey: "Shipra$$$##@@@@%$",
-    portalId: 50,
+    portalId: 107,
     email: formData.get("email"),
     name: formData.get("firstname")
   }
