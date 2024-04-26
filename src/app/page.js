@@ -79,7 +79,6 @@ export default function Home() {
           <div className='spaceDivider'></div>
 
           <DomesticPackageDeals />
-          <GoogleReviews />
           <div className='spaceDivider'></div>
 
           <div className='container'>

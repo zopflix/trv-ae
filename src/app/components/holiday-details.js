@@ -943,7 +943,6 @@ export default function HolidayDetails(props) {
           </div>
         </div>
 
-        <GoogleReviews></GoogleReviews>
         <Suspense>
           <InquiryPopup
             openInquiryModal={openInquiryModal}

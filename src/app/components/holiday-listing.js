@@ -303,9 +303,6 @@ export default function HolidayListing(props) {
           </div>
         }
 
-        <GoogleReviews></GoogleReviews>
-
-
         {(!!title || !!description || !!content) &&
           <section className="py-5">
             <div className="container">
