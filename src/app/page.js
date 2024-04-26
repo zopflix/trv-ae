@@ -100,8 +100,8 @@ export default function Home() {
                 <div className='col-12 col-sm-12 col-md-6 col-lg-7 py-3'>
                   <div className='about-content'>
                     <h2 className='color-white fw-normal mb-3'>About <strong className="fw-bold">Travanya</strong></h2>
-                    <p className='color-white fs-12'>Travanya.com has been helping wanderlust souls accomplish their travel dreams since 2010. Over the years, it has successfully carved a niche in the travel industry by providing easy flight bookings, and end-to-end holiday packages. Available 24*7, our diligent travel agents strive hard to cater to the needs of the travellers by offering the most affordable flight tickets.</p>
-                    <p className='color-white fs-12'>Our professionals understand the requirements meticulously and aim at providing the best flight and holiday deals. Because we understand that bonds become strong when people travel along, we leave no stone unturned to give an experience that will be cherished for ages at a stretch. Travel memories are the best memories that a person can leave behind as a legacy and we know this to the fullest!</p>
+                    <p className='color-white fs-12'>Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality.</p>
+                    <p className='color-white fs-12'>As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
                     <a className='fs-14 color-white text-decoration-none' href='/about-us/'>About More <i className="fa-solid fa-chevron-right fs-12 ms-1"></i></a>
                   </div>
                 </div>
