@@ -57,6 +57,9 @@ export default function Topsearch(props) {
   const resultPageFromCode = props.setFromCode;
   const resultPageToCode = props.setToCode;
   const resultPageFromLabel = props.setFromLabel;
+  const resultPageFromCity = props.setFromCity;
+  const resultPageToCity = props.setToCity;
+
   const resultPageToLabel = props.setToLabel;
   const isModifyInProgress = props.isModifyInProgress;
 
@@ -67,6 +70,11 @@ export default function Topsearch(props) {
     if (fromAirport) {
       resultPageFromLabel(fromAirport.label);
       resultPageToLabel(toAirport.label);
+      resultPageFromCity(fromAirport.cityName)
+      resultPageToCity(toAirport.cityName)
+      resultPageFromCode(fromAirport.value)
+      resultPageToCode(toAirport.value)
+
       const currentSelectedFilters = localStorage.getItem(
         "currentSelectedFilters"
       );
@@ -150,6 +158,7 @@ export default function Topsearch(props) {
       let splitedRoute = props.currentRoute.split("-");
       const fromCode = splitedRoute[1].toLocaleUpperCase();
       const toCode = splitedRoute[4].toLocaleUpperCase();
+
       let from = airports.find((z) => z.value == fromCode);
       let to = airports.find((z) => z.value == toCode);
 
@@ -179,9 +188,11 @@ export default function Topsearch(props) {
 
       resultPageFromCode(fromCode);
       resultPageFromLabel(from?.label);
+      resultPageFromCity(from?.cityName);
       setFromAirport(from);
       setToAirport(to);
       resultPageToLabel(to?.label);
+      resultPageFromCity(to?.cityName);
       resultPageToCode(toCode);
       setTripType(1);
       setFromDate(departDate)
@@ -459,6 +470,9 @@ export default function Topsearch(props) {
     resultPageToCode(toAirport.value);
     resultPageFromLabel(fromAirport.label);
     resultPageToLabel(toAirport.label);
+
+    resultPageFromCity(fromAirport.cityName);
+    resultPageToCity(toAirport.cityName);
 
     if (!!toDate && tripType == 2) {
       segments.push({

@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { getFormattedDate8,trackMixpanelEvent } from "../helpers/common";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { sendHolidayInquiry } from "../services/holidayService";
 import axios from "axios";
 
@@ -21,19 +21,20 @@ export default function FlightInqueryForm(props) {
   const [email, setEmail] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(null);
   const [mobile, setMobile] = useState("");
+  const path = usePathname();
 
-  const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
   const [tripType, setTripType] = useState(1);
-  const [airportsData, setAirportsData] = useState([]);
   const [fromCode, setFromCode] = useState("");
   const [toCode, setToCode] = useState("");
  
   const [hasError, setHasError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const searchParams = useSearchParams();
+  
+
+
 
   useEffect(() => {
     setFromCode(props.data.fromCode);
@@ -41,7 +42,6 @@ export default function FlightInqueryForm(props) {
     setFromDate(props.data.fromDate);
     setToDate(props.data.toDate);
     setTripType(props.data.tripType);
-
 
     
   }, []);
@@ -55,32 +55,35 @@ export default function FlightInqueryForm(props) {
       fromDate &&
       mobile.length == 10 &&
       !!email &&
-      isValidEmail
+      isValidEmail &&
+      (tripType !== 1 || (tripType === 1 && toDate !== ""))
     ) {
       const res = await axios.get("https://geolocation-db.com/json/");
-      console.log("ressssssss", res)
+
       let payload = {
         name: 'Traveller',
-        packageName: `${toAirport.city}${!!toAirport.value ? '(' + toAirport.value + ')' : ''}`,
+        packageName: `${props?.toCity}${'(' + toCode + ')'}`,
         travelDate: getFormattedDate8(fromDate),
         email: email,
         mobile: '91-' + mobile,
         price: 0,
-        adults: adults,
-        children: children,
-        placeFrom: `${fromAirport.city}(${fromAirport.value})`,
+        adults: props?.data?.travelers?.adults,
+        children: props?.data?.travelers?.children,
+        placeFrom: `${props?.fromCity}${'(' + fromCode + ')'}`,
         ip: !!res?.data?.IPv4 ? res?.data?.IPv4 : '',
         referer: searchParams?.get('utm_source') ? (searchParams?.get('utm_source') + ((searchParams?.get('utm_medium') ? (' | ' + searchParams?.get('utm_medium')) : '') + (searchParams?.get('utm_campaign') ? ' | ' + searchParams?.get('utm_campaign') : ''))) : '',
         packType: 'Leisure',
-        location: (path.includes('india-tour-packages') ? "Domestic" : toAirport?.city)
+        location: (path.includes('india-tour-packages') ? "Domestic" : props?.toCity)
       }
-
+      if (tripType === 1 && toDate !== "") {
+        payload.returnDate = getFormattedDate8(toDate);
+    }
 
       await trackMixpanelEvent("Holiday_Inquiry_Popup", null, false, null, payload);
 
       sendHolidayInquiry(payload).then(res => {
         if (res) {
-          props.setOpenInquiryModal(false);
+          props.setopenFlightEnquiryForm(false);
           setIsSubmitting(false);
           window.location.href = `/holidays/thank-you/?id=${res}`;
         } else {
@@ -147,10 +150,10 @@ export default function FlightInqueryForm(props) {
 
               <div className="row">
                 <div className="col-12 col-lg-6 my-2">
-                  {props.data?.fromLabel}{" "}
+                  {props.fromCity}{" "}
                 </div>
                 <div className="col-12 col-lg-6 my-2">
-                  {props.data?.toLabel}
+                  {props.toCity}
                 </div>
               </div>
               <div className="col-12">
