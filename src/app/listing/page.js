@@ -3774,7 +3774,7 @@ export default function Listing() {
                                                 ? "Avg. Price Per Traveler"
                                                 : "Per Adult"}
                                             </h6>
-                                            <button
+                                            {/* <button
                                               className="bg-orange color-white rounded-2 fs-12 py-2 px-3 border-0 float-end text-center"
                                               type="button"
                                               onClick={async () => {
@@ -3840,21 +3840,6 @@ export default function Listing() {
                                                   }, 1000);
                                                 });
 
-                                                // setShowContentLoader(true);
-
-                                                // checkPriceChangeInKiwi(currentFlight).then((flight) => {
-
-                                                //   setShowContentLoader(false);
-
-                                                //   if (!flight) {
-                                                //     return;
-                                                //   }
-
-                                                //   window.localStorage.setItem("currentFlight", CircularJSON.stringify(flight));
-
-                                                //   gotoCheckoutPage(flight);
-
-                                                // })
                                               }}
                                             >
                                               {showSpinnerIndex ===
@@ -3866,6 +3851,60 @@ export default function Listing() {
                                               ) : (
                                                 <span>Book</span>
                                               )}{" "}
+                                            </button> */}
+
+<button
+                                              type="button"
+                                              className="buttonStyle3 border-0 float-end fs-14"
+                                              onClick={async () => {
+                                                let currentFlight = flight;
+                                                await trackMixpanelEvent(
+                                                  "Listing_Itineary_Select",
+                                                  currentFlight
+                                                );
+
+                                                currentFlight.departDays =
+                                                  departDays;
+                                                currentFlight.returnDays =
+                                                  returnTotalDays;
+                                                currentFlight.baggageOptions =
+                                                  baggageOptions;
+                                                currentFlight.totalPassangers =
+                                                  totalPax;
+                                                currentFlight.displayCabin =
+                                                  getDisplayCabin(
+                                                    parseInt(
+                                                      currentFilters.cabin
+                                                    )
+                                                  );
+                                                currentFlight.avgPrice =
+                                                  avgPrice;
+                                                setSelectedFlight(
+                                                  currentFlight
+                                                );
+
+                                                if (
+                                                  flight.gdsName ==
+                                                  GDSNames.Tbo.toString()
+                                                ) {
+                                                  localStorage.setItem(
+                                                    "departFlight",
+                                                    JSON.stringify(flight)
+                                                  );
+                                                } else {
+                                                  window.localStorage.setItem(
+                                                    "currentFlight",
+                                                    CircularJSON.stringify(
+                                                      flight
+                                                    )
+                                                  );
+                                                }
+
+                                                setopenFlightEnquiryForm(true);
+                                                setInquiryPkg(currentFlight);
+                                              }}
+                                            >
+                                              Enquire Now
                                             </button>
                                             <div
                                               className="offcanvas offcanvas-end side-flap"
