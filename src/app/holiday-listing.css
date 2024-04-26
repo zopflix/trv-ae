@@ -2483,6 +2483,13 @@ body.holidayDetail.modal-open {
     display: none;
 }
 
+.FlightEnquiryForm  .modal-body {
+    background: url(https://assets.superfares.com/bharat/modal-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -20px center;
+}
+
 
 /* media start */
 

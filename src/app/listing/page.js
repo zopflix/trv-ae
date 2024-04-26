@@ -1884,7 +1884,7 @@ export default function Listing() {
                       <OffersMatrix></OffersMatrix>
                     </div>
                   </div>
-                  {matrixAirlines && matrixAirlines.length > 0 && (
+                  {/* {matrixAirlines && matrixAirlines.length > 0 && (
                     <div className="matrix-slider mt-0 mb-0">
                       <div className="row">
                         <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 pe-0">
@@ -2178,7 +2178,7 @@ export default function Listing() {
                         </div>
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   <div className="row">
                     <div className="col-sm-12">
