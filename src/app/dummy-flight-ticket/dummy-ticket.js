@@ -1472,10 +1472,6 @@ export default function DummyTicketForm() {
         </div>
       </section>
 
-      <section className="bg-grey  mb-5">
-        <GoogleReviews></GoogleReviews>
-      </section>
-
       <Footer />
     </>
   )
