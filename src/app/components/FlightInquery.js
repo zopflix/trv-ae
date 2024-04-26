@@ -218,9 +218,9 @@ export default function FlightInqueryForm(props) {
                       <Image
                         className="h-auto"
                         loader={trvLoader}
-                        src="icon/email-grey-icon.svg"
+                        src="icon/envelope.svg"
                         alt="Email Icon"
-                        width={25}
+                        width={18}
                         height={25}
                       />
                     </div>
