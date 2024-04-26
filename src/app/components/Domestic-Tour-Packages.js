@@ -24,7 +24,7 @@ export default function DomesticTourPackages() {
 
     useEffect(() => {
         getDestinationAndPackages({ TenantId: 3, IsDomestic: true }).then(res => {
-            if (res.length > 0)
+            if (res && res.length > 0)
                 setDomesticPackages(res);
         });
     }, []);
