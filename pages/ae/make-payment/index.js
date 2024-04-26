@@ -31,12 +31,12 @@ function StripePayment() {
             <Head>
                 <title>Securely Make Payments | Travanya</title>
                 <meta name="description" content='Easily make payments online with Travanya. Choose from various secure payment options for a hassle-free experience. Pay securely and conveniently.' />
-                <link rel="canonical" href='https://www.travanya.com/ae/make-payment/' />
+                <link rel="canonical" href='https://www.travanya.ae/ae/make-payment/' />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content='Securely Make Payments | Travanya' />
                 <meta property="og:description" content='Easily make payments online with Travanya. Choose from various secure payment options for a hassle-free experience. Pay securely and conveniently.' />
-                <meta property="og:url" content='https://www.travanya.com/ae/make-payment/' />
+                <meta property="og:url" content='https://www.travanya.ae/ae/make-payment/' />
                 <meta property="og:site_name" content="Travanya" />
                 <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
                 <meta property="og:image:type" content="image/webp" />

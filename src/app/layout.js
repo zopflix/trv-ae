@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
             "@type": "Review",
             "itemReviewed": {
               "@type": "Organization",
-              "image": "https://www.travanya.com/wp-content/themes/trv/images/logo.webp",
+              "image": "https://www.travanya.ae/wp-content/themes/trv/images/logo.webp",
               "name": "Travanya",
               "telephone": "8000235865",
               "address" :{

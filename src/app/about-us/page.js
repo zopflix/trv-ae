@@ -14,7 +14,7 @@ export async function generateMetadata() {
         openGraph: {
             title: 'About Us - Travanya.ae | Your Best Travel Partner',
             description: "Get familiar with Travanya, your trusted partner in travel adventures. Know about our purpose, principles & commitment to curating seamless travel encounters.",
-            url: 'https://www.travanya.com/about-us',
+            url: 'https://www.travanya.ae/about-us',
         },
     }
 }

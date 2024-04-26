@@ -106,12 +106,12 @@ export async function getServerSideProps({ params }) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.travanya.com/"
+                "item": "https://www.travanya.ae/"
             }, {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "International Tour Packages",
-                "item": "https://www.travanya.com/international-tour-packages/"
+                "item": "https://www.travanya.ae/international-tour-packages/"
             }, {
                 "@type": "ListItem",
                 "position": 3,

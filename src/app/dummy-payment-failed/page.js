@@ -15,7 +15,7 @@ export async function generateMetadata() {
         openGraph: {
             title: 'Discover the Essence of Travanya - About Us | Your Travel Companion',
             description: "Uncover the story behind Travanya, your trusted travel companion. Learn about our mission, values, and commitment to providing seamless travel experiences. Explore the heart of NeoFares and join us on the journey.",
-            url: 'https://www.travanya.com/flight-dummy-ticket',
+            url: 'https://www.travanya.ae/flight-dummy-ticket',
         },
     }
 }
