@@ -72,6 +72,7 @@ export default function FlightInqueryForm(props) {
         name: 'Traveller',
         packageName: `${props?.toCity}${'(' + toCode + ')'}`,
         travelDate: getFormattedDate8(fromDate),
+        returnDate: tripType === 2 && toDate !==null ? getFormattedDate8(toDate) :"",
         email: email,
         mobile: '91-' + mobile,
         price: 0,
@@ -84,10 +85,7 @@ export default function FlightInqueryForm(props) {
         location: (path.includes('india-tour-packages') ? "Domestic" : props?.toCity),
         mode:enquireMode
       }
-      if (tripType === 1 && toDate !== "") {
-        payload.returnDate = getFormattedDate8(toDate);
-    }
-
+   
       await trackMixpanelEvent("Holiday_Inquiry_Popup", null, false, null, payload);
 
       sendHolidayInquiry(payload).then(res => {
