@@ -34,6 +34,14 @@ export default function FlightInqueryForm(props) {
   const searchParams = useSearchParams();
   
 
+  const [enquireMode, setEnquireMode] = useState(false);
+
+  useEffect(() => {
+    const keywords = ['listing'];
+    if (keywords.some(keyword => path.includes(keyword))) {
+      setEnquireMode(true);
+    }
+}, [path]);
 
 
   useEffect(() => {
@@ -73,7 +81,8 @@ export default function FlightInqueryForm(props) {
         ip: !!res?.data?.IPv4 ? res?.data?.IPv4 : '',
         referer: searchParams?.get('utm_source') ? (searchParams?.get('utm_source') + ((searchParams?.get('utm_medium') ? (' | ' + searchParams?.get('utm_medium')) : '') + (searchParams?.get('utm_campaign') ? ' | ' + searchParams?.get('utm_campaign') : ''))) : '',
         packType: 'Leisure',
-        location: (path.includes('india-tour-packages') ? "Domestic" : props?.toCity)
+        location: (path.includes('india-tour-packages') ? "Domestic" : props?.toCity),
+        mode:enquireMode
       }
       if (tripType === 1 && toDate !== "") {
         payload.returnDate = getFormattedDate8(toDate);

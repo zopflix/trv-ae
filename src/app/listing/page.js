@@ -1286,7 +1286,6 @@ export default function Listing() {
     return flight;
   };
 
-  console.log("seleeeee", selectedFlight);
 
   const gotoCheckoutPage = (flight) => {
     const parm = new URLSearchParams(window.location.search);
