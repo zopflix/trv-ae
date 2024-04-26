@@ -112,7 +112,7 @@ export default function FlightInqueryForm(props) {
       <div className="row">
         <div className="col-12 col-md-6 d-none d-md-inline-block"></div>
         <div className="col-12 col-md-6">
-          <div className="shadow p-4 my-2">
+          <div className="shadow p-4 my-2 bg-white">
             <h4 class="mb-0 fw-bold color-blue mb-2 text-center">
               Excellent Choice!
             </h4>
