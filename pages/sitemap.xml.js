@@ -4,71 +4,71 @@ function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-  <loc>https://www.travanya.com/</loc>
+  <loc>https://www.travanya.ae/</loc>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/about-us/</loc>
+  <loc>https://www.travanya.ae/about-us/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/holidays/</loc>
+  <loc>https://www.travanya.ae/holidays/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/india-tour-packages/</loc>
+  <loc>https://www.travanya.ae/india-tour-packages/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/international-tour-packages/</loc>
+  <loc>https://www.travanya.ae/international-tour-packages/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/blog/travanya-your-gateway-to-unforgettable-journeys-from-UAE-to-anywhere/</loc>
+  <loc>https://www.travanya.ae/blog/travanya-your-gateway-to-unforgettable-journeys-from-UAE-to-anywhere/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/blog/umrah-saudi-visa-for-uae-residents/</loc>
+  <loc>https://www.travanya.ae/blog/umrah-saudi-visa-for-uae-residents/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/blog/best-things-to-do-in-dubai-airport/</loc>
+  <loc>https://www.travanya.ae/blog/best-things-to-do-in-dubai-airport/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/contact-us/</loc>
+  <loc>https://www.travanya.ae/contact-us/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/privacy-policy/</loc>
+  <loc>https://www.travanya.ae/privacy-policy/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/terms-conditions/</loc>
+  <loc>https://www.travanya.ae/terms-conditions/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/disclaimer/</loc>
+  <loc>https://www.travanya.ae/disclaimer/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/baggage-fees/</loc>
+  <loc>https://www.travanya.ae/baggage-fees/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/check-in/</loc>
+  <loc>https://www.travanya.ae/check-in/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/FAQ/</loc>
+  <loc>https://www.travanya.ae/FAQ/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/dummy-flight-ticket/</loc>
+  <loc>https://www.travanya.ae/dummy-flight-ticket/</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.com/blog/</loc>
+  <loc>https://www.travanya.ae/blog/</loc>
   <priority>0.64</priority>
 </url>
      ${posts

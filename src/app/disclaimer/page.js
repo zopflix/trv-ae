@@ -14,7 +14,7 @@ export async function generateMetadata() {
         openGraph: {
             title: 'Disclaimer - Travanya.ae',
             description: "Familiarise yourself with Travanya's terms and conditions to fully comprehend our policies. From booking procedures to travel details, you'll find everything here.",
-            url: 'https://www.travanya.com/disclaimer',
+            url: 'https://www.travanya.ae/disclaimer',
         },
     }
 }

@@ -15,7 +15,7 @@ export async function generateMetadata() {
         openGraph: {
             title: 'Terms & Conditions - Travanya.ae',
             description: "Learn Travanya terms and conditions for a comprehensive understanding of our policies. From booking to travel essentials, find all the information you need here.",
-            url: 'https://www.travanya.com/terms-conditions',
+            url: 'https://www.travanya.ae/terms-conditions',
         },
     }
 }

@@ -32,7 +32,7 @@ export default function InnterFooter() {
                             height={45}
                         />
                         <div className="col-12">
-                            <p className="text-center fs-12 border-top pt-3">Copyright © 2024 <a className="color-blue text-decoration-none fw-bold" href="https://www.travanya.com/">Travanya.com</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
+                            <p className="text-center fs-12 border-top pt-3">Copyright © 2024 <a className="color-blue text-decoration-none fw-bold" href="https://www.travanya.ae/">Travanya.com</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

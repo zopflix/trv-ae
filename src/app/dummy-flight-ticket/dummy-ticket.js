@@ -1415,7 +1415,7 @@ export default function DummyTicketForm() {
                       width={20}
                       height={43}
                     />
-                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.com/blog/visa-free-countries-for-indian-passport-holders/' target="_blank">Visa Free Countries For Indian Passport Holders</a>
+                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.ae/blog/visa-free-countries-for-indian-passport-holders/' target="_blank">Visa Free Countries For Indian Passport Holders</a>
                   </div>
 
                   <div className='blog-list my-3 d-flex align-items-center'>
@@ -1427,7 +1427,7 @@ export default function DummyTicketForm() {
                       width={20}
                       height={43}
                     />
-                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.com/travel-guidelines/uk-visa-for-indians/' target="_blank">Guide To Applying For A UK Visa As An Indian Citizen</a>
+                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.ae/travel-guidelines/uk-visa-for-indians/' target="_blank">Guide To Applying For A UK Visa As An Indian Citizen</a>
                   </div>
 
                   <div className='blog-list my-3 d-flex align-items-center'>
@@ -1439,7 +1439,7 @@ export default function DummyTicketForm() {
                       width={20}
                       height={43}
                     />
-                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.com/travel-guidelines/countries-to-apply-student-visa-for-indians/' target="_blank">Top 10 Countries To Apply Student Visa For Indians </a>
+                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.ae/travel-guidelines/countries-to-apply-student-visa-for-indians/' target="_blank">Top 10 Countries To Apply Student Visa For Indians </a>
                   </div>
 
                   <div className='blog-list my-3 d-flex align-items-center'>
@@ -1451,7 +1451,7 @@ export default function DummyTicketForm() {
                       width={20}
                       height={43}
                     />
-                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.com/blog/5-year-multiple-entry-visa-for-all-nationalities/' target="_blank">UAE Approves 5 Years Multiple Entry Visa For All Nationalities</a>
+                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.ae/blog/5-year-multiple-entry-visa-for-all-nationalities/' target="_blank">UAE Approves 5 Years Multiple Entry Visa For All Nationalities</a>
                   </div>
 
                   <div className='blog-list my-3 d-flex align-items-center'>
@@ -1463,7 +1463,7 @@ export default function DummyTicketForm() {
                       width={20}
                       height={43}
                     />
-                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.com/travel-guidelines/dubai-visa-for-indians/' target="_blank">Dubai Visa Guidelines For Indians</a>
+                    <a className="blog-title fw-bold w-auto my-2 ps-0 ms-2 fs-16" href='https://www.travanya.ae/travel-guidelines/dubai-visa-for-indians/' target="_blank">Dubai Visa Guidelines For Indians</a>
                   </div>
                 </div>
               </div>

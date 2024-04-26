@@ -70,7 +70,7 @@ export async function getServerSideProps(context) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.travanya.com/"
+            "item": "https://www.travanya.ae/"
         }, {
             "@type": "ListItem",
             "position": 2,

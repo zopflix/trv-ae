@@ -71,17 +71,17 @@ export async function getServerSideProps(context) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.travanya.com/"
+            "item": "https://www.travanya.ae/"
         }, {
             "@type": "ListItem",
             "position": 2,
             "name": capitalizeEachWord(context.params.flights.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/`
         }, {
             "@type": "ListItem",
             "position": 3,
             "name": capitalizeEachWord(context.params.child1.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/`
         }, {
             "@type": "ListItem",
             "position": 4,

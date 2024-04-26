@@ -74,22 +74,22 @@ export async function getServerSideProps({ params }) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.travanya.com/"
+            "item": "https://www.travanya.ae/"
         }, {
             "@type": "ListItem",
             "position": 2,
             "name": "India Tour Packages",
-            "item": "https://www.travanya.com/india-tour-packages/"
+            "item": "https://www.travanya.ae/india-tour-packages/"
         }, {
             "@type": "ListItem",
             "position": 3,
             "name": capitalizeEachWord(params.destination.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/india-tour-packages/${params.destination}/`
+            "item": `https://www.travanya.ae/india-tour-packages/${params.destination}/`
         }, {
             "@type": "ListItem",
             "position": 4,
             "name": capitalizeEachWord(params.package.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/india-tour-packages/${params.destination}/${params.package}/`
+            "item": `https://www.travanya.ae/india-tour-packages/${params.destination}/${params.package}/`
         }
         ]
     }

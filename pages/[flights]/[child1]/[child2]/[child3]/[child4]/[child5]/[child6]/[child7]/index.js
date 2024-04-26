@@ -72,42 +72,42 @@ export async function getServerSideProps(context) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.travanya.com/"
+            "item": "https://www.travanya.ae/"
         }, {
             "@type": "ListItem",
             "position": 2,
             "name": capitalizeEachWord(context.params.flights.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/`
         }, {
             "@type": "ListItem",
             "position": 3,
             "name": capitalizeEachWord(context.params.child1.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/`
         }, {
             "@type": "ListItem",
             "position": 4,
             "name": capitalizeEachWord(context.params.child2.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/${context.params.child2}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/${context.params.child2}/`
         }, {
             "@type": "ListItem",
             "position": 5,
             "name": capitalizeEachWord(context.params.child3.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/`
         }, {
             "@type": "ListItem",
             "position": 6,
             "name": capitalizeEachWord(context.params.child4.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/`
         }, {
             "@type": "ListItem",
             "position": 7,
             "name": capitalizeEachWord(context.params.child5.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/${context.params.child5}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/${context.params.child5}/`
         }, {
             "@type": "ListItem",
             "position": 8,
             "name": capitalizeEachWord(context.params.child6.replaceAll('-', ' ')),
-            "item": `https://www.travanya.com/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/${context.params.child5}/${context.params.child6}/`
+            "item": `https://www.travanya.ae/${context.params.flights}/${context.params.child1}/${context.params.child2}/${context.params.child3}/${context.params.child4}/${context.params.child5}/${context.params.child6}/`
         }, {
             "@type": "ListItem",
             "position": 9,

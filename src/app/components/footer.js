@@ -47,7 +47,7 @@ export default function Footer() {
                             <h3 className="fw-bold mb-2 fs-26">
                                 <a className="text-decoration-none color-blue fs-18 fw-bold" href={"tel:" + displayContactNumber}>{displayContactNumber}</a>
                             </h3>
-                            <p className="fs-12 fw-bold">Email: <a className="text-decoration-none color-black " href="mailto:info@travanya.com">info@travanya.com</a></p>
+                            <p className="fs-12 fw-bold">Email: <a className="text-decoration-none color-black " href="mailto:info@travanya.ae">info@travanya.ae</a></p>
                             <p className="fs-12">Plot 16 HSIIDC IT Park, Sector 22, Panchkula, Haryana 134109, India</p>
                             <div className="social-icon">
                                 <a href="https://www.facebook.com/TravanyaOfficial/" target="_blank">
@@ -247,7 +247,7 @@ export default function Footer() {
                             height={45}
                         />
                         <div className="col-12">
-                            <p className="text-center fs-12 border-top pt-3">Copyright © 2024 <a className="color-blue text-decoration-none fw-bold" href="https://www.travanya.com/">Travanya.com</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
+                            <p className="text-center fs-12 border-top pt-3">Copyright © 2024 <a className="color-blue text-decoration-none fw-bold" href="https://www.travanya.ae/">Travanya.com</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ export async function generateMetadata() {
         openGraph: {
             title: 'Privacy Policy - Travanya.ae',
             description: "Explore Travanya's privacy policy here to learn how we manage your information. Discover our dedication to openness & safety. Your privacy is important to us!",
-            url: 'https://www.travanya.com/privacy-policy',
+            url: 'https://www.travanya.ae/privacy-policy',
         },
     }
 }
