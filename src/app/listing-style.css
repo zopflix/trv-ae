@@ -476,9 +476,8 @@ body.custom-listing .ContactStrapMobilebox {
     color: #fff !important;
 }
 
-.FlightEnquiryForm .modal-dialog{
-    width: 100%;
-    max-width: 800px;
+.FlightEnquiryForm .modal-dialog {
+    max-width: 900px;
 }
 
 
@@ -504,6 +503,10 @@ body.custom-listing .ContactStrapMobilebox {
 }
 
 @media(max-width:767px) {
+
+    .FlightEnquiryForm .modal-dialog {
+        width: 100%;
+    }
 
     .departCustomList {
         padding-right: 5px !important;
@@ -595,6 +598,11 @@ body.custom-listing .ContactStrapMobilebox {
 }
 
 @media(min-width:768px) {
+
+    .FlightEnquiryForm .modal-dialog {
+        width: 90%;
+    }
+
     .new-price-popup {
         min-width: 500px;
     }

@@ -2483,13 +2483,17 @@ body.holidayDetail.modal-open {
     display: none;
 }
 
-.FlightEnquiryForm  .modal-body {
-    background: url(https://assets.superfares.com/bharat/modal-bg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: -20px center;
+.DateBox .react-datepicker-wrapper {
+    width: 100%;
 }
 
+.DateBox .react-datepicker-wrapper input {
+    font-size: 14px;
+}
+
+.FlightEnquiryForm {
+    padding-left: 0px !important;
+}
 
 /* media start */
 
@@ -2653,6 +2657,14 @@ body.holidayDetail.modal-open {
 }
 
 @media(max-width:767px) {
+
+    .FlightEnquiryForm .modal-body {
+        padding: 0px !important;
+    }
+
+    .FlightEnquiryForm .modal-body .CloseIcon {
+        top: 15px;
+    }
 
     .air-flight-listing .air-flight-logo img {
         width: 22px;
@@ -3312,6 +3324,13 @@ body.holidayDetail.modal-open {
 }
 
 @media(min-width:768px) {
+
+    .FlightEnquiryForm .modal-body {
+        background: url(https://assets.superfares.com/bharat/modal-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: -20px center;
+    }
 
     .dropdown-hover:hover .dropdown-menu,
     .dropdown-hover ul.dropdown-menu.show {
