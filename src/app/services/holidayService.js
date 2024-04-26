@@ -48,7 +48,7 @@ const getHolidayPackageBySlug = async (slug, tenantId) => {
 
 const sendHolidayInquiry = async (data) => {
   try {
-    let params = `?r[source]=3&r[ip]=${data.ip}&r[referer]=${data.referer}&r[pack_type]=${data.packType}&r[place_from]=${data.placeFrom}&r[place_to]=${data.packageName}&r[travel_date]=${data.travelDate}&r[site]=${'TRVAE'}&r[mode]=${data.mode ? 2 : 1}&r[adults]=${data.adults}&r[childs]=${data.children}&r[name]=${data.name}&r[email]=${data.email}&r[mobile]=${data.mobile}&r[currency]=INR&r[budget]=${data.price}&loc=${data.location}`;
+    let params = `?r[source]=3&r[ip]=${data.ip}&r[referer]=${data.referer}&r[pack_type]=${data.packType}&r[place_from]=${data.placeFrom}&r[place_to]=${data.packageName}&r[return_date]=${data.returnDate}&r[travel_date]=${data.travelDate}&r[site]=${'TRVAE'}&r[mode]=${data.mode ? 2 : 1}&r[adults]=${data.adults}&r[childs]=${data.children}&r[name]=${data.name}&r[email]=${data.email}&r[mobile]=${data.mobile}&r[currency]=INR&r[budget]=${data.price}&loc=${data.location}`;
     let dataToSend = { payload: params };
     const response = await axios.post(`${crmAPIURL}public/SubmitHolidayInquiry`, dataToSend);
     return response.data;
