@@ -236,7 +236,7 @@ export default function Header() {
                                         </div>
                                     </div>
                                     <div className="FormGroup mb-2">
-                                        <button className="enquireBtn rounded-3 border-0 color-white w-100 mt-2">Enquire Now</button>
+                                        <button className="enquireBtn rounded-3 border-0 color-white w-100 mt-2">Enquire</button>
                                     </div>
                                 </form>
                             </div>

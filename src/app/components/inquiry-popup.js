@@ -363,7 +363,7 @@ export default function InquiryPopup(props) {
                     {isSubmitting ? (
                       <div className="spinner-border" role="status"></div>
                     ) : (
-                      <span>Enquire Now</span>
+                      <span>Enquire</span>
                     )}
                   </button>
                 </div>

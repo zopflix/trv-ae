@@ -3302,7 +3302,7 @@ export default function Listing() {
                                                   role="status"
                                                 ></span>
                                               ) : (
-                                                <span>Enquire Now</span>
+                                                <span>Enquire</span>
                                               )}{" "}
                                             </button>
 

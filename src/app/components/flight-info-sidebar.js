@@ -144,7 +144,7 @@ export default function FlightInfoSideBar(props) {
                         </div>
                     </div>
                 </div>
-                <button className="buttonStyle3 fs-14 border-0 rounded-3 px-3 py-3 my-3 w-100" onClick={() => props.setOpenInquiryModal(true)}>Enquire Now</button>
+                <button className="buttonStyle3 fs-14 border-0 rounded-3 px-3 py-3 my-3 w-100" onClick={() => props.setOpenInquiryModal(true)}>Enquire</button>
                 {/* <p className="mb-0 color-grey fs-12 d-flex"><span className="fw-bold me-1">Note:</span> <span dangerouslySetInnerHTML={{ __html: props?.data?.Notes }}></span></p> */}
             </div>
         </div>
