@@ -3355,7 +3355,7 @@ export default function Listing() {
                                         </div>
                                       </div>
 
-                                      {baggageOptions && (
+                                      {/* {baggageOptions && (
                                         <div className="air-flight-btn-and-bag mt-1 pt-2">
                                           <div className="row align-items-center">
                                             <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
@@ -3493,7 +3493,7 @@ export default function Listing() {
                                             </div>
                                           </div>
                                         </div>
-                                      )}
+                                      )} */}
                                     </div>
                                   </div>
                                 )}
@@ -3977,7 +3977,7 @@ export default function Listing() {
                                           </div>
                                         </div>
                                       </div>
-                                      {baggageOptions && (
+                                      {/* {baggageOptions && (
                                         <div className="air-flight-btn-and-bag mt-1 pt-2">
                                           <div className="row align-items-center">
                                             <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0"></div>
@@ -4113,7 +4113,7 @@ export default function Listing() {
                                             </div>
                                           </div>
                                         </div>
-                                      )}
+                                      )} */}
                                     </div>
                                   </div>
                                 )}
