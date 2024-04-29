@@ -92,9 +92,10 @@ export default function FlightInqueryForm(props) {
         if (res) {
           props.setopenFlightEnquiryForm(false);
           setIsSubmitting(false);
-          if(res){
-            window.location.href = `/holidays/thank-you/?id=${res}`;
-          }
+          console.log("resssss", res)
+          // if(res){
+          //   window.location.href = `/holidays/thank-you/?id=${res}`;
+          // }
         } else {
           setHasError(true);
           setIsSubmitting(false);
