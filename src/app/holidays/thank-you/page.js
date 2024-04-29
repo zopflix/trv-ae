@@ -59,7 +59,7 @@ export default function ThankYou() {
                                 <h2 className='mt-5 mb-4 fw-bold color-blue' >Thank You for Your Enquiry!</h2>
                                 <span className='bg-orange rounded-2 color-white p-3 mb-5'><strong>Your Query Reference No: </strong>{txnId}</span>
                                 {/* <p className='mt-5 fs-14'>Sit back and relax! We've got your holiday plans covered.</p> */}
-                                <p className='text-center'>Our team will soon reach out to you with a personalised itinerary & the most affordable deal.</p>
+                                <p className='text-center mt-5'>Our team will soon reach out to you with a personalised itinerary & the most affordable deal.</p>
                                 <p>Need quick details? Call us anytime at <a className="color-blue fw-bold text-decoration-none" href={`tel:${displayContactNumber}`}>{displayContactNumber}</a>. We’re available 24/7.</p>
                             </div>
                         </div>
