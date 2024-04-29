@@ -17,7 +17,7 @@ import {
   getTimeOfDay,
   isADomesticFlight,
   isPureAirline,
-  numberFormat,
+  aedNumberFormat,
 } from "../helpers/common";
 import { contactNumber } from "../config";
 import { Modal } from "react-bootstrap";
@@ -1511,7 +1511,7 @@ export default function Results() {
                                     <h6 className="mb-0 d-table">
                                       {" "}
                                       {
-                                        numberFormat(
+                                        aedNumberFormat(
                                           Math.round(priceFilterValues[0])
                                         ).split(".")[0]
                                       }
@@ -1521,7 +1521,7 @@ export default function Results() {
                                     <h6 className="mb-0 d-table float-end">
                                       {" "}
                                       {
-                                        numberFormat(
+                                        aedNumberFormat(
                                           Math.round(priceFilterValues[1])
                                         ).split(".")[0]
                                       }
@@ -2079,7 +2079,7 @@ export default function Results() {
                                       height={16}
                                     />
                                   }
-                                  <h5 className='mb-0 fs-14 fw-bold color-blue'>{numberFormat(carrier.price).split(".")[0]}<sup>.{numberFormat(carrier.price).split(".")[1]}</sup></h5>
+                                  <h5 className='mb-0 fs-14 fw-bold color-blue'>{aedNumberFormat(carrier.price).split(".")[0]}<sup>.{aedNumberFormat(carrier.price).split(".")[1]}</sup></h5>
                                 </div>
                               </div>
                             </div>
@@ -2460,7 +2460,7 @@ export default function Results() {
                                           <div className="air-flight-price text-end">
                                             <h2 className="mb-0 dgc">
                                               {
-                                                numberFormat(avgPrice).split(
+                                                aedNumberFormat(avgPrice).split(
                                                   "."
                                                 )[0]
                                               }
@@ -2813,7 +2813,7 @@ export default function Results() {
                                                   <div className="air-flight-price text-end">
                                                     <h2 className="mb-0 dgc">
                                                       {
-                                                        numberFormat(
+                                                        aedNumberFormat(
                                                           avgPrice
                                                         ).split(".")[0]
                                                       }
@@ -3203,7 +3203,7 @@ export default function Results() {
                                                   <div className="air-flight-price text-end">
                                                     <h2 className="mb-0 dgc">
                                                       {
-                                                        numberFormat(
+                                                        aedNumberFormat(
                                                           avgPrice
                                                         ).split(".")[0]
                                                       }
@@ -3856,7 +3856,7 @@ export default function Results() {
                                                       ></div>
                                                       <h2 className="mb-0 dgc">
                                                         {
-                                                          numberFormat(
+                                                          aedNumberFormat(
                                                             avgPrice
                                                           ).split(".")[0]
                                                         }
@@ -4445,7 +4445,7 @@ export default function Results() {
                                                       ></div>
                                                       <h2 className="mb-0 dgc">
                                                         {
-                                                          numberFormat(
+                                                          aedNumberFormat(
                                                             avgPrice
                                                           ).split(".")[0]
                                                         }
@@ -4985,7 +4985,7 @@ export default function Results() {
                           <div className="air-flight-price text-end">
                             <h2 className="mb-0 dgc">
                               {
-                                numberFormat(
+                                aedNumberFormat(
                                   selectedDepartTBOFlight.avgPrice
                                 ).split(".")[0]
                               }
@@ -5328,7 +5328,7 @@ export default function Results() {
                           <div className="air-flight-price text-end">
                             <h2 className="mb-0 dgc">
                               {
-                                numberFormat(
+                                aedNumberFormat(
                                   selectedReturnTBOFlight.avgPrice
                                 ).split(".")[0]
                               }
@@ -5487,7 +5487,7 @@ export default function Results() {
                     }}>Details<i className="fa-solid fa-chevron-right"></i></button> */}
                       <h2 className="my-2 dgc">
                         {
-                          numberFormat(
+                          aedNumberFormat(
                             selectedDepartTBOFlight.totalPrice +
                               selectedReturnTBOFlight.totalPrice
                           ).split(".")[0]
@@ -5544,7 +5544,7 @@ export default function Results() {
                   <div className="col-8 col-sm-8 col-md-8">
                     <h2 className="mb-1 color-white">
                       {
-                        numberFormat(
+                        aedNumberFormat(
                           selectedDepartTBOFlight.avgPrice +
                             selectedReturnTBOFlight.avgPrice
                         ).split(".")[0]
@@ -5552,7 +5552,7 @@ export default function Results() {
                     </h2>
                     <p className="mb-0 fs-12 color-white">
                       {totalPassengers > 1
-                        ? numberFormat(
+                        ? aedNumberFormat(
                             selectedDepartTBOFlight.totalPrice +
                               selectedReturnTBOFlight.totalPrice
                           ).split(".")[0] + ` for ${totalPassengers} Travelers`

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 import CircularJSON from 'circular-json';
 import { trvLoader } from "../helpers/imageKitLoader";
 
@@ -28,10 +28,10 @@ export default function ChangePrice(props) {
             <h3 className="fs-18 mt-4 mb-4 fw-bold"> Your flight price has
                 {
                     props.newPrice - (props.oldPrice) > 0 &&
-                    <span>increased</span>} by <span>{numberFormat(props.newPrice - (props.oldPrice)).split(".")[0]}<sup>.{numberFormat(props.newPrice - (props.oldPrice)).split(".")[1]}</sup> </span> , The updated price is {numberFormat(props.newPrice).split(".")[0]}<sup>.{numberFormat(props.newPrice).split(".")[1]}</sup>
+                    <span>increased</span>} by <span>{aedNumberFormat(props.newPrice - (props.oldPrice)).split(".")[0]}<sup>.{aedNumberFormat(props.newPrice - (props.oldPrice)).split(".")[1]}</sup> </span> , The updated price is {aedNumberFormat(props.newPrice).split(".")[0]}<sup>.{aedNumberFormat(props.newPrice).split(".")[1]}</sup>
 
             </h3>
-            <h5 className="fs-14 mb-0"><span>Old Price - {numberFormat(props?.oldPrice).split(".")[0]} <sup>.{numberFormat(props?.oldPrice).split(".")[1]}</sup> </span> | <span>New Price - $ {props.newPrice} </span></h5>
+            <h5 className="fs-14 mb-0"><span>Old Price - {aedNumberFormat(props?.oldPrice).split(".")[0]} <sup>.{aedNumberFormat(props?.oldPrice).split(".")[1]}</sup> </span> | <span>New Price - $ {props.newPrice} </span></h5>
             <br />
             <div className="row align-items-center justify-content-between">
                 <div className="col-md-6">

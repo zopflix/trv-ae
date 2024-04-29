@@ -4,7 +4,7 @@ import SeatSelectionDetail from "./seat-selection-details";
 import SeatDetail from "./seat-detail";
 import { use, useEffect, useState } from "react";
 // import { debug } from "memory-cache";
-import { numberFormat } from '../helpers/common';
+import { aedNumberFormat } from '../helpers/common';
 
 export default function SeatSelection(props) {
 
@@ -317,7 +317,7 @@ export default function SeatSelection(props) {
                         <div className="position-fixed SeatSelectionMobileFlap bottom-0 start-0 end-0 w-100 bg-white py-3 d-lg-none">
                             <div className="row m-0 align-items-center">
                                 <div className="col-6 text-start">
-                                    <h5 className="mb-0 fw-bold"><span className="fw-normal fs-14 opacity-75">Total Seat Fare:</span><br /> {numberFormat(Math.round(totalSeatPrice)).split(".")[0]}<sup>.{numberFormat(Math.round(totalSeatPrice)).split(".")[1]}</sup></h5>
+                                    <h5 className="mb-0 fw-bold"><span className="fw-normal fs-14 opacity-75">Total Seat Fare:</span><br /> {aedNumberFormat(Math.round(totalSeatPrice)).split(".")[0]}<sup>.{aedNumberFormat(Math.round(totalSeatPrice)).split(".")[1]}</sup></h5>
                                     <button className="SeatDetailFlapbtn float-start p-0 mt-0 btn color-blue" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeatDetailFlap" aria-controls="SeatDetailFlap">
                                         <span className="fs-12 fw-bold ">Seat Details</span>
                                     </button>

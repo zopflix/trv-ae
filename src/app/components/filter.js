@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReactSlider from "react-slider";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 
 export default function SideFilters(props) {
     // PASSENGERS DYNAMIC KARO
@@ -272,10 +272,10 @@ export default function SideFilters(props) {
                                             />
                                             <div className='row mt-3'>
                                                 <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
-                                                    <h6 className='mb-0 d-table'> {numberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
+                                                    <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
                                                 </div>
                                                 <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
-                                                    <h6 className='mb-0 d-table float-end'> {numberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
+                                                    <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
                                                 </div>
                                             </div>
                                         </div>

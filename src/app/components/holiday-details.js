@@ -8,7 +8,7 @@ import { Suspense, useEffect, useState } from "react";
 import { getDurations } from "../services/holidayService";
 import ModifySearchFormDetail from "../components/Modify-Form-Detail";
 import HolidayEnquiryForm from "./holiday-enquiry-form";
-import { capitalizeEachWord, numberFormat } from "../helpers/common";
+import { capitalizeEachWord, aedNumberFormat } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import Footer from "./footer";
 import GoogleReviews from "./google-reviews";
@@ -244,8 +244,8 @@ export default function HolidayDetails(props) {
                 </div>
                 <div className="col-12 col-sm-12 col-md-4 col-lg-3 text-end">
                   <h2 className="fs-24 mb-0 color-orange fw-bold">
-                    {numberFormat(startingPrice)?.split(".")[0]}.
-                    <sup>{numberFormat(startingPrice)?.split(".")[1]}</sup>
+                    {aedNumberFormat(startingPrice)?.split(".")[0]}.
+                    <sup>{aedNumberFormat(startingPrice)?.split(".")[1]}</sup>
                   </h2>
                   <p className="mb-0 fs-12 fw-bold color-black">
                     Starting Price per Person
@@ -561,7 +561,7 @@ export default function HolidayDetails(props) {
                                           Standard{" "}
                                           <span className="d-none d-md-block">
                                             (
-                                            {numberFormat(
+                                            {aedNumberFormat(
                                               packageData?.StandardPrice?.toFixed(
                                                 2
                                               )
@@ -656,7 +656,7 @@ export default function HolidayDetails(props) {
                                           Deluxe{" "}
                                           <span className="d-none d-md-block">
                                             (
-                                            {numberFormat(
+                                            {aedNumberFormat(
                                               packageData?.DeluxePrice?.toFixed(
                                                 2
                                               )
@@ -751,7 +751,7 @@ export default function HolidayDetails(props) {
                                           Premium{" "}
                                           <span className="d-none d-md-block">
                                             (
-                                            {numberFormat(
+                                            {aedNumberFormat(
                                               packageData?.PremiumPrice?.toFixed(
                                                 2
                                               )
@@ -893,8 +893,8 @@ export default function HolidayDetails(props) {
             <div className="col-7 col-sm-7">
               <p className="fs-12 mb-0 color-white">Total Amount</p>
               <p className="fs-18 mb-0 color-white fw-bold">
-                {numberFormat(totalPrice)?.split(".")[0]}.
-                <sup>{numberFormat(totalPrice)?.split(".")[1]}</sup>
+                {aedNumberFormat(totalPrice)?.split(".")[0]}.
+                <sup>{aedNumberFormat(totalPrice)?.split(".")[1]}</sup>
               </p>
               <button
                 className="btn p-0 color-white border-0"

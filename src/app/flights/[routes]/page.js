@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ReactSlider from 'react-slider';
 import { searchFlights } from '@/app/services/flightService';
 import { Fragment, useContext, useEffect, useState } from 'react'
-import { cloneData, encodeData, getDiffFromMinutes, getDisplayAirline, getDisplayCabin, getFormattedDate, getFormattedDate4, getFormattedTime, getTimeOfDay, isADomesticFlight, isPureAirline, numberFormat } from '@/app/helpers/common'
+import { cloneData, encodeData, getDiffFromMinutes, getDisplayAirline, getDisplayCabin, getFormattedDate, getFormattedDate4, getFormattedTime, getTimeOfDay, isADomesticFlight, isPureAirline, aedNumberFormat } from '@/app/helpers/common'
 import { contactNumber } from '@/app/config';
 import { Modal } from 'react-bootstrap';
 import { CounterContext } from '@/app/context/counter.context';
@@ -1068,10 +1068,10 @@ export default function Results(props) {
                                 />
                                 <div className='row mt-3'>
                                   <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
-                                    <h6 className='mb-0 d-table'> {numberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
+                                    <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
                                   </div>
                                   <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
-                                    <h6 className='mb-0 d-table float-end'> {numberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
+                                    <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
                                   </div>
                                 </div>
                               </div>
@@ -1313,10 +1313,10 @@ export default function Results(props) {
                                   />
                                   <div className='row mt-3'>
                                     <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
-                                      <h6 className='mb-0 d-table'> {numberFormat(Math.round(rtnPriceFilterValues[0])).split('.')[0]}</h6>
+                                      <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(rtnPriceFilterValues[0])).split('.')[0]}</h6>
                                     </div>
                                     <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
-                                      <h6 className='mb-0 d-table float-end'> {numberFormat(Math.round(rtnPriceFilterValues[1])).split('.')[0]}</h6>
+                                      <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(rtnPriceFilterValues[1])).split('.')[0]}</h6>
                                     </div>
                                   </div>
                                 </div>
@@ -1609,7 +1609,7 @@ export default function Results(props) {
                                   </div>
                                   <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0'>
                                     <div className='air-flight-price text-end'>
-                                      <h2 className='mb-0 dgc'>{numberFormat(avgPrice).split(".")[0]}</h2>
+                                      <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                       <h6 className='mb-2 mt-2'>{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
                                     </div>
                                   </div>
@@ -1769,7 +1769,7 @@ export default function Results(props) {
                                             </div>
                                             <div className='col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8'>
                                               <div className='air-flight-price text-end'>
-                                                <h2 className='mb-0 dgc'>{numberFormat(avgPrice).split(".")[0]}</h2>
+                                                <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                 <h6 className='mb-0 mt-1'>per Traveler</h6>
                                               </div>
                                             </div>
@@ -1936,7 +1936,7 @@ export default function Results(props) {
                                             </div>
                                             <div className='col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8'>
                                               <div className='air-flight-price text-end'>
-                                                <h2 className='mb-0 dgc'>{numberFormat(avgPrice).split(".")[0]}</h2>
+                                                <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                 <h6 className='mb-0 mt-1'>per Traveler</h6>
                                               </div>
                                             </div>
@@ -2218,7 +2218,7 @@ export default function Results(props) {
                                               <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
                                                 <div className='air-flight-price text-end'>
                                                   <div className={((flight.resultIndex == selectedDepartTBOFlight.resultIndex) && (flight.traceId == selectedDepartTBOFlight.traceId)) ? 'selected-flight active' : 'selected-flight'}></div>
-                                                  <h2 className='mb-0 dgc'>{numberFormat(avgPrice).split(".")[0]}</h2>
+                                                  <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                   <h6 className='mb-2 mt-1'>per Traveler</h6>
                                                 </div>
                                               </div>
@@ -2452,7 +2452,7 @@ export default function Results(props) {
                                               <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
                                                 <div className='air-flight-price text-end'>
                                                   <div className={((flight.resultIndex == selectedReturnTBOFlight.resultIndex) && (flight.traceId == selectedReturnTBOFlight.traceId)) ? 'selected-flight active' : 'selected-flight'}></div>
-                                                  <h2 className='mb-0 dgc'>{numberFormat(avgPrice).split(".")[0]}</h2>
+                                                  <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                   <h6 className='mb-2 mt-1'>per Traveler</h6>
                                                 </div>
                                               </div>
@@ -2724,7 +2724,7 @@ export default function Results(props) {
                       </div>
                       <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                         <div className="air-flight-price text-end">
-                          <h2 className="mb-0 dgc">{numberFormat(selectedDepartTBOFlight.avgPrice).split('.')[0]}</h2>
+                          <h2 className="mb-0 dgc">{aedNumberFormat(selectedDepartTBOFlight.avgPrice).split('.')[0]}</h2>
                           <h6 className="mb-2 mt-2">per Traveler</h6>
                         </div>
                       </div>
@@ -2864,7 +2864,7 @@ export default function Results(props) {
                       </div>
                       <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                         <div className="air-flight-price text-end">
-                          <h2 className="mb-0 dgc">{numberFormat(selectedReturnTBOFlight.avgPrice).split('.')[0]}</h2>
+                          <h2 className="mb-0 dgc">{aedNumberFormat(selectedReturnTBOFlight.avgPrice).split('.')[0]}</h2>
                           <h6 className="mb-2 mt-2">per Traveler</h6>
                         </div>
                       </div>
@@ -2930,7 +2930,7 @@ export default function Results(props) {
                       }
                       setShowContinueBtn(true);
                     }}>Details<i className="fa-solid fa-chevron-right"></i></button>
-                    <h2 className="my-2 dgc">{numberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split('.')[0]}</h2>
+                    <h2 className="my-2 dgc">{aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split('.')[0]}</h2>
                     <button className="btn-style1 active float-end" onClick={() => {
                       localStorage.setItem("departFlight", JSON.stringify(selectedDepartTBOFlight));
                       localStorage.setItem("returnFlight", JSON.stringify(selectedReturnTBOFlight));
@@ -2949,8 +2949,8 @@ export default function Results(props) {
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-8 col-sm-8 col-md-8'>
-                  <h2 className="mb-1 color-white">{numberFormat(selectedDepartTBOFlight.avgPrice + selectedReturnTBOFlight.avgPrice).split('.')[0]}</h2>
-                  <p className='mb-1 color-white'>{totalPassengers > 1 ? numberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split('.')[0] + ` for ${totalPassengers} Travelers` : 'per Adult'} </p>
+                  <h2 className="mb-1 color-white">{aedNumberFormat(selectedDepartTBOFlight.avgPrice + selectedReturnTBOFlight.avgPrice).split('.')[0]}</h2>
+                  <p className='mb-1 color-white'>{totalPassengers > 1 ? aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split('.')[0] + ` for ${totalPassengers} Travelers` : 'per Adult'} </p>
                   <div className='air-flight-price text-start'>
                     <button className='btn-style1 border-0 p-0 float-start text-start mob-details' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                       e.stopPropagation();

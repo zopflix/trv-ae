@@ -3,7 +3,7 @@ import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import { tenantId } from "../config";
 import { getAllHolidayPackages } from "../services/holidayService";
 import { useEffect, useState } from "react";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 
 export default function HolidayCategories() {
     const [holidayPackages, setHolidayPackages] = useState([]);
@@ -303,7 +303,7 @@ export default function HolidayCategories() {
                                                         </div>
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold color-black">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold color-orange">{pkg.StandardPrice ? numberFormat(pkg.StandardPrice) : (pkg.DeluxePrice ? numberFormat(pkg.DeluxePrice) : numberFormat(pkg.PremiumPrice))}</p>
+                                                            <p className="mb-0 fs-16 fw-bold color-orange">{pkg.StandardPrice ? aedNumberFormat(pkg.StandardPrice) : (pkg.DeluxePrice ? aedNumberFormat(pkg.DeluxePrice) : aedNumberFormat(pkg.PremiumPrice))}</p>
                                                         </div>
                                                     </div>
                                                 </div>

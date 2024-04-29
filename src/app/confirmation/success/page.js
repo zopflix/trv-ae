@@ -1,7 +1,7 @@
 "use client"
 import Layout from '@/app/components/inner-layout';
 import { useEffect, useState } from 'react';
-import { getDisplayAirline, isADomesticFlight, isPureAirline, numberFormat, trackMixpanelEvent } from '../../helpers/common'
+import { getDisplayAirline, isADomesticFlight, isPureAirline, aedNumberFormat, trackMixpanelEvent } from '../../helpers/common'
 import { toPascalCase } from '../../helpers/common';
 import { getFormattedDate1, getFormattedDate3, getDiffFromMinutes, getFormattedTime, getFormattedDateTime } from '../../helpers/common';
 import { useRouter } from 'next/navigation';
@@ -913,30 +913,30 @@ export default function Confirmation() {
                                                             return fare.paxType == 5 ? <tr key={index}>
                                                                 <td>{index + 1}</td>
                                                                 <td>{fare.paxType == 5 ? "Lap Infant" : toPascalCase(fare.displayPaxType)}</td>
-                                                                <td>({fare.noofPax} X {numberFormat(Math.round((fare.totalFareAmount) / fare.noofPax) - Math.round(((fare.totalTaxAmount) / fare.noofPax))).split('.')[0]})</td>
-                                                                <td>({fare.noofPax} X {numberFormat(Math.round(((fare.totalTaxAmount) / fare.noofPax))).split('.')[0]})</td>
-                                                                <td>{numberFormat(Math.round(fare.totalFareAmount)).split('.')[0]}</td>
+                                                                <td>({fare.noofPax} X {aedNumberFormat(Math.round((fare.totalFareAmount) / fare.noofPax) - Math.round(((fare.totalTaxAmount) / fare.noofPax))).split('.')[0]})</td>
+                                                                <td>({fare.noofPax} X {aedNumberFormat(Math.round(((fare.totalTaxAmount) / fare.noofPax))).split('.')[0]})</td>
+                                                                <td>{aedNumberFormat(Math.round(fare.totalFareAmount)).split('.')[0]}</td>
                                                             </tr> : <tr key={index}>
                                                                 <td>{index + 1}</td>
                                                                 <td>{fare.paxType == 5 ? "Lap Infant" : toPascalCase(fare.displayPaxType)}</td>
-                                                                <td>({fare.noofPax} X {numberFormat(Math.round((fare.totalFareAmount + (fare.noofPax > 1 ? (avgTax * fare.noofPax) : 0)) / fare.noofPax) - Math.round(((fare.totalTaxAmount + (fare.noofPax > 1 ? (avgTax * fare.noofPax) : 0)) / fare.noofPax))).split('.')[0]})</td>
-                                                                <td>({fare.noofPax} X {numberFormat(Math.round(((fare.totalTaxAmount + (avgTax * fare.noofPax)) / fare.noofPax))).split('.')[0]})</td>
-                                                                <td>{numberFormat(Math.round(fare.totalFareAmount + (avgTax * fare.noofPax))).split('.')[0]}</td>
+                                                                <td>({fare.noofPax} X {aedNumberFormat(Math.round((fare.totalFareAmount + (fare.noofPax > 1 ? (avgTax * fare.noofPax) : 0)) / fare.noofPax) - Math.round(((fare.totalTaxAmount + (fare.noofPax > 1 ? (avgTax * fare.noofPax) : 0)) / fare.noofPax))).split('.')[0]})</td>
+                                                                <td>({fare.noofPax} X {aedNumberFormat(Math.round(((fare.totalTaxAmount + (avgTax * fare.noofPax)) / fare.noofPax))).split('.')[0]})</td>
+                                                                <td>{aedNumberFormat(Math.round(fare.totalFareAmount + (avgTax * fare.noofPax))).split('.')[0]}</td>
                                                             </tr>
                                                         })
                                                     }
                                                     {
                                                         bookingData?.saverService?.name &&
                                                         <tr>
-                                                            <td align='right' colSpan="4"> Super Saver Service (SSS) - <span>{bookingData?.saverService?.name} </span> <span className='sss-price-division'>({bookingData?.passangers?.length} X {numberFormat(Math.round(bookingData?.saverService?.price))})</span></td>
-                                                            <td>{numberFormat((bookingData?.passangers?.length) * Math.round(bookingData?.saverService?.price)).split('.')[0]}</td>
+                                                            <td align='right' colSpan="4"> Super Saver Service (SSS) - <span>{bookingData?.saverService?.name} </span> <span className='sss-price-division'>({bookingData?.passangers?.length} X {aedNumberFormat(Math.round(bookingData?.saverService?.price))})</span></td>
+                                                            <td>{aedNumberFormat((bookingData?.passangers?.length) * Math.round(bookingData?.saverService?.price)).split('.')[0]}</td>
                                                         </tr>
                                                     }
                                                     {
                                                         bookingData?.contract?.otherTaxes?.map((tax, index) => {
                                                             return <tr>
                                                                 <td colSpan="4"> <h6 className="text-end mb-0 superss-table-text">{tax.name} </h6></td>
-                                                                <td>{numberFormat(tax.amount)}</td>
+                                                                <td>{aedNumberFormat(tax.amount)}</td>
                                                             </tr>
 
                                                         })
@@ -945,26 +945,26 @@ export default function Confirmation() {
                                                         bookingData?.webCheckIn?.price &&
                                                         <tr>
                                                             <td align='right' colSpan="4"> Auto Web Check-In <span className='sss-price-division'>({bookingData?.passangers?.length} X ${(bookingData?.contract?.trips?.length > 1 ? (bookingData?.webCheckIn?.price * 2) : (bookingData?.webCheckIn?.price))})</span></td>
-                                                            <td>{numberFormat((bookingData?.passangers?.length) * (bookingData?.contract?.trips?.length > 1 ? (bookingData?.webCheckIn?.price * 2) : (bookingData?.webCheckIn?.price)))}</td>
+                                                            <td>{aedNumberFormat((bookingData?.passangers?.length) * (bookingData?.contract?.trips?.length > 1 ? (bookingData?.webCheckIn?.price * 2) : (bookingData?.webCheckIn?.price)))}</td>
                                                         </tr>
                                                     }
                                                     {
                                                         ((bookingData?.selectedDepartBaggage && bookingData?.selectedDepartBaggage?.price > 0) || (bookingData?.selectedDepartCarryOnBaggage && bookingData?.selectedDepartCarryOnBaggage?.price > 0) || (bookingData?.selectedReturnBaggage && bookingData?.selectedReturnBaggage?.price > 0) || (bookingData?.selectedReturnCarryOnBaggage && bookingData?.selectedReturnCarryOnBaggage?.price > 0)) &&
                                                         <tr>
                                                             <td align='right' colSpan="4"> Baggage Fees</td>
-                                                            <td>{numberFormat(getBaggagePrice().toFixed(2))}</td>
+                                                            <td>{aedNumberFormat(getBaggagePrice().toFixed(2))}</td>
                                                         </tr>
                                                     }
                                                     {
                                                         (bookingData?.discount > 0) &&
                                                         <tr>
                                                             <td className='color-green fw-bold' align='right' colSpan="4"> Discount</td>
-                                                            <td>{numberFormat(bookingData?.discount)}</td>
+                                                            <td>{aedNumberFormat(bookingData?.discount)}</td>
                                                         </tr>
                                                     }
                                                     <tr>
                                                         <td align='right' colSpan="4"><h5 className='mb-0 fw-bold'>Total Price</h5></td>
-                                                        <td><h5 className='mb-0 fw-bold'>{numberFormat(Math.round(totalPrice)).split('.')[0]}</h5></td>
+                                                        <td><h5 className='mb-0 fw-bold'>{aedNumberFormat(Math.round(totalPrice)).split('.')[0]}</h5></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

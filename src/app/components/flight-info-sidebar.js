@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { trvLoader } from "../helpers/imageKitLoader";
 import StarRatings from "react-star-ratings";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 
 export default function FlightInfoSideBar(props) {
     const pricePerPax = props.totalPrice / (props.adults + props.children);
@@ -104,7 +104,7 @@ export default function FlightInfoSideBar(props) {
                                 </div>
                             </div>
                             <div>
-                                <p className="mb-0 fs-14">{numberFormat(props?.totalPrice)?.split('.')[0]}.<sup>{numberFormat(props?.totalPrice)?.split('.')[1]}</sup></p>
+                                <p className="mb-0 fs-14">{aedNumberFormat(props?.totalPrice)?.split('.')[0]}.<sup>{aedNumberFormat(props?.totalPrice)?.split('.')[1]}</sup></p>
                             </div>
                         </div>
                         <div className="accordion border-0" id="accordionExample">
@@ -113,19 +113,19 @@ export default function FlightInfoSideBar(props) {
                                     <div className="accordion-body border-0 px-0 bg-grey pb-0">
                                         <div className="d-flex align-items-center justify-content-between border-top pt-3">
                                             <div>
-                                                <p className="mb-0 fs-14">Adults ({props.adults} x {numberFormat(pricePerPax)?.split('.')[0]}.<sup>{numberFormat(pricePerPax)?.split('.')[1]}</sup>)</p>
+                                                <p className="mb-0 fs-14">Adults ({props.adults} x {aedNumberFormat(pricePerPax)?.split('.')[0]}.<sup>{aedNumberFormat(pricePerPax)?.split('.')[1]}</sup>)</p>
                                             </div>
                                             <div>
-                                                <p className="mb-0 fs-14">{numberFormat(props.adults * pricePerPax)?.split('.')[0]}.<sup>{numberFormat(props.adults * pricePerPax)?.split('.')[1]}</sup></p>
+                                                <p className="mb-0 fs-14">{aedNumberFormat(props.adults * pricePerPax)?.split('.')[0]}.<sup>{aedNumberFormat(props.adults * pricePerPax)?.split('.')[1]}</sup></p>
                                             </div>
                                         </div>
                                         {props.children > 0 &&
                                             <div className="d-flex align-items-center justify-content-between pt-3">
                                                 <div>
-                                                    <p className="mb-0 fs-14">Children ({props.children} x {numberFormat(pricePerPax)?.split('.')[0]}.<sup>{numberFormat(pricePerPax)?.split('.')[1]}</sup>)</p>
+                                                    <p className="mb-0 fs-14">Children ({props.children} x {aedNumberFormat(pricePerPax)?.split('.')[0]}.<sup>{aedNumberFormat(pricePerPax)?.split('.')[1]}</sup>)</p>
                                                 </div>
                                                 <div>
-                                                    <p className="mb-0 fs-14">{numberFormat(props.children * pricePerPax)?.split('.')[0]}.<sup>{numberFormat(props.children * pricePerPax)?.split('.')[1]}</sup></p>
+                                                    <p className="mb-0 fs-14">{aedNumberFormat(props.children * pricePerPax)?.split('.')[0]}.<sup>{aedNumberFormat(props.children * pricePerPax)?.split('.')[1]}</sup></p>
                                                 </div>
                                             </div>
                                         }
@@ -140,7 +140,7 @@ export default function FlightInfoSideBar(props) {
                             <p className="mb-0 color-black fw-bold">Total Amount</p>
                         </div>
                         <div>
-                            <p className="mb-0 color-black fw-bold">{numberFormat(props?.totalPrice)?.split('.')[0]}.<sup>{numberFormat(props?.totalPrice)?.split('.')[1]}</sup></p>
+                            <p className="mb-0 color-black fw-bold">{aedNumberFormat(props?.totalPrice)?.split('.')[0]}.<sup>{aedNumberFormat(props?.totalPrice)?.split('.')[1]}</sup></p>
                         </div>
                     </div>
                 </div>

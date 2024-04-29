@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { trvLoader } from "../helpers/imageKitLoader";
 import { useEffect, useState, useCallback } from "react";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 import NumericInput from "react-numeric-input";
 
 export default function Meals(props) {
@@ -188,7 +188,7 @@ export default function Meals(props) {
                                 </div>
                                 <div className="fw-bold">
                                   {
-                                    numberFormat(Math.round(item.price)).split(
+                                    aedNumberFormat(Math.round(item.price)).split(
                                       "."
                                     )[0]
                                   }
@@ -234,7 +234,7 @@ export default function Meals(props) {
                                 </div>
                                 <div className="fw-bold">
                                   {
-                                    numberFormat(Math.round(item.price)).split(
+                                    aedNumberFormat(Math.round(item.price)).split(
                                       "."
                                     )[0]
                                   }

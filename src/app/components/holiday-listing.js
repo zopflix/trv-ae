@@ -8,7 +8,7 @@ import { tenantId } from "../config";
 import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import { Modal } from "react-bootstrap";
 import Footer from "./footer";
@@ -182,7 +182,7 @@ export default function HolidayListing(props) {
                                   <div className="col-6 py-1 text-lg-end">
                                     <div className="DealsListContentBox float-end">
                                       {item.Cities?.length > 0 && <p className="fs-14 color-black fw-bold"><span className="color-grey">Cities:</span> {item.Cities.join(', ')}</p>}
-                                      <h3 className="mb-0 fw-bold color-black fs-24">{numberFormat(pkgPrice)?.split('.')[0]}.<sup>{numberFormat(pkgPrice)?.split('.')[1]}</sup></h3>
+                                      <h3 className="mb-0 fw-bold color-black fs-24">{aedNumberFormat(pkgPrice)?.split('.')[0]}.<sup>{aedNumberFormat(pkgPrice)?.split('.')[1]}</sup></h3>
                                       <p className="color-grey fs-12 mb-2">Starting price per person</p>
                                       <button type="button" className="buttonStyle3 border-0 float-end" onClick={() => { setOpenInquiryModal(true); setInquiryPkg(item); }}>
                                         <div className="d-flex align-items-center justify-content-center">

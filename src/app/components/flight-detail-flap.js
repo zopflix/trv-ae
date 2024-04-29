@@ -1,5 +1,5 @@
 import CircularJSON from "circular-json";
-import { getDiffFromMinutes, getFormattedDate, getFormattedDate5, getFormattedTime, numberFormat } from "../helpers/common";
+import { getDiffFromMinutes, getFormattedDate, getFormattedDate5, getFormattedTime, aedNumberFormat } from "../helpers/common";
 import { useEffect, useState } from "react";
 import { GDSNames } from "../helpers/constants";
 import { airlineLogoLoader, trvLoader } from "../helpers/imageKitLoader";
@@ -546,11 +546,11 @@ export default function FlightDetailFlap(props) {
             <div className='position-absolute flap-total-price'>
                 <div className='row align-items-center ms-0 me-0'>
                     <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start'>
-                        <h2 className='mb-0'>{(numberFormat(Number(props.selectedFlight.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[0]}.<sup>{(numberFormat(Number(props?.selectedFlight?.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[1]}</sup></h2>
+                        <h2 className='mb-0'>{(aedNumberFormat(Number(props.selectedFlight.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[0]}.<sup>{(aedNumberFormat(Number(props?.selectedFlight?.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[1]}</sup></h2>
                         {props.selectedFlight.totalPassangers > 1
                             ? <>
                                 <p className='mb-0'>Price per Traveler</p>
-                                <p className='mb-0'><strong>{numberFormat(props.selectedFlight.totalPrice).split(".")[0]}.<sup>{numberFormat(props.selectedFlight.totalPrice).split(".")[1]}</sup></strong> {props.selectedFlight.trips.length > 1 && "RoundTrip"} for {props.selectedFlight.totalPassangers} Travelers</p>
+                                <p className='mb-0'><strong>{aedNumberFormat(props.selectedFlight.totalPrice).split(".")[0]}.<sup>{aedNumberFormat(props.selectedFlight.totalPrice).split(".")[1]}</sup></strong> {props.selectedFlight.trips.length > 1 && "RoundTrip"} for {props.selectedFlight.totalPassangers} Travelers</p>
                             </>
                             : <p className="mb-0">Price {props.selectedFlight.trips.length > 1 ? "for Round Trip" : "per Adult"}</p>
                         }

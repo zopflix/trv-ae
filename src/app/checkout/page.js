@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState,useRef } from 'react'
-import { cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getFormattedDate8, getCreditCardYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, isJsonString, isValidCardExpiry, isValidDayOfMonth, numberFormat, trackMixpanelEvent, gtag_report_conversion } from '../helpers/common';
+import { cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getFormattedDate8, getCreditCardYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, isJsonString, isValidCardExpiry, isValidDayOfMonth, aedNumberFormat, trackMixpanelEvent, gtag_report_conversion } from '../helpers/common';
 import Layout from '../components/inner-layout';
 import PhoneInput from 'react-phone-input-2';
 import "react-phone-input-2/lib/bootstrap.css";
@@ -1609,17 +1609,17 @@ export default function CheckoutPage() {
                                                         return (
                                                             <div className='price-detail-row d-flex justify-content-between align-items-center mb-3' key={ix}>
                                                                 <h6 className='mb-0'>
-                                                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {numberFormat(psgPrice).split(".")[0]})
+                                                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {aedNumberFormat(psgPrice).split(".")[0]})
                                                                 </h6>
                                                                 <h6 className='mb-0'>
-                                                                    {numberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
+                                                                    {aedNumberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
                                                                 </h6>
                                                             </div>
                                                         );
                                                     })}
                                                     <div className="price-detail-row d-flex justify-content-between align-items-center mb-0">
                                                         <h6 className='mb-0'>Taxes & Fees</h6>
-                                                        <h6 className="mb-0">{numberFormat(Math.round(totalTax)).split(".")[0]}
+                                                        <h6 className="mb-0">{aedNumberFormat(Math.round(totalTax)).split(".")[0]}
                                                         </h6>
                                                     </div>
                                                 </div>
@@ -1628,7 +1628,7 @@ export default function CheckoutPage() {
                                                 <div className='bg-grey ps-3 pt-3 pb-3 pe-3 d-flex justify-content-between align-items-center'>
                                                     <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                                                     <h5 className='mb-0 fw-bold'>
-                                                        {numberFormat(Number(tripTotalPrice)).split(".")[0]}
+                                                        {aedNumberFormat(Number(tripTotalPrice)).split(".")[0]}
                                                     </h5>
                                                 </div>
                                             </div>
@@ -1657,8 +1657,8 @@ export default function CheckoutPage() {
                         <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
                             <div className='label'>Trip total</div>
                             <h3 className='fw-bold mb-0'>
-                                {numberFormat(Number(tripTotalPrice)).split(".")[0]}
-                                <sup>.{numberFormat(Number(tripTotalPrice)).split(".")[1]}</sup>
+                                {aedNumberFormat(Number(tripTotalPrice)).split(".")[0]}
+                                <sup>.{aedNumberFormat(Number(tripTotalPrice)).split(".")[1]}</sup>
                             </h3>
                             <button type="button" className="transparent-btn text-primary" data-bs-toggle="modal" data-bs-target="#viewPricePopup">View price summary</button>
 
@@ -1690,10 +1690,10 @@ export default function CheckoutPage() {
                                         return (
                                             <div className='price-detail-row d-flex justify-content-between align-items-center mb-3' key={ix}>
                                                 <h6 className='mb-0'>
-                                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {numberFormat(psgPrice)})
+                                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {aedNumberFormat(psgPrice)})
                                                 </h6>
                                                 <h6 className='mb-0'>
-                                                    {numberFormat(fare.totalFareAmount).split(".")[0]}<sup>.{numberFormat(fare.totalFareAmount).split(".")[1]}</sup>
+                                                    {aedNumberFormat(fare.totalFareAmount).split(".")[0]}<sup>.{aedNumberFormat(fare.totalFareAmount).split(".")[1]}</sup>
                                                 </h6>
                                             </div>
                                         );
@@ -1701,8 +1701,8 @@ export default function CheckoutPage() {
 
                                     <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                                         <h6 className='mb-0'>Service Fee</h6>
-                                        <h6 className="mb-0">{numberFormat(flight.serviceFee).split(".")[0]}
-                                            <sup>.{numberFormat(flight.serviceFee).split(".")[1]}</sup>
+                                        <h6 className="mb-0">{aedNumberFormat(flight.serviceFee).split(".")[0]}
+                                            <sup>.{aedNumberFormat(flight.serviceFee).split(".")[1]}</sup>
                                         </h6>
                                     </div>
                                     <div className='pb-3 bg-white total-price-box-wrap'>
@@ -1710,11 +1710,11 @@ export default function CheckoutPage() {
                                             <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                                             <h5 className='mb-0 fw-bold'>
                                                 {
-                                                    numberFormat(Number(tripTotalPrice)).split(".")[0]
+                                                    aedNumberFormat(Number(tripTotalPrice)).split(".")[0]
                                                 }
                                                 <sup>.
                                                     {
-                                                        numberFormat(Number(tripTotalPrice)).split(".")[1]
+                                                        aedNumberFormat(Number(tripTotalPrice)).split(".")[1]
                                                     }</sup>
                                             </h5>
                                         </div>

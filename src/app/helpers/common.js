@@ -61,7 +61,8 @@ export {
     Decrypt,
     getDaysAgo,
     getLastDateOfCurrentMonth,
-    gtag_report_conversion
+    gtag_report_conversion,
+    aedNumberFormat
 }
 
 const flightClassOptions = [{
@@ -145,13 +146,22 @@ const getFormattedDate = (date) => {
     }
 }
 
-const numberFormat = (value) =>
+const aedNumberFormat = (value) =>
+new Intl.NumberFormat('en-AE', {
+    style: 'currency',
+    currency: 'AED',
+    minimumFractionDigits: 2
+}).format(value);
+
+    
+    const numberFormat = (value) =>
     new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'INR',
         minimumFractionDigits: 2
 
     }).format(value);
+
 
 const isExternalUTM = () => {
     let paramsData = null;

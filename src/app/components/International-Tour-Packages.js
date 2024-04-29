@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { isDesktop, isTablet } from "react-device-detect";
 import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
-import { numberFormat } from "../helpers/common";
+import { aedNumberFormat } from "../helpers/common";
 
 
 export default function InternationalTourPackages() {
@@ -57,7 +57,7 @@ export default function InternationalTourPackages() {
                                                 </div>
                                                 <div className="text-end">
                                                     <p className="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p className="mb-0 fs-16 fw-bold color-orange">{numberFormat(pkg.startingPrice).split('.')[0]}</p>
+                                                    <p className="mb-0 fs-16 fw-bold color-orange">{aedNumberFormat(pkg.startingPrice).split('.')[0]}</p>
                                                 </div>
                                             </div>
                                         </div>

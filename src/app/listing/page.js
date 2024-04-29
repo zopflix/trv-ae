@@ -19,6 +19,7 @@ import {
   isADomesticFlight,
   isPureAirline,
   numberFormat,
+  aedNumberFormat,
   trackMixpanelEvent,
 } from "../helpers/common";
 import InnerFooter from "../components/inner-footer";
@@ -121,8 +122,6 @@ export default function Listing() {
   const [fromCode, setFromCode] = useState(null);
   const [toCode, setToCode] = useState(null);
 
-
-
   useEffect(() => {
     document.body.classList.add("bg-grey");
     return () => {
@@ -185,7 +184,7 @@ export default function Listing() {
         let carrierContract = sortedResults.find(
           (x) =>
             x.trips[0].validatingCarrier.code ==
-            element.trips[0].validatingCarrier.code &&
+              element.trips[0].validatingCarrier.code &&
             !(
               x.trips[0].listOfFlight.every(
                 (z) =>
@@ -193,10 +192,10 @@ export default function Listing() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                  (z) =>
-                    z.marketingCarrier ==
-                    element.trips[0].validatingCarrier.code
-                )
+                    (z) =>
+                      z.marketingCarrier ==
+                      element.trips[0].validatingCarrier.code
+                  )
                 : true)
             )
         );
@@ -216,8 +215,8 @@ export default function Listing() {
             .every((x) => x == element.trips[0].validatingCarrier.code) &&
           (element.trips.length > 1
             ? element.trips[1].listOfFlight
-              .map((x) => x.marketingCarrier)
-              .every((x) => x == element.trips[0].validatingCarrier.code)
+                .map((x) => x.marketingCarrier)
+                .every((x) => x == element.trips[0].validatingCarrier.code)
             : true)
         );
         if (extendCarrier.connectingAirlines) carriers.push(extendCarrier);
@@ -250,10 +249,10 @@ export default function Listing() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                  (z) =>
-                    z.marketingCarrier ==
-                    element.trips[0].validatingCarrier.code
-                )
+                    (z) =>
+                      z.marketingCarrier ==
+                      element.trips[0].validatingCarrier.code
+                  )
                 : true)
           );
           if (purecarrierContract) {
@@ -492,7 +491,7 @@ export default function Listing() {
       if (
         selectedMatrixAirlineStop.name == value.name &&
         selectedMatrixAirlineStop.connectingAirlines ==
-        value.connectingAirlines &&
+          value.connectingAirlines &&
         selectedMatrixAirlineStop.stops == airlineStops
       ) {
       } else {
@@ -584,8 +583,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -600,8 +599,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -660,8 +659,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -676,8 +675,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -747,8 +746,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           if (
@@ -773,8 +772,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff1.push(...fFlights);
@@ -844,8 +843,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff1.push(...fFlights);
@@ -860,8 +859,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           if (
@@ -932,8 +931,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -948,8 +947,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -1009,8 +1008,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                      .map((f) => f.marketingCarrier)
+                      .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -1025,8 +1024,8 @@ export default function Listing() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                  .map((f) => f.marketingCarrier)
-                  .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -1211,9 +1210,9 @@ export default function Listing() {
   const isWithinTimeRange = (minTime, maxTime, departTime) => {
     return (
       Date.parse("01/01/2011 " + departTime) >=
-      Date.parse("01/01/2011 " + minTime) &&
+        Date.parse("01/01/2011 " + minTime) &&
       Date.parse("01/01/2011 " + departTime) <=
-      Date.parse("01/01/2011 " + maxTime)
+        Date.parse("01/01/2011 " + maxTime)
     );
   };
 
@@ -1285,7 +1284,6 @@ export default function Listing() {
 
     return flight;
   };
-
 
   const gotoCheckoutPage = (flight) => {
     const parm = new URLSearchParams(window.location.search);
@@ -1408,9 +1406,9 @@ export default function Listing() {
                       currentFilters.segments &&
                       currentFilters.segments.length > 1 &&
                       "- " +
-                      getFormattedDate4(
-                        currentFilters?.segments[1]?.departureDate
-                      )}
+                        getFormattedDate4(
+                          currentFilters?.segments[1]?.departureDate
+                        )}
                   </span>
                   {currentFilters && (
                     <>
@@ -1610,7 +1608,7 @@ export default function Listing() {
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <h6 className="mb-0 d-table">
                                   {
-                                    numberFormat(
+                                    aedNumberFormat(
                                       Math.round(priceFilterValues[0])
                                     ).split(".")[0]
                                   }
@@ -1619,7 +1617,7 @@ export default function Listing() {
                               <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
                                 <h6 className="mb-0 d-table float-end">
                                   {
-                                    numberFormat(
+                                    aedNumberFormat(
                                       Math.round(priceFilterValues[1])
                                     ).split(".")[0]
                                   }
@@ -1699,8 +1697,8 @@ export default function Listing() {
                                       {selectedReturnTimeRange[1] == 24
                                         ? "23:59"
                                         : formatTime(
-                                          selectedReturnTimeRange[1]
-                                        )}
+                                            selectedReturnTimeRange[1]
+                                          )}
                                     </h6>
                                   </div>
                                 </div>
@@ -1876,13 +1874,13 @@ export default function Listing() {
                               flights[0].trips[0].listOfFlight.length - 1
                             ].airportToCity
                           }{" "}
-                          flights Starting @ Rs. {flights[0].totalPrice}
+                          flights Starting @ AED {flights[0].totalPrice}
                         </p>
                       )}
                     </div>
-                    <div className="col-12">
+                    {/* <div className="col-12">
                       <OffersMatrix></OffersMatrix>
-                    </div>
+                    </div> */}
                   </div>
                   {/* {matrixAirlines && matrixAirlines.length > 0 && (
                     <div className="matrix-slider mt-0 mb-0">
@@ -2187,8 +2185,8 @@ export default function Listing() {
                           <strong>Note:</strong> * All the fares displayed are
                           for{" "}
                           {currentFilters &&
-                            currentFilters.segments &&
-                            currentFilters.segments.length > 1
+                          currentFilters.segments &&
+                          currentFilters.segments.length > 1
                             ? "Round Trip"
                             : "One Way"}{" "}
                           and are in INR, inclusive of base fare, taxes and
@@ -2561,16 +2559,16 @@ export default function Listing() {
                           ];
                           var displayRtrnOperatedBy = flight.trips.length >
                             1 && [
-                              ...new Set(
-                                flight.trips[1].listOfFlight
-                                  .filter(
-                                    (x) =>
-                                      x.airlineName != x.operatedBy &&
-                                      !!x.operatedBy
-                                  )
-                                  .map((x) => x.operatedBy)
-                              ),
-                            ];
+                            ...new Set(
+                              flight.trips[1].listOfFlight
+                                .filter(
+                                  (x) =>
+                                    x.airlineName != x.operatedBy &&
+                                    !!x.operatedBy
+                                )
+                                .map((x) => x.operatedBy)
+                            ),
+                          ];
                           let showBaggageOptions = isPureAirline(flight);
                           let baggageOptions = null;
                           let isDomestic = isADomesticFlight(flight);
@@ -2705,31 +2703,31 @@ export default function Listing() {
                                                         {flight.trips[0]
                                                           .listOfFlight
                                                           .length <= 3 && (
-                                                            <h5 className="mb-0 text-center">
-                                                              {flight.trips[0].listOfFlight.map(
-                                                                (t, ix) => {
-                                                                  if (
-                                                                    ix >=
-                                                                    flight
-                                                                      .trips[0]
-                                                                      .listOfFlight
-                                                                      .length -
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[0].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
                                                                     1
-                                                                  )
-                                                                    return (
-                                                                      <Fragment
-                                                                        key={ix}
-                                                                      ></Fragment>
-                                                                    );
+                                                                )
                                                                   return (
-                                                                    <span
+                                                                    <Fragment
                                                                       key={ix}
-                                                                    ></span>
+                                                                    ></Fragment>
                                                                   );
-                                                                }
-                                                              )}
-                                                            </h5>
-                                                          )}
+                                                                return (
+                                                                  <span
+                                                                    key={ix}
+                                                                  ></span>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
                                                         <h6 className="airport-code mb-0 text-center">
                                                           <span className="flight-plus-air">
                                                             <span className="tooltip-box cursor-pointer">
@@ -2738,16 +2736,16 @@ export default function Listing() {
                                                                 .length == 1
                                                                 ? "Non-Stop"
                                                                 : flight
-                                                                  .trips[0]
-                                                                  .listOfFlight
-                                                                  .length -
-                                                                1 +
-                                                                (flight
-                                                                  .trips[0]
-                                                                  .listOfFlight
-                                                                  .length == 2
-                                                                  ? " Stop"
-                                                                  : " Stops")}
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
                                                             </span>
                                                             <span className="tooltip-hover-top">
                                                               <ul className="flight-duration-ovelry p-0 m-0 text-start">
@@ -2866,7 +2864,7 @@ export default function Listing() {
                                               </div>
                                               {displayOperatedBy &&
                                                 displayOperatedBy.length >
-                                                0 && (
+                                                  0 && (
                                                   <div className="row">
                                                     <div className="col-sm-12">
                                                       <h6 className="operated-by mb-0 mt-3">
@@ -2972,31 +2970,31 @@ export default function Listing() {
                                                         {flight.trips[1]
                                                           .listOfFlight
                                                           .length <= 3 && (
-                                                            <h5 className="mb-0 text-center">
-                                                              {flight.trips[1].listOfFlight.map(
-                                                                (t, ix) => {
-                                                                  if (
-                                                                    ix >=
-                                                                    flight
-                                                                      .trips[1]
-                                                                      .listOfFlight
-                                                                      .length -
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[1].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length -
                                                                     1
-                                                                  )
-                                                                    return (
-                                                                      <Fragment
-                                                                        key={ix}
-                                                                      ></Fragment>
-                                                                    );
+                                                                )
                                                                   return (
-                                                                    <span
+                                                                    <Fragment
                                                                       key={ix}
-                                                                    ></span>
+                                                                    ></Fragment>
                                                                   );
-                                                                }
-                                                              )}
-                                                            </h5>
-                                                          )}
+                                                                return (
+                                                                  <span
+                                                                    key={ix}
+                                                                  ></span>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
                                                         <h6 className="airport-code mb-0 text-center">
                                                           <span className="flight-plus-air">
                                                             <span className="tooltip-box cursor-pointer">
@@ -3005,16 +3003,16 @@ export default function Listing() {
                                                                 .length == 1
                                                                 ? "Non-Stop"
                                                                 : flight
-                                                                  .trips[1]
-                                                                  .listOfFlight
-                                                                  .length -
-                                                                1 +
-                                                                (flight
-                                                                  .trips[1]
-                                                                  .listOfFlight
-                                                                  .length == 2
-                                                                  ? " Stop"
-                                                                  : " Stops")}
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
                                                             </span>
                                                             <span className="tooltip-hover-top">
                                                               <ul className="flight-duration-ovelry p-0 m-0 text-start">
@@ -3081,27 +3079,27 @@ export default function Listing() {
                                                         </span>
                                                         {returnTotalDays >
                                                           0 && (
-                                                            <span className="flight-plus-air">
-                                                              <span className="tooltip-box cursor-pointer color-red">
-                                                                +{" "}
-                                                                {returnTotalDays}
-                                                              </span>
-                                                              <span className="tooltip-hover-top">
-                                                                <strong>
-                                                                  Flight Arrival -
-                                                                </strong>{" "}
-                                                                {getFormattedDate(
-                                                                  flight.trips[1]
-                                                                    .listOfFlight[
-                                                                    flight
-                                                                      .trips[1]
-                                                                      .listOfFlight
-                                                                      .length - 1
-                                                                  ].arrivalAt
-                                                                )}
-                                                              </span>
+                                                          <span className="flight-plus-air">
+                                                            <span className="tooltip-box cursor-pointer color-red">
+                                                              +{" "}
+                                                              {returnTotalDays}
                                                             </span>
-                                                          )}
+                                                            <span className="tooltip-hover-top">
+                                                              <strong>
+                                                                Flight Arrival -
+                                                              </strong>{" "}
+                                                              {getFormattedDate(
+                                                                flight.trips[1]
+                                                                  .listOfFlight[
+                                                                  flight
+                                                                    .trips[1]
+                                                                    .listOfFlight
+                                                                    .length - 1
+                                                                ].arrivalAt
+                                                              )}
+                                                            </span>
+                                                          </span>
+                                                        )}
                                                       </h6>
                                                       <h4 className="airport-code mb-0 dgc text-end">
                                                         <span className="flight-plus-air">
@@ -3133,7 +3131,7 @@ export default function Listing() {
                                               </div>
                                               {displayRtrnOperatedBy &&
                                                 displayRtrnOperatedBy.length >
-                                                0 && (
+                                                  0 && (
                                                   <div className="row">
                                                     <div className="col-sm-12">
                                                       <h6 className="operated-by mb-0 mt-3">
@@ -3152,7 +3150,7 @@ export default function Listing() {
                                           <div className="air-flight-price text-end">
                                             <h2 className="mb-0 dgc">
                                               {
-                                                numberFormat(avgPrice).split(
+                                                aedNumberFormat(avgPrice).split(
                                                   "."
                                                 )[0]
                                               }
@@ -3245,12 +3243,15 @@ export default function Listing() {
                                               type="button"
                                               className="buttonStyle3 border-0 float-end fs-14"
                                               onClick={async () => {
+                                                setShowSpinnerIndex(
+                                                  flightIndex
+                                                );
                                                 let currentFlight = flight;
                                                 await trackMixpanelEvent(
                                                   "Listing_Itineary_Select",
                                                   currentFlight
                                                 );
-
+                                               
                                                 currentFlight.departDays =
                                                   departDays;
                                                 currentFlight.returnDays =
@@ -3287,12 +3288,22 @@ export default function Listing() {
                                                     )
                                                   );
                                                 }
-
+                                                setShowSpinnerIndex(
+                                                  null
+                                                );
                                                 setopenFlightEnquiryForm(true);
                                                 setInquiryPkg(currentFlight);
                                               }}
                                             >
-                                              Enquire Now
+                                              {showSpinnerIndex ===
+                                              flightIndex ? (
+                                                <span
+                                                  className="spinner-border text-white"
+                                                  role="status"
+                                                ></span>
+                                              ) : (
+                                                <span>Enquire Now</span>
+                                              )}{" "}
                                             </button>
 
                                             <div
@@ -3314,7 +3325,7 @@ export default function Listing() {
                                               </div>
                                               {selectedFlight &&
                                                 selectedFlight.totalPrice >
-                                                0 && (
+                                                  0 && (
                                                   <FlightDetailFlap
                                                     setLoader={
                                                       setShowContentLoader
@@ -3364,7 +3375,7 @@ export default function Listing() {
                                                         loader={trvLoader}
                                                         src={
                                                           baggageOptions.carryOnBag ==
-                                                            "Chargeable"
+                                                          "Chargeable"
                                                             ? "icon/carry-on-chargeable.svg"
                                                             : "icon/carry-on-included.svg"
                                                         }
@@ -3377,7 +3388,7 @@ export default function Listing() {
                                                         loader={trvLoader}
                                                         src={
                                                           baggageOptions.carryOnBag ==
-                                                            "Chargeable"
+                                                          "Chargeable"
                                                             ? "icon/checked-chargeable.svg"
                                                             : "icon/checked-included.svg"
                                                         }
@@ -3425,7 +3436,7 @@ export default function Listing() {
                                                           loader={trvLoader}
                                                           src={
                                                             baggageOptions.carryOnBag ==
-                                                              "Chargeable"
+                                                            "Chargeable"
                                                               ? "icon/carry-on-chargeable.svg"
                                                               : "icon/carry-on-included.svg"
                                                           }
@@ -3450,7 +3461,7 @@ export default function Listing() {
                                                           loader={trvLoader}
                                                           src={
                                                             baggageOptions.checkedBag ==
-                                                              "Chargeable"
+                                                            "Chargeable"
                                                               ? "icon/checked-chargeable.svg"
                                                               : "icon/checked-included.svg"
                                                           }
@@ -3583,33 +3594,33 @@ export default function Listing() {
                                                         {flight.trips[0]
                                                           .listOfFlight
                                                           .length <= 3 && (
-                                                            <h5 className="mb-0 text-center">
-                                                              {flight.trips[0].listOfFlight.map(
-                                                                (t, ix) => {
-                                                                  if (
-                                                                    ix >=
-                                                                    flight
-                                                                      .trips[0]
-                                                                      .listOfFlight
-                                                                      .length -
+                                                          <h5 className="mb-0 text-center">
+                                                            {flight.trips[0].listOfFlight.map(
+                                                              (t, ix) => {
+                                                                if (
+                                                                  ix >=
+                                                                  flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
                                                                     1
-                                                                  )
-                                                                    return (
-                                                                      <Fragment
-                                                                        key={ix}
-                                                                      ></Fragment>
-                                                                    );
+                                                                )
                                                                   return (
-                                                                    <>
-                                                                      <span
-                                                                        key={ix}
-                                                                      ></span>
-                                                                    </>
+                                                                    <Fragment
+                                                                      key={ix}
+                                                                    ></Fragment>
                                                                   );
-                                                                }
-                                                              )}
-                                                            </h5>
-                                                          )}
+                                                                return (
+                                                                  <>
+                                                                    <span
+                                                                      key={ix}
+                                                                    ></span>
+                                                                  </>
+                                                                );
+                                                              }
+                                                            )}
+                                                          </h5>
+                                                        )}
                                                         <h6 className="airport-code mb-0 text-center">
                                                           <span className="flight-plus-air">
                                                             <span className="tooltip-box cursor-pointer">
@@ -3618,16 +3629,16 @@ export default function Listing() {
                                                                 .length == 1
                                                                 ? "Non-Stop"
                                                                 : flight
-                                                                  .trips[0]
-                                                                  .listOfFlight
-                                                                  .length -
-                                                                1 +
-                                                                (flight
-                                                                  .trips[0]
-                                                                  .listOfFlight
-                                                                  .length == 2
-                                                                  ? " Stop"
-                                                                  : " Stops")}
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length -
+                                                                  1 +
+                                                                  (flight
+                                                                    .trips[0]
+                                                                    .listOfFlight
+                                                                    .length == 2
+                                                                    ? " Stop"
+                                                                    : " Stops")}
                                                             </span>
                                                             <span className="tooltip-hover-top">
                                                               <ul className="flight-duration-ovelry p-0 m-0 text-start">
@@ -3744,7 +3755,7 @@ export default function Listing() {
                                               </div>
                                               {displayOperatedBy &&
                                                 displayOperatedBy.length >
-                                                0 && (
+                                                  0 && (
                                                   <div className="row">
                                                     <div className="col-sm-12">
                                                       <h6 className="operated-by mb-2 mt-3">
@@ -3763,7 +3774,7 @@ export default function Listing() {
                                           <div className="air-flight-price text-end">
                                             <h2 className="mb-0 dgc">
                                               {
-                                                numberFormat(avgPrice).split(
+                                                aedNumberFormat(avgPrice).split(
                                                   "."
                                                 )[0]
                                               }
@@ -3924,7 +3935,7 @@ export default function Listing() {
                                               </div>
                                               {selectedFlight &&
                                                 selectedFlight.totalPrice >
-                                                0 && (
+                                                  0 && (
                                                   <FlightDetailFlap
                                                     setLoader={
                                                       setShowContentLoader
@@ -3971,7 +3982,7 @@ export default function Listing() {
                                                         loader={trvLoader}
                                                         src={
                                                           baggageOptions.carryOnBag ==
-                                                            "Chargeable"
+                                                          "Chargeable"
                                                             ? "icon/carry-on-chargeable.svg"
                                                             : "icon/carry-on-included.svg"
                                                         }
@@ -3984,7 +3995,7 @@ export default function Listing() {
                                                         loader={trvLoader}
                                                         src={
                                                           baggageOptions.checkedBag ==
-                                                            "Chargeable"
+                                                          "Chargeable"
                                                             ? "icon/checked-chargeable.svg"
                                                             : "icon/checked-included.svg"
                                                         }
@@ -4032,7 +4043,7 @@ export default function Listing() {
                                                           loader={trvLoader}
                                                           src={
                                                             baggageOptions.carryOnBag ==
-                                                              "Chargeable"
+                                                            "Chargeable"
                                                               ? "icon/carry-on-chargeable.svg"
                                                               : "icon/carry-on-included.svg"
                                                           }
@@ -4057,7 +4068,7 @@ export default function Listing() {
                                                           loader={trvLoader}
                                                           src={
                                                             baggageOptions.checkedBag ==
-                                                              "Chargeable"
+                                                            "Chargeable"
                                                               ? "icon/checked-chargeable.svg"
                                                               : "icon/checked-included.svg"
                                                           }
@@ -4269,7 +4280,10 @@ export default function Listing() {
         </Modal.Body>
       </Modal>
 
-      <Modal className="FlightEnquiryForm centred-modal" show={openFlightEnquiryForm}>
+      <Modal
+        className="FlightEnquiryForm centred-modal"
+        show={openFlightEnquiryForm}
+      >
         <Modal.Body>
           <Image
             className="CloseIcon h-auto cursor-pointer position-absolute end-0 me-3"

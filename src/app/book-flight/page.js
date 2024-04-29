@@ -1,6 +1,6 @@
 "use client"
 import { Fragment, useEffect, useState,useRef } from 'react'
-import { Decrypt, cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, gtag_report_conversion, isJsonString, isValidDayOfMonth, numberFormat, trackMixpanelEvent } from '../helpers/common';
+import { Decrypt, cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, gtag_report_conversion, isJsonString, isValidDayOfMonth, aedNumberFormat, trackMixpanelEvent } from '../helpers/common';
 import Layout from '../components/inner-layout';
 import PhoneInput from 'react-phone-input-2';
 import "react-phone-input-2/lib/bootstrap.css";
@@ -1596,7 +1596,7 @@ export default function CheckoutPage() {
                           </div>
                           <div className='col-6'>
                             <div className='checkout-step-main-title text-end'>
-                              <h5 className='mb-1 fw-bold color-green'>{numberFormat(Math.round(totalSeatPrice)).split(".")[0]}<sup>.{numberFormat(Math.round(totalSeatPrice)).split(".")[1]}</sup></h5>
+                              <h5 className='mb-1 fw-bold color-green'>{aedNumberFormat(Math.round(totalSeatPrice)).split(".")[0]}<sup>.{aedNumberFormat(Math.round(totalSeatPrice)).split(".")[1]}</sup></h5>
                               <h5 className='mb-1 fs-14 color-black opacity-50'>Total Fare</h5>
                             </div>
                           </div>
@@ -2186,7 +2186,7 @@ export default function CheckoutPage() {
                         {
                           hasPromoCodeApplied &&
                           <div>
-                            <p className='color-green fw-bold fs-12'>Congratulations! {couponData?.name} Discount of Rs.{numberFormat(discountAmount).split(".")[0]} has been applied successfully.</p>
+                            <p className='color-green fw-bold fs-12'>Congratulations! {couponData?.name} Discount of Rs.{aedNumberFormat(discountAmount).split(".")[0]} has been applied successfully.</p>
                           </div>
                         }
 
@@ -2363,10 +2363,10 @@ export default function CheckoutPage() {
                               return (
                                 <div className='price-detail-row d-flex justify-content-between align-items-center mb-3' key={ix}>
                                   <h6 className='mb-0'>
-                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {numberFormat(psgPrice).split(".")[0]})
+                                    {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {aedNumberFormat(psgPrice).split(".")[0]})
                                   </h6>
                                   <h6 className='mb-0'>
-                                    {numberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
+                                    {aedNumberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
                                   </h6>
                                 </div>
                               );
@@ -2374,7 +2374,7 @@ export default function CheckoutPage() {
 
                             <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                               <h6 className='mb-0'>Taxes & Fees</h6>
-                              <h6 className="mb-0">{numberFormat(Math.round(totalTax)).split(".")[0]}
+                              <h6 className="mb-0">{aedNumberFormat(Math.round(totalTax)).split(".")[0]}
                               </h6>
                             </div>
                             {
@@ -2382,7 +2382,7 @@ export default function CheckoutPage() {
                               totalSeatPrice > 0 &&
                               <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                                 <h6 className='mb-0'>Seat price</h6>
-                                <h6 className="mb-0">{numberFormat(totalSeatPrice).split(".")[0]}
+                                <h6 className="mb-0">{aedNumberFormat(totalSeatPrice).split(".")[0]}
                                 </h6>
                               </div>
                             }
@@ -2390,7 +2390,7 @@ export default function CheckoutPage() {
                               hasPromoCodeApplied &&
                               <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                                 <h6 className='mb-0 color-green fw-bold'>Discount</h6>
-                                <h6 className="mb-0 color-green fw-bold">{numberFormat(discountAmount).split(".")[0]}
+                                <h6 className="mb-0 color-green fw-bold">{aedNumberFormat(discountAmount).split(".")[0]}
                                 </h6>
                               </div>
                             }
@@ -2403,7 +2403,7 @@ export default function CheckoutPage() {
                             <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                             <h5 className='mb-0 fw-bold'>
                               {
-                                numberFormat(Number(tripTotalPrice + (isSeatCriteriaSelected ? totalSeatPrice : 0))).split(".")[0]
+                                aedNumberFormat(Number(tripTotalPrice + (isSeatCriteriaSelected ? totalSeatPrice : 0))).split(".")[0]
                               }
                             </h5>
                           </div>
@@ -2437,7 +2437,7 @@ export default function CheckoutPage() {
                           {
                             hasPromoCodeApplied &&
                             <div>
-                              <p className='color-green fw-bold fs-12'>Congratulations! {couponData.name} Discount of Rs.{numberFormat(discountAmount).split(".")[0]} has been applied successfully.</p>
+                              <p className='color-green fw-bold fs-12'>Congratulations! {couponData.name} Discount of Rs.{aedNumberFormat(discountAmount).split(".")[0]} has been applied successfully.</p>
                             </div>
                           }
 
@@ -2492,7 +2492,7 @@ export default function CheckoutPage() {
               <div className='col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
                 <div className='label'>Trip total</div>
                 <h3 className='fw-bold mb-0'>
-                  {numberFormat(Number(tripTotalPrice + totalSeatPrice)).split(".")[0]}
+                  {aedNumberFormat(Number(tripTotalPrice + totalSeatPrice)).split(".")[0]}
                 </h3>
                 <button type="button" className="transparent-btn color-blue fs-12 fw-bold" data-bs-toggle="modal" data-bs-target="#viewPricePopup">View price summary</button>
               </div>
@@ -2527,10 +2527,10 @@ export default function CheckoutPage() {
                       return (
                         <div className='price-detail-row d-flex justify-content-between align-items-center mb-3' key={ix}>
                           <h6 className='mb-0'>
-                            {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {numberFormat(psgPrice).split(".")[0]})
+                            {fare.paxType == 5 ? "LAP INFANT" : fare.displayPaxType} ({fare.noofPax} X {aedNumberFormat(psgPrice).split(".")[0]})
                           </h6>
                           <h6 className='mb-0'>
-                            {numberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
+                            {aedNumberFormat(Math.round(psgPrice * fare.noofPax)).split(".")[0]}
                           </h6>
                         </div>
                       );
@@ -2538,7 +2538,7 @@ export default function CheckoutPage() {
 
                     <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                       <h6 className='mb-0'>Taxes & Fees</h6>
-                      <h6 className="mb-0">{numberFormat(Math.round(totalTax)).split(".")[0]}
+                      <h6 className="mb-0">{aedNumberFormat(Math.round(totalTax)).split(".")[0]}
                       </h6>
                     </div>
                     {
@@ -2546,7 +2546,7 @@ export default function CheckoutPage() {
                       totalSeatPrice > 0 &&
                       <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                         <h6 className='mb-0'>Seat price</h6>
-                        <h6 className="mb-0">{numberFormat(totalSeatPrice).split(".")[0]}
+                        <h6 className="mb-0">{aedNumberFormat(totalSeatPrice).split(".")[0]}
                         </h6>
                       </div>
                     }
@@ -2555,7 +2555,7 @@ export default function CheckoutPage() {
                       hasPromoCodeApplied &&
                       <div className="price-detail-row d-flex justify-content-between align-items-center mb-3">
                         <h6 className='mb-0 color-green fw-bold'>Discount</h6>
-                        <h6 className="mb-0 color-green fw-bold">{numberFormat(discountAmount)}
+                        <h6 className="mb-0 color-green fw-bold">{aedNumberFormat(discountAmount)}
                         </h6>
                       </div>
                     }
@@ -2564,7 +2564,7 @@ export default function CheckoutPage() {
                         <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                         <h5 className='mb-0 fw-bold'>
                           {
-                            numberFormat(Number(tripTotalPrice + totalSeatPrice)).split(".")[0]
+                            aedNumberFormat(Number(tripTotalPrice + totalSeatPrice)).split(".")[0]
                           }
                         </h5>
                       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { encodeData, getDiffFromMinutes, getFormattedDate, getFormattedDate5, getFormattedTime, numberFormat } from "../helpers/common";
+import { encodeData, getDiffFromMinutes, getFormattedDate, getFormattedDate5, getFormattedTime, aedNumberFormat } from "../helpers/common";
 import { getFareRules } from "../services/flightService";
 import { airlineLogoLoader, trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
@@ -253,7 +253,7 @@ export default function DetailsFlap(props) {
       <div className='position-absolute flap-total-price'>
         <div className='row align-items-center ms-0 me-0'>
           <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start'>
-            <h2 className='mb-0'>{(numberFormat(
+            <h2 className='mb-0'>{(aedNumberFormat(
               Number(props.selectedFlight.avgPrice)
               + Number(props?.superSaverService?.price
                 ? (props?.sssPassangers * props?.superSaverService?.price)
