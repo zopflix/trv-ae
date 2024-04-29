@@ -3914,7 +3914,7 @@ export default function Listing() {
                                                 setInquiryPkg(currentFlight);
                                               }}
                                             >
-                                              Enquire Now
+                                              Enquire
                                             </button>
                                             <div
                                               className="offcanvas offcanvas-end side-flap"

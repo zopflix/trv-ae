@@ -906,12 +906,7 @@ export default function HolidayDetails(props) {
                 <span className="fs-12">Price Details</span>
                 <i className="fa-solid fa-chevron-right ms-2 fs-10"></i>
               </button>
-              <div
-                className="offcanvas offcanvas-start"
-                tabIndex="-1"
-                id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel"
-              >
+              <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-body">
                   <button
                     type="button"
@@ -931,14 +926,7 @@ export default function HolidayDetails(props) {
               </div>
             </div>
             <div className="col-5 col-sm-5 text-end">
-              <button
-                className="bg-orange color-white fs-14 fw-bold border-0 rounded-3 px-3 py-3 my-3 w-100"
-                onClick={() => {
-                  setOpenInquiryModal(true);
-                }}
-              >
-                Enquire Now
-              </button>
+              <button className="bg-orange color-white fs-14 fw-bold border-0 rounded-3 px-3 py-3 my-3 w-100" onClick={() => { setOpenInquiryModal(true); }}>Enquire</button>
             </div>
           </div>
         </div>
