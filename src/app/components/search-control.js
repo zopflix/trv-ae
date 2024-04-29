@@ -54,6 +54,8 @@ export default function SearchControl(props) {
     // const updatePassengers = props.updatePassengers;
 
 
+
+
     const isModifyInProgress = props.isModifyInProgress;
     const [rtnDateOpen, setReturnDateOpened] = useState(false);
     const [passengersCount, setNoOfPassengerCount] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });

@@ -130,6 +130,7 @@ export default function Listing() {
     };
   }, []);
 
+
   const clearFilters = () => {
     setSelectedStops([]);
     setSelectedAirlines([]);
@@ -1105,7 +1106,8 @@ export default function Listing() {
     clearFilters();
     setFlightsData([]);
     setIsLoading(true);
-    if (data?.segments[0]?.fromCountry == "India") {
+    // if (data?.segments[0]?.fromCountry == "India") {
+      if (data) {
       const res = await searchFlights(data);
       var amadeusResult = res;
       var sortedResults = amadeusResult.sort(function (a, b) {
@@ -1143,6 +1145,7 @@ export default function Listing() {
         returnDates.push(new Date(d));
       }
     }
+
 
     if (typeof res == "object") {
       let sortedResults = sortResults(res);
@@ -2189,7 +2192,7 @@ export default function Listing() {
                           currentFilters.segments.length > 1
                             ? "Round Trip"
                             : "One Way"}{" "}
-                          and are in INR, inclusive of base fare, taxes and
+                          and are in AED, inclusive of base fare, taxes and
                           service fees.
                         </p>
                       </div>
@@ -2477,10 +2480,15 @@ export default function Listing() {
                       })
                     } */}
 
-                    {(currentFilters.segments[0].fromCountry != "India" ||
+                    {/* {(currentFilters.segments[0].fromCountry != "India" ||
                       currentFilters.segments[0].toCountry != "India" ||
                       (currentFilters.segments[0].fromCountry == "India" &&
                         currentFilters.segments[0].toCountry == "India" &&
+                        currentFilters.segments.length == 1)) && */}
+                          {(currentFilters.segments[0].fromCountry  ||
+                      currentFilters.segments[0].toCountry  ||
+                      (currentFilters.segments[0].fromCountry  &&
+                        currentFilters.segments[0].toCountry  &&
                         currentFilters.segments.length == 1)) &&
                       filteredFlights
                         .slice(0, itemsCounter)

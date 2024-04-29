@@ -265,13 +265,17 @@ export default function SearchSection(props) {
     localStorage.setItem("mySearchID", searchId);
 
     localStorage.setItem("currentSelectedFilters", JSON.stringify(data));
-
-    if (segments[0].fromCountry == "India" && segments[0].toCountry == "India")
-      router.push("/results?s=" + searchId);
-    else router.push("/listing?s=" + searchId);
+    router.push("/listing?s=" + searchId);
     setTimeout(() => {
       setSearchInProgress(false);
     }, 1000);
+
+    // if (segments[0].fromCountry == "India" && segments[0].toCountry == "India")
+    //   router.push("/results?s=" + searchId);
+    // else router.push("/listing?s=" + searchId);
+    // setTimeout(() => {
+    //   setSearchInProgress(false);
+    // }, 1000);
   };
 
   const loadAirportRoutes = () => {

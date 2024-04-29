@@ -51,6 +51,7 @@ export default function Topsearch(props) {
 
   const router = useRouter();
 
+
   const resultPageFromDate = props.setFromDate;
   const resultPageToDate = props.setToDate;
   const resultPagePassengers = props.setNoOfPassengers;
@@ -533,12 +534,13 @@ export default function Topsearch(props) {
     localStorage.setItem("currentSelectedFilters", JSON.stringify(data));
     localStorage.setItem("searchCriteria", JSON.stringify(data));
     dispatch({ type: "SETSEARCHCRITERIA", criteria: data });
-
+    
     setFiltersAndApply(localAirportData);
 
-    if (fromAirport.country == "India" && toAirport.country == "India")
-      router.push("/results?s=" + searchId);
-    else router.push("/listing?s=" + searchId);
+   router.push("/listing?s=" + searchId);
+    // if (fromAirport.country == "India" && toAirport.country == "India")
+    //   router.push("/results?s=" + searchId);
+    // else router.push("/listing?s=" + searchId);
   };
 
 
