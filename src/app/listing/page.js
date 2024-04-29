@@ -3310,7 +3310,7 @@ export default function Listing() {
                                                   role="status"
                                                 ></span>
                                               ) : (
-                                                <span>Enquire</span>
+                                                <span>Enquire Now</span>
                                               )}{" "}
                                             </button>
 
@@ -3875,6 +3875,9 @@ export default function Listing() {
                                               type="button"
                                               className="buttonStyle3 border-0 float-end fs-14"
                                               onClick={async () => {
+                                                setShowSpinnerIndex(
+                                                  flightIndex
+                                                );
                                                 let currentFlight = flight;
                                                 await trackMixpanelEvent(
                                                   "Listing_Itineary_Select",
@@ -3917,12 +3920,22 @@ export default function Listing() {
                                                     )
                                                   );
                                                 }
-
+                                                setShowSpinnerIndex(
+                                                  null
+                                                );
                                                 setopenFlightEnquiryForm(true);
                                                 setInquiryPkg(currentFlight);
                                               }}
                                             >
-                                              Enquire
+                                               {showSpinnerIndex ===
+                                              flightIndex ? (
+                                                <span
+                                                  className="spinner-border text-white"
+                                                  role="status"
+                                                ></span>
+                                              ) : (
+                                                <span>Enquire Now</span>
+                                              )}{" "}
                                             </button>
                                             <div
                                               className="offcanvas offcanvas-end side-flap"
