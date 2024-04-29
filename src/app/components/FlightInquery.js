@@ -288,7 +288,7 @@ export default function FlightInqueryForm(props) {
                     {isSubmitting ? (
                       <div className="spinner-border" role="status"></div>
                     ) : (
-                      <span>Enquire Now</span>
+                      <span>Enquire</span>
                     )}
                   </button>
                 </div>

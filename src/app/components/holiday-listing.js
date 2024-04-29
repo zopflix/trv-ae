@@ -197,7 +197,7 @@ export default function HolidayListing(props) {
                                             />
                                           </div>
                                           <div>
-                                            <span className="fs-14 fw-bold">Enquire Now</span>
+                                            <span className="fs-14 fw-bold">Enquire</span>
                                           </div>
                                         </div>
                                       </button>

@@ -3310,7 +3310,7 @@ export default function Listing() {
                                                   role="status"
                                                 ></span>
                                               ) : (
-                                                <span>Enquire Now</span>
+                                                <span>Enquire</span>
                                               )}{" "}
                                             </button>
 
@@ -3922,7 +3922,7 @@ export default function Listing() {
                                                 setInquiryPkg(currentFlight);
                                               }}
                                             >
-                                              Enquire Now
+                                              Enquire
                                             </button>
                                             <div
                                               className="offcanvas offcanvas-end side-flap"
