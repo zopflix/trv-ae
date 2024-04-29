@@ -39,12 +39,12 @@ export default function ContactUs() {
                                         <br /><span className="fs-14">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</span>
                                     </p>
                                 </div>
-                                <div className="col-12 col-md-6">
+                                <div className="col-12 col-md-6 fs-14">
                                     <p>
                                         <strong>Email Address :</strong> info@travanya.ae
                                     </p>
                                     <p>
-                                        <strong>Contact N0 :</strong>  +91-800-023-5865
+                                        <strong>Contact No :</strong>  +971 506 58 1980
                                     </p>
                                 </div>
                             </div>
