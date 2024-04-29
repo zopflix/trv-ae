@@ -93,7 +93,7 @@ export default function FlightInqueryForm(props) {
           props.setopenFlightEnquiryForm(false);
           setIsSubmitting(false);
           if(res){
-            window.location.href = `/holidays/thank-you/?id=${res}`;
+            window.location.href = `/thank-you/?id=${res}`;
           }
         } else {
           setHasError(true);
