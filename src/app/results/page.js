@@ -172,7 +172,7 @@ export default function Results() {
         let carrierContract = sortedResults.find(
           (x) =>
             x.trips[0].validatingCarrier.code ==
-              element.trips[0].validatingCarrier.code &&
+            element.trips[0].validatingCarrier.code &&
             !(
               x.trips[0].listOfFlight.every(
                 (z) =>
@@ -180,10 +180,10 @@ export default function Results() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                    (z) =>
-                      z.marketingCarrier ==
-                      element.trips[0].validatingCarrier.code
-                  )
+                  (z) =>
+                    z.marketingCarrier ==
+                    element.trips[0].validatingCarrier.code
+                )
                 : true)
             )
         );
@@ -230,10 +230,10 @@ export default function Results() {
               ) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight.every(
-                    (z) =>
-                      z.marketingCarrier ==
-                      element.trips[0].validatingCarrier.code
-                  )
+                  (z) =>
+                    z.marketingCarrier ==
+                    element.trips[0].validatingCarrier.code
+                )
                 : true)
           );
           if (purecarrierContract) {
@@ -318,8 +318,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -334,8 +334,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -413,8 +413,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -429,8 +429,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -519,8 +519,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           if (
@@ -545,8 +545,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff1.push(...fFlights);
@@ -635,8 +635,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff1.push(...fFlights);
@@ -651,8 +651,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           if (
@@ -752,8 +752,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -768,8 +768,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -829,8 +829,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) ||
                 (x.trips.length > 1
                   ? !x.trips[1].listOfFlight
-                      .map((f) => f.marketingCarrier)
-                      .every((f) => f == x.trips[0].validatingCarrier.code)
+                    .map((f) => f.marketingCarrier)
+                    .every((f) => f == x.trips[0].validatingCarrier.code)
                   : false))
           );
           ff.push(...fFlights);
@@ -845,8 +845,8 @@ export default function Results() {
                 .every((f) => f == x.trips[0].validatingCarrier.code) &&
               (x.trips.length > 1
                 ? x.trips[1].listOfFlight
-                    .map((f) => f.marketingCarrier)
-                    .every((f) => f == x.trips[0].validatingCarrier.code)
+                  .map((f) => f.marketingCarrier)
+                  .every((f) => f == x.trips[0].validatingCarrier.code)
                 : true)
           );
           ff.push(...fFlights);
@@ -886,7 +886,7 @@ export default function Results() {
       (x) =>
         x.gdsName == "TBO" &&
         x.trips[0].listOfFlight[0].fromCode ==
-          currentFilters.segments[0].fromCode
+        currentFilters.segments[0].fromCode
     );
     let returnFlights = [];
 
@@ -895,7 +895,7 @@ export default function Results() {
         (x) =>
           x.gdsName == "TBO" &&
           x.trips[0].listOfFlight[0].fromCode ==
-            currentFilters.segments[0].toCode
+          currentFilters.segments[0].toCode
       );
     }
     if (filterType != "return-time") setFilteredFlights(departFlights);
@@ -999,7 +999,7 @@ export default function Results() {
           (x) =>
             x.gdsName == "TBO" &&
             x.trips[0].listOfFlight[0].fromCode ==
-              JSON.parse(currentStoredFilters).segments[0].fromCode
+            JSON.parse(currentStoredFilters).segments[0].fromCode
         );
         setDepartTBOFlights(departFlights);
         setFilteredFlights(departFlights);
@@ -1073,7 +1073,7 @@ export default function Results() {
             (x) =>
               x.gdsName == "TBO" &&
               x.trips[0].listOfFlight[0].fromCode ==
-                JSON.parse(currentStoredFilters).segments[1].fromCode
+              JSON.parse(currentStoredFilters).segments[1].fromCode
           );
           setReturnTBOFlights(returnFlights);
           setRtnFilteredFlights(returnFlights);
@@ -1142,9 +1142,9 @@ export default function Results() {
   const isWithinTimeRange = (minTime, maxTime, departTime) => {
     return (
       Date.parse("01/01/2011 " + departTime) >=
-        Date.parse("01/01/2011 " + minTime) &&
+      Date.parse("01/01/2011 " + minTime) &&
       Date.parse("01/01/2011 " + departTime) <=
-        Date.parse("01/01/2011 " + maxTime)
+      Date.parse("01/01/2011 " + maxTime)
     );
   };
 
@@ -1308,43 +1308,27 @@ export default function Results() {
                   </div>
                 </div>
                 <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start">
-                  <span>
-                    {getFormattedDate4(fromDate)}
-
-                    {tripType == 2 && "- " + getFormattedDate4(toDate)}
-                  </span>
+                  <span>{getFormattedDate4(fromDate)} {tripType == 2 && "- " + getFormattedDate4(toDate)}</span>
                   {currentFilters && (
                     <>
                       <span>
                         {noOfPassengers.adults} Adult(s)
-                        {noOfPassengers.children > 0 &&
-                          ", " + noOfPassengers.children + " Child"}
-                        {noOfPassengers.infants > 0 &&
-                          ", " + noOfPassengers.infants + " Infants"}
-                        , {noOfPassengers.cabin}
+                        {noOfPassengers.children > 0 && ", " + noOfPassengers.children + " Child"}
+                        {noOfPassengers.infants > 0 && ", " + noOfPassengers.infants + " Infants"}, {noOfPassengers.cabin}
                       </span>
                       <span>{tripType == 2 ? "Round Trip" : "One Way"}</span>
                     </>
                   )}
                 </div>
                 <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-                  <i
-                    className="cursor-pointer fa-solid fa-pen-to-square float-end h4 mb-0"
-                    onClick={() =>
-                      setMobSideFilterClicked(!mobSideFilterClicked)
-                    }
-                  ></i>
+                  <i className="cursor-pointer fa-solid fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-      <div
-        className={
-          mobSideFilterClicked ? "modify-searchh active" : "modify-searchh"
-        }
-      >
+      <div className={mobSideFilterClicked ? "modify-searchh active" : "modify-searchh"}>
         <Topsearch
           isModifyInProgress={isModifyInProgress}
           setFromCode={setFromCode}
@@ -1370,14 +1354,7 @@ export default function Results() {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3">
                 <div className="sidebar-filter-btn mt-3 desk-hide">
-                  <h4
-                    id="filterBySection"
-                    className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer"
-                    onClick={() => {
-                      document.body.classList.add("filter-open");
-                      setOpenFilters(true);
-                    }}
-                  >
+                  <h4 id="filterBySection" className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer" onClick={() => { document.body.classList.add("filter-open"); setOpenFilters(true); }}>
                     <span className="icon me-2">
                       <span>
                         <Image
@@ -1390,28 +1367,14 @@ export default function Results() {
                         />
                       </span>
                     </span>
-                    <span className="sub-heading-title dgc.filter-sub-heading .icon span">
-                      Filter By
-                    </span>
+                    <span className="sub-heading-title dgc.filter-sub-heading .icon span">Filter By</span>
                   </h4>
                 </div>
-                <div
-                  className={
-                    openFilters
-                      ? "side-bar-air-filter br-5 mt-3 mb-4 active"
-                      : "side-bar-air-filter br-5 mt-3 mb-4"
-                  }
-                >
+                <div className={openFilters ? "side-bar-air-filter br-5 mt-3 mb-4 active" : "side-bar-air-filter br-5 mt-3 mb-4"}>
                   <div className="filter-items py-3 ps-3 pe-3 desk-hide">
                     <h4 className="filter-sub-heading d-flex mb-0 align-items-center justify-content-between">
                       <span className="sub-heading-title dgc">Filter By</span>
-                      <button
-                        className="transparent-btn sidebar-filter-close-btn"
-                        onClick={() => {
-                          setOpenFilters(false);
-                          document.body.classList.remove("filter-open");
-                        }}
-                      >
+                      <button className="transparent-btn sidebar-filter-close-btn" onClick={() => { setOpenFilters(false); document.body.classList.remove("filter-open"); }}>
                         <i className="fa-solid fa-xmark"></i>
                       </button>
                     </h4>
@@ -1433,18 +1396,11 @@ export default function Results() {
                               />
                             </span>
                           </span>
-                          <span className="sub-heading-title dgc">
-                            Filter By
-                          </span>
+                          <span className="sub-heading-title dgc">Filter By</span>
                         </h4>
                       </div>
                       <div className="col-6 col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-5">
-                        <button
-                          className="transparent-btn float-end clear-filter-btn"
-                          onClick={() => clearFilters()}
-                        >
-                          Reset Filters
-                        </button>
+                        <button className="transparent-btn float-end clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
                       </div>
                     </div>
                   </div>
@@ -1462,26 +1418,9 @@ export default function Results() {
 
                               {stopsFilters.map((stop, index) => {
                                 return (
-                                  <div
-                                    className="form-check cursor-pointer"
-                                    key={index}
-                                    onClick={() => {
-                                      applyFilters("stops", stop, flights);
-                                    }}
-                                  >
-                                    <input
-                                      className="form-check-input cursor-pointer"
-                                      type="checkbox"
-                                      value={stop}
-                                      checked={selectedStops.indexOf(stop) > -1}
-                                      readOnly
-                                    />
-                                    <label className="form-check-label cursor-pointer dgc">
-                                      {stop == 0
-                                        ? "Non Stop"
-                                        : stop +
-                                          (stop == 1 ? " Stop" : " Stops")}
-                                    </label>
+                                  <div className="form-check cursor-pointer" key={index} onClick={() => { applyFilters("stops", stop, flights); }}>
+                                    <input className="form-check-input cursor-pointer" type="checkbox" value={stop} checked={selectedStops.indexOf(stop) > -1} readOnly />
+                                    <label className="form-check-label cursor-pointer dgc">{stop == 0 ? "Non Stop" : stop + (stop == 1 ? " Stop" : " Stops")}</label>
                                   </div>
                                 );
                               })}
@@ -1499,65 +1438,25 @@ export default function Results() {
                                   value={priceFilterValues}
                                   minDistance={1}
                                   step={1}
-                                  onChange={(e) => {
-                                    setPriceFilterValues(e);
-                                  }}
-                                  onAfterChange={(e) => {
-                                    applyFilters("price", e, flights);
-                                  }}
+                                  onChange={(e) => { setPriceFilterValues(e); }}
+                                  onAfterChange={(e) => { applyFilters("price", e, flights); }}
                                 />
                                 <div className="row mt-3">
                                   <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                    <h6 className="mb-0 d-table">
-                                      {" "}
-                                      {
-                                        aedNumberFormat(
-                                          Math.round(priceFilterValues[0])
-                                        ).split(".")[0]
-                                      }
-                                    </h6>
+                                    <h6 className="mb-0 d-table">{aedNumberFormat(Math.round(priceFilterValues[0])).split(".")[0]}</h6>
                                   </div>
                                   <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
-                                    <h6 className="mb-0 d-table float-end">
-                                      {" "}
-                                      {
-                                        aedNumberFormat(
-                                          Math.round(priceFilterValues[1])
-                                        ).split(".")[0]
-                                      }
-                                    </h6>
+                                    <h6 className="mb-0 d-table float-end">{aedNumberFormat(Math.round(priceFilterValues[1])).split(".")[0]}</h6>
                                   </div>
                                 </div>
                               </div>
                             </div>
 
                             <div className="filter-items py-3 ps-3 pe-3">
-                              <h5 className="sub-title mb-2 dgc">
-                                Depart Time from{" "}
-                                {
-                                  departTBOFlights[0]?.trips[0].listOfFlight[0]
-                                    .airportFromCity
-                                }
-                              </h5>
+                              <h5 className="sub-title mb-2 dgc">Depart Time from {departTBOFlights[0]?.trips[0].listOfFlight[0].airportFromCity}</h5>
                               <div className="row m-0">
-                                <div
-                                  className="col-3 px-1"
-                                  onClick={() =>
-                                    applyFilters(
-                                      "depart-time",
-                                      "Morning",
-                                      departTBOFlights
-                                    )
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      selectedDepartTimes.indexOf("Morning") !=
-                                      -1
-                                        ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                        : "FlightTimes text-center border py-0 px-1 br-5"
-                                    }
-                                  >
+                                <div className="col-3 px-1" onClick={() => applyFilters("depart-time", "Morning", departTBOFlights)}>
+                                  <div className={selectedDepartTimes.indexOf("Morning") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                     <Image
                                       className="mt-2 mb-1 w-auto"
                                       loader={trvLoader}
@@ -1569,25 +1468,8 @@ export default function Results() {
                                     <p className="mb-1 fs-12">05-12</p>
                                   </div>
                                 </div>
-                                <div
-                                  className="col-3 px-1"
-                                  onClick={() =>
-                                    applyFilters(
-                                      "depart-time",
-                                      "Afternoon",
-                                      departTBOFlights
-                                    )
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      selectedDepartTimes.indexOf(
-                                        "Afternoon"
-                                      ) != -1
-                                        ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                        : "FlightTimes text-center border py-0 px-1 br-5"
-                                    }
-                                  >
+                                <div className="col-3 px-1" onClick={() => applyFilters("depart-time", "Afternoon", departTBOFlights)}>
+                                  <div className={selectedDepartTimes.indexOf("Afternoon") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                     <Image
                                       className="mt-2 mb-1 w-auto"
                                       loader={trvLoader}
@@ -1599,24 +1481,8 @@ export default function Results() {
                                     <p className="mb-1 fs-12">12-18</p>
                                   </div>
                                 </div>
-                                <div
-                                  className="col-3 px-1"
-                                  onClick={() =>
-                                    applyFilters(
-                                      "depart-time",
-                                      "Evening",
-                                      departTBOFlights
-                                    )
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      selectedDepartTimes.indexOf("Evening") !=
-                                      -1
-                                        ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                        : "FlightTimes text-center border py-0 px-1 br-5"
-                                    }
-                                  >
+                                <div className="col-3 px-1" onClick={() => applyFilters("depart-time", "Evening", departTBOFlights)}>
+                                  <div className={selectedDepartTimes.indexOf("Evening") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                     <Image
                                       className="mt-2 mb-1 w-auto"
                                       loader={trvLoader}
@@ -1628,23 +1494,8 @@ export default function Results() {
                                     <p className="mb-1 fs-12">18-23</p>
                                   </div>
                                 </div>
-                                <div
-                                  className="col-3 px-1"
-                                  onClick={() =>
-                                    applyFilters(
-                                      "depart-time",
-                                      "Night",
-                                      departTBOFlights
-                                    )
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      selectedDepartTimes.indexOf("Night") != -1
-                                        ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                        : "FlightTimes text-center border py-0 px-1 br-5"
-                                    }
-                                  >
+                                <div className="col-3 px-1" onClick={() => applyFilters("depart-time", "Night", departTBOFlights)}>
+                                  <div className={selectedDepartTimes.indexOf("Night") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                     <Image
                                       className="mt-2 mb-1 w-auto"
                                       loader={trvLoader}
@@ -1710,33 +1561,10 @@ export default function Results() {
 
                             {returnTBOFlights.length > 0 && (
                               <div className="filter-items py-3 ps-3 pe-3">
-                                <h5 className="sub-title mb-2 dgc">
-                                  Return Time from{" "}
-                                  {
-                                    returnTBOFlights[0].trips[0].listOfFlight[0]
-                                      .airportFromCity
-                                  }
-                                </h5>
+                                <h5 className="sub-title mb-2 dgc">Return Time from {returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity}</h5>
                                 <div className="row m-0">
-                                  <div
-                                    className="col-3 px-1"
-                                    onClick={() =>
-                                      applyFilters(
-                                        "return-time",
-                                        "Morning",
-                                        returnTBOFlights
-                                      )
-                                    }
-                                  >
-                                    <div
-                                      className={
-                                        selectedReturnTimes.indexOf(
-                                          "Morning"
-                                        ) != -1
-                                          ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                          : "FlightTimes text-center border py-0 px-1 br-5"
-                                      }
-                                    >
+                                  <div className="col-3 px-1" onClick={() => applyFilters("return-time", "Morning", returnTBOFlights)}>
+                                    <div className={selectedReturnTimes.indexOf("Morning") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                       <Image
                                         className="mt-2 mb-1 w-auto"
                                         loader={trvLoader}
@@ -1748,25 +1576,8 @@ export default function Results() {
                                       <p className="mb-1 fs-12">05-12</p>
                                     </div>
                                   </div>
-                                  <div
-                                    className="col-3 px-1"
-                                    onClick={() =>
-                                      applyFilters(
-                                        "return-time",
-                                        "Afternoon",
-                                        returnTBOFlights
-                                      )
-                                    }
-                                  >
-                                    <div
-                                      className={
-                                        selectedReturnTimes.indexOf(
-                                          "Afternoon"
-                                        ) != -1
-                                          ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                          : "FlightTimes text-center border py-0 px-1 br-5"
-                                      }
-                                    >
+                                  <div className="col-3 px-1" onClick={() => applyFilters("return-time", "Afternoon", returnTBOFlights)}>
+                                    <div className={selectedReturnTimes.indexOf("Afternoon") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                       <Image
                                         className="mt-2 mb-1 w-auto"
                                         loader={trvLoader}
@@ -1778,25 +1589,8 @@ export default function Results() {
                                       <p className="mb-1 fs-12">12-18</p>
                                     </div>
                                   </div>
-                                  <div
-                                    className="col-3 px-1"
-                                    onClick={() =>
-                                      applyFilters(
-                                        "return-time",
-                                        "Evening",
-                                        returnTBOFlights
-                                      )
-                                    }
-                                  >
-                                    <div
-                                      className={
-                                        selectedReturnTimes.indexOf(
-                                          "Evening"
-                                        ) != -1
-                                          ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                          : "FlightTimes text-center border py-0 px-1 br-5"
-                                      }
-                                    >
+                                  <div className="col-3 px-1" onClick={() => applyFilters("return-time", "Evening", returnTBOFlights)}>
+                                    <div className={selectedReturnTimes.indexOf("Evening") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                       <Image
                                         className="mt-2 mb-1 w-auto"
                                         loader={trvLoader}
@@ -1808,24 +1602,8 @@ export default function Results() {
                                       <p className="mb-1 fs-12">18-23</p>
                                     </div>
                                   </div>
-                                  <div
-                                    className="col-3 px-1"
-                                    onClick={() =>
-                                      applyFilters(
-                                        "return-time",
-                                        "Night",
-                                        returnTBOFlights
-                                      )
-                                    }
-                                  >
-                                    <div
-                                      className={
-                                        selectedReturnTimes.indexOf("Night") !=
-                                        -1
-                                          ? "FlightTimes active text-center border py-0 px-1 br-5"
-                                          : "FlightTimes text-center border py-0 px-1 br-5"
-                                      }
-                                    >
+                                  <div className="col-3 px-1" onClick={() => applyFilters("return-time", "Night", returnTBOFlights)}>
+                                    <div className={selectedReturnTimes.indexOf("Night") != -1 ? "FlightTimes active text-center border py-0 px-1 br-5" : "FlightTimes text-center border py-0 px-1 br-5"}>
                                       <Image
                                         className="mt-2 mb-1 w-auto"
                                         loader={trvLoader}
@@ -1845,115 +1623,46 @@ export default function Results() {
                               <div className="form-check">
                                 {sortByOptions.map((option, ix) => {
                                   return (
-                                    <div
-                                      key={ix}
-                                      onClick={() => {
-                                        setDefaultSortOption(
-                                          sortByOptions.find(
-                                            (x) =>
-                                              x.value == parseInt(option.value)
-                                          )
-                                        );
-                                      }}
-                                    >
-                                      <input
-                                        className="form-check-input cursor-pointer"
-                                        type="radio"
-                                        name="group1"
-                                        value={option.value}
-                                        checked={
-                                          option.value ==
-                                          defaultSortOption.value
-                                            ? true
-                                            : false
-                                        }
-                                        readOnly
-                                      />
-                                      <label className="form-check-label cursor-pointer dgc">
-                                        {option.label}
-                                      </label>
+                                    <div key={ix} onClick={() => { setDefaultSortOption(sortByOptions.find((x) => x.value == parseInt(option.value))); }}>
+                                      <input className="form-check-input cursor-pointer" type="radio" name="group1" value={option.value} checked={option.value == defaultSortOption.value ? true : false} readOnly />
+                                      <label className="form-check-label cursor-pointer dgc">{option.label}</label>
                                     </div>
                                   );
                                 })}
                               </div>
                             </div>
-                            {pureValidatingCarriers &&
-                              pureValidatingCarriers.length > 0 && (
-                                <div className="filter-items pt-3 pb-3 ps-3 pe-3">
-                                  <h5 className="sub-title mb-2 dgc">
-                                    Airlines
-                                  </h5>
-                                  <div className="form-check">
-                                    {pureValidatingCarriers.map(
-                                      (carrier, ix) => {
-                                        return (
-                                          <div
-                                            key={ix}
-                                            onClick={() => {
-                                              applyFilters(
-                                                "pure-airline",
-                                                carrier,
-                                                flights
-                                              );
-                                            }}
-                                          >
-                                            <input
-                                              className="form-check-input cursor-pointer"
-                                              type="checkbox"
-                                              checked={
-                                                selectedPureAirlines.length >
-                                                  0 &&
-                                                selectedPureAirlines.find(
-                                                  (x) => x.name == carrier.name
-                                                )
-                                              }
-                                              value={carrier.name}
-                                              readOnly
-                                            />
-                                            <label className="form-check-label cursor-pointer dgc">
-                                              {carrier.name}
-                                            </label>
-                                          </div>
-                                        );
-                                      }
-                                    )}
-                                  </div>
+                            {pureValidatingCarriers && pureValidatingCarriers.length > 0 && (
+                              <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                                <h5 className="sub-title mb-2 dgc">Airlines</h5>
+                                <div className="form-check">
+                                  {pureValidatingCarriers.map((carrier, ix) => {
+                                    return (
+                                      <div key={ix} onClick={() => { applyFilters("pure-airline", carrier, flights); }}>
+                                        <input className="form-check-input cursor-pointer" type="checkbox"
+                                          checked={selectedPureAirlines.length > 0 && selectedPureAirlines.find((x) => x.name == carrier.name)}
+                                          value={carrier.name} readOnly
+                                        />
+                                        <label className="form-check-label cursor-pointer dgc">{carrier.name}</label>
+                                      </div>
+                                    );
+                                  }
+                                  )}
                                 </div>
-                              )}
+                              </div>
+                            )}
                             {validatingCarriers &&
                               validatingCarriers.length > 0 && (
                                 <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0">
-                                  <h5 className="sub-title mb-2 dgc">
-                                    Multiple Airlines
-                                  </h5>
+                                  <h5 className="sub-title mb-2 dgc">Multiple Airlines</h5>
                                   <div className="form-check">
                                     {validatingCarriers.map((carrier, ix) => {
                                       return (
-                                        <div
-                                          key={ix}
-                                          onClick={() => {
-                                            applyFilters(
-                                              "airline",
-                                              carrier,
-                                              flights
-                                            );
-                                          }}
-                                        >
-                                          <input
-                                            className="form-check-input cursor-pointer"
-                                            type="checkbox"
-                                            checked={
-                                              selectedAirlines.length > 0 &&
-                                              selectedAirlines.find(
-                                                (x) => x.name == carrier.name
-                                              )
-                                            }
-                                            value={carrier.name}
-                                            readOnly
+                                        <div key={ix} onClick={() => { applyFilters("airline", carrier, flights); }}>
+                                          <input className="form-check-input cursor-pointer" type="checkbox"
+                                            checked={selectedAirlines.length > 0 && selectedAirlines.find((x) => x.name == carrier.name)}
+                                            value={carrier.name} readOnly
                                           />
-                                          <label className="form-check-label cursor-pointer dgc">
-                                            {carrier.name}
-                                          </label>
+                                          <label className="form-check-label cursor-pointer dgc">{carrier.name}</label>
                                           <Image
                                             className="ms-1 w-auto air-icon"
                                             loader={trvLoader}
@@ -1972,39 +1681,23 @@ export default function Results() {
                           <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0 d-lg-none fixed-bottom">
                             <div className="row">
                               <div className="col-6 col-sm-6 col-md-6">
-                                <button
-                                  className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0"
+                                <button className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0"
                                   onClick={() => {
-                                    setOpenFilters(false);
-                                    document.body.classList.remove(
-                                      "filter-open"
-                                    );
+                                    setOpenFilters(false); document.body.classList.remove("filter-open");
                                     setShowContentLoader(true);
-                                    setTimeout(() => {
-                                      setShowContentLoader(false);
-                                    }, 1000);
-                                  }}
-                                >
-                                  Apply Filters
-                                </button>
+                                    setTimeout(() => { setShowContentLoader(false); }, 1000);
+                                  }}>Apply Filters</button>
                               </div>
                               <div className="col-6 col-sm-6 col-md-6">
-                                <button
-                                  className="clear-filter bg-orange btn-primary w-100 br-5 pt-2 pb-2 border-0"
+                                <button className="clear-filter bg-orange btn-primary w-100 br-5 pt-2 pb-2 border-0"
                                   onClick={() => {
                                     setOpenFilters(false);
-                                    document.body.classList.remove(
-                                      "filter-open"
-                                    );
+                                    document.body.classList.remove("filter-open");
                                     setShowContentLoader(true);
-                                    setTimeout(() => {
-                                      setShowContentLoader(false);
-                                    }, 1000);
+                                    setTimeout(() => { setShowContentLoader(false); }, 1000);
                                     clearFilters();
                                   }}
-                                >
-                                  Clear Filters
-                                </button>
+                                >Clear Filters</button>
                               </div>
                             </div>
                           </div>
@@ -2019,16 +1712,7 @@ export default function Results() {
                   <div className="row mb-2">
                     <div className="col-9 col-sm-9 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                       {flights.length > 0 && (
-                        <p className="fs-14 fw-bold mb-2">
-                          {flights[0].trips[0].listOfFlight[0].airportFromCity}{" "}
-                          to{" "}
-                          {
-                            flights[0].trips[0].listOfFlight[
-                              flights[0].trips[0].listOfFlight.length - 1
-                            ].airportToCity
-                          }{" "}
-                          flights Starting @ Rs. {flights[0].totalPrice}
-                        </p>
+                        <p className="fs-14 fw-bold mb-2">{flights[0].trips[0].listOfFlight[0].airportFromCity} to {flights[0].trips[0].listOfFlight[flights[0].trips[0].listOfFlight.length - 1].airportToCity} flights Starting @ Rs. {flights[0].totalPrice}</p>
                       )}
 
                       {/* {
@@ -2097,24 +1781,12 @@ export default function Results() {
                     }
                   </div> */}
                   <div className="row">
-                    <div className="col-12">
-                      <OffersMatrix></OffersMatrix>
-                    </div>
+                    <div className="col-12"><OffersMatrix></OffersMatrix></div>
                   </div>
                   <div className="row">
                     <div className="col-sm-12">
                       <div className="note-bar br-5 ps-3 pt-3 pe-3 pb-3">
-                        <p className="mb-0">
-                          <strong>Note:</strong> * All the fares displayed are
-                          for{" "}
-                          {currentFilters &&
-                          currentFilters.segments &&
-                          currentFilters.segments.length > 1
-                            ? "Round Trip"
-                            : "One Way"}{" "}
-                          and are in INR, inclusive of base fare, taxes and
-                          service fees.{" "}
-                        </p>
+                        <p className="mb-0"><strong>Note:</strong> * All the fares displayed are for {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 ? "Round Trip" : "One Way"} and are in INR, inclusive of base fare, taxes and service fees.</p>
                       </div>
                     </div>
                   </div>
@@ -2206,7 +1878,7 @@ export default function Results() {
                                 .filter(
                                   (x) =>
                                     x.airlineName.toLowerCase() !=
-                                      x.operatedBy.toLowerCase() &&
+                                    x.operatedBy.toLowerCase() &&
                                     !!x.operatedBy
                                 )
                                 .map((x) => x.operatedBy)
@@ -2215,237 +1887,122 @@ export default function Results() {
                           let showBaggageOptions = isPureAirline(flight);
                           let baggageOptions = null;
                           let isDomestic = isADomesticFlight(flight);
-                          let isBaggageClassMatching =
-                            flight.trips[0].listOfFlight[0].classOfService ==
-                            "M";
+                          let isBaggageClassMatching = flight.trips[0].listOfFlight[0].classOfService == "M";
                           if (showBaggageOptions && isBaggageClassMatching) {
-                            baggageOptions = getDisplayAirline(
-                              flight.trips[0].validatingCarrier.name,
-                              isDomestic
-                            );
+                            baggageOptions = getDisplayAirline(flight.trips[0].validatingCarrier.name, isDomestic);
                           }
                           return (
-                            <div
-                              className="regular-flight-wrp"
-                              key={flightIndex}
-                            >
-                              {currentFilters &&
-                                currentFilters.segments &&
-                                currentFilters.segments.length == 1 && (
-                                  <div className="regular-one-trip listing-com">
-                                    <div className="regular-flight-round-box mt-4 mb-4">
-                                      <div className="row align-items-center">
-                                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
-                                          <div className="row align-items-center">
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                              <div className="row">
-                                                <div className="col-sm-12">
-                                                  <h2 className="digination-sub-title mb-3 dgc">
-                                                    Departure |{" "}
-                                                    {getFormattedDate4(
-                                                      flight.trips[0]
-                                                        .listOfFlight[0]
-                                                        .departeddate
-                                                    )}
-                                                  </h2>
+                            <div className="regular-flight-wrp" key={flightIndex}>
+                              {currentFilters && currentFilters.segments && currentFilters.segments.length == 1 && (
+                                <div className="regular-one-trip listing-com">
+                                  <div className="regular-flight-round-box mt-4 mb-4">
+                                    <div className="row align-items-center">
+                                      <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                        <div className="row align-items-center">
+                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                            <div className="row">
+                                              <div className="col-sm-12">
+                                                <h2 className="digination-sub-title mb-3 dgc">Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
+                                              </div>
+                                            </div>
+                                            <div className="row align-items-center">
+                                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                                <div className="air-flight-logo text-start">
+                                                  <Image
+                                                    className="mb-1 h-auto"
+                                                    loader={airlineLogoLoader}
+                                                    src={"airline-logo/" + flight.trips[0].validatingCarrier.code + ".webp"}
+                                                    alt="airplane-plus-icon"
+                                                    width={35}
+                                                    height={43}
+                                                  />
+                                                  {hasDeptMultipleAirlines && (
+                                                    <Image
+                                                      className="ms-1 w-auto air-icon"
+                                                      loader={trvLoader}
+                                                      src="icon/airplane-plus-icon.png"
+                                                      alt="airplane-plus-icon"
+                                                      width={176}
+                                                      height={20}
+                                                    />
+                                                  )}
+                                                  <span>{flight.trips[0].validatingCarrier.name}</span>
                                                 </div>
                                               </div>
-                                              <div className="row align-items-center">
-                                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
-                                                  <div className="air-flight-logo text-start">
-                                                    <Image
-                                                      className="mb-1 h-auto"
-                                                      loader={airlineLogoLoader}
-                                                      src={
-                                                        "airline-logo/" +
-                                                        flight.trips[0]
-                                                          .validatingCarrier
-                                                          .code +
-                                                        ".webp"
-                                                      }
-                                                      alt="airplane-plus-icon"
-                                                      width={35}
-                                                      height={43}
-                                                    />
-                                                    {hasDeptMultipleAirlines && (
-                                                      <Image
-                                                        className="ms-1 w-auto air-icon"
-                                                        loader={trvLoader}
-                                                        src="icon/airplane-plus-icon.png"
-                                                        alt="airplane-plus-icon"
-                                                        width={176}
-                                                        height={20}
-                                                      />
-                                                    )}
-                                                    <span>
-                                                      {
-                                                        flight.trips[0]
-                                                          .validatingCarrier
-                                                          .name
-                                                      }
-                                                    </span>
+                                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                <div className="row align-items-center">
+                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                   </div>
-                                                </div>
-                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
-                                                  <div className="row align-items-center">
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                      <h4 className="airport-code mb-0 text-start w-100 dgc">
-                                                        {getFormattedTime(
-                                                          flight.trips[0]
-                                                            .listOfFlight[0]
-                                                            .departureTime
-                                                        )}
-                                                      </h4>
-                                                    </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
-                                                      <div className="from-to-from-digination">
-                                                        <h6 className="text-center mb-0">
-                                                          {getDiffFromMinutes(
-                                                            flight.trips[0]
-                                                              .totalTripTime
+                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                    <div className="from-to-from-digination">
+                                                      <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
+                                                      {flight.trips[0].listOfFlight.length <= 3 && (
+                                                        <h5 className="mb-0 text-center">
+                                                          {flight.trips[0].listOfFlight.map((t, ix) => {
+                                                            if (ix >= flight.trips[0].listOfFlight.length - 1)
+                                                              return (
+                                                                <Fragment key={ix} ></Fragment>
+                                                              );
+                                                            return (
+                                                              <>
+                                                                <span key={ix}></span>
+                                                              </>
+                                                            );
+                                                          }
                                                           )}
-                                                        </h6>
-                                                        {flight.trips[0]
-                                                          .listOfFlight
-                                                          .length <= 3 && (
-                                                          <h5 className="mb-0 text-center">
-                                                            {flight.trips[0].listOfFlight.map(
-                                                              (t, ix) => {
-                                                                if (
-                                                                  ix >=
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight
-                                                                    .length -
-                                                                    1
-                                                                )
+                                                        </h5>
+                                                      )}
+                                                      <h6 className="airport-code mb-0 text-center">
+                                                        <span className="flight-plus-air">
+                                                          <span className="tooltip-box cursor-pointer">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</span>
+                                                          <span className="tooltip-hover-top">
+                                                            <ul className="flight-duration-ovelry p-0 m-0 text-start">
+                                                              <li><strong>Flight Duration: </strong>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
+                                                              {flight.trips[0].listOfFlight.map(
+                                                                (tf, ix) => {
+                                                                  if (
+                                                                    !!tf.displayLayOverTime
+                                                                  )
+                                                                    layoverCounter += 1;
                                                                   return (
-                                                                    <Fragment
-                                                                      key={ix}
-                                                                    ></Fragment>
+                                                                    <Fragment key={ix}>
+                                                                      {!!tf.displayLayOverTime && (
+                                                                        <li>
+                                                                          <strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}
+                                                                        </li>
+                                                                      )}
+                                                                    </Fragment>
                                                                   );
-                                                                return (
-                                                                  <>
-                                                                    <span
-                                                                      key={ix}
-                                                                    ></span>
-                                                                  </>
-                                                                );
-                                                              }
-                                                            )}
-                                                          </h5>
-                                                        )}
-                                                        <h6 className="airport-code mb-0 text-center">
-                                                          <span className="flight-plus-air">
-                                                            <span className="tooltip-box cursor-pointer">
-                                                              {flight.trips[0]
-                                                                .listOfFlight
-                                                                .length == 1
-                                                                ? "Non-Stop"
-                                                                : flight
-                                                                    .trips[0]
-                                                                    .listOfFlight
-                                                                    .length -
-                                                                  1 +
-                                                                  (flight
-                                                                    .trips[0]
-                                                                    .listOfFlight
-                                                                    .length == 2
-                                                                    ? " Stop"
-                                                                    : " Stops")}
-                                                            </span>
-                                                            <span className="tooltip-hover-top">
-                                                              <ul className="flight-duration-ovelry p-0 m-0 text-start">
-                                                                <li>
-                                                                  <strong>
-                                                                    Flight
-                                                                    Duration:{" "}
-                                                                  </strong>
-                                                                  {getDiffFromMinutes(
-                                                                    flight
-                                                                      .trips[0]
-                                                                      .totalTripTime
-                                                                  )}
-                                                                </li>
-                                                                {flight.trips[0].listOfFlight.map(
-                                                                  (tf, ix) => {
-                                                                    if (
-                                                                      !!tf.displayLayOverTime
-                                                                    )
-                                                                      layoverCounter += 1;
-                                                                    return (
-                                                                      <Fragment
-                                                                        key={ix}
-                                                                      >
-                                                                        {!!tf.displayLayOverTime && (
-                                                                          <li>
-                                                                            <strong>
-                                                                              Layover{" "}
-                                                                              {
-                                                                                layoverCounter
-                                                                              }
-                                                                              :
-                                                                            </strong>{" "}
-                                                                            {
-                                                                              tf.displayLayOverTime
-                                                                            }
-                                                                            ,{" "}
-                                                                            {
-                                                                              tf.airportToCity
-                                                                            }
-                                                                          </li>
-                                                                        )}
-                                                                      </Fragment>
-                                                                    );
-                                                                  }
-                                                                )}
-                                                              </ul>
-                                                            </span>
-                                                          </span>
-                                                        </h6>
-                                                      </div>
-                                                    </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                      <h4 className="airport-code mb-0 justify-content-end dgc position-relative d-flex">
-                                                        <span className="flight-plus-air position-relative">
-                                                          <span className="tooltip-box cursor-pointer float-end">
-                                                            {getFormattedTime(
-                                                              flight.trips[0]
-                                                                .listOfFlight[
-                                                                flight.trips[0]
-                                                                  .listOfFlight
-                                                                  .length - 1
-                                                              ].arrivalTime
-                                                            )}
+                                                                }
+                                                              )}
+                                                            </ul>
                                                           </span>
                                                         </span>
-                                                        {departDays > 0 && (
-                                                          <span className="flight-plus-air plusone position-relative oneway-plus">
-                                                            <span className="tooltip-box cursor-pointer fs-10 color-red">
-                                                              +{departDays}
-                                                            </span>
-                                                            <span className="tooltip-hover-top">
-                                                              <strong>
-                                                                Flight Arrival -{" "}
-                                                              </strong>{" "}
-                                                              {getFormattedDate(
-                                                                flight.trips[0]
-                                                                  .listOfFlight[
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight
-                                                                    .length - 1
-                                                                ].arrivalAt
-                                                              )}
-                                                            </span>
-                                                          </span>
-                                                        )}
-                                                      </h4>
+                                                      </h6>
                                                     </div>
+                                                  </div>
+                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <h4 className="airport-code mb-0 justify-content-end dgc position-relative d-flex">
+                                                      <span className="flight-plus-air position-relative">
+                                                        <span className="tooltip-box cursor-pointer float-end">
+                                                          {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
+                                                        </span>
+                                                      </span>
+                                                      {departDays > 0 && (
+                                                        <span className="flight-plus-air plusone position-relative oneway-plus">
+                                                          <span className="tooltip-box cursor-pointer fs-10 color-red">+{departDays}</span>
+                                                          <span className="tooltip-hover-top">
+                                                            <strong>Flight Arrival -</strong> {getFormattedDate(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt)}
+                                                          </span>
+                                                        </span>
+                                                      )}
+                                                    </h4>
                                                   </div>
                                                 </div>
                                               </div>
-                                              {/* {
+                                            </div>
+                                            {/* {
                                           displayOperatedBy && displayOperatedBy.length > 0 &&
                                           <div className='row'>
                                             <div className='col-sm-12'>
@@ -2453,223 +2010,113 @@ export default function Results() {
                                             </div>
                                           </div>
                                         } */}
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
-                                          <div className="air-flight-price text-end">
-                                            <h2 className="mb-0 dgc">
-                                              {
-                                                aedNumberFormat(avgPrice).split(
-                                                  "."
-                                                )[0]
-                                              }
-                                            </h2>
-                                            <h6 className="mb-2 mt-2">
-                                              {totalPassangers > 1
-                                                ? "Avg. Price Per Traveler"
-                                                : "Per Adult"}
-                                            </h6>
                                           </div>
                                         </div>
                                       </div>
+                                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                        <div className="air-flight-price text-end">
+                                          <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
+                                          <h6 className="mb-2 mt-2">{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
+                                        </div>
+                                      </div>
+                                    </div>
 
-                                      <div className="air-flight-btn-and-bag mt-1 pt-2">
-                                        <div className="row align-items-center">
-                                          <div className="col-8 col-sm-8 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0">
-                                            <div className="details-icon-btns d-flex">
-                                              <div className="me-3 ">
-                                                <div className="dropdown dropdown-hover">
-                                                  <button
-                                                    className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                    type="button"
-                                                    id="carddetail-info"
-                                                    data-bs-toggle="dropdown"
-                                                    aria-expanded="true"
-                                                    onClick={(e) =>
-                                                      e.stopPropagation()
-                                                    }
-                                                  >
-                                                    <Image
-                                                      className="h-auto"
-                                                      loader={trvLoader}
-                                                      src={
-                                                        flight.isRefundable
-                                                          ? "icon/refundable-icon.svg"
-                                                          : "icon/non-refundable.svg"
-                                                      }
-                                                      alt="refundable icon"
-                                                      width={20}
-                                                      height={43}
-                                                    />
-                                                    <p
-                                                      className={
-                                                        flight.isRefundable
-                                                          ? "mb-0 fs-12 fw-bold color-green ms-2"
-                                                          : "mb-0 fs-12 fw-bold color-red ms-2"
-                                                      }
-                                                    >
-                                                      {flight.isRefundable
-                                                        ? "R"
-                                                        : "N"}
-                                                    </p>
-                                                  </button>
-                                                  <div
-                                                    className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                    aria-labelledby="carddetail-info"
-                                                    data-popper-placement="top-start"
-                                                  >
-                                                    <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                      {flight.isRefundable
-                                                        ? "Partially Refundable"
-                                                        : "Non-Refundable"}
-                                                    </p>
-                                                  </div>
+                                    <div className="air-flight-btn-and-bag mt-1 pt-2">
+                                      <div className="row align-items-center">
+                                        <div className="col-8 col-sm-8 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0">
+                                          <div className="details-icon-btns d-flex">
+                                            <div className="me-3 ">
+                                              <div className="dropdown dropdown-hover">
+                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                  type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                  <Image
+                                                    className="h-auto"
+                                                    loader={trvLoader}
+                                                    src={flight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
+                                                    alt="refundable icon"
+                                                    width={20}
+                                                    height={43}
+                                                  />
+                                                  <p className={flight.isRefundable ? "mb-0 fs-12 fw-bold color-green ms-2" : "mb-0 fs-12 fw-bold color-red ms-2"}> {flight.isRefundable ? "R" : "N"}</p>
+                                                </button>
+                                                <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                  <p className="mb-0 bg-black fs-12 color-white br-5 p-2">{flight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                                 </div>
                                               </div>
-                                              <div className="me-3">
-                                                <div className="dropdown dropdown-hover">
-                                                  <button
-                                                    className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                    type="button"
-                                                    id="carddetail-info"
-                                                    data-bs-toggle="dropdown"
-                                                    aria-expanded="true"
-                                                    onClick={(e) =>
-                                                      e.stopPropagation()
-                                                    }
-                                                  >
-                                                    <Image
-                                                      className="h-auto"
-                                                      loader={trvLoader}
-                                                      src="icon/seat-red-icon.svg"
-                                                      alt="seat icon"
-                                                      width={20}
-                                                      height={43}
-                                                    />
-                                                    <p className="mb-0 fs-12 fw-bold color-red ms-2">
-                                                      {
-                                                        flight.trips[0]
-                                                          .listOfFlight[0].seats
-                                                      }{" "}
-                                                      Left
-                                                    </p>
-                                                  </button>
-                                                  <div
-                                                    className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                    aria-labelledby="carddetail-info"
-                                                    data-popper-placement="top-start"
-                                                  >
-                                                    <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                      Hurry! Only{" "}
-                                                      {
-                                                        flight.trips[0]
-                                                          .listOfFlight[0].seats
-                                                      }{" "}
-                                                      Seat(s) Left
-                                                    </p>
-                                                  </div>
+                                            </div>
+                                            <div className="me-3">
+                                              <div className="dropdown dropdown-hover">
+                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                  type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                  <Image
+                                                    className="h-auto"
+                                                    loader={trvLoader}
+                                                    src="icon/seat-red-icon.svg"
+                                                    alt="seat icon"
+                                                    width={20}
+                                                    height={43}
+                                                  />
+                                                  <p className="mb-0 fs-12 fw-bold color-red ms-2">{flight.trips[0].listOfFlight[0].seats} Left</p>
+                                                </button>
+                                                <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                  <p className="mb-0 bg-black fs-12 color-white br-5 p-2">Hurry! Only {flight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                                 </div>
                                               </div>
-                                              <div className="me-0">
-                                                <div className="dropdown dropdown-hover">
-                                                  <button
-                                                    className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                    type="button"
-                                                    id="carddetail-info"
-                                                    data-bs-toggle="dropdown"
-                                                    aria-expanded="true"
-                                                    onClick={(e) =>
-                                                      e.stopPropagation()
-                                                    }
-                                                  >
-                                                    <Image
-                                                      className="h-auto"
-                                                      loader={sfLoader}
-                                                      src={timeIcon}
-                                                      height={20}
-                                                      width={20}
-                                                    />
-                                                    <p className="mb-0 fs-12 fw-bold color-black ms-2">
-                                                      {timeOfDay}
-                                                    </p>
-                                                  </button>
-                                                  <div
-                                                    className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                    aria-labelledby="carddetail-info"
-                                                    data-popper-placement="top-start"
-                                                  >
-                                                    <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                      {timeOfDay} Flight
-                                                    </p>
-                                                  </div>
-                                                </div>
+                                            </div>
+                                            <div className="me-0">
+                                              <div className="dropdown dropdown-hover">
+                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                  type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                  <Image
+                                                    className="h-auto"
+                                                    loader={sfLoader}
+                                                    src={timeIcon}
+                                                    height={20}
+                                                    width={20}
+                                                  />
+                                                  <p className="mb-0 fs-12 fw-bold color-black ms-2">{timeOfDay}</p>
+                                                </button>
+                                                <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start"><p className="mb-0 bg-black fs-12 color-white br-5 p-2">{timeOfDay} Flight</p></div>
                                               </div>
                                             </div>
                                           </div>
-                                          <div className="col-4 col-sm-4 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                                            <div className="air-flight-price text-end">
-                                              <button
-                                                className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center"
-                                                onClick={(e) => {
-                                                  e.stopPropagation();
-                                                  handleBookFlight(
-                                                    flightIndex,
-                                                    flight,
-                                                    avgPrice,
-                                                    totalPax
-                                                  );
-                                                }}
-                                              >
-                                                {showSpinnerIndex ===
-                                                flightIndex ? (
-                                                  <span
-                                                    className="spinner-border text-white"
-                                                    role="status"
-                                                  ></span>
-                                                ) : (
-                                                  <span>Book</span>
-                                                )}
-                                              </button>
-                                            </div>
+                                        </div>
+                                        <div className="col-4 col-sm-4 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                          <div className="air-flight-price text-end">
+                                            <button className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center" onClick={(e) => { e.stopPropagation(); handleBookFlight(flightIndex, flight, avgPrice, totalPax); }}>
+                                              {showSpinnerIndex === flightIndex ? (<span className="spinner-border text-white" role="status"></span>) : (<span>Book</span>)}
+                                            </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                )}
+                                </div>
+                              )}
                             </div>
                           );
                         })}
-                    {currentFilters.segments.length == 1 &&
-                      filteredFlights.length == 0 && (
-                        <div className="noResultFound">
-                          <div className="d-flex align-items-center bg-white p-3 br-10 mt-3">
-                            <span>
-                              <Image
-                                className="w-auto h-auto"
-                                loader={trvLoader}
-                                src="icon/timer-icon.svg"
-                                alt="timer icon"
-                                width={100}
-                                height={43}
-                              />
-                            </span>
-                            <div className="ps-3">
-                              <h6 className="fw-bold mb-0">No Result Found!</h6>
-                              <p className="mb-0 fs-14">
-                                Please try a different filtering combination!
-                              </p>
-                              <button
-                                className="transparent-btn clear-filter-btn"
-                                onClick={() => clearFilters()}
-                              >
-                                Reset Filters
-                              </button>
-                            </div>
+                    {currentFilters.segments.length == 1 && filteredFlights.length == 0 && (
+                      <div className="noResultFound">
+                        <div className="d-flex align-items-center bg-white p-3 br-10 mt-3">
+                          <span>
+                            <Image
+                              className="w-auto h-auto"
+                              loader={trvLoader}
+                              src="icon/timer-icon.svg"
+                              alt="timer icon"
+                              width={100}
+                              height={43}
+                            />
+                          </span>
+                          <div className="ps-3">
+                            <h6 className="fw-bold mb-0">No Result Found!</h6>
+                            <p className="mb-0 fs-14">Please try a different filtering combination!</p>
+                            <button className="transparent-btn clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
                           </div>
                         </div>
-                      )}
+                      </div>
+                    )}
 
                     {currentFilters &&
                       currentFilters.segments &&
@@ -2731,7 +2178,7 @@ export default function Results() {
                                                 .filter(
                                                   (x) =>
                                                     x.airlineName.toLowerCase() !=
-                                                      x.operatedBy.toLowerCase() &&
+                                                    x.operatedBy.toLowerCase() &&
                                                     !!x.operatedBy
                                                 )
                                                 .map((x) => x.operatedBy)
@@ -2743,53 +2190,27 @@ export default function Results() {
                                           );
                                           let timeIcon = "";
                                           if (timeOfDay == "Morning")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/morning-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/morning-icon.svg";
                                           else if (timeOfDay == "Afternoon")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/afternoon-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/afternoon-icon.svg";
                                           else if (timeOfDay == "Evening")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/evening-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/evening-icon.svg";
                                           else
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/night-moon-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/night-moon-icon.svg";
 
                                           return (
-                                            <div
-                                              className={
-                                                flight.resultIndex ==
-                                                  selectedDepartTBOFlight.resultIndex &&
-                                                flight.traceId ==
-                                                  selectedDepartTBOFlight.traceId
-                                                  ? "regular-flight-round-box mobile mt-4 mb-4 active-selected"
-                                                  : "regular-flight-round-box mt-4 mb-4"
-                                              }
+                                            <div className={flight.resultIndex == selectedDepartTBOFlight.resultIndex && flight.traceId == selectedDepartTBOFlight.traceId ? "regular-flight-round-box mobile mt-4 mb-4 active-selected" : "regular-flight-round-box mt-4 mb-4"}
                                               key={flightIndex}
                                               onClick={() => {
-                                                let currentFlight =
-                                                  cloneData(flight);
-                                                currentFlight.departDays =
-                                                  departDays;
-                                                currentFlight.totalPassengers =
-                                                  totalPax;
-                                                currentFlight.displayCabin =
-                                                  getDisplayCabin(
-                                                    parseInt(
-                                                      currentFilters.cabin
-                                                    )
-                                                  );
-                                                currentFlight.avgPrice =
-                                                  avgPrice;
-                                                currentFlight.timeOfDay =
-                                                  timeOfDay;
-                                                currentFlight.timeIcon =
-                                                  timeIcon;
-                                                setSelectedDepartTBOFlight(
-                                                  currentFlight
-                                                );
-                                              }}
-                                            >
+                                                let currentFlight = cloneData(flight);
+                                                currentFlight.departDays = departDays;
+                                                currentFlight.totalPassengers = totalPax;
+                                                currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
+                                                currentFlight.avgPrice = avgPrice;
+                                                currentFlight.timeOfDay = timeOfDay;
+                                                currentFlight.timeIcon = timeIcon;
+                                                setSelectedDepartTBOFlight(currentFlight);
+                                              }}>
                                               <div className="row align-items-center">
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                   <div className="air-flight-logo text-start">
@@ -2800,66 +2221,33 @@ export default function Results() {
                                                       height={20}
                                                       width={20}
                                                     />
-                                                    <span>
-                                                      {
-                                                        flight.trips[0]
-                                                          .validatingCarrier
-                                                          .name
-                                                      }
-                                                    </span>
+                                                    <span>{flight.trips[0].validatingCarrier.name}</span>
                                                   </div>
                                                 </div>
                                                 <div className="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
                                                   <div className="air-flight-price text-end">
-                                                    <h2 className="mb-0 dgc">
-                                                      {
-                                                        aedNumberFormat(
-                                                          avgPrice
-                                                        ).split(".")[0]
-                                                      }
-                                                    </h2>
-                                                    <h6 className="mb-0 mt-1">
-                                                      per Traveler
-                                                    </h6>
+                                                    <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
+                                                    <h6 className="mb-0 mt-1">per Traveler</h6>
                                                   </div>
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                  <h4 className="airport-code mb-0 text-start w-100 dgc">
-                                                    {getFormattedTime(
-                                                      flight.trips[0]
-                                                        .listOfFlight[0]
-                                                        .departureTime
-                                                    )}
-                                                  </h4>
+                                                  <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                 </div>
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
                                                   <div className="from-to-from-digination">
-                                                    {flight.trips[0]
-                                                      .listOfFlight.length <=
-                                                      3 && (
+                                                    {flight.trips[0].listOfFlight.length <= 3 && (
                                                       <h5 className="mb-0 text-center">
-                                                        {flight.trips[0].listOfFlight.map(
-                                                          (t, ix) => {
-                                                            if (
-                                                              ix >=
-                                                              flight.trips[0]
-                                                                .listOfFlight
-                                                                .length -
-                                                                1
-                                                            )
-                                                              return (
-                                                                <Fragment
-                                                                  key={ix}
-                                                                ></Fragment>
-                                                              );
+                                                        {flight.trips[0].listOfFlight.map((t, ix) => {
+                                                          if (ix >= flight.trips[0].listOfFlight.length - 1)
                                                             return (
-                                                              <span
-                                                                key={ix}
-                                                              ></span>
+                                                              <Fragment key={ix}></Fragment>
                                                             );
-                                                          }
+                                                          return (
+                                                            <span key={ix}></span>
+                                                          );
+                                                        }
                                                         )}
                                                       </h5>
                                                     )}
@@ -2867,19 +2255,10 @@ export default function Results() {
                                                 </div>
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                   <h4 className="airport-code mb-0 text-end w-100 dgc position-relative">
-                                                    {getFormattedTime(
-                                                      flight.trips[0]
-                                                        .listOfFlight[
-                                                        flight.trips[0]
-                                                          .listOfFlight.length -
-                                                          1
-                                                      ].arrivalTime
-                                                    )}
+                                                    {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                     {departDays > 0 && (
                                                       <span className="flight-plus-air position-absolute end-0 pt-md-3 pt-lg-0">
-                                                        <span className="tooltip-box cursor-pointer color-red fs-10 plusone">
-                                                          +{departDays}
-                                                        </span>
+                                                        <span className="tooltip-box cursor-pointer color-red fs-10 plusone">+{departDays}</span>
                                                       </span>
                                                     )}
                                                   </h4>
@@ -2888,26 +2267,7 @@ export default function Results() {
                                               <div className="row">
                                                 <div className="col-sm-12">
                                                   <div className="from-to-from-digination">
-                                                    <h6 className="text-start mb-0 mt-2">
-                                                      {getDiffFromMinutes(
-                                                        flight.trips[0]
-                                                          .totalTripTime
-                                                      )}
-                                                      ,{" "}
-                                                      {flight.trips[0]
-                                                        .listOfFlight.length ==
-                                                      1
-                                                        ? "Non-Stop"
-                                                        : flight.trips[0]
-                                                            .listOfFlight
-                                                            .length -
-                                                          1 +
-                                                          (flight.trips[0]
-                                                            .listOfFlight
-                                                            .length == 2
-                                                            ? " Stop"
-                                                            : " Stops")}
-                                                    </h6>
+                                                    <h6 className="text-start mb-0 mt-2">{getDiffFromMinutes(flight.trips[0].totalTripTime)}, {flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                                   </div>
                                                 </div>
                                               </div>
@@ -2929,54 +2289,26 @@ export default function Results() {
                                                     <div className="details-icon-btns d-flex">
                                                       <div className="me-3 ">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={trvLoader}
-                                                              src={
-                                                                flight.isRefundable
-                                                                  ? "icon/refundable-icon.svg"
-                                                                  : "icon/non-refundable.svg"
-                                                              }
+                                                              src={flight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
                                                               alt="payment sucess icon"
                                                               width={20}
                                                               height={43}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              {flight.isRefundable
-                                                                ? "Partially Refundable"
-                                                                : "Non-Refundable"}
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{flight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                                           </div>
                                                         </div>
                                                       </div>
                                                       <div className="me-3">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={trvLoader}
@@ -2986,35 +2318,15 @@ export default function Results() {
                                                               height={43}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              Hurry! Only{" "}
-                                                              {
-                                                                flight.trips[0]
-                                                                  .listOfFlight[0]
-                                                                  .seats
-                                                              }{" "}
-                                                              Seat(s) Left
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">Hurry! Only {flight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                                           </div>
                                                         </div>
                                                       </div>
                                                       <div className="me-0">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={sfLoader}
@@ -3023,14 +2335,8 @@ export default function Results() {
                                                               width={20}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              {timeOfDay} Flight
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{timeOfDay} Flight</p>
                                                           </div>
                                                         </div>
                                                       </div>
@@ -3074,27 +2380,14 @@ export default function Results() {
                                       <div className="return listing-banner p-3 br-10">
                                         <div className="row align-items-center">
                                           <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0">
-                                            <h6 className="color-white mb-0">
-                                              Return |{" "}
-                                              {getFormattedDate4(
-                                                currentFilters.segments[1]
-                                                  .departureDate
-                                              )}
-                                            </h6>
+                                            <h6 className="color-white mb-0">Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
                                           </div>
                                         </div>
                                       </div>
                                       {rtnFilteredFlights.map(
                                         (flight, flightIndex) => {
-                                          let deptDate = new Date(
-                                            flight.trips[0].listOfFlight[0].departeddate
-                                          );
-                                          let arrDate = new Date(
-                                            flight.trips[0].listOfFlight[
-                                              flight.trips[0].listOfFlight
-                                                .length - 1
-                                            ].arrivalAt
-                                          );
+                                          let deptDate = new Date(flight.trips[0].listOfFlight[0].departeddate);
+                                          let arrDate = new Date(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt);
                                           let difference =
                                             arrDate.getTime() -
                                             deptDate.getTime();
@@ -3117,69 +2410,31 @@ export default function Results() {
                                           );
                                           var displayOperatedBy = [
                                             ...new Set(
-                                              flight.trips[0].listOfFlight
-                                                .filter(
-                                                  (x) =>
-                                                    x.airlineName.toLowerCase() !=
-                                                      x.operatedBy.toLowerCase() &&
-                                                    !!x.operatedBy
-                                                )
-                                                .map((x) => x.operatedBy)
-                                            ),
-                                          ];
-                                          let timeOfDay = getTimeOfDay(
-                                            flight.trips[0].listOfFlight[0]
-                                              .departureTime
-                                          );
+                                              flight.trips[0].listOfFlight.filter((x) => x.airlineName.toLowerCase() != x.operatedBy.toLowerCase() && !!x.operatedBy).map((x) => x.operatedBy)),];
+                                          let timeOfDay = getTimeOfDay(flight.trips[0].listOfFlight[0].departureTime);
                                           let timeIcon = "";
                                           if (timeOfDay == "Morning")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/morning-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/morning-icon.svg";
                                           else if (timeOfDay == "Afternoon")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/afternoon-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/afternoon-icon.svg";
                                           else if (timeOfDay == "Evening")
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/evening-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/evening-icon.svg";
                                           else
-                                            timeIcon =
-                                              "https://assets.neofares.com/all-icon/night-moon-icon.svg";
+                                            timeIcon = "https://assets.neofares.com/all-icon/night-moon-icon.svg";
 
                                           return (
-                                            <div
-                                              className={
-                                                flight.resultIndex ==
-                                                  selectedReturnTBOFlight.resultIndex &&
-                                                flight.traceId ==
-                                                  selectedReturnTBOFlight.traceId
-                                                  ? "regular-flight-round-box mobile mt-4 mb-4 active-selected"
-                                                  : "regular-flight-round-box mt-4 mb-4"
-                                              }
+                                            <div className={flight.resultIndex == selectedReturnTBOFlight.resultIndex && flight.traceId == selectedReturnTBOFlight.traceId ? "regular-flight-round-box mobile mt-4 mb-4 active-selected" : "regular-flight-round-box mt-4 mb-4"}
                                               key={flightIndex}
                                               onClick={() => {
-                                                let currentFlight =
-                                                  cloneData(flight);
-                                                currentFlight.departDays =
-                                                  departDays;
-                                                currentFlight.totalPassengers =
-                                                  totalPax;
-                                                currentFlight.displayCabin =
-                                                  getDisplayCabin(
-                                                    parseInt(
-                                                      currentFilters.cabin
-                                                    )
-                                                  );
-                                                currentFlight.avgPrice =
-                                                  avgPrice;
-                                                currentFlight.timeOfDay =
-                                                  timeOfDay;
-                                                currentFlight.timeIcon =
-                                                  timeIcon;
-                                                setSelectedReturnTBOFlight(
-                                                  currentFlight
-                                                );
-                                              }}
-                                            >
+                                                let currentFlight = cloneData(flight);
+                                                currentFlight.departDays = departDays;
+                                                currentFlight.totalPassengers = totalPax;
+                                                currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
+                                                currentFlight.avgPrice = avgPrice;
+                                                currentFlight.timeOfDay = timeOfDay;
+                                                currentFlight.timeIcon = timeIcon;
+                                                setSelectedReturnTBOFlight(currentFlight);
+                                              }}>
                                               <div className="row align-items-center">
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                   <div className="air-flight-logo text-start">
@@ -3190,66 +2445,33 @@ export default function Results() {
                                                       height={20}
                                                       width={20}
                                                     />
-                                                    <span>
-                                                      {
-                                                        flight.trips[0]
-                                                          .validatingCarrier
-                                                          .name
-                                                      }
-                                                    </span>
+                                                    <span>{flight.trips[0].validatingCarrier.name}</span>
                                                   </div>
                                                 </div>
                                                 <div className="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
                                                   <div className="air-flight-price text-end">
-                                                    <h2 className="mb-0 dgc">
-                                                      {
-                                                        aedNumberFormat(
-                                                          avgPrice
-                                                        ).split(".")[0]
-                                                      }
-                                                    </h2>
-                                                    <h6 className="mb-0 mt-1">
-                                                      per Traveler
-                                                    </h6>
+                                                    <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
+                                                    <h6 className="mb-0 mt-1">per Traveler</h6>
                                                   </div>
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                  <h4 className="airport-code mb-0 text-start w-100 dgc">
-                                                    {getFormattedTime(
-                                                      flight.trips[0]
-                                                        .listOfFlight[0]
-                                                        .departureTime
-                                                    )}
-                                                  </h4>
+                                                  <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                 </div>
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
                                                   <div className="from-to-from-digination">
-                                                    {flight.trips[0]
-                                                      .listOfFlight.length <=
-                                                      3 && (
+                                                    {flight.trips[0].listOfFlight.length <= 3 && (
                                                       <h5 className="mb-0 text-center">
-                                                        {flight.trips[0].listOfFlight.map(
-                                                          (t, ix) => {
-                                                            if (
-                                                              ix >=
-                                                              flight.trips[0]
-                                                                .listOfFlight
-                                                                .length -
-                                                                1
-                                                            )
-                                                              return (
-                                                                <Fragment
-                                                                  key={ix}
-                                                                ></Fragment>
-                                                              );
+                                                        {flight.trips[0].listOfFlight.map((t, ix) => {
+                                                          if (ix >= flight.trips[0].listOfFlight.length - 1)
                                                             return (
-                                                              <span
-                                                                key={ix}
-                                                              ></span>
+                                                              <Fragment key={ix}></Fragment>
                                                             );
-                                                          }
+                                                          return (
+                                                            <span key={ix}></span>
+                                                          );
+                                                        }
                                                         )}
                                                       </h5>
                                                     )}
@@ -3257,19 +2479,10 @@ export default function Results() {
                                                 </div>
                                                 <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                   <h4 className="airport-code mb-0 text-end w-100 dgc position-relative">
-                                                    {getFormattedTime(
-                                                      flight.trips[0]
-                                                        .listOfFlight[
-                                                        flight.trips[0]
-                                                          .listOfFlight.length -
-                                                          1
-                                                      ].arrivalTime
-                                                    )}
+                                                    {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                     {departDays > 0 && (
                                                       <span className="flight-plus-air position-absolute end-0 pt-md-3 pt-lg-0">
-                                                        <span className="tooltip-box cursor-pointer color-red fs-10 plusone">
-                                                          +{departDays}
-                                                        </span>
+                                                        <span className="tooltip-box cursor-pointer color-red fs-10 plusone">+{departDays}</span>
                                                       </span>
                                                     )}
                                                   </h4>
@@ -3278,26 +2491,7 @@ export default function Results() {
                                               <div className="row">
                                                 <div className="col-sm-12">
                                                   <div className="from-to-from-digination">
-                                                    <h6 className="text-start mb-0 mt-2">
-                                                      {getDiffFromMinutes(
-                                                        flight.trips[0]
-                                                          .totalTripTime
-                                                      )}
-                                                      ,{" "}
-                                                      {flight.trips[0]
-                                                        .listOfFlight.length ==
-                                                      1
-                                                        ? "Non-Stop"
-                                                        : flight.trips[0]
-                                                            .listOfFlight
-                                                            .length -
-                                                          1 +
-                                                          (flight.trips[0]
-                                                            .listOfFlight
-                                                            .length == 2
-                                                            ? " Stop"
-                                                            : " Stops")}
-                                                    </h6>
+                                                    <h6 className="text-start mb-0 mt-2">{getDiffFromMinutes(flight.trips[0].totalTripTime)}, {flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                                   </div>
                                                 </div>
                                               </div>
@@ -3319,54 +2513,26 @@ export default function Results() {
                                                     <div className="details-icon-btns d-flex">
                                                       <div className="me-3 ">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={trvLoader}
-                                                              src={
-                                                                flight.isRefundable
-                                                                  ? "icon/refundable-icon.svg"
-                                                                  : "icon/non-refundable.svg"
-                                                              }
+                                                              src={flight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
                                                               alt="payment sucess icon"
                                                               width={20}
                                                               height={43}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              {flight.isRefundable
-                                                                ? "Partially Refundable"
-                                                                : "Non-Refundable"}
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{flight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                                           </div>
                                                         </div>
                                                       </div>
                                                       <div className="me-3">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={trvLoader}
@@ -3376,35 +2542,15 @@ export default function Results() {
                                                               height={43}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              Hurry! Only{" "}
-                                                              {
-                                                                flight.trips[0]
-                                                                  .listOfFlight[0]
-                                                                  .seats
-                                                              }{" "}
-                                                              Seat(s) Left
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">Hurry! Only {flight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                                           </div>
                                                         </div>
                                                       </div>
                                                       <div className="me-0">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button
-                                                            className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                            type="button"
-                                                            id="carddetail-info"
-                                                            data-bs-toggle="dropdown"
-                                                            aria-expanded="true"
-                                                            onClick={(e) =>
-                                                              e.stopPropagation()
-                                                            }
-                                                          >
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
                                                               loader={sfLoader}
@@ -3413,14 +2559,8 @@ export default function Results() {
                                                               width={20}
                                                             />
                                                           </button>
-                                                          <div
-                                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                            aria-labelledby="carddetail-info"
-                                                            data-popper-placement="top-start"
-                                                          >
-                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                                              {timeOfDay} Flight
-                                                            </p>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{timeOfDay} Flight</p>
                                                           </div>
                                                         </div>
                                                       </div>
@@ -3460,26 +2600,8 @@ export default function Results() {
                                       <div className="depart listing-banner p-2 rounded-2">
                                         <div className="row align-items-center">
                                           <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0">
-                                            <h6 className="color-white">
-                                              Depart |{" "}
-                                              {getFormattedDate4(
-                                                currentFilters.segments[0]
-                                                  .departureDate
-                                              )}
-                                            </h6>
-                                            <h5 className="color-white mb-0">
-                                              {departTBOFlights.length > 0 &&
-                                                departTBOFlights[0].trips[0]
-                                                  .listOfFlight[0]
-                                                  .airportFromCity}{" "}
-                                              -{" "}
-                                              {departTBOFlights.length > 0 &&
-                                                departTBOFlights[0].trips[0]
-                                                  .listOfFlight[
-                                                  departTBOFlights[0].trips[0]
-                                                    .listOfFlight.length - 1
-                                                ].airportToCity}
-                                            </h5>
+                                            <h6 className="color-white">Depart | {getFormattedDate4(currentFilters.segments[0].departureDate)}</h6>
+                                            <h5 className="color-white mb-0">{departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[departTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h5>
                                           </div>
                                           <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                                             <Image
@@ -3499,36 +2621,18 @@ export default function Results() {
                                       {filteredFlights.length > 0 ? (
                                         filteredFlights.map(
                                           (flight, flightIndex) => {
-                                            let deptDate = new Date(
-                                              flight.trips[0].listOfFlight[0].departeddate
-                                            );
-                                            let arrDate = new Date(
-                                              flight.trips[0].listOfFlight[
-                                                flight.trips[0].listOfFlight
-                                                  .length - 1
-                                              ].arrivalAt
-                                            );
-                                            let difference =
-                                              arrDate.getTime() -
-                                              deptDate.getTime();
-                                            let departDays = Math.ceil(
-                                              difference / (1000 * 3600 * 24)
-                                            );
-                                            let flightPrice = Math.round(
-                                              flight.totalPrice
-                                            );
+                                            let deptDate = new Date(flight.trips[0].listOfFlight[0].departeddate);
+                                            let arrDate = new Date(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt);
+                                            let difference = arrDate.getTime() - deptDate.getTime();
+                                            let departDays = Math.ceil(difference / (1000 * 3600 * 24));
+                                            let flightPrice = Math.round(flight.totalPrice);
                                             let layoverCounter = 0;
                                             let totalPassangers = 0;
                                             let totalPax = 0;
-                                            flight.fareDetails.forEach(
-                                              (fare) => {
-                                                totalPax += fare.noofPax;
-                                                if (fare.totalFareAmount > 0) {
-                                                  totalPassangers +=
-                                                    fare.noofPax;
-                                                }
-                                              }
-                                            );
+                                            flight.fareDetails.forEach((fare) => {
+                                              totalPax += fare.noofPax;
+                                              if (fare.totalFareAmount > 0) { totalPassangers += fare.noofPax; }
+                                            });
                                             let avgPrice = Math.round(
                                               flightPrice / totalPassangers
                                             );
@@ -3538,68 +2642,38 @@ export default function Results() {
                                                   .filter(
                                                     (x) =>
                                                       x.airlineName.toLowerCase() !=
-                                                        x.operatedBy.toLowerCase() &&
+                                                      x.operatedBy.toLowerCase() &&
                                                       !!x.operatedBy
                                                   )
                                                   .map((x) => x.operatedBy)
                                               ),
                                             ];
-                                            let timeOfDay = getTimeOfDay(
-                                              flight.trips[0].listOfFlight[0]
-                                                .departureTime
-                                            );
+                                            let timeOfDay = getTimeOfDay(flight.trips[0].listOfFlight[0].departureTime);
                                             let timeIcon = "";
                                             if (timeOfDay == "Morning")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/morning-icon.svg";
+                                              timeIcon = "https://assets.neofares.com/all-icon/morning-icon.svg";
                                             else if (timeOfDay == "Afternoon")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/afternoon-icon.svg";
+                                              timeIcon = "https://assets.neofares.com/all-icon/afternoon-icon.svg";
                                             else if (timeOfDay == "Evening")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/evening-icon.svg";
+                                              timeIcon = "https://assets.neofares.com/all-icon/evening-icon.svg";
                                             else
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/night-moon-icon.svg";
+                                              timeIcon = "https://assets.neofares.com/all-icon/night-moon-icon.svg";
 
                                             return (
-                                              <div
-                                                className={
-                                                  flight.resultIndex ==
-                                                    selectedDepartTBOFlight.resultIndex &&
-                                                  flight.traceId ==
-                                                    selectedDepartTBOFlight.traceId
-                                                    ? "regular-flight-round-box mt-4 mb-4 active-selected"
-                                                    : "regular-flight-round-box mt-4 mb-4"
-                                                }
+                                              <div className={flight.resultIndex == selectedDepartTBOFlight.resultIndex && flight.traceId == selectedDepartTBOFlight.traceId ? "regular-flight-round-box mt-4 mb-4 active-selected" : "regular-flight-round-box mt-4 mb-4"}
                                                 key={flightIndex}
                                                 onClick={() => {
-                                                  let currentFlight =
-                                                    cloneData(flight);
-                                                  currentFlight.departDays =
-                                                    departDays;
-                                                  currentFlight.totalPassengers =
-                                                    totalPax;
-                                                  currentFlight.displayCabin =
-                                                    getDisplayCabin(
-                                                      parseInt(
-                                                        currentFilters.cabin
-                                                      )
-                                                    );
-                                                  currentFlight.avgPrice =
-                                                    avgPrice;
-                                                  currentFlight.timeOfDay =
-                                                    timeOfDay;
-                                                  currentFlight.timeIcon =
-                                                    timeIcon;
-                                                  setSelectedDepartTBOFlight(
-                                                    currentFlight
-                                                  );
+                                                  let currentFlight = cloneData(flight);
+                                                  currentFlight.departDays = departDays;
+                                                  currentFlight.totalPassengers = totalPax;
+                                                  currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
+                                                  currentFlight.avgPrice = avgPrice;
+                                                  currentFlight.timeOfDay = timeOfDay;
+                                                  currentFlight.timeIcon = timeIcon;
+                                                  setSelectedDepartTBOFlight(currentFlight);
                                                 }}
                                               >
-                                                <div className="color-white gds-code">
-                                                  {flight.gdsHiddenId}
-                                                </div>
+                                                <div className="color-white gds-code">{flight.gdsHiddenId}</div>
 
                                                 <div className="row align-items-center">
                                                   <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
@@ -3610,23 +2684,13 @@ export default function Results() {
                                                             <div className="air-flight-logo text-start">
                                                               <Image
                                                                 className="h-auto"
-                                                                loader={
-                                                                  airlineLogoLoader
-                                                                }
+                                                                loader={airlineLogoLoader}
                                                                 src={`airline-logo/${flight.trips[0].validatingCarrier.code}.webp`}
                                                                 alt="payment sucess icon"
                                                                 width={20}
                                                                 height={43}
                                                               />
-
-                                                              <span>
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .validatingCarrier
-                                                                    .name
-                                                                }
-                                                              </span>
+                                                              <span>{flight.trips[0].validatingCarrier.name}</span>
                                                             </div>
                                                           </div>
                                                           <div className="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0">
@@ -3634,145 +2698,44 @@ export default function Results() {
                                                               <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                                 <h4 className="airport-code mb-0 dgc position-relative">
                                                                   <span className="flight-plus-air">
-                                                                    <span className="tooltip-box cursor-pointer">
-                                                                      {getFormattedTime(
-                                                                        flight
-                                                                          .trips[0]
-                                                                          .listOfFlight[0]
-                                                                          .departureTime
-                                                                      )}
-                                                                    </span>
+                                                                    <span className="tooltip-box cursor-pointer">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                                                   </span>
                                                                 </h4>
                                                               </div>
                                                               <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
                                                                 <div className="from-to-from-digination ">
                                                                   <div className="dropdown dropdown-hover">
-                                                                    <button
-                                                                      className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
-                                                                      type="button"
-                                                                      id="dropdownMenuButton1"
-                                                                      data-bs-toggle=""
-                                                                      aria-expanded=""
-                                                                    >
-                                                                      <h6 className="text-center mb-0">
-                                                                        {getDiffFromMinutes(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .totalTripTime
-                                                                        )}
-                                                                      </h6>
-                                                                      {flight
-                                                                        .trips[0]
-                                                                        .listOfFlight
-                                                                        .length <=
-                                                                        3 && (
+                                                                    <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
+                                                                      type="button" id="dropdownMenuButton1" data-bs-toggle="" aria-expanded="">
+                                                                      <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
+                                                                      {flight.trips[0].listOfFlight.length <= 3 && (
                                                                         <h5 className="mb-0 text-center">
-                                                                          {flight.trips[0].listOfFlight.map(
-                                                                            (
-                                                                              t,
-                                                                              ix
-                                                                            ) => {
-                                                                              if (
-                                                                                ix >=
-                                                                                flight
-                                                                                  .trips[0]
-                                                                                  .listOfFlight
-                                                                                  .length -
-                                                                                  1
-                                                                              )
-                                                                                return (
-                                                                                  <Fragment
-                                                                                    key={
-                                                                                      ix
-                                                                                    }
-                                                                                  ></Fragment>
-                                                                                );
+                                                                          {flight.trips[0].listOfFlight.map((t, ix) => {
+                                                                            if (ix >= flight.trips[0].listOfFlight.length - 1)
                                                                               return (
-                                                                                <span
-                                                                                  key={
-                                                                                    ix
-                                                                                  }
-                                                                                ></span>
+                                                                                <Fragment key={ix}></Fragment>
                                                                               );
-                                                                            }
+                                                                            return (
+                                                                              <span key={ix}></span>
+                                                                            );
+                                                                          }
                                                                           )}
                                                                         </h5>
                                                                       )}
-                                                                      <h6 className="text-center mb-0">
-                                                                        {flight
-                                                                          .trips[0]
-                                                                          .listOfFlight
-                                                                          .length ==
-                                                                        1
-                                                                          ? "Non-Stop"
-                                                                          : flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length -
-                                                                            1 +
-                                                                            (flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length ==
-                                                                            2
-                                                                              ? " Stop"
-                                                                              : " Stops")}
-                                                                      </h6>
+                                                                      <h6 className="text-center mb-0">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                                                     </button>
-                                                                    <ul
-                                                                      className="dropdown-menu bg-black border-0 color-white fs-12"
-                                                                      aria-labelledby="dropdownMenuButton1"
-                                                                    >
-                                                                      <li className="ps-2 pe-2 fs-12">
-                                                                        <strong>
-                                                                          Flight
-                                                                          Duration:{" "}
-                                                                        </strong>
-                                                                        {getDiffFromMinutes(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .totalTripTime
-                                                                        )}
-                                                                      </li>
-                                                                      {flight.trips[0].listOfFlight.map(
-                                                                        (
-                                                                          tf,
-                                                                          ix
-                                                                        ) => {
-                                                                          if (
-                                                                            !!tf.displayLayOverTime
-                                                                          )
-                                                                            layoverCounter += 1;
-                                                                          return (
-                                                                            <Fragment
-                                                                              key={
-                                                                                ix
-                                                                              }
-                                                                            >
-                                                                              {!!tf.displayLayOverTime && (
-                                                                                <li className="ps-2 pe-2 fs-12">
-                                                                                  <strong>
-                                                                                    Layover{" "}
-                                                                                    {
-                                                                                      layoverCounter
-                                                                                    }
-
-                                                                                    :
-                                                                                  </strong>{" "}
-                                                                                  {
-                                                                                    tf.displayLayOverTime
-                                                                                  }
-
-                                                                                  ,{" "}
-                                                                                  {
-                                                                                    tf.airportToCity
-                                                                                  }
-                                                                                </li>
-                                                                              )}
-                                                                            </Fragment>
-                                                                          );
-                                                                        }
+                                                                    <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
+                                                                      <li className="ps-2 pe-2 fs-12"><strong>Flight Duration: </strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
+                                                                      {flight.trips[0].listOfFlight.map((tf, ix) => {
+                                                                        if (!!tf.displayLayOverTime) layoverCounter += 1;
+                                                                        return (
+                                                                          <Fragment key={ix}>
+                                                                            {!!tf.displayLayOverTime && (
+                                                                              <li className="ps-2 pe-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                            )}
+                                                                          </Fragment>
+                                                                        );
+                                                                      }
                                                                       )}
                                                                     </ul>
                                                                   </div>
@@ -3781,48 +2744,13 @@ export default function Results() {
                                                               <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                                 <h4 className="airport-code mb-0 dgc position-relative d-flex">
                                                                   <span className="flight-plus-air position-relative">
-                                                                    <span className="tooltip-box cursor-pointer float-end">
-                                                                      {getFormattedTime(
-                                                                        flight
-                                                                          .trips[0]
-                                                                          .listOfFlight[
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .listOfFlight
-                                                                            .length -
-                                                                            1
-                                                                        ]
-                                                                          .arrivalTime
-                                                                      )}
-                                                                    </span>
+                                                                    <span className="tooltip-box cursor-pointer float-end">{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                                                   </span>
-                                                                  {departDays >
-                                                                    0 && (
+                                                                  {departDays > 0 && (
                                                                     <span className="flight-plus-air plusone position-relative">
-                                                                      <span className="tooltip-box cursor-pointer fs-10 color-red">
-                                                                        +
-                                                                        {
-                                                                          departDays
-                                                                        }
-                                                                      </span>
+                                                                      <span className="tooltip-box cursor-pointer fs-10 color-red">+{departDays}</span>
                                                                       <span className="tooltip-hover-top">
-                                                                        <strong>
-                                                                          Flight
-                                                                          Arrival
-                                                                          -{" "}
-                                                                        </strong>{" "}
-                                                                        {getFormattedDate(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .listOfFlight[
-                                                                            flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length -
-                                                                              1
-                                                                          ]
-                                                                            .arrivalAt
-                                                                        )}
+                                                                        <strong>Flight Arrival-</strong> {getFormattedDate(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt)}
                                                                       </span>
                                                                     </span>
                                                                   )}
@@ -3844,26 +2772,9 @@ export default function Results() {
                                                   </div>
                                                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                                                     <div className="air-flight-price text-end">
-                                                      <div
-                                                        className={
-                                                          flight.resultIndex ==
-                                                            selectedDepartTBOFlight.resultIndex &&
-                                                          flight.traceId ==
-                                                            selectedDepartTBOFlight.traceId
-                                                            ? "selected-flight active"
-                                                            : "selected-flight"
-                                                        }
-                                                      ></div>
-                                                      <h2 className="mb-0 dgc">
-                                                        {
-                                                          aedNumberFormat(
-                                                            avgPrice
-                                                          ).split(".")[0]
-                                                        }
-                                                      </h2>
-                                                      <h6 className="mb-2 mt-1">
-                                                        per Traveler
-                                                      </h6>
+                                                      <div className={flight.resultIndex == selectedDepartTBOFlight.resultIndex && flight.traceId == selectedDepartTBOFlight.traceId ? "selected-flight active" : "selected-flight"}></div>
+                                                      <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
+                                                      <h6 className="mb-2 mt-1">per Traveler</h6>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -3873,139 +2784,57 @@ export default function Results() {
                                                       <div className="details-icon-btns d-flex">
                                                         <div className="me-3 ">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
+                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                              type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
-                                                                loader={
-                                                                  trvLoader
-                                                                }
-                                                                src={
-                                                                  flight.isRefundable
-                                                                    ? "icon/refundable-icon.svg"
-                                                                    : "icon/non-refundable.svg"
-                                                                }
+                                                                loader={trvLoader}
+                                                                src={flight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
                                                                 alt="payment sucess icon"
                                                                 width={20}
                                                                 height={43}
                                                               />
-                                                              <p
-                                                                className={
-                                                                  flight.isRefundable
-                                                                    ? "mb-0 fs-12 fw-bold color-green ms-2"
-                                                                    : "mb-0 fs-12 fw-bold color-red ms-2"
-                                                                }
-                                                              >
-                                                                {flight.isRefundable
-                                                                  ? "R"
-                                                                  : "N"}
-                                                              </p>
+                                                              <p className={flight.isRefundable ? "mb-0 fs-12 fw-bold color-green ms-2" : "mb-0 fs-12 fw-bold color-red ms-2"}>{flight.isRefundable ? "R" : "N"}</p>
                                                             </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                {flight.isRefundable
-                                                                  ? "Partially Refundable"
-                                                                  : "Non-Refundable"}
-                                                              </p>
+                                                            <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">{flight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                                             </div>
                                                           </div>
                                                         </div>
                                                         <div className="me-3">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
+                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                              type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
-                                                                loader={
-                                                                  trvLoader
-                                                                }
+                                                                loader={trvLoader}
                                                                 src="icon/seat-red-icon.svg"
                                                                 alt="seat icon"
                                                                 width={20}
                                                                 height={43}
                                                               />
-                                                              <p className="mb-0 fs-12 fw-bold color-red ms-2">
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight[0]
-                                                                    .seats
-                                                                }{" "}
-                                                                Left
-                                                              </p>
+                                                              <p className="mb-0 fs-12 fw-bold color-red ms-2">{flight.trips[0].listOfFlight[0].seats} Left</p>
                                                             </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                Hurry! Only{" "}
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight[0]
-                                                                    .seats
-                                                                }{" "}
-                                                                Seat(s) Left
-                                                              </p>
+                                                            <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">Hurry! Only {flight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                                             </div>
                                                           </div>
                                                         </div>
                                                         <div className="me-0">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
+                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                              type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
-                                                                loader={
-                                                                  sfLoader
-                                                                }
+                                                                loader={sfLoader}
                                                                 src={timeIcon}
                                                                 height={20}
                                                                 width={20}
                                                               />
-                                                              <p className="mb-0 fs-12 fw-bold color-black ms-2">
-                                                                {timeOfDay}
-                                                              </p>
+                                                              <p className="mb-0 fs-12 fw-bold color-black ms-2">{timeOfDay}</p>
                                                             </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                {timeOfDay}{" "}
-                                                                Flight
-                                                              </p>
+                                                            <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">{timeOfDay} Flight</p>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -4043,19 +2872,9 @@ export default function Results() {
                                               />
                                             </span>
                                             <div className="ps-3">
-                                              <h6 className="fw-bold mb-0">
-                                                No Result Found!
-                                              </h6>
-                                              <p className="mb-0 fs-14">
-                                                Please try a different filtering
-                                                combination!
-                                              </p>
-                                              <button
-                                                className="transparent-btn clear-filter-btn"
-                                                onClick={() => clearFilters()}
-                                              >
-                                                Reset Filters
-                                              </button>
+                                              <h6 className="fw-bold mb-0">No Result Found!</h6>
+                                              <p className="mb-0 fs-14">Please try a different filtering combination!</p>
+                                              <button className="transparent-btn clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
                                             </div>
                                           </div>
                                         </div>
@@ -4065,26 +2884,8 @@ export default function Results() {
                                       <div className="return listing-banner p-2 rounded-2">
                                         <div className="row align-items-center">
                                           <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0">
-                                            <h6 className="color-white">
-                                              Return |{" "}
-                                              {getFormattedDate4(
-                                                currentFilters.segments[1]
-                                                  .departureDate
-                                              )}
-                                            </h6>
-                                            <h5 className="color-white mb-0">
-                                              {returnTBOFlights.length > 0 &&
-                                                returnTBOFlights[0].trips[0]
-                                                  .listOfFlight[0]
-                                                  .airportFromCity}{" "}
-                                              -{" "}
-                                              {returnTBOFlights.length > 0 &&
-                                                returnTBOFlights[0].trips[0]
-                                                  .listOfFlight[
-                                                  returnTBOFlights[0].trips[0]
-                                                    .listOfFlight.length - 1
-                                                ].airportToCity}
-                                            </h5>
+                                            <h6 className="color-white">Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
+                                            <h5 className="color-white mb-0">{returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[returnTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h5>
                                           </div>
                                           <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                                             <Image
@@ -4101,326 +2902,129 @@ export default function Results() {
                                       <div className="row">
                                         <div className="col-sm-12"></div>
                                       </div>
-                                      {rtnFilteredFlights.length > 0 ? (
-                                        rtnFilteredFlights.map(
-                                          (flight, flightIndex) => {
-                                            let deptDate = new Date(
-                                              flight.trips[0].listOfFlight[0].departeddate
-                                            );
-                                            let arrDate = new Date(
-                                              flight.trips[0].listOfFlight[
-                                                flight.trips[0].listOfFlight
-                                                  .length - 1
-                                              ].arrivalAt
-                                            );
-                                            let difference =
-                                              arrDate.getTime() -
-                                              deptDate.getTime();
-                                            let departDays = Math.ceil(
-                                              difference / (1000 * 3600 * 24)
-                                            );
-                                            let flightPrice = Math.round(
-                                              flight.totalPrice
-                                            );
-                                            let layoverCounter = 0;
-                                            let totalPassangers = 0;
-                                            let totalPax = 0;
-                                            flight.fareDetails.forEach(
-                                              (fare) => {
-                                                totalPax += fare.noofPax;
-                                                if (fare.totalFareAmount > 0) {
-                                                  totalPassangers +=
-                                                    fare.noofPax;
-                                                }
-                                              }
-                                            );
-                                            let avgPrice = Math.round(
-                                              flightPrice / totalPassangers
-                                            );
-                                            // var displayOperatedBy = [...new Set(flight.trips[0].listOfFlight.filter(x => ((x.airlineName).toLowerCase() != (x.operatedBy).toLowerCase()) && !!x.operatedBy).map(x => x.operatedBy))];
-                                            let timeOfDay = getTimeOfDay(
-                                              flight.trips[0].listOfFlight[0]
-                                                .departureTime
-                                            );
-                                            let timeIcon = "";
-                                            if (timeOfDay == "Morning")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/morning-icon.svg";
-                                            else if (timeOfDay == "Afternoon")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/afternoon-icon.svg";
-                                            else if (timeOfDay == "Evening")
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/evening-icon.svg";
-                                            else
-                                              timeIcon =
-                                                "https://assets.neofares.com/all-icon/night-moon-icon.svg";
+                                      {rtnFilteredFlights.length > 0 ? (rtnFilteredFlights.map(
+                                        (flight, flightIndex) => {
+                                          let deptDate = new Date(flight.trips[0].listOfFlight[0].departeddate);
+                                          let arrDate = new Date(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt);
+                                          let difference = arrDate.getTime() - deptDate.getTime();
+                                          let departDays = Math.ceil(difference / (1000 * 3600 * 24));
+                                          let flightPrice = Math.round(flight.totalPrice);
+                                          let layoverCounter = 0;
+                                          let totalPassangers = 0;
+                                          let totalPax = 0;
+                                          flight.fareDetails.forEach((fare) => { totalPax += fare.noofPax; if (fare.totalFareAmount > 0) { totalPassangers += fare.noofPax; } });
+                                          let avgPrice = Math.round(flightPrice / totalPassangers);
+                                          // var displayOperatedBy = [...new Set(flight.trips[0].listOfFlight.filter(x => ((x.airlineName).toLowerCase() != (x.operatedBy).toLowerCase()) && !!x.operatedBy).map(x => x.operatedBy))];
+                                          let timeOfDay = getTimeOfDay(flight.trips[0].listOfFlight[0].departureTime);
+                                          let timeIcon = "";
+                                          if (timeOfDay == "Morning")
+                                            timeIcon = "https://assets.neofares.com/all-icon/morning-icon.svg";
+                                          else if (timeOfDay == "Afternoon")
+                                            timeIcon = "https://assets.neofares.com/all-icon/afternoon-icon.svg";
+                                          else if (timeOfDay == "Evening")
+                                            timeIcon = "https://assets.neofares.com/all-icon/evening-icon.svg";
+                                          else
+                                            timeIcon = "https://assets.neofares.com/all-icon/night-moon-icon.svg";
 
-                                            return (
-                                              <div
-                                                className={
-                                                  flight.resultIndex ==
-                                                    selectedReturnTBOFlight.resultIndex &&
-                                                  flight.traceId ==
-                                                    selectedReturnTBOFlight.traceId
-                                                    ? "regular-flight-round-box mt-4 mb-4 active-selected"
-                                                    : "regular-flight-round-box mt-4 mb-4"
-                                                }
-                                                key={flightIndex}
-                                                onClick={() => {
-                                                  let currentFlight =
-                                                    cloneData(flight);
-                                                  currentFlight.departDays =
-                                                    departDays;
-                                                  currentFlight.totalPassengers =
-                                                    totalPax;
-                                                  currentFlight.displayCabin =
-                                                    getDisplayCabin(
-                                                      parseInt(
-                                                        currentFilters.cabin
-                                                      )
-                                                    );
-                                                  currentFlight.avgPrice =
-                                                    avgPrice;
-                                                  currentFlight.timeOfDay =
-                                                    timeOfDay;
-                                                  currentFlight.timeIcon =
-                                                    timeIcon;
-                                                  setSelectedReturnTBOFlight(
-                                                    currentFlight
-                                                  );
-                                                }}
-                                              >
-                                                <div className="row align-items-center">
-                                                  <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
-                                                    <div className="row align-items-center">
-                                                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                                        <div className="row align-items-center">
-                                                          <div className="1 col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                                            <div className="air-flight-logo text-start">
-                                                              <Image
-                                                                className="h-auto"
-                                                                loader={
-                                                                  airlineLogoLoader
-                                                                }
-                                                                src={`airline-logo/${flight.trips[0].validatingCarrier.code}.webp`}
-                                                                height={20}
-                                                                width={20}
-                                                              />
-                                                              <span>
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .validatingCarrier
-                                                                    .name
-                                                                }
-                                                              </span>
-                                                            </div>
+                                          return (
+                                            <div className={flight.resultIndex == selectedReturnTBOFlight.resultIndex && flight.traceId == selectedReturnTBOFlight.traceId ? "regular-flight-round-box mt-4 mb-4 active-selected" : "regular-flight-round-box mt-4 mb-4"} key={flightIndex}
+                                              onClick={() => {
+                                                let currentFlight = cloneData(flight);
+                                                currentFlight.departDays = departDays;
+                                                currentFlight.totalPassengers = totalPax;
+                                                currentFlight.displayCabin = getDisplayCabin(parseInt(currentFilters.cabin));
+                                                currentFlight.avgPrice = avgPrice;
+                                                currentFlight.timeOfDay = timeOfDay;
+                                                currentFlight.timeIcon = timeIcon;
+                                                setSelectedReturnTBOFlight(currentFlight);
+                                              }}
+                                            >
+                                              <div className="row align-items-center">
+                                                <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                                  <div className="row align-items-center">
+                                                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                      <div className="row align-items-center">
+                                                        <div className="1 col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                          <div className="air-flight-logo text-start">
+                                                            <Image
+                                                              className="h-auto"
+                                                              loader={airlineLogoLoader}
+                                                              src={`airline-logo/${flight.trips[0].validatingCarrier.code}.webp`}
+                                                              height={20}
+                                                              width={20}
+                                                            />
+                                                            <span>{flight.trips[0].validatingCarrier.name}</span>
                                                           </div>
-                                                          <div className="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0">
-                                                            <div className="row align-items-center">
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                                <h4 className="airport-code mb-0 dgc position-relative">
-                                                                  <span className="flight-plus-air">
-                                                                    <span className="tooltip-box cursor-pointer">
-                                                                      {getFormattedTime(
-                                                                        flight
-                                                                          .trips[0]
-                                                                          .listOfFlight[0]
-                                                                          .departureTime
-                                                                      )}
-                                                                    </span>
-                                                                  </span>
-                                                                </h4>
-                                                              </div>
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
-                                                                <div className="from-to-from-digination ">
-                                                                  <div className="dropdown dropdown-hover">
-                                                                    <button
-                                                                      className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
-                                                                      type="button"
-                                                                      id="dropdownMenuButton1"
-                                                                      data-bs-toggle=""
-                                                                      aria-expanded=""
-                                                                    >
-                                                                      <h6 className="text-center mb-0">
-                                                                        {getDiffFromMinutes(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .totalTripTime
-                                                                        )}
-                                                                      </h6>
-                                                                      {flight
-                                                                        .trips[0]
-                                                                        .listOfFlight
-                                                                        .length <=
-                                                                        3 && (
-                                                                        <h5 className="mb-0 text-center">
-                                                                          {flight.trips[0].listOfFlight.map(
-                                                                            (
-                                                                              t,
-                                                                              ix
-                                                                            ) => {
-                                                                              if (
-                                                                                ix >=
-                                                                                flight
-                                                                                  .trips[0]
-                                                                                  .listOfFlight
-                                                                                  .length -
-                                                                                  1
-                                                                              )
-                                                                                return (
-                                                                                  <Fragment
-                                                                                    key={
-                                                                                      ix
-                                                                                    }
-                                                                                  ></Fragment>
-                                                                                );
-                                                                              return (
-                                                                                <span
-                                                                                  key={
-                                                                                    ix
-                                                                                  }
-                                                                                ></span>
-                                                                              );
-                                                                            }
-                                                                          )}
-                                                                        </h5>
-                                                                      )}
-                                                                      <h6 className="text-center mb-0">
-                                                                        {flight
-                                                                          .trips[0]
-                                                                          .listOfFlight
-                                                                          .length ==
-                                                                        1
-                                                                          ? "Non-Stop"
-                                                                          : flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length -
-                                                                            1 +
-                                                                            (flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length ==
-                                                                            2
-                                                                              ? " Stop"
-                                                                              : " Stops")}
-                                                                      </h6>
-                                                                    </button>
-                                                                    <ul
-                                                                      className="dropdown-menu bg-black border-0 color-white fs-12"
-                                                                      aria-labelledby="dropdownMenuButton1"
-                                                                    >
-                                                                      <li className="ps-2 pe-2 fs-12">
-                                                                        <strong>
-                                                                          Flight
-                                                                          Duration:{" "}
-                                                                        </strong>
-                                                                        {getDiffFromMinutes(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .totalTripTime
-                                                                        )}
-                                                                      </li>
-                                                                      {flight.trips[0].listOfFlight.map(
-                                                                        (
-                                                                          tf,
-                                                                          ix
-                                                                        ) => {
-                                                                          if (
-                                                                            !!tf.displayLayOverTime
-                                                                          )
-                                                                            layoverCounter += 1;
+                                                        </div>
+                                                        <div className="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                          <div className="row align-items-center">
+                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                              <h4 className="airport-code mb-0 dgc position-relative">
+                                                                <span className="flight-plus-air">
+                                                                  <span className="tooltip-box cursor-pointer">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
+                                                                </span>
+                                                              </h4>
+                                                            </div>
+                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                              <div className="from-to-from-digination ">
+                                                                <div className="dropdown dropdown-hover">
+                                                                  <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
+                                                                    type="button" id="dropdownMenuButton1" data-bs-toggle="" aria-expanded="">
+                                                                    <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
+                                                                    {flight.trips[0].listOfFlight.length <= 3 && (
+                                                                      <h5 className="mb-0 text-center">
+                                                                        {flight.trips[0].listOfFlight.map((t, ix) => {
+                                                                          if (ix >= flight.trips[0].listOfFlight.length - 1)
+                                                                            return (
+                                                                              <Fragment key={ix}></Fragment>
+                                                                            );
                                                                           return (
-                                                                            <Fragment
-                                                                              key={
-                                                                                ix
-                                                                              }
-                                                                            >
-                                                                              {!!tf.displayLayOverTime && (
-                                                                                <li className="ps-2 pe-2 fs-12">
-                                                                                  {" "}
-                                                                                  <strong>
-                                                                                    Layover{" "}
-                                                                                    {
-                                                                                      layoverCounter
-                                                                                    }
-
-                                                                                    :
-                                                                                  </strong>{" "}
-                                                                                  {
-                                                                                    tf.displayLayOverTime
-                                                                                  }
-
-                                                                                  ,{" "}
-                                                                                  {
-                                                                                    tf.airportToCity
-                                                                                  }
-                                                                                </li>
-                                                                              )}
-                                                                            </Fragment>
+                                                                            <span key={ix}></span>
                                                                           );
                                                                         }
-                                                                      )}
-                                                                    </ul>
-                                                                  </div>
+                                                                        )}
+                                                                      </h5>
+                                                                    )}
+                                                                    <h6 className="text-center mb-0">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
+                                                                  </button>
+                                                                  <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
+                                                                    <li className="ps-2 pe-2 fs-12">
+                                                                      <strong>Flight Duration:</strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}
+                                                                    </li>
+                                                                    {flight.trips[0].listOfFlight.map((tf, ix) => {
+                                                                      if (!!tf.displayLayOverTime) layoverCounter += 1;
+                                                                      return (
+                                                                        <Fragment key={ix}>
+                                                                          {!!tf.displayLayOverTime && (
+                                                                            <li className="ps-2 pe-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                          )}
+                                                                        </Fragment>
+                                                                      );
+                                                                    }
+                                                                    )}
+                                                                  </ul>
                                                                 </div>
                                                               </div>
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                                <h4 className="airport-code mb-0 dgc position-relative d-flex">
-                                                                  <span className="flight-plus-air position-relative">
-                                                                    <span className="tooltip-box cursor-pointer float-end">
-                                                                      {getFormattedTime(
-                                                                        flight
-                                                                          .trips[0]
-                                                                          .listOfFlight[
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .listOfFlight
-                                                                            .length -
-                                                                            1
-                                                                        ]
-                                                                          .arrivalTime
-                                                                      )}
+                                                            </div>
+                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                              <h4 className="airport-code mb-0 dgc position-relative d-flex">
+                                                                <span className="flight-plus-air position-relative">
+                                                                  <span className="tooltip-box cursor-pointer float-end">{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
+                                                                </span>
+                                                                {departDays > 0 && (
+                                                                  <span className="flight-plus-air plusone position-relative">
+                                                                    <span className="tooltip-box cursor-pointer fs-10 color-red">+{departDays}</span>
+                                                                    <span className="tooltip-hover-top">
+                                                                      <strong>Flight Arrival-</strong> {getFormattedDate(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalAt)}
                                                                     </span>
                                                                   </span>
-                                                                  {departDays >
-                                                                    0 && (
-                                                                    <span className="flight-plus-air plusone position-relative">
-                                                                      <span className="tooltip-box cursor-pointer fs-10 color-red">
-                                                                        +
-                                                                        {
-                                                                          departDays
-                                                                        }
-                                                                      </span>
-                                                                      <span className="tooltip-hover-top">
-                                                                        <strong>
-                                                                          Flight
-                                                                          Arrival
-                                                                          -{" "}
-                                                                        </strong>{" "}
-                                                                        {getFormattedDate(
-                                                                          flight
-                                                                            .trips[0]
-                                                                            .listOfFlight[
-                                                                            flight
-                                                                              .trips[0]
-                                                                              .listOfFlight
-                                                                              .length -
-                                                                              1
-                                                                          ]
-                                                                            .arrivalAt
-                                                                        )}
-                                                                      </span>
-                                                                    </span>
-                                                                  )}
-                                                                </h4>
-                                                              </div>
+                                                                )}
+                                                              </h4>
                                                             </div>
                                                           </div>
                                                         </div>
-                                                        {/* {
+                                                      </div>
+                                                      {/* {
                                                     displayOperatedBy && displayOperatedBy.length > 0 &&
                                                     <div className='row'>
                                                       <div className='col-sm-12'>
@@ -4428,179 +3032,80 @@ export default function Results() {
                                                       </div>
                                                     </div>
                                                   } */}
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                                    <div className="air-flight-price text-end">
-                                                      <div
-                                                        className={
-                                                          flight.resultIndex ==
-                                                            selectedReturnTBOFlight.resultIndex &&
-                                                          flight.traceId ==
-                                                            selectedReturnTBOFlight.traceId
-                                                            ? "selected-flight active"
-                                                            : "selected-flight"
-                                                        }
-                                                      ></div>
-                                                      <h2 className="mb-0 dgc">
-                                                        {
-                                                          aedNumberFormat(
-                                                            avgPrice
-                                                          ).split(".")[0]
-                                                        }
-                                                      </h2>
-                                                      <h6 className="mb-2 mt-1">
-                                                        per Traveler
-                                                      </h6>
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className="air-flight-btn-and-bag mt-1 pt-2">
-                                                  <div className="row align-items-center">
-                                                    <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
-                                                      <div className="details-icon-btns d-flex">
-                                                        <div className="me-3 ">
-                                                          <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
-                                                              <Image
-                                                                className="h-auto"
-                                                                loader={
-                                                                  trvLoader
-                                                                }
-                                                                src={
-                                                                  flight.isRefundable
-                                                                    ? "icon/refundable-icon.svg"
-                                                                    : "icon/non-refundable.svg"
-                                                                }
-                                                                alt="payment sucess icon"
-                                                                width={20}
-                                                                height={43}
-                                                              />
-                                                              <p
-                                                                className={
-                                                                  flight.isRefundable
-                                                                    ? "mb-0 fs-12 fw-bold color-green ms-2"
-                                                                    : "mb-0 fs-12 fw-bold color-red ms-2"
-                                                                }
-                                                              >
-                                                                {flight.isRefundable
-                                                                  ? "R"
-                                                                  : "N"}
-                                                              </p>
-                                                            </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                {flight.isRefundable
-                                                                  ? "Partially Refundable"
-                                                                  : "Non-Refundable"}
-                                                              </p>
-                                                            </div>
+                                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                  <div className="air-flight-price text-end">
+                                                    <div className={flight.resultIndex == selectedReturnTBOFlight.resultIndex && flight.traceId == selectedReturnTBOFlight.traceId ? "selected-flight active" : "selected-flight"}></div>
+                                                    <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
+                                                    <h6 className="mb-2 mt-1">per Traveler</h6>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="air-flight-btn-and-bag mt-1 pt-2">
+                                                <div className="row align-items-center">
+                                                  <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
+                                                    <div className="details-icon-btns d-flex">
+                                                      <div className="me-3 ">
+                                                        <div className="dropdown dropdown-hover">
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                            <Image
+                                                              className="h-auto"
+                                                              loader={trvLoader}
+                                                              src={flight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
+                                                              alt="payment sucess icon"
+                                                              width={20}
+                                                              height={43}
+                                                            />
+                                                            <p className={flight.isRefundable ? "mb-0 fs-12 fw-bold color-green ms-2" : "mb-0 fs-12 fw-bold color-red ms-2"}>{flight.isRefundable ? "R" : "N"}</p>
+                                                          </button>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-12 color-white br-5 p-2">{flight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                                           </div>
                                                         </div>
-                                                        <div className="me-3">
-                                                          <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
-                                                              <Image
-                                                                className="h-auto"
-                                                                loader={
-                                                                  trvLoader
-                                                                }
-                                                                src="icon/seat-red-icon.svg"
-                                                                alt="seat icon"
-                                                                width={20}
-                                                                height={43}
-                                                              />
-                                                              <p className="mb-0 fs-12 fw-bold color-red ms-2">
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight[0]
-                                                                    .seats
-                                                                }{" "}
-                                                                Left
-                                                              </p>
-                                                            </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                Hurry! Only{" "}
-                                                                {
-                                                                  flight
-                                                                    .trips[0]
-                                                                    .listOfFlight[0]
-                                                                    .seats
-                                                                }{" "}
-                                                                Seat(s) Left
-                                                              </p>
-                                                            </div>
+                                                      </div>
+                                                      <div className="me-3">
+                                                        <div className="dropdown dropdown-hover">
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                            <Image
+                                                              className="h-auto"
+                                                              loader={trvLoader}
+                                                              src="icon/seat-red-icon.svg"
+                                                              alt="seat icon"
+                                                              width={20}
+                                                              height={43}
+                                                            />
+                                                            <p className="mb-0 fs-12 fw-bold color-red ms-2">{flight.trips[0].listOfFlight[0].seats} Left</p>
+                                                          </button>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-12 color-white br-5 p-2">Hurry! Only {flight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                                           </div>
                                                         </div>
-                                                        <div className="me-0">
-                                                          <div className="dropdown dropdown-hover">
-                                                            <button
-                                                              className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                                              type="button"
-                                                              id="carddetail-info"
-                                                              data-bs-toggle=""
-                                                              aria-expanded=""
-                                                              onClick={(e) =>
-                                                                e.stopPropagation()
-                                                              }
-                                                            >
-                                                              <Image
-                                                                className="h-auto"
-                                                                loader={
-                                                                  sfLoader
-                                                                }
-                                                                src={timeIcon}
-                                                                height={20}
-                                                                width={20}
-                                                              />
-                                                              <p className="mb-0 fs-12 fw-bold color-black ms-2">
-                                                                {timeOfDay}
-                                                              </p>
-                                                            </button>
-                                                            <div
-                                                              className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                                              aria-labelledby="carddetail-info"
-                                                              data-popper-placement="top-start"
-                                                            >
-                                                              <p className="mb-0 bg-black fs-12 color-white br-5 p-2">
-                                                                {timeOfDay}{" "}
-                                                                Flight
-                                                              </p>
-                                                            </div>
+                                                      </div>
+                                                      <div className="me-0">
+                                                        <div className="dropdown dropdown-hover">
+                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                            <Image
+                                                              className="h-auto"
+                                                              loader={sfLoader}
+                                                              src={timeIcon}
+                                                              height={20}
+                                                              width={20}
+                                                            />
+                                                            <p className="mb-0 fs-12 fw-bold color-black ms-2">{timeOfDay}</p>
+                                                          </button>
+                                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                                            <p className="mb-0 bg-black fs-12 color-white br-5 p-2">{timeOfDay} Flight</p>
                                                           </div>
                                                         </div>
                                                       </div>
                                                     </div>
-                                                    {/* <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
+                                                  </div>
+                                                  {/* <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
                                                   <div className='air-flight-price text-end'>
                                                     <button className='p-0 bg-white border-0 fs-14 color-blue fw-bold' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                       e.stopPropagation();
@@ -4612,12 +3117,12 @@ export default function Results() {
                                                     }}>Details</button>
                                                   </div>
                                                 </div> */}
-                                                  </div>
                                                 </div>
                                               </div>
-                                            );
-                                          }
-                                        )
+                                            </div>
+                                          );
+                                        }
+                                      )
                                       ) : (
                                         <div className="noResultFound">
                                           <div className="d-flex align-items-center bg-white p-3 br-10 mt-3">
@@ -4632,19 +3137,9 @@ export default function Results() {
                                               />
                                             </span>
                                             <div className="ps-3">
-                                              <h6 className="fw-bold mb-0">
-                                                No Result Found!
-                                              </h6>
-                                              <p className="mb-0 fs-14">
-                                                Please try a different filtering
-                                                combination!
-                                              </p>
-                                              <button
-                                                className="transparent-btn clear-filter-btn"
-                                                onClick={() => clearFilters()}
-                                              >
-                                                Reset Filters
-                                              </button>
+                                              <h6 className="fw-bold mb-0">No Result Found!</h6>
+                                              <p className="mb-0 fs-14">Please try a different filtering combination!</p>
+                                              <button className="transparent-btn clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
                                             </div>
                                           </div>
                                         </div>
@@ -4665,25 +3160,13 @@ export default function Results() {
                             filteredFlights.length > 0 &&
                             itemsCounter <= filteredFlights.length &&
                             returnTBOFlights.length == 0 && (
-                              <button
-                                className="transparent-btn active"
-                                onClick={() => {
-                                  let endValue = itemsCounter + 10;
-                                  setItemsCounter(endValue);
-                                }}
-                              >
-                                <span>Show More Flights</span>
-                                <i className="fa-solid fa-arrow-down ms-2"></i>
+                              <button className="transparent-btn active" onClick={() => { let endValue = itemsCounter + 10; setItemsCounter(endValue); }}>
+                                <span>Show More Flights</span> <i className="fa-solid fa-arrow-down ms-2"></i>
                               </button>
                             )}
-                          {(filteredFlights.length > 0 ||
-                            rtnFilteredFlights.length > 0) && (
-                            <button
-                              className="transparent-btn ms-2"
-                              onClick={() => window.scroll(0, 0)}
-                            >
-                              <span>Back to Top</span>
-                              <i className="fa-solid fa-arrow-up ms-2"></i>
+                          {(filteredFlights.length > 0 || rtnFilteredFlights.length > 0) && (
+                            <button className="transparent-btn ms-2" onClick={() => window.scroll(0, 0)}>
+                              <span>Back to Top</span> <i className="fa-solid fa-arrow-up ms-2"></i>
                             </button>
                           )}
                         </div>
@@ -4740,10 +3223,7 @@ export default function Results() {
               height={544}
             />
             <h3>Oops! Got No Results? No worries.</h3>
-            <h4>
-              Speak to our travel agents to catch the cheapest deals to your
-              favorite destination.
-            </h4>
+            <h4>Speak to our travel agents to catch the cheapest deals to your favorite destination.</h4>
             <div className="callus">
               <h5>Ring A Bell On</h5>
               <a href={"tel:" + displayContactNumber}>
@@ -4761,9 +3241,7 @@ export default function Results() {
             </div>
             <div className="uptooff">
               <h6>Up to</h6>
-              <h2>
-                <span>20%</span> Discount
-              </h2>
+              <h2><span>20%</span> Discount</h2>
               <h6 className="mt-0">on total value awaits!</h6>
             </div>
           </div>
@@ -4779,11 +3257,7 @@ export default function Results() {
         selectedReturnTBOFlight &&
         selectedReturnTBOFlight.trips &&
         selectedReturnTBOFlight.trips.length > 0 && (
-          <section
-            className={
-              showPriceStrip ? "total-price-strip active" : "total-price-strip"
-            }
-          >
+          <section className={showPriceStrip ? "total-price-strip active" : "total-price-strip"}>
             <div className="d-none d-lg-inline">
               <div className="container">
                 <div className="row align-items-center">
@@ -4804,173 +3278,65 @@ export default function Results() {
                                       width={30}
                                       height={45}
                                     />
-                                    <span>
-                                      {
-                                        selectedDepartTBOFlight.trips[0]
-                                          .validatingCarrier.name
-                                      }
-                                    </span>
+                                    <span>{selectedDepartTBOFlight.trips[0].validatingCarrier.name}</span>
                                   </div>
                                 </div>
                                 <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
                                   <div className="row">
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                       <h6 className="flight-time mb-0">
-                                        <span>
-                                          {getFormattedTime(
-                                            selectedDepartTBOFlight.trips[0]
-                                              .listOfFlight[0].departureTime
-                                          )}
-                                        </span>
+                                        <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                         <span className="flight-plus-air"></span>
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button
-                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                            type="button"
-                                            id="carddetail-info"
-                                            data-bs-toggle=""
-                                            aria-expanded=""
-                                            onClick={(e) => e.stopPropagation()}
-                                          >
-                                            <span className="fw-bold fs-20">
-                                              {
-                                                selectedDepartTBOFlight.trips[0]
-                                                  .listOfFlight[0].fromCode
-                                              }
-                                            </span>
+                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                            <span className="fw-bold fs-20">{selectedDepartTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                           </button>
-                                          <div
-                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                            aria-labelledby="carddetail-info"
-                                            data-popper-placement="top-start"
-                                          >
-                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                              {
-                                                selectedDepartTBOFlight.trips[0]
-                                                  .listOfFlight[0]
-                                                  .fromAirportName
-                                              }
-                                            </p>
+                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedDepartTBOFlight.trips[0].listOfFlight[0].fromAirportName}</p>
                                           </div>
                                         </div>
                                       </h4>
                                     </div>
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
                                       <div className="from-to-from-digination">
-                                        <h6 className="text-center mb-0">
-                                          {getDiffFromMinutes(
-                                            selectedDepartTBOFlight.trips[0]
-                                              .totalTripTime
-                                          )}
-                                        </h6>
-                                        {selectedDepartTBOFlight.trips[0]
-                                          .listOfFlight.length <= 3 && (
+                                        <h6 className="text-center mb-0">{getDiffFromMinutes(selectedDepartTBOFlight.trips[0].totalTripTime)}</h6>
+                                        {selectedDepartTBOFlight.trips[0].listOfFlight.length <= 3 && (
                                           <h5 className="mb-0 text-center">
-                                            {selectedDepartTBOFlight.trips[0].listOfFlight.map(
-                                              (t, ix) => {
-                                                if (
-                                                  ix >=
-                                                  selectedDepartTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length -
-                                                    1
-                                                )
-                                                  return (
-                                                    <Fragment
-                                                      key={ix}
-                                                    ></Fragment>
-                                                  );
-                                                return <span key={ix}></span>;
-                                              }
+                                            {selectedDepartTBOFlight.trips[0].listOfFlight.map((t, ix) => {
+                                              if (ix >= selectedDepartTBOFlight.trips[0].listOfFlight.length - 1)
+                                                return (
+                                                  <Fragment key={ix}></Fragment>
+                                                );
+                                              return <span key={ix}></span>;
+                                            }
                                             )}
                                           </h5>
                                         )}
-                                        <h6 className="text-center mb-0">
-                                          {selectedDepartTBOFlight.trips[0]
-                                            .listOfFlight.length == 1
-                                            ? "Non-Stop"
-                                            : selectedDepartTBOFlight.trips[0]
-                                                .listOfFlight.length -
-                                              1 +
-                                              (selectedDepartTBOFlight.trips[0]
-                                                .listOfFlight.length == 2
-                                                ? " Stop"
-                                                : " Stops")}
-                                        </h6>
+                                        <h6 className="text-center mb-0">{selectedDepartTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : selectedDepartTBOFlight.trips[0].listOfFlight.length - 1 + (selectedDepartTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                       </div>
                                     </div>
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                       <h6 className="flight-time mb-0">
-                                        <span>
-                                          {getFormattedTime(
-                                            selectedDepartTBOFlight.trips[0]
-                                              .listOfFlight[
-                                              selectedDepartTBOFlight.trips[0]
-                                                .listOfFlight.length - 1
-                                            ].arrivalTime
-                                          )}
-                                        </span>
-                                        {selectedDepartTBOFlight.departDays >
-                                          0 && (
+                                        <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
+                                        {selectedDepartTBOFlight.departDays > 0 && (
                                           <span className="flight-plus-air">
-                                            <span className="tooltip-box cursor-pointer">
-                                              +
-                                              {
-                                                selectedDepartTBOFlight.departDays
-                                              }
-                                            </span>
+                                            <span className="tooltip-box cursor-pointer">+{selectedDepartTBOFlight.departDays}</span>
                                             <span className="tooltip-hover-top">
-                                              <strong>Flight Arrival - </strong>{" "}
-                                              {getFormattedDate(
-                                                selectedDepartTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedDepartTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].arrivalAt
-                                              )}
+                                              <strong>Flight Arrival - </strong> {getFormattedDate(selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].arrivalAt)}
                                             </span>
                                           </span>
                                         )}
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button
-                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                            type="button"
-                                            id="carddetail-info"
-                                            data-bs-toggle=""
-                                            aria-expanded=""
-                                            onClick={(e) => e.stopPropagation()}
-                                          >
-                                            <span className="fw-bold fs-20">
-                                              {
-                                                selectedDepartTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedDepartTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].toCode
-                                              }
-                                            </span>
+                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                            type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                            <span className="fw-bold fs-20">{selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                           </button>
-                                          <div
-                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                            aria-labelledby="carddetail-info"
-                                            data-popper-placement="top-start"
-                                          >
-                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                              {
-                                                selectedDepartTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedDepartTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].toAirportName
-                                              }
-                                            </p>
+                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].toAirportName}</p>
                                           </div>
                                         </div>
                                       </h4>
@@ -4983,13 +3349,7 @@ export default function Results() {
                         </div>
                         <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                           <div className="air-flight-price text-end">
-                            <h2 className="mb-0 dgc">
-                              {
-                                aedNumberFormat(
-                                  selectedDepartTBOFlight.avgPrice
-                                ).split(".")[0]
-                              }
-                            </h2>
+                            <h2 className="mb-0 dgc">{aedNumberFormat(selectedDepartTBOFlight.avgPrice).split(".")[0]}</h2>
                             <h6 className="mb-2 mt-2">per Traveler</h6>
                           </div>
                         </div>
@@ -5002,61 +3362,27 @@ export default function Results() {
                                 <div className="details-icon-btns d-flex">
                                   <div className="me-3 ">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle=""
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={trvLoader}
-                                          src={
-                                            selectedDepartTBOFlight.isRefundable
-                                              ? "icon/refundable-icon.svg"
-                                              : "icon/non-refundable.svg"
-                                          }
+                                          src={selectedDepartTBOFlight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
                                           alt="refundable icon"
                                           width={20}
                                           height={43}
                                         />
-                                        <p
-                                          className={
-                                            selectedDepartTBOFlight.isRefundable
-                                              ? "mb-0 fs-12 fw-bold color-green ms-2"
-                                              : "mb-0 fs-12 fw-bold color-red ms-2"
-                                          }
-                                        >
-                                          {selectedDepartTBOFlight.isRefundable
-                                            ? "R"
-                                            : "N"}
-                                        </p>
+                                        <p className={selectedDepartTBOFlight.isRefundable ? "mb-0 fs-12 fw-bold color-green ms-2" : "mb-0 fs-12 fw-bold color-red ms-2"}> {selectedDepartTBOFlight.isRefundable ? "R" : "N"}</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          {selectedDepartTBOFlight.isRefundable
-                                            ? "Partially Refundable"
-                                            : "Non-Refundable"}
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedDepartTBOFlight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="me-3">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle=""
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={trvLoader}
@@ -5065,40 +3391,17 @@ export default function Results() {
                                           width={20}
                                           height={43}
                                         />
-                                        <p className="mb-0 fs-12 fw-bold color-red ms-2">
-                                          {
-                                            selectedDepartTBOFlight.trips[0]
-                                              .listOfFlight[0].seats
-                                          }{" "}
-                                          Left
-                                        </p>
+                                        <p className="mb-0 fs-12 fw-bold color-red ms-2">{selectedDepartTBOFlight.trips[0].listOfFlight[0].seats} Left</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          Hurry! Only{" "}
-                                          {
-                                            selectedDepartTBOFlight.trips[0]
-                                              .listOfFlight[0].seats
-                                          }{" "}
-                                          Seat(s) Left
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">Hurry! Only {selectedDepartTBOFlight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="me-0">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle=""
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={sfLoader}
@@ -5106,19 +3409,10 @@ export default function Results() {
                                           height={20}
                                           width={20}
                                         />
-                                        <p className="mb-0 fs-12 fw-bold color-black ms-2">
-                                          {selectedDepartTBOFlight.timeOfDay}
-                                        </p>
+                                        <p className="mb-0 fs-12 fw-bold color-black ms-2">{selectedDepartTBOFlight.timeOfDay}</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          {selectedDepartTBOFlight.timeOfDay}{" "}
-                                          Flight
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedDepartTBOFlight.timeOfDay} Flight</p>
                                       </div>
                                     </div>
                                   </div>
@@ -5147,173 +3441,66 @@ export default function Results() {
                                       width={30}
                                       height={45}
                                     />
-                                    <span>
-                                      {
-                                        selectedReturnTBOFlight.trips[0]
-                                          .validatingCarrier.name
-                                      }
-                                    </span>
+                                    <span>{selectedReturnTBOFlight.trips[0].validatingCarrier.name}</span>
                                   </div>
                                 </div>
                                 <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
                                   <div className="row">
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                       <h6 className="flight-time mb-0">
-                                        <span>
-                                          {getFormattedTime(
-                                            selectedReturnTBOFlight.trips[0]
-                                              .listOfFlight[0].departureTime
-                                          )}
-                                        </span>
+                                        <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                         <span className="flight-plus-air"></span>
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button
-                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                            type="button"
-                                            id="carddetail-info"
-                                            data-bs-toggle=""
-                                            aria-expanded=""
-                                            onClick={(e) => e.stopPropagation()}
-                                          >
-                                            <span className="fw-bold fs-20">
-                                              {
-                                                selectedReturnTBOFlight.trips[0]
-                                                  .listOfFlight[0].fromCode
-                                              }
-                                            </span>
+                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                            type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                            <span className="fw-bold fs-20">{selectedReturnTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                           </button>
-                                          <div
-                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                            aria-labelledby="carddetail-info"
-                                            data-popper-placement="top-start"
-                                          >
-                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                              {
-                                                selectedReturnTBOFlight.trips[0]
-                                                  .listOfFlight[0]
-                                                  .fromAirportName
-                                              }
-                                            </p>
+                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedReturnTBOFlight.trips[0].listOfFlight[0].fromAirportName}</p>
                                           </div>
                                         </div>
                                       </h4>
                                     </div>
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
                                       <div className="from-to-from-digination">
-                                        <h6 className="text-center mb-0">
-                                          {getDiffFromMinutes(
-                                            selectedReturnTBOFlight.trips[0]
-                                              .totalTripTime
-                                          )}
-                                        </h6>
-                                        {selectedReturnTBOFlight.trips[0]
-                                          .listOfFlight.length <= 3 && (
+                                        <h6 className="text-center mb-0">{getDiffFromMinutes(selectedReturnTBOFlight.trips[0].totalTripTime)}</h6>
+                                        {selectedReturnTBOFlight.trips[0].listOfFlight.length <= 3 && (
                                           <h5 className="mb-0 text-center">
                                             {selectedReturnTBOFlight.trips[0].listOfFlight.map(
                                               (t, ix) => {
-                                                if (
-                                                  ix >=
-                                                  selectedReturnTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length -
-                                                    1
-                                                )
+                                                if (ix >= selectedReturnTBOFlight.trips[0].listOfFlight.length - 1)
                                                   return (
-                                                    <Fragment
-                                                      key={ix}
-                                                    ></Fragment>
+                                                    <Fragment key={ix}></Fragment>
                                                   );
                                                 return <span key={ix}></span>;
-                                              }
-                                            )}
+                                              })}
                                           </h5>
                                         )}
-                                        <h6 className="text-center mb-0">
-                                          {selectedReturnTBOFlight.trips[0]
-                                            .listOfFlight.length == 1
-                                            ? "Non-Stop"
-                                            : selectedReturnTBOFlight.trips[0]
-                                                .listOfFlight.length -
-                                              1 +
-                                              (selectedReturnTBOFlight.trips[0]
-                                                .listOfFlight.length == 2
-                                                ? " Stop"
-                                                : " Stops")}
-                                        </h6>
+                                        <h6 className="text-center mb-0">{selectedReturnTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : selectedReturnTBOFlight.trips[0].listOfFlight.length - 1 + (selectedReturnTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                       </div>
                                     </div>
                                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                       <h6 className="flight-time mb-0">
-                                        <span>
-                                          {getFormattedTime(
-                                            selectedReturnTBOFlight.trips[0]
-                                              .listOfFlight[
-                                              selectedReturnTBOFlight.trips[0]
-                                                .listOfFlight.length - 1
-                                            ].arrivalTime
-                                          )}
-                                        </span>
+                                        <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                         {selectedReturnTBOFlight.departDays >
                                           0 && (
-                                          <span className="flight-plus-air">
-                                            <span className="tooltip-box cursor-pointer">
-                                              +
-                                              {
-                                                selectedReturnTBOFlight.departDays
-                                              }
+                                            <span className="flight-plus-air">
+                                              <span className="tooltip-box cursor-pointer">+{selectedReturnTBOFlight.departDays}</span>
+                                              <span className="tooltip-hover-top">
+                                                <strong>Flight Arrival - </strong> {getFormattedDate(selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].arrivalAt)}
+                                              </span>
                                             </span>
-                                            <span className="tooltip-hover-top">
-                                              <strong>Flight Arrival - </strong>{" "}
-                                              {getFormattedDate(
-                                                selectedReturnTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedReturnTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].arrivalAt
-                                              )}
-                                            </span>
-                                          </span>
-                                        )}
+                                          )}
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button
-                                            className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                            type="button"
-                                            id="carddetail-info"
-                                            data-bs-toggle=""
-                                            aria-expanded=""
-                                            onClick={(e) => e.stopPropagation()}
-                                          >
-                                            <span className="fw-bold fs-20">
-                                              {
-                                                selectedReturnTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedReturnTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].toCode
-                                              }
-                                            </span>
+                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                            <span className="fw-bold fs-20">{selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                           </button>
-                                          <div
-                                            className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                            aria-labelledby="carddetail-info"
-                                            data-popper-placement="top-start"
-                                          >
-                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                              {
-                                                selectedReturnTBOFlight.trips[0]
-                                                  .listOfFlight[
-                                                  selectedReturnTBOFlight
-                                                    .trips[0].listOfFlight
-                                                    .length - 1
-                                                ].toAirportName
-                                              }
-                                            </p>
+                                          <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                            <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].toAirportName}</p>
                                           </div>
                                         </div>
                                       </h4>
@@ -5326,13 +3513,7 @@ export default function Results() {
                         </div>
                         <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                           <div className="air-flight-price text-end">
-                            <h2 className="mb-0 dgc">
-                              {
-                                aedNumberFormat(
-                                  selectedReturnTBOFlight.avgPrice
-                                ).split(".")[0]
-                              }
-                            </h2>
+                            <h2 className="mb-0 dgc">{aedNumberFormat(selectedReturnTBOFlight.avgPrice).split(".")[0]}</h2>
                             <h6 className="mb-2 mt-2">per Traveler</h6>
                           </div>
                         </div>
@@ -5345,61 +3526,27 @@ export default function Results() {
                                 <div className="details-icon-btns d-flex">
                                   <div className="me-3 ">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle=""
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={trvLoader}
-                                          src={
-                                            selectedReturnTBOFlight.isRefundable
-                                              ? "icon/refundable-icon.svg"
-                                              : "icon/non-refundable.svg"
-                                          }
+                                          src={selectedReturnTBOFlight.isRefundable ? "icon/refundable-icon.svg" : "icon/non-refundable.svg"}
                                           alt="payment sucess icon"
                                           width={20}
                                           height={43}
                                         />
-                                        <p
-                                          className={
-                                            selectedReturnTBOFlight.isRefundable
-                                              ? "mb-0 fs-12 fw-bold color-green ms-2"
-                                              : "mb-0 fs-12 fw-bold color-red ms-2"
-                                          }
-                                        >
-                                          {selectedReturnTBOFlight.isRefundable
-                                            ? "R"
-                                            : "N"}
-                                        </p>
+                                        <p className={selectedReturnTBOFlight.isRefundable ? "mb-0 fs-12 fw-bold color-green ms-2" : "mb-0 fs-12 fw-bold color-red ms-2"}>{selectedReturnTBOFlight.isRefundable ? "R" : "N"}</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          {selectedReturnTBOFlight.isRefundable
-                                            ? "Partially Refundable"
-                                            : "Non-Refundable"}
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedReturnTBOFlight.isRefundable ? "Partially Refundable" : "Non-Refundable"}</p>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="me-3">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle="drodown"
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="drodown" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={trvLoader}
@@ -5408,40 +3555,17 @@ export default function Results() {
                                           width={20}
                                           height={43}
                                         />
-                                        <p className="mb-0 fs-12 fw-bold color-red ms-2">
-                                          {
-                                            selectedReturnTBOFlight.trips[0]
-                                              .listOfFlight[0].seats
-                                          }{" "}
-                                          Left
-                                        </p>
+                                        <p className="mb-0 fs-12 fw-bold color-red ms-2">{selectedReturnTBOFlight.trips[0].listOfFlight[0].seats} Left</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          Hurry! Only{" "}
-                                          {
-                                            selectedReturnTBOFlight.trips[0]
-                                              .listOfFlight[0].seats
-                                          }{" "}
-                                          Seat(s) Left
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">Hurry! Only {selectedReturnTBOFlight.trips[0].listOfFlight[0].seats} Seat(s) Left</p>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="me-0">
                                     <div className="dropdown dropdown-hover">
-                                      <button
-                                        className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
-                                        type="button"
-                                        id="carddetail-info"
-                                        data-bs-toggle=""
-                                        aria-expanded=""
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
+                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                        type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
                                           loader={sfLoader}
@@ -5449,19 +3573,10 @@ export default function Results() {
                                           height={20}
                                           width={20}
                                         />
-                                        <p className="mb-0 fs-12 fw-bold color-black ms-2">
-                                          {selectedReturnTBOFlight.timeOfDay}
-                                        </p>
+                                        <p className="mb-0 fs-12 fw-bold color-black ms-2">{selectedReturnTBOFlight.timeOfDay}</p>
                                       </button>
-                                      <div
-                                        className="dropdown-menu p-0 pt-2 bg-transpartent border-0"
-                                        aria-labelledby="carddetail-info"
-                                        data-popper-placement="top-start"
-                                      >
-                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">
-                                          {selectedReturnTBOFlight.timeOfDay}{" "}
-                                          Flight
-                                        </p>
+                                      <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
+                                        <p className="mb-0 bg-black fs-10 color-white br-5 p-2">{selectedReturnTBOFlight.timeOfDay} Flight</p>
                                       </div>
                                     </div>
                                   </div>
@@ -5485,52 +3600,23 @@ export default function Results() {
                       }
                       setShowContinueBtn(true);
                     }}>Details<i className="fa-solid fa-chevron-right"></i></button> */}
-                      <h2 className="my-2 dgc">
-                        {
-                          aedNumberFormat(
-                            selectedDepartTBOFlight.totalPrice +
-                              selectedReturnTBOFlight.totalPrice
-                          ).split(".")[0]
-                        }
-                      </h2>
+                      <h2 className="my-2 dgc">{aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split(".")[0]}</h2>
                       <button
                         className="btn-style1 active float-end"
                         onClick={() => {
                           setShowSpinner(true);
-                          localStorage.setItem(
-                            "departFlight",
-                            JSON.stringify(selectedDepartTBOFlight)
-                          );
-                          localStorage.setItem(
-                            "returnFlight",
-                            JSON.stringify(selectedReturnTBOFlight)
-                          );
-                          const parm = new URLSearchParams(
-                            window.location.search
-                          );
-                          let parms =
-                            "?amt=" +
-                            (selectedDepartTBOFlight.totalPrice +
-                              selectedReturnTBOFlight.totalPrice);
+                          localStorage.setItem("departFlight", JSON.stringify(selectedDepartTBOFlight));
+                          localStorage.setItem("returnFlight", JSON.stringify(selectedReturnTBOFlight));
+                          const parm = new URLSearchParams(window.location.search);
+                          let parms = "?amt=" + (selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice);
                           let encodedParams = encodeData(parms);
-                          localStorage.setItem(
-                            "currentSearchId",
-                            parm.get("s")
-                          );
-                          setTimeout(() => {
-                            setShowSpinner(false);
-                          }, 500);
-                          window.location.href =
-                            "/book-flight/?token=" +
-                            encodedParams.replace("+", "-");
+                          localStorage.setItem("currentSearchId", parm.get("s"));
+                          setTimeout(() => { setShowSpinner(false); }, 500);
+                          window.location.href = "/book-flight/?token=" + encodedParams.replace("+", "-");
                         }}
                       >
-                        {!showSpinner && <span>Book</span>}
-                        {showSpinner && (
-                          <span
-                            className="spinner-border text-white"
-                            role="status"
-                          ></span>
+                        {!showSpinner && <span>Book</span>} {showSpinner && (
+                          <span className="spinner-border text-white" role="status"></span>
                         )}
                       </button>
                     </div>
@@ -5543,27 +3629,10 @@ export default function Results() {
                 <div className="row align-items-center">
                   <div className="col-8 col-sm-8 col-md-8">
                     <h2 className="mb-1 color-white">
-                      {
-                        aedNumberFormat(
-                          selectedDepartTBOFlight.avgPrice +
-                            selectedReturnTBOFlight.avgPrice
-                        ).split(".")[0]
-                      }
-                    </h2>
-                    <p className="mb-0 fs-12 color-white">
-                      {totalPassengers > 1
-                        ? aedNumberFormat(
-                            selectedDepartTBOFlight.totalPrice +
-                              selectedReturnTBOFlight.totalPrice
-                          ).split(".")[0] + ` for ${totalPassengers} Travelers`
-                        : "per Adult"}{" "}
-                    </p>
+                      {aedNumberFormat(selectedDepartTBOFlight.avgPrice + selectedReturnTBOFlight.avgPrice).split(".")[0]}</h2>
+                    <p className="mb-0 fs-12 color-white">{totalPassengers > 1 ? aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split(".")[0] + ` for ${totalPassengers} Travelers` : "per Adult"}{" "}</p>
                     <div className="air-flight-price text-start">
-                      <button
-                        className="bg-blue fs-12 color-white border-0 p-0 float-start text-start mob-details"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight"
+                      <button className="bg-blue fs-12 color-white border-0 p-0 float-start text-start mob-details" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                         onClick={(e) => {
                           e.stopPropagation();
                           let fl = cloneData(selectedDepartTBOFlight);
@@ -5574,78 +3643,39 @@ export default function Results() {
                           }
                           setShowContinueBtn(true);
                         }}
-                      >
-                        Details{" "}
-                        <i className="fs-12 ms-1 fa-solid fa-chevron-right"></i>
-                      </button>
+                      >Details <i className="fs-12 ms-1 fa-solid fa-chevron-right"></i></button>
                     </div>
                   </div>
                   <div className="col-4 col-sm-4 col-md-4">
                     <div className="air-flight-price text-end">
-                      <button
-                        className="bg-orange color-white border-0 fs-14 py-2 px-3 rounded-1  active float-end"
+                      <button className="bg-orange color-white border-0 fs-14 py-2 px-3 rounded-1  active float-end"
                         onClick={() => {
                           setShowSpinner(true);
-                          localStorage.setItem(
-                            "departFlight",
-                            JSON.stringify(selectedDepartTBOFlight)
-                          );
-                          localStorage.setItem(
-                            "returnFlight",
-                            JSON.stringify(selectedReturnTBOFlight)
-                          );
-                          const parm = new URLSearchParams(
-                            window.location.search
-                          );
-                          let parms =
-                            "?amt=" +
-                            (selectedDepartTBOFlight.totalPrice +
-                              selectedReturnTBOFlight.totalPrice);
+                          localStorage.setItem("departFlight", JSON.stringify(selectedDepartTBOFlight));
+                          localStorage.setItem("returnFlight", JSON.stringify(selectedReturnTBOFlight));
+                          const parm = new URLSearchParams(window.location.search);
+                          let parms = "?amt=" + (selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice);
                           let encodedParams = encodeData(parms);
-                          localStorage.setItem(
-                            "currentSearchId",
-                            parm.get("s")
-                          );
-                          setTimeout(() => {
-                            setShowSpinner(false);
-                          }, 500);
-                          window.location.href =
-                            "/book-flight/?token=" +
-                            encodedParams.replace("+", "-");
-                        }}
-                      >
-                        {showSpinner ? (
-                          <span
-                            className="spinner-border text-white"
-                            role="status"
-                          ></span>
-                        ) : (
-                          <span>Book</span>
-                        )}
+                          localStorage.setItem("currentSearchId", parm.get("s"));
+                          setTimeout(() => { setShowSpinner(false); }, 500);
+                          window.location.href = "/book-flight/?token=" + encodedParams.replace("+", "-");
+                        }}>
+                        {showSpinner ? (<span className="spinner-border text-white" role="status" ></span>) : (<span>Book</span>)}
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        )}
+          </section >
+        )
+      }
 
       <div className="air-flight-price">
-        <div
-          className="offcanvas offcanvas-end side-flap"
-          tabIndex="-1"
-          id="offcanvasRight"
-          aria-labelledby="offcanvasRightLabel"
-        >
+        <div className="offcanvas offcanvas-end side-flap" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header border-bottom">
             <h5 id="offcanvasRightLabel">Review Flight Details</h5>
-            <button
-              type="button"
-              className="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
+            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           {flightForFlap && flightForFlap.totalPrice > 0 && (
             <DetailsFlap
@@ -5659,11 +3689,11 @@ export default function Results() {
         </div>
       </div>
 
-      {flights && flights.length > 0 && (
-        <div className="pt-5">
-          <InnterFooter></InnterFooter>
-        </div>
-      )}
+      {
+        flights && flights.length > 0 && (
+          <div className="pt-5"><InnterFooter></InnterFooter></div>
+        )
+      }
 
       <Modal className="centred-modal" show={showContentLoader}>
         <Modal.Body>
@@ -5680,19 +3710,14 @@ export default function Results() {
         </Modal.Body>
       </Modal>
 
-      <Modal
-        className="session-expired-popup "
-        show={openSessionIdleModal}
+      <Modal className="session-expired-popup" show={openSessionIdleModal}
         onHide={() => {
           setOpenSessionIdleModal(false);
-          let previousAppliedFilters = localStorage.getItem(
-            "currentSelectedFilters"
-          );
+          let previousAppliedFilters = localStorage.getItem("currentSelectedFilters");
           let parsedFilters = JSON.parse(previousAppliedFilters, true);
           modifySearch(parsedFilters);
         }}
-        id="idle_timeout_modal"
-      >
+        id="idle_timeout_modal">
         <Modal.Body className="">
           <div className="session-expired-wrp">
             <div className="row">
@@ -5706,40 +3731,23 @@ export default function Results() {
                   width={300}
                   height={43}
                 />
-                <h5 className="w-75 m-auto mb-2">
-                  Kindly refresh your searches for updated flight prices.
-                </h5>
-                <p className="fs-12 m-auto mb-4 w-75">
-                  Since flight prices are volatile, we want to ensure you see
-                  the latest fares. Here's hoping you get the best prices for
-                  the flights you're looking for!
-                </p>
+                <h5 className="w-75 m-auto mb-2">Kindly refresh your searches for updated flight prices.</h5>
+                <p className="fs-12 m-auto mb-4 w-75">Since flight prices are volatile, we want to ensure you see the latest fares. Here's hoping you get the best prices for the flights you're looking for!</p>
               </div>
             </div>
             <div className="row session-btns">
               <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
-                <a
-                  className="border border-green color-green w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none"
-                  href="javascript:void(0);"
+                <a className="border border-green color-green w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none" href="javascript:void(0);"
                   onClick={() => {
                     setOpenSessionIdleModal(false);
-                    let previousAppliedFilters = localStorage.getItem(
-                      "currentSelectedFilters"
-                    );
+                    let previousAppliedFilters = localStorage.getItem("currentSelectedFilters");
                     let parsedFilters = JSON.parse(previousAppliedFilters);
                     modifySearch(parsedFilters, true);
                   }}
-                >
-                  Refresh
-                </a>
+                >Refresh</a>
               </div>
               <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
-                <a
-                  className="bg-green color-white w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none"
-                  href="/"
-                >
-                  Home
-                </a>
+                <a className="bg-green color-white w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none" href="/">Home</a>
               </div>
             </div>
           </div>
