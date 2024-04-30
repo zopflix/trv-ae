@@ -20,7 +20,7 @@ export default function Disclaimer() {
             <section>
                 <div className="container py-1">
 
-                    <div className="row py-2 py-md-5 d-flex flex-column flex-md-row align-items-center">
+                    <div className="row py-2 py-md-5 d-flex flex-column flex-md-row">
                         <div className="col-12 col-md-3 ">
                             <Image
                                 className="mb-4 h-auto w-100 shadow"
@@ -49,11 +49,11 @@ export default function Disclaimer() {
                     <div className="row d-flex align-items-center">
                         <div className="col-12 col-md-6 py-5 px-5 d-flex flex-column align-items-md-end">
                             <h2 className="fw-bolder">Consent</h2>
-                            <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+                            <p className="fs-14">By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
                         </div>
                         <div className="col-12 col-md-6 py-5 px-5 bg-dark">
                             <h2 className="fw-bolder text-white">Update</h2>
-                            <p className="text-white">Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+                            <p className="text-white fs-14">Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
                         </div>
                     </div>
                 </div>
