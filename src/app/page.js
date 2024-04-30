@@ -31,51 +31,9 @@ export default function Home() {
       {
         !isFirstRender &&
         <Fragment>
-          {/* <div className='border-bottom py-1 text-center ReviewBar'>
-            <Image
-              className='h-auto'
-              loader={trvLoader}
-              src="icon/iata-logo.png"
-              alt="iata logo"
-              width={100}
-              height={24}
-            />
-            <Image
-              className='h-auto'
-              loader={trvLoader}
-              src="icon/google-review.png"
-              alt="google-review logo"
-              width={100}
-              height={24}
-            />
-            <Image
-              className='h-auto'
-              loader={trvLoader}
-              src="icon/secure-ssl-logo.png"
-              alt="secure-ssl logo"
-              width={100}
-              height={24}
-            />
-            <Image
-              className='h-auto'
-              loader={trvLoader}
-              src="icon/customer-support24-logo.png"
-              alt="customer-support24 logo"
-              width={100}
-              height={24}
-            />
-            <Image
-              className='h-auto'
-              loader={trvLoader}
-              src="icon/facebbok-like-logo.png"
-              alt="facebook logo"
-              width={100}
-              height={24}
-            />
-          </div> */}
           <PartnerLogo></PartnerLogo>
           <div className='spaceDivider'></div>
-          <TopFlightDeals />
+          {/* <TopFlightDeals /> */}
           <div className='spaceDivider'></div>
 
           <DomesticPackageDeals />
