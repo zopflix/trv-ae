@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const { cmsAPIURL, crmAPIURL } = require("../config");
+const { cmsAPIURL, crmAPIURL, tenantId } = require("../config");
 
 export {
   getDurations,
@@ -79,7 +79,7 @@ const getAccommodationsByDestination = async (destId, tenantId) => {
 // DESTINATION APIS
 const getDestinationByName = async (name) => {
   try {
-    const response = await axios.get(cmsAPIURL + `Destinations/GetByName?name=${name}`).then(res => res).catch(err => err);
+    const response = await axios.get(cmsAPIURL + `Destinations/GetByName?name=${name}&tenantId=${tenantId}`).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];
