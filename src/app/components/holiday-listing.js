@@ -32,7 +32,6 @@ export default function HolidayListing(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [isContentLoading, setIsContentLoading] = useState(false);
 
-
   useEffect(() => {
     // let search = window.location.href;
     // let data = search.split('/').pop();
@@ -43,6 +42,7 @@ export default function HolidayListing(props) {
     // getDestinationByName(dest).then(res => {
     // if (res?.Success) {
     if (props?.isDomestic == props?.packageData?.Data?.IsDomestic) {
+
       // setDestinationName(res?.Data?.Name);
       // setTitle(res?.Data?.Title);
       // setDescription(res?.Data?.Description);
@@ -50,6 +50,7 @@ export default function HolidayListing(props) {
       // setFaqs(res?.Data?.FAQs);
 
       getAllHolidayPackages(tenantId, props?.packageData?.Data?.Name).then(res => {
+
         if (res?.Success) {
           setHolidayPackages(res?.Data);
           setFilteredHolidayPackages(res?.Data);

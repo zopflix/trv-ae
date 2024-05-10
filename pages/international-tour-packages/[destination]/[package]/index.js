@@ -94,8 +94,10 @@ export async function getServerSideProps({ params }) {
         ]
     }
 
-    if (res.Success)
+    if (res.Success){
         return { props: { data: res, breadcrumbObj } };
+    }
+        
     else
         return { notFound: true }
 }
