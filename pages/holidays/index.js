@@ -1,11 +1,11 @@
 import Head from "next/head";
-import DomesticTourPackages from "../components/Domestic-Tour-Packages";
-import InternationalTourPackages from "../components/International-Tour-Packages";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import PartnerLogo from "../components/partner-logo";
+import DomesticTourPackages from "@/app/components/Domestic-Tour-Packages";
+import InternationalTourPackages from "@/app/components/International-Tour-Packages";
+import Footer from "@/app/components/footer";
+import Header from "@/app/components/header";
+import PartnerLogo from "@/app/components/partner-logo";
 // import HolidayForm from "../components/holidayForm";
-import SearchSection from '../components/search-section'
+import SearchSection from '@/app/components/search-section'
 import { appBaseURL } from "@/app/config";
 import { usePathname } from "next/navigation";
 

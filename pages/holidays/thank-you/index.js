@@ -1,9 +1,9 @@
 "use client"
-import Layout from '../../components/_layout'
+import Layout from '@/app/components/_layout'
 import Head from 'next/head'
-import InnerFooter from '../../components/inner-footer'
+import InnerFooter from '@/app/components/inner-footer'
 import { useEffect, useState } from 'react';
-import { trvLoader } from '../../helpers/imageKitLoader';
+import { trvLoader } from '@/app/helpers/imageKitLoader';
 import Image from 'next/image';
 import { contactNumber,holidayContactNumber } from '@/app/config';
 import { usePathname } from 'next/navigation';
