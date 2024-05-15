@@ -110,9 +110,6 @@ export default function Footer() {
                                             <a className="fs-12 text-decoration-none" href="/terms-conditions">Terms & Conditions</a>
                                         </li>
                                         <li>
-                                            <a className="fs-12 text-decoration-none" href="/dummy-ticket-terms-conditions/">Dummy Ticket Terms & Conditions</a>
-                                        </li>
-                                        <li>
                                             <a className="fs-12 text-decoration-none" href="/disclaimer">Disclaimer</a>
                                         </li>
                                         <li>
@@ -221,9 +218,7 @@ export default function Footer() {
                                         {/* <li>
                                         <a className="fs-12 text-decoration-none" href="/tourism/india/uttarakhand/">Uttarakhand Tourism</a>
                                     </li> */}
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/dummy-flight-ticket">Dummy Flight Ticket</a>
-                                        </li>
+                                       
                                         <li>
                                             <a className="fs-12 text-decoration-none" href="/make-payment">Make Payment</a>
                                         </li>
