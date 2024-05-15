@@ -33,7 +33,7 @@ export default function Home() {
         <Fragment>
           <PartnerLogo></PartnerLogo>
           <div className='spaceDivider'></div>
-          <TopFlightDeals />
+          {/* <TopFlightDeals /> */}
           <div className='spaceDivider'></div>
 
           <DomesticPackageDeals />
