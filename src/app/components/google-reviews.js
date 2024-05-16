@@ -34,48 +34,62 @@ export default function GoogleReviews() {
     return (
         <section className="py-5 GoogleReviews">
             <div className="container">
-                <div className="row">
-                    <div className="col-12">
+                <div className="row align-items-center">
+                    <div className="col-12 col-md-5 col-xl-7 col-xxl-8 py-2">
                         <div className="subHeading">
-                            <h2 className="mb-3 fw-normal">Google <strong className="color-orange">Reviews</strong></h2>
+                            <h2 className="mb-3 fw-normal fw-bold">Google <strong className="color-blue">Reviews</strong></h2>
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-7 col-xl-5 col-xxl-4 py-2">
+                        <div className="text-center">
+                            <div className="d-md-flex align-items-center justify-content-between">
+                                <div>
+                                    <div className="d-flex align-items-center">
+                                        <Image
+                                            className="me-2 h-auto"
+                                            loader={trvLoader}
+                                            src="icon/Google-Review-img.png"
+                                            alt="profile img"
+                                            width={70}
+                                            height={50}
+                                        />
+                                        <h6 className="mb-0 fw-bold">Rating</h6>
+                                    </div>
+                                    <div className="d-flex align-items-center">
+                                        <div>
+                                            <div className="GoogleReviewStar py-2">
+                                                <i className="fa fa-star color-orange fs-20"></i>
+                                                <i className="fa fa-star color-orange fs-20"></i>
+                                                <i className="fa fa-star color-orange fs-20"></i>
+                                                <i className="fa fa-star color-orange fs-20"></i>
+                                                <i className="fa fa-star-half color-orange fs-20"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p className="fs-12 mb-0">Based on {totalReviews} reviews</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a className="googleReview" href="https://search.google.com/local/writereview?placeid=ChIJKTmbpNiSDzkRjZHqVUtGp2Y" target="_blank">
+                                        <div className="d-flex align-items-center">
+                                            <span>Write A Review</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="row align-items-center">
-                    <div className="col-12 col-md-4 col-lg-3">
-                        <div className="text-center">
-                            <a className="color-blue text-decoration-none fw-bold d-inline-block m-auto" href="https://maps.google.com/?cid=7396958202357256589" target="_blank">Travanya.ae</a>
-                            <div className="GoogleReviewStar py-2">
-                                <i className="fa fa-star color-orange fs-20"></i>
-                                <i className="fa fa-star color-orange fs-20"></i>
-                                <i className="fa fa-star color-orange fs-20"></i>
-                                <i className="fa fa-star color-orange fs-20"></i>
-                                <i className="fa fa-star-half color-orange fs-20"></i>
-                            </div>
-                            <p className="fs-12">Based on {totalReviews} reviews</p>
-                            <a className="shadow googleReview buttonStyle4 color-white text-decoration-none fs-14 py-2 px-3 rounded-2 d-inline-block" href="https://search.google.com/local/writereview?placeid=ChIJKTmbpNiSDzkRjZHqVUtGp2Y" target="_blank">
-                                <div className="d-flex align-items-center">
-                                    <span>Review us on</span>
-                                    <Image
-                                        className="ms-2 bg-white rounded-circle p-1"
-                                        loader={trvLoader}
-                                        src="icon/google-icon.svg"
-                                        alt="Payment Card"
-                                        width={25}
-                                        height={25}
-
-                                    />
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-8 col-lg-9">
+                    <div className="col-12">
                         <div className="position-relative">
                             <Slider {...sliderSettings}>
                                 {reviews?.length > 0 &&
                                     reviews?.map((review, ix) => {
                                         return <div className="slider-items" key={ix}>
-                                            <div className="bg-white shadow p-3 my-4 rounded-3">
+                                            <div className="p-3 my-4 rounded-3">
+
                                                 <div className="d-flex">
                                                     <div>
                                                         <div className="GoogleReviewUserProfile">

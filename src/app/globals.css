@@ -599,11 +599,6 @@ ul.trv-list-type-2 li:after {
     box-shadow: 0px 5px 15px #bfbfbf !important;
 }
 
-.GoogleReviews .viewContent {
-    overflow: auto;
-    height: 80px;
-}
-
 header {
     position: fixed;
     top: 0px;
@@ -677,11 +672,40 @@ footer .footerWrp {
     background-size: 100%;
 }
 
-footer .footerWrp h3{
+footer .footerWrp h3 {
     line-height: 22px;
 }
 
 /* Foote css end */
+
+
+/* Google Review CSS Start */
+
+
+
+/* Google Review CSS end */
+
+.GoogleReviews {
+    background-color: #F2F6FF;
+    background-image: url('https://assets.travanya.com/GoogleReviewBG.webp');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.GoogleReviews .googleReview {
+    background: #4289F7 !important;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: 0.3s;
+    float: left;
+}
+
+.GoogleReviews .googleReview:hover {
+    background: #467FD3 !important;
+}
 
 /* media start */
 
