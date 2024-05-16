@@ -45,7 +45,7 @@ export default function PaymentSubmitted() {
                                         height={50}
                                     />
                                     <h2 className='mt-5'>Payment for this booking has already been submitted!</h2>
-                                    <p className='mt-4'>Kindly review the transaction on your end. If you haven't received your tickets yet, please be patient. We'll share the same with you shortly. For any further queries or assistance, feel free to contact our travel agents at <a href="tel:+91-800 023 5865">+91-8000235865</a> or drop us an email at <a href="mailto:support@travanya.com">support@travanya.com</a>.</p>
+                                    <p className='mt-4'>Kindly review the transaction on your end. If you haven't received your tickets yet, please be patient. We'll share the same with you shortly. For any further queries or assistance, feel free to contact our travel agents at <a href="tel:+91-800 023 5865">+91-8000235865</a> or drop us an email at <a href="mailto:support@travanya.ae">support@travanya.ae</a>.</p>
                                     <p className='text-center fw-bold'>Thank you for choosing Travanya.</p>
                                 </div>
                             </div>

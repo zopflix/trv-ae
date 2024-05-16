@@ -81,7 +81,7 @@ export default function SubscribeNewsletter() {
                                     </div> */}
                                     <div className="form-check mb-3">
                                         <input className="form-check-input" type="checkbox" id="receiveMail" checked readOnly />
-                                        <label className="form-check-label color-white fs-12" htmlFor="receiveMail">I would like to receive email from travanya.com with the latest offers and promotions. See our <a className="color-white text-decoration-underline fw-bold" href="/privacy-policy" target="_blank">Privacy Policy</a>.</label>
+                                        <label className="form-check-label color-white fs-12" htmlFor="receiveMail">I would like to receive email from travanya.ae with the latest offers and promotions. See our <a className="color-white text-decoration-underline fw-bold" href="/privacy-policy" target="_blank">Privacy Policy</a>.</label>
                                     </div>
 
                                     <div className="form-check">

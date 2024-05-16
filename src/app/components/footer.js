@@ -48,7 +48,7 @@ export default function Footer() {
                                 <a className="text-decoration-none color-blue fs-18 fw-bold" href={"tel:" + displayContactNumber}>{displayContactNumber}</a>
                             </h3>
                             <p className="fs-12 fw-bold">Email: <a className="text-decoration-none color-black " href="mailto:info@travanya.ae">info@travanya.ae</a></p>
-                            <p className="fs-12">Plot 16 HSIIDC IT Park, Sector 22, Panchkula, Haryana 134109, India</p>
+                            <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
                             <div className="social-icon">
                                 <a href="https://www.facebook.com/TravanyaOfficial/" target="_blank">
                                     <Image

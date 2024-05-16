@@ -50,7 +50,7 @@ export default function SiteMap() {
                             <div id="Q2" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Using Travanya.com to plan a tour is really simple. To obtain carefully designed trip packages, browse the suggested itineraries provided on the website or give us a call. Tell us about your preferences in case you want it to be customised as per your requirements, and we'll work with you to create it while keeping your needs and budget in mind.</span>
+                                    <span className="ms-2">Using Travanya.ae to plan a tour is really simple. To obtain carefully designed trip packages, browse the suggested itineraries provided on the website or give us a call. Tell us about your preferences in case you want it to be customised as per your requirements, and we'll work with you to create it while keeping your needs and budget in mind.</span>
                                 </div>
                             </div>
                         </div>

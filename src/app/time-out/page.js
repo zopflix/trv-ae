@@ -38,7 +38,7 @@ export default function TimeOut() {
                                         height={50}
                                     />
                                     <h2 className='mt-5'> Page Expired - Time Out</h2>
-                                    <p className='mt-4'>Due to a prolonged waiting period, this page has expired/timed out. For a fresh payment link or assistance, please contact our travel agents at <a href="tel:+91-800 023 5865">+91-8000235865 </a> or drop us an email at <a href="mailto:support@travanya.com">support@travanya.com</a> We will be happy to assist you in completing your transaction seamlessly.</p>
+                                    <p className='mt-4'>Due to a prolonged waiting period, this page has expired/timed out. For a fresh payment link or assistance, please contact our travel agents at <a href="tel:+91-800 023 5865">+91-8000235865 </a> or drop us an email at <a href="mailto:support@travanya.ae">support@travanya.ae</a> We will be happy to assist you in completing your transaction seamlessly.</p>
                                     <p className='text-center fw-bold'>Thank you for choosing Travanya.</p>
                                 </div>
                             </div>

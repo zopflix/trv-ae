@@ -90,7 +90,7 @@ export default function DoublePaxOffer() {
                                 <li className="py-3 border-top">Changes to flights and dates are allowed, but they are subject to change fees and fare adjustments.</li>
                                 <li className="py-3 border-top">Name changes/alterations are allowed.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to refuse the offer to customers if any misuse or abuse is detected.</li>
-                                <li className="py-3 border-top">Additionally, Travanya's standard booking and privacy policy, available at www.travanya.com, will be enforced.</li>
+                                <li className="py-3 border-top">Additionally, Travanya's standard booking and privacy policy, available at www.travanya.ae, will be enforced.</li>
                                 <li className="py-3 border-top">In case of any dispute, jurisdiction will be held by the courts located in New Delhi.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to revise, adapt, or modify these terms and conditions at any time without prior notice and without assuming any liability. This includes the right to replace this offer, entirely or partially, with another offer – whether similar or not – or to extend or withdraw it altogether, without providing any explanation.</li>
                                 <li className="py-3 border-top">Travanya will not be liable for any loss or damage resulting from force majeure events.</li>

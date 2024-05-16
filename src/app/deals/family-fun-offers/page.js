@@ -92,7 +92,7 @@ export default function FamilyVacationOffers() {
                                 <li className="py-3 border-top">Name changes/alterations are not allowed.</li>
                                 <li className="py-3 border-top">Travanya retains the right to decline the offer to customers if there is any misuse or abuse detected.</li>
                                 <li className="py-3 border-top">The sole authority to interpret these terms lies with Travanya.</li>
-                                <li className="py-3 border-top">Additionally, Travanya's standard booking and privacy policy, available at www.travanya.com, will apply.</li>
+                                <li className="py-3 border-top">Additionally, Travanya's standard booking and privacy policy, available at www.travanya.ae, will apply.</li>
                                 <li className="py-3 border-top">If any dispute arises, the courts in New Delhi will have jurisdiction.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to modify, alter, or change these terms and conditions at any time without prior notice and without assuming any liability. This includes the right to replace this offer, wholly or partially, with another offer - whether similar or not - or to extend or withdraw it altogether, without providing any explanation.</li>
                                 <li className="py-3 border-top">Travanya will not be liable for any loss or damage resulting from force majeure.</li>

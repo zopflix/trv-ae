@@ -91,7 +91,7 @@ export default function LetsFlyCoupoleOffer() {
                                 <li className="py-3 border-top">Flight and date modifications are permitted, however, they are subject to change fees and fare adjustments.</li>
                                 <li className="py-3 border-top">Name alterations are allowed.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to refuse the offer to customers in case of any detected misuse or abuse.</li>
-                                <li className="py-3 border-top">Moreover, Travanya's standard booking and privacy policy, available at www.travanya.com, will apply.</li>
+                                <li className="py-3 border-top">Moreover, Travanya's standard booking and privacy policy, available at www.travanya.ae, will apply.</li>
                                 <li className="py-3 border-top">In the event of any dispute, jurisdiction shall be vested in the courts of New Delhi.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to amend, adjust, or modify these terms and conditions at any time without prior notice and without assuming any liability. This includes the right to substitute this offer, either wholly or partly, with another offer – whether similar or not – or to prolong or withdraw it entirely, without offering any explanation.</li>
                                 <li className="py-3 border-top">Travanya shall not be responsible for any loss or damage arising from force majeure.</li>

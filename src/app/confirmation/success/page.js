@@ -1022,7 +1022,7 @@ export default function Confirmation() {
                                         />
                                     </div>
                                     <div className="col-12 col-sm-12 thanku-msg mt-5  border-bottom pb-5">
-                                        <h6>Thank you for choosing <a href="https://www.travanya.com" target="_blank">Travanya.com</a> for your upcoming travel plan.<br /> Wishing you a Safe Journey!!</h6>
+                                        <h6>Thank you for choosing <a href="https://www.travanya.ae" target="_blank">Travanya.ae</a> for your upcoming travel plan.<br /> Wishing you a Safe Journey!!</h6>
                                     </div>
 
                                     <div id="short-review-widget-container"></div>
