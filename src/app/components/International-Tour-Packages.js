@@ -23,7 +23,7 @@ export default function InternationalTourPackages() {
     };
 
     useEffect(() => {
-        getDestinationAndPackages({ TenantId: 3, IsDomestic: false }).then(res => {
+        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
             if (res && res.length > 0)
                 setInternationalPackages(res);
         });
