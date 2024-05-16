@@ -48,7 +48,7 @@ export default function Footer() {
                                 <a className="text-decoration-none color-blue fs-18 fw-bold" href={"tel:" + displayContactNumber}>{displayContactNumber}</a>
                             </h3>
                             <p className="fs-12 fw-bold">Email: <a className="text-decoration-none color-black " href="mailto:info@travanya.ae">info@travanya.ae</a></p>
-                            <p className="fs-12">Plot 16 HSIIDC IT Park, Sector 22, Panchkula, Haryana 134109, India</p>
+                            <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
                             <div className="social-icon">
                                 <a href="https://www.facebook.com/TravanyaOfficial/" target="_blank">
                                     <Image
@@ -97,136 +97,53 @@ export default function Footer() {
                                 <div className="col-6 col-sm-6 col-md-3">
                                     <h2 className="fw-bold fs-16">Company</h2>
                                     <ul className="list-style-none">
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/about-us">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/contact-us">Contact Us</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/privacy-policy">Privacy Policy</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/terms-conditions">Terms & Conditions</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/dummy-ticket-terms-conditions/">Dummy Ticket Terms & Conditions</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/disclaimer">Disclaimer</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/baggage-fees">Baggage Fees</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/check-in">Check In</a>
-                                        </li>
-                                        {/* <li>
-                                        <a className="fs-12 text-decoration-none" href="/sitemap">Sitemap</a>
-                                    </li> */}
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/FAQ">FAQ</a>
-                                        </li>
-
+                                        <li><a className="fs-12 text-decoration-none" href="/about-us">About Us</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/contact-us">Contact Us</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/privacy-policy">Privacy Policy</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/terms-conditions">Terms & Conditions</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/disclaimer">Disclaimer</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/baggage-fees">Baggage Fees</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/check-in">Check In</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/FAQ">FAQ</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-6 col-sm-6 col-md-3">
                                     <h2 className="fw-bold fs-16">International Packages</h2>
                                     <ul className="list-style-none">
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/dubai-tour-packages/">Dubai Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/vietnam-tour-packages/">Vietnam Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/turkey-tour-packages/">Turkey Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/thailand-tour-packages/">Thailand Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/singapore-tour-packages/">Singapore Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/mauritius-tour-packages/">Mauritius Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/bali-tour-packages/">Bali Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/international-tour-packages/maldives-tour-packages/">Maldives Tour Packages</a>
-                                        </li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/dubai-tour-packages/">Dubai Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/vietnam-tour-packages/">Vietnam Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/turkey-tour-packages/">Turkey Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/thailand-tour-packages/">Thailand Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/singapore-tour-packages/">Singapore Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/mauritius-tour-packages/">Mauritius Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/bali-tour-packages/">Bali Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/maldives-tour-packages/">Maldives Tour Packages</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-6 col-sm-6 col-md-3">
                                     <h2 className="fw-bold fs-16">Domestic Packages</h2>
                                     <ul className="list-style-none">
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/rajasthan-tour-packages/">Rajasthan Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/kashmir-tour-packages/">Kashmir Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/kerala-tour-packages/">Kerala Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/goa-tour-packages/">Goa Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/nainital-tour-packages/">Nainital Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/andaman-tour-packages/">Andaman Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/himachal-tour-packages/">Himachal Tour Packages</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/india-tour-packages/leh-ladakh-tour-packages/">Leh Ladakh Tour Packages</a>
-                                        </li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/rajasthan-tour-packages/">Rajasthan Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/kashmir-tour-packages/">Kashmir Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/kerala-tour-packages/">Kerala Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/goa-tour-packages/">Goa Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/nainital-tour-packages/">Nainital Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/andaman-tour-packages/">Andaman Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/himachal-tour-packages/">Himachal Tour Packages</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/leh-ladakh-tour-packages/">Leh Ladakh Tour Packages</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-6 col-sm-6 col-md-3">
                                     <h2 className="fw-bold fs-16">Helpful Links</h2>
                                     <ul className="list-style-none">
-                                        {/* <li>
-                                        <a className="fs-12 text-decoration-none" href="/deals/">Deals</a>
-                                    </li> */}
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/deals/first-flight-booking-offers/">First Flight Offers</a>
-                                        </li>
-                                        {/* <li>
-                                        <a className="fs-12 text-decoration-none" href="/tourism/">Tourism</a>
-                                    </li> */}
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/dubai/">Dubai Tourism</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/dubai/tourist-attractions/">Dubai Tourist Attractions</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/dubai/parks/">Dubai Parks</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/dubai/shopping-places/">Dubai Shopping Places</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/india/">India Tourism</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/tourism/india/goa/">Goa Tourism</a>
-                                        </li>
-                                        {/* <li>
-                                        <a className="fs-12 text-decoration-none" href="/tourism/india/uttarakhand/">Uttarakhand Tourism</a>
-                                    </li> */}
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/dummy-flight-ticket">Dummy Flight Ticket</a>
-                                        </li>
-                                        <li>
-                                            <a className="fs-12 text-decoration-none" href="/make-payment">Make Payment</a>
-                                        </li>
+                                        <li><a className="fs-12 text-decoration-none" href="/deals/first-flight-booking-offers/">First Flight Offers</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/dubai/">Dubai Tourism</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/dubai/tourist-attractions/">Dubai Tourist Attractions</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/dubai/parks/">Dubai Parks</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/dubai/shopping-places/">Dubai Shopping Places</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/india/">India Tourism</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/tourism/india/goa/">Goa Tourism</a></li>
+                                        <li><a className="fs-12 text-decoration-none" href="/make-payment">Make Payment</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -84,7 +84,7 @@ export default function Deals() {
                                 <li className="py-3 border-top">Name alterations are not permitted.</li>
                                 <li className="py-3 border-top">Travanya reserves the right to refuse the offer to customers in the event of any misuse or abuse.</li>
                                 <li className="py-3 border-top">The interpretation of these terms is solely within the authority of Travanya.</li>
-                                <li className="py-3 border-top">Furthermore, the standard booking and privacy policy of Travanya at www.travanya.com will also be applicable.</li>
+                                <li className="py-3 border-top">Furthermore, the standard booking and privacy policy of Travanya at www.travanya.ae will also be applicable.</li>
                                 <li className="py-3 border-top">In case of any dispute, the courts in New Delhi will have jurisdiction.</li>
                                 <li className="py-3 border-top">Travanya reserves the right, without prior notice and without assuming any liability, to add, alter, modify, change, or vary all of these terms and conditions at any time. This includes the right to replace, wholly or in part, this offer with another offer – whether similar or not – or to extend or withdraw it altogether, without assigning any reason.</li>
                                 <li className="py-3 border-top">Travanya will not be held responsible for any loss or damage resulting from force majeure.</li>

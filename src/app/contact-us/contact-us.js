@@ -22,7 +22,7 @@ export default function ContactUs() {
 
                                 </h2>
                             </div>
-                            <p className="text-center text-md-start fs-14">Searching for flight tickets and holiday packages at affordable prices? Talk to our travel experts today and get the cheapest airfares in addition to the right guidance on ticket pricing, hotel accommodation, things to do, and transportation. Our team is available 24*7 to assist you with the best and is also available on the live chat to answer all your questions quickly. We take care of all your travel needs together and also let you customise your tour packages the way you want. So what are you waiting for? Just pick up the phone and brief your travel plans to our experts.</p>
+                            <p className="text-center text-md-start fs-14">Searching for flight tickets and holiday packages at affordable prices? Talk to our travel experts today and get the cheapest airfares in addition to the right guidance on ticket pricing, hotel accommodation, things to do, and transportation. Our team is available 24*7 to assist you with the best and is also available on the live chat to answer all your questions quickly. We take care of all your travel needs together and also let you customise your tour packages the way you want. So what are you waiting for? Just call us and let our travel experts manage the rest!</p>
                         </div>
                         <div className="col-12 col-md-5">
                             <div className="row subHeading">

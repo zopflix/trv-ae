@@ -44,7 +44,7 @@ export default function GoogleReviews() {
                 <div className="row align-items-center">
                     <div className="col-12 col-md-4 col-lg-3">
                         <div className="text-center">
-                            <a className="color-blue text-decoration-none fw-bold d-inline-block m-auto" href="https://maps.google.com/?cid=7396958202357256589" target="_blank">Travanya.com</a>
+                            <a className="color-blue text-decoration-none fw-bold d-inline-block m-auto" href="https://maps.google.com/?cid=7396958202357256589" target="_blank">Travanya.ae</a>
                             <div className="GoogleReviewStar py-2">
                                 <i className="fa fa-star color-orange fs-20"></i>
                                 <i className="fa fa-star color-orange fs-20"></i>

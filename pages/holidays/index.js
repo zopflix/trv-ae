@@ -1,16 +1,37 @@
-import DomesticTourPackages from "../components/Domestic-Tour-Packages";
-import InternationalTourPackages from "../components/International-Tour-Packages";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import PartnerLogo from "../components/partner-logo";
+import Head from "next/head";
+import DomesticTourPackages from "@/app/components/Domestic-Tour-Packages";
+import InternationalTourPackages from "@/app/components/International-Tour-Packages";
+import Footer from "@/app/components/footer";
+import Header from "@/app/components/header";
+import PartnerLogo from "@/app/components/partner-logo";
 // import HolidayForm from "../components/holidayForm";
-import SearchSection from '../components/search-section'
-import { appBaseURL } from "../config";
+import SearchSection from '@/app/components/search-section'
+import { appBaseURL } from "@/app/config";
+import { usePathname } from "next/navigation";
 
 
 export default function Holidays() {
+    const pathname = usePathname();
     return (
         <>
+            <Head>
+                <title>Book International & Domestic Holiday Packages | Travanya</title>
+                <meta name="description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <link rel="canonical" href={`${appBaseURL}${pathname.replace('/', '')}`} />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Book International & Domestic Holiday Packages | Travanya" />
+                <meta property="og:description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <meta property="og:url" content={`${appBaseURL}${pathname.replace('/', '')}`} />
+                <meta property="og:site_name" content="Travanya" />
+                <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
+                <meta property="og:image:type" content="image/webp" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@TravanyaHoliday" />
+                <meta name="twitter:title" content="Book International & Domestic Holiday Packages | Travanya" />
+                <meta name="twitter:description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
+            </Head >
             <Header></Header>
             <SearchSection selectedTab={1} />
             <PartnerLogo />
@@ -141,27 +162,27 @@ export default function Holidays() {
     )
 }
 
-export async function generateMetadata() {
+// export async function generateMetadata() {
 
-    return {
-        title: 'Book International & Domestic Holiday Packages | Travanya',
-        description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
-        alternates: {
-            canonical: `${appBaseURL}holidays/`,
-        },
-        openGraph: {
-            title: 'Book International & Domestic Holiday Packages | Travanya',
-            description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
-            type: "article",
-            images: 'https://assets.travanya.com/logo.webp',
-            url: `${appBaseURL}holidays/`
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: 'Book International & Domestic Holiday Packages | Travanya',
-            description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
-            images: ['https://assets.travanya.com/logo.webp'],
-            site: "@TravanyaHoliday"
-        },
-    }
-}
+//     return {
+//         title: 'Book International & Domestic Holiday Packages | Travanya',
+//         description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//         alternates: {
+//             canonical: `${appBaseURL}holidays/`,
+//         },
+//         openGraph: {
+//             title: 'Book International & Domestic Holiday Packages | Travanya',
+//             description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//             type: "article",
+//             images: 'https://assets.travanya.com/logo.webp',
+//             url: `${appBaseURL}holidays/`
+//         },
+//         twitter: {
+//             card: "summary_large_image",
+//             title: 'Book International & Domestic Holiday Packages | Travanya',
+//             description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//             images: ['https://assets.travanya.com/logo.webp'],
+//             site: "@TravanyaHoliday"
+//         },
+//     }
+// }

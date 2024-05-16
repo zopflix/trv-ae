@@ -51,6 +51,7 @@ export default function Home() {
           </div>
           <div className='spaceDivider'></div>
           <HolidayCategories />
+          <GoogleReviews />
           <div className='spaceDivider'></div>
           <section id="AboutBox" className='bg-orange pt-5'>
             <div className='container'>

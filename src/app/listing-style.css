@@ -484,6 +484,19 @@ body.custom-listing .ContactStrapMobilebox {
 /* media start */
 
 @media(max-width:991px) {
+
+    .modifySearch {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        top: 52px;
+    }
+
+    .flight-results{
+        padding-top: 55px;
+    }
+
     .SeatSelectionModal .modal-body {
         padding: 0;
     }

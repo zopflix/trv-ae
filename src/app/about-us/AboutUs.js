@@ -39,7 +39,7 @@ export default function AboutUs() {
                                     <strong className="color-orange">Welcome to Travanya - Curating Timeless Travel Memories!</strong>
                                 </h2>
                             </div>
-                            <p className="text-center text-md-start">Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality. As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
+                            <p className="text-center text-md-start">Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality. As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organisation, and a dedication to ensuring your journey shines as the highlight of your narrative, we are all set to plan everything for you from the start. Leave the details to us because your only task is to pack and relish the experience.</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function AboutUs() {
                         <div className="col-12 col-md-6 col-lg-4 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
                                 <h4 className="fw-bold">Expertise</h4>
-                                <p className="text-justify fs-14">At Travanya, our team comprises passionate travel enthusiasts and seasoned experts with vast industry knowledge. We use this expertise to curate personalised itineraries that match your travel preferences.</p>
+                                <p className="text-justify fs-14">Our team at Travanya comprises of passionate travel enthusiasts and seasoned experts with vast industry knowledge. We use this expertise to curate personalised itineraries that match your travel preferences.</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-4 p-4">
@@ -91,7 +91,7 @@ export default function AboutUs() {
                         <div className="col-12 col-md-6 p-4">
                             <div className="card shadow trv-why-chose-card rounded-0 border border-0 d-flex justify-content-center p-3">
                                 <h4 className="fw-bold">Sustainable Travel With Travanya</h4>
-                                <p className="text-justify fs-14">Travanya takes its commitment to environmental stewardship seriously. Through our dedication to sustainability, we advocate for eco-conscious travel behaviours and work closely with like-minded partners to minimise our ecological footprint. Opt for Travanya for a journey that honours and safeguards the natural beauty of our planet.</p>
+                                <p className="text-justify fs-14">Travanya takes its commitment to environmental stewardship seriously. With our commitment to sustainability, we advocate for eco-conscious travel behaviours and work closely with like-minded partners to minimise our ecological footprint. Opt for Travanya for a journey that honours and safeguards the natural beauty of our planet.</p>
                             </div>
                         </div>
                     </div>
