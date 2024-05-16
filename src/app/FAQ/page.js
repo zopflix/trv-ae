@@ -36,7 +36,7 @@ export default function SiteMap() {
                             <div id="Q1" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">We give complete vacation packages that cover every step of organizing, scheduling, and planning the trip. Our team of travel experts leaves no stone unturned to ensure all your demands are met and a hassle-free journey has been organised well in time for you.</span>
+                                    <span className="ms-2">We give complete vacation packages that cover every step of organising, scheduling, and planning the trip. Our team of travel experts leaves no stone unturned to ensure all your demands are met and a hassle-free journey has been organised well in time for you.</span>
                                 </div>
                             </div>
                         </div>
