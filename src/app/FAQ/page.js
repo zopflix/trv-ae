@@ -30,13 +30,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingOne">
                                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Q1" aria-expanded="true" aria-controls="Q1">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">What Services Do You Offer?</span>
+                                    <span className="ms-2">What services are offered by Travanya?</span>
                                 </button>
                             </h2>
                             <div id="Q1" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">We provide end-to-end holiday packages that involve the complete process of planning, booking, and arranging the holiday. Our diligent travel agents strive hard to cater to the needs of the travellers, thereby making their holiday seamless and hassle-free.</span>
+                                    <span className="ms-2">We give complete vacation packages that cover every step of organizing, scheduling, and planning the trip. Our team of travel experts leaves no stone unturned to ensure all your demands are met and a hassle-free journey has been organised well in time for you.</span>
                                 </div>
                             </div>
                         </div>
@@ -44,13 +44,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q2" aria-expanded="false" aria-controls="Q2">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">Do You ONLY Provide All-Inclusive Package Tours?</span>
+                                    <span className="ms-2">Is planning my tour with Travanya chaotic?</span>
                                 </button>
                             </h2>
                             <div id="Q2" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">While we recommend travellers to get all-inclusive package tours, we can also exclude particular services on-request like sightseeing, transfers, flight/train tickets, etc for those who do not want to buy entire services from us for any reason.</span>
+                                    <span className="ms-2">Using Travanya.com to plan a tour is really simple. To obtain carefully designed trip packages, browse the suggested itineraries provided on the website or give us a call. Tell us about your preferences in case you want it to be customised as per your requirements, and we'll work with you to create it while keeping your needs and budget in mind.</span>
                                 </div>
                             </div>
                         </div>
@@ -58,13 +58,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q3" aria-expanded="false" aria-controls="Q3">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">How Do I Plan My Tour?</span>
+                                    <span className="ms-2">What are the steps to book my tour with Travanya?</span>
                                 </button>
                             </h2>
                             <div id="Q3" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Planning tours with Travanya.com is super easy. Go through the suggested itineraries given on the website or call us to get well-designed tour packages. If you want to customize it, let us know your requirements and we’ll help you design it, keeping your budget and requirements in mind.</span>
+                                    <span className="ms-2">The first and the last step to get your tour package is to mail us your requirements or even simpler, call us and tell us about what you want to have a perfect vacation and we assure you, we’ll handle the rest.</span>
                                 </div>
                             </div>
                         </div>
@@ -72,13 +72,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q4" aria-expanded="false" aria-controls="Q4">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">How Can I Book My Tour With You?</span>
+                                    <span className="ms-2">What all things are included in Travanya’s package?</span>
                                 </button>
                             </h2>
                             <div id="Q4" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">You simply have to mail us your requirements or give us a call and we’ll assist you in the booking process.</span>
+                                    <span className="ms-2">Depending on the number of people on the itinerary, our package cost typically includes hotel accommodations with breakfast, transportation for all city tours, and excursions by private air-conditioned car, van, or coach; it also may include train fare (if applicable); local guides who speak English or another foreign language when leading city tours; monument admission fees; and our assistance prior to and during the tour. In addition to lunches or dinners and other services, we may also add on-demand certain special activities like an elephant ride, a camel safari, a boat excursion, a wildlife safari etc.</span>
                                 </div>
                             </div>
                         </div>
@@ -86,13 +86,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q5" aria-expanded="false" aria-controls="Q5">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">What Is Included In Your Package Cost?</span>
+                                    <span className="ms-2">Do you have any other options apart from All-Inclusive Package Tours?</span>
                                 </button>
                             </h2>
                             <div id="Q5" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Our package cost usually includes hotel accommodations with breakfast, all transfers, city tours and excursions by private air-conditioned car/van/coach depending on the number of people as per the itinerary, train fare (if applicable), local English speaking or other foreign language speaking guides (if available for city tours), entrance fee to monuments, and our assistance on arrival and during the tour. On-demand, we can also include some special activities like elephant ride, camel safari, boat ride, etc; apart from including lunches or dinners and other services.</span>
+                                    <span className="ms-2">Although we advise travellers to purchase all-inclusive package tours, we may also, upon request, eliminate specific services from our offerings, such as sightseeing, transportation, airline or train tickets, etc. for those who, for whatever reason, do not wish to purchase our full range of services.</span>
                                 </div>
                             </div>
                         </div>
@@ -100,13 +100,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q6" aria-expanded="false" aria-controls="Q6">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">What About The Payment Process?</span>
+                                    <span className="ms-2">What is your payment procedure?</span>
                                 </button>
                             </h2>
                             <div id="Q6" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Once the package is finalized, we would need you to make a Booking Confirmation Amount to go ahead with the arrangements. The amount will depend on the services you may require for the tour. The exact terms will be declared at the time of reservation.</span>
+                                    <span className="ms-2">Once everything gets confirmed, we will require you to make a Booking Confirmation Amount for us to start with the further arrangements. The amount depends upon your services and tour package. The exact amount will be shared with you at the time of reservation. </span>
                                 </div>
                             </div>
                         </div>
@@ -114,13 +114,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q7" aria-expanded="false" aria-controls="Q7">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">Can this Booking Confirmation Amount Be Paid Via Payment Gateway On The website?</span>
+                                    <span className="ms-2">Can the confirmation amount be paid via Payment Gateway on the official website of Travanya?</span>
                                 </button>
                             </h2>
                             <div id="Q7" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Yes, the Booking Confirmation Amount can be paid via payment gateway. While no gateway charges will be applicable on debit card payments, 1% gateway charges will be applied on credit card and net banking payments. We also accept cheques that shall be acknowledged once processed & clear.</span>
+                                    <span className="ms-2">Yes, you can make your bookings via Payment Gateway on Travanya. However, a gateway charge of 1% will be applicable on net banking and credit card payments.</span>
                                 </div>
                             </div>
                         </div>
@@ -128,13 +128,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q8" aria-expanded="false" aria-controls="Q8">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">What If I Have to Make Any Changes in the Tour for Any Reason?</span>
+                                    <span className="ms-2">What hotel options are included in the package?</span>
                                 </button>
                             </h2>
                             <div id="Q8" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">We shall do our best to make changes as per your request and shall not charge you anything unless there is a penalty charged by principal suppliers for making these changes.</span>
+                                    <span className="ms-2">We offer a minimum of three-star Standard Category hotels, as well as four-star or better Superior or Premium hotels and five-star or superior Deluxe hotels. However, deluxe or premium hotels aren't always available at some locations. In these situations, we offer the best hotels that might not fit into either the premium or deluxe category. On request, we can include boutique, heritage, or palace hotels in your package.</span>
                                 </div>
                             </div>
                         </div>
@@ -142,13 +142,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q9" aria-expanded="false" aria-controls="Q9">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">What All Hotels Do You Provide?</span>
+                                    <span className="ms-2">Can I choose a hotel stay as per my preferences?</span>
                                 </button>
                             </h2>
                             <div id="Q9" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">We provide minimum Standard Category Hotels i.e. 3-star hotels, Superior or Premium Hotels i.e. 4-star or equivalent, and Deluxe Hotels i.e. 5-star or equivalent. However, at some destinations, deluxe or premium hotels are not there and in such cases, we provide the best available hotels which may not conform to either Premium or Deluxe category. We can also include heritage/palace/boutique hotels in your package on demand.</span>
+                                    <span className="ms-2">The answer is - Why Not? We will send you a detailed list of all our hotels after the rest of the procedures are completed. You have full liberty to choose what fits you the best! </span>
                                 </div>
                             </div>
                         </div>
@@ -156,13 +156,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q10" aria-expanded="false" aria-controls="Q10">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">Will I Know Which Hotels I Will Be Staying in Before I Go?</span>
+                                    <span className="ms-2">Can we make changes to the tour plan after the booking is confirmed?</span>
                                 </button>
                             </h2>
                             <div id="Q10" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">Absolutely! We shall send you a detailed list of hotels from which you can choose before making a payment.</span>
+                                    <span className="ms-2">There are no restrictions as such to make changes to your package. However, it totally depends upon the situation. We don’t charge any extra amount for changes unless there is a penalty charged by principal suppliers for the same.</span>
                                 </div>
                             </div>
                         </div>
@@ -170,13 +170,13 @@ export default function SiteMap() {
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q11" aria-expanded="false" aria-controls="Q11">
                                     <strong>Q:</strong>
-                                    <span className="ms-2">Who Will I Meet When I Arrive In The Country I Book A Holiday Package To?</span>
+                                    <span className="ms-2">Who will escort me from the foreign airport?</span>
                                 </button>
                             </h2>
                             <div id="Q11" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <strong>A:</strong>
-                                    <span className="ms-2">You will be greeted by our representative at the airport on your arrival. He shall be holding a placard of your name for identification.</span>
+                                    <span className="ms-2">Our representative at the airport will be there to greet you in the foreign land. He/She will be holding a placard of your name for easy identification.</span>
                                 </div>
                             </div>
                         </div>
