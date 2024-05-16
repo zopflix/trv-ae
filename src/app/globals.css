@@ -399,16 +399,6 @@ header .accordion .accordion-button.collapsed .readMorebtn {
     height: 30px;
 }
 
-.chooseBox .chooseBoxIcon {
-    height: 80px !important;
-    width: 80px !important;
-    padding-top: 20px;
-    transition: 0.4s;
-}
-
-.chooseBox .chooseBoxIcon:hover {
-    border-radius: 50% !important;
-}
 
 .BlogAuthorBox {
     background: transparent linear-gradient(270deg, #12547C 0%, #27A4EF 100%) 0% 0% no-repeat padding-box;

@@ -87,96 +87,96 @@ export default function Home() {
               height={43}
             />
           </div>
-          <section id="chooseSection" className='py-5 bg-blue'>
+          <section id="chooseSection" className='py-5'>
             <div className='container'>
               <div className='row'>
                 <div className='col-12'>
-                  <h2 className='color-white fw-normal mb-5 text-center'>Why <strong className="fw-bold">Choose Us?</strong></h2>
+                  <h2 className='color-black fw-normal mb-3'>Why <strong className="fw-bold color-blue">Choose Us?</strong></h2>
                 </div>
               </div>
               <div className='row'>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/IATA-Certified.svg"
+                        src="icon/IATA-Certified-icon.svg"
                         alt="IATA Certified icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>IATA-Certified</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>IATA-Certified</h3>
                   </div>
                 </div>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/Verified-Experts.svg"
+                        src="icon/Verified-Experts-icon.svg"
                         alt="Verified Experts icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>Verified Experts</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>Verified Experts</h3>
                   </div>
                 </div>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/Tour-Options.svg"
-                        alt="100+ Tour Options icon"
+                        src="icon/Tour-Options-icon.svg"
+                        alt="Tour Options icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>100+ Tour Options</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>100+ Tour Options</h3>
                   </div>
                 </div>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/Easy-Payment.svg"
+                        src="icon/Easy-Payment-icon.svg"
                         alt="Easy Payment icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>Easy Payment</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>Easy Payment</h3>
                   </div>
                 </div>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/Satisfaction.svg"
-                        alt="100% Satisfaction icon"
+                        src="icon/Satisfaction-icon.svg"
+                        alt="Satisfaction icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>100% Satisfaction</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>100% Satisfaction</h3>
                   </div>
                 </div>
                 <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
-                  <div className='chooseBox'>
-                    <div className='chooseBoxIcon m-auto bg-white text-center rounded-3'>
+                  <div className='chooseBox bg-light-blue border rounded-3 py-4'>
+                    <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
                         loader={trvLoader}
-                        src="icon/Customisations.svg"
-                        alt="Customisations icon"
+                        src="icon/Customisations-icon.svg"
+                        alt="Satisfaction icon"
                         width={40}
                         height={40}
                       />
                     </div>
-                    <h3 className='color-white fs-14 text-center mt-3'>Customisations</h3>
+                    <h3 className='color-blue fs-14 text-center mt-3 mb-0'>Customisations</h3>
                   </div>
                 </div>
               </div>
