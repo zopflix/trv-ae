@@ -194,20 +194,6 @@ header .accordion .accordion-button.collapsed .readMorebtn {
     border-color: var(--color-orange) !important;
 }
 
-footer .main-logo img {
-    max-width: 200px;
-}
-
-footer ul li a {
-    color: rgba(0, 0, 0, 0.7);
-    padding: 4px 0px;
-    display: inline-block;
-}
-
-footer ul li a:hover {
-    color: var(--color-orange);
-}
-
 .SubscribeNewsForm form button {
     background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
     font-size: 14px;
@@ -676,6 +662,36 @@ header {
 }
 
 /* Payment Method Css end */
+
+/* Foote css start */
+
+.FooterLayoutOne {
+    color: #fff;
+}
+
+footer ul li a {
+    color: #fff;
+    padding: 4px 0px;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+footer ul li a:hover {
+    opacity: 1;
+}
+
+footer .footerWrp {
+    background-image: url('https://assets.travanya.com/footerBG.webp');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+footer .footerWrp h3{
+    line-height: 22px;
+}
+
+/* Foote css end */
 
 /* media start */
 
