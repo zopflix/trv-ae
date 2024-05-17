@@ -50,8 +50,10 @@ export default function Home() {
             />
           </div>
           <div className='spaceDivider'></div>
-          <HolidayCategories />
           <GoogleReviews />
+          <div className='spaceDivider'></div>
+          <HolidayCategories />
+          <SubscribeNewsletter></SubscribeNewsletter>
           <section id="AboutBox" className='py-5'>
             <div className='container'>
               <div className='row align-items-center'>
@@ -95,9 +97,6 @@ export default function Home() {
 
             </div>
           </section>
-
-          <SubscribeNewsletter></SubscribeNewsletter>
-
           <section id="chooseSection" className='py-5'>
             <div className='container'>
               <div className='row'>
