@@ -2,12 +2,14 @@ import Image from "next/image";
 import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import { tenantId } from "../config";
 import { getAllHolidayPackages } from "../services/holidayService";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { aedNumberFormat } from "../helpers/common";
+import InquiryPopup from "./holiday-inquiry-popup";
 
 export default function HolidayCategories() {
     const [holidayPackages, setHolidayPackages] = useState([]);
     const [selectedDest, setSelectedDest] = useState('maldives');
+    const [openInquiryModal, setOpenInquiryModal] = useState(false);
 
     const getHolidaysByDest = (dest) => {
         getAllHolidayPackages(tenantId, dest).then(res => {
@@ -41,94 +43,7 @@ export default function HolidayCategories() {
                         <div className="col-12 col-lg-5 mb-4">
                             <div className="HolidayCategoriesNavTabs bg-grey p-4 rounded-3">
                                 <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'maldives' && ' active'}`}>
-                                        <div className="row align-items-center">
-                                            <div className="col-2 pe-0 d-none d-lg-inline">
-                                                <div className="HolidayThumImg">
-                                                    <Image
-                                                        className="w-100 h-auto"
-                                                        loader={trvLoader}
-                                                        src="Sri-Lanka.webp"
-                                                        alt="Sri-Lanka"
-                                                        width={60}
-                                                        height={60}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('srilanka')}>
-                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
-                                                    <div>
-                                                        <div>Sri Lanka</div>
-                                                    </div>
-                                                    <div className="d-none d-lg-block">
-                                                        <div className="text-end">
-                                                            <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 1099*</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'mauritius' && ' active'}`}>
-                                        <div className="row align-items-center">
-                                            <div className="col-2 pe-0 d-none d-lg-inline">
-                                                <div className="HolidayThumImg">
-                                                    <Image
-                                                        className="w-100 h-auto"
-                                                        loader={trvLoader}
-                                                        src="seychelles.webp"
-                                                        alt="seychelles img"
-                                                        width={60}
-                                                        height={60}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('seychelles')}>
-                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
-                                                    <div>
-                                                        <div>Seychelles</div>
-                                                    </div>
-                                                    <div className="d-none d-lg-block">
-                                                        <div className="text-end">
-                                                            <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 5199*</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'indonesia' && ' active'}`}>
-                                        <div className="row align-items-center">
-                                            <div className="col-2 pe-0 d-none d-lg-inline">
-                                                <div className="HolidayThumImg">
-                                                    <Image
-                                                        className="w-100 h-auto"
-                                                        loader={trvLoader}
-                                                        src="Georgia.webp"
-                                                        alt="Georgia img"
-                                                        width={60}
-                                                        height={60}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('georgia')}>
-                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
-                                                    <div>
-                                                        <div>Georgia</div>
-                                                    </div>
-                                                    <div className="d-none d-lg-block">
-                                                        <div className="text-end">
-                                                            <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 1199*</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'fiji' && ' active'}`}>
+                                <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'maldives' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -157,7 +72,67 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
+                                  
                                     <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'seychelles' && ' active'}`}>
+                                        <div className="row align-items-center">
+                                            <div className="col-2 pe-0 d-none d-lg-inline">
+                                                <div className="HolidayThumImg">
+                                                    <Image
+                                                        className="w-100 h-auto"
+                                                        loader={trvLoader}
+                                                        src="seychelles.webp"
+                                                        alt="seychelles img"
+                                                        width={60}
+                                                        height={60}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('seychelles')}>
+                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
+                                                    <div>
+                                                        <div>Seychelles</div>
+                                                    </div>
+                                                    <div className="d-none d-lg-block">
+                                                        <div className="text-end">
+                                                            <p className="mb-0 fs-12 fw-bold">From</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 5199*</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'georgia' && ' active'}`}>
+                                        <div className="row align-items-center">
+                                            <div className="col-2 pe-0 d-none d-lg-inline">
+                                                <div className="HolidayThumImg">
+                                                    <Image
+                                                        className="w-100 h-auto"
+                                                        loader={trvLoader}
+                                                        src="Georgia.webp"
+                                                        alt="Georgia img"
+                                                        width={60}
+                                                        height={60}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('georgia')}>
+                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
+                                                    <div>
+                                                        <div>Georgia</div>
+                                                    </div>
+                                                    <div className="d-none d-lg-block">
+                                                        <div className="text-end">
+                                                            <p className="mb-0 fs-12 fw-bold">From</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 1199*</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                 
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'mauritius' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -186,7 +161,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'bhutan' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Indonesia ' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -200,22 +175,51 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('armenia')}>
+                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('Indonesia ')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
-                                                        <div>Armenia</div>
+                                                        <div>Indonesia </div>
                                                     </div>
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 999*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 899*</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'thailand' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Malaysia ' && ' active'}`}>
+                                        <div className="row align-items-center">
+                                            <div className="col-2 pe-0 d-none d-lg-inline">
+                                                <div className="HolidayThumImg">
+                                                    <Image
+                                                        className="w-100 h-auto"
+                                                        loader={trvLoader}
+                                                        src="Georgia.webp"
+                                                        alt="Georgia img"
+                                                        width={60}
+                                                        height={60}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('Malaysia ')}>
+                                                <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
+                                                    <div>
+                                                        <div>Malaysia </div>
+                                                    </div>
+                                                    <div className="d-none d-lg-block">
+                                                        <div className="text-end">
+                                                            <p className="mb-0 fs-12 fw-bold">From</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 699*</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'azerbaijan' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -244,7 +248,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'malaysia' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'hongkong' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -258,15 +262,15 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('thailand')}>
+                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('hongkong')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
-                                                        <div>Thailand</div>
+                                                        <div>Hong Kong</div>
                                                     </div>
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 799*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 2599*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -279,7 +283,10 @@ export default function HolidayCategories() {
                         </div>
                         <div className="col-12 col-lg-7">
                             <div className="row">
-                                <div className="col-12 col-md-6 mb-3">
+                                <div className="col-12 col-md-6 mb-3" onClick={() => {
+                                            let path = `${'/international-tour-packages/'}${selectedDest}-tour-packages/${''}`;
+                                            window.open(path, '_blank');
+                                        }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -293,11 +300,11 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Singapore Tour Packages</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1599*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -317,11 +324,11 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Thailand Tour Packages</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 799*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -341,11 +348,11 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Armenia Tour Packages</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 999*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -365,11 +372,11 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Saudi Arabia Tour Packages</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1450*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,6 +421,9 @@ export default function HolidayCategories() {
                         </div>
                     </div>
                 </div>
+
+                {/* <Suspense><InquiryPopup openInquiryModal={openInquiryModal} setOpenInquiryModal={setOpenInquiryModal} package={inquiryPkg} travelDate={new Date((new Date()).getTime() + (15 * 24 * 60 * 60 * 1000))} location={destinationName} /></Suspense> */}
+
             </section>
         </>
     )
