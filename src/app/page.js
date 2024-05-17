@@ -50,10 +50,11 @@ export default function Home() {
             />
           </div>
           <div className='spaceDivider'></div>
-          <HolidayCategories />
           <GoogleReviews />
           <div className='spaceDivider'></div>
-          <section id="AboutBox" className='bg-orange pt-5'>
+          <HolidayCategories />
+          <SubscribeNewsletter></SubscribeNewsletter>
+          <section id="AboutBox" className='py-5'>
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 col-md-5'>
@@ -61,43 +62,41 @@ export default function Home() {
                     <h2 class="color-black fw-normal mb-3">We make it easier for everyone to experience <strong class="fw-bold color-blue">the world Feedback</strong></h2>
                     <p className='fs-12'>Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality.</p>
                     <p className='fs-12'>As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
-                    <a className='fs-14 text-decoration-none' href='/about-us/'>About More <i className="fa-solid fa-chevron-right fs-12 ms-1"></i></a>
+                    <a className='fs-14 text-decoration-none buttonStyle2 py-3 px-4 d-inline-block' href='/about-us/'>About More <i className="fa-solid fa-chevron-right fs-12 ms-1"></i></a>
+                    <Image
+                      className="h-auto float-end d-none d-lg-block"
+                      loader={trvLoader}
+                      src="about-trevler-women.webp"
+                      alt="about-trevler-women"
+                      width={200}
+                      height={43}
+                    />
                   </div>
                 </div>
-                <div className='col-12 col-md-1'></div>
-                <div className='col-12 col-md-6'>
-
-                </div>
-              </div>
-              <div className='row align-items-center'>
-                <div className='col-12 col-sm-12 col-md-6 col-lg-7 py-3'>
-
-                </div>
-                <div className='col-12 col-sm-12 col-md-6 col-lg-5 py-3'>
-                  {/* <Image
-                    className="h-auto w-100 d-none d-md-block"
+                <div className='col-12 col-md-2 pe-0'>
+                  <Image
+                    className="h-auto w-100"
                     loader={trvLoader}
-                    src="about-img.webp"
-                    alt="About Image"
+                    src="about-air-img.webp"
+                    alt="about air img"
                     width={176}
                     height={43}
-                  /> */}
+                  />
+                </div>
+                <div className='col-12 col-md-5'>
+                  <Image
+                    className="h-auto w-100"
+                    loader={trvLoader}
+                    src="about-main-img.webp"
+                    alt="about main img"
+                    width={176}
+                    height={43}
+                  />
                 </div>
               </div>
+
             </div>
           </section>
-          <div className='bg-blue d-none d-md-inline'>
-            <Image
-              className="h-auto w-100"
-              loader={trvLoader}
-              src="about-section-bottom-border.svg"
-              alt="About Bottom Border"
-              width={176}
-              height={43}
-            />
-          </div>
-          <SubscribeNewsletter></SubscribeNewsletter>
-
           <section id="chooseSection" className='py-5'>
             <div className='container'>
               <div className='row'>

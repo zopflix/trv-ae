@@ -720,6 +720,12 @@ footer .footerWrp h3 {
     left: -25%;
 }
 
+#AboutBox{
+    background-image: url('https://assets.travanya.com/about-bg-map.webp');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
 /* media start */
 
 @media(max-width:767px) {
