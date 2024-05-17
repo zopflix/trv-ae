@@ -108,7 +108,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'georgia' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Georgia' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -122,7 +122,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('georgia')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Georgia')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Georgia</div>

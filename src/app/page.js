@@ -37,10 +37,10 @@ export default function Home() {
           height={20}
         />
         <div className=''>
-          Form code here
+        <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
         </div>
       </div>
-      <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
+      {/* <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} /> */}
       {
         !isFirstRender &&
         <Fragment>

@@ -130,7 +130,7 @@ export default function SearchControl(props) {
                     <div className='formTabs ms-3'>
 
                         <ul className='ps-0 d-flex formTabsButton mb-0'>
-                            <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
+                            {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
                                 <div className='text-center'>
                                     <Image
                                         className="h-auto"
@@ -142,14 +142,14 @@ export default function SearchControl(props) {
                                     />
                                     <div className='fs-14 mt-2'>Flights</div>
                                 </div>
-                            </li>
+                            </li> */}
 
-                            <li className={props?.selectedTab == 1 ? "active" : ""} onClick={() => router.push('/holidays')}>
+                            <li className={props?.selectedTab == 0 ? "active" : ""} onClick={() => router.push('/holidays')}>
                                 <div className='text-center'>
                                     <Image
                                         className="h-auto"
                                         loader={trvLoader}
-                                        src={props?.selectedTab == 1 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
+                                        src={props?.selectedTab == 0 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
                                         alt="Flight Icon"
                                         width={24}
                                         height={24}
@@ -161,7 +161,7 @@ export default function SearchControl(props) {
                         </ul>
                     </div>
                 }
-                {props?.selectedTab == 1
+                {props?.selectedTab == 0
                     ? <div className="HolidDayForm ">
                         <Suspense><HolidayEnquiryForm /></Suspense>
                     </div>
