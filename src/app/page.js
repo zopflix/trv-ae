@@ -52,8 +52,7 @@ export default function Home() {
           <div className='spaceDivider'></div>
           <HolidayCategories />
           <GoogleReviews />
-          <div className='spaceDivider'></div>
-          <section id="AboutBox" className='pt-5'>
+          <section id="AboutBox" className='py-5'>
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 col-md-5'>
@@ -72,13 +71,22 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className='col-12 col-md-1'></div>
-                <div className='col-12 col-md-6'>
+                <div className='col-12 col-md-2 pe-0'>
                   <Image
                     className="h-auto w-100"
                     loader={trvLoader}
-                    src="about-trevler-women.webp"
-                    alt="about-trevler-women"
+                    src="about-air-img.webp"
+                    alt="about air img"
+                    width={176}
+                    height={43}
+                  />
+                </div>
+                <div className='col-12 col-md-5'>
+                  <Image
+                    className="h-auto w-100"
+                    loader={trvLoader}
+                    src="about-main-img.webp"
+                    alt="about main img"
                     width={176}
                     height={43}
                   />
