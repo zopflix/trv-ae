@@ -174,30 +174,7 @@ header .accordion .accordion-button.collapsed .readMorebtn {
 
 /* Domestic Flights css end */
 
-.SubscribeNewsBox {
-    background-image: url('https://assets.shipratravel.com/trv/subscribe-img.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-}
 
-.SubscribeNewsForm input.mailField {
-    height: 55px;
-}
-
-.SubscribeNewsForm .form-check input {
-    border: 1px solid var(--color-orange);
-}
-
-.SubscribeNewsForm .form-check input:checked {
-    background-color: var(--color-orange) !important;
-    border-color: var(--color-orange) !important;
-}
-
-.SubscribeNewsForm form button {
-    background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
-    font-size: 14px;
-}
 
 .footerPaymetnCArd {
     max-width: 600px !important;
@@ -681,10 +658,6 @@ footer .footerWrp h3 {
 
 /* Google Review CSS Start */
 
-
-
-/* Google Review CSS end */
-
 .GoogleReviews {
     background-color: #F2F6FF;
     background-image: url('https://assets.travanya.com/GoogleReviewBG.webp');
@@ -705,6 +678,46 @@ footer .footerWrp h3 {
 
 .GoogleReviews .googleReview:hover {
     background: #467FD3 !important;
+}
+
+/* Google Review CSS end */
+
+/* .SubscribeNewsBox {
+    background-image: url('https://assets.shipratravel.com/trv/subscribe-img.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+} */
+
+/* .SubscribeNewsForm input.mailField {
+    height: 60px;
+}
+
+.SubscribeNewsForm .form-check input {
+    border: 1px solid var(--color-orange);
+}
+
+.SubscribeNewsForm .form-check input:checked {
+    background-color: var(--color-orange) !important;
+    border-color: var(--color-orange) !important;
+} */
+
+.SubscribeNewsForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+.SubscribeNewsForm form button {
+    background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
+    font-size: 14px;
+}
+
+.SubscribeNewsForm form input {
+    height: 55px;
+}
+
+.SubscribeNewsForm .airImG {
+    left: -25%;
 }
 
 /* media start */
@@ -729,10 +742,6 @@ footer .footerWrp h3 {
 
     .topFlightDetailsList h3 {
         font-size: 16px;
-    }
-
-    .SubscribeNewsForm h2 {
-        font-size: 16px !important;
     }
 
     .slick-slider .slick-arrow {
@@ -779,6 +788,7 @@ footer .footerWrp h3 {
 }
 
 @media(min-width:992px) {
+
 
     body {
         padding-top: 73px;
@@ -875,10 +885,6 @@ footer .footerWrp h3 {
         border-radius: 5px;
     }
 
-    .SubscribeNewsForm {
-        width: 85%;
-        margin: 20px auto;
-    }
 
     .packageBox {
         overflow: hidden;

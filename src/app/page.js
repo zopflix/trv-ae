@@ -56,23 +56,32 @@ export default function Home() {
           <section id="AboutBox" className='bg-orange pt-5'>
             <div className='container'>
               <div className='row align-items-center'>
-                <div className='col-12 col-sm-12 col-md-6 col-lg-7 py-3'>
+                <div className='col-12 col-md-5'>
                   <div className='about-content'>
-                    <h2 className='color-white fw-normal mb-3'>About <strong className="fw-bold">Travanya</strong></h2>
-                    <p className='color-white fs-12'>Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality.</p>
-                    <p className='color-white fs-12'>As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
-                    <a className='fs-14 color-white text-decoration-none' href='/about-us/'>About More <i className="fa-solid fa-chevron-right fs-12 ms-1"></i></a>
+                    <h2 class="color-black fw-normal mb-3">We make it easier for everyone to experience <strong class="fw-bold color-blue">the world Feedback</strong></h2>
+                    <p className='fs-12'>Enjoy a smooth travel with Travanya, where we make your wanderlust dreams come true. Our devoted team excels in smooth flight reservations and customised vacation bundles that fit your budget without sacrificing quality.</p>
+                    <p className='fs-12'>As your companions in travel, we enable you to design one-of-a-kind adventures. With transparent pricing, stress-free organization, and a dedication to ensuring your journey shines as the highlight of your narrative. Leave the details to us; your task is to pack and relish the experience.</p>
+                    <a className='fs-14 text-decoration-none' href='/about-us/'>About More <i className="fa-solid fa-chevron-right fs-12 ms-1"></i></a>
                   </div>
                 </div>
+                <div className='col-12 col-md-1'></div>
+                <div className='col-12 col-md-6'>
+
+                </div>
+              </div>
+              <div className='row align-items-center'>
+                <div className='col-12 col-sm-12 col-md-6 col-lg-7 py-3'>
+
+                </div>
                 <div className='col-12 col-sm-12 col-md-6 col-lg-5 py-3'>
-                  <Image
+                  {/* <Image
                     className="h-auto w-100 d-none d-md-block"
                     loader={trvLoader}
                     src="about-img.webp"
                     alt="About Image"
                     width={176}
                     height={43}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -87,6 +96,8 @@ export default function Home() {
               height={43}
             />
           </div>
+          <SubscribeNewsletter></SubscribeNewsletter>
+
           <section id="chooseSection" className='py-5'>
             <div className='container'>
               <div className='row'>
@@ -182,7 +193,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <SubscribeNewsletter></SubscribeNewsletter>
           <Footer></Footer>
         </Fragment>
       }
