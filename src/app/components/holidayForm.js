@@ -116,7 +116,7 @@ export default function HolidayForm(props) {
     }
 
     return (
-        <section id="mainSearchForm" className="py-5">
+        <section id="mainSearchForm">
             <div className='container'>
                 {/* <div className="row">
                     <div className="col-12">

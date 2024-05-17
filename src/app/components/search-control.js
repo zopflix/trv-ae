@@ -103,7 +103,7 @@ export default function SearchControl(props) {
     }
 
     return (
-        <section id="mainSearchForm" className={isModifyComponent ? 'py-2' : 'py-5'}>
+        <section id="mainSearchForm" >
             <div className='container'>
                 {
                     (!!props?.airlineTitle && !!props?.minPrice) &&
