@@ -279,38 +279,137 @@ export default function HolidayCategories() {
                         </div>
                         <div className="col-12 col-lg-7">
                             <div className="row">
-                                {holidayPackages?.length > 0
-                                    ? holidayPackages?.map((pkg, ix) => {
-                                        return <div className="col-12 col-md-6 mb-3" key={ix} onClick={() => {
-                                            let path = `${pkg.isDomestic ? '/india-tour-packages/' : '/international-tour-packages/'}${selectedDest}-tour-packages/${pkg.Slug}`;
-                                            window.open(path, '_blank');
-                                        }}>
-                                            <span className="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
-                                                <Image
-                                                    className=" w-100 "
-                                                    loader={sfLoader}
-                                                    src={pkg.ImageUrl}
-                                                    alt="pkg img"
-                                                    width={100}
-                                                    height={100}
-                                                />
-                                                <div className="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
-                                                <div className="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
-                                                    <div className="d-flex align-items-center justify-content-between">
-                                                        <div>
-                                                            <p className="mb-0 fs-16 fw-bold color-black">{pkg.Title}</p>
-                                                        </div>
-                                                        <div className="text-end">
-                                                            <p className="mb-0 fs-12 fw-bold color-black">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold color-orange">{pkg.StandardPrice ? aedNumberFormat(pkg.StandardPrice) : (pkg.DeluxePrice ? aedNumberFormat(pkg.DeluxePrice) : aedNumberFormat(pkg.PremiumPrice))}</p>
+                                <div className="col-12 col-md-6 mb-3">
+                                    <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
+                                        <Image
+                                            className="w-100"
+                                            loader={trvLoader}
+                                            src="Malaysia.webp"
+                                            alt="pkg img"
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <div class="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
+                                        <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p class="mb-0 fs-12 fw-bold color-black">From</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div className="col-12 col-md-6 mb-3">
+                                    <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
+                                        <Image
+                                            className="w-100"
+                                            loader={trvLoader}
+                                            src="Malaysia.webp"
+                                            alt="pkg img"
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <div class="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
+                                        <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p class="mb-0 fs-12 fw-bold color-black">From</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div className="col-12 col-md-6 mb-3">
+                                    <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
+                                        <Image
+                                            className="w-100"
+                                            loader={trvLoader}
+                                            src="Malaysia.webp"
+                                            alt="pkg img"
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <div class="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
+                                        <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p class="mb-0 fs-12 fw-bold color-black">From</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div className="col-12 col-md-6 mb-3">
+                                    <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
+                                        <Image
+                                            className="w-100"
+                                            loader={trvLoader}
+                                            src="Malaysia.webp"
+                                            alt="pkg img"
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <div class="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
+                                        <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Maldives Serenity Retreat</p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p class="mb-0 fs-12 fw-bold color-black">From</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">₹45,999.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+
+                                {/* <div className="">
+                                    {holidayPackages?.length > 0
+                                        ? holidayPackages?.map((pkg, ix) => {
+                                            return <div className="col-12 col-md-6 mb-3" key={ix} onClick={() => {
+                                                let path = `${pkg.isDomestic ? '/india-tour-packages/' : '/international-tour-packages/'}${selectedDest}-tour-packages/${pkg.Slug}`;
+                                                window.open(path, '_blank');
+                                            }}>
+                                                <span className="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
+                                                    <Image
+                                                        className=" w-100 "
+                                                        loader={sfLoader}
+                                                        src={pkg.ImageUrl}
+                                                        alt="pkg img"
+                                                        width={100}
+                                                        height={100}
+                                                    />
+                                                    <div className="VisaFreeBoxOverly position-absolute start-0 end-0"></div>
+                                                    <div className="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <p className="mb-0 fs-16 fw-bold color-black">{pkg.Title}</p>
+                                                            </div>
+                                                            <div className="text-end">
+                                                                <p className="mb-0 fs-12 fw-bold color-black">From</p>
+                                                                <p className="mb-0 fs-16 fw-bold color-orange">{pkg.StandardPrice ? aedNumberFormat(pkg.StandardPrice) : (pkg.DeluxePrice ? aedNumberFormat(pkg.DeluxePrice) : aedNumberFormat(pkg.PremiumPrice))}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    })
-                                    : <span>No Packages Found</span>
-                                }
+                                                </span>
+                                            </div>
+                                        })
+                                        : <span>No Packages Found</span>
+                                    }
+                                </div> */}
                             </div>
                         </div>
                     </div>

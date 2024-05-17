@@ -35,7 +35,7 @@ export default function Home() {
           <div className='spaceDivider'></div>
           {/* <TopFlightDeals /> */}
           <div className='spaceDivider'></div>
-
+          {/* <iframe className='phnPay' src="https://mercury-uat.phonepe.com/transact/simulator?token=BtYkHF0NC3COl8nsQT0us5iU23YKIrjPdr7sNel7LkbZmgR2Gd" /> */}
           <DomesticPackageDeals />
           <div className='spaceDivider'></div>
 
