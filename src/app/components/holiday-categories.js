@@ -27,6 +27,12 @@ export default function HolidayCategories() {
         getHolidaysByDest('maldives');
     }, [])
 
+
+    const handleClick = (destination) => {
+        getHolidaysByDest(destination);
+        setOpenInquiryModal(true); 
+      };
+
     return (
         <>
             <section>
@@ -43,7 +49,7 @@ export default function HolidayCategories() {
                         <div className="col-12 col-lg-5 mb-4">
                             <div className="HolidayCategoriesNavTabs bg-grey p-4 rounded-3">
                                 <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'maldives' && ' active'}`}>
+                                <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Maldives' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -57,7 +63,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('maldives')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Maldives')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Maldives</div>
@@ -73,7 +79,7 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                   
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'seychelles' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Seychelles' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -87,7 +93,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('seychelles')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Seychelles')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Seychelles</div>
@@ -116,7 +122,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('georgia')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('georgia')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Georgia</div>
@@ -132,7 +138,7 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                  
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'mauritius' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Mauritius' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -146,7 +152,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('mauritius')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Mauritius')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Mauritius</div>
@@ -175,7 +181,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('Indonesia ')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Indonesia ')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Indonesia </div>
@@ -204,7 +210,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('Malaysia ')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Malaysia')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Malaysia </div>
@@ -219,7 +225,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'azerbaijan' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Azerbaijan' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -233,7 +239,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('azerbaijan')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Azerbaijan')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Azerbaijan</div>
@@ -248,7 +254,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'hongkong' && ' active'}`}>
+                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Hong Kong' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -262,7 +268,7 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => getHolidaysByDest('hongkong')}>
+                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Hong Kong')}>
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Hong Kong</div>
@@ -284,7 +290,7 @@ export default function HolidayCategories() {
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/international-tour-packages/'}${selectedDest}-tour-packages/${''}`;
+                                            let path = `${'/international-tour-packages/'}${'Singapore'}-tour-packages/${''}`;
                                             window.open(path, '_blank');
                                         }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
@@ -310,7 +316,10 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                 </div>
-                                <div className="col-12 col-md-6 mb-3">
+                                <div className="col-12 col-md-6 mb-3 "onClick={() => {
+                                            let path = `${'/international-tour-packages/'}${'Thailand'}-tour-packages/${''}`;
+                                            window.open(path, '_blank');
+                                        }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -334,7 +343,10 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                 </div>
-                                <div className="col-12 col-md-6 mb-3">
+                                <div className="col-12 col-md-6 mb-3" onClick={() => {
+                                            let path = `${'/international-tour-packages/'}${'Armenia'}-tour-packages/${''}`;
+                                            window.open(path, '_blank');
+                                        }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -358,7 +370,10 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                 </div>
-                                <div className="col-12 col-md-6 mb-3">
+                                <div className="col-12 col-md-6 mb-3" onClick={() => {
+                                            let path = `${'/international-tour-packages/'}${'Saudi Arabi'}-tour-packages/${''}`;
+                                            window.open(path, '_blank');
+                                        }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -422,7 +437,15 @@ export default function HolidayCategories() {
                     </div>
                 </div>
 
-                {/* <Suspense><InquiryPopup openInquiryModal={openInquiryModal} setOpenInquiryModal={setOpenInquiryModal} package={inquiryPkg} travelDate={new Date((new Date()).getTime() + (15 * 24 * 60 * 60 * 1000))} location={destinationName} /></Suspense> */}
+                <Suspense><InquiryPopup
+                 openInquiryModal={openInquiryModal}
+                  setOpenInquiryModal={setOpenInquiryModal}
+                    package={
+                       {"Title": selectedDest}
+                    }
+                    travelDate={new Date((new Date()).getTime() + (15 * 24 * 60 * 60 * 1000))}
+                      location={selectedDest}
+                      /></Suspense>
 
             </section>
         </>

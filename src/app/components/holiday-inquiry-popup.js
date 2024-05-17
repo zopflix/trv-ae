@@ -47,7 +47,8 @@ export default function InquiryPopup(props) {
           : props.package?.StandardPrice,
         adults: props.adults ? props.adults : 1,
         children: props.children ? props.children : 0,
-        placeFrom: 'NA',
+        placeFrom: props?.location ? props?.location :"",
+        placeTo: props?.location ? props?.location :"",
         ip: !!res?.data?.IPv4 ? res?.data?.IPv4 : '',
         referer: searchParams?.get('utm_source') ? (searchParams?.get('utm_source') + ((searchParams?.get('utm_medium') ? (' | ' + searchParams?.get('utm_medium')) : '') + (searchParams?.get('utm_campaign') ? ' | ' + searchParams?.get('utm_campaign') : ''))) : '',
         location: props?.package?.isDomestic ? "Domestic" : props?.location
@@ -229,7 +230,7 @@ export default function InquiryPopup(props) {
                       readOnly
                       className="form-control"
                       type="text"
-                      value={props.package?.Title}
+                      value={props?.package?.Title}
                       placeholder="Couple's Dream Singapore Sojourn"
                     />
                   </div>

@@ -27,6 +27,19 @@ export default function Home() {
   return (
     <Layout>
       {/* <Header></Header> */}
+      <div className=''>
+        <Image
+          className="h-auto w-100"
+          loader={trvLoader}
+          src="TRV-holiday-main-banner.webp"
+          alt="User Icon"
+          width={20}
+          height={20}
+        />
+        <div className=''>
+          Form code here
+        </div>
+      </div>
       <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
       {
         !isFirstRender &&
