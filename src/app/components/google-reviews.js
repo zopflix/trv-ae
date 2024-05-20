@@ -88,7 +88,7 @@ export default function GoogleReviews() {
                                 {reviews?.length > 0 &&
                                     reviews?.map((review, ix) => {
                                         return <div className="slider-items" key={ix}>
-                                            <div className="p-3 my-4 rounded-3">
+                                            <div className="p-3 rounded-3">
 
                                                 <div className="d-flex">
                                                     <div>
@@ -117,7 +117,7 @@ export default function GoogleReviews() {
                                                     </div>
                                                 </div>
                                                 <div className="viewContent mt-2">
-                                                    <p className="view fs-12 pt-1 pe-2">{review.text}</p>
+                                                    <p className="view fs-12 mb-0">{review.text}</p>
                                                 </div>
                                             </div>
                                         </div>
