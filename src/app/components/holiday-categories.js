@@ -40,7 +40,7 @@ export default function HolidayCategories() {
                     <div className="row mb-4">
                         <div className="col-12">
                             <div className="subHeading">
-                                <h2 className="mb-0 fw-normal">Visa on <strong className="color-orange">Arrival Countries</strong></h2>
+                                <h2 className="mb-0 fw-normal">Visa on <strong className="color-blue">Arrival Countries</strong></h2>
                             </div>
                         </div>
                     </div>

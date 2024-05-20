@@ -93,9 +93,9 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className='col-12 col-md-2 pe-0'>
+                <div className='col-12 col-md-2 pe-0 pt-3 '>
                   <Image
-                    className="h-auto w-100"
+                    className="h-auto w-100 d-none d-md-block"
                     loader={trvLoader}
                     src="about-air-img.webp"
                     alt="about air img"

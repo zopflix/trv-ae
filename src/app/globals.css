@@ -688,11 +688,6 @@ footer .footerWrp h3 {
     margin: auto;
 }
 
-.SubscribeNewsForm h2 {
-    font-family: 'Josefin Sans';
-    font-size: 40px;
-}
-
 .SubscribeNewsForm form button {
     background: transparent linear-gradient(180deg, #FC6B42 0%, #AA2600 100%) 0% 0% no-repeat padding-box;
     font-size: 14px;
@@ -715,7 +710,8 @@ footer .footerWrp h3 {
 .about-content h2,
 #chooseSection h2,
 .footerWrp h2,
-.subHeading h2 {
+.subHeading h2,
+.SubscribeNewsForm h2 {
     font-family: 'Josefin Sans';
     font-weight: bold;
 }
@@ -724,6 +720,12 @@ footer .footerWrp h3 {
 /* media start */
 
 @media(max-width:767px) {
+
+    img.SignNewsletterIMG {
+        width: 70% !important;
+        margin: auto;
+        display: table;
+    }
 
     .VisaFreeBox img {
         height: auto !important;
@@ -789,6 +791,10 @@ footer .footerWrp h3 {
 }
 
 @media(min-width:992px) {
+
+    .SubscribeNewsForm h2 {
+        font-size: 40px;
+    }
 
 
     body {

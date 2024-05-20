@@ -54,7 +54,7 @@ export default function SubscribeNewsletter() {
                         <div className="row align-items-center">
                             <div className="col-12 col-md-5 col-lg-4">
                                 <Image
-                                    className="w-100 h-auto"
+                                    className="w-100 h-auto SignNewsletterIMG"
                                     loader={trvLoader}
                                     src="newsletter-left-img.webp"
                                     alt="newsletter left img"
