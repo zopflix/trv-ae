@@ -129,7 +129,7 @@ export default function SearchControl(props) {
                 {!isModifyComponent &&
                     <div className='formTabs ms-3'>
 
-                        <ul className='ps-0 d-flex formTabsButton mb-0'>
+                        <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
                             {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
                                 <div className='text-center'>
                                     <Image
@@ -144,17 +144,19 @@ export default function SearchControl(props) {
                                 </div>
                             </li> */}
 
-                            <li className={props?.selectedTab == 0 ? "active" : ""} onClick={() => router.push('/holidays')}>
-                                <div className='text-center'>
+                            {/* <li className={props?.selectedTab == 0 ? "active" : ""} onClick={() => router.push('/holidays')}> */}
+                            <li className="active">
+                                <div className='text-center d-flex bg-white shadow py-2 px-4 mb-2 rounded-2'>
                                     <Image
-                                        className="h-auto"
+                                        className="h-auto me-2"
                                         loader={trvLoader}
-                                        src={props?.selectedTab == 0 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
+                                        // src={props?.selectedTab == 0 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
+                                        src="icon/holidayMenuIcon.svg"
                                         alt="Flight Icon"
                                         width={24}
                                         height={24}
                                     />
-                                    <div className='fs-14 mt-2'>Holidays</div>
+                                    <div className='fs-14 fw-bold'>Holidays</div>
                                 </div>
                             </li>
 

@@ -483,6 +483,16 @@ body.custom-listing .ContactStrapMobilebox {
 
 /* media start */
 
+@media(min-width:992px) {
+    .FormBoxWrp {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 50px;
+        z-index: 9;
+    }
+}
+
 @media(max-width:991px) {
 
     .modifySearch {
@@ -493,7 +503,7 @@ body.custom-listing .ContactStrapMobilebox {
         top: 52px;
     }
 
-    .flight-results{
+    .flight-results {
         padding-top: 55px;
     }
 

@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <Layout>
       {/* <Header></Header> */}
-      <div className=''>
+      <div className='position-relative'>
         <Image
           className="h-auto w-100"
           loader={trvLoader}
@@ -36,7 +36,7 @@ export default function Home() {
           width={20}
           height={20}
         />
-        <div className=''>
+        <div className='FormBoxWrp'>
         <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
         </div>
       </div>

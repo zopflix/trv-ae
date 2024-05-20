@@ -11,52 +11,13 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.formTabsButton li {
-    display: inline-block;
-    width: 120px;
-    height: 80px;
-    padding-top: 15px;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color: #fff;
-    transition: 0.4s;
-    margin-top: 0px;
-    border-radius: 10px 10px 0px 0px;
 
-}
-
-.formTabsButton li>div {
-    border-right: 1px solid #dee2e6;
-}
-
-.formTabsButton li.active>div {
-    border-right: 0px;
-}
-
-.formTabsButton li.active {
-    background: transparent linear-gradient(180deg, #E0572C 0%, #AE2B00 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 10px #0000004D;
-    margin-top: -10px;
-    height: 90px;
-}
-
-.formTabsButton li:hover {
-    background-color: #f3f3f9;
-    margin-top: -10px;
-    border-radius: 10px 10px 0px 0px;
-    height: 90px;
-}
-
-.formTabsButton li.active div {
-    color: #fff;
-}
-
-#mainSearchForm {
+/* #mainSearchForm {
     background-image: url('https://assets.shipratravel.com/trv/banner-fm.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 .HolidDayForm #mainSearchForm {
     background: transparent !important;
