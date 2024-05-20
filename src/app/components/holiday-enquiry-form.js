@@ -148,7 +148,7 @@ export default function HolidayEnquiryForm(props) {
                 }
                 <div className={props.bannerText && !props.isDetail  ? "HolidayFormBox position-absolute bottom-0 start-0 end-0 mb-lg-5" : ""}>
                     <div className='container'>
-                        <div className='flightSearchWrp rounded-3 bg-white'>
+                        <div className='flightSearchWrp rounded-3 bg-white shadow'>
                             <div className="mainFlightSearchBox py-1 px-3">
                                 <div className="row align-items-center">
                                     <div className="mobForm FieldA col-12">
