@@ -167,7 +167,7 @@ export default function SearchControl(props) {
                             </div>
                         }
                         {props?.selectedTab == 0
-                            ? <div className="HolidDayForm ">
+                            ? <div className="HolidDayForm">
                                 <Suspense><HolidayEnquiryForm /></Suspense>
                             </div>
                             : <div className={isModifyComponent ? 'flightSearchWrp rounded-3 bg-white p-0' : 'flightSearchWrp rounded-3 bg-white p-4'}>

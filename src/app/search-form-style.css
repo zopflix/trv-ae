@@ -345,11 +345,11 @@
     top: 0px;
 }
 
-.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-upcoming{
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-upcoming {
     background-image: url('https://assets.shipratravel.com/trv/icon/top-arow-blue.png');
 }
 
-.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-previous{
+.traveler-form .react-datepicker__year-dropdown .react-datepicker__navigation.react-datepicker__navigation--years-previous {
     background-image: url('https://assets.shipratravel.com/trv/icon/botttom-arow-blue.png');
 }
 
@@ -415,6 +415,15 @@
 /* media start */
 
 @media(max-width:767px) {
+
+    div.HolidDayForm {
+        background-color: #fff;
+    }
+
+    .FormBoxWrp {
+        margin-top: -170px;
+        margin-bottom: 10PX;
+    }
 
     .trv-datepicker>.react-datepicker-wrapper {
         bottom: 50%;
@@ -538,13 +547,6 @@
         background: transparent !important;
     }
 
-    .formTabsButton li {
-        width: 55px;
-        height: 50px !important;
-        padding-top: 5px;
-        margin-top: 0px !important;
-    }
-
     .formTabsButton li:hover {
         border-radius: 0px !important;
         background-color: #fff !important;
@@ -561,6 +563,11 @@
 }
 
 @media(min-width:768px) and (max-width:991px) {
+
+    .FormBoxWrp{
+        margin-top: -100px;
+        margin-bottom: 20px;
+    }
 
     .DepartDatePicer .react-datepicker-popper {
         transform: translate(-50px, 100px) !important;

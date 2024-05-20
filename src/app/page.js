@@ -29,15 +29,23 @@ export default function Home() {
       {/* <Header></Header> */}
       <div className='position-relative'>
         <Image
-          className="h-auto w-100"
+          className="h-auto w-100 d-none d-md-block"
           loader={trvLoader}
           src="TRV-holiday-main-banner.webp"
           alt="User Icon"
           width={20}
           height={20}
         />
+        <Image
+          className="h-auto w-100 d-md-none"
+          loader={trvLoader}
+          src="TRV-holiday-main-banner-mob.webp"
+          alt="User Icon"
+          width={20}
+          height={20}
+        />
         <div className='FormBoxWrp'>
-        <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
+          <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
         </div>
       </div>
       {/* <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} /> */}
@@ -47,7 +55,6 @@ export default function Home() {
           <PartnerLogo></PartnerLogo>
           <div className='spaceDivider'></div>
           {/* <TopFlightDeals /> */}
-          <div className='spaceDivider'></div>
           {/* <iframe className='phnPay' src="https://mercury-uat.phonepe.com/transact/simulator?token=BtYkHF0NC3COl8nsQT0us5iU23YKIrjPdr7sNel7LkbZmgR2Gd" /> */}
           <DomesticPackageDeals />
           <div className='spaceDivider'></div>
@@ -110,7 +117,7 @@ export default function Home() {
 
             </div>
           </section>
-          <section id="chooseSection" className='py-5'>
+          <section id="chooseSection" className='pb-5'>
             <div className='container'>
               <div className='row'>
                 <div className='col-12'>
