@@ -49,7 +49,7 @@ export default function Footer() {
                             </div>
                             <div className="col-12 col-md-4 col-lg-3">
                                 <h3 className="my-0">
-                                    <a className="color-white text-decoration-none fs-22 fw-bold" href="#">+91-869-999-8456</a><br />
+                                    <a className="color-white text-decoration-none fs-22 fw-bold" href={'tel:' + contactNumber}>{contactNumber}</a><br />
                                     <a className="color-white text-decoration-none fs-14 d-inline-block opacity-75" href="#">info@travanya.com</a>
                                 </h3>
                             </div>
