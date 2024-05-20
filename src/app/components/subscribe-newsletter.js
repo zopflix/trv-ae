@@ -52,7 +52,7 @@ export default function SubscribeNewsletter() {
                 <div className="bg-blue py-5">
                     <div className="container">
                         <div className="row align-items-center">
-                            <div className="col-12 col-md-6 col-lg-3">
+                            <div className="col-12 col-md-5 col-lg-4">
                                 <Image
                                     className="w-100 h-auto"
                                     loader={trvLoader}
@@ -62,7 +62,7 @@ export default function SubscribeNewsletter() {
                                     height={45}
                                 />
                             </div>
-                            <div className="col-12 col-md-6">
+                            <div className="col-12 col-md-7 col-lg-4">
                                 <div className="SubscribeNewsForm py-3 position-relative">
                                     <Image
                                         className="position-absolute  h-auto airImG d-none d-lg-block"
@@ -132,7 +132,7 @@ export default function SubscribeNewsletter() {
                                     </form>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-12 col-lg-3 d-none d-lg-block">
+                            <div className="col-12 col-md-12 col-lg-4 d-none d-lg-block">
                                 <Image
                                     className="w-100 h-auto"
                                     loader={trvLoader}

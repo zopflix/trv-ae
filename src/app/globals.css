@@ -682,29 +682,15 @@ footer .footerWrp h3 {
 
 /* Google Review CSS end */
 
-/* .SubscribeNewsBox {
-    background-image: url('https://assets.shipratravel.com/trv/subscribe-img.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-} */
-
-/* .SubscribeNewsForm input.mailField {
-    height: 60px;
-}
-
-.SubscribeNewsForm .form-check input {
-    border: 1px solid var(--color-orange);
-}
-
-.SubscribeNewsForm .form-check input:checked {
-    background-color: var(--color-orange) !important;
-    border-color: var(--color-orange) !important;
-} */
 
 .SubscribeNewsForm {
     max-width: 500px;
     margin: auto;
+}
+
+.SubscribeNewsForm h2 {
+    font-family: 'Josefin Sans';
+    font-size: 40px;
 }
 
 .SubscribeNewsForm form button {
@@ -720,13 +706,19 @@ footer .footerWrp h3 {
     left: -25%;
 }
 
-#AboutBox{
+#AboutBox {
     background-image: url('https://assets.travanya.com/about-bg-map.webp');
     background-repeat: no-repeat;
     background-position: right top;
 }
 
-
+.about-content h2,
+#chooseSection h2,
+.footerWrp h2,
+.subHeading h2 {
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+}
 
 
 /* media start */

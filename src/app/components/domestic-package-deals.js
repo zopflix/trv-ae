@@ -10,7 +10,7 @@ export default function DomesticPackageDeals() {
                 <div className="row">
                     <div className="col-12">
                         <div className="subHeading">
-                            <h2 className="mb-0 fw-normal">Top Holiday <strong className="color-orange">Packages</strong></h2>
+                            <h2 className="mb-0 fw-normal">Top Holiday <strong className="color-blue">Packages</strong></h2>
                         </div>
                     </div>
                 </div>
