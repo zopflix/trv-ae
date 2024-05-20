@@ -306,7 +306,7 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Singapore Tour Packages</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Singapore</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
@@ -333,7 +333,7 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Thailand Tour Packages</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Thailand</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
@@ -360,7 +360,7 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Armenia Tour Packages</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Armenia</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
@@ -387,7 +387,7 @@ export default function HolidayCategories() {
                                         <div class="packageTitleBox bg-white px-3 py-2 rounded-2 position-absolute start-0 end-0 m-auto">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div>
-                                                    <p class="mb-0 fs-16 fw-bold color-black">Saudi Arabia Tour Packages</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-black">Saudi Arabia</p>
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>

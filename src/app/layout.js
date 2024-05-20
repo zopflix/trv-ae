@@ -6,6 +6,7 @@ import "./listing-style.css";
 import "./holiday-listing.css";
 import "./splash-style.css";
 import "./user-style.css";
+import "./fonts.css";
 import { CounterContextProvider } from "./context/counter.context";
 import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
