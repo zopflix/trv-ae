@@ -547,11 +547,6 @@ ul.trv-list-type-2 li:after {
     margin: 0px -15px;
 }
 
-.ReviewBar a {
-    display: inline-block;
-    margin: 0px 20px;
-}
-
 .TopFlightDeals .slick-list {
     margin: 0px -15px;
 }
@@ -716,10 +711,43 @@ footer .footerWrp h3 {
     font-weight: bold;
 }
 
+.ReviewLogoBar>div {
+    width: 25%;
+    position: relative;
+}
+
+.ReviewLogoBar>div:first-child:before {
+    display: none;
+}
+
+.ReviewLogoBar>div img {
+    width: auto;
+    height: 35px !important;
+}
+
+.ReviewLogoBar>div::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: #dee2e6;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
 
 /* media start */
 
 @media(max-width:767px) {
+
+    .ReviewLogoBar>div img {
+        height: 15px !important;
+    }
+
+    .ReviewLogoBar>div::before {
+        height: 20px;
+    }
 
     img.SignNewsletterIMG {
         width: 70% !important;
@@ -729,10 +757,6 @@ footer .footerWrp h3 {
 
     .VisaFreeBox img {
         height: auto !important;
-    }
-
-    .ReviewBar a {
-        margin: 0px 10px;
     }
 
     .DealsTabs {
@@ -997,6 +1021,14 @@ footer .footerWrp h3 {
 }
 
 @media(min-width:768px) and (max-width:991px) {
+
+    .ReviewLogoBar>div img {
+        height: 30px !important;
+    }
+
+    .ReviewLogoBar>div::before {
+        height: 30px;
+    }
 
     .VisaFreeBox img {
         height: 280px !important;

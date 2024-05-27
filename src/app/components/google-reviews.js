@@ -32,7 +32,7 @@ export default function GoogleReviews() {
 
 
     return (
-        <section className="py-5 GoogleReviews">
+        <section id="GoogleReviewWraper" className="py-5 GoogleReviews">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-12 col-md-5 col-xl-7 col-xxl-8 py-2">
