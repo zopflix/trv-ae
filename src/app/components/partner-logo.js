@@ -15,7 +15,7 @@ export default function PartnerLogo() {
                             <Image
                                 className='w-100 h-auto'
                                 loader={trvLoader}
-                                src="icon/PartnerLogo.jpg"
+                                src="icon/PartnerLogo.webp"
                                 alt="facebook logo"
                                 width={100}
                                 height={24}
