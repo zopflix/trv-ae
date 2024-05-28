@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0;"
         ></meta>
+
         <title>
           Tour & Travel Agency In India | Cheap Flights + Holiday Packages
         </title>
@@ -33,6 +34,8 @@ export default function RootLayout({ children }) {
           name="description"
           content="Travanya is the best travel agency in India that caters to all your tour and travel needs. Along with international & domestic flights, we plan holiday packages too."
         />
+
+        <meta name="google-site-verification" content="tNoNC9cmrm29qcMqxOk97Q-yYDyf90KXGXrc6kXSoI0" />
 
         {/* Font Awsome */}
         <Script
@@ -80,7 +83,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-<Script
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-11426739459"
         />
