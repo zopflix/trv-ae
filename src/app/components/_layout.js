@@ -46,6 +46,7 @@ export default function Layout({ children }) {
                     {/* Bootstrap */}
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
                     <Script strategy='lazyOnload' src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" />
+                    <meta name="google-site-verification" content="tNoNC9cmrm29qcMqxOk97Q-yYDyf90KXGXrc6kXSoI0" />
                 </Head>
                 <Header></Header>
                 <main>{children}</main>
