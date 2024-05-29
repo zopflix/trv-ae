@@ -1,9 +1,21 @@
 import { usePathname } from "next/navigation";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
+import { useEffect,useState } from "react";
+import { getDestinationAndPackages } from "../services/holidayService";
 
 export default function MainMenu() {
     const pathname = usePathname();
+    const [packagesMenu, setpackagesMenu] = useState([]);
+
+    useEffect(() => {
+        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
+            if (res && res.length > 0)
+                setpackagesMenu(res);
+        });
+    }, []);
+    
+console.log("============", packagesMenu)
 
     return (
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -25,123 +37,20 @@ export default function MainMenu() {
                                             <Image
                                                 className="h-auto"
                                                 loader={trvLoader}
-                                                src="icon/domestic-menu-icon.svg"
+                                                src="icon/international-menu-icon.svg"
                                                 alt="umbrella icon"
                                                 width={20}
                                                 height={20}
                                             />
-                                            <span className="fw-bold ps-2">Domestic Package</span>
+                                            <span className="fw-bold ps-2">Holiday Packages</span>
                                         </a>
                                     </div>
                                     <div className="col-12 pt-2">
                                         <div className="row">
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/kashmir-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Kashmir Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/kerala-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Kerala Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/goa-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Goa Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/golden-triangle-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Golden Triangle Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/rajasthan-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Rajasthan Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/andaman-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Andaman Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/himachal-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Himachal Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/nainital-tour-packages/">
-                                                    <Image
-                                                        className="h-auto me-2"
-                                                        loader={trvLoader}
-                                                        src="icon/umbrella-beach.png"
-                                                        alt="umbrella icon"
-                                                        width={15}
-                                                        height={20}
-                                                    />
-                                                    <span>Nainital Tour Package</span>
-                                                </a>
-                                            </div>
-                                            <div className="col-12 d-lg-none">
-                                                <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                    <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/ooty-mysore-tour-packages/">
+                                            {
+                                                packagesMenu.length > 0 && packagesMenu.map((obj, index)=>(
+                                                    <div key={index} className="col-12 col-sm-12 col-lg-6 py-1">
+                                                    <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/kashmir-tour-package/">
                                                         <Image
                                                             className="h-auto me-2"
                                                             loader={trvLoader}
@@ -150,80 +59,19 @@ export default function MainMenu() {
                                                             width={15}
                                                             height={20}
                                                         />
-                                                        <span>Ooty + Mysore Tour Package</span>
+                                                        <span>{obj.name +" " +"Tour Package"} </span>
                                                     </a>
                                                 </div>
-                                                <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                    <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/north-east-tour-packages/">
-                                                        <Image
-                                                            className="h-auto me-2"
-                                                            loader={trvLoader}
-                                                            src="icon/umbrella-beach.png"
-                                                            alt="umbrella icon"
-                                                            width={15}
-                                                            height={20}
-                                                        />
-                                                        <span>North East Tour Package</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-12 d-none d-lg-block">
-                                                <div className="accordion accordion-flush" id="accordionFlushExample">
-                                                    <div className="accordion-item">
-                                                        <div id="flush-Domestic-Package" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                            <div className="accordion-body p-0">
-                                                                <div className="row">
-                                                                    <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                                        <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/ooty-mysore-tour-packages/">
-                                                                            <Image
-                                                                                className="h-auto me-2"
-                                                                                loader={trvLoader}
-                                                                                src="icon/umbrella-beach.png"
-                                                                                alt="umbrella icon"
-                                                                                width={15}
-                                                                                height={20}
-                                                                            />
-                                                                            <span>Ooty + Mysore Tour Package</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div className="col-12 col-sm-12 col-lg-6 py-1">
-                                                                        <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/north-east-tour-packages/">
-                                                                            <Image
-                                                                                className="h-auto me-2"
-                                                                                loader={trvLoader}
-                                                                                src="icon/umbrella-beach.png"
-                                                                                alt="umbrella icon"
-                                                                                width={15}
-                                                                                height={20}
-                                                                            />
-                                                                            <span>North East Tour Package</span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-12 d-none d-lg-block">
-                                                <div className="accordion accordion-flush" id="accordionFlushExample">
-                                                    <div className="accordion-item">
-                                                        <h2 className="accordion-header" id="flush-headingOne">
-                                                            <button className="accordion-button collapsed p-0 w-auto bg-white pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-Domestic-Package" aria-expanded="false" aria-controls="flush-Domestic-Package">
-                                                                <span className="fs-14 color-orange text-decoration-underline">
-                                                                    <div className="readMorebtn">Read More</div>
-                                                                    <div className="showLessbtn">Show Less</div>
-                                                                </span>
-                                                            </button>
-                                                        </h2>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                             
+                                                ))
+                                            }
+                                           
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 py-2">
+                            {/* <div className="col-md-12 col-lg-6 py-2">
                                 <div className="row">
                                     <div className="col-12">
                                         <a href="/international-tour-packages/" className="title d-flex text-decoration-none">
@@ -558,7 +406,7 @@ export default function MainMenu() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </li>
                 </ul>
