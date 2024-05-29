@@ -15,7 +15,7 @@ export default function DomesticPackageDeals() {
                     </div>
                 </div>
                 <div>
-                    <ul className="nav nav-pills mb-3 DealsTabs justify-content-center" id="pills-tab" role="tablist">
+                    {/* <ul className="nav nav-pills mb-3 DealsTabs justify-content-center" id="pills-tab" role="tablist">
                         <li className="nav-item" role="presentation">
                             <button className="nav-link color-black bg-white rounded-0 active" id="package1-tab" data-bs-toggle="pill" data-bs-target="#package1" type="button" role="tab" aria-controls="package1" aria-selected="true">Domestic</button>
                         </li>
@@ -30,7 +30,10 @@ export default function DomesticPackageDeals() {
                         <div className="px-3 tab-pane fade" id="package2" role="package2" aria-labelledby="package2-tab">
                             <InternationalTourPackages />
                         </div>
-                    </div>
+                    </div> */}
+                    <div className="tab-content bg-grey py-4 px-2 position-relative" id="pills-tabContent">
+                            <InternationalTourPackages />
+                        </div>
                 </div>
             </div>
         </section>
