@@ -1353,19 +1353,19 @@ export default function Listing() {
             {/* // (state.searchCriteria && JSON.parse(state.searchCriteria).segments && JSON.parse(state.searchCriteria).segments.length > 0)
           //   ? <div className='container'>
           //     <div className='row align-items-center'>
-          //       <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+          //       <div className='col-5'>
           //         <div className='d-flex align-items-center'>
           //           <h6 className='mb-0 fw-bolder color-white'>{JSON.parse(state.searchCriteria).segments[0].fromCode}</h6>
           //           <i className="fa-solid fa-arrow-right-arrow-left color-white ms-2 me-2"></i>
           //           <h6 className='mb-0 color-white fw-bolder'>{JSON.parse(state.searchCriteria).segments[0].toCode}</h6>
           //         </div>
           //       </div>
-          //       <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start color-white'>
+          //       <div className='col-5 border-start color-white'>
           //         <span>{getFormattedDate4(JSON.parse(state.searchCriteria).segments[0].departureDate)} {JSON.parse(state.searchCriteria).segments.length > 1 && "- " + getFormattedDate4(JSON.parse(state.searchCriteria).segments[1]?.departureDate)}</span>
           //         <span>{JSON.parse(state.searchCriteria).noOfAdult} {JSON.parse(state.searchCriteria).noOfAdult > 1 ? 'Adults' : 'Adult'} {JSON.parse(state.searchCriteria).child > 0 && ", " + JSON.parse(state.searchCriteria).child + " Child"}{JSON.parse(state.searchCriteria).noOfLapInfant > 0 && ", " + JSON.parse(state.searchCriteria).noOfLapInfant + " Infants"}, {getDisplayCabin(parseInt(JSON.parse(state.searchCriteria).cabin))}</span>
           //         <span>{JSON.parse(state.searchCriteria).tripType == 2 ? "Round Trip" : "One Way"}</span>
           //       </div>
-          //       <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2'>
+          //       <div className='col-2'>
           //         <i className="fa-regular fa-pen-to-square float-end h4 mb-0 color-white" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
           //       </div>
           //     </div>
@@ -1373,7 +1373,7 @@ export default function Listing() {
           //   : ((!isLoading && flights.length > 0) || (isLoading == false && flights.length == 0)) && */}
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <div className="col-5">
                   <div className="d-flex align-items-center">
                     {currentFilters &&
                       currentFilters.segments &&
@@ -1395,7 +1395,7 @@ export default function Listing() {
                       )}
                   </div>
                 </div>
-                <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start">
+                <div className="col-5 border-start">
                   <span>
                     {currentFilters &&
                       currentFilters.segments &&
@@ -1430,7 +1430,7 @@ export default function Listing() {
                     </>
                   )}
                 </div>
-                <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                <div className="col-2">
                   <i
                     className="fa-regular fa-pen-to-square float-end h4 mb-0"
                     onClick={() =>
@@ -1468,11 +1468,11 @@ export default function Listing() {
         <div className="flight-results bg-grey mb-0" id="totalPriceStrip">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3">
+              <div className="col-12 col-lg-4 col-xl-3">
                 <div className="sidebar-filter-btn mt-4 desk-hide">
                   <h4
                     id="filterBySection"
-                    className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer"
+                    className="filter-sub-heading d-flex mb-0 align-items-center bg-white p-2 justify-content-center cursor-pointer"
                     onClick={() => {
                       document.body.classList.add("filter-open");
                       setOpenFilters(true);
@@ -1500,7 +1500,7 @@ export default function Listing() {
                       : "side-bar-air-filter br-5 mt-3 mb-4"
                   }
                 >
-                  <div className="filter-items py-3 ps-3 pe-3 desk-hide">
+                  <div className="filter-items py-3 px-3 desk-hide">
                     <h4 className="filter-sub-heading d-flex mb-0 align-items-center justify-content-between">
                       <span className="sub-heading-title dgc">Filter By</span>
                       <button
@@ -1515,9 +1515,9 @@ export default function Listing() {
                     </h4>
                   </div>
 
-                  <div className="filter-items py-2 ps-3 pe-3 mob-hide">
+                  <div className="filter-items py-2 px-3 mob-hide">
                     <div className="row align-items-center mb-2 mt-2">
-                      <div className="col-6 col-sm-6 col-md-8 col-lg-7 col-xl-7 col-xxl-7 pe-0">
+                      <div className="col-6 col-md-8 col-lg-7 pe-0">
                         <h4 className="filter-sub-heading d-flex mb-0 align-items-center">
                           <span className="icon me-2">
                             <span>
@@ -1536,7 +1536,7 @@ export default function Listing() {
                           </span>
                         </h4>
                       </div>
-                      <div className="col-6 col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-5">
+                      <div className="col-6 col-md-4 col-lg-5">
                         <button
                           className="transparent-btn float-end clear-filter-btn"
                           onClick={() => clearFilters()}
@@ -1550,9 +1550,9 @@ export default function Listing() {
                   <div className="filter-wrp-box pt-2">
                     <div className="filter-wrp-bo border-0 pt-0 pb-0">
                       <div className="filter-wrp-box">
-                        <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                        <div className="filter-items pt-3 pb-3 px-3">
                           <div className="row align-items-center mb-2">
-                            <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <div className="col-6">
                               <h5 className="sub-title mb-0 dgc">Stops</h5>
                             </div>
                           </div>
@@ -1583,7 +1583,7 @@ export default function Listing() {
                           })}
                         </div>
 
-                        <div className="filter-items py-3 ps-3 pe-3">
+                        <div className="filter-items py-3 px-3">
                           <h5 className="sub-title mb-0 dgc">Price</h5>
                           <div className="price-slider pt-3">
                             <ReactSlider
@@ -1603,7 +1603,7 @@ export default function Listing() {
                               }}
                             />
                             <div className="row mt-3">
-                              <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                              <div className="col-6">
                                 <h6 className="mb-0 d-table">
                                   {
                                     aedNumberFormat(
@@ -1612,7 +1612,7 @@ export default function Listing() {
                                   }
                                 </h6>
                               </div>
-                              <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
+                              <div className="col-6 text-end">
                                 <h6 className="mb-0 d-table float-end">
                                   {
                                     aedNumberFormat(
@@ -1625,7 +1625,7 @@ export default function Listing() {
                           </div>
                         </div>
 
-                        <div className="filter-items py-3 ps-3 pe-3">
+                        <div className="filter-items py-3 px-3">
                           <h5 className="sub-title mb-0 dgc">
                             Departure Duration
                           </h5>
@@ -1645,12 +1645,12 @@ export default function Listing() {
                               minDistance={1}
                             />
                             <div className="row mt-3">
-                              <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                              <div className="col-6">
                                 <h6 className="mb-0 d-table">
                                   {formatTime(selectedTimeRange[0])}
                                 </h6>
                               </div>
-                              <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
+                              <div className="col-6 text-end">
                                 <h6 className="mb-0 d-table float-end">
                                   {selectedTimeRange[1] == 24
                                     ? "23:59"
@@ -1663,7 +1663,7 @@ export default function Listing() {
                         {currentFilters &&
                           currentFilters.segments &&
                           currentFilters.segments.length > 1 && (
-                            <div className="filter-items py-3 ps-3 pe-3">
+                            <div className="filter-items py-3 px-3">
                               <h5 className="sub-title mb-0 dgc">
                                 Return Duration
                               </h5>
@@ -1685,12 +1685,12 @@ export default function Listing() {
                                   minDistance={1}
                                 />
                                 <div className="row mt-3">
-                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                  <div className="col-6">
                                     <h6 className="mb-0 d-table">
                                       {formatTime(selectedReturnTimeRange[0])}
                                     </h6>
                                   </div>
-                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
+                                  <div className="col-6 text-end">
                                     <h6 className="mb-0 d-table float-end">
                                       {selectedReturnTimeRange[1] == 24
                                         ? "23:59"
@@ -1703,7 +1703,7 @@ export default function Listing() {
                               </div>
                             </div>
                           )}
-                        <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                        <div className="filter-items pt-3 pb-3 px-3">
                           <h5 className="sub-title mb-2 dgc">Sort By</h5>
                           <div className="form-check">
                             {sortByOptions.map((option, ix) => {
@@ -1740,7 +1740,7 @@ export default function Listing() {
                         </div>
                         {pureValidatingCarriers &&
                           pureValidatingCarriers.length > 0 && (
-                            <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                            <div className="filter-items pt-3 pb-3 px-3">
                               <h5 className="sub-title mb-2 dgc">Airlines</h5>
                               <div className="form-check">
                                 {pureValidatingCarriers.map((carrier, ix) => {
@@ -1774,7 +1774,7 @@ export default function Listing() {
                           )}
                         {validatingCarriers &&
                           validatingCarriers.length > 0 && (
-                            <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0">
+                            <div className="filter-items pt-3 pb-3 px-3 border-0">
                               <h5 className="sub-title mb-2 dgc">
                                 Multiple Airlines
                               </h5>
@@ -1852,10 +1852,10 @@ export default function Listing() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9 col-xxl-9">
+              <div className="col-12 col-lg-8 col-xl-9">
                 <div className="air-listing-results matrixSlider pt-4 mb-4 position-relative matrix-slider">
                   <div className="row ">
-                    {/* <div className="col-9 col-sm-9 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    {/* <div className="col-9 col-md-12">
                       {currentFilters && currentFilters.segments && currentFilters.segments.length > 0 && (
                         <div className="search-result-num">
                           <p className="mb-0 fw-bold">Showing {itemsCounter >= filteredFlights.length ? filteredFlights.length : itemsCounter} flights from {currentFilters.segments[0].fromCode} to {currentFilters.segments[0].toCode} out of {filteredFlights.length}</p>
@@ -1883,7 +1883,7 @@ export default function Listing() {
                   {/* {matrixAirlines && matrixAirlines.length > 0 && (
                     <div className="matrix-slider mt-0 mb-0">
                       <div className="row">
-                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 pe-0">
+                        <div className="col-3 col-xl-2 pe-0">
                           <div className="matrix-sidebar w-100 ">
                             <div className="matrix-sidebar-box w-100">
                               <h4 className="mb-0">Airline</h4>
@@ -1938,7 +1938,7 @@ export default function Listing() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 col-xxl-10 ps-0 matrix-box">
+                        <div className="col-9 col-xl-10 ps-0 matrix-box">
                           {matrixAirlines && matrixAirlines.length > 0 && (
                             <Slider {...sliderSettings}>
                               {matrixAirlines.map((carrier, index) => {
@@ -2178,7 +2178,7 @@ export default function Listing() {
 
                   <div className="row">
                     <div className="col-sm-12">
-                      <div className="mt-0 note-bar br-5 ps-3 pt-3 pe-3 pb-3">
+                      <div className="mt-0 note-bar br-5 p-3">
                         <p className="mb-0">
                           <strong>Note:</strong> * All the fares displayed are
                           for{" "}
@@ -2244,9 +2244,9 @@ export default function Listing() {
                             ? <div className='regular-round-trip listing-com' key={flightIndex}>
                               <div className='regular-flight-round-box mt-4 mb-4 border'>
                                 <div className='row align-items-center'>
-                                  <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 col-xxl-10 both-flight-box'>
+                                  <div className='col-9 col-xl-10 both-flight-box'>
                                     <div className='row align-items-center'>
-                                      <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6'>
+                                      <div className='col-12 col-xl-6'>
                                         <div className='row'>
                                           <div className='col-sm-12'>
                                             <h2 className='digination-sub-title mb-3 dgc'>Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
@@ -2258,9 +2258,9 @@ export default function Listing() {
                                               <span>Unpublished Airline</span>
                                             </div>
                                           </div>
-                                          <div className='col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9'>
+                                          <div className='col-10 col-md-9 col-lg-8 col-xxl-9'>
                                             <div className='row align-items-center'>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0 dgc'>
                                                   <span className='flight-plus-air'>
                                                     <span className='tooltip-box cursor-pointer'>{flight.trips[0].listOfFlight[0].fromCode}</span>
@@ -2270,7 +2270,7 @@ export default function Listing() {
                                                   </span>
                                                 </h4>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                              <div className='col-4 p-0'>
                                                 <div className='from-to-from-digination'>
                                                   {
                                                     flight.trips[0].listOfFlight.length <= 3 &&
@@ -2290,7 +2290,7 @@ export default function Listing() {
                                                   </h6>
                                                 </div>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0'>
                                                   <span className='flight-plus-air'>
                                                     <span className='tooltip-box cursor-pointer'>{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</span>
@@ -2304,7 +2304,7 @@ export default function Listing() {
                                           </div>
                                         </div>
                                       </div>
-                                      <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 flight-round-box'>
+                                      <div className='col-12 col-xl-6 flight-round-box'>
                                         <div className='row'>
                                           <div className='col-sm-12'>
                                             <h2 className='digination-sub-title mb-3 dgc'>Return | {getFormattedDate4(flight.trips[1].listOfFlight[0].departeddate)}</h2>
@@ -2316,9 +2316,9 @@ export default function Listing() {
                                               <span>Unpublished Airline</span>
                                             </div>
                                           </div>
-                                          <div className='col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9'>
+                                          <div className='col-10 col-md-9 col-lg-8 col-xxl-9'>
                                             <div className='row align-items-center'>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0'>
                                                   <span className='flight-plus-air'>
                                                     <span className='tooltip-box cursor-pointer'>{flight.trips[1].listOfFlight[0].fromCode}</span>
@@ -2328,7 +2328,7 @@ export default function Listing() {
                                                   </span>
                                                 </h4>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                              <div className='col-4 p-0'>
                                                 <div className='from-to-from-digination'>
                                                   {
                                                     flight.trips[1].listOfFlight.length <= 3 &&
@@ -2348,7 +2348,7 @@ export default function Listing() {
                                                   </h6>
                                                 </div>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0'>
                                                   <span className='flight-plus-air'>
                                                     <span className='tooltip-box cursor-pointer'>{flight.trips[1].listOfFlight[flight.trips[1].listOfFlight.length - 1].toCode}</span>
@@ -2364,7 +2364,7 @@ export default function Listing() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 ps-0'>
+                                  <div className='col-3 col-xl-2 ps-0'>
                                     <div className='air-flight-price text-end'>
                                       <h2 className='mb-0 dgc'><span className="d-inline-block w-100 text-end pb-2 text-decoration-line-through">{numberFormat(avgPrice).split(".")[0]}</span> {numberFormat(thirtyPercentOffPrice).split(".")[0]}</h2>
                                       <h6 className='mb-2 mt-2'>{totalPassangers > 1 ? "Round Trip Per Traveler" : "Round Trip Per Adult"}</h6>
@@ -2378,7 +2378,7 @@ export default function Listing() {
                                 </div>
                                 <div className='air-flight-btn-and-bag mt-3 pt-2'>
                                   <div className='row align-items-center'>
-                                    <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                    <div className='col-12'>
                                       <div className='special-offer-red-img w-100 text-center'>
                                       </div>
                                     </div>
@@ -2389,23 +2389,23 @@ export default function Listing() {
                             : <div className='regular-one-trip listing-com' key={flightIndex}>
                               <div className='regular-flight-round-box mt-4 mb- pb-2 border'>
                                 <div className='row align-items-center'>
-                                  <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box'>
+                                  <div className='col-9 both-flight-box'>
                                     <div className='row align-items-center'>
-                                      <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                      <div className='col-12'>
                                         <div className='row'>
                                           <div className='col-sm-12'>
                                             <h2 className='digination-sub-title mb-3 dgc'>Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
                                           </div>
                                         </div>
                                         <div className='row align-items-center'>
-                                          <div className='col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3'>
+                                          <div className='col-2 col-md-3 col-lg-4 col-xl-3'>
                                             <div className='air-flight-logo text-start'>
                                               <span>Unpublished Airline</span>
                                             </div>
                                           </div>
-                                          <div className='col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0'>
+                                          <div className='col-10 col-md-9 col-lg-8 col-xl-9 p-0'>
                                             <div className='row align-items-center'>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0'>
                                                   <span className='tooltip-box cursor-pointer'>{flight.trips[0].listOfFlight[0].fromCode}</span>
                                                 </h4>
@@ -2415,7 +2415,7 @@ export default function Listing() {
                                                   </span>
                                                 </h6>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                              <div className='col-4 p-0'>
                                                 <div className='from-to-from-digination'>
                                                   {
                                                     flight.trips[0].listOfFlight.length <= 3 &&
@@ -2435,7 +2435,7 @@ export default function Listing() {
                                                   </h6>
                                                 </div>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0 dgc'>
                                                   <span className='tooltip-box cursor-pointer'>{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</span>
                                                 </h4>
@@ -2449,7 +2449,7 @@ export default function Listing() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0'>
+                                  <div className='col-3 ps-0'>
                                     <div className='air-flight-price text-end'>
                                       <h2 className='mb-0 dgc'><span className="text-decoration-line-through ">{numberFormat(avgPrice).split(".")[0]}</span> {numberFormat(thirtyPercentOffPrice).split(".")[0]}</h2>
                                       <h6 className='mb-2 mt-2'>{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
@@ -2463,7 +2463,7 @@ export default function Listing() {
                                 </div>
                                 <div className='air-flight-btn-and-bag mt-3 pt-2'>
                                   <div className='row align-items-center'>
-                                    <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                    <div className='col-12'>
                                       <div className='special-offer-red-img w-100 text-center'>
                                       </div>
                                     </div>
@@ -2610,12 +2610,12 @@ export default function Listing() {
                                   <div className="regular-round-trip listing-com">
                                     <div className="regular-flight-round-box mt-4 mb-4">
                                       <div className="row align-items-center">
-                                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 col-xxl-10 both-flight-box">
+                                        <div className="col-9 col-xl-10 both-flight-box">
                                           <div className="color-white gds-code">
                                             {flight.gdsHiddenId}
                                           </div>
                                           <div className="row align-items-center">
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
+                                            <div className="col-12 col-xl-6">
                                               <div className="row">
                                                 <div className="col-sm-12">
                                                   <h2 className="digination-sub-title mb-3 dgc">
@@ -2664,9 +2664,9 @@ export default function Listing() {
                                                     </span>
                                                   </div>
                                                 </div>
-                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
+                                                <div className="col-10 col-md-9 col-lg-8 col-xxl-9">
                                                   <div className="row align-items-center">
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0">
                                                         <span>
                                                           {getFormattedTime(
@@ -2695,7 +2695,7 @@ export default function Listing() {
                                                         </span>
                                                       </h4>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                    <div className="col-4 p-0">
                                                       <div className="from-to-from-digination">
                                                         <h6 className="text-center mb-0">
                                                           {getDiffFromMinutes(
@@ -2802,7 +2802,7 @@ export default function Listing() {
                                                         {/* <h6 className='text-center mb-0'>{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6> */}
                                                       </div>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0 text-end">
                                                         <span>
                                                           {getFormattedTime(
@@ -2880,7 +2880,7 @@ export default function Listing() {
                                                   </div>
                                                 )}
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 flight-round-box">
+                                            <div className="col-12 col-xl-6 flight-round-box">
                                               <div className="row">
                                                 <div className="col-sm-12">
                                                   <h2 className="digination-sub-title mb-3 dgc">
@@ -2929,9 +2929,9 @@ export default function Listing() {
                                                     </span>
                                                   </div>
                                                 </div>
-                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8 col-xxl-9">
+                                                <div className="col-10 col-md-9 col-lg-8 col-xxl-9">
                                                   <div className="row align-items-center">
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0">
                                                         <span>
                                                           {getFormattedTime(
@@ -2962,7 +2962,7 @@ export default function Listing() {
                                                         </span>
                                                       </h4>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                    <div className="col-4 p-0">
                                                       <div className="from-to-from-digination">
                                                         <h6 className="text-center mb-0">
                                                           {getDiffFromMinutes(
@@ -3068,7 +3068,7 @@ export default function Listing() {
                                                         </h6>
                                                       </div>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0 text-end">
                                                         <span>
                                                           {getFormattedTime(
@@ -3149,7 +3149,7 @@ export default function Listing() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2 ps-0">
+                                        <div className="col-3 col-xl-2 ps-0">
                                           <div className="air-flight-price text-end">
                                             <h2 className="mb-0 dgc">
                                               {
@@ -3353,10 +3353,10 @@ export default function Listing() {
                                       {/* {baggageOptions && (
                                         <div className="air-flight-btn-and-bag mt-1 pt-2">
                                           <div className="row align-items-center">
-                                            <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
+                                            <div className="col-10 col-md-8 col-lg-7 col-xl-8 pe-0">
                                               <div className="air-flight-btn"></div>
                                             </div>
-                                            <div className="col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4">
+                                            <div className="col-2 col-md-4 col-lg-5 col-xl-4">
                                               <div className="air-flight-bag text-end">
                                                 <div className="dropdown dropdown-hover">
                                                   <button
@@ -3503,9 +3503,9 @@ export default function Listing() {
                                             {flight.gdsHiddenId}
                                           </div>
                                         </div>
-                                        <div className="col-8 col-sm-8 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                        <div className="col-8 col-md-9 both-flight-box">
                                           <div className="row align-items-center">
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                            <div className="col-12">
                                               <div className="row">
                                                 <div className="col-sm-12">
                                                   <h2 className="digination-sub-title mb-3 dgc">
@@ -3519,7 +3519,7 @@ export default function Listing() {
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
-                                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                                <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                                   <div className="air-flight-logo text-start">
                                                     <Image
                                                       className="mb-1 h-auto"
@@ -3554,9 +3554,9 @@ export default function Listing() {
                                                     </span>
                                                   </div>
                                                 </div>
-                                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                                   <div className="row align-items-center">
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0">
                                                         <span>
                                                           {getFormattedTime(
@@ -3586,7 +3586,7 @@ export default function Listing() {
                                                         </span>
                                                       </h4>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                    <div className="col-4 p-0">
                                                       <div className="from-to-from-digination">
                                                         <h6 className="text-center mb-0">
                                                           {getDiffFromMinutes(
@@ -3694,7 +3694,7 @@ export default function Listing() {
                                                         </h6>
                                                       </div>
                                                     </div>
-                                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <div className="col-4">
                                                       <h6 className="flight-time mb-0 text-end">
                                                         <span>
                                                           {getFormattedTime(
@@ -3773,7 +3773,7 @@ export default function Listing() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                        <div className="col-4 col-md-3 ps-0">
                                           <div className="air-flight-price text-end">
                                             <h2 className="mb-0 dgc">
                                               {
@@ -3975,8 +3975,8 @@ export default function Listing() {
                                       {/* {baggageOptions && (
                                         <div className="air-flight-btn-and-bag mt-1 pt-2">
                                           <div className="row align-items-center">
-                                            <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0"></div>
-                                            <div className="col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4">
+                                            <div className="col-10 col-md-8 col-lg-7 col-xl-8 pe-0"></div>
+                                            <div className="col-2 col-md-4 col-lg-5 col-xl-4">
                                               <div className="air-flight-bag text-end">
                                                 <div className="dropdown dropdown-hover">
                                                   <button
@@ -4120,7 +4120,7 @@ export default function Listing() {
                       flights.length > 0 &&
                       filteredFlights &&
                       filteredFlights.length == 0 && (
-                        <div className="no-result-lising bg-white text-center ps-3 pt-3 pe-3 pb-3 mb-4">
+                        <div className="no-result-lising bg-white text-center p-3 mb-4">
                           <Image
                             className="w-auto h-auto"
                             loader={trvLoader}
@@ -4142,7 +4142,7 @@ export default function Listing() {
                           </button>
                           <h6>or Call us at</h6>
                           <a
-                            className="btn-style1 ps-3 pe-3"
+                            className="btn-style1 px-3"
                             href={"tel:" + displayContactNumber}
                           >
                             <Image

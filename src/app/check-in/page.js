@@ -37,7 +37,7 @@ export default function CheckIn() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.delta.com/apac/en">
                                 <Image
                                     className=""
@@ -50,7 +50,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Delta Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.united.com/en/us/checkin">
                                 <Image
                                     className=""
@@ -63,7 +63,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">United Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.aircanada.com/ca/en/aco/home.html#/home:checkIn">
                                 <Image
                                     className=""
@@ -76,7 +76,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Air Canada</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://mobilecheckin.jetblue.com/checkin/check-in">
                                 <Image
                                     className=""
@@ -89,7 +89,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Jetblue Airways</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.aa.com/reservation/flightCheckInViewReservationsAccess.do">
                                 <Image
                                     className=""
@@ -102,7 +102,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">American Airline</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://mobile.southwest.com/check-in">
                                 <Image
                                     className=""
@@ -115,7 +115,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Southwest Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.spirit.com/">
                                 <Image
                                     className=""
@@ -128,7 +128,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Spirit Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://webselfservice.alaskaair.com/checkinweb/default.aspx?language=en_US">
                                 <Image
                                     className=""
@@ -141,7 +141,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Alaska Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.flyfrontier.com/travel/my-trips/check-in/?mobile=true">
                                 <Image
                                     className=""
@@ -154,7 +154,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Frontier</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.hawaiianairlines.com/">
                                 <Image
                                     className=""
@@ -167,7 +167,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Hawaiian Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="http://suncountry.com/">
                                 <Image
                                     className=""
@@ -180,7 +180,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Sun Country</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.westjet.com/index.html#/">
                                 <Image
                                     className=""
@@ -193,7 +193,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Westjet</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.allegiantair.com/online-checkin">
                                 <Image
                                     className=""
@@ -206,7 +206,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Allegiant Air</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://aeromexico.com/en-us/check-in">
                                 <Image
                                     className=""
@@ -219,7 +219,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">AeroMexico</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.copaair.com/">
                                 <Image
                                     className=""
@@ -232,7 +232,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Copa Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://flyflair.com/check-in">
                                 <Image
                                     className=""
@@ -245,7 +245,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">FLAIR AIRLINES</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.aveloair.com/">
                                 <Image
                                     className=""
@@ -258,7 +258,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Avelo Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.flyporter.com/en/manage-flights/web-check-in">
                                 <Image
                                     className=""
@@ -271,7 +271,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Porter Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.volaris.com/">
                                 <Image
                                     className=""
@@ -284,7 +284,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Volaris</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.sunwing.ca/">
                                 <Image
                                     className=""
@@ -297,7 +297,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">SunWing Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.avianca.com/us/en/your-booking/check-in/">
                                 <Image
                                     className=""
@@ -310,7 +310,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Avianca</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/us/en/check-in">
                                 <Image
                                     className=""
@@ -323,7 +323,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/ar/es/check-in">
                                 <Image
                                     className=""
@@ -336,7 +336,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines Argentina</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/br/pt/check-in">
                                 <Image
                                     className=""
@@ -349,7 +349,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines Brasil</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/ec/es/check-in">
                                 <Image
                                     className=""
@@ -362,7 +362,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines Ecuador</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/py/es/check-in">
                                 <Image
                                     className=""
@@ -375,7 +375,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines Paraguay</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.latamairlines.com/pe/es/check-in">
                                 <Image
                                     className=""
@@ -388,7 +388,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">LATAM Airlines Peru</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.caribbean-airlines.com/#/plan-your-trip/check-in">
                                 <Image
                                     className=""
@@ -401,7 +401,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Caribbean Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.vivaaerobus.com/en-us/info/get-ready-to-fly/check-in">
                                 <Image
                                     className=""
@@ -414,7 +414,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Vivaaerobus</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://booking.palairlines.ca/check-in/search">
                                 <Image
                                     className=""
@@ -427,7 +427,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Pal Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.vivaair.com/pe/es/web-check-in">
                                 <Image
                                     className=""
@@ -440,7 +440,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">VIVA Airlines Peru</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.emirates.com/english/manage-booking/online-check-in/">
                                 <Image
                                     className=""
@@ -453,7 +453,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Emirates</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.etihad.com/en-in/manage/check-in">
                                 <Image
                                     className=""
@@ -466,7 +466,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Etihad</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.airindia.com/in/en/manage/web-checkin.html">
                                 <Image
                                     className=""
@@ -479,7 +479,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Air India</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://cki.qatarairways.com/cki/dashboard">
                                 <Image
                                     className=""
@@ -492,7 +492,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Qatar Airways</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.lufthansa.com/ge/en/online-check-in">
                                 <Image
                                     className=""
@@ -505,7 +505,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Lufthansa</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.kuwaitairways.com/en/online-checkin">
                                 <Image
                                     className=""
@@ -518,7 +518,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Kuwait Airways</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.turkishairlines.com/en-int/flights/manage-booking/">
                                 <Image
                                     className=""
@@ -531,7 +531,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Turkish Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.singaporeair.com/en_UK/plan-and-book/check-in-online/">
                                 <Image
                                     className=""
@@ -544,7 +544,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Singapore Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.britishairways.com/travel/olcilandingpageauthreq/public/en_in">
                                 <Image
                                     className=""
@@ -557,7 +557,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">British Airways</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.gulfair.com/manage-my-booking/web-check-in">
                                 <Image
                                     className=""
@@ -570,7 +570,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Gulf Air</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.ana.co.jp/en/us/travel-information/online-check-in/">
                                 <Image
                                     className=""
@@ -583,7 +583,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">All Nippon Airways</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.cathaypacific.com/mb/#/en_HK/olci/login">
                                 <Image
                                     className=""
@@ -596,7 +596,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Cathay Pacific</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://checkin.swiss.com/web">
                                 <Image
                                     className=""
@@ -609,7 +609,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Swiss International</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.ethiopianairlines.com/aa/book/booking/web-check-in">
                                 <Image
                                     className=""
@@ -622,7 +622,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Ethiopian Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.virginatlantic.com/PCCOciWeb/processFindPnr.action">
                                 <Image
                                     className=""
@@ -635,7 +635,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Virgin Atlantic</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.philippineairlines.com/en/check-in-online">
                                 <Image
                                     className=""
@@ -648,7 +648,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Philippines Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://flyasiana.com/C/GB/EN/contents/online-check-in">
                                 <Image
                                     className=""
@@ -661,7 +661,7 @@ export default function CheckIn() {
                                 <h4 className="mt-2 mb-0 fs-16 fw-bold color-black">Asiana Airlines</h4>
                             </a>
                         </div>
-                        <div className="checkin-article col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                        <div className="checkin-article col-6 col-md-3 col-xxl-2">
                             <a className="rounded-1 mb-4 w-100 text-center text-decoration-none border bg-white d-inline-block p-3" target="_blank" href="https://www.austrian.com/jp/en/online-check-in">
                                 <Image
                                     className=""

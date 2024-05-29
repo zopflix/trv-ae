@@ -35,10 +35,10 @@ export default function ChangePrice(props) {
             <br />
             <div className="row align-items-center justify-content-between">
                 <div className="col-md-6">
-                    <button className="w-100 btn bg-blue color-white fs-14 ps-4 pe-4 pt-2 pb-2 mt-3" onClick={async () => { props.setOpenNewPriceModal(false); window.history.back(); }}>Go To Listing</button>
+                    <button className="w-100 btn bg-blue color-white fs-14 px-4 pt-2 pb-2 mt-3" onClick={async () => { props.setOpenNewPriceModal(false); window.history.back(); }}>Go To Listing</button>
                 </div>
                 <div className="col-md-6">
-                    <button className="mt-3 btn-hover-orange w-100 border border-color-orange btn bg-white color-orange fs-14 ps-4 pe-4 pt-2 pb-2"
+                    <button className="mt-3 btn-hover-orange w-100 border border-color-orange btn bg-white color-orange fs-14 px-4 pt-2 pb-2"
                         onClick={async () => {
                             props.setOpenNewPriceModal(false);
 

@@ -89,7 +89,7 @@ export default function FlightDetailFlap(props) {
                 <div className={selectedTab == 0 ? "tab-pane fade show active" : "tab-pane fade"} id="departureFlight" role="tabpanel" aria-labelledby="departureFlight-tab">
                     <div className='flap-flight-details'>
                         <div className="row justify-content-between">
-                            <div className="col-sm-12 col-md-8 col-lg-8 col-xl-9 col-xxl-9">
+                            <div className="col-sm-12 col-md-8 col-xl-9">
                                 <h4 className='text-start'>{getFormattedTime(props.selectedFlight.trips[0].listOfFlight[0].departureTime)} - {getFormattedTime(props.selectedFlight.trips[0].listOfFlight[props.selectedFlight.trips[0].listOfFlight.length - 1].arrivalTime)} ({props.selectedFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (props.selectedFlight.trips[0].listOfFlight.length - 1 + (props.selectedFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))})<span className="orange-text">{props.selectedFlight.departDays > 0 ? "+" + props.selectedFlight.departDays : ""}</span></h4>
                             </div>
                             {
@@ -149,11 +149,11 @@ export default function FlightDetailFlap(props) {
                                                 (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
                                                 <span className="ob float-start w-100 text-start orange-text">Operated By: {fl.operatedBy}</span>
                                             }
-                                            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-start pe-0">
+                                            <div className="col-3 text-start pe-0">
                                                 <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)}</h6>
                                                 <span className="mb-0">{fl?.fromAirportName} ({fl.fromCode})</span>
                                             </div>
-                                            <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                            <div className="col-6">
                                                 <div className="d-flex align-items-center">
                                                     <div className="w-25 airbox-details-air-icon">
                                                         <Image
@@ -182,7 +182,7 @@ export default function FlightDetailFlap(props) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                            <div className="col-3 ps-0">
                                                 <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)}</h6>
                                                 <span className="mb-0">{fl?.toAirportName} ({fl.toCode})</span>
                                                 {
@@ -211,7 +211,7 @@ export default function FlightDetailFlap(props) {
                     <div className={selectedTab == 1 ? "tab-pane fade show active" : "tab-pane fade"} id="returnFlight" role="tabpanel" aria-labelledby="returnFlight-tab">
                         <div className='flap-flight-details'>
                             <div className="row justify-content-between">
-                                <div className="col-sm-12 col-md-8 col-lg-8 col-xl-9 col-xxl-9">
+                                <div className="col-sm-12 col-md-8 col-xl-9">
                                     <h4 className='text-start'>{getFormattedTime(props.selectedFlight.trips[1].listOfFlight[0].departureTime)} - {getFormattedTime(props.selectedFlight.trips[1].listOfFlight[props.selectedFlight.trips[1].listOfFlight.length - 1].arrivalTime)} ({props.selectedFlight.trips[1].listOfFlight.length == 1 ? "Non-Stop" : (props.selectedFlight.trips[1].listOfFlight.length - 1 + (props.selectedFlight.trips[1].listOfFlight.length == 2 ? " Stop" : " Stops"))})<span className="orange-text">{props.selectedFlight.returnDays > 0 ? "+" + props.selectedFlight.returnDays : ""}</span></h4>
                                 </div>
                                 {
@@ -271,11 +271,11 @@ export default function FlightDetailFlap(props) {
                                                     (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
                                                     <span className="ob float-start w-100 text-start orange-text">Operated By: {fl.operatedBy}</span>
                                                 }
-                                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-start pe-0">
+                                                <div className="col-3 text-start pe-0">
                                                     <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)}</h6>
                                                     <span className="mb-0">{fl?.fromAirportName} ({fl.fromCode})</span>
                                                 </div>
-                                                <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                                <div className="col-6">
                                                     <div className="d-flex align-items-center">
                                                         <div className="w-25 airbox-details-air-icon">
                                                             <Image
@@ -304,7 +304,7 @@ export default function FlightDetailFlap(props) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                                <div className="col-3 ps-0">
                                                     <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)}</h6>
                                                     <span className="mb-0">{fl?.toAirportName} ({fl.toCode})</span>
                                                     {
@@ -545,7 +545,7 @@ export default function FlightDetailFlap(props) {
 
             <div className='position-absolute flap-total-price'>
                 <div className='row align-items-center ms-0 me-0'>
-                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start'>
+                    <div className='col-6 text-start'>
                         <h2 className='mb-0'>{(aedNumberFormat(Number(props.selectedFlight.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[0]}.<sup>{(aedNumberFormat(Number(props?.selectedFlight?.avgPrice) + Number(props?.superSaverService?.price ? (props?.sssPassangers * props?.superSaverService?.price) : 0))).split(".")[1]}</sup></h2>
                         {props.selectedFlight.totalPassangers > 1
                             ? <>
@@ -555,7 +555,7 @@ export default function FlightDetailFlap(props) {
                             : <p className="mb-0">Price {props.selectedFlight.trips.length > 1 ? "for Round Trip" : "per Adult"}</p>
                         }
                     </div>
-                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                    <div className='col-6 text-end'>
                         {/* <button className="buttonStyle3 border fs-14 next listing-cont-btn d-flex align-items-center float-end" onClick={async () => {
                             if (props.isCheckoutPage)
                                 return;

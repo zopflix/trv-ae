@@ -43,8 +43,8 @@ export default function Home() {
             <section className='py-5 mb-5'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8'>
+                        <div className='col-12 col-lg-2'></div>
+                        <div className='col-12 col-lg-8'>
                             <div className='payment-main-wrp text-center'>
                                 <Image
                                     className="mb-4 h-auto"
@@ -61,7 +61,7 @@ export default function Home() {
                                 <p className='fs-14'>If you do not receive your tickets within a few hours, please feel free to contact our travel experts at <a className='text-decoration-none color-blue fw-bold' href='tel:+918000235865'>+918000235865</a>. They are available 24/7 to assist you.</p>
                             </div>
                         </div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
+                        <div className='col-12 col-lg-2'></div>
                     </div>
                 </div>
             </section>

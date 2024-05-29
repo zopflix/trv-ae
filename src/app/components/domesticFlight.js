@@ -24,7 +24,7 @@ export default function DomesticFlights() {
                     <div className="tab-content bg-grey p-4" id="pills-tabContent">
                         <div className="tab-pane fade show active" id="citys1" role="tabpanel" aria-labelledby="citys1-tab">
                             <div className="row">
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                                <div className="col-12 col-lg-3">
                                     <div className="DubaiDealsBox bg-white">
                                         <div className="cityDealsImg">
                                             <Image

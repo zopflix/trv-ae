@@ -260,9 +260,9 @@ export default function Confirmation() {
                                             {
                                                 bookingData.baggageOptions &&
                                                 <div className='row'>
-                                                    <div className='col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10'>
+                                                    <div className='col-12 col-lg-10'>
                                                         <div className='row mb-4'>
-                                                            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                            <div className='col-12 col-md-4'>
                                                                 <div className="add-baggage d-flex mt-2">
                                                                     <div className="add-baggage-icon">
                                                                         <Image
@@ -294,7 +294,7 @@ export default function Confirmation() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                            <div className='col-12 col-md-4'>
                                                                 <div className="add-baggage d-flex mt-2">
                                                                     <div className="add-baggage-icon">
                                                                         <Image
@@ -324,7 +324,7 @@ export default function Confirmation() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                            <div className='col-12 col-md-4'>
                                                                 <div className="add-baggage d-flex mt-2">
                                                                     <div className="add-baggage-icon">
                                                                         <Image
@@ -372,11 +372,11 @@ export default function Confirmation() {
 
                                                                     {
                                                                         (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
-                                                                        <h5 className="ob pt-1 pb-1 ps-2 pe-2 d-table opteratedby">Operated By: <span>{fl.operatedBy}</span></h5>
+                                                                        <h5 className="ob py-1 px-2 d-table opteratedby">Operated By: <span>{fl.operatedBy}</span></h5>
                                                                     }
                                                                     <div className="airbox-details align-items-center ps-0 pe-0">
                                                                         <div className='row align-items-center '>
-                                                                            <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'>
+                                                                            <div className='col-12 col-lg-2'>
                                                                                 <div className="airlinelogo">
                                                                                     <Image
                                                                                         className="airline-logo h-auto"
@@ -389,9 +389,9 @@ export default function Confirmation() {
                                                                                     <h6 className="mb-0">{fl.airlineName}</h6>
                                                                                 </div>
                                                                             </div>
-                                                                            <div className='col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10'>
+                                                                            <div className='col-12 col-lg-10'>
                                                                                 <div className='row'>
-                                                                                    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center ">
+                                                                                    <div className="col-12 col-md-4 text-center ">
                                                                                         <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)} | {getFormattedDate3(fl.departeddate)}</h6>
                                                                                         <span className="mb-0">{fl.fromCode}</span>
                                                                                         <h5>
@@ -403,7 +403,7 @@ export default function Confirmation() {
                                                                                             }
                                                                                         </h5>
                                                                                     </div>
-                                                                                    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0 air-icon-time">
+                                                                                    <div className="col-12 col-md-4 p-0 air-icon-time">
                                                                                         <div className="d-flex align-items-center">
                                                                                             <div className="w-25 airbox-details-air-icon">
                                                                                                 <Image
@@ -431,7 +431,7 @@ export default function Confirmation() {
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+                                                                                    <div className="col-12 col-md-4 text-center">
                                                                                         <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)} | {getFormattedDate3(fl.arrivalAt)}</h6>
                                                                                         <span className="mb-0">{fl.toCode}</span>
                                                                                         <h5><span>{fl.toAirportName}</span></h5>
@@ -466,9 +466,9 @@ export default function Confirmation() {
                                                                     bookingData.baggageOptions &&
                                                                     <div className='container'>
                                                                         <div className='row'>
-                                                                            <div className='col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10'>
+                                                                            <div className='col-12 col-lg-10'>
                                                                                 <div className='row mb-4'>
-                                                                                    <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                                                    <div className='col-12 col-md-4'>
                                                                                         <div className="add-baggage d-flex mt-2">
                                                                                             <div className="add-baggage-icon">
                                                                                                 <Image
@@ -500,7 +500,7 @@ export default function Confirmation() {
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                                                    <div className='col-12 col-md-4'>
                                                                                         <div className="add-baggage d-flex mt-2">
                                                                                             <div className="add-baggage-icon">
                                                                                                 <Image
@@ -532,7 +532,7 @@ export default function Confirmation() {
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                                                    <div className='col-12 col-md-4'>
                                                                                         <div className="add-baggage d-flex mt-2">
                                                                                             <div className="add-baggage-icon">
                                                                                                 <Image
@@ -581,11 +581,11 @@ export default function Confirmation() {
 
                                                                         {
                                                                             (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
-                                                                            <h5 className="ob pt-1 pb-1 ps-2 pe-2 d-table opteratedby">Operated By: <span>{fl.operatedBy}</span></h5>
+                                                                            <h5 className="ob py-1 px-2 d-table opteratedby">Operated By: <span>{fl.operatedBy}</span></h5>
                                                                         }
                                                                         <div className="airbox-details align-items-center ps-0 pe-0">
                                                                             <div className='row align-items-center'>
-                                                                                <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'>
+                                                                                <div className='col-12 col-lg-2'>
                                                                                     <div className="airlinelogo">
                                                                                         <Image
                                                                                             className="airline-logo h-auto"
@@ -598,9 +598,9 @@ export default function Confirmation() {
                                                                                         <h6 className="mb-0">{fl.airlineName}</h6>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div className='col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10'>
+                                                                                <div className='col-12 col-lg-10'>
                                                                                     <div className='row'>
-                                                                                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+                                                                                        <div className="col-12 col-md-4 text-center">
                                                                                             <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)} | {getFormattedDate3(fl.departeddate)}</h6>
                                                                                             <span className="mb-0">{fl.fromCode}</span>
                                                                                             <h5>
@@ -612,7 +612,7 @@ export default function Confirmation() {
                                                                                                 }
                                                                                             </h5>
                                                                                         </div>
-                                                                                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0 air-icon-time">
+                                                                                        <div className="col-12 col-md-4 p-0 air-icon-time">
                                                                                             <div className="d-flex align-items-center">
                                                                                                 <div className="w-25 airbox-details-air-icon">
                                                                                                     <Image
@@ -640,7 +640,7 @@ export default function Confirmation() {
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+                                                                                        <div className="col-12 col-md-4 text-center">
                                                                                             <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)} | {getFormattedDate3(fl.arrivalAt)}</h6>
                                                                                             <span className="mb-0">{fl.toCode}</span>
                                                                                             <h5><span>{fl.toAirportName}</span></h5>

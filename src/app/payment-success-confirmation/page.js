@@ -27,8 +27,8 @@ export default function PaymentConfirmationSuccess() {
             <section className='py-5 mb-5'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8'>
+                        <div className='col-12 col-lg-2'></div>
+                        <div className='col-12 col-lg-8'>
                             <div className='payment-main-wrp text-center'>
                                 <Image
                                     className="mb-4 h-auto"
@@ -44,7 +44,7 @@ export default function PaymentConfirmationSuccess() {
                                 <p><strong>Caution:</strong> Do not close this window or press Refresh or browser back button. If you do this, then the transaction process may be interrupted</p>
                             </div>
                         </div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
+                        <div className='col-12 col-lg-2'></div>
                     </div>
                 </div>
             </section>

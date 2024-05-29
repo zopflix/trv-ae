@@ -900,19 +900,19 @@ export default function Results(props) {
           {/* // (state.searchCriteria && JSON.parse(state.searchCriteria).segments && JSON.parse(state.searchCriteria).segments.length > 0)
             // ? <div className='container'>
             //   <div className='row align-items-center'>
-            //     <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+            //     <div className='col-5'>
             //       <div className='d-flex align-items-center'>
             //         <h6 className='mb-0 fw-bolder color-white'>{JSON.parse(state.searchCriteria).segments[0].fromCode}</h6>
             //         <i className="fa-solid fa-arrow-right-arrow-left color-white ms-2 me-2"></i>
             //         <h6 className='mb-0 color-white fw-bolder'>{JSON.parse(state.searchCriteria).segments[0].toCode}</h6>
             //       </div>
             //     </div>
-            //     <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start color-white'>
+            //     <div className='col-5 border-start color-white'>
             //       <span>{getFormattedDate4(JSON.parse(state.searchCriteria).segments[0].departureDate)} {JSON.parse(state.searchCriteria).segments.length > 1 && "- " + getFormattedDate4(JSON.parse(state.searchCriteria).segments[1]?.departureDate)}</span>
             //       <span>{JSON.parse(state.searchCriteria).noOfAdult} {JSON.parse(state.searchCriteria).noOfAdult > 1 ? 'Adults' : 'Adult'} {JSON.parse(state.searchCriteria).child > 0 && ", " + JSON.parse(state.searchCriteria).child + " Child"}{JSON.parse(state.searchCriteria).noOfLapInfant > 0 && ", " + JSON.parse(state.searchCriteria).noOfLapInfant + " Infants"}, {getDisplayCabin(parseInt(JSON.parse(state.searchCriteria).cabin))}</span>
             //       <span>{JSON.parse(state.searchCriteria).tripType == 2 ? "Round Trip" : "One Way"}</span>
             //     </div>
-            //     <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2'>
+            //     <div className='col-2'>
             //       <i className="fa-regular fa-pen-to-square float-end h4 mb-0 color-white" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
             //     </div>
             //   </div>
@@ -920,7 +920,7 @@ export default function Results(props) {
             // : ((!isLoading && flights.length > 0) || (isLoading == false && flights.length == 0)) && */}
           <div className='container'>
             <div className='row align-items-center'>
-              <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+              <div className='col-5'>
                 <div className='d-flex align-items-center'>
                   {
                     currentFilters && currentFilters.segments && currentFilters.segments.length > 0 &&
@@ -933,7 +933,7 @@ export default function Results(props) {
 
                 </div>
               </div>
-              <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start'>
+              <div className='col-5 border-start'>
                 <span>{currentFilters && currentFilters.segments && currentFilters.segments.length > 0 && getFormattedDate4(currentFilters.segments[0].departureDate)} {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 && "- " + getFormattedDate4(currentFilters?.segments[1]?.departureDate)}</span>
                 {
                   currentFilters &&
@@ -943,7 +943,7 @@ export default function Results(props) {
                   </>
                 }
               </div>
-              <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2'>
+              <div className='col-2'>
                 <i className="fa-regular fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
               </div>
             </div>
@@ -976,9 +976,9 @@ export default function Results(props) {
         <div className='flight-results bg-grey mb-0' id="totalPriceStrip">
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3'>
+              <div className='col-12 col-lg-3'>
                 <div className='sidebar-filter-btn mt-4 desk-hide'>
-                  <h4 id='filterBySection' className='filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center' onClick={() => {
+                  <h4 id='filterBySection' className='filter-sub-heading d-flex mb-0 align-items-center bg-white p-2 justify-content-center' onClick={() => {
                     document.body.classList.add('filter-open');
                     setOpenFilters(true);
                   }}>
@@ -992,7 +992,7 @@ export default function Results(props) {
                 </div>
                 <div className={openFilters ? 'side-bar-air-filter br-5 mt-4 mb-4 active' : 'side-bar-air-filter br-5 mt-4 mb-4'}>
 
-                  <div className='filter-items py-3 ps-3 pe-3 desk-hide'>
+                  <div className='filter-items py-3 px-3 desk-hide'>
                     <h4 className='filter-sub-heading d-flex mb-0 align-items-center justify-content-between'>
                       <span className='sub-heading-title dgc'>Filter By</span>
                       <button className='transparent-btn sidebar-filter-close-btn' onClick={() => {
@@ -1004,9 +1004,9 @@ export default function Results(props) {
                     </h4>
                   </div>
 
-                  <div className='filter-items py-2 ps-3 pe-3 mob-hide'>
+                  <div className='filter-items py-2 px-3 mob-hide'>
                     <div className='row align-items-center mb-2 mt-2'>
-                      <div className='col-6 col-sm-6 col-md-8 col-lg-7 col-xl-7 col-xxl-7 pe-0'>
+                      <div className='col-6 col-md-8 col-lg-7 pe-0'>
                         <h4 className='filter-sub-heading d-flex mb-0 align-items-center'>
                           <span className='icon me-2'>
                             <span>
@@ -1016,7 +1016,7 @@ export default function Results(props) {
                           <span className='sub-heading-title dgc'>Filter By</span>
                         </h4>
                       </div>
-                      <div className='col-6 col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-5'>
+                      <div className='col-6 col-md-4 col-lg-5'>
                         <button className='transparent-btn float-end clear-filter-btn' onClick={() => clearFilters()}>Reset Filters</button>
                       </div>
                     </div>
@@ -1026,9 +1026,9 @@ export default function Results(props) {
                       <div className="tab-content" id="pills-tabContent">
                         <div id="departure-filter">
                           <div className='filter-wrp-box'>
-                            <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                            <div className='filter-items pt-3 pb-3 px-3'>
                               <div className='row align-items-center mb-2'>
-                                <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                <div className='col-6'>
                                   <h5 className='sub-title mb-0 dgc'>Stops</h5>
                                 </div>
                               </div>
@@ -1047,7 +1047,7 @@ export default function Results(props) {
                               }
                             </div>
 
-                            <div className='filter-items py-3 ps-3 pe-3'>
+                            <div className='filter-items py-3 px-3'>
                               <h5 className='sub-title mb-0 dgc'>Price</h5>
                               <div className='price-slider pt-3'>
                                 <ReactSlider
@@ -1067,17 +1067,17 @@ export default function Results(props) {
                                   }}
                                 />
                                 <div className='row mt-3'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                  <div className='col-6 text-end'>
                                     <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
                                   </div>
                                 </div>
                               </div>
                             </div>
 
-                            <div className='filter-items py-3 ps-3 pe-3'>
+                            <div className='filter-items py-3 px-3'>
                               <h5 className='sub-title mb-2 dgc'>Depart Time from {departTBOFlights[0]?.trips[0].listOfFlight[0].airportFromCity}</h5>
                               <div className='row m-0'>
                                 <div className='col-3 px-1' onClick={() => applyFilters('depart-time', 'Morning', departTBOFlights)}>
@@ -1120,17 +1120,17 @@ export default function Results(props) {
                                   minDistance={1}
                                 />
                                 <div className='row mt-3'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h6 className='mb-0 d-table'>{formatTime(selectedTimeRange[0])}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                  <div className='col-6 text-end'>
                                     <h6 className='mb-0 d-table float-end'>{selectedTimeRange[1] == 24 ? "23:59" : formatTime(selectedTimeRange[1])}</h6>
                                   </div>
                                 </div>
                               </div> */}
                             </div>
 
-                            {/* <div className='filter-items py-3 ps-3 pe-3'>
+                            {/* <div className='filter-items py-3 px-3'>
                               <h5 className='sub-title mb-0 dgc'>Return Time From {returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity}</h5>
                               <div className='price-slider pt-3'>
                                 <ReactSlider
@@ -1146,10 +1146,10 @@ export default function Results(props) {
                                   minDistance={1}
                                 />
                                 <div className='row mt-3'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h6 className='mb-0 d-table'>{formatTime(selectedReturnTimeRange[0])}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                  <div className='col-6 text-end'>
                                     <h6 className='mb-0 d-table float-end'>{selectedReturnTimeRange[1] == 24 ? "23:59" : formatTime(selectedReturnTimeRange[1])}</h6>
                                   </div>
                                 </div>
@@ -1158,7 +1158,7 @@ export default function Results(props) {
 
                             {
                               returnTBOFlights.length > 0 &&
-                              <div className='filter-items py-3 ps-3 pe-3'>
+                              <div className='filter-items py-3 px-3'>
                                 <h5 className='sub-title mb-2 dgc'>Return Time from {returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity}</h5>
                                 <div className='row m-0'>
                                   <div className='col-3 px-1' onClick={() => applyFilters('return-time', 'Morning', returnTBOFlights)}>
@@ -1188,7 +1188,7 @@ export default function Results(props) {
                                 </div>
                               </div>
                             }
-                            <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                            <div className='filter-items pt-3 pb-3 px-3'>
                               <h5 className='sub-title mb-2 dgc'>Sort By</h5>
                               <div className="form-check">
                                 {
@@ -1208,7 +1208,7 @@ export default function Results(props) {
                             </div>
                             {
                               pureValidatingCarriers && pureValidatingCarriers.length > 0 &&
-                              <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                              <div className='filter-items pt-3 pb-3 px-3'>
                                 <h5 className='sub-title mb-2 dgc'>Airlines</h5>
                                 <div className="form-check">
                                   {
@@ -1228,7 +1228,7 @@ export default function Results(props) {
                             }
                             {
                               validatingCarriers && validatingCarriers.length > 0 &&
-                              <div className='filter-items pt-3 pb-3 ps-3 pe-3 border-0'>
+                              <div className='filter-items pt-3 pb-3 px-3 border-0'>
                                 <h5 className='sub-title mb-2 dgc'>Multiple Airlines</h5>
                                 <div className="form-check">
                                   {
@@ -1256,7 +1256,7 @@ export default function Results(props) {
                               </div>
                             }
                           </div>
-                          <div className='filter-items pt-3 pb-3 ps-3 pe-3 border-0 d-lg-none fixed-bottom'>
+                          <div className='filter-items pt-3 pb-3 px-3 border-0 d-lg-none fixed-bottom'>
                             <div className='row'>
                               <div className='col-6 col-sm-6 col-md-6'>
                                 <button className='clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0' onClick={() => { setOpenFilters(false); document.body.classList.remove('filter-open'); setShowContentLoader(true); setTimeout(() => { setShowContentLoader(false); }, 1000) }}>Apply Filters</button>
@@ -1271,9 +1271,9 @@ export default function Results(props) {
                           (returnTBOFlights && returnTBOFlights.length > 0) &&
                           <div className="tab-pane fade" id="return-filter" role="tabpanel" aria-labelledby="return-filter-tab">
                             <div className='filter-wrp-box'>
-                              <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                              <div className='filter-items pt-3 pb-3 px-3'>
                                 <div className='row align-items-center mb-2'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h5 className='sub-title mb-0 dgc'>Stops</h5>
                                   </div>
                                 </div>
@@ -1292,7 +1292,7 @@ export default function Results(props) {
                                 }
                               </div>
 
-                              <div className='filter-items py-3 ps-3 pe-3'>
+                              <div className='filter-items py-3 px-3'>
                                 <h5 className='sub-title mb-0 dgc'>Price</h5>
                                 <div className='price-slider pt-3'>
                                   <ReactSlider
@@ -1312,17 +1312,17 @@ export default function Results(props) {
                                     }}
                                   />
                                   <div className='row mt-3'>
-                                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                    <div className='col-6'>
                                       <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(rtnPriceFilterValues[0])).split('.')[0]}</h6>
                                     </div>
-                                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                    <div className='col-6 text-end'>
                                       <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(rtnPriceFilterValues[1])).split('.')[0]}</h6>
                                     </div>
                                   </div>
                                 </div>
                               </div>
 
-                              <div className='filter-items py-3 ps-3 pe-3'>
+                              <div className='filter-items py-3 px-3'>
                                 <h5 className='sub-title mb-0 dgc'>Return Time</h5>
                                 <div className='price-slider pt-3'>
                                   <ReactSlider
@@ -1338,16 +1338,16 @@ export default function Results(props) {
                                     minDistance={1}
                                   />
                                   <div className='row mt-3'>
-                                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                    <div className='col-6'>
                                       <h6 className='mb-0 d-table'>{formatTime(selectedReturnTimeRange[0])}</h6>
                                     </div>
-                                    <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                    <div className='col-6 text-end'>
                                       <h6 className='mb-0 d-table float-end'>{selectedReturnTimeRange[1] == 24 ? "23:59" : formatTime(selectedReturnTimeRange[1])}</h6>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                              <div className='filter-items pt-3 pb-3 px-3'>
                                 <h5 className='sub-title mb-2 dgc'>Sort By</h5>
                                 <div className="form-check">
                                   {
@@ -1367,7 +1367,7 @@ export default function Results(props) {
                               </div>
                               {
                                 rtnPureValidatingCarriers && rtnPureValidatingCarriers.length > 0 &&
-                                <div className='filter-items pt-3 pb-3 ps-3 pe-3'>
+                                <div className='filter-items pt-3 pb-3 px-3'>
                                   <h5 className='sub-title mb-2 dgc'>Airlines</h5>
                                   <div className="form-check">
                                     {
@@ -1387,7 +1387,7 @@ export default function Results(props) {
                               }
                               {
                                 rtnValidatingCarriers && rtnValidatingCarriers.length > 0 &&
-                                <div className='filter-items pt-3 pb-3 ps-3 pe-3 border-0'>
+                                <div className='filter-items pt-3 pb-3 px-3 border-0'>
                                   <h5 className='sub-title mb-2 dgc'>Multiple Airlines</h5>
                                   <div className="form-check">
                                     {
@@ -1407,7 +1407,7 @@ export default function Results(props) {
                                 </div>
                               }
                             </div>
-                            <div className='filter-items pt-3 pb-3 ps-3 pe-3 border-0 d-lg-none fixed-bottom'>
+                            <div className='filter-items pt-3 pb-3 px-3 border-0 d-lg-none fixed-bottom'>
                               <div className='row'>
                                 <div className='col-6 col-sm-6 col-md-6'>
                                   <button className='clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0' onClick={() => { setOpenFilters(false); document.body.classList.remove('filter-open'); setShowContentLoader(true); setTimeout(() => { setShowContentLoader(false); }, 1000) }}>Apply Filters</button>
@@ -1423,7 +1423,7 @@ export default function Results(props) {
                   </div>
                 </div>
               </div>
-              <div className='col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9'>
+              <div className='col-12 col-lg-9'>
                 <div className='air-listing-results matrixSlider pt-4 mb-4 position-relative matrix-slider'>
 
 
@@ -1438,7 +1438,7 @@ export default function Results(props) {
                       <OffersMatrix></OffersMatrix>
                     </div>
                     <div className='col-12'>
-                      <div className='note-bar br-5 ps-3 pt-3 pe-3 pb-3'>
+                      <div className='note-bar br-5 p-3'>
                         <p className='mb-0'><strong>Note:</strong> * All the fares displayed are for {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 ? "Round Trip" : "One Way"} and are in INR, inclusive of base fare, taxes and service fees. </p>
                       </div>
                     </div>
@@ -1499,16 +1499,16 @@ export default function Results(props) {
                             <div className='regular-one-trip listing-com'>
                               <div className='regular-flight-round-box mt-4 mb-4'>
                                 <div className='row align-items-center'>
-                                  <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box'>
+                                  <div className='col-9 both-flight-box'>
                                     <div className='row align-items-center'>
-                                      <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                      <div className='col-12'>
                                         <div className='row'>
                                           <div className='col-sm-12'>
                                             <h2 className='digination-sub-title mb-3 dgc'>Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
                                           </div>
                                         </div>
                                         <div className='row align-items-center'>
-                                          <div className='col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3'>
+                                          <div className='col-2 col-md-3 col-lg-4 col-xl-3'>
                                             <div className='air-flight-logo text-start'>
                                               <Image
                                                 className='h-auto'
@@ -1528,12 +1528,12 @@ export default function Results(props) {
                                               <span>{flight.trips[0].validatingCarrier.name}</span>
                                             </div>
                                           </div>
-                                          <div className='col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0'>
+                                          <div className='col-10 col-md-9 col-lg-8 col-xl-9 p-0'>
                                             <div className='row align-items-center'>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0 text-start w-100 dgc'>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                              <div className='col-4 p-0'>
                                                 <div className='from-to-from-digination'>
                                                   <h6 className='text-center mb-0'>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
                                                   {
@@ -1577,7 +1577,7 @@ export default function Results(props) {
                                                   </h6>
                                                 </div>
                                               </div>
-                                              <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                              <div className='col-4'>
                                                 <h4 className='airport-code mb-0 justify-content-end dgc position-relative d-flex'>
                                                   <span className='flight-plus-air position-relative'>
                                                     <span className='tooltip-box cursor-pointer float-end'>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
@@ -1607,7 +1607,7 @@ export default function Results(props) {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0'>
+                                  <div className='col-3 ps-0'>
                                     <div className='air-flight-price text-end'>
                                       <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                       <h6 className='mb-2 mt-2'>{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
@@ -1617,11 +1617,11 @@ export default function Results(props) {
 
                                 <div className='air-flight-btn-and-bag mt-1 pt-2'>
                                   <div className='row align-items-center'>
-                                    <div className='col-8 col-sm-8 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0'>
+                                    <div className='col-8 col-md-5 pe-0'>
                                       <div className='details-icon-btns d-flex'>
                                         <div className='me-3 '>
                                           <div className='dropdown dropdown-hover'>
-                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                               <img className="" src={flight.isRefundable
                                                 ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                                 : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -1634,7 +1634,7 @@ export default function Results(props) {
                                         </div>
                                         <div className='me-3'>
                                           <div className='dropdown dropdown-hover'>
-                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                               <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                               <p className='mb-0 fs-12 fw-bold color-red ms-2'>{flight.trips[0].listOfFlight[0].seats} Left</p>
                                             </button>
@@ -1645,7 +1645,7 @@ export default function Results(props) {
                                         </div>
                                         <div className='me-0'>
                                           <div className='dropdown dropdown-hover'>
-                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                               <img className="" src={timeIcon} />
                                               <p className='mb-0 fs-12 fw-bold color-black ms-2'>{timeOfDay}</p>
                                             </button>
@@ -1656,7 +1656,7 @@ export default function Results(props) {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className='col-4 col-sm-4 col-md-7 col-lg-7 col-xl-7 col-xxl-7'>
+                                    <div className='col-4 col-md-7'>
                                       <div className='air-flight-price text-end'>
                                       <button
                                                 className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center"
@@ -1714,10 +1714,10 @@ export default function Results(props) {
                             <div className='custom-view-round-trip-box'>
                               <div className='custom-view-round-trip-box-main'>
                                 <div className='row'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <div className='depart listing-banner p-3 br-10'>
                                       <div className='row align-items-center'>
-                                        <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0'>
+                                        <div className='col-12 pe-0'>
                                           <h6 className='color-white mb-0'>Depart | {getFormattedDate4(currentFilters.segments[0].departureDate)}</h6>
                                         </div>
                                       </div>
@@ -1761,13 +1761,13 @@ export default function Results(props) {
                                           setSelectedDepartTBOFlight(currentFlight);
                                         }}>
                                           <div className='row align-items-center'>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <div className='air-flight-logo text-start'>
                                                 <img src={`https://assets.superfares.com/airline-logo/${flight.trips[0].validatingCarrier.code}.webp`} />
                                                 <span>{flight.trips[0].validatingCarrier.name}</span>
                                               </div>
                                             </div>
-                                            <div className='col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8'>
+                                            <div className='col-8'>
                                               <div className='air-flight-price text-end'>
                                                 <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                 <h6 className='mb-0 mt-1'>per Traveler</h6>
@@ -1775,10 +1775,10 @@ export default function Results(props) {
                                             </div>
                                           </div>
                                           <div className='row align-items-center'>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <h4 className='airport-code mb-0 text-start w-100 dgc'>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                             </div>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                            <div className='col-4 p-0'>
                                               <div className='from-to-from-digination'>
                                                 {
                                                   flight.trips[0].listOfFlight.length <= 3 &&
@@ -1794,7 +1794,7 @@ export default function Results(props) {
                                                 }
                                               </div>
                                             </div>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <h4 className='airport-code mb-0 text-end w-100 dgc position-relative'>
                                                 {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                 {
@@ -1814,7 +1814,7 @@ export default function Results(props) {
                                             </div>
                                           </div>
                                           <div className='row align-items-center'>
-                                            <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                            <div className='col-12'>
                                               {/* {
                                                 displayOperatedBy && displayOperatedBy.length > 0 &&
                                                 <div className='row'>
@@ -1827,11 +1827,11 @@ export default function Results(props) {
                                           </div>
                                           <div className='air-flight-btn-and-bag mt-1 pt-2'>
                                             <div className='row align-items-center'>
-                                              <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0'>
+                                              <div className='col-5 pe-0'>
                                                 <div className='details-icon-btns d-flex'>
                                                   <div className='me-3 '>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src={flight.isRefundable
                                                           ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                                           : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -1843,7 +1843,7 @@ export default function Results(props) {
                                                   </div>
                                                   <div className='me-3'>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                                       </button>
                                                       <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -1853,7 +1853,7 @@ export default function Results(props) {
                                                   </div>
                                                   <div className='me-0'>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src={timeIcon} />
                                                       </button>
                                                       <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -1863,7 +1863,7 @@ export default function Results(props) {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7'>
+                                              <div className='col-7'>
                                                 <div className='air-flight-price text-end'>
                                                   <button className='btn-style1 border-0 p-0 float-end text-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                     e.stopPropagation();
@@ -1881,10 +1881,10 @@ export default function Results(props) {
                                       )
                                     })}
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <div className='return listing-banner p-3 br-10'>
                                       <div className='row align-items-center'>
-                                        <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0'>
+                                        <div className='col-12 pe-0'>
                                           <h6 className='color-white mb-0'>Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
                                         </div>
                                       </div>
@@ -1928,13 +1928,13 @@ export default function Results(props) {
                                           setSelectedReturnTBOFlight(currentFlight);
                                         }}>
                                           <div className='row align-items-center'>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <div className='air-flight-logo text-start'>
                                                 <img src={`https://assets.superfares.com/airline-logo/${flight.trips[0].validatingCarrier.code}.webp`} />
                                                 <span>{flight.trips[0].validatingCarrier.name}</span>
                                               </div>
                                             </div>
-                                            <div className='col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8'>
+                                            <div className='col-8'>
                                               <div className='air-flight-price text-end'>
                                                 <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                 <h6 className='mb-0 mt-1'>per Traveler</h6>
@@ -1942,10 +1942,10 @@ export default function Results(props) {
                                             </div>
                                           </div>
                                           <div className='row align-items-center'>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <h4 className='airport-code mb-0 text-start w-100 dgc'>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                             </div>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                            <div className='col-4 p-0'>
                                               <div className='from-to-from-digination'>
                                                 {
                                                   flight.trips[0].listOfFlight.length <= 3 &&
@@ -1961,7 +1961,7 @@ export default function Results(props) {
                                                 }
                                               </div>
                                             </div>
-                                            <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                            <div className='col-4'>
                                               <h4 className='airport-code mb-0 text-end w-100 dgc position-relative'>
                                                 {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                 {
@@ -1981,7 +1981,7 @@ export default function Results(props) {
                                             </div>
                                           </div>
                                           <div className='row align-items-center'>
-                                            <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                            <div className='col-12'>
                                               {/* {
                                                 displayOperatedBy && displayOperatedBy.length > 0 &&
                                                 <div className='row'>
@@ -1994,11 +1994,11 @@ export default function Results(props) {
                                           </div>
                                           <div className='air-flight-btn-and-bag mt-1 pt-2'>
                                             <div className='row align-items-center'>
-                                              <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0'>
+                                              <div className='col-5 pe-0'>
                                                 <div className='details-icon-btns d-flex'>
                                                   <div className='me-3 '>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src={flight.isRefundable
                                                           ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                                           : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -2010,7 +2010,7 @@ export default function Results(props) {
                                                   </div>
                                                   <div className='me-3'>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                                       </button>
                                                       <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2020,7 +2020,7 @@ export default function Results(props) {
                                                   </div>
                                                   <div className='me-0'>
                                                     <div className='dropdown dropdown-hover'>
-                                                      <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
+                                                      <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                         <img className="" src={timeIcon} />
                                                       </button>
                                                       <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2030,7 +2030,7 @@ export default function Results(props) {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7'>
+                                              <div className='col-7'>
                                                 <div className='air-flight-price text-end'>
                                                   <button className='btn-style1 border-0 p-0 float-end text-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                     e.stopPropagation();
@@ -2060,14 +2060,14 @@ export default function Results(props) {
                             <div className='custom-view-round-trip-box'>
                               <div className='custom-view-round-trip-box-main'>
                                 <div className='row'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <div className='depart listing-banner p-4 br-10'>
                                       <div className='row align-items-center'>
-                                        <div className='col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0'>
+                                        <div className='col-7 pe-0'>
                                           <h6 className='color-white'>Depart | {getFormattedDate4(currentFilters.segments[0].departureDate)}</h6>
                                           <h3 className='color-white mb-0'>{departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[departTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h3>
                                         </div>
-                                        <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+                                        <div className='col-5'>
                                           <Image
                                             className="w-100"
                                             loader={trvLoader}
@@ -2127,27 +2127,27 @@ export default function Results(props) {
                                             <div className="color-white gds-code">{flight.gdsHiddenId}</div>
 
                                             <div className='row align-items-center'>
-                                              <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box'>
+                                              <div className='col-9 both-flight-box'>
                                                 <div className='row align-items-center'>
-                                                  <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                                  <div className='col-12'>
 
                                                     <div className='row align-items-center'>
-                                                      <div className='col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
+                                                      <div className='col-2 col-md-3'>
                                                         <div className='air-flight-logo text-start'>
                                                           <img src={`https://assets.superfares.com/airline-logo/${flight.trips[0].validatingCarrier.code}.webp`} />
                                                           <span>{flight.trips[0].validatingCarrier.name}</span>
                                                         </div>
                                                       </div>
-                                                      <div className='col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0'>
+                                                      <div className='col-10 col-md-9 p-0'>
                                                         <div className='row align-items-center'>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                          <div className='col-4'>
                                                             <h4 className='airport-code mb-0 dgc position-relative'>
                                                               <span className='flight-plus-air'>
                                                                 <span className='tooltip-box cursor-pointer'>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                                               </span>
                                                             </h4>
                                                           </div>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                                          <div className='col-4 p-0'>
                                                             <div className='from-to-from-digination '>
                                                               <div className="dropdown dropdown-hover">
                                                                 <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="" aria-expanded="">
@@ -2167,7 +2167,7 @@ export default function Results(props) {
                                                                   <h6 className='text-center mb-0'>{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6>
                                                                 </button>
                                                                 <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
-                                                                  <li className='ps-2 pe-2 fs-12'><strong>Flight Duration: </strong>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
+                                                                  <li className='px-2 fs-12'><strong>Flight Duration: </strong>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
                                                                   {flight.trips[0].listOfFlight.map((tf, ix) => {
                                                                     if (!!tf.displayLayOverTime)
                                                                       layoverCounter += 1;
@@ -2175,7 +2175,7 @@ export default function Results(props) {
                                                                       <Fragment key={ix}>
                                                                         {
                                                                           !!tf.displayLayOverTime &&
-                                                                          <li className='ps-2 pe-2 fs-12'><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                          <li className='px-2 fs-12'><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
                                                                         }
                                                                       </Fragment>
                                                                     )
@@ -2185,7 +2185,7 @@ export default function Results(props) {
                                                               </div>
                                                             </div>
                                                           </div>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                          <div className='col-4'>
                                                             <h4 className='airport-code mb-0 dgc position-relative d-flex'>
                                                               <span className='flight-plus-air position-relative'>
                                                                 <span className='tooltip-box cursor-pointer float-end'>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
@@ -2215,7 +2215,7 @@ export default function Results(props) {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
+                                              <div className='col-3'>
                                                 <div className='air-flight-price text-end'>
                                                   <div className={((flight.resultIndex == selectedDepartTBOFlight.resultIndex) && (flight.traceId == selectedDepartTBOFlight.traceId)) ? 'selected-flight active' : 'selected-flight'}></div>
                                                   <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
@@ -2225,11 +2225,11 @@ export default function Results(props) {
                                             </div>
                                             <div className='air-flight-btn-and-bag mt-1 pt-2'>
                                               <div className='row align-items-center'>
-                                                <div className='col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0'>
+                                                <div className='col-10 col-md-8 col-lg-7 col-xl-8 pe-0'>
                                                   <div className='details-icon-btns d-flex'>
                                                     <div className='me-3 '>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src={flight.isRefundable
                                                             ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                                             : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -2242,7 +2242,7 @@ export default function Results(props) {
                                                     </div>
                                                     <div className='me-3'>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                                           <p className='mb-0 fs-12 fw-bold color-red ms-2'>{flight.trips[0].listOfFlight[0].seats} Left</p>
                                                         </button>
@@ -2253,7 +2253,7 @@ export default function Results(props) {
                                                     </div>
                                                     <div className='me-0'>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src={timeIcon} />
                                                           <p className='mb-0 fs-12 fw-bold color-black ms-2'>{timeOfDay}</p>
                                                         </button>
@@ -2264,7 +2264,7 @@ export default function Results(props) {
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
+                                                <div className='col-2 col-md-4 col-lg-5 col-xl-4'>
                                                   <div className='air-flight-price text-end'>
                                                     <button className='btn-style1 float-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                       e.stopPropagation();
@@ -2296,14 +2296,14 @@ export default function Results(props) {
                                     }
 
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <div className='return listing-banner p-4 br-10'>
                                       <div className='row align-items-center'>
-                                        <div className='col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0'>
+                                        <div className='col-7 pe-0'>
                                           <h6 className='color-white'>Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
                                           <h3 className='color-white mb-0'>{returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[returnTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h3>
                                         </div>
-                                        <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+                                        <div className='col-5'>
                                           <Image
                                             className="w-100"
                                             loader={trvLoader}
@@ -2361,27 +2361,27 @@ export default function Results(props) {
                                             setSelectedReturnTBOFlight(currentFlight);
                                           }}>
                                             <div className='row align-items-center'>
-                                              <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box'>
+                                              <div className='col-9 both-flight-box'>
                                                 <div className='row align-items-center'>
-                                                  <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                                  <div className='col-12'>
 
                                                     <div className='row align-items-center'>
-                                                      <div className='1 col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
+                                                      <div className='1 col-2 col-md-3'>
                                                         <div className='air-flight-logo text-start'>
                                                           <img src={`https://assets.superfares.com/airline-logo/${flight.trips[0].validatingCarrier.code}.webp`} />
                                                           <span>{flight.trips[0].validatingCarrier.name}</span>
                                                         </div>
                                                       </div>
-                                                      <div className='col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0'>
+                                                      <div className='col-10 col-md-9 p-0'>
                                                         <div className='row align-items-center'>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                          <div className='col-4'>
                                                             <h4 className='airport-code mb-0 dgc position-relative'>
                                                               <span className='flight-plus-air'>
                                                                 <span className='tooltip-box cursor-pointer'>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                                               </span>
                                                             </h4>
                                                           </div>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0'>
+                                                          <div className='col-4 p-0'>
                                                             <div className='from-to-from-digination '>
                                                               <div className="dropdown dropdown-hover">
                                                                 <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="" aria-expanded="">
@@ -2401,7 +2401,7 @@ export default function Results(props) {
                                                                   <h6 className='text-center mb-0'>{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6>
                                                                 </button>
                                                                 <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
-                                                                  <li className='ps-2 pe-2 fs-12'><strong>Flight Duration: </strong>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
+                                                                  <li className='px-2 fs-12'><strong>Flight Duration: </strong>{getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
                                                                   {flight.trips[0].listOfFlight.map((tf, ix) => {
                                                                     if (!!tf.displayLayOverTime)
                                                                       layoverCounter += 1;
@@ -2409,7 +2409,7 @@ export default function Results(props) {
                                                                       <Fragment key={ix}>
                                                                         {
                                                                           !!tf.displayLayOverTime &&
-                                                                          <li className='ps-2 pe-2 fs-12'> <strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                          <li className='px-2 fs-12'> <strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
                                                                         }
                                                                       </Fragment>
                                                                     )
@@ -2419,7 +2419,7 @@ export default function Results(props) {
                                                               </div>
                                                             </div>
                                                           </div>
-                                                          <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
+                                                          <div className='col-4'>
                                                             <h4 className='airport-code mb-0 dgc position-relative d-flex'>
                                                               <span className='flight-plus-air position-relative'>
                                                                 <span className='tooltip-box cursor-pointer float-end'>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
@@ -2449,7 +2449,7 @@ export default function Results(props) {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
+                                              <div className='col-3'>
                                                 <div className='air-flight-price text-end'>
                                                   <div className={((flight.resultIndex == selectedReturnTBOFlight.resultIndex) && (flight.traceId == selectedReturnTBOFlight.traceId)) ? 'selected-flight active' : 'selected-flight'}></div>
                                                   <h2 className='mb-0 dgc'>{aedNumberFormat(avgPrice).split(".")[0]}</h2>
@@ -2459,11 +2459,11 @@ export default function Results(props) {
                                             </div>
                                             <div className='air-flight-btn-and-bag mt-1 pt-2'>
                                               <div className='row align-items-center'>
-                                                <div className='col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0'>
+                                                <div className='col-10 col-md-8 col-lg-7 col-xl-8 pe-0'>
                                                   <div className='details-icon-btns d-flex'>
                                                     <div className='me-3 '>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src={flight.isRefundable
                                                             ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                                             : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -2476,7 +2476,7 @@ export default function Results(props) {
                                                     </div>
                                                     <div className='me-3'>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                                           <p className='mb-0 fs-12 fw-bold color-red ms-2'>{flight.trips[0].listOfFlight[0].seats} Left</p>
                                                         </button>
@@ -2487,7 +2487,7 @@ export default function Results(props) {
                                                     </div>
                                                     <div className='me-0'>
                                                       <div className='dropdown dropdown-hover'>
-                                                        <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                                        <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                           <img className="" src={timeIcon} />
                                                           <p className='mb-0 fs-12 fw-bold color-black ms-2'>{timeOfDay}</p>
                                                         </button>
@@ -2498,7 +2498,7 @@ export default function Results(props) {
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
+                                                <div className='col-2 col-md-4 col-lg-5 col-xl-4'>
                                                   <div className='air-flight-price text-end'>
                                                     <button className='btn-style1 float-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                       e.stopPropagation();
@@ -2541,13 +2541,13 @@ export default function Results(props) {
 
                     {/* {
                       flights && flights.length > 0 && filteredFlights && filteredFlights.length == 0 &&
-                      <div className="no-result-lising bg-white text-center ps-3 pt-3 pe-3 pb-3 mb-4">
+                      <div className="no-result-lising bg-white text-center p-3 mb-4">
                         <img src="https://assets.superfares.com/icons-new/red-alert-icon.png" />
                         <h4 className='mb-2 mt-2'>No Result found</h4>
                         <p className='mb-0'>for selected criteria. Please apply or change more filters.</p>
                         <button className='btn-style1 active mb-3 mt-3' onClick={() => clearFilters()}>Reset all filters</button>
                         <h6>or Call us at</h6>
-                        <a className='btn-style1 ps-3 pe-3' href={"tel:" + displayContactNumber}>
+                        <a className='btn-style1 px-3' href={"tel:" + displayContactNumber}>
                           <img src="https://assets.neofares.com/all-icon/call.svg" />
                           <span>{displayContactNumber}</span>
                         </a>
@@ -2639,29 +2639,29 @@ export default function Results(props) {
           <div className='d-none d-lg-inline'>
             <div className='container'>
               <div className='row align-items-center'>
-                <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5'>
+                <div className='col-5'>
                   <div className="regular-flight-round-box mt-4 mb-4">
                     <div className="row align-items-center">
-                      <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                      <div className="col-9 both-flight-box">
                         <div className="row align-items-center">
-                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <div className="col-12">
                             <div className="row align-items-center">
-                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                              <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                 <div className="air-flight-logo text-start">
                                   <img src={`https://assets.superfares.com/airline-logo/${selectedDepartTBOFlight.trips[0].validatingCarrier.code}.webp`} />
                                   <span>{selectedDepartTBOFlight.trips[0].validatingCarrier.name}</span>
                                 </div>
                               </div>
-                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                              <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                 <div className="row">
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                  <div className="col-4">
                                     <h6 className="flight-time mb-0">
                                       <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                       <span className="flight-plus-air"></span>
                                     </h6>
                                     <h4 className='airport-code mb-0 dgc'>
                                       <div className='dropdown dropdown-hover'>
-                                        <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                        <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                           <span className='fw-bold fs-20'>{selectedDepartTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                         </button>
                                         <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2672,7 +2672,7 @@ export default function Results(props) {
                                       </div>
                                     </h4>
                                   </div>
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                  <div className="col-4 p-0">
                                     <div className="from-to-from-digination">
                                       <h6 className="text-center mb-0">{getDiffFromMinutes(selectedDepartTBOFlight.trips[0].totalTripTime)}</h6>
                                       {
@@ -2690,7 +2690,7 @@ export default function Results(props) {
                                       <h6 className="text-center mb-0">{selectedDepartTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (selectedDepartTBOFlight.trips[0].listOfFlight.length - 1 + (selectedDepartTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6>
                                     </div>
                                   </div>
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                  <div className="col-4">
                                     <h6 className="flight-time mb-0">
                                       <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                       {
@@ -2705,7 +2705,7 @@ export default function Results(props) {
                                     </h6>
                                     <h4 className='airport-code mb-0 dgc'>
                                       <div className='dropdown dropdown-hover'>
-                                        <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                        <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                           <span className='fw-bold fs-20'>{selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                         </button>
                                         <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2722,7 +2722,7 @@ export default function Results(props) {
                           </div>
                         </div>
                       </div>
-                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                      <div className="col-3">
                         <div className="air-flight-price text-end">
                           <h2 className="mb-0 dgc">{aedNumberFormat(selectedDepartTBOFlight.avgPrice).split('.')[0]}</h2>
                           <h6 className="mb-2 mt-2">per Traveler</h6>
@@ -2733,11 +2733,11 @@ export default function Results(props) {
                       <div className='col-sm-12'>
                         <div className='air-flight-btn-and-bag mt-3 pt-2'>
                           <div className='row align-items-center'>
-                            <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0'>
+                            <div className='col-12 pe-0'>
                               <div className='details-icon-btns d-flex'>
                                 <div className='me-3 '>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src={selectedDepartTBOFlight.isRefundable
                                         ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                         : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -2750,7 +2750,7 @@ export default function Results(props) {
                                 </div>
                                 <div className='me-3'>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                       <p className='mb-0 fs-12 fw-bold color-red ms-2'>{selectedDepartTBOFlight.trips[0].listOfFlight[0].seats} Left</p>
                                     </button>
@@ -2761,7 +2761,7 @@ export default function Results(props) {
                                 </div>
                                 <div className='me-0'>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src={selectedDepartTBOFlight.timeIcon} />
                                       <p className='mb-0 fs-12 fw-bold color-black ms-2'>{selectedDepartTBOFlight.timeOfDay}</p>
                                     </button>
@@ -2778,29 +2778,29 @@ export default function Results(props) {
                     </div>
                   </div>
                 </div>
-                <div className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start'>
+                <div className='col-5 border-start'>
                   <div className="regular-flight-round-box mt-4 mb-4 ">
                     <div className="row align-items-center">
-                      <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                      <div className="col-9 both-flight-box">
                         <div className="row align-items-center">
-                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <div className="col-12">
                             <div className="row align-items-center">
-                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                              <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                 <div className="air-flight-logo text-start">
                                   <img src={`https://assets.superfares.com/airline-logo/${selectedReturnTBOFlight.trips[0].validatingCarrier.code}.webp`} />
                                   <span>{selectedReturnTBOFlight.trips[0].validatingCarrier.name}</span>
                                 </div>
                               </div>
-                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                              <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                 <div className="row">
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                  <div className="col-4">
                                     <h6 className="flight-time mb-0">
                                       <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                       <span className="flight-plus-air"></span>
                                     </h6>
                                     <h4 className='airport-code mb-0 dgc'>
                                       <div className='dropdown dropdown-hover'>
-                                        <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                        <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                           <span className='fw-bold fs-20'>{selectedReturnTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                         </button>
                                         <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2811,7 +2811,7 @@ export default function Results(props) {
                                       </div>
                                     </h4>
                                   </div>
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                  <div className="col-4 p-0">
                                     <div className="from-to-from-digination">
                                       <h6 className="text-center mb-0">{getDiffFromMinutes(selectedReturnTBOFlight.trips[0].totalTripTime)}</h6>
                                       {
@@ -2829,7 +2829,7 @@ export default function Results(props) {
                                       <h6 className="text-center mb-0">{selectedReturnTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : (selectedReturnTBOFlight.trips[0].listOfFlight.length - 1 + (selectedReturnTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops"))}</h6>
                                     </div>
                                   </div>
-                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                  <div className="col-4">
                                     <h6 className="flight-time mb-0">
                                       <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                       {
@@ -2844,7 +2844,7 @@ export default function Results(props) {
                                     </h6>
                                     <h4 className='airport-code mb-0 dgc'>
                                       <div className='dropdown dropdown-hover'>
-                                        <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                        <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                           <span className='fw-bold fs-20'>{selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                         </button>
                                         <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -2862,7 +2862,7 @@ export default function Results(props) {
                           </div>
                         </div>
                       </div>
-                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                      <div className="col-3">
                         <div className="air-flight-price text-end">
                           <h2 className="mb-0 dgc">{aedNumberFormat(selectedReturnTBOFlight.avgPrice).split('.')[0]}</h2>
                           <h6 className="mb-2 mt-2">per Traveler</h6>
@@ -2873,11 +2873,11 @@ export default function Results(props) {
                       <div className='col-sm-12'>
                         <div className='air-flight-btn-and-bag mt-3 pt-2'>
                           <div className='row align-items-center'>
-                            <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0'>
+                            <div className='col-12 pe-0'>
                               <div className='details-icon-btns d-flex'>
                                 <div className='me-3 '>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src={selectedReturnTBOFlight.isRefundable
                                         ? "https://assets.shipratravel.com/trv/icon/refundable-icon.svg"
                                         : "https://assets.neofares.com/all-icon/non-refundable.svg"} />
@@ -2890,7 +2890,7 @@ export default function Results(props) {
                                 </div>
                                 <div className='me-3'>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="drodown" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="drodown" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src="https://assets.neofares.com/all-icon/seat-red-icon.svg" />
                                       <p className='mb-0 fs-12 fw-bold color-red ms-2'>{selectedReturnTBOFlight.trips[0].listOfFlight[0].seats} Left</p>
                                     </button>
@@ -2901,7 +2901,7 @@ export default function Results(props) {
                                 </div>
                                 <div className='me-0'>
                                   <div className='dropdown dropdown-hover'>
-                                    <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                    <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                       <img className="" src={selectedReturnTBOFlight.timeIcon} />
                                       <p className='mb-0 fs-12 fw-bold color-black ms-2'>{selectedReturnTBOFlight.timeOfDay}</p>
                                     </button>
@@ -2918,7 +2918,7 @@ export default function Results(props) {
                     </div>
                   </div>
                 </div>
-                <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2'>
+                <div className='col-2'>
                   <div className="air-flight-price text-end">
                     <button className='btn-style1 border-0 px-2 py-0 float-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                       e.stopPropagation();
@@ -3029,10 +3029,10 @@ export default function Results(props) {
               </div>
             </div>
             <div className="row session-btns">
-              <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+              <div className="col-6">
                 <a className='border border-blue color-blue w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none' href="javascript:void(0);" onClick={() => { setOpenSessionIdleModal(false); let previousAppliedFilters = localStorage.getItem("currentSelectedFilters"); let parsedFilters = JSON.parse(previousAppliedFilters); modifySearch(parsedFilters, true); }}>Refresh</a>
               </div>
-              <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+              <div className="col-6">
                 <a className='border border-blue bg-blue color-white w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none' href='/'>Home</a>
               </div>
             </div>

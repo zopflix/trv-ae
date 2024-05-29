@@ -64,7 +64,7 @@ export default function PaymentProcess() {
                                                             <div className="input-group my-2">
                                                                 <label className="form-label">Card number<span>*</span></label>
                                                                 <div className="position-relative w-100">
-                                                                    <input className="ps-3 pt-3 pe-3 pb-3 form-control float-start w-100" placeholder="1234 1234 **** **** ****" maxlength="16" type="text" />
+                                                                    <input className="p-3 form-control float-start w-100" placeholder="1234 1234 **** **** ****" maxlength="16" type="text" />
                                                                     <Image
                                                                         className="h-auto position-absolute end-0 m-auto top-0 bottom-0 me-3"
                                                                         loader={trvLoader}
@@ -82,7 +82,7 @@ export default function PaymentProcess() {
                                                             <div className="input-group my-2">
                                                                 <label className="form-label">Card Holder's Name<span>*</span></label>
                                                                 <div className="position-relative w-100">
-                                                                    <input className="ps-3 pt-3 pe-3 pb-3 form-control float-start w-100" placeholder="John Doe" maxlength="16" type="text" />
+                                                                    <input className="p-3 form-control float-start w-100" placeholder="John Doe" maxlength="16" type="text" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -90,7 +90,7 @@ export default function PaymentProcess() {
                                                             <div className="input-group my-2">
                                                                 <label className="form-label">Expiration<span>*</span></label>
                                                                 <div className="position-relative w-100">
-                                                                    <input className="ps-3 pt-3 pe-3 pb-3 form-control float-start w-100" placeholder="MM/YY" maxlength="16" type="text" />
+                                                                    <input className="p-3 form-control float-start w-100" placeholder="MM/YY" maxlength="16" type="text" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -98,7 +98,7 @@ export default function PaymentProcess() {
                                                             <div className="input-group my-2">
                                                                 <label className="form-label">CVV<span>*</span></label>
                                                                 <div className="position-relative w-100">
-                                                                    <input className="ps-3 pt-3 pe-3 pb-3 form-control float-start w-100" placeholder="***" maxlength="16" type="text" />
+                                                                    <input className="p-3 form-control float-start w-100" placeholder="***" maxlength="16" type="text" />
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -92,7 +92,7 @@ function StripePayment() {
 
                 {!showAmountTab &&
                     <div>
-                        <div className='tab-block col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 col-xxl-2 mb-4'>
+                        <div className='tab-block col-12 col-md-4 col-lg-3 col-xl-2 mb-4'>
                             <button className='bg-white border border-blue rounded-3 py-2 px-4 d-flex align-items-center' onClick={() => setShowAmountTab(true)}>
                                 <Image
                                     className="h-auto me-2"

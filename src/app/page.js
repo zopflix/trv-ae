@@ -125,7 +125,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='row'>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
@@ -139,7 +139,7 @@ export default function Home() {
                     <h3 className='color-blue fs-14 text-center mt-3 mb-0'>IATA-Certified</h3>
                   </div>
                 </div>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
@@ -153,7 +153,7 @@ export default function Home() {
                     <h3 className='color-blue fs-14 text-center mt-3 mb-0'>Verified Experts</h3>
                   </div>
                 </div>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
@@ -167,7 +167,7 @@ export default function Home() {
                     <h3 className='color-blue fs-14 text-center mt-3 mb-0'>100+ Tour Options</h3>
                   </div>
                 </div>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
@@ -181,7 +181,7 @@ export default function Home() {
                     <h3 className='color-blue fs-14 text-center mt-3 mb-0'>Easy Payment</h3>
                   </div>
                 </div>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image
@@ -195,7 +195,7 @@ export default function Home() {
                     <h3 className='color-blue fs-14 text-center mt-3 mb-0'>100% Satisfaction</h3>
                   </div>
                 </div>
-                <div className='col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 py-3'>
+                <div className='col-6 col-md-4 col-lg-2 py-3'>
                   <div className='chooseBox bg-light-blue border rounded-3 py-4'>
                     <div className='chooseBoxIcon m-auto text-center rounded-3'>
                       <Image

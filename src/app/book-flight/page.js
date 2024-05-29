@@ -913,9 +913,9 @@ export default function CheckoutPage() {
         <section className='pt-5 pb-5 bg-grey'>
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+              <div className='col-12'>
                 <div className='row align-items-center'>
-                  <div className='tab-block col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 col-xxl-2'>
+                  <div className='tab-block col-12 col-md-4 col-lg-3 col-xl-2'>
                     <button className='transparent-btn'
                       onClick={async () => {
                         setOpenBackModal(true);
@@ -924,7 +924,7 @@ export default function CheckoutPage() {
                       <span>Back to Results</span>
                     </button>
                   </div>
-                  {/* <div className='col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10 col-xxl-10'>
+                  {/* <div className='col-12 col-md-8 col-lg-9 col-xl-10'>
                     <nav className='checkout-tabs-step'>
                       <div className="nav nav-tabs justify-content-between" id="nav-tab" role="tablist">
                         <button className={currentTab == 1 ? "nav-link show active" : "nav-link fill-active"} id="contact-info-tab" type="button" onClick={() => goToNextTab(1)}>
@@ -954,9 +954,9 @@ export default function CheckoutPage() {
               </div>
               {
                 flight &&
-                <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                <div className='col-12'>
                   <div className='row mt-3'>
-                    <div className='col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8'>
+                    <div className='col-12 col-lg-8'>
                       <div className='flycard-box p-3 br-5 mb-4 d-lg-none'>
                         <div className='d-flex justify-content-between align-items-start'>
                           <div className='flycard-air-img'>
@@ -990,7 +990,7 @@ export default function CheckoutPage() {
                           <div className="important-note mt-2"><span>We will send your ticket(s) and notify you of any flight status changes</span></div>
                         </div>
                         <div className='row mt-4'>
-                          <div className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6'>
+                          <div className='col-12 col-lg-6'>
                             <div className="input-group mb-3 form-group-icon">
                               <label className="form-label">Email (for E-Tickets Delivery)</label>
                               <input type="email" autoComplete='off' className={isValidEmail == false ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Enter your Email*"
@@ -1093,7 +1093,7 @@ export default function CheckoutPage() {
                             <div className="input-group mb-3 form-group-icon w-100">
                               <label className="w-100 form-label">Phone</label>
                               <div className='row m-0 w-100'>
-                                <div className='col-5 co-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-4 ps-0'>
+                                <div className='col-5 col-xxl-4 ps-0'>
                                   <PhoneInput
                                     country={"in"}
                                     enableSearch={true}
@@ -1110,7 +1110,7 @@ export default function CheckoutPage() {
                                     }}
                                   />
                                 </div>
-                                <div className='col-7 co-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-8 pe-0'>
+                                <div className='col-7 col-xxl-8 pe-0'>
                                   <input placeholder="Phone Number*" inputMode="numeric"
                                     pattern="[0-9]*"
                                     type="text"
@@ -1175,7 +1175,7 @@ export default function CheckoutPage() {
                           </div>
                         </div>
                         <div className='row'>
-                          <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                          <div className='col-12'>
                             <div className='important-note mt-2'>
                               <strong ref={errorInputRef}>Important!</strong>
                               <span> Provide your valid email and phone to recieve e-tickets and important messages. This will also be used as billing email id and phone number.</span>
@@ -1188,7 +1188,7 @@ export default function CheckoutPage() {
                           <h5 className='mb-2 fw-bold'>Traveler Information</h5>
                         </div>
                         <div className='row'>
-                          <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                          <div className='col-12'>
                             <div className='important-note mt-2'>
                               <strong>Important!</strong>
                               <span> All names and dates of birth must match each traveler's passport or government issued photo ID.</span>
@@ -1239,7 +1239,7 @@ export default function CheckoutPage() {
                                         <div className="accordion-body">
                                           <div className='traveler-form'>
                                             <div className='row'>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">Title<span>*</span></label>
                                                   <select className={isInvalidTravellers && !passangers[paxNumber].paxTitle ? "w-100 form-select field-error" : "w-100 form-select"} aria-label="Default select example" value={passangers[paxNumber].paxTitle} onChange={(val) => {
@@ -1259,19 +1259,19 @@ export default function CheckoutPage() {
                                                   </select>
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">First & Middle Name<span>*</span></label>
                                                   <input className={isInvalidTravellers && !passangers[paxNumber].firstName ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Type Here" type="text" onChange={(e) => handleChange(e, "firstName", paxNumber)} value={passangers[paxNumber].firstName} />
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">Last Name<span>*</span></label>
                                                   <input className={isInvalidTravellers && !passangers[paxNumber].lastName ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Type Here" type="text" onChange={(e) => handleChange(e, "lastName", paxNumber)} value={passangers[paxNumber].lastName} />
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8'>
+                                              <div className='col-12 col-md-6 col-xl-8'>
                                                 <div className="input-group mb-3">
                                                   <label className=" form-label">Date of Birth<span>*</span></label>
                                                   <div className='d-flex w-100'>
@@ -1332,7 +1332,7 @@ export default function CheckoutPage() {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="w-100 form-label">Gender<span>*</span></label>
                                                   <select className={isInvalidTravellers && passangers[paxNumber].gender == -1 ? "w-100 form-select field-error" : "w-100 form-select"} aria-label="Default select example" onChange={(val) => {
@@ -1355,7 +1355,7 @@ export default function CheckoutPage() {
 
                                               {(flight.trips[0].listOfFlight[0].departCountryCode != flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalCountryCode) &&
                                                 <Fragment>
-                                                  <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2'>
+                                                  <div className='col-12 col-md-6 mb-2'>
                                                     <div className="input-group mb-2">
                                                       <label>Passport Number<span>*</span></label>
                                                     </div>
@@ -1366,7 +1366,7 @@ export default function CheckoutPage() {
                                                       setPassangers(psanggers);
                                                     }} value={passangers[paxNumber].passportNo} />
                                                   </div>
-                                                  <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 position-relative mb-2 w-100datePicer'>
+                                                  <div className='col-12 col-md-6 position-relative mb-2 w-100datePicer'>
                                                     <div className="input-group mb-2">
                                                       <label>Passport Expiry <span>*</span></label>
                                                     </div>
@@ -1412,14 +1412,14 @@ export default function CheckoutPage() {
                         </div>
                         <div className="traveler-form mt-4">
                           <div className="row">
-                            <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                            <div className='col-12'>
                               <div className='row align-items-center mb-2'>
-                                <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                <div className='col-6'>
                                   <div className="input-group">
                                     <label className="form-label mb-0">Address<span>*</span></label>
                                   </div>
                                 </div>
-                                <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                <div className='col-6'>
                                   <div className='add-manually-address float-end'>
                                     {
                                       ((billingDetail?.country == "United States" ||
@@ -1442,7 +1442,7 @@ export default function CheckoutPage() {
                                 </div>
                               </div>
                               <div className='row '>
-                                <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'>
+                                <div className='col-12'>
                                   <div className='input-group mb-3 w-100'>
                                     <div className={isInvalidBillingDetail && !billingDetail.street ? 'address-boxx w-100 field-error' : 'address-boxx w-100'}>
                                       {((billingDetail?.country == "United States" ||
@@ -1510,7 +1510,7 @@ export default function CheckoutPage() {
                                 </div>
                               </div>
                             </div>
-                            <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                            <div className='col-12 col-md-6'>
                               <div className="input-group mb-3">
                                 <label className="form-label">Country<span>*</span></label>
                                 <div className='d-flex w-100'>
@@ -1536,7 +1536,7 @@ export default function CheckoutPage() {
                                 </div>
                               </div>
                             </div>
-                            <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                            <div className='col-12 col-md-6'>
                               <div className="input-group mb-3">
                                 <label className="form-label">State<span>*</span></label>
                                 <div className='d-flex w-100'>
@@ -1545,7 +1545,7 @@ export default function CheckoutPage() {
                                 </div>
                               </div>
                             </div>
-                            <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                            <div className='col-12 col-md-6'>
                               <div className="input-group mb-3">
                                 <label className="form-label">City/Town<span>*</span></label>
                                 <input type='text' className={isInvalidBillingDetail && !billingDetail.city ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder='Type here'
@@ -1558,7 +1558,7 @@ export default function CheckoutPage() {
                                 </input>
                               </div>
                             </div>
-                            <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                            <div className='col-12 col-md-6'>
                               <div className="input-group mb-3">
                                 <label className="form-label">Postal/Zip code<span>*</span></label>
                                 <input className={isInvalidBillingDetail && !billingDetail.zip ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Write here" type="text"
@@ -1897,7 +1897,7 @@ export default function CheckoutPage() {
                                         <div className="accordion-body bg-grey mt-2 mb-4 border">
                                           <div className='traveler-form'>
                                             <div className='row'>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">Title<span>*</span></label>
                                                   <select className={isInvalidUpdatePsg && !pax.paxTitle ? "w-100 form-select field-error" : "w-100 form-select"} value={pax.paxTitle} onChange={(val) => {
@@ -1916,19 +1916,19 @@ export default function CheckoutPage() {
                                                   </select>
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">First & Middle Name<span>*</span></label>
                                                   <input className={isInvalidUpdatePsg && !pax.firstName ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Type Here" type="text" onChange={(e) => handleChange(e, "firstName", paxNumber, true)} value={pax.firstName} />
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="form-label">Last Name<span>*</span></label>
                                                   <input className={isInvalidUpdatePsg && !pax.lastName ? "p-3 form-control float-start w-100 field-error" : "p-3 form-control float-start w-100"} placeholder="Type Here" type="text" onChange={(e) => handleChange(e, "lastName", paxNumber, true)} value={pax.lastName} />
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8'>
+                                              <div className='col-12 col-md-6 col-xl-8'>
                                                 <div className="input-group mb-3">
                                                   <label className=" form-label">Date of Birth<span>*</span></label>
                                                   <div className='d-flex w-100'>
@@ -1983,7 +1983,7 @@ export default function CheckoutPage() {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4'>
+                                              <div className='col-12 col-md-6 col-xl-4'>
                                                 <div className="input-group mb-3">
                                                   <label className="w-100 form-label">Gender<span>*</span></label>
                                                   <select className={isInvalidUpdatePsg && pax.gender == -1 ? "w-100 form-select field-error" : "w-100 form-select"} onChange={(val) => {
@@ -2037,7 +2037,7 @@ export default function CheckoutPage() {
                         }
                         <div className='user-flight-review border-top mt-4 pt-4'>
                           <div className='row'>
-                            <div className={returnFlight ? 'col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6' : 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12'}>
+                            <div className={returnFlight ? 'col-12 col-md-6' : 'col-12'}>
                               <div className='user-flight-review-box'>
                                 <div className='heading d-flex justify-content-between align-items-center'>
                                   <h6 className='mb-0 fw-bold'>Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h6>
@@ -2057,11 +2057,11 @@ export default function CheckoutPage() {
                                   <span className='ps-3'>{flight.trips[0].validatingCarrier.name}</span>
                                 </div>
                                 <div className='row airbox-details align-items-center'>
-                                  <div className='col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2'>
+                                  <div className='col-3 col-lg-2'>
                                     <span>{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                     <h6 className='fw-bold mb-0'>{flight.trips[0].listOfFlight[0].fromCode}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-8 col-xl-8 col-xxl-8'>
+                                  <div className='col-6 col-lg-8'>
                                     <div className='d-flex align-items-center'>
                                       <div className='w-25 airbox-details-air-icon'>
                                         <Image
@@ -2090,7 +2090,7 @@ export default function CheckoutPage() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className='col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2 ps-0'>
+                                  <div className='col-3 col-lg-2 ps-0'>
                                     <span>{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                     <h6 className='fw-bold mb-0'>{flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].toCode}</h6>
                                   </div>
@@ -2099,7 +2099,7 @@ export default function CheckoutPage() {
                             </div>
                             {
                               returnFlight &&
-                              <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 border-start'>
+                              <div className='col-12 col-md-6 border-start'>
                                 <div className='user-flight-review-box'>
                                   <div className='heading d-flex justify-content-between align-items-center'>
                                     <h6 className='mb-0 fw-bold'>Return | {getFormattedDate4(returnFlight.trips[0].listOfFlight[0].departeddate)}</h6>
@@ -2117,11 +2117,11 @@ export default function CheckoutPage() {
                                     <span className='ps-3'>{returnFlight.trips[0].validatingCarrier.name}</span>
                                   </div>
                                   <div className='row airbox-details align-items-center'>
-                                    <div className='col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2'>
+                                    <div className='col-3 col-lg-2'>
                                       <span>{getFormattedTime(returnFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                       <h6 className='fw-bold mb-0'>{returnFlight.trips[0].listOfFlight[0].fromCode}</h6>
                                     </div>
-                                    <div className='col-6 col-sm-6 col-md-6 col-lg-8 col-xl-8 col-xxl-8'>
+                                    <div className='col-6 col-lg-8'>
                                       <div className='d-flex align-items-center'>
                                         <div className='w-25 airbox-details-air-icon'>
                                           <Image
@@ -2150,7 +2150,7 @@ export default function CheckoutPage() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className='col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2 ps-0'>
+                                    <div className='col-3 col-lg-2 ps-0'>
                                       <span>{getFormattedTime(returnFlight.trips[0].listOfFlight[returnFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                       <h6 className='fw-bold mb-0'>{returnFlight.trips[0].listOfFlight[returnFlight.trips[0].listOfFlight.length - 1].toCode}</h6>
                                     </div>
@@ -2250,7 +2250,7 @@ export default function CheckoutPage() {
                         </div> */}
                       </div>
                     </div>
-                    <div className='col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-none d-lg-inline-block'>
+                    <div className='col-12 col-lg-4 d-none d-lg-inline-block'>
                       <div className='sidebar-checkout '>
                         <div className="accordion" id="accordionExample">
                           <div className="accordion-item border-0">
@@ -2287,7 +2287,7 @@ export default function CheckoutPage() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className='checkout-sidebar-flight-detail ps-3 pt-3 pb-3 pe-3'>
+                                  <div className='checkout-sidebar-flight-detail p-3'>
                                     <div className='d-flex justify-content-between align-items-center mb-2 mt-0'>
                                       <div className='d-flex align-items-center'>
                                         <Image
@@ -2351,7 +2351,7 @@ export default function CheckoutPage() {
                             </div>
                           </div>
                         </div>
-                        <div className='bg-white mt-4 ps-3 pt-3 pb-3 pe-3'>
+                        <div className='bg-white mt-4 p-3'>
                           <div className='checkout-price-detail-box'>
                             <h5 className='mb-3 fw-bold'>Price Details</h5>
                             {flight.fareDetails.map((fare, ix) => {
@@ -2398,8 +2398,8 @@ export default function CheckoutPage() {
                           </div>
                         </div>
 
-                        <div className='ps-3 pb-3 pe-3 bg-white total-price-box-wrap'>
-                          <div className='bg-grey ps-3 pt-3 pb-3 pe-3 d-flex justify-content-between align-items-center'>
+                        <div className='pb-3 px-3 bg-white total-price-box-wrap'>
+                          <div className='bg-grey p-3 d-flex justify-content-between align-items-center'>
                             <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                             <h5 className='mb-0 fw-bold'>
                               {
@@ -2409,7 +2409,7 @@ export default function CheckoutPage() {
                           </div>
 
                         </div>
-                        <div className='bg-white mt-4 ps-3 pt-3 pb-3 pe-3'>
+                        <div className='bg-white mt-4 p-3'>
                           <h5 className='mb-3 fw-bold'>Have a coupon code</h5>
                           <div className="input-group mb-3">
                             <input onChange={(e) => {
@@ -2489,14 +2489,14 @@ export default function CheckoutPage() {
 
           <div className="fixed-bottom w-100 bg-white pt-3 pb-3 total-price-mob-strip d-lg-none">
             <div className='row ms-0 me-0 align-items-center'>
-              <div className='col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+              <div className='col-5 col-md-6'>
                 <div className='label'>Trip total</div>
                 <h3 className='fw-bold mb-0'>
                   {aedNumberFormat(Number(tripTotalPrice + totalSeatPrice)).split(".")[0]}
                 </h3>
                 <button type="button" className="transparent-btn color-blue fs-12 fw-bold" data-bs-toggle="modal" data-bs-target="#viewPricePopup">View price summary</button>
               </div>
-              <div className='col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+              <div className='col-7 col-md-6'>
                 <button className="float-end next buttonStyle2 border-0 " onClick={() => {
                   // if (currentTab == 4)
                   //   confirmBooking();
@@ -2560,7 +2560,7 @@ export default function CheckoutPage() {
                       </div>
                     }
                     <div className='pb-3 bg-white total-price-box-wrap'>
-                      <div className='bg-grey ps-3 pt-3 pb-3 pe-3 d-flex justify-content-between align-items-center'>
+                      <div className='bg-grey p-3 d-flex justify-content-between align-items-center'>
                         <h5 className='mb-0 fw-bold'>Total Price (INR)</h5>
                         <h5 className='mb-0 fw-bold'>
                           {
