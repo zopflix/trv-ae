@@ -31,7 +31,7 @@ export default function DomesticPackageDeals() {
                             <InternationalTourPackages />
                         </div>
                     </div> */}
-                    <div className="tab-content bg-grey py-4 px-2 position-relative" id="pills-tabContent">
+                    <div className="tab-content py-4 px-2 position-relative" id="pills-tabContent">
                             <InternationalTourPackages />
                         </div>
                 </div>
