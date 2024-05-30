@@ -1,7 +1,7 @@
 
 export const apiURL = 'https://api.shipratravel.com/flightSearch/api/';
 export const bookingAPIURL = 'https://api.shipratravel.com/flightbooking/api/';
-export const crmAPIURL = 'https://api-stg.crm.superfares.com/api/';
+export const crmAPIURL = 'https://api-crm-stg.superfares.com/api/';
 export const cmsAPIURL = 'https://api-cms.superfares.com/api/';
 export const tenantId = 7;
 
