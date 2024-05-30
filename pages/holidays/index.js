@@ -8,10 +8,13 @@ import PartnerLogo from "@/app/components/partner-logo";
 import SearchSection from '@/app/components/search-section'
 import { appBaseURL } from "@/app/config";
 import { usePathname } from "next/navigation";
+import { Fragment, useEffect, useState } from 'react'
 
 
 export default function Holidays() {
     const pathname = usePathname();
+  const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
+
     return (
         <>
             <Head>
@@ -33,7 +36,8 @@ export default function Holidays() {
                 <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
             </Head >
             <Header></Header>
-            <SearchSection selectedTab={1} />
+            <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
+
             <PartnerLogo />
             <section className="py-5">
                 <div className="container">

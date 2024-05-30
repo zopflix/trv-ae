@@ -290,7 +290,7 @@ export default function HolidayCategories() {
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/international-tour-packages/'}${'Singapore'}-tour-packages/${''}`;
+                                            let path = `${'/holidays/'}${'singapore'}-tour-packages/${''}`;
                                             window.open(path, '_blank');
                                         }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
@@ -317,7 +317,7 @@ export default function HolidayCategories() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-6 mb-3 "onClick={() => {
-                                            let path = `${'/international-tour-packages/'}${'Thailand'}-tour-packages/${''}`;
+                                            let path = `${'/holidays/'}${'thailand'}-tour-packages/${''}`;
                                             window.open(path, '_blank');
                                         }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
@@ -344,7 +344,7 @@ export default function HolidayCategories() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/international-tour-packages/'}${'Armenia'}-tour-packages/${''}`;
+                                            let path = `${'/holidays/'}${'armenia'}-tour-packages/${''}`;
                                             window.open(path, '_blank');
                                         }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
@@ -371,7 +371,7 @@ export default function HolidayCategories() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/international-tour-packages/'}${'Saudi Arabi'}-tour-packages/${''}`;
+                                            let path = `${'/holidays/'}${'saudi-arabia'}-tour-packages/${''}`;
                                             window.open(path, '_blank');
                                         }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">

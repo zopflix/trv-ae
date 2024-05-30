@@ -20,10 +20,10 @@ export default function MainMenu() {
     return (
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
-                <a className={pathname == '/deals' ? "nav-link active" : 'nav-link'} href="/deals">Offers</a>
+                <a className={pathname == '/deals' ? "nav-link active" : 'nav-link'} href="/about-us">About Us</a>
             </li>
             <li className="nav-item mx-1">
-                <a className={pathname == '/cheap-flights' ? "nav-link active" : 'nav-link'} href="/cheap-flights">Flights</a>
+                <a className={pathname == '/cheap-flights' ? "nav-link active" : 'nav-link'} href="/contact-us">Contact Us</a>
             </li>
             <li className="nav-item mx-1 dropdown">
                 <a className="nav-link dropdown-toggle" href="/holidays" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holiday</a>
