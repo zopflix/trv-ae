@@ -252,7 +252,7 @@ export default function HolidayDetails(props) {
                       {/* <li className="nav-item" role="presentation">
                                             <button className="nav-link active" id="FlightInformation-tab" data-bs-toggle="pill" data-bs-target="#FlightInformation" type="button" role="tab" aria-controls="FlightInformation" aria-selected="true">Flight Information</button>
                                         </li> */}
-                      {!!packageData?.Overview && (
+                      {/* {!!packageData?.Overview && (
                         <li className="nav-item" role="presentation">
                           <button
                             className="nav-link active"
@@ -267,14 +267,10 @@ export default function HolidayDetails(props) {
                             Overview
                           </button>
                         </li>
-                      )}
+                      )} */}
                       <li className="nav-item" role="presentation">
                         <button
-                          className={
-                            !packageData?.Overview
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
+                          className="nav-link active"
                           id="Itinerary-tab"
                           data-bs-toggle="pill"
                           data-bs-target="#Itinerary"
@@ -372,13 +368,14 @@ export default function HolidayDetails(props) {
                           </div>
                         </div> */}
 
-                      {!!packageData?.Overview && (
-                        <div
-                          className="tab-pane fade show active"
-                          id="Overview"
-                          role="tabpanel"
-                          aria-labelledby="Overview-tab"
-                        >
+
+                      <div
+                        className="tab-pane fade show active"
+                        id="Itinerary"
+                        role="tabpanel"
+                        aria-labelledby="Itinerary-tab"
+                      >
+                        {!!packageData?.Overview &&
                           <div className="border rounded-3 p-3 float-start w-100">
                             <h2 className="mb-0 color-blue fs-16 fw-bold">
                               Overview
@@ -391,9 +388,72 @@ export default function HolidayDetails(props) {
                               }}
                             />
                           </div>
+                        }
+                        <div className="border rounded-3 p-3 float-start w-100 mt-1">
+                          <div className="accordion ItineraryAccordionMain" id="accordionPanelsStayOpenExample">
+                            <h2 className="mb-0 color-blue fs-16 fw-bold">Itinerary</h2>
+                            <hr className="color-orange my-2 w-25"></hr>
+                            {packageData?.HolidayJourney.length > 0 &&
+                              packageData.HolidayJourney.map((itinerary, ix) => {
+                                return <div key={ix} className="accordion-item border-0">
+                                  <h2 className="accordion-header border-0" id="panelsStayOpen-headingOne">
+                                    <button type="button" className={ix == 0
+                                      ? "bg-transparent accordion-button shadow-none border-0 px-0 bg-white"
+                                      : "bg-transparent accordion-button border-0 px-0 bg-white collapsed"
+                                    }
+                                      data-bs-toggle="collapse" data-bs-target={"#day" + ix}
+                                      aria-expanded="true" aria-controls={"day" + ix}
+                                    >
+                                      <div className="d-flex align-items-center w-100">
+                                        <div className="DayTextBox pe-0">
+                                          <p className="fs-18 mb-0 fw-bold color-grey">Day {ix + 1}</p>
+                                        </div>
+                                        <div>
+                                          <p className="ms-3 mb-0 color-black fw-bold fs-16">{itinerary.Title}</p>
+                                        </div>
+                                      </div>
+                                    </button>
+                                  </h2>
+                                  <div id={"day" + ix}
+                                    className={
+                                      ix == 0
+                                        ? "bg-transparent accordion-collapse border-0 collapse show"
+                                        : "bg-transparent accordion-collapse border-0 collapse"
+                                    }
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                  >
+                                    <div className="accordion-body">
+                                      <div className="row w-100">
+                                        {!!itinerary.ImageUrl && (
+                                          <div className="col-12">
+                                            <Image
+                                              className="w-100 h-auto"
+                                              src={itinerary.ImageUrl}
+                                              width={200}
+                                              height={200}
+                                              alt="itinerary-img"
+                                              loader={sfLoader}
+                                            />
+                                          </div>
+                                        )}
+                                        <div className="col-sm-12">
+                                          <div
+                                            className="listStyleNumber fs-14"
+                                            dangerouslySetInnerHTML={{
+                                              __html: itinerary.Description,
+                                            }}
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              }
+                              )}
+                          </div>
                         </div>
-                      )}
-                      <div
+                      </div>
+                      {/* <div
                         className={
                           !packageData?.Overview
                             ? "tab-pane fade show active"
@@ -403,105 +463,15 @@ export default function HolidayDetails(props) {
                         role="tabpanel"
                         aria-labelledby="Itinerary-tab"
                       >
+                        
+                      </div> */}
+                      <div className="tab-pane fade" id="Accommadation" role="tabpanel" aria-labelledby="Accommadation-tab">
                         <div className="border rounded-3 p-3 float-start w-100">
-                          <div
-                            className="accordion ItineraryAccordionMain"
-                            id="accordionPanelsStayOpenExample"
-                          >
-                            {packageData?.HolidayJourney.length > 0 &&
-                              packageData.HolidayJourney.map(
-                                (itinerary, ix) => {
-                                  return (
-                                    <div
-                                      key={ix}
-                                      className="accordion-item border-0"
-                                    >
-                                      <h2
-                                        className="accordion-header border-0"
-                                        id="panelsStayOpen-headingOne"
-                                      >
-                                        <button
-                                          className={
-                                            ix == 0
-                                              ? "bg-transparent accordion-button shadow-none border-0 px-0 bg-white"
-                                              : "bg-transparent accordion-button border-0 px-0 bg-white collapsed"
-                                          }
-                                          type="button"
-                                          data-bs-toggle="collapse"
-                                          data-bs-target={"#day" + ix}
-                                          aria-expanded="true"
-                                          aria-controls={"day" + ix}
-                                        >
-                                          <div className="d-flex align-items-center w-100">
-                                            <div className="DayTextBox pe-0">
-                                              <p className="fs-18 mb-0 fw-bold color-grey">
-                                                Day {ix + 1}
-                                              </p>
-                                            </div>
-                                            <div className="">
-                                              <p className="ms-3 mb-0 color-black fw-bold fs-16">
-                                                {itinerary.Title}
-                                              </p>
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </h2>
-                                      <div
-                                        id={"day" + ix}
-                                        className={
-                                          ix == 0
-                                            ? "bg-transparent accordion-collapse border-0 collapse show"
-                                            : "bg-transparent accordion-collapse border-0 collapse"
-                                        }
-                                        aria-labelledby="panelsStayOpen-headingOne"
-                                      >
-                                        <div className="accordion-body">
-                                          <div className="row w-100">
-                                            {!!itinerary.ImageUrl && (
-                                              <div className="col-12">
-                                                <Image
-                                                  className="w-100 h-auto"
-                                                  src={itinerary.ImageUrl}
-                                                  width={200}
-                                                  height={200}
-                                                  alt="itinerary-img"
-                                                  loader={sfLoader}
-                                                />
-                                              </div>
-                                            )}
-                                            <div className="col-sm-12">
-                                              <div
-                                                className="listStyleNumber fs-14"
-                                                dangerouslySetInnerHTML={{
-                                                  __html: itinerary.Description,
-                                                }}
-                                              ></div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  );
-                                }
-                              )}
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="tab-pane fade"
-                        id="Accommadation"
-                        role="tabpanel"
-                        aria-labelledby="Accommadation-tab"
-                      >
-                        <div className="border rounded-3 p-3 float-start w-100">
-                          <div className="">
+                          <div>
                             <div className="row">
                               <div className="col-sm-12">
                                 {!!stdAccommadations?.Details[0]?.Title && (
-                                  <div
-                                    className="accordion"
-                                    id="accordionExample"
-                                  >
+                                  <div className="accordion" id="accordionExample">
                                     <div className="accordion-item position-relative">
                                       <button
                                         className="AccommadationSelectButton end-0 mt-1 me-5 bg-transparent color-green py-2 px-3 float-end border-0 position-absolute"
