@@ -14,6 +14,7 @@ import {
   trackMixpanelEvent,
 } from "../helpers/common";
 import { trvLoader } from "../helpers/imageKitLoader";
+import Image from "next/image";
 registerLocale("es", es);
 
 export default function SearchSection(props) {
@@ -88,7 +89,7 @@ export default function SearchSection(props) {
         airports.forEach((airport) => {
           const dist = Math.sqrt(
             (userLat - airport.latitude) ** 2 +
-              (userLng - airport.longitude) ** 2
+            (userLng - airport.longitude) ** 2
           );
           if (dist < minDist) {
             nearestAirport = airport;
@@ -110,21 +111,21 @@ export default function SearchSection(props) {
 
   const loadMostSearchs = (origin, airports) => {
     var formData = JSON.parse(localStorage.getItem("formData"));
-  
-    if(formData){
-        setToAirport(formData.toAirport);
-    }else{
 
-        getMostSearchFlights(origin).then((response) => {
-            if (response) {
-      
-              let _toAirport = getAirportByCode(airports, response);
-      
-                setToAirport(_toAirport);
-              
-              setRoutesFilled(true);
-            }
-          });
+    if (formData) {
+      setToAirport(formData.toAirport);
+    } else {
+
+      getMostSearchFlights(origin).then((response) => {
+        if (response) {
+
+          let _toAirport = getAirportByCode(airports, response);
+
+          setToAirport(_toAirport);
+
+          setRoutesFilled(true);
+        }
+      });
     }
 
 
@@ -157,14 +158,14 @@ export default function SearchSection(props) {
     //       : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
     //   );
     // } else {
-      
+
     // }
 
     filteredRecords = airportList.filter((airport) =>
-        srchCodeName.length == 3
-          ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
-          : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
-      );
+      srchCodeName.length == 3
+        ? airport.value.toLowerCase().includes(srchCodeName.toLowerCase())
+        : airport.label.toLowerCase().includes(srchCodeName.toLowerCase())
+    );
 
     if (filteredRecords.length >= 1) {
       if (isOriginAirport) setAirports(filteredRecords);
@@ -322,60 +323,79 @@ export default function SearchSection(props) {
   //#endregion
 
   return (
-    <>
-      <SearchControl
-        resultPagePassengers={resultPagePassengers}
-        resultPageFromDate={resultPageFromDate}
-        resultPageToDate={resultPageToDate}
-        tripType={tripType}
-        isTripSwitched={isTripSwitched}
-        myCustomLoader={trvLoader}
-        fromAirport={fromAirport}
-        toAirport={toAirport}
-        currentSearchTerm={currentSearchTerm}
-        destinatioSearchTerm={destinatioSearchTerm}
-        destinationAirports={destinationAirports}
-        isRoutesFilled={isRoutesFilled}
-        searchSubmitted={searchSubmitted}
-        isOldSearchCriteria={isOldSearchCriteria}
-        isSearchClicked={isSearchClicked}
-        fromDate={fromDate}
-        toDate={toDate}
-        DatePicker={DatePicker}
-        adults={adults}
-        children={children}
-        infants={infants}
-        cabinClass={cabinClass}
-        ShowTravewlersCount={ShowTravewlersCount}
-        NumericInput={NumericInput}
-        isModifyComponent={isModifyComponent}
-        isSearchProgress={isSearchProgress}
-        setTripType={setTripType}
-        setToDate={setToDate}
-        setFromDate={setFromDate}
-        setFromAirport={setFromAirport}
-        setToAirport={setToAirport}
-        searchAirport={searchAirport}
-        airports={airports}
-        setRoutesFilled={setRoutesFilled}
-        setShowToDate={setShowToDate}
-        showToDate={showToDate}
-        SetShowTravewlersCount={SetShowTravewlersCount}
-        setChildren={setChildren}
-        setAdults={setAdults}
-        setInfants={setInfants}
-        searchFlights={searchFlights}
-        setIsOldSearchCriteria={setIsOldSearchCriteria}
-        getMaxDatePicker={getMaxDatePicker}
-        checkMaxDateRange={checkMaxDateRange}
-        setTripSwitched={setTripSwitched}
-        setCabinClass={setCabinClass}
-        airlineTitle={props.airlineTitle}
-        minPrice={props.minPrice}
-        airlineImage={props.airlineImage}
-        selectedTab={props.selectedTab}
-        setCabinValue={setCabinValue}
-      ></SearchControl>
-    </>
+      <div className='position-relative'>
+        <Image
+          className="h-auto w-100 d-none d-md-block"
+          loader={trvLoader}
+          src="TRV-holiday-main-banner.webp"
+          alt="User Icon"
+          width={20}
+          height={20}
+        />
+        <Image
+          className="h-auto w-100 d-md-none"
+          loader={trvLoader}
+          src="TRV-holiday-main-banner-mob.webp"
+          alt="User Icon"
+          width={20}
+          height={20}
+        />
+        <div className='FormBoxWrp'>
+          <SearchControl
+            resultPagePassengers={resultPagePassengers}
+            resultPageFromDate={resultPageFromDate}
+            resultPageToDate={resultPageToDate}
+            tripType={tripType}
+            isTripSwitched={isTripSwitched}
+            myCustomLoader={trvLoader}
+            fromAirport={fromAirport}
+            toAirport={toAirport}
+            currentSearchTerm={currentSearchTerm}
+            destinatioSearchTerm={destinatioSearchTerm}
+            destinationAirports={destinationAirports}
+            isRoutesFilled={isRoutesFilled}
+            searchSubmitted={searchSubmitted}
+            isOldSearchCriteria={isOldSearchCriteria}
+            isSearchClicked={isSearchClicked}
+            fromDate={fromDate}
+            toDate={toDate}
+            DatePicker={DatePicker}
+            adults={adults}
+            children={children}
+            infants={infants}
+            cabinClass={cabinClass}
+            ShowTravewlersCount={ShowTravewlersCount}
+            NumericInput={NumericInput}
+            isModifyComponent={isModifyComponent}
+            isSearchProgress={isSearchProgress}
+            setTripType={setTripType}
+            setToDate={setToDate}
+            setFromDate={setFromDate}
+            setFromAirport={setFromAirport}
+            setToAirport={setToAirport}
+            searchAirport={searchAirport}
+            airports={airports}
+            setRoutesFilled={setRoutesFilled}
+            setShowToDate={setShowToDate}
+            showToDate={showToDate}
+            SetShowTravewlersCount={SetShowTravewlersCount}
+            setChildren={setChildren}
+            setAdults={setAdults}
+            setInfants={setInfants}
+            searchFlights={searchFlights}
+            setIsOldSearchCriteria={setIsOldSearchCriteria}
+            getMaxDatePicker={getMaxDatePicker}
+            checkMaxDateRange={checkMaxDateRange}
+            setTripSwitched={setTripSwitched}
+            setCabinClass={setCabinClass}
+            airlineTitle={props.airlineTitle}
+            minPrice={props.minPrice}
+            airlineImage={props.airlineImage}
+            selectedTab={props.selectedTab}
+            setCabinValue={setCabinValue}
+          ></SearchControl>
+        </div>
+      </div>
+
   );
 }
