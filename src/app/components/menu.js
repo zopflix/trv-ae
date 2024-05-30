@@ -33,7 +33,7 @@ export default function MainMenu() {
                             <div className="col-md-12 col-lg-6 py-2">
                                 <div className="row">
                                     <div className="col-12">
-                                        <a href="/india-tour-packages/" className="title d-flex text-decoration-none">
+                                        <a href="/holidays/" className="title d-flex text-decoration-none">
                                             <Image
                                                 className="h-auto"
                                                 loader={trvLoader}
