@@ -34,10 +34,10 @@ export default function TopFlightDetails() {
                             <div className="tab-content px-0" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="domesticOneWay" role="tabpanel" aria-labelledby="domesticOneWay-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -47,13 +47,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">AMD</h3>
                                                                 <p className="mb-0 fs-12">Ahmedabad</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -63,13 +63,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">BOM</h3>
                                                                 <p className="mb-0 fs-12">Mumbai</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>4,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -78,10 +78,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -91,13 +91,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">GOI</h3>
                                                                 <p className="mb-0 fs-12">Goa</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -107,13 +107,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">CCU</h3>
                                                                 <p className="mb-0 fs-12">Kolkata </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>12,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -122,10 +122,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -135,13 +135,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">BOM</h3>
                                                                 <p className="mb-0 fs-12">Mumbai</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -151,13 +151,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">DEL</h3>
                                                                 <p className="mb-0 fs-12">Delhi</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>8,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -166,10 +166,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -179,13 +179,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">DEL</h3>
                                                                 <p className="mb-0 fs-12">Delhi</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -195,13 +195,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">BLR</h3>
                                                                 <p className="mb-0 fs-12">Banglore</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>8,500/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -214,10 +214,10 @@ export default function TopFlightDetails() {
                                 </div>
                                 <div className="tab-pane fade" id="domesticRoundTrip" role="tabpanel" aria-labelledby="domesticRoundTrip-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -227,13 +227,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">AUH</h3>
                                                                 <p className="mb-0 fs-12">Abu Dhabi</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -243,13 +243,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">DXB</h3>
                                                                 <p className="mb-0 fs-12">Dubai </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>841.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -258,10 +258,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -271,13 +271,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">SJH</h3>
                                                                 <p className="mb-0 fs-12">Sharjah</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -287,13 +287,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">DXB</h3>
                                                                 <p className="mb-0 fs-12">Dubai </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1369.<sup>.00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -302,10 +302,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -315,13 +315,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">SJH</h3>
                                                                 <p className="mb-0 fs-12">Sharjah </p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -331,13 +331,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">AUH</h3>
                                                                 <p className="mb-0 fs-12">Abu Dhabi</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1037.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -346,10 +346,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -359,13 +359,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">DXB</h3>
                                                                 <p className="mb-0 fs-12">Dubai</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -375,13 +375,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">AUH</h3>
                                                                 <p className="mb-0 fs-12">Abu Dhabi</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1141.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -406,10 +406,10 @@ export default function TopFlightDetails() {
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="internationalOneWay" role="tabpanel" aria-labelledby="internationalOneWay-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -419,13 +419,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">BLR</h3>
                                                                 <p className="mb-0 fs-12">Banglore</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -435,13 +435,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">MLE</h3>
                                                                 <p className="mb-0 fs-12">Maldives</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>20,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -450,10 +450,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -463,13 +463,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">MAA</h3>
                                                                 <p className="mb-0 fs-12">Chennai</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -479,13 +479,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">BKK</h3>
                                                                 <p className="mb-0 fs-12">Thailand </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>22,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -494,10 +494,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -507,13 +507,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">BOM</h3>
                                                                 <p className="mb-0 fs-12">Mumbai</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -523,13 +523,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">KTM</h3>
                                                                 <p className="mb-0 fs-12">Nepal </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>12,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -538,10 +538,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -551,13 +551,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">BOM</h3>
                                                                 <p className="mb-0 fs-12">Mumbai</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -567,13 +567,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">JFK</h3>
                                                                 <p className="mb-0 fs-12">New York</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>46,000/<sup>*</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -586,10 +586,10 @@ export default function TopFlightDetails() {
                                 </div>
                                 <div className="tab-pane fade" id="internationalRoundTrip" role="tabpanel" aria-labelledby="internationalRoundTrip-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -599,14 +599,14 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">MLE</h3>
                                                                 <p className="mb-0 fs-12">Maldives</p>
 
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -616,13 +616,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">DXB</h3>
                                                                 <p className="mb-0 fs-12">Dubai</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1587.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -631,10 +631,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -644,13 +644,13 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">TBS</h3>
                                                                 <p className="mb-0 fs-12">Tbilisi</p>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -660,13 +660,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">AUH</h3>
                                                                 <p className="mb-0 fs-12">Abu Dhabi</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1257.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -675,10 +675,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -688,14 +688,14 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">RJTT</h3>
                                                                 <p className="mb-0 fs-12">Tokyo</p>
 
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -705,13 +705,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">SJH</h3>
                                                                 <p className="mb-0 fs-12">Sharjah</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>2707.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>
@@ -720,10 +720,10 @@ export default function TopFlightDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 py-2">
+                                        <div className="col-12 col-lg-6 py-2">
                                             <div className="topFlightDetailsList bg-white rounded-3">
                                                 <div className="row m-0 align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                                                    <div className="col-12 col-md-2 col-xl-1">
                                                         <Image
                                                             className="airLogo h-auto w-100"
                                                             loader={airlineLogoLoader}
@@ -733,14 +733,14 @@ export default function TopFlightDetails() {
                                                             height={100}
                                                         />
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-7 col-xxl-7">
+                                                    <div className="col-12 col-md-7 col-lg-6 col-xl-7">
                                                         <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                                 <h3 className="mb-0 fw-bold">DPS</h3>
                                                                 <p className="mb-0 fs-12">Bali</p>
 
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-0">
+                                                            <div className="col-4 p-0">
                                                                 <Image
                                                                     className="h-auto w-100"
                                                                     loader={trvLoader}
@@ -750,13 +750,13 @@ export default function TopFlightDetails() {
                                                                     height={100}
                                                                 />
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                            <div className="col-4 text-end">
                                                                 <h3 className="mb-0 fw-bold">DXB</h3>
                                                                 <p className="mb-0 fs-12">Dubai</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 col-xxl-4 text-end">
+                                                    <div className="col-12 col-md-3 col-lg-4 text-end">
                                                         <div className="InquireBox">
                                                             <h3 className="mb-0 fw-bold"><span className="color-orange">₹ </span>1717.<sup>00</sup></h3>
                                                             <button className="buttonStyle2 border-0 mt-2">Book Now</button>

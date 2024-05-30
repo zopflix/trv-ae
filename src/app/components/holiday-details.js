@@ -1,17 +1,14 @@
 "use client";
 import Image from "next/image";
 import Header from "../components/header";
-import InnterFooter from "../components/inner-footer";
 import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import FlightInfoSideBar from "../components/flight-info-sidebar";
 import { Suspense, useEffect, useState } from "react";
 import { getDurations } from "../services/holidayService";
-import ModifySearchFormDetail from "../components/Modify-Form-Detail";
 import HolidayEnquiryForm from "./holiday-enquiry-form";
 import { capitalizeEachWord, aedNumberFormat } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import Footer from "./footer";
-import GoogleReviews from "./google-reviews";
 
 export default function HolidayDetails(props) {
   const packageData = props?.packageData?.Data;
@@ -149,24 +146,10 @@ export default function HolidayDetails(props) {
                 <a href="/">Home</a>
               </li>
               <li className="breadcrumb-item">
-                <a
-                  href={
-                    isDomestic
-                      ? "/india-tour-packages"
-                      : "/international-tour-packages"
-                  }
-                >
-                  {isDomestic ? "India" : "International"} Tour Packages
-                </a>
+                <a href="/holidays">Holidays</a>
               </li>
               <li className="breadcrumb-item">
-                <a
-                  href={
-                    isDomestic
-                      ? `/india-tour-packages/${destinationSlug}`
-                      : `/international-tour-packages/${destinationSlug}`
-                  }
-                >
+                <a href={`/holidays/${destinationSlug}`}>
                   {destinationName} Tour Packages
                 </a>
               </li>

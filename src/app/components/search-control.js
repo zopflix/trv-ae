@@ -173,7 +173,7 @@ export default function SearchControl(props) {
                             : <div className={isModifyComponent ? 'flightSearchWrp rounded-3 bg-white p-0' : 'flightSearchWrp rounded-3 bg-white p-4'}>
                                 {(!isModifyComponent || !isBrowser)/*home page*/ &&
                                     <div className="row  align-itmes-center">
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 py-2">
+                                        <div className="col-12 col-md-6 col-xl-4 py-2">
                                             <div className="d-flex">
                                                 <div>
                                                     <label className={tripType == 1 ? "cursor-pointer form-check-label fs-14 bg-orange color-white px-3 py-1 rounded-pill active" : "cursor-pointer form-check-label fs-14 bg-grey px-3 py-1 rounded-pill"} htmlFor="onway1" onClick={() => {
@@ -197,20 +197,20 @@ export default function SearchControl(props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8 py-2 text-end d-none d-md-inline"><h2 className="mb-0 color-blue fw-bold fs-20">Discover The Joy Of Flying At The Cheapest Prices!</h2></div>
+                                        <div className="col-12 col-md-6 col-xl-8 py-2 text-end d-none d-md-inline"><h2 className="mb-0 color-blue fw-bold fs-20">Discover The Joy Of Flying At The Cheapest Prices!</h2></div>
 
                                     </div>
                                 }
 
                                 <div className={isModifyComponent ? "mainFlightSearchBox border py-0 px-2" : "mainFlightSearchBox border py-3 px-3"}>
                                     <div className="row align-items-center">
-                                        <div className="mobForm FieldA col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                                        <div className="mobForm FieldA col-12 col-lg-5">
                                             <div className="fromTofromBox">
 
                                                 <div className="row">
                                                     {
                                                         isBrowser && isModifyComponent /*not home page*/ &&
-                                                        <div className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 py-2 border-end position-relative">
+                                                        <div className="col-6 col-lg-4 py-2 border-end position-relative">
                                                             <div className="dropdown">
                                                                 <button className="btn border-0 p-0 dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div className="fromTofromBoxLabel fs-12">Trip Type</div>
@@ -246,7 +246,7 @@ export default function SearchControl(props) {
                                                         </div>
 
                                                     }
-                                                    <div className={!isModifyComponent ? 'col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 border-end position-relative FromCodeSearchBox' : 'col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 py-2 border-end position-relative FromCodeSearchBox'}>
+                                                    <div className={!isModifyComponent ? 'col-6 py-2 border-end position-relative FromCodeSearchBox' : 'col-6 col-lg-4 py-2 border-end position-relative FromCodeSearchBox'}>
                                                         <div className="bg-white">
                                                             <Image
                                                                 className={!isTripSwitched ? "FlightFlip position-absolute end-0 m-auto top-50 bottom-50" : "FlightFlip position-absolute end-0 m-auto top-50 bottom-50 active"}
@@ -399,7 +399,7 @@ export default function SearchControl(props) {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className={!isModifyComponent ? 'col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 border-end position-relative ToCodeSearchBox' : 'col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 py-2 border-end position-relative ToCodeSearchBox'}>
+                                                    <div className={!isModifyComponent ? 'col-6 py-2 border-end position-relative ToCodeSearchBox' : 'col-6 col-lg-4 py-2 border-end position-relative ToCodeSearchBox'}>
                                                         <div className="bg-white">
                                                             <div className="fromTofromBoxLabel fs-12">TO</div>
                                                             <div className="dropdown cityBoxDropDown">
@@ -522,7 +522,7 @@ export default function SearchControl(props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="mobForm FieldB col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                                        <div className="mobForm FieldB col-12 col-lg-5">
                                             <div className="row">
 
                                                 <div className="col-6 bg-white col-md-4 py-2 border-end" >
@@ -808,7 +808,7 @@ export default function SearchControl(props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="mobForm FieldC col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 py-2">
+                                        <div className="mobForm FieldC col-12 col-lg-2 py-2">
 
                                             {isModifyComponent &&
                                                 <button className={isModifyInProgress ? "buttonStyle4 border-0 color-white fs-14 px-2 w-100 py-3 rounded-3 disabled-btn" : "buttonStyle4 border-0 color-white fs-14 px-2 w-100 py-3 rounded-3"} disabled={props.isSearchProgress || isModifyInProgress} onClick={() => {

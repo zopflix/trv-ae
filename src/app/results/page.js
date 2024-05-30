@@ -1289,7 +1289,7 @@ export default function Results() {
           <div className="modify-aiport-breadcrumb bg-grey pt-2 pb-2 border-bottom desk-hide d-lg-none color-blue">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <div className="col-5">
                   <div className="d-flex align-items-center">
                     {currentFilters &&
                       currentFilters.segments &&
@@ -1307,7 +1307,7 @@ export default function Results() {
                       )}
                   </div>
                 </div>
-                <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start">
+                <div className="col-5 border-start">
                   <span>{getFormattedDate4(fromDate)} {tripType == 2 && "- " + getFormattedDate4(toDate)}</span>
                   {currentFilters && (
                     <>
@@ -1320,7 +1320,7 @@ export default function Results() {
                     </>
                   )}
                 </div>
-                <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                <div className="col-2">
                   <i className="cursor-pointer fa-solid fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
                 </div>
               </div>
@@ -1352,9 +1352,9 @@ export default function Results() {
         <div className="flight-results bg-grey mb-0" id="totalPriceStrip">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3">
+              <div className="col-12 col-lg-4 col-xl-3">
                 <div className="sidebar-filter-btn mt-3 desk-hide">
-                  <h4 id="filterBySection" className="filter-sub-heading d-flex mb-0 align-items-center bg-white ps-2 pt-2 pe-2 pb-2 justify-content-center cursor-pointer" onClick={() => { document.body.classList.add("filter-open"); setOpenFilters(true); }}>
+                  <h4 id="filterBySection" className="filter-sub-heading d-flex mb-0 align-items-center bg-white p-2 justify-content-center cursor-pointer" onClick={() => { document.body.classList.add("filter-open"); setOpenFilters(true); }}>
                     <span className="icon me-2">
                       <span>
                         <Image
@@ -1371,7 +1371,7 @@ export default function Results() {
                   </h4>
                 </div>
                 <div className={openFilters ? "side-bar-air-filter br-5 mt-3 mb-4 active" : "side-bar-air-filter br-5 mt-3 mb-4"}>
-                  <div className="filter-items py-3 ps-3 pe-3 desk-hide">
+                  <div className="filter-items py-3 px-3 desk-hide">
                     <h4 className="filter-sub-heading d-flex mb-0 align-items-center justify-content-between">
                       <span className="sub-heading-title dgc">Filter By</span>
                       <button className="transparent-btn sidebar-filter-close-btn" onClick={() => { setOpenFilters(false); document.body.classList.remove("filter-open"); }}>
@@ -1380,9 +1380,9 @@ export default function Results() {
                     </h4>
                   </div>
 
-                  <div className="filter-items py-2 ps-3 pe-3 mob-hide">
+                  <div className="filter-items py-2 px-3 mob-hide">
                     <div className="row align-items-center mb-2 mt-2">
-                      <div className="col-6 col-sm-6 col-md-8 col-lg-7 col-xl-7 col-xxl-7 pe-0">
+                      <div className="col-6 col-md-8 col-lg-7 pe-0">
                         <h4 className="filter-sub-heading d-flex mb-0 align-items-center">
                           <span className="icon me-2">
                             <span>
@@ -1399,7 +1399,7 @@ export default function Results() {
                           <span className="sub-heading-title dgc">Filter By</span>
                         </h4>
                       </div>
-                      <div className="col-6 col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-5">
+                      <div className="col-6 col-md-4 col-lg-5">
                         <button className="transparent-btn float-end clear-filter-btn" onClick={() => clearFilters()}>Reset Filters</button>
                       </div>
                     </div>
@@ -1409,9 +1409,9 @@ export default function Results() {
                       <div className="tab-content" id="pills-tabContent">
                         <div id="departure-filter">
                           <div className="filter-wrp-box">
-                            <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                            <div className="filter-items pt-3 pb-3 px-3">
                               <div className="row align-items-center mb-2">
-                                <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                <div className="col-6">
                                   <h5 className="sub-title mb-0 dgc">Stops</h5>
                                 </div>
                               </div>
@@ -1426,7 +1426,7 @@ export default function Results() {
                               })}
                             </div>
 
-                            <div className="filter-items py-3 ps-3 pe-3">
+                            <div className="filter-items py-3 px-3">
                               <h5 className="sub-title mb-0 dgc">Price</h5>
                               <div className="price-slider pt-3">
                                 <ReactSlider
@@ -1442,17 +1442,17 @@ export default function Results() {
                                   onAfterChange={(e) => { applyFilters("price", e, flights); }}
                                 />
                                 <div className="row mt-3">
-                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                  <div className="col-6">
                                     <h6 className="mb-0 d-table">{aedNumberFormat(Math.round(priceFilterValues[0])).split(".")[0]}</h6>
                                   </div>
-                                  <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end">
+                                  <div className="col-6 text-end">
                                     <h6 className="mb-0 d-table float-end">{aedNumberFormat(Math.round(priceFilterValues[1])).split(".")[0]}</h6>
                                   </div>
                                 </div>
                               </div>
                             </div>
 
-                            <div className="filter-items py-3 ps-3 pe-3">
+                            <div className="filter-items py-3 px-3">
                               <h5 className="sub-title mb-2 dgc">Depart Time from {departTBOFlights[0]?.trips[0].listOfFlight[0].airportFromCity}</h5>
                               <div className="row m-0">
                                 <div className="col-3 px-1" onClick={() => applyFilters("depart-time", "Morning", departTBOFlights)}>
@@ -1523,17 +1523,17 @@ export default function Results() {
                                   minDistance={1}
                                 />
                                 <div className='row mt-3'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h6 className='mb-0 d-table'>{formatTime(selectedTimeRange[0])}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                  <div className='col-6 text-end'>
                                     <h6 className='mb-0 d-table float-end'>{selectedTimeRange[1] == 24 ? "23:59" : formatTime(selectedTimeRange[1])}</h6>
                                   </div>
                                 </div>
                               </div> */}
                             </div>
 
-                            {/* <div className='filter-items py-3 ps-3 pe-3'>
+                            {/* <div className='filter-items py-3 px-3'>
                               <h5 className='sub-title mb-0 dgc'>Return Time From {returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity}</h5>
                               <div className='price-slider pt-3'>
                                 <ReactSlider
@@ -1549,10 +1549,10 @@ export default function Results() {
                                   minDistance={1}
                                 />
                                 <div className='row mt-3'>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                  <div className='col-6'>
                                     <h6 className='mb-0 d-table'>{formatTime(selectedReturnTimeRange[0])}</h6>
                                   </div>
-                                  <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                  <div className='col-6 text-end'>
                                     <h6 className='mb-0 d-table float-end'>{selectedReturnTimeRange[1] == 24 ? "23:59" : formatTime(selectedReturnTimeRange[1])}</h6>
                                   </div>
                                 </div>
@@ -1560,7 +1560,7 @@ export default function Results() {
                             </div> */}
 
                             {returnTBOFlights.length > 0 && (
-                              <div className="filter-items py-3 ps-3 pe-3">
+                              <div className="filter-items py-3 px-3">
                                 <h5 className="sub-title mb-2 dgc">Return Time from {returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity}</h5>
                                 <div className="row m-0">
                                   <div className="col-3 px-1" onClick={() => applyFilters("return-time", "Morning", returnTBOFlights)}>
@@ -1618,7 +1618,7 @@ export default function Results() {
                                 </div>
                               </div>
                             )}
-                            <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                            <div className="filter-items pt-3 pb-3 px-3">
                               <h5 className="sub-title mb-2 dgc">Sort By</h5>
                               <div className="form-check">
                                 {sortByOptions.map((option, ix) => {
@@ -1632,7 +1632,7 @@ export default function Results() {
                               </div>
                             </div>
                             {pureValidatingCarriers && pureValidatingCarriers.length > 0 && (
-                              <div className="filter-items pt-3 pb-3 ps-3 pe-3">
+                              <div className="filter-items pt-3 pb-3 px-3">
                                 <h5 className="sub-title mb-2 dgc">Airlines</h5>
                                 <div className="form-check">
                                   {pureValidatingCarriers.map((carrier, ix) => {
@@ -1652,7 +1652,7 @@ export default function Results() {
                             )}
                             {validatingCarriers &&
                               validatingCarriers.length > 0 && (
-                                <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0">
+                                <div className="filter-items pt-3 pb-3 px-3 border-0">
                                   <h5 className="sub-title mb-2 dgc">Multiple Airlines</h5>
                                   <div className="form-check">
                                     {validatingCarriers.map((carrier, ix) => {
@@ -1678,7 +1678,7 @@ export default function Results() {
                                 </div>
                               )}
                           </div>
-                          <div className="filter-items pt-3 pb-3 ps-3 pe-3 border-0 d-lg-none fixed-bottom">
+                          <div className="filter-items pt-3 pb-3 px-3 border-0 d-lg-none fixed-bottom">
                             <div className="row">
                               <div className="col-6 col-sm-6 col-md-6">
                                 <button className="clear-filter btn-primary w-100 br-5 pt-2 pb-2 border-0"
@@ -1707,10 +1707,10 @@ export default function Results() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9 col-xxl-9">
+              <div className="col-12 col-lg-8 col-xl-9">
                 <div className="air-listing-results matrixSlider pt-3 mb-3 position-relative matrix-slider">
                   <div className="row mb-2">
-                    <div className="col-9 col-sm-9 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div className="col-9 col-md-12">
                       {flights.length > 0 && (
                         <p className="fs-14 fw-bold mb-2">{flights[0].trips[0].listOfFlight[0].airportFromCity} to {flights[0].trips[0].listOfFlight[flights[0].trips[0].listOfFlight.length - 1].airportToCity} flights Starting @ Rs. {flights[0].totalPrice}</p>
                       )}
@@ -1785,7 +1785,7 @@ export default function Results() {
                   </div>
                   <div className="row">
                     <div className="col-sm-12">
-                      <div className="note-bar br-5 ps-3 pt-3 pe-3 pb-3">
+                      <div className="note-bar br-5 p-3">
                         <p className="mb-0"><strong>Note:</strong> * All the fares displayed are for {currentFilters && currentFilters.segments && currentFilters.segments.length > 1 ? "Round Trip" : "One Way"} and are in INR, inclusive of base fare, taxes and service fees.</p>
                       </div>
                     </div>
@@ -1897,16 +1897,16 @@ export default function Results() {
                                 <div className="regular-one-trip listing-com">
                                   <div className="regular-flight-round-box mt-4 mb-4">
                                     <div className="row align-items-center">
-                                      <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                      <div className="col-9 both-flight-box">
                                         <div className="row align-items-center">
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                          <div className="col-12">
                                             <div className="row">
                                               <div className="col-sm-12">
                                                 <h2 className="digination-sub-title mb-3 dgc">Departure | {getFormattedDate4(flight.trips[0].listOfFlight[0].departeddate)}</h2>
                                               </div>
                                             </div>
                                             <div className="row align-items-center">
-                                              <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                              <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                                 <div className="air-flight-logo text-start">
                                                   <Image
                                                     className="mb-1 h-auto"
@@ -1929,12 +1929,12 @@ export default function Results() {
                                                   <span>{flight.trips[0].validatingCarrier.name}</span>
                                                 </div>
                                               </div>
-                                              <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                              <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                                 <div className="row align-items-center">
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                  <div className="col-4">
                                                     <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                   </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                  <div className="col-4 p-0">
                                                     <div className="from-to-from-digination">
                                                       <h6 className="text-center mb-0">{getDiffFromMinutes(flight.trips[0].totalTripTime)}</h6>
                                                       {flight.trips[0].listOfFlight.length <= 3 && (
@@ -1982,7 +1982,7 @@ export default function Results() {
                                                       </h6>
                                                     </div>
                                                   </div>
-                                                  <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                  <div className="col-4">
                                                     <h4 className="airport-code mb-0 justify-content-end dgc position-relative d-flex">
                                                       <span className="flight-plus-air position-relative">
                                                         <span className="tooltip-box cursor-pointer float-end">
@@ -2013,7 +2013,7 @@ export default function Results() {
                                           </div>
                                         </div>
                                       </div>
-                                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                                      <div className="col-3 ps-0">
                                         <div className="air-flight-price text-end">
                                           <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                           <h6 className="mb-2 mt-2">{totalPassangers > 1 ? "Avg. Price Per Traveler" : "Per Adult"}</h6>
@@ -2023,11 +2023,11 @@ export default function Results() {
 
                                     <div className="air-flight-btn-and-bag mt-1 pt-2">
                                       <div className="row align-items-center">
-                                        <div className="col-8 col-sm-8 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0">
+                                        <div className="col-8 col-md-5 pe-0">
                                           <div className="details-icon-btns d-flex">
                                             <div className="me-3 ">
                                               <div className="dropdown dropdown-hover">
-                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                   type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                   <Image
                                                     className="h-auto"
@@ -2046,7 +2046,7 @@ export default function Results() {
                                             </div>
                                             <div className="me-3">
                                               <div className="dropdown dropdown-hover">
-                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                   type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                   <Image
                                                     className="h-auto"
@@ -2065,7 +2065,7 @@ export default function Results() {
                                             </div>
                                             <div className="me-0">
                                               <div className="dropdown dropdown-hover">
-                                                <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                   type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                   <Image
                                                     className="h-auto"
@@ -2081,7 +2081,7 @@ export default function Results() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="col-4 col-sm-4 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                        <div className="col-4 col-md-7">
                                           <div className="air-flight-price text-end">
                                             <button className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center" onClick={(e) => { e.stopPropagation(); handleBookFlight(flightIndex, flight, avgPrice, totalPax); }}>
                                               {showSpinnerIndex === flightIndex ? (<span className="spinner-border text-white" role="status"></span>) : (<span>Book</span>)}
@@ -2127,10 +2127,10 @@ export default function Results() {
                               <div className="custom-view-round-trip-box">
                                 <div className="custom-view-round-trip-box-main">
                                   <div className="row">
-                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 departCustomList">
+                                    <div className="col-6 departCustomList">
                                       <div className="depart listing-banner p-3 br-10">
                                         <div className="row align-items-center">
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0">
+                                          <div className="col-12 pe-0">
                                             <h6 className="color-white mb-0">
                                               Depart |{" "}
                                               {getFormattedDate4(
@@ -2212,7 +2212,7 @@ export default function Results() {
                                                 setSelectedDepartTBOFlight(currentFlight);
                                               }}>
                                               <div className="row align-items-center">
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <div className="air-flight-logo text-start">
                                                     <Image
                                                       className="h-auto"
@@ -2224,7 +2224,7 @@ export default function Results() {
                                                     <span>{flight.trips[0].validatingCarrier.name}</span>
                                                   </div>
                                                 </div>
-                                                <div className="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                                <div className="col-8">
                                                   <div className="air-flight-price text-end">
                                                     <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                     <h6 className="mb-0 mt-1">per Traveler</h6>
@@ -2232,10 +2232,10 @@ export default function Results() {
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                 </div>
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                <div className="col-4 p-0">
                                                   <div className="from-to-from-digination">
                                                     {flight.trips[0].listOfFlight.length <= 3 && (
                                                       <h5 className="mb-0 text-center">
@@ -2253,7 +2253,7 @@ export default function Results() {
                                                     )}
                                                   </div>
                                                 </div>
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <h4 className="airport-code mb-0 text-end w-100 dgc position-relative">
                                                     {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                     {departDays > 0 && (
@@ -2272,7 +2272,7 @@ export default function Results() {
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
-                                                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div className="col-12">
                                                   {/* {
                                                 displayOperatedBy && displayOperatedBy.length > 0 &&
                                                 <div className='row'>
@@ -2285,11 +2285,11 @@ export default function Results() {
                                               </div>
                                               <div className="air-flight-btn-and-bag mt-1 pt-2">
                                                 <div className="row align-items-center">
-                                                  <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0">
+                                                  <div className="col-5 pe-0">
                                                     <div className="details-icon-btns d-flex">
                                                       <div className="me-3 ">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2307,7 +2307,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-3">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2325,7 +2325,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-0">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2342,7 +2342,7 @@ export default function Results() {
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  {/* <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                                  {/* <div className="col-7">
                                                     <div className="air-flight-price text-end">
                                                       <button
                                                         className="btn-style1 border-0 p-0 float-end text-end"
@@ -2376,10 +2376,10 @@ export default function Results() {
                                         }
                                       )}
                                     </div>
-                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 returnCustomList">
+                                    <div className="col-6 returnCustomList">
                                       <div className="return listing-banner p-3 br-10">
                                         <div className="row align-items-center">
-                                          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0">
+                                          <div className="col-12 pe-0">
                                             <h6 className="color-white mb-0">Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
                                           </div>
                                         </div>
@@ -2436,7 +2436,7 @@ export default function Results() {
                                                 setSelectedReturnTBOFlight(currentFlight);
                                               }}>
                                               <div className="row align-items-center">
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <div className="air-flight-logo text-start">
                                                     <Image
                                                       className="h-auto"
@@ -2448,7 +2448,7 @@ export default function Results() {
                                                     <span>{flight.trips[0].validatingCarrier.name}</span>
                                                   </div>
                                                 </div>
-                                                <div className="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                                <div className="col-8">
                                                   <div className="air-flight-price text-end">
                                                     <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
                                                     <h6 className="mb-0 mt-1">per Traveler</h6>
@@ -2456,10 +2456,10 @@ export default function Results() {
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <h4 className="airport-code mb-0 text-start w-100 dgc">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</h4>
                                                 </div>
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                <div className="col-4 p-0">
                                                   <div className="from-to-from-digination">
                                                     {flight.trips[0].listOfFlight.length <= 3 && (
                                                       <h5 className="mb-0 text-center">
@@ -2477,7 +2477,7 @@ export default function Results() {
                                                     )}
                                                   </div>
                                                 </div>
-                                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                <div className="col-4">
                                                   <h4 className="airport-code mb-0 text-end w-100 dgc position-relative">
                                                     {getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}
                                                     {departDays > 0 && (
@@ -2496,7 +2496,7 @@ export default function Results() {
                                                 </div>
                                               </div>
                                               <div className="row align-items-center">
-                                                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div className="col-12">
                                                   {/* {
                                                 displayOperatedBy && displayOperatedBy.length > 0 &&
                                                 <div className='row'>
@@ -2509,11 +2509,11 @@ export default function Results() {
                                               </div>
                                               <div className="air-flight-btn-and-bag mt-1 pt-2">
                                                 <div className="row align-items-center">
-                                                  <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pe-0">
+                                                  <div className="col-5 pe-0">
                                                     <div className="details-icon-btns d-flex">
                                                       <div className="me-3 ">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2531,7 +2531,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-3">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2549,7 +2549,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-0">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="dropdown" aria-expanded="true" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -2566,7 +2566,7 @@ export default function Results() {
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  {/* <div className='col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7'>
+                                                  {/* <div className='col-7'>
                                                 <div className='air-flight-price text-end'>
                                                   <button className='btn-style1 border-0 p-0 float-end text-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                     e.stopPropagation();
@@ -2596,14 +2596,14 @@ export default function Results() {
                               <div className="custom-view-round-trip-box">
                                 <div className="custom-view-round-trip-box-main">
                                   <div className="row">
-                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <div className="col-6">
                                       <div className="depart listing-banner p-2 rounded-2">
                                         <div className="row align-items-center">
-                                          <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0">
+                                          <div className="col-7 pe-0">
                                             <h6 className="color-white">Depart | {getFormattedDate4(currentFilters.segments[0].departureDate)}</h6>
                                             <h5 className="color-white mb-0">{departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {departTBOFlights.length > 0 && departTBOFlights[0].trips[0].listOfFlight[departTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h5>
                                           </div>
-                                          <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                          <div className="col-5">
                                             <Image
                                               className="w-100"
                                               loader={trvLoader}
@@ -2676,11 +2676,11 @@ export default function Results() {
                                                 <div className="color-white gds-code">{flight.gdsHiddenId}</div>
 
                                                 <div className="row align-items-center">
-                                                  <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                                  <div className="col-9 both-flight-box">
                                                     <div className="row align-items-center">
-                                                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                      <div className="col-12">
                                                         <div className="row align-items-center">
-                                                          <div className="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                          <div className="col-2 col-md-3">
                                                             <div className="air-flight-logo text-start">
                                                               <Image
                                                                 className="h-auto"
@@ -2693,16 +2693,16 @@ export default function Results() {
                                                               <span>{flight.trips[0].validatingCarrier.name}</span>
                                                             </div>
                                                           </div>
-                                                          <div className="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                          <div className="col-10 col-md-9 p-0">
                                                             <div className="row align-items-center">
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                              <div className="col-4">
                                                                 <h4 className="airport-code mb-0 dgc position-relative">
                                                                   <span className="flight-plus-air">
                                                                     <span className="tooltip-box cursor-pointer">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                                                   </span>
                                                                 </h4>
                                                               </div>
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                              <div className="col-4 p-0">
                                                                 <div className="from-to-from-digination ">
                                                                   <div className="dropdown dropdown-hover">
                                                                     <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
@@ -2725,13 +2725,13 @@ export default function Results() {
                                                                       <h6 className="text-center mb-0">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                                                     </button>
                                                                     <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
-                                                                      <li className="ps-2 pe-2 fs-12"><strong>Flight Duration: </strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
+                                                                      <li className="px-2 fs-12"><strong>Flight Duration: </strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}</li>
                                                                       {flight.trips[0].listOfFlight.map((tf, ix) => {
                                                                         if (!!tf.displayLayOverTime) layoverCounter += 1;
                                                                         return (
                                                                           <Fragment key={ix}>
                                                                             {!!tf.displayLayOverTime && (
-                                                                              <li className="ps-2 pe-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                              <li className="px-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
                                                                             )}
                                                                           </Fragment>
                                                                         );
@@ -2741,7 +2741,7 @@ export default function Results() {
                                                                   </div>
                                                                 </div>
                                                               </div>
-                                                              <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                              <div className="col-4">
                                                                 <h4 className="airport-code mb-0 dgc position-relative d-flex">
                                                                   <span className="flight-plus-air position-relative">
                                                                     <span className="tooltip-box cursor-pointer float-end">{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
@@ -2770,7 +2770,7 @@ export default function Results() {
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                  <div className="col-3">
                                                     <div className="air-flight-price text-end">
                                                       <div className={flight.resultIndex == selectedDepartTBOFlight.resultIndex && flight.traceId == selectedDepartTBOFlight.traceId ? "selected-flight active" : "selected-flight"}></div>
                                                       <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
@@ -2780,11 +2780,11 @@ export default function Results() {
                                                 </div>
                                                 <div className="air-flight-btn-and-bag mt-1 pt-2">
                                                   <div className="row align-items-center">
-                                                    <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
+                                                    <div className="col-10 col-md-8 col-lg-7 col-xl-8 pe-0">
                                                       <div className="details-icon-btns d-flex">
                                                         <div className="me-3 ">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                               type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
@@ -2803,7 +2803,7 @@ export default function Results() {
                                                         </div>
                                                         <div className="me-3">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                               type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
@@ -2822,7 +2822,7 @@ export default function Results() {
                                                         </div>
                                                         <div className="me-0">
                                                           <div className="dropdown dropdown-hover">
-                                                            <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                            <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                               type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                               <Image
                                                                 className="h-auto"
@@ -2840,7 +2840,7 @@ export default function Results() {
                                                         </div>
                                                       </div>
                                                     </div>
-                                                    {/* <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
+                                                    {/* <div className='col-2 col-md-4 col-lg-5 col-xl-4'>
                                                   <div className='air-flight-price text-end'>
                                                     <button className='p-0 bg-white border-0 fs-14 color-blue fw-bold' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                       e.stopPropagation();
@@ -2880,14 +2880,14 @@ export default function Results() {
                                         </div>
                                       )}
                                     </div>
-                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <div className="col-6">
                                       <div className="return listing-banner p-2 rounded-2">
                                         <div className="row align-items-center">
-                                          <div className="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 pe-0">
+                                          <div className="col-7 pe-0">
                                             <h6 className="color-white">Return | {getFormattedDate4(currentFilters.segments[1].departureDate)}</h6>
                                             <h5 className="color-white mb-0">{returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[0].airportFromCity} - {returnTBOFlights.length > 0 && returnTBOFlights[0].trips[0].listOfFlight[returnTBOFlights[0].trips[0].listOfFlight.length - 1].airportToCity}</h5>
                                           </div>
-                                          <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                          <div className="col-5">
                                             <Image
                                               className="w-100"
                                               loader={trvLoader}
@@ -2940,11 +2940,11 @@ export default function Results() {
                                               }}
                                             >
                                               <div className="row align-items-center">
-                                                <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                                                <div className="col-9 both-flight-box">
                                                   <div className="row align-items-center">
-                                                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    <div className="col-12">
                                                       <div className="row align-items-center">
-                                                        <div className="1 col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                        <div className="1 col-2 col-md-3">
                                                           <div className="air-flight-logo text-start">
                                                             <Image
                                                               className="h-auto"
@@ -2956,16 +2956,16 @@ export default function Results() {
                                                             <span>{flight.trips[0].validatingCarrier.name}</span>
                                                           </div>
                                                         </div>
-                                                        <div className="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                                        <div className="col-10 col-md-9 p-0">
                                                           <div className="row align-items-center">
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                               <h4 className="airport-code mb-0 dgc position-relative">
                                                                 <span className="flight-plus-air">
                                                                   <span className="tooltip-box cursor-pointer">{getFormattedTime(flight.trips[0].listOfFlight[0].departureTime)}</span>
                                                                 </span>
                                                               </h4>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                                            <div className="col-4 p-0">
                                                               <div className="from-to-from-digination ">
                                                                 <div className="dropdown dropdown-hover">
                                                                   <button className="btn btn-secondary dropdown-toggle after-none bg-transparent border-0 p-0 w-100"
@@ -2988,7 +2988,7 @@ export default function Results() {
                                                                     <h6 className="text-center mb-0">{flight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : flight.trips[0].listOfFlight.length - 1 + (flight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                                                   </button>
                                                                   <ul className="dropdown-menu bg-black border-0 color-white fs-12" aria-labelledby="dropdownMenuButton1">
-                                                                    <li className="ps-2 pe-2 fs-12">
+                                                                    <li className="px-2 fs-12">
                                                                       <strong>Flight Duration:</strong> {getDiffFromMinutes(flight.trips[0].totalTripTime)}
                                                                     </li>
                                                                     {flight.trips[0].listOfFlight.map((tf, ix) => {
@@ -2996,7 +2996,7 @@ export default function Results() {
                                                                       return (
                                                                         <Fragment key={ix}>
                                                                           {!!tf.displayLayOverTime && (
-                                                                            <li className="ps-2 pe-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
+                                                                            <li className="px-2 fs-12"><strong>Layover {layoverCounter}:</strong> {tf.displayLayOverTime}, {tf.airportToCity}</li>
                                                                           )}
                                                                         </Fragment>
                                                                       );
@@ -3006,7 +3006,7 @@ export default function Results() {
                                                                 </div>
                                                               </div>
                                                             </div>
-                                                            <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                            <div className="col-4">
                                                               <h4 className="airport-code mb-0 dgc position-relative d-flex">
                                                                 <span className="flight-plus-air position-relative">
                                                                   <span className="tooltip-box cursor-pointer float-end">{getFormattedTime(flight.trips[0].listOfFlight[flight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
@@ -3035,7 +3035,7 @@ export default function Results() {
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                                <div className="col-3">
                                                   <div className="air-flight-price text-end">
                                                     <div className={flight.resultIndex == selectedReturnTBOFlight.resultIndex && flight.traceId == selectedReturnTBOFlight.traceId ? "selected-flight active" : "selected-flight"}></div>
                                                     <h2 className="mb-0 dgc">{aedNumberFormat(avgPrice).split(".")[0]}</h2>
@@ -3045,11 +3045,11 @@ export default function Results() {
                                               </div>
                                               <div className="air-flight-btn-and-bag mt-1 pt-2">
                                                 <div className="row align-items-center">
-                                                  <div className="col-10 col-sm-10 col-md-8 col-lg-7 col-xl-8 col-xxl-8 pe-0">
+                                                  <div className="col-10 col-md-8 col-lg-7 col-xl-8 pe-0">
                                                     <div className="details-icon-btns d-flex">
                                                       <div className="me-3 ">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -3068,7 +3068,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-3">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -3087,7 +3087,7 @@ export default function Results() {
                                                       </div>
                                                       <div className="me-0">
                                                         <div className="dropdown dropdown-hover">
-                                                          <button className="text-start align-items-center after-none d-flex ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                                          <button className="text-start align-items-center after-none d-flex p-0 btn transparent-btn dropdown-toggle border-0"
                                                             type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                                             <Image
                                                               className="h-auto"
@@ -3105,7 +3105,7 @@ export default function Results() {
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  {/* <div className='col-2 col-sm-2 col-md-4 col-lg-5 col-xl-4 col-xxl-4'>
+                                                  {/* <div className='col-2 col-md-4 col-lg-5 col-xl-4'>
                                                   <div className='air-flight-price text-end'>
                                                     <button className='p-0 bg-white border-0 fs-14 color-blue fw-bold' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                                                       e.stopPropagation();
@@ -3261,14 +3261,14 @@ export default function Results() {
             <div className="d-none d-lg-inline">
               <div className="container">
                 <div className="row align-items-center">
-                  <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                  <div className="col-5">
                     <div className="regular-flight-round-box my-2">
                       <div className="row align-items-center">
-                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                        <div className="col-9 both-flight-box">
                           <div className="row align-items-center">
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col-12">
                               <div className="row align-items-center">
-                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                   <div className="air-flight-logo text-start">
                                     <Image
                                       className="h-auto"
@@ -3281,16 +3281,16 @@ export default function Results() {
                                     <span>{selectedDepartTBOFlight.trips[0].validatingCarrier.name}</span>
                                   </div>
                                 </div>
-                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                   <div className="row">
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div className="col-4">
                                       <h6 className="flight-time mb-0">
                                         <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                         <span className="flight-plus-air"></span>
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                             <span className="fw-bold fs-20">{selectedDepartTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                           </button>
                                           <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -3299,7 +3299,7 @@ export default function Results() {
                                         </div>
                                       </h4>
                                     </div>
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                    <div className="col-4 p-0">
                                       <div className="from-to-from-digination">
                                         <h6 className="text-center mb-0">{getDiffFromMinutes(selectedDepartTBOFlight.trips[0].totalTripTime)}</h6>
                                         {selectedDepartTBOFlight.trips[0].listOfFlight.length <= 3 && (
@@ -3317,7 +3317,7 @@ export default function Results() {
                                         <h6 className="text-center mb-0">{selectedDepartTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : selectedDepartTBOFlight.trips[0].listOfFlight.length - 1 + (selectedDepartTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                       </div>
                                     </div>
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div className="col-4">
                                       <h6 className="flight-time mb-0">
                                         <span>{getFormattedTime(selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                         {selectedDepartTBOFlight.departDays > 0 && (
@@ -3331,7 +3331,7 @@ export default function Results() {
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                             type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                             <span className="fw-bold fs-20">{selectedDepartTBOFlight.trips[0].listOfFlight[selectedDepartTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                           </button>
@@ -3347,7 +3347,7 @@ export default function Results() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                        <div className="col-3">
                           <div className="air-flight-price text-end">
                             <h2 className="mb-0 dgc">{aedNumberFormat(selectedDepartTBOFlight.avgPrice).split(".")[0]}</h2>
                             <h6 className="mb-2 mt-2">per Traveler</h6>
@@ -3358,11 +3358,11 @@ export default function Results() {
                         <div className="col-sm-12">
                           <div className="air-flight-btn-and-bag mt-3 pt-2">
                             <div className="row align-items-center">
-                              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0">
+                              <div className="col-12 pe-0">
                                 <div className="details-icon-btns d-flex">
                                   <div className="me-3 ">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3381,7 +3381,7 @@ export default function Results() {
                                   </div>
                                   <div className="me-3">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3400,7 +3400,7 @@ export default function Results() {
                                   </div>
                                   <div className="me-0">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3424,14 +3424,14 @@ export default function Results() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 border-start">
+                  <div className="col-5 border-start">
                     <div className="regular-flight-round-box my-2 ">
                       <div className="row align-items-center">
-                        <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9 both-flight-box">
+                        <div className="col-9 both-flight-box">
                           <div className="row align-items-center">
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div className="col-12">
                               <div className="row align-items-center">
-                                <div className="col-2 col-sm-2 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                                <div className="col-2 col-md-3 col-lg-4 col-xl-3">
                                   <div className="air-flight-logo text-start">
                                     <Image
                                       className="h-auto "
@@ -3444,16 +3444,16 @@ export default function Results() {
                                     <span>{selectedReturnTBOFlight.trips[0].validatingCarrier.name}</span>
                                   </div>
                                 </div>
-                                <div className="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-9 col-xxl-9 pe-0 ps-0">
+                                <div className="col-10 col-md-9 col-lg-8 col-xl-9 p-0">
                                   <div className="row">
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div className="col-4">
                                       <h6 className="flight-time mb-0">
                                         <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[0].departureTime)}</span>
                                         <span className="flight-plus-air"></span>
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                             type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                             <span className="fw-bold fs-20">{selectedReturnTBOFlight.trips[0].listOfFlight[0].fromCode}</span>
                                           </button>
@@ -3463,7 +3463,7 @@ export default function Results() {
                                         </div>
                                       </h4>
                                     </div>
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 pe-0 ps-0">
+                                    <div className="col-4 p-0">
                                       <div className="from-to-from-digination">
                                         <h6 className="text-center mb-0">{getDiffFromMinutes(selectedReturnTBOFlight.trips[0].totalTripTime)}</h6>
                                         {selectedReturnTBOFlight.trips[0].listOfFlight.length <= 3 && (
@@ -3481,7 +3481,7 @@ export default function Results() {
                                         <h6 className="text-center mb-0">{selectedReturnTBOFlight.trips[0].listOfFlight.length == 1 ? "Non-Stop" : selectedReturnTBOFlight.trips[0].listOfFlight.length - 1 + (selectedReturnTBOFlight.trips[0].listOfFlight.length == 2 ? " Stop" : " Stops")}</h6>
                                       </div>
                                     </div>
-                                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div className="col-4">
                                       <h6 className="flight-time mb-0">
                                         <span>{getFormattedTime(selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].arrivalTime)}</span>
                                         {selectedReturnTBOFlight.departDays >
@@ -3496,7 +3496,7 @@ export default function Results() {
                                       </h6>
                                       <h4 className="airport-code mb-0 dgc">
                                         <div className="dropdown dropdown-hover">
-                                          <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
+                                          <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0" type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                             <span className="fw-bold fs-20">{selectedReturnTBOFlight.trips[0].listOfFlight[selectedReturnTBOFlight.trips[0].listOfFlight.length - 1].toCode}</span>
                                           </button>
                                           <div className="dropdown-menu p-0 pt-2 bg-transpartent border-0" aria-labelledby="carddetail-info" data-popper-placement="top-start">
@@ -3511,7 +3511,7 @@ export default function Results() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                        <div className="col-3">
                           <div className="air-flight-price text-end">
                             <h2 className="mb-0 dgc">{aedNumberFormat(selectedReturnTBOFlight.avgPrice).split(".")[0]}</h2>
                             <h6 className="mb-2 mt-2">per Traveler</h6>
@@ -3522,11 +3522,11 @@ export default function Results() {
                         <div className="col-sm-12">
                           <div className="air-flight-btn-and-bag mt-3 pt-2">
                             <div className="row align-items-center">
-                              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 pe-0">
+                              <div className="col-12 pe-0">
                                 <div className="details-icon-btns d-flex">
                                   <div className="me-3 ">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3545,7 +3545,7 @@ export default function Results() {
                                   </div>
                                   <div className="me-3">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="drodown" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3564,7 +3564,7 @@ export default function Results() {
                                   </div>
                                   <div className="me-0">
                                     <div className="dropdown dropdown-hover">
-                                      <button className="text-start align-items-center d-flex after-none ps-0 pt-0 pe-0 pb-0 btn transparent-btn dropdown-toggle border-0"
+                                      <button className="text-start align-items-center d-flex after-none p-0 btn transparent-btn dropdown-toggle border-0"
                                         type="button" id="carddetail-info" data-bs-toggle="" aria-expanded="" onClick={(e) => e.stopPropagation()}>
                                         <Image
                                           className="h-auto"
@@ -3588,7 +3588,7 @@ export default function Results() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                  <div className="col-2">
                     <div className="air-flight-price text-end">
                       {/* <button className='btn-style1 border-0 px-2 py-0 float-end' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={(e) => {
                       e.stopPropagation();
@@ -3736,7 +3736,7 @@ export default function Results() {
               </div>
             </div>
             <div className="row session-btns">
-              <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+              <div className="col-6">
                 <a className="border border-green color-green w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none" href="javascript:void(0);"
                   onClick={() => {
                     setOpenSessionIdleModal(false);
@@ -3746,7 +3746,7 @@ export default function Results() {
                   }}
                 >Refresh</a>
               </div>
-              <div className="col-6 col-sm-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+              <div className="col-6">
                 <a className="bg-green color-white w-100 p-2 d-inline-block text-center br-5 text-none text-decoration-none" href="/">Home</a>
               </div>
             </div>

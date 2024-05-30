@@ -12,10 +12,10 @@ export default function MainMenu() {
         getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
             if (res && res.length > 0)
                 setpackagesMenu(res);
+
         });
     }, []);
     
-console.log("============", packagesMenu)
 
     return (
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -50,7 +50,7 @@ console.log("============", packagesMenu)
                                             {
                                                 packagesMenu.length > 0 && packagesMenu.map((obj, index)=>(
                                                     <div key={index} className="col-12 col-sm-12 col-lg-6 py-1">
-                                                    <a className="text-decoration-none d-flex align-items-center" href="/india-tour-packages/kashmir-tour-package/">
+                                                    <a className="text-decoration-none d-flex align-items-center" href={`/holidays/${obj.slug}-tour-packages/`}>
                                                         <Image
                                                             className="h-auto me-2"
                                                             loader={trvLoader}

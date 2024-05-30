@@ -31,8 +31,8 @@ export default function Home() {
             <section className='pt-5 pb-5 mt-5 mb-5'>
                 <div className='container mt-5'>
                     <div className='row'>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8'>
+                        <div className='col-12 col-lg-2'></div>
+                        <div className='col-12 col-lg-8'>
                             <div className='payment-main-wrp payment-failed text-center'>
                                 <Image
                                     className="mb-4 payment-success-img h-auto"
@@ -47,7 +47,7 @@ export default function Home() {
                                 <button className='border-0  fs-14  py-2 px-3  rounded-2 bg-blue color-white' onClick={() => { window.location.href="/" }}>Go To Home</button>
                             </div>
                         </div>
-                        <div className='col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2'></div>
+                        <div className='col-12 col-lg-2'></div>
                     </div>
                 </div>
             </section>

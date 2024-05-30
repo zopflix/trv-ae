@@ -229,10 +229,10 @@ export default function HolidayForm(props) {
                     </div>
                     <div className="mainFlightSearchBox border p-3">
                         <div className="row align-items-center">
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                            <div className="col-12 col-lg-5">
                                 <div className="fromTofromBox">
                                     <div className="row">
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 border-end">
+                                        <div className="col-12 col-md-6 py-2 border-end">
                                             <div className="fromTofromBoxLabel fs-12">FROM</div>
                                             <div className="dropdown cityBoxDropDown">
                                                 <button className="w-100 text-start after-none p-0 btn border-0 dropdown-toggle" type="button" id="fromCity" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => {
@@ -322,7 +322,7 @@ export default function HolidayForm(props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 border-end">
+                                        <div className="col-12 col-md-6 py-2 border-end">
                                             <div className="fromTofromBoxLabel fs-12">TO</div>
                                             <div className="dropdown cityBoxDropDown">
                                                 <button className="w-100 text-start after-none p-0 btn border-0 dropdown-toggle" type="button" id="toCity" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => {
@@ -417,7 +417,7 @@ export default function HolidayForm(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                            <div className="col-12 col-lg-5">
                                 <div className="row">
                                     <div className="col-6 col-md-4 py-2 border-end">
                                         <div className='trv-datepicker position-relative' onClick={() => setShowFromDate(true)}>
@@ -632,7 +632,7 @@ export default function HolidayForm(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 py-2">
+                            <div className="col-12 col-lg-2 py-2">
                                 <button className="buttonStyle4 border-0 color-white fs-14 px-2 w-100 py-3 rounded-3" disabled={isSearchProgress} onClick={() => searchFlights()}>
                                     {!isSearchProgress &&
                                         <span>Search</span>

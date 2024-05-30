@@ -41,11 +41,11 @@ export default function Disclaimer() {
             <section>
                 <div className="container-fluid shadow mb-5">
                     <div className="row d-flex align-items-center">
-                        <div className="col-12 col-md-6 py-5 px-5 d-flex flex-column align-items-md-end">
+                        <div className="col-12 col-md-6 p-5 d-flex flex-column align-items-md-end">
                             <h2 className="fw-bolder">Consent</h2>
                             <p className="fs-14">By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
                         </div>
-                        <div className="col-12 col-md-6 py-5 px-5 bg-dark">
+                        <div className="col-12 col-md-6 p-5 bg-dark">
                             <h2 className="fw-bolder text-white">Update</h2>
                             <p className="text-white fs-14">Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
                         </div>

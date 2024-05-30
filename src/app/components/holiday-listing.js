@@ -13,7 +13,6 @@ import InquiryPopup from "./inquiry-popup";
 import { Modal } from "react-bootstrap";
 import Footer from "./footer";
 import PartnerLogo from "./partner-logo";
-import GoogleReviews from "./google-reviews";
 
 export default function HolidayListing(props) {
   const title = props?.packageData?.Data?.Title;
@@ -89,7 +88,7 @@ export default function HolidayListing(props) {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb mb-0">
               <li className="breadcrumb-item"><a href="/">Home</a></li>
-              <li className="breadcrumb-item"><a href={props.isDomestic ? "/india-tour-packages" : "/international-tour-packages"}>{props.isDomestic ? 'India' : 'International'} Tour Packages</a></li>
+              <li className="breadcrumb-item"><a href="/holidays">Holidays</a></li>
               <li className="breadcrumb-item active" aria-current="page">{destinationName} Tour Packages</li>
             </ol>
           </nav>
@@ -138,7 +137,7 @@ export default function HolidayListing(props) {
                           const pkgPrice = item.StandardPrice ? item.StandardPrice : (item.DeluxePrice ? item.DeluxePrice : item.PremiumPrice);
                           return <div key={ix} className="DealsListBox mb-4 bg-white p-3 rounded-3">
                             <div className="row">
-                              <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 py-1">
+                              <div className="col-12 col-lg-4 py-1">
                                 <Image
                                   className=" w-100 rounded-3"
                                   loader={sfLoader}
@@ -148,7 +147,7 @@ export default function HolidayListing(props) {
                                   height={170}
                                 />
                               </div>
-                              <div className="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 py-1">
+                              <div className="col-12 col-lg-8 py-1">
                                 <div className="row justify-content-between">
                                   <div className="col-6 py-1">
                                     <div className="DealsListContentBox">

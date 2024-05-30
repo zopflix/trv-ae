@@ -579,7 +579,7 @@ export default function Topsearchabar(props) {
                             <div className="row pb-2 search-fields">
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-6 col-xxl-6">
                                     <div className="row">
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6  px-1">
+                                        <div className="col-12 col-md-6  px-1">
                                             <div className="col-12 position-relative">
                                                 <div className="field ">
                                                     <div className="origin-field position-relative">
@@ -675,7 +675,7 @@ export default function Topsearchabar(props) {
                                                                             <p className="mb-0">{airport.label}</p>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex align-items-center justify-content-end list-flag-box">
+                                                                    <div className="col-2 d-flex align-items-center justify-content-end list-flag-box">
                                                                         <div className="city-name fs-6 fw-bold pe-2 text-black-50 ">
                                                                             {airport.countryCode}
                                                                         </div>
@@ -724,7 +724,7 @@ export default function Topsearchabar(props) {
                                             </div>
                                         </div>
 
-                                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6  px-1">
+                                        <div className="col-12 col-md-6  px-1">
                                             <div className="col-12 position-relative">
                                                 <div className="field">
                                                     <div className="destination-field position-relative">
@@ -786,7 +786,7 @@ export default function Topsearchabar(props) {
                                                                                 <p className="mb-0">{airport.label}</p>
                                                                             </div>
                                                                         </div>
-                                                                        <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex align-items-center justify-content-end list-flag-box">
+                                                                        <div className="col-2 d-flex align-items-center justify-content-end list-flag-box">
                                                                             <div className="city-name fs-6 fw-bold pe-2 text-black-50 ">
                                                                                 {airport.countryCode}
                                                                             </div>

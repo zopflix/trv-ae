@@ -26,7 +26,8 @@ export {
     getPaymentIntent,
     getPaymentDetails,
     verifyPayuTransaction,
-    trackDummyPaymentFailure
+    trackDummyPaymentFailure,
+    decryptPaymentResponse
 }
 const bookTBOFlight = async (data) => {
     try {

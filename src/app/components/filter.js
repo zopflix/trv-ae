@@ -271,10 +271,10 @@ export default function SideFilters(props) {
                                                 }}
                                             />
                                             <div className='row mt-3'>
-                                                <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
+                                                <div className='col-6'>
                                                     <h6 className='mb-0 d-table'> {aedNumberFormat(Math.round(priceFilterValues[0])).split('.')[0]}</h6>
                                                 </div>
-                                                <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+                                                <div className='col-6 text-end'>
                                                     <h6 className='mb-0 d-table float-end'> {aedNumberFormat(Math.round(priceFilterValues[1])).split('.')[0]}</h6>
                                                 </div>
                                             </div>

@@ -5,10 +5,13 @@ import { contactNumber, holidayContactNumber, flightContactNumber } from "../con
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { getDestinationAndPackages } from "../services/holidayService";
 
 export default function Footer() {
     const path = usePathname();
     const [displayContactNumber, setDisplayContactNumber] = useState(contactNumber);
+    const [packagesMenu, setpackagesMenu] = useState([]);
+
     useEffect(() => {
         let numberToDisplay = contactNumber;
 
@@ -22,6 +25,17 @@ export default function Footer() {
         }
 
         setDisplayContactNumber(numberToDisplay);
+    }, []);
+
+
+
+
+    useEffect(() => {
+        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
+            if (res && res.length > 0)
+                setpackagesMenu(res);
+
+        });
     }, []);
 
     return (
@@ -113,31 +127,18 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="col-6 col-lg-3">
-                                <h2 className="fw-bold fs-16">International Packages</h2>
+                                <h2 className="fw-bold fs-16">Holiday Packages</h2>
                                 <ul className="list-style-none">
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/dubai-tour-packages/">Dubai Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/vietnam-tour-packages/">Vietnam Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/turkey-tour-packages/">Turkey Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/thailand-tour-packages/">Thailand Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/singapore-tour-packages/">Singapore Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/mauritius-tour-packages/">Mauritius Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/bali-tour-packages/">Bali Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/international-tour-packages/maldives-tour-packages/">Maldives Tour Packages</a></li>
+                                    {
+                                        packagesMenu.length > 0 && packagesMenu.map((obj, key)=>(
+                                            <li key={key}><a className="fs-12 text-decoration-none" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name +" " +"Tour Package"}</a></li>
+
+                                        ))
+                                    }
+
                                 </ul>
                             </div>
-                            <div className="col-6 col-lg-3">
-                                <h2 className="fw-bold fs-16">Domestic Packages</h2>
-                                <ul className="list-style-none">
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/rajasthan-tour-packages/">Rajasthan Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/kashmir-tour-packages/">Kashmir Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/kerala-tour-packages/">Kerala Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/goa-tour-packages/">Goa Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/nainital-tour-packages/">Nainital Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/andaman-tour-packages/">Andaman Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/himachal-tour-packages/">Himachal Tour Packages</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/india-tour-packages/leh-ladakh-tour-packages/">Leh Ladakh Tour Packages</a></li>
-                                </ul>
-                            </div>
+                           
                             <div className="col-6 col-lg-3">
                                 <h2 className="fw-bold fs-16">Helpful Links</h2>
                                 <ul className="list-style-none">

@@ -93,11 +93,11 @@ export default function DetailsFlap(props) {
                         (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
                         <span className="ob float-start w-100 text-start color-orange mb-2">Operated By: {fl.operatedBy}</span>
                       }
-                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-start pe-0">
+                      <div className="col-3 text-start pe-0">
                         <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)}</h6>
                         <span className="mb-0">{fl?.fromAirportName} ({fl.fromCode})</span>
                       </div>
-                      <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                      <div className="col-6">
                         <div className="d-flex align-items-center">
                           <div className="w-25 airbox-details-air-icon">
                             <Image
@@ -126,7 +126,7 @@ export default function DetailsFlap(props) {
                           </div>
                         </div>
                       </div>
-                      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                      <div className="col-3 ps-0">
                         <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)}</h6>
                         <span className="mb-0">{fl?.toAirportName} ({fl.toCode})</span>
                         {
@@ -175,11 +175,11 @@ export default function DetailsFlap(props) {
                           (fl.airlineName != fl.operatedBy && !!fl.operatedBy) &&
                           <span className="ob float-start w-100 text-start color-orange mb-2">Operated By: {fl.operatedBy}</span>
                         }
-                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-start pe-0">
+                        <div className="col-3 text-start pe-0">
                           <h6 className='fw-bold mb-0'>{getFormattedTime(fl.departureTime)}</h6>
                           <span className="mb-0">{fl?.fromAirportName} ({fl.fromCode})</span>
                         </div>
-                        <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div className="col-6">
                           <div className="d-flex align-items-center">
                             <div className="w-25 airbox-details-air-icon">
                               <Image
@@ -208,7 +208,7 @@ export default function DetailsFlap(props) {
                             </div>
                           </div>
                         </div>
-                        <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ps-0">
+                        <div className="col-3 ps-0">
                           <h6 className='fw-bold mb-0'>{getFormattedTime(fl.arrivalTime)}</h6>
                           <span className="mb-0">{fl?.toAirportName} ({fl.toCode})</span>
                           {
@@ -252,7 +252,7 @@ export default function DetailsFlap(props) {
 
       <div className='position-absolute flap-total-price'>
         <div className='row align-items-center ms-0 me-0'>
-          <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start'>
+          <div className='col-6 text-start'>
             <h2 className='mb-0'>{(aedNumberFormat(
               Number(props.selectedFlight.avgPrice)
               + Number(props?.superSaverService?.price
@@ -269,7 +269,7 @@ export default function DetailsFlap(props) {
             <p className='mb-0'>for {props.selectedFlight.trips[0].listOfFlight[0].fromCode} to {props.selectedFlight.trips[0].listOfFlight[props.selectedFlight.trips[0].listOfFlight.length - 1].toCode} {props.selectedRtnFlight && 'and ' + props.selectedRtnFlight.trips[0].listOfFlight[0].fromCode + ' to ' + props.selectedRtnFlight.trips[0].listOfFlight[props.selectedRtnFlight.trips[0].listOfFlight.length - 1].toCode}</p>
 
           </div>
-          <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-end'>
+          <div className='col-6 text-end'>
             {
               props.showContinueBtn
                 ? <button className="buttonStyle3 border fs-14 next listing-cont-btn" onClick={() => {

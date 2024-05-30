@@ -38,7 +38,7 @@ export default function InternationalTourPackages() {
                         <Slider {...sliderSettings}>
                             {internationalPackages?.map((pkg, ix) => {
                                 return <div className="slider-items" key={ix}>
-                                    <div className="packageBox position-relative cursor-pointer" onClick={() => window.open(`/international-tour-packages/${pkg.slug}-tour-packages`, '_blank')}>
+                                    <div className="packageBox position-relative cursor-pointer" onClick={() => window.open(`/holidays/${pkg.slug}-tour-packages`, '_blank')}>
                                         <div className="packageImgBox">
                                             <Image
                                                 className="h-auto w-100"
