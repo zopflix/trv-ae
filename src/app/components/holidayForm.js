@@ -205,7 +205,7 @@ export default function HolidayForm(props) {
                         </li>
                     </ul>
                 </div>
-                <div className="flightSearchWrp rounded-3 bg-white p-4">
+                <div className="flightSearchWrp rounded-3 p-4">
                     <div className="row  align-itmes-center">
                         <div className="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-4 col-xxl-4 pb-2">
                             <div className="row align-itmes-center">

@@ -27,27 +27,8 @@ export default function Home() {
   return (
     <Layout>
       {/* <Header></Header> */}
-      <div className='position-relative'>
-        <Image
-          className="h-auto w-100 d-none d-md-block"
-          loader={trvLoader}
-          src="TRV-holiday-main-banner.webp"
-          alt="User Icon"
-          width={20}
-          height={20}
-        />
-        <Image
-          className="h-auto w-100 d-md-none"
-          loader={trvLoader}
-          src="TRV-holiday-main-banner-mob.webp"
-          alt="User Icon"
-          width={20}
-          height={20}
-        />
-        <div className='FormBoxWrp'>
-          <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
-        </div>
-      </div>
+      <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
+
       {/* <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} /> */}
       {
         !isFirstRender &&
