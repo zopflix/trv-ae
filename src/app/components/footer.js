@@ -53,10 +53,10 @@ export default function Footer() {
                     priority
                 />
                 <div className="footerWrp bg-blue">
-                    <div className="container border-bottom mb-4 pb-4">
+                    {/* <div className="container border-bottom mb-4 pb-4">
                         <div className="row pt-5">
                             <div className="col-12 col-md-4 col-lg-6">
-                                <h2>Creating extraordinary travel experiences.</h2>
+
                             </div>
                             <div className="col-12 col-md-4 col-lg-3">
                                 <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
@@ -68,9 +68,9 @@ export default function Footer() {
                                 </h3>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="container ">
-                        <div className="row">
+                        <div className="row pt-md-5">
                             <div className="col-6 col-lg-3">
                                 <h2 className="fw-bold fs-16">Company</h2>
                                 <ul className="list-style-none">
@@ -130,16 +130,26 @@ export default function Footer() {
                                 <h2 className="fw-bold fs-16">Holiday Packages</h2>
                                 <ul className="list-style-none">
                                     {
-                                        packagesMenu.length > 0 && packagesMenu.map((obj, key)=>(
-                                            <li key={key}><a className="fs-12 text-decoration-none" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name +" " +"Tour Package"}</a></li>
+                                        packagesMenu.length > 0 && packagesMenu.map((obj, key) => (
+                                            <li key={key}><a className="fs-12 text-decoration-none" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name + " " + "Tour Package"}</a></li>
 
                                         ))
                                     }
 
                                 </ul>
                             </div>
-                           
-                            <div className="col-6 col-lg-3">
+
+                            <div className="col-12 col-lg-6">
+                                <h2 className="fw-bold fs-16">Touch with us</h2>
+                                <h2>Creating extraordinary travel experiences.</h2>
+                                <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
+                                <h3 className="my-0">
+                                    <a className="color-white text-decoration-none fs-22 fw-bold" href={'tel:' + contactNumber}>{contactNumber}</a><br />
+                                    <a className="color-white text-decoration-none fs-14 d-inline-block opacity-75" href="#">info@travanya.com</a>
+                                </h3>
+                            </div>
+
+                            {/* <div className="col-6 col-lg-3">
                                 <h2 className="fw-bold fs-16">Helpful Links</h2>
                                 <ul className="list-style-none">
                                     <li><a className="fs-12 text-decoration-none" href="/deals/first-flight-booking-offers/">First Flight Offers</a></li>
@@ -151,7 +161,7 @@ export default function Footer() {
                                     <li><a className="fs-12 text-decoration-none" href="/tourism/india/goa/">Goa Tourism</a></li>
                                     <li><a className="fs-12 text-decoration-none" href="/make-payment">Make Payment</a></li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="container last-footer">
