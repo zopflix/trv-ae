@@ -44,13 +44,20 @@ export default function Footer() {
 
             <footer className="FooterLayoutOne">
                 <Image
-                    className="h-auto w-100"
+                    className="h-auto w-100 d-none d-md-block"
                     loader={trvLoader}
                     src="footer-wave.png"
                     alt="footer-wave "
                     width={176}
                     height={43}
-                    priority
+                />
+                <Image
+                    className="w-100 h-auto d-md-none"
+                    loader={trvLoader}
+                    src="mobile-top-wave.webp"
+                    alt="newsletter top img"
+                    width={7}
+                    height={45}
                 />
                 <div className="footerWrp bg-blue">
                     {/* <div className="container border-bottom mb-4 pb-4">
@@ -70,8 +77,8 @@ export default function Footer() {
                         </div>
                     </div> */}
                     <div className="container ">
-                        <div className="row pt-md-5">
-                            <div className="col-6 col-lg-3">
+                        <div className="row pt-4 pt-md-5">
+                            <div className="col-7 col-lg-3">
                                 <h2 className="fw-bold fs-16">Company</h2>
                                 <ul className="list-style-none">
                                     <li><a className="fs-12 text-decoration-none" href="/about-us">About Us</a></li>
@@ -90,8 +97,8 @@ export default function Footer() {
                                             loader={trvLoader}
                                             src="icon/facebook-icon.svg"
                                             alt="Facebook Ion"
-                                            width={40}
-                                            height={40}
+                                            width={35}
+                                            height={35}
                                         />
                                     </a>
                                     <a href="https://www.instagram.com/TravanyaOfficial/" target="_blank">
@@ -100,8 +107,8 @@ export default function Footer() {
                                             loader={trvLoader}
                                             src="icon/instagram-icon.svg"
                                             alt="instagram Ion"
-                                            width={40}
-                                            height={40}
+                                            width={35}
+                                            height={35}
                                         />
                                     </a>
                                     <a href="https://www.youtube.com/@travanya" target="_blank">
@@ -110,8 +117,8 @@ export default function Footer() {
                                             loader={trvLoader}
                                             src="icon/youtube.svg"
                                             alt="linkedin Ion"
-                                            width={40}
-                                            height={40}
+                                            width={35}
+                                            height={35}
                                         />
                                     </a>
                                     <a href="https://twitter.com/TravanyaDotCom/" target="_blank">
@@ -120,13 +127,13 @@ export default function Footer() {
                                             loader={trvLoader}
                                             src="icon/twitter-icon.svg"
                                             alt="twitter Ion"
-                                            width={40}
-                                            height={40}
+                                            width={35}
+                                            height={35}
                                         />
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-6 col-lg-3">
+                            <div className="col-5 col-lg-3">
                                 <h2 className="fw-bold fs-16">Holiday Packages</h2>
                                 <ul className="list-style-none">
                                     {
@@ -139,7 +146,7 @@ export default function Footer() {
                                 </ul>
                             </div>
 
-                            <div className="col-12 col-lg-6">
+                            <div className="col-12 col-lg-6 mt-4 mt-md-0">
                                 <h2 className="fw-bold fs-16">Touch with us</h2>
                                 <h2>Creating extraordinary travel experiences.</h2>
                                 <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
@@ -170,7 +177,7 @@ export default function Footer() {
                                 <p className="text-center fs-12 my-3">*Fares incl. all fuel surcharges, our service fees and taxes. Displayed fares are based on historical data, are subject to change and cannot be guaranteed at the time of booking. Lowest fares may require an advance purchase of up to 21 days.</p>
                             </div>
                             <div className="col-12 col-lg-6 col-xl-5">
-                                <div className="bg-white rounded-2 py-2 px-2">
+                                <div className="bg-white rounded-2 py-2 px-2 mb-3 mb-md-0">
                                     <Image
                                         className="w-100 h-auto"
                                         loader={trvLoader}
