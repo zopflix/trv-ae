@@ -71,7 +71,7 @@ export default function Holidays() {
                             <p className="fs-14">At Travanya we have designed exclusive tour packages for foreign destinations so that you can make your dream of hassle-free foreign travel a reality. Our standard, as well as customized deals, cover a large portion of the world so that you can choose your favourite holiday location. The choice of destinations includes Hong Kong, Paris, Brazil, San Francisco, Rome, New York City, Vancouver, Cape Town, etc. These continents further present a country-wise selection. Book your international tour package to explore the world with the best overseas vacation deals available.</p>
                         </div>
                         <div className="col-12 mt-4">
-                            <InternationalTourPackages></InternationalTourPackages>
+                
                         </div>
                     </div>
                 </div>
