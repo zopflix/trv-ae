@@ -1,6 +1,5 @@
 import Head from "next/head";
 import DomesticTourPackages from "@/app/components/Domestic-Tour-Packages";
-import InternationalTourPackages from "@/app/components/International-Tour-Packages";
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 import PartnerLogo from "@/app/components/partner-logo";
@@ -8,7 +7,7 @@ import PartnerLogo from "@/app/components/partner-logo";
 import SearchSection from '@/app/components/search-section'
 import { appBaseURL } from "@/app/config";
 import { usePathname } from "next/navigation";
-import { Fragment, useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 export default function Holidays() {
@@ -91,7 +90,7 @@ export default function Holidays() {
                             <p className="fs-14">From your transportation to accommodation, we’ll take care of everything during your trip. The tour packages offered by us provide an experience that includes all the amenities without any hassle. Moreover, if you are a last-minute traveller, we promise to provide you with affordable and cheap India tour packages. With us, you can book the best and perfect holiday package to travel to India under your budget.</p>
                         </div>
                         <div className="col-12 mt-4">
-                            <DomesticTourPackages></DomesticTourPackages>
+                            <DomesticTourPackages isHolidaysPage={true}></DomesticTourPackages>
                         </div>
                     </div>
                 </div>

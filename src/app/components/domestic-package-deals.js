@@ -1,6 +1,4 @@
-import InternationalTourPackages from "./International-Tour-Packages";
 import DomesticTourPackages from "./Domestic-Tour-Packages";
-
 
 export default function DomesticPackageDeals() {
 
@@ -32,7 +30,7 @@ export default function DomesticPackageDeals() {
                         </div>
                     </div> */}
                     <div className="tab-content py-4 px-2 position-relative" id="pills-tabContent">
-                            <InternationalTourPackages />
+                            <DomesticTourPackages />
                         </div>
                 </div>
             </div>
