@@ -36,7 +36,7 @@ export default function DomesticTourPackages(props) {
                 {props.isHolidaysPage
                     ? <div className="row">
                         {domesticPackages?.map((pkg, ix) => {
-                            return <div className="col-4" key={ix}>
+                            return <div className="col-12 col-md-6 col-lg-4 col-xl-3 my-2" key={ix}>
                                 <div className="packageBox position-relative cursor-pointer" onClick={() => window.open(`/holidays/${pkg.slug}-tour-packages`, '_blank')}>
                                     <div className="packageImgBox">
                                         <Image

@@ -12,26 +12,26 @@ import { useState } from 'react'
 
 export default function Holidays() {
     const pathname = usePathname();
-  const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
+    const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
 
     return (
         <>
             <Head>
-                <title>Book International & Domestic Holiday Packages | Travanya</title>
-                <meta name="description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <title>Holiday Packages From UAE | Our Package Offers From the UAE</title>
+                <meta name="description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
                 <link rel="canonical" href={`${appBaseURL}${pathname.replace('/', '')}`} />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Book International & Domestic Holiday Packages | Travanya" />
-                <meta property="og:description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <meta property="og:title" content="Holiday Packages From UAE | Our Package Offers From the UAE" />
+                <meta property="og:description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
                 <meta property="og:url" content={`${appBaseURL}${pathname.replace('/', '')}`} />
                 <meta property="og:site_name" content="Travanya" />
                 <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
                 <meta property="og:image:type" content="image/webp" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@TravanyaHoliday" />
-                <meta name="twitter:title" content="Book International & Domestic Holiday Packages | Travanya" />
-                <meta name="twitter:description" content="Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world." />
+                <meta name="twitter:title" content="Holiday Packages From UAE | Our Package Offers From the UAE" />
+                <meta name="twitter:description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
                 <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
             </Head >
             <Header></Header>
@@ -47,14 +47,15 @@ export default function Holidays() {
                             </div>
                         </div>
                         <div className="col-12">
-                            <p className="fs-14">An ideal holiday is all about visiting some great places to get some unforgettable and amazing experiences. Along with, travel is all about indulging in experiences and each holiday getaway offers the best holiday memories and provides life-ending experiences to each individual. Travelling comes to mind when we think of taking a break from the monotony of life and exploring the new world around us.</p>
-                            <p className="fs-14">Choosing a destination for your vacation can be difficult. That’s why we work here to fulfil every ambition of the travelers. We help you choose the best holiday packages under the expected budget that helps you experience the most interesting places around the world.</p>
-                            <p className="fs-14">You can choose from domestic holiday or overseas holiday packages to get to know the world better as we aim to introduce you to the best and amazing travel experiences through your dream holiday. Whatever you want, be it a desert safari in Dubai, parasailing in Thailand, exploring Europe or intending to visit religious places in India, we offer it all! Discover the world with our cheap international holiday packages that can add a completely different life experience to your travels.</p>
+                            <p className="fs-14">Planning a perfect holiday getaway? Check out our best holiday packages from UAE! Break free from the usual and find the world's wonders with our customized tour packages. Experience a vacation like no other with our holiday packages from Dubai, UAE provide an exceptional experience, offering a diverse range of options for your enjoyment. ensuring you have a truly memorable and enjoyable holiday.</p>
+                            <p className="fs-14">Our packages include great deals on flights and top-notch accommodations, offering you the best value. So, what are you waiting for? Grab your package now and start a journey to refresh your soul, mind, and body. Whether it’s exploring vibrant cities or lounging on sunny beaches, the choice is yours.</p>
+                            <p className="fs-14">Travanya knows exactly what every tourist desires and needs, which is why we cater to our valued customers with utmost care. Book your holiday packages now, relax, and let us manage everything for you. It’s time to realize all your travel dreams. Let us make you feel special in our unique way. Don't miss our exceptional tour package offers from the UAE, providing both thrilling and serene holidays. These holiday packages from Dubai, UAE, are sure to leave you amazed.</p>
                         </div>
+                        <DomesticTourPackages isHolidaysPage={true}></DomesticTourPackages>
                     </div>
                 </div>
             </section>
-            <section className="bg-grey py-5">
+            {/* <section className="bg-grey py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -69,9 +70,7 @@ export default function Holidays() {
                             <p className="fs-14">We at Travanya have crafted special tour packages for foreign destinations to help you realize your dream of overseas travel hassle-free. Our standard, as well as custom-made deals, cover a large part of this globe so that it doesn’t take you long to choose your favourite place of all. You can choose your dream destinations under <strong>Europe, Dubai, Far East, Middle East, Africa, Australia, Japan, New Zealand, Singapore, the Islands</strong>, etc. These continents further present country-wise selection. Explore our organized international vacation packages to find the best foreign land holiday deals for you.</p>
                             <p className="fs-14">At Travanya we have designed exclusive tour packages for foreign destinations so that you can make your dream of hassle-free foreign travel a reality. Our standard, as well as customized deals, cover a large portion of the world so that you can choose your favourite holiday location. The choice of destinations includes Hong Kong, Paris, Brazil, San Francisco, Rome, New York City, Vancouver, Cape Town, etc. These continents further present a country-wise selection. Book your international tour package to explore the world with the best overseas vacation deals available.</p>
                         </div>
-                        <div className="col-12 mt-4">
-                
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -89,9 +88,7 @@ export default function Holidays() {
                             <p className="fs-14">Are you one of those people who want to explore the green valleys and the natural beauty of India, or want to visit religious places during festivals, walk on sandy beaches in summer or are excited to learn about the history of India, you will find adventure experiences everywhere!! Whether you are looking to travel to North India or planning to spend a fun-filled holiday in South India as well as planning to visit <strong>Gulmarg, Darjeeling, Arunachal Pradesh, Kerala, Rajasthan,</strong> you will get an unforgettable experience. Because we here at Travanya provide you with the best <a className="text-decoration-none color-blue fw-bold" href="/india-tour-packages/">India Tour Packages</a> at discounted and affordable rates.</p>
                             <p className="fs-14">From your transportation to accommodation, we’ll take care of everything during your trip. The tour packages offered by us provide an experience that includes all the amenities without any hassle. Moreover, if you are a last-minute traveller, we promise to provide you with affordable and cheap India tour packages. With us, you can book the best and perfect holiday package to travel to India under your budget.</p>
                         </div>
-                        <div className="col-12 mt-4">
-                            <DomesticTourPackages isHolidaysPage={true}></DomesticTourPackages>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -159,7 +156,7 @@ export default function Holidays() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <Footer></Footer>
         </>
     )
@@ -168,22 +165,22 @@ export default function Holidays() {
 // export async function generateMetadata() {
 
 //     return {
-//         title: 'Book International & Domestic Holiday Packages | Travanya',
-//         description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//         title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
+//         description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
 //         alternates: {
 //             canonical: `${appBaseURL}holidays/`,
 //         },
 //         openGraph: {
-//             title: 'Book International & Domestic Holiday Packages | Travanya',
-//             description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//             title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
+//             description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
 //             type: "article",
 //             images: 'https://assets.travanya.com/logo.webp',
 //             url: `${appBaseURL}holidays/`
 //         },
 //         twitter: {
 //             card: "summary_large_image",
-//             title: 'Book International & Domestic Holiday Packages | Travanya',
-//             description: 'Looking for holiday destinations for your vacation? Enjoy domestic and international holiday package to experience the fascinating places around the world.',
+//             title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
+//             description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
 //             images: ['https://assets.travanya.com/logo.webp'],
 //             site: "@TravanyaHoliday"
 //         },
