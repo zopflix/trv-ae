@@ -18,7 +18,7 @@ export default function HolidayEnquiryForm(props) {
     const [airports, setAirports] = useState([]);
     const [destinationAirports, setDestinationAirports] = useState([]);
     const [fromAirport, setFromAirport] = useState(null);
-    const [toAirport, setToAirport] = useState( null);
+    const [toAirport, setToAirport] = useState(null);
     const [localAirportData, setLocalAirportDate] = useState([]);
     const [fromDate, setFromDate] = useState(new Date(new Date(new Date().setDate(new Date().getDate() + 1))));
     const [isSearchInProgress, setSearchInProgress] = useState(false);
@@ -41,11 +41,11 @@ export default function HolidayEnquiryForm(props) {
 
     useEffect(() => {
         loadAirportRoutes();
-       
+
     }, [])
 
     useEffect(() => {
-        if(props?.bannerText){
+        if (props?.bannerText) {
             setToAirport({ city: props?.bannerText })
         }
     }, [props?.bannerText])
@@ -131,7 +131,7 @@ export default function HolidayEnquiryForm(props) {
     return (
         <>
             <section id="mainSearchForm" className="HoliDayModifyForm position-relative">
-                {props.bannerText  && !props.isDetail &&
+                {props.bannerText && !props.isDetail &&
                     <Fragment>
                         <Image
                             className="h-auto w-100 holiDayMainBanner"
@@ -146,7 +146,7 @@ export default function HolidayEnquiryForm(props) {
                         </div>
                     </Fragment>
                 }
-                <div className={props.bannerText && !props.isDetail  ? "HolidayFormBox position-absolute bottom-0 start-0 end-0 mb-lg-5" : ""}>
+                <div className={props.bannerText && !props.isDetail ? "HolidayFormBox position-absolute bottom-0 start-0 end-0 mb-lg-5" : ""}>
                     <div className='container'>
                         <div className='flightSearchWrp rounded-3 bg-white shadow'>
                             <div className="mainFlightSearchBox py-1 px-3">
@@ -445,14 +445,24 @@ export default function HolidayEnquiryForm(props) {
                                                                                 height={15}
                                                                             /> <span>+91</span>
                                                                         </div>
-                                                                        <input className={(hasError && mobile.length < 10) ? "form-control border-red" : "form-control"} type="text" pattern="[0-9]*" onPaste={(e) => e.preventDefault()} maxLength={10} placeholder="Contact Number" value={mobile} onChange={(e) => {
-                                                                            var allowedChars = "0123456789";
-                                                                            let cVal = e.target.value;
-                                                                            if (allowedChars.indexOf(e.target.value.substring(e.target.value.length - 1)) == -1) {
-                                                                                cVal = cVal.substring(0, cVal.length - 1);
-                                                                            }
-                                                                            setMobile(cVal);
-                                                                        }} />
+                                                                        <input
+                                                                            className={(hasError && mobile.length < 10) ? "form-control border-red" : "form-control"}
+                                                                            type="text"
+                                                                            pattern="[0-9]*"
+                                                                            onPaste={(e) => e.preventDefault()}
+                                                                            maxLength={10}
+                                                                            inputMode="numeric"
+                                                                            placeholder="Contact Number"
+                                                                            value={mobile}
+                                                                            onChange={(e) => {
+                                                                                var allowedChars = "0123456789";
+                                                                                let cVal = e.target.value;
+                                                                                if (allowedChars.indexOf(e.target.value.substring(e.target.value.length - 1)) == -1) {
+                                                                                    cVal = cVal.substring(0, cVal.length - 1);
+                                                                                }
+                                                                                setMobile(cVal);
+                                                                            }} />
+
                                                                     </div>
                                                                 </div>
                                                             </div>
