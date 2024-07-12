@@ -18,7 +18,7 @@ export default function MainMenu() {
     
 
     return (
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul className="navbar-nav px-2 px-lg-0 me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
                 <a className={pathname == '/deals' ? "nav-link active" : 'nav-link'} href="/about-us">About Us</a>
             </li>
@@ -29,7 +29,7 @@ export default function MainMenu() {
                 <a className="nav-link dropdown-toggle" href="/holidays" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holiday</a>
                 <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
                     <li>
-                        <div className="row m-0 px-2">
+                        <div className="row m-0">
                             <div className="col-md-12 col-lg-6 py-2">
                                 <div className="row">
                                     <div className="col-12">

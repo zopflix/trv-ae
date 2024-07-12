@@ -34,7 +34,7 @@
 }
 
 .fromTofromBox .cityLabel {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .dateLabel span {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -526,11 +526,6 @@
 
     .flightSearchTitle {
         font-size: 24px;
-    }
-
-    .fromTofromBox .cityLabel,
-    .dateLabel span {
-        font-size: 20px;
     }
 
     .flightSearchWrp .form-check label {

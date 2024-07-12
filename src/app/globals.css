@@ -574,7 +574,7 @@ ul.trv-list-type-2 li:after {
 header {
     position: fixed;
     top: 0px;
-    z-index: 99;
+    z-index: 11;
     width: 100%;
 }
 
@@ -693,7 +693,9 @@ footer .footerWrp h3 {
 }
 
 .SubscribeNewsForm .airImG {
-    left: -25%;
+    left: -15%;
+    bottom: -30%;
+    transform: rotate(50deg);
 }
 
 #AboutBox {
@@ -740,6 +742,11 @@ footer .footerWrp h3 {
 /* media start */
 
 @media(max-width:767px) {
+
+    .fromTofromBox .cityLabel,
+    .dateLabel span {
+        font-size: 16px !important;
+    }
 
     .ReviewLogoBar>div img {
         height: 15px !important;
@@ -817,7 +824,7 @@ footer .footerWrp h3 {
 @media(min-width:992px) {
 
     .SubscribeNewsForm h2 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
 
@@ -981,16 +988,24 @@ footer .footerWrp h3 {
         right: 0px;
     }
 
-    header .offcanvas-body .navbar-nav li a {
+    .mainHeader .offcanvas-body .navbar-nav li a {
         font-size: 14px;
         color: #000;
+        padding: 5px 15px;
+        border: 1px solid #979797;
+        margin-bottom: 15px;
+        border-radius: 25px;
     }
 
-    header .offcanvas {
+    .mainHeader .offcanvas-body .navbar-nav li ul li a {
+        margin-bottom: 0px;
+    }
+
+    .mainHeader .offcanvas {
         max-width: 280px;
     }
 
-    header .offcanvas .offcanvas-title img {
+    .mainHeader .offcanvas .offcanvas-title img {
         width: 130px !important;
     }
 
@@ -1040,6 +1055,13 @@ footer .footerWrp h3 {
 }
 
 @media(min-width:992px) and (max-width:1199px) {
+
+    .SubscribeNewsForm .airImG {
+        left: -20%;
+        bottom: -22%;
+        transform: rotate(40deg);
+    }
+
     .topFlightDetailsList h3 {
         font-size: 18px !important;
     }

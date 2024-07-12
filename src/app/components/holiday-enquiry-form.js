@@ -154,7 +154,7 @@ export default function HolidayEnquiryForm(props) {
                                     <div className="mobForm FieldA col-12">
                                         <div className="fromTofromBox">
                                             <div className="row">
-                                                <div className='col-6 col-lg-3 py-2 border-end position-relative FromCodeSearchBox'>
+                                                <div className='col-6 col-lg-3 py-md-2 border-end position-relative FromCodeSearchBox'>
                                                     <div className="bg-white">
                                                         <Image
                                                             className={!isTripSwitched ? "FlightFlip position-absolute end-0 m-auto top-50 bottom-50" : "FlightFlip position-absolute end-0 m-auto top-50 bottom-50 active"}
@@ -244,7 +244,7 @@ export default function HolidayEnquiryForm(props) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className='col-6 col-lg-3 py-2 border-end position-relative ToCodeSearchBox'>
+                                                <div className='col-6 col-lg-3 py-md-2 border-end position-relative ToCodeSearchBox'>
                                                     <div className="bg-white">
                                                         <div className="fromTofromBoxLabel fs-12">TO</div>
                                                         <div className="dropdown cityBoxDropDown">
@@ -329,7 +329,7 @@ export default function HolidayEnquiryForm(props) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-6 col-lg-3 py-2 border-end">
+                                                <div className="col-6 col-lg-3 py-md-2 border-end">
                                                     <div className='bg-white trv-datepicker position-relative DepartDatePicer'>
                                                         <div className="fromTofromBoxLabel fs-12 d-flex align-items-center">
                                                             <span >
@@ -364,7 +364,7 @@ export default function HolidayEnquiryForm(props) {
                                                         />
                                                     </div>
                                                 </div>
-                                                <div className="col-6 col-lg-3 py-2">
+                                                <div className="col-6 col-lg-3 py-md-2">
                                                     <div className="bg-white">
                                                         <div className="fromTofromBoxLabel fs-12 d-flex align-items-center">
                                                             <div>

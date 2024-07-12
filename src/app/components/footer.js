@@ -78,7 +78,7 @@ export default function Footer() {
                     </div> */}
                     <div className="container ">
                         <div className="row pt-4 pt-md-5">
-                            <div className="col-7 col-lg-3">
+                            <div className="col-6 col-md-3 col-lg-3">
                                 <h2 className="fw-bold fs-16">Company</h2>
                                 <ul className="list-style-none">
                                     <li><a className="fs-12 text-decoration-none" href="/about-us">About Us</a></li>
@@ -90,6 +90,30 @@ export default function Footer() {
                                     <li><a className="fs-12 text-decoration-none" href="/check-in">Check In</a></li>
                                     <li><a className="fs-12 text-decoration-none" href="/FAQ">FAQ</a></li>
                                 </ul>
+
+                            </div>
+                            <div className="col-6 col-md-3 col-lg-3">
+                                <h2 className="fw-bold fs-16">Holiday Packages</h2>
+                                <ul className="list-style-none">
+                                    {
+                                        packagesMenu.length > 0 && packagesMenu.map((obj, key) => (
+                                            <li key={key}><a className="fs-12 text-decoration-none" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name + " " + "Tour Package"}</a></li>
+
+                                        ))
+                                    }
+
+                                </ul>
+
+                            </div>
+
+                            <div className="col-12 col-md-6 col-lg-6 mt-4 mt-md-0">
+                                <h2 className="fw-bold fs-16">Touch with us</h2>
+                                <h2>Creating extraordinary travel experiences.</h2>
+                                <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
+                                <h3 className="my-0">
+                                    <a className="color-white text-decoration-none fs-22 fw-bold" href={'tel:' + contactNumber}>{contactNumber}</a><br />
+                                    <a className="color-white text-decoration-none fs-14 d-inline-block opacity-75" href="#">info@travanya.com</a>
+                                </h3>
                                 <div className="social-icon mt-3">
                                     <a href="https://www.facebook.com/TravanyaOfficial/" target="_blank">
                                         <Image
@@ -132,28 +156,6 @@ export default function Footer() {
                                         />
                                     </a>
                                 </div>
-                            </div>
-                            <div className="col-5 col-lg-3">
-                                <h2 className="fw-bold fs-16">Holiday Packages</h2>
-                                <ul className="list-style-none">
-                                    {
-                                        packagesMenu.length > 0 && packagesMenu.map((obj, key) => (
-                                            <li key={key}><a className="fs-12 text-decoration-none" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name + " " + "Tour Package"}</a></li>
-
-                                        ))
-                                    }
-
-                                </ul>
-                            </div>
-
-                            <div className="col-12 col-lg-6 mt-4 mt-md-0">
-                                <h2 className="fw-bold fs-16">Touch with us</h2>
-                                <h2>Creating extraordinary travel experiences.</h2>
-                                <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
-                                <h3 className="my-0">
-                                    <a className="color-white text-decoration-none fs-22 fw-bold" href={'tel:' + contactNumber}>{contactNumber}</a><br />
-                                    <a className="color-white text-decoration-none fs-14 d-inline-block opacity-75" href="#">info@travanya.com</a>
-                                </h3>
                             </div>
 
                             {/* <div className="col-6 col-lg-3">
