@@ -152,8 +152,8 @@ export default function HolidayEnquiryForm(props) {
                                 height={25}
                             />
                         }
-                        <div className="position-absolute top-0 start-0 end-0">
-                            <h1 className="MainSubTittle color-white text-center fw-bold pt-2 pt-md-4">{props?.bannerText} Tour Packages</h1>
+                        <div className="position-absolute top-0 start-0 end-0 pt-xl-5">
+                            <h1 className="MainSubTittle color-white text-center fw-bold mt-4 mt-xl-5 pt-2 pt-md-5">{props?.bannerText} Tour Packages</h1>
                         </div>
                     </Fragment>
                 }
