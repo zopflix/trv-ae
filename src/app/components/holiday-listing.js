@@ -15,10 +15,12 @@ import Footer from "./footer";
 import PartnerLogo from "./partner-logo";
 
 export default function HolidayListing(props) {
+  debugger;
   const title = props?.packageData?.Data?.Title;
   const description = props?.packageData?.Data?.Description;
   const content = props?.packageData?.Data?.Content;
   const destinationName = props?.packageData?.Data?.Name;
+  const bannerImgUrl = props?.packageData?.Data?.BannerImageURL
   const pathname = usePathname();
   const faqs = props?.packageData?.Data?.FAQs;
 
@@ -80,7 +82,7 @@ export default function HolidayListing(props) {
   return (
     <>
       <Header></Header>
-      <Suspense><HolidayEnquiryForm bannerText={destinationName} /></Suspense>
+      <Suspense><HolidayEnquiryForm bannerText={destinationName} bannerImgUrl={bannerImgUrl} /></Suspense>
       <PartnerLogo />
 
       {!!destinationName &&
