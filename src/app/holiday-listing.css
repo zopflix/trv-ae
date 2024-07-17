@@ -2507,6 +2507,10 @@ body.holidayDetail.modal-open {
     top: 0px;
 }
 
+#mainSearchForm .HoliDayModifyForm::before{
+    display: none;
+}
+
 /* media start */
 
 
