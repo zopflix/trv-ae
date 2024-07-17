@@ -30,7 +30,7 @@ export default function MainMenu() {
                 <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
                     <li>
                         <div className="row m-0">
-                            <div className="col-md-12 col-lg-6 py-2">
+                            <div className="col-md-12 col-lg-12 py-2">
                                 <div className="row">
                                     <div className="col-12">
                                         <a href="/holidays/" className="title d-flex text-decoration-none">
@@ -49,7 +49,7 @@ export default function MainMenu() {
                                         <div className="row">
                                             {
                                                 packagesMenu.length > 0 && packagesMenu.map((obj, index)=>(
-                                                    <div key={index} className="col-12 col-sm-12 col-lg-6 py-1">
+                                                    <div key={index} className="col-12 col-lg-3 py-1">
                                                     <a className="text-decoration-none d-flex align-items-center" href={`/holidays/${obj.slug}-tour-packages/`}>
                                                         <Image
                                                             className="h-auto me-2"

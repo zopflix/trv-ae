@@ -2495,6 +2495,18 @@ body.holidayDetail.modal-open {
     padding-left: 0px !important;
 }
 
+.HoliDayModifyForm::before {
+    position: absolute;
+    content: '/';
+    color: transparent;
+    background-color: #000;
+    opacity: 0.4;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
 /* media start */
 
 
