@@ -849,34 +849,11 @@ export default function HolidayDetails(props) {
                 {aedNumberFormat(totalPrice)?.split(".")[0]}.
                 <sup>{aedNumberFormat(totalPrice)?.split(".")[1]}</sup>
               </p>
-              <button
-                className="btn p-0 color-white border-0"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample"
-                aria-controls="offcanvasExample"
-              >
+              <button className="btn p-0 color-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <span className="fs-12">Price Details</span>
                 <i className="fa-solid fa-chevron-right ms-2 fs-10"></i>
               </button>
-              <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div className="offcanvas-body">
-                  <button
-                    type="button"
-                    className="btn-close text-reset position-absolute end-0 top-0 me-3 mt-3"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                  <FlightInfoSideBar
-                    data={packageData}
-                    rating={selectedRating}
-                    totalPrice={totalPrice}
-                    setOpenInquiryModal={setOpenInquiryModal}
-                    adults={adults}
-                    children={children}
-                  />
-                </div>
-              </div>
+
             </div>
             <div className="col-5 col-sm-5 text-end">
               <button className="bg-orange color-white fs-14 fw-bold border-0 rounded-3 px-3 py-3 my-3 w-100" onClick={() => { setOpenInquiryModal(true); }}>Enquire</button>
@@ -897,6 +874,24 @@ export default function HolidayDetails(props) {
           />
         </Suspense>
         <Footer></Footer>
+      </div>
+      <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div className="offcanvas-body">
+          <button
+            type="button"
+            className="btn-close text-reset position-absolute end-0 top-0 me-3 mt-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+          <FlightInfoSideBar
+            data={packageData}
+            rating={selectedRating}
+            totalPrice={totalPrice}
+            setOpenInquiryModal={setOpenInquiryModal}
+            adults={adults}
+            children={children}
+          />
+        </div>
       </div>
       {/* } */}
     </>
