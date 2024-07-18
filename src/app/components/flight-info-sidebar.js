@@ -9,7 +9,7 @@ export default function FlightInfoSideBar(props) {
 
         <div className="FlightInfoSideBarWrap">
             <div className="border p-3 rounded-3">
-                <h2 className="color-orange fs-16 fw-bold">{props?.data?.Title}</h2>
+                <h2 className="color-orange fs-16 fw-bold pe-5">{props?.data?.Title}</h2>
                 {props?.data?.Cities?.length > 0 && <p className="color-black fw-bold"><span className="color-grey">Cities:</span> {props?.data?.Cities?.join(', ')}</p>}
                 <div className="d-flex align-items-center">
                     <div>

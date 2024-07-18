@@ -416,14 +416,14 @@
 
 @media(max-width:767px) {
 
-    div.HolidDayForm {
+    /* div.HolidDayForm {
         background-color: #fff;
-    }
-
+    } */
+/* 
     .FormBoxWrp {
-        margin-top: -170px;
+        margin-top: -50px;
         margin-bottom: 10PX;
-    }
+    } */
 
     .trv-datepicker>.react-datepicker-wrapper {
         bottom: 50%;

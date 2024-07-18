@@ -323,79 +323,79 @@ export default function SearchSection(props) {
   //#endregion
 
   return (
-      <div className='position-relative'>
-        <Image
-          className="h-auto w-100 d-none d-md-block"
-          loader={trvLoader}
-          src="TRV-holiday-main-banner.webp"
-          alt="User Icon"
-          width={20}
-          height={20}
-        />
-        <Image
-          className="h-auto w-100 d-md-none"
-          loader={trvLoader}
-          src="TRV-holiday-main-banner-mob.webp"
-          alt="User Icon"
-          width={20}
-          height={20}
-        />
-        <div className='FormBoxWrp'>
-          <SearchControl
-            resultPagePassengers={resultPagePassengers}
-            resultPageFromDate={resultPageFromDate}
-            resultPageToDate={resultPageToDate}
-            tripType={tripType}
-            isTripSwitched={isTripSwitched}
-            myCustomLoader={trvLoader}
-            fromAirport={fromAirport}
-            toAirport={toAirport}
-            currentSearchTerm={currentSearchTerm}
-            destinatioSearchTerm={destinatioSearchTerm}
-            destinationAirports={destinationAirports}
-            isRoutesFilled={isRoutesFilled}
-            searchSubmitted={searchSubmitted}
-            isOldSearchCriteria={isOldSearchCriteria}
-            isSearchClicked={isSearchClicked}
-            fromDate={fromDate}
-            toDate={toDate}
-            DatePicker={DatePicker}
-            adults={adults}
-            children={children}
-            infants={infants}
-            cabinClass={cabinClass}
-            ShowTravewlersCount={ShowTravewlersCount}
-            NumericInput={NumericInput}
-            isModifyComponent={isModifyComponent}
-            isSearchProgress={isSearchProgress}
-            setTripType={setTripType}
-            setToDate={setToDate}
-            setFromDate={setFromDate}
-            setFromAirport={setFromAirport}
-            setToAirport={setToAirport}
-            searchAirport={searchAirport}
-            airports={airports}
-            setRoutesFilled={setRoutesFilled}
-            setShowToDate={setShowToDate}
-            showToDate={showToDate}
-            SetShowTravewlersCount={SetShowTravewlersCount}
-            setChildren={setChildren}
-            setAdults={setAdults}
-            setInfants={setInfants}
-            searchFlights={searchFlights}
-            setIsOldSearchCriteria={setIsOldSearchCriteria}
-            getMaxDatePicker={getMaxDatePicker}
-            checkMaxDateRange={checkMaxDateRange}
-            setTripSwitched={setTripSwitched}
-            setCabinClass={setCabinClass}
-            airlineTitle={props.airlineTitle}
-            minPrice={props.minPrice}
-            airlineImage={props.airlineImage}
-            selectedTab={props.selectedTab}
-            setCabinValue={setCabinValue}
-          ></SearchControl>
-        </div>
+    <div className='position-relative'>
+      {/* <Image
+        className="h-auto w-100 d-none d-md-block"
+        loader={trvLoader}
+        src="homeTopBgBanner.webp"
+        alt="User Icon"
+        width={20}
+        height={20}
+      />
+      <Image
+        className="h-auto w-100 d-md-none"
+        loader={trvLoader}
+        src="omeTopBgBanner.webp"
+        alt="User Icon"
+        width={20}
+        height={20}
+      /> */}
+      <div className='FormBoxWrp'>
+        <SearchControl
+          resultPagePassengers={resultPagePassengers}
+          resultPageFromDate={resultPageFromDate}
+          resultPageToDate={resultPageToDate}
+          tripType={tripType}
+          isTripSwitched={isTripSwitched}
+          myCustomLoader={trvLoader}
+          fromAirport={fromAirport}
+          toAirport={toAirport}
+          currentSearchTerm={currentSearchTerm}
+          destinatioSearchTerm={destinatioSearchTerm}
+          destinationAirports={destinationAirports}
+          isRoutesFilled={isRoutesFilled}
+          searchSubmitted={searchSubmitted}
+          isOldSearchCriteria={isOldSearchCriteria}
+          isSearchClicked={isSearchClicked}
+          fromDate={fromDate}
+          toDate={toDate}
+          DatePicker={DatePicker}
+          adults={adults}
+          children={children}
+          infants={infants}
+          cabinClass={cabinClass}
+          ShowTravewlersCount={ShowTravewlersCount}
+          NumericInput={NumericInput}
+          isModifyComponent={isModifyComponent}
+          isSearchProgress={isSearchProgress}
+          setTripType={setTripType}
+          setToDate={setToDate}
+          setFromDate={setFromDate}
+          setFromAirport={setFromAirport}
+          setToAirport={setToAirport}
+          searchAirport={searchAirport}
+          airports={airports}
+          setRoutesFilled={setRoutesFilled}
+          setShowToDate={setShowToDate}
+          showToDate={showToDate}
+          SetShowTravewlersCount={SetShowTravewlersCount}
+          setChildren={setChildren}
+          setAdults={setAdults}
+          setInfants={setInfants}
+          searchFlights={searchFlights}
+          setIsOldSearchCriteria={setIsOldSearchCriteria}
+          getMaxDatePicker={getMaxDatePicker}
+          checkMaxDateRange={checkMaxDateRange}
+          setTripSwitched={setTripSwitched}
+          setCabinClass={setCabinClass}
+          airlineTitle={props.airlineTitle}
+          minPrice={props.minPrice}
+          airlineImage={props.airlineImage}
+          selectedTab={props.selectedTab}
+          setCabinValue={setCabinValue}
+        ></SearchControl>
       </div>
+    </div>
 
   );
 }
