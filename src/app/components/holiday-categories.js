@@ -71,7 +71,7 @@ export default function HolidayCategories() {
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 4299*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 1315*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -130,7 +130,7 @@ export default function HolidayCategories() {
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 1199*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 2299*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -160,7 +160,7 @@ export default function HolidayCategories() {
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 3199*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 1315*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -189,7 +189,7 @@ export default function HolidayCategories() {
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 899*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 1343*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -247,7 +247,7 @@ export default function HolidayCategories() {
                                                     <div className="d-none d-lg-block">
                                                         <div className="text-end">
                                                             <p className="mb-0 fs-12 fw-bold">From</p>
-                                                            <p className="mb-0 fs-16 fw-bold">AED 1099*</p>
+                                                            <p className="mb-0 fs-16 fw-bold">AED 1759*</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -310,7 +310,7 @@ export default function HolidayCategories() {
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1599*</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1233*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -337,7 +337,7 @@ export default function HolidayCategories() {
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 799*</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1499*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,7 +364,7 @@ export default function HolidayCategories() {
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 999*</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1699*</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -391,7 +391,7 @@ export default function HolidayCategories() {
                                                 </div>
                                                 <div class="text-end">
                                                     <p class="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 1450*</p>
+                                                    <p class="mb-0 fs-16 fw-bold color-orange">AED 14,500*</p>
                                                 </div>
                                             </div>
                                         </div>
