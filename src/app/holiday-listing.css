@@ -2507,7 +2507,8 @@ body.holidayDetail.modal-open {
     top: 0px;
 }
 
-#mainSearchForm .HoliDayModifyForm::before{
+#mainSearchForm .HoliDayModifyForm::before,
+.HolidDayForm .HoliDayModifyForm::before {
     display: none;
 }
 
