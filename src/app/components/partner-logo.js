@@ -25,14 +25,14 @@ export default function PartnerLogo() {
                                 </div>
                                 <div>
                                     {/* <a className='d-inline-block' href='#GoogleReviewWraper'> */}
-                                        <Image
-                                            className=""
-                                            loader={trvLoader}
-                                            src="partner-logo/google_rating.webp"
-                                            alt="google_rating logo"
-                                            width={176}
-                                            height={45}
-                                        />
+                                    <Image
+                                        className=""
+                                        loader={trvLoader}
+                                        src="partner-logo/google_rating.webp"
+                                        alt="google_rating logo"
+                                        width={176}
+                                        height={45}
+                                    />
                                     {/* </a> */}
                                 </div>
                                 <div>
