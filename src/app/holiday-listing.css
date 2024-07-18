@@ -2495,7 +2495,7 @@ body.holidayDetail.modal-open {
     padding-left: 0px !important;
 }
 
-.HoliDayModifyForm::before {
+.BannerOverlyBg::before {
     position: absolute;
     content: '/';
     color: transparent;
@@ -2507,10 +2507,10 @@ body.holidayDetail.modal-open {
     top: 0px;
 }
 
-#mainSearchForm .HoliDayModifyForm::before,
+/* #mainSearchForm .HoliDayModifyForm::before,
 .HolidDayForm .HoliDayModifyForm::before {
     display: none;
-}
+} */
 
 /* media start */
 

@@ -135,14 +135,14 @@ export default function HolidayEnquiryForm(props) {
                     <Fragment>
 
                         {props?.bannerImgUrl ?
-                            < Image
+                            <div className="position-relative BannerOverlyBg">< Image
                                 className="h-auto w-100 holiDayMainBanner"
                                 loader={sfLoader}
                                 src={props?.bannerImgUrl ? props.bannerImgUrl : ''}
                                 alt="Package Image"
                                 width={25}
                                 height={25}
-                            /> :
+                            /> </div> :
                             <Image
                                 className="h-auto w-100 holiDayMainBanner"
                                 loader={trvLoader}
