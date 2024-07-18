@@ -24,7 +24,7 @@ export default function PartnerLogo() {
                                     />
                                 </div>
                                 <div>
-                                    <a className='d-inline-block' href='#GoogleReviewWraper'>
+                                    {/* <a className='d-inline-block' href='#GoogleReviewWraper'> */}
                                         <Image
                                             className=""
                                             loader={trvLoader}
@@ -33,7 +33,7 @@ export default function PartnerLogo() {
                                             width={176}
                                             height={45}
                                         />
-                                    </a>
+                                    {/* </a> */}
                                 </div>
                                 <div>
                                     <Image
