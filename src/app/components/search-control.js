@@ -130,7 +130,7 @@ export default function SearchControl(props) {
                             </div>
                         }
                         {!isModifyComponent &&
-                            <div className='formTabs ms-3'>
+                            <div className='formTabs ms-3  position-relative'>
 
                                 <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
                                     {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
@@ -164,6 +164,17 @@ export default function SearchControl(props) {
                                     </li>
 
                                 </ul>
+                                <p className="d-none d-md-block float-end color-white fs-18 mb-0 position-absolute top-0 end-0 me-3">
+                                    <span className="pt-1 d-inline-block">Your DREAM DESTINATION Awaits - Pack Your Bags</span>
+                                    <Image
+                                        className="h-auto position-absolute top-0"
+                                        loader={trvLoader}
+                                        src="icon/hmBannerTitleIcon.png"
+                                        alt="Flight Icon"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </p>
                             </div>
                         }
                         {props?.selectedTab == 0
