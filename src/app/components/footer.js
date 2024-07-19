@@ -108,7 +108,7 @@ export default function Footer() {
 
                             </div>
                             <div className="col-12 col-md-12 col-lg-5 mt-4 mt-lg-0">
-                                <h2 className="fw-bold fs-16">Touch with us</h2>
+                                <h2 className="fw-bold fs-16">Get in Touch with us</h2>
                                 <h2>Creating extraordinary travel experiences.</h2>
                                 <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
                                 <h3 className="my-0">
