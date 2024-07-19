@@ -7,9 +7,10 @@ export default function RelatedPackages(props) {
     const destSlug = props.destSlug;
 
     const sliderSettings = {
+        autoplay: packages.length > 2 ? true : false,
         className: "center",
         centerMode: false,
-        infinite: false,
+        infinite: packages.length > 2 ? true : false,
         centerPadding: "10px",
         slidesToShow: isTablet ? 2 : (isDesktop ? 2 : 1),
         slidesToScroll: 1,
