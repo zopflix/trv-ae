@@ -39,7 +39,7 @@ export default function InternationalDestinationPage({ data, breadcrumbObj }) {
 }
 
 export async function generateMetadata({ params }) {
-    const data = await getHolidayPackageBySlug(params.package, tenantId);
+    const data = await getHolidayPackageBySlug(params.package, params.destination, tenantId);
 
     return {
         title: data?.Data?.MetaTitle,
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const res = await getHolidayPackageBySlug(params.package, tenantId);
+    const res = await getHolidayPackageBySlug(params.package, params.destination, tenantId);
 
     const breadcrumbObj = {
         "@context": "https://schema.org",
