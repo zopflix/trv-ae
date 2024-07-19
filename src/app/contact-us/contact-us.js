@@ -1,10 +1,11 @@
 "use client"
 import Footer from "../components/footer";
-import Layout from "../components/inner-layout";
+import Header from "../components/header";
 
 export default function ContactUs() {
     return (
-        <Layout>
+        <>
+            <Header></Header>
             <section>
                 <div className="copntainer-fluid">
                     {/* <iframe className="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5107.344886393982!2d55.29928764016693!3d25.15467750781785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f688c5516ea0f%3A0x44800f32689f57e2!2sThe%20Meydan%20Hotel!5e0!3m2!1sen!2sin!4v1702633060106!5m2!1sen!2sin" height={400} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
@@ -56,6 +57,6 @@ export default function ContactUs() {
             </section>
 
             <Footer></Footer>
-        </Layout>
+        </>
     )
 }
