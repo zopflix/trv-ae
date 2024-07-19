@@ -9,6 +9,7 @@ import HolidayEnquiryForm from "./holiday-enquiry-form";
 import { capitalizeEachWord, aedNumberFormat } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import Footer from "./footer";
+import RelatedPackages from "./related-packages";
 
 export default function HolidayDetails(props) {
   const packageData = props?.packageData?.Data;
@@ -839,6 +840,9 @@ export default function HolidayDetails(props) {
                 </div>
               </div>
             </div>
+
+            <RelatedPackages />
+
           </div>
         </section>
         <div className="priceSummaryMobileStrip d-lg-none bg-blue position-fixed bottom-0 end-0 start-0">
