@@ -17,21 +17,21 @@ export default function Holidays() {
     return (
         <>
             <Head>
-                <title>Holiday Packages From UAE | Our Package Offers From the UAE</title>
-                <meta name="description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
+                <title>Book Your Holiday Packages At Cheap Prices With Travanya</title>
+                <meta name="description" content="Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. " />
                 <link rel="canonical" href={`${appBaseURL}${pathname.replace('/', '')}`} />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Holiday Packages From UAE | Our Package Offers From the UAE" />
-                <meta property="og:description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
+                <meta property="og:title" content="Book Your Holiday Packages At Cheap Prices With Travanya" />
+                <meta property="og:description" content="Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. " />
                 <meta property="og:url" content={`${appBaseURL}${pathname.replace('/', '')}`} />
                 <meta property="og:site_name" content="Travanya" />
                 <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
                 <meta property="og:image:type" content="image/webp" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@TravanyaHoliday" />
-                <meta name="twitter:title" content="Holiday Packages From UAE | Our Package Offers From the UAE" />
-                <meta name="twitter:description" content="Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!" />
+                <meta name="twitter:title" content="Book Your Holiday Packages At Cheap Prices With Travanya" />
+                <meta name="twitter:description" content="Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. " />
                 <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
             </Head >
             <Header></Header>
@@ -165,22 +165,22 @@ export default function Holidays() {
 // export async function generateMetadata() {
 
 //     return {
-//         title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
-//         description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
+//         title: 'Book Your Holiday Packages At Cheap Prices With Travanya',
+//         description: 'Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. ',
 //         alternates: {
 //             canonical: `${appBaseURL}holidays/`,
 //         },
 //         openGraph: {
-//             title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
-//             description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
+//             title: 'Book Your Holiday Packages At Cheap Prices With Travanya',
+//             description: 'Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. ',
 //             type: "article",
 //             images: 'https://assets.travanya.com/logo.webp',
 //             url: `${appBaseURL}holidays/`
 //         },
 //         twitter: {
 //             card: "summary_large_image",
-//             title: 'Holiday Packages From UAE | Our Package Offers From the UAE',
-//             description: 'Discover the best holiday packages from the UAE with exclusive offers and deals. Explore top International destinations with customized travel plans. Book your dream vacation With Travanya!',
+//             title: 'Book Your Holiday Packages At Cheap Prices With Travanya',
+//             description: 'Get your holiday packages booked with Travanya and save huge while you explore the world. Want to book cheap packages? Find your link to savings below. ',
 //             images: ['https://assets.travanya.com/logo.webp'],
 //             site: "@TravanyaHoliday"
 //         },
