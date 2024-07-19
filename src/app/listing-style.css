@@ -489,6 +489,7 @@ body.custom-listing .ContactStrapMobilebox {
 }
 
 
+
 /* media start */
 
 @media(min-width:992px) {
@@ -630,6 +631,10 @@ body.custom-listing .ContactStrapMobilebox {
 }
 
 @media(min-width:768px) {
+
+    .relatedTitle {
+        height: 40px;
+    }
 
     .FlightEnquiryForm .modal-dialog {
         width: 90%;
