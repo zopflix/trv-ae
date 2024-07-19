@@ -9,6 +9,7 @@ export {
   getHolidayPackageBySlug,
   sendHolidayInquiry,
   getDestinationAndPackages,
+  getRelatedPackages,
   getAccommodationsByDestination,
   getDestinationByName
 }
@@ -60,6 +61,15 @@ const sendHolidayInquiry = async (data) => {
 const getDestinationAndPackages = async (data) => {
   try {
     const response = await axios.post(cmsAPIURL + `Public/GetDestinationAndPackages`, data).then(res => res).catch(err => err);
+    return response.data;
+  } catch (error) {
+    return [];
+  }
+}
+
+const getRelatedPackages = async (slug, destination) => {
+  try {
+    const response = await axios.get(cmsAPIURL + `Public/GetRelatedPackages?slug=${slug}&destination=${destination}&tenantId=${tenantId}`).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];

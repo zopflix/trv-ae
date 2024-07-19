@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { myCustomLoader, trvCustomLoader, trvLoader } from "../helpers/imageKitLoader";
+import { trvLoader } from "../helpers/imageKitLoader";
 import SeatSelectionDetail from "./seat-selection-details";
 import SeatDetail from "./seat-detail";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import { debug } from "memory-cache";
 import { aedNumberFormat } from '../helpers/common';
 

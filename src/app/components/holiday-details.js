@@ -4,7 +4,7 @@ import Header from "../components/header";
 import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import FlightInfoSideBar from "../components/flight-info-sidebar";
 import { Suspense, useEffect, useState } from "react";
-import { getDurations } from "../services/holidayService";
+import { getDurations, getRelatedPackages } from "../services/holidayService";
 import HolidayEnquiryForm from "./holiday-enquiry-form";
 import { capitalizeEachWord, aedNumberFormat } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
@@ -14,52 +14,34 @@ import RelatedPackages from "./related-packages";
 export default function HolidayDetails(props) {
   const packageData = props?.packageData?.Data;
   const [durations, setDurations] = useState([]);
+  const [relatedPkgs, setRelatedPkgs] = useState([]);
   const inclusions = props?.packageData?.Data?.Inclusions;
   const exclusions = props?.packageData?.Data?.Exclusions;
-  // const destinationName = props?.packageData?.Data?.Name;
 
-  const stdAccommadations =
-    props?.packageData?.Data?.PackageAccommodations?.find(
-      (pkg) => pkg.AccommodationType == 1
-    );
-  const dlxAccommadations =
-    props?.packageData?.Data?.PackageAccommodations?.find(
-      (pkg) => pkg.AccommodationType == 2
-    );
-  const prmAccommadations =
-    props?.packageData?.Data?.PackageAccommodations?.find(
-      (pkg) => pkg.AccommodationType == 3
-    );
-  const [selectedAccommo, setSelectedAccommo] = useState(
-    props?.packageData?.Data?.StandardPrice
-      ? 0
-      : props?.packageData?.Data?.DeluxePrice
-        ? 1
-        : 2
+  const stdAccommadations = props?.packageData?.Data?.PackageAccommodations?.find(pkg => pkg.AccommodationType == 1);
+  const dlxAccommadations = props?.packageData?.Data?.PackageAccommodations?.find(pkg => pkg.AccommodationType == 2);
+  const prmAccommadations = props?.packageData?.Data?.PackageAccommodations?.find(pkg => pkg.AccommodationType == 3);
+  const [selectedAccommo, setSelectedAccommo] = useState(props?.packageData?.Data?.StandardPrice
+    ? 0
+    : props?.packageData?.Data?.DeluxePrice ? 1 : 2
   );
-  const [selectedRating, setSelectedRating] = useState(
-    props?.packageData?.Data?.PackageAccommodations[0]?.Rating
-  );
+  const [selectedRating, setSelectedRating] = useState(props?.packageData?.Data?.PackageAccommodations[0]?.Rating);
   const startingPrice = props?.packageData?.Data?.StandardPrice
     ? props?.packageData?.Data?.StandardPrice?.toFixed(2)
     : props?.packageData?.Data?.DeluxePrice
       ? props?.packageData?.Data?.DeluxePrice?.toFixed(2)
       : props?.packageData?.Data?.PremiumPrice?.toFixed(2);
-  const [totalPrice, setTotalPrice] = useState(
-    props?.packageData?.Data?.StandardPrice
-      ? props?.packageData?.Data?.StandardPrice?.toFixed(2)
-      : props?.packageData?.Data?.DeluxePrice
-        ? props?.packageData?.Data?.DeluxePrice?.toFixed(2)
-        : props?.packageData?.Data?.PremiumPrice?.toFixed(2)
+  const [totalPrice, setTotalPrice] = useState(props?.packageData?.Data?.StandardPrice
+    ? props?.packageData?.Data?.StandardPrice?.toFixed(2)
+    : props?.packageData?.Data?.DeluxePrice
+      ? props?.packageData?.Data?.DeluxePrice?.toFixed(2)
+      : props?.packageData?.Data?.PremiumPrice?.toFixed(2)
   );
   const isDomestic = props?.packageData?.Data?.isDomestic;
   const [destinationName, setDestinationName] = useState("");
   const [destinationSlug, setDestinationSlug] = useState("");
-  // const [isLoading, setIsLoading] = useState(false);
   const [openInquiryModal, setOpenInquiryModal] = useState(false);
-  const [fromDate, setFromDate] = useState(
-    new Date(new Date(new Date().setDate(new Date().getDate() + 7)))
-  );
+  const [fromDate, setFromDate] = useState(new Date(new Date(new Date().setDate(new Date().getDate() + 7))));
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [totalPax, setTotalPax] = useState(1);
@@ -74,33 +56,19 @@ export default function HolidayDetails(props) {
     if (search.slice(-1) === "/") search = search.slice(0, -1);
 
     let parts = search.split("/");
-    // let slug = parts.pop();
     let destSlug = parts[parts.length - 2];
+    let slug = parts.pop();
     setDestinationSlug(destSlug);
     let dest = capitalizeEachWord(destSlug.split("-").slice(0, -2).join(" "));
     setDestinationName(dest);
-
-    // getHolidayPackageBySlug(slug, tenantId).then(res => {
-    // if (res?.Success) {
-    // setPackageData(res.Data);
-    // setIsDomestic(res?.Data?.IsDomestic);
-    // setStdAccommodations(res.Data.PackageAccommodations.find(pkg => pkg.AccommodationType == 1));
-    // setDlxAccommodations(res.Data.PackageAccommodations.find(pkg => pkg.AccommodationType == 2));
-    // setPrmAccommodations(res.Data.PackageAccommodations.find(pkg => pkg.AccommodationType == 3));
-    // setSelectedRating(res.Data.PackageAccommodations[0]?.Rating);
-    //// setCurrency(res.Data.PackageAccommodations[0]?.Currency);
-    // setTotalPrice(res.Data.StandardPrice ? res.Data.StandardPrice?.toFixed(2) : (res.Data.DeluxePrice ? res.Data.DeluxePrice?.toFixed(2) : res.Data.PremiumPrice.toFixed(2)));
-    // setStartingPrice(res.Data.StandardPrice ? res.Data.StandardPrice?.toFixed(2) : (res.Data.DeluxePrice ? res.Data.DeluxePrice?.toFixed(2) : res.Data.PremiumPrice.toFixed(2)));
-    // setSelectedAccommo(res.Data.StandardPrice ? 0 : (res.Data.DeluxePrice ? 1 : 2));
-    // setInclusions(res.Data.Inclusions);
-    // setExclusions(res.Data.Exclusions);
-    // setIsLoading(false);
     getDurations().then((response) => {
       if (response?.data?.Success) setDurations(response.data.Data);
     });
-    // }
-    // else setIsLoading(false);
-    // })
+    getRelatedPackages(slug, destSlug).then(res => {
+      if (res?.length > 0) {
+        setRelatedPkgs(res);
+      }
+    });
 
     return () => {
       if (document.body.classList.contains("overflow-auto")) {
@@ -138,7 +106,6 @@ export default function HolidayDetails(props) {
   return (
     <>
       <Header></Header>
-      {/* {!isLoading && */}
       <div>
         <div className="container py-3">
           <nav aria-label="breadcrumb">
@@ -823,7 +790,10 @@ export default function HolidayDetails(props) {
                       </div>
                     </div>
                   </div>
-                  <RelatedPackages />
+
+                  {relatedPkgs?.length > 0 &&
+                    <RelatedPackages data={relatedPkgs} destSlug={destinationSlug} />
+                  }
                 </div>
                 <div className="col-12 col-md-12 col-lg-4">
                   <FlightInfoSideBar
@@ -893,7 +863,6 @@ export default function HolidayDetails(props) {
           />
         </div>
       </div>
-      {/* } */}
     </>
   );
 }

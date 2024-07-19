@@ -146,21 +146,18 @@ const getFormattedDate = (date) => {
     }
 }
 
-const aedNumberFormat = (value) =>
-new Intl.NumberFormat('en-AE', {
+const aedNumberFormat = (value) => new Intl.NumberFormat('en-AE', {
     style: 'currency',
     currency: 'AED',
     minimumFractionDigits: 2
 }).format(value);
 
-    
-    const numberFormat = (value) =>
-    new Intl.NumberFormat('en-IN', {
-        style: 'currency',
-        currency: 'INR',
-        minimumFractionDigits: 2
 
-    }).format(value);
+const numberFormat = (value) => new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    minimumFractionDigits: 2
+}).format(value);
 
 
 const isExternalUTM = () => {
