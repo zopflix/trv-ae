@@ -245,11 +245,7 @@ export default function HolidayDetails(props) {
               <div className="row">
                 <div className="col-12 col-md-12 col-lg-8">
                   <div>
-                    <ul
-                      className="nav nav-pills mb-3 bg-grey p-3 border rounded-3 InfoTabs"
-                      id="pills-tab"
-                      role="tablist"
-                    >
+                    <ul className="nav nav-pills mb-3 bg-grey p-3 border rounded-3 InfoTabs" id="pills-tab" role="tablist">
                       {/* <li className="nav-item" role="presentation">
                                             <button className="nav-link active" id="FlightInformation-tab" data-bs-toggle="pill" data-bs-target="#FlightInformation" type="button" role="tab" aria-controls="FlightInformation" aria-selected="true">Flight Information</button>
                                         </li> */}
@@ -827,6 +823,7 @@ export default function HolidayDetails(props) {
                       </div>
                     </div>
                   </div>
+                  <RelatedPackages />
                 </div>
                 <div className="col-12 col-md-12 col-lg-4">
                   <FlightInfoSideBar
@@ -841,7 +838,6 @@ export default function HolidayDetails(props) {
               </div>
             </div>
 
-            <RelatedPackages />
 
           </div>
         </section>

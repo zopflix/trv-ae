@@ -31,43 +31,28 @@ export default function RelatedPackages() {
 
 
     return (
-        <section>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 position-relative p-0">
-                        <Slider {...sliderSettings}>
-                            {domesticPackages?.map((pkg, ix) => {
-                                return <div className="slider-items" key={ix}>
-                                    <div className="packageBox position-relative cursor-pointer" onClick={() => window.open(`/holidays/${pkg.slug}-tour-packages`, '_blank')}>
-                                        <div className="packageImgBox">
-                                            <Image
-                                                className="h-auto w-100"
-                                                loader={!!pkg.image ? sfLoader : trvLoader}
-                                                src={!!pkg.image ? pkg.image : "Abu-Dhabi-holiday.webp"}
-                                                alt="domestic-img"
-                                                width={176}
-                                                height={43}
-                                            />
-                                        </div>
-                                        <div className="packageNum position-absolute color-white">{pkg.totalPackages} Packages</div>
-                                        <div className="packageTitleBox bg-white px-3 py-2 rounded-2">
-                                            <div className="d-flex align-items-center justify-content-between">
-                                                <div>
-                                                    <p className="mb-0 fs-16 fw-bold color-black">{pkg.name}</p>
-                                                </div>
-                                                <div className="text-end">
-                                                    <p className="mb-0 fs-12 fw-bold color-black">From</p>
-                                                    <p className="mb-0 fs-16 fw-bold color-orange">{aedNumberFormat(pkg.startingPrice).split('.')[0]}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            })}
-                        </Slider>
-                    </div>
-                </div>
+        <div className="row py-4">
+            <div className="col-12">
+                <h3 className="mb-3">Related Packages</h3>
             </div>
-        </section>
+            <div className="col-12 position-relative py-1">
+                <Slider {...sliderSettings}>
+                    <div className="slider-items">
+                        <div className="border rounded-2 p-2">
+                            <img className="w-100" src="https://assets.superfares.com/cms/The-Statue-Of-Seema-Malakaya-At-The-Gangaramaya-Temple.webp" />
+                            <h2 className="fs-18 fw-bold mt-2">Anantaya Resort And Spa Chilaw</h2>
+                            <div className="border-top d-flex justify-content-between align-items-center pt-2">
+                                <div>
+                                    <p className="mb-0 fs-14">From <span className="fw-bold fs-18 color-orange">AUD 999</span></p>
+                                </div>
+                                <div>
+                                    <a className="color-blue fw-bold text-decoration-none fs-16" href="#">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Slider>
+            </div>
+        </div>
     )
 }
