@@ -441,12 +441,7 @@ export default function HolidayDetails(props) {
                                         className="AccommadationSelectButton end-0 mt-1 me-5 bg-transparent color-green py-2 px-3 float-end border-0 position-absolute"
                                         onClick={() => {
                                           setSelectedAccommo(0);
-                                          setTotalPrice(
-                                            totalPax *
-                                            packageData?.StandardPrice?.toFixed(
-                                              2
-                                            )
-                                          );
+                                          setTotalPrice(totalPax * packageData?.StandardPrice?.toFixed(2));
                                           changeRating(0);
                                         }}
                                       >
@@ -454,9 +449,7 @@ export default function HolidayDetails(props) {
                                           <i className="fa-solid fa-circle-check me-2"></i>
                                         )}
                                         {selectedAccommo == 0 ? (
-                                          <span className="fw-bold">
-                                            Selected
-                                          </span>
+                                          <span className="fw-bold">Selected</span>
                                         ) : (
                                           <span className="fw-bold color-blue">
                                             Select
@@ -475,15 +468,9 @@ export default function HolidayDetails(props) {
                                           aria-expanded="true"
                                           aria-controls="collapseOne"
                                         >
-                                          Standard{" "}
-                                          <span className="d-none d-md-block">
-                                            (
-                                            {aedNumberFormat(
-                                              packageData?.StandardPrice?.toFixed(
-                                                2
-                                              )
-                                            )}
-                                            )
+                                          Standard
+                                          <span className="d-none d-md-block ps-1">
+                                            ({aedNumberFormat(packageData?.StandardPrice?.toFixed(2))})
                                           </span>
                                         </button>
                                       </h2>
@@ -570,8 +557,8 @@ export default function HolidayDetails(props) {
                                           aria-expanded="true"
                                           aria-controls="collapseDlx"
                                         >
-                                          Deluxe{" "}
-                                          <span className="d-none d-md-block">
+                                          Deluxe
+                                          <span className="d-none d-md-block ps-1">
                                             (
                                             {aedNumberFormat(
                                               packageData?.DeluxePrice?.toFixed(
@@ -665,15 +652,9 @@ export default function HolidayDetails(props) {
                                           aria-expanded="true"
                                           aria-controls="collapsePrm"
                                         >
-                                          Premium{" "}
-                                          <span className="d-none d-md-block">
-                                            (
-                                            {aedNumberFormat(
-                                              packageData?.PremiumPrice?.toFixed(
-                                                2
-                                              )
-                                            )}
-                                            )
+                                          Premium
+                                          <span className="d-none d-md-block ps-1">
+                                            ({aedNumberFormat(packageData?.PremiumPrice?.toFixed(2))})
                                           </span>
                                         </button>
                                       </h2>
@@ -685,33 +666,29 @@ export default function HolidayDetails(props) {
                                       >
                                         <div className="accordion-body">
                                           <div className="row">
-                                            {prmAccommadations?.Details?.map(
-                                              (acco, ix) => {
-                                                return (
-                                                  <div
-                                                    key={ix}
-                                                    className="col-12 col-sm-12 col-md-2 col-lg-4"
-                                                  >
-                                                    <div className="card bg-grey">
-                                                      {!!acco.ImageUrl && (
-                                                        <Image
-                                                          className="h-auto w-100 rounded-3"
-                                                          loader={sfLoader}
-                                                          src={acco.ImageUrl}
-                                                          alt="Deals img"
-                                                          width={176}
-                                                          height={43}
-                                                        />
-                                                      )}
-                                                      <div className="card-body ">
-                                                        <h3 className="fs-16 card-title mb-0 fw-bold">
-                                                          {acco.Title}
-                                                        </h3>
-                                                      </div>
+                                            {prmAccommadations?.Details?.map((acco, ix) => {
+                                              return (
+                                                <div className="col-12 col-sm-12 col-md-2 col-lg-4" key={ix}>
+                                                  <div className="card bg-grey">
+                                                    {!!acco.ImageUrl && (
+                                                      <Image
+                                                        className="h-auto w-100 rounded-3"
+                                                        loader={sfLoader}
+                                                        src={acco.ImageUrl}
+                                                        alt="Deals img"
+                                                        width={176}
+                                                        height={43}
+                                                      />
+                                                    )}
+                                                    <div className="card-body ">
+                                                      <h3 className="fs-16 card-title mb-0 fw-bold">
+                                                        {acco.Title}
+                                                      </h3>
                                                     </div>
                                                   </div>
-                                                );
-                                              }
+                                                </div>
+                                              );
+                                            }
                                             )}
                                           </div>
                                         </div>
