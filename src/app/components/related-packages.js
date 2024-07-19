@@ -30,7 +30,7 @@ export default function RelatedPackages(props) {
                         return <div key={ix} className="slider-items">
                             <div className="border rounded-2 p-2">
                                 <img className="w-100" src={pkg.image} />
-                                <h2 className="fs-16 fw-bold mt-2">{pkg.name}</h2>
+                                <h2 className="fs-16 fw-bold mt-2 relatedTitle">{pkg.name}</h2>
                                 <div className="border-top d-flex justify-content-between align-items-center pt-2">
                                     <div>
                                         <p className="mb-0 fs-14">From <span className="fw-bold fs-18 color-orange">{aedNumberFormat(pkg.startingPrice).split(".")[0]}</span></p>
