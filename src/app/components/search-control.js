@@ -130,7 +130,7 @@ export default function SearchControl(props) {
                             </div>
                         }
                         {!isModifyComponent &&
-                            <div className='formTabs ms-3  position-relative'>
+                            <div className='formTabs position-relative'>
 
                                 <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
                                     {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>

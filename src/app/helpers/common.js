@@ -223,8 +223,8 @@ const calculateBannerPrice = (flightData) => {
 }
 
 const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, billingDetails = null, searchCriteria = null, deeplinkObj = null) => {
-    return;
-    mixpanel.init('23bddaada9c60d0c7b92fbc13ce9734a');
+
+    mixpanel.init('684babb71cd3a20ed0ffc82ddd17f3b0');
 
     if (eventName == "Deeplink_Listing_Load" && searchCriteria) {
         mixpanel.register({
