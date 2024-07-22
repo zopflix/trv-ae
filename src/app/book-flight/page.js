@@ -700,8 +700,8 @@ export default function CheckoutPage() {
 
     (async () => {
       await trackMixpanelEvent("Payment_page_Load", flight);
-      const res = await axios.get("https://geolocation-db.com/json/");
-      setUserIp(res?.data?.IPv4);
+      // const res = await axios.get("https://geolocation-db.com/json/");
+      // setUserIp(res?.data?.IPv4);
     })();
     return () => {
       if (document.body.classList.contains("checkout-page"))

@@ -89,7 +89,8 @@ export default function HolidayEnquiryForm(props) {
     const submitEnquiry = async () => {
         setSearchInProgress(true);
         if (!!fromAirport.city && !!toAirport.city && fromDate && !!mobile && mobile.length == 10 && !!email && isValidEmail) {
-            const res = await axios.get('https://geolocation-db.com/json/');
+            // const res = await axios.get('https://geolocation-db.com/json/');
+            const res = '';
             let payload = {
                 name: 'Traveller',
                 packageName: `${toAirport.city}${!!toAirport.value ? '(' + toAirport.value + ')' : ''}`,

@@ -66,7 +66,8 @@ export default function FlightInqueryForm(props) {
       isValidEmail &&
       (tripType !== 1 || (tripType === 1 && toDate !== ""))
     ) {
-      const res = await axios.get("https://geolocation-db.com/json/");
+      // const res = await axios.get("https://geolocation-db.com/json/");
+      const res = '';
 
       let payload = {
         name: 'Traveller',

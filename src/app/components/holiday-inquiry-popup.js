@@ -34,7 +34,8 @@ export default function InquiryPopup(props) {
       !!email &&
       isValidEmail
     ) {
-      const res = await axios.get("https://geolocation-db.com/json/");
+      // const res = await axios.get("https://geolocation-db.com/json/");
+      const res = '';
       let payload = {
         name: "Traveller",
         packType: packType,

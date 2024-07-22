@@ -259,11 +259,11 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
         return;
     }
 
-    const res = await axios.get('https://geolocation-db.com/json/')
+    // const res = await axios.get('https://geolocation-db.com/json/')
 
     if (eventName == "Go_to_Home" || eventName == "Bottom_Strip_Call") {
         mixpanel.track(eventName, {
-            User_IP: res?.data.IPv4
+            User_IP: ''
         })
         return;
     }
@@ -275,7 +275,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Departure_Date: deeplinkObj.Departure_Date,
             Return_Date: deeplinkObj.Return_Date,
             Trip_Type: deeplinkObj.Trip_Type,
-            User_IP: res.data.IPv4,
+            User_IP: '',
             Email: deeplinkObj.Email,
             Phone: deeplinkObj.Phone
         })
@@ -298,7 +298,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Child: searchCriteria.child,
             Inf: searchCriteria.noOfLapInfant,
             Class: getDisplayClass(searchCriteria.cabin),
-            User_IP: res.data.IPv4,
+            User_IP: '',
             Search_ID: searchCriteria.searchId
         });
         return null;
@@ -336,7 +336,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Child: noOfChilds,
             Inf: noInfants,
             Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: res.data.IPv4,
+            User_IP: '',
             Segment_Airline: segmentsAirlines.join(),
             Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
             Price: currentFlight?.totalPrice.toFixed(2),
@@ -357,7 +357,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Child: noOfChilds,
             Inf: noInfants,
             Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: res.data.IPv4, //
+            User_IP: '', //
             Segment_Airline: segmentsAirlines?.join(),
             Airline: segmentsAirlines?.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
             Price: currentFlight?.totalPrice.toFixed(2),
@@ -383,7 +383,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Child: noOfChilds,
             Inf: noInfants,
             Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: res.data.IPv4, //
+            User_IP: '', //
             Unique_ID: parseInt(generateRandomNumber(6)),
             UC_Price_Display: calculateBannerPrice(currentFlight).toFixed(2),
             Segment_Airline: segmentsAirlines.join(),
@@ -406,7 +406,7 @@ const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, 
             Child: noOfChilds,
             Inf: noInfants,
             Class: getDisplayClass(currentFlight.trips[0].listOfFlight[0].classOfService),
-            User_IP: res.data.IPv4, //
+            User_IP: '', //
             Segment_Airline: segmentsAirlines.join(),
             Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
             Price: currentFlight.totalPrice.toFixed(2),
