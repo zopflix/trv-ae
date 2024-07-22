@@ -259,14 +259,15 @@ header .accordion .accordion-button.collapsed .readMorebtn {
     color: var(--color-orange);
 }
 
-.HolidayTitle:hover .text-end>p:nth-child(2) {
+.HolidayTitle:hover .text-end>p:nth-child(2),
+.active .HolidayTitle .text-end>p:nth-child(2) {
     color: #fff;
 }
 
 .HolidayCategoriesNavTabs .nav .nav-link.active .HolidayTitle,
 .HolidayCategoriesNavTabs .nav .nav-link:hover .HolidayTitle {
     background-color: var(--color-orange);
-    color: #fff;
+    color: #fff !important;
     border-radius: 10px;
 }
 
