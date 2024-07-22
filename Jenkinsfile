@@ -6,7 +6,7 @@ pipeline {
       
       stage('build') {
          steps {
-                sh "docker build -t trvae-stg ."
+                sh "docker build -t trvae-prod ."
          }
       }
     }
