@@ -16,24 +16,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Bootstrap */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 
         {/* META TAGS */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0;"
-        ></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;"></meta>
 
-        <title>
-          Tour & Travel Agency In India | Cheap Flights + Holiday Packages
-        </title>
-        <meta
-          name="description"
-          content="Travanya is the best travel agency in India that caters to all your tour and travel needs. Along with international & domestic flights, we plan holiday packages too."
-        />
+        <title>Tour & Travel Agency In India | Cheap Flights + Holiday Packages</title>
+        <meta name="description" content="Travanya is the best travel agency in India that caters to all your tour and travel needs. Along with international & domestic flights, we plan holiday packages too." />
 
         <meta name="google-site-verification" content="tNoNC9cmrm29qcMqxOk97Q-yYDyf90KXGXrc6kXSoI0" />
 
@@ -83,35 +72,30 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11426739459"
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11426739459" />
 
-  gtag('config', 'AW-11426739459');`,
-          }}
-        />
+        <Script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11426739459');`,
+        }}
+        /> */}
 
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-T4P483N');`,
-          }}
-        />
+        {/* <script dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-MPQQ8TD6');`,
+        }} /> */}
       </head>
+
       <body className={inter.className}>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4P483N"
-          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
-        <CounterContextProvider>{children}</CounterContextProvider></body>
+        {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPQQ8TD6"
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript> */}
+        <CounterContextProvider>{children}</CounterContextProvider>
+      </body>
     </html>
   );
 }
