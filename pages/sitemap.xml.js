@@ -16,26 +16,6 @@ function generateSiteMap(posts) {
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.travanya.ae/india-tour-packages/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.travanya.ae/international-tour-packages/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.travanya.ae/blog/travanya-your-gateway-to-unforgettable-journeys-from-UAE-to-anywhere/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.travanya.ae/blog/umrah-saudi-visa-for-uae-residents/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.travanya.ae/blog/best-things-to-do-in-dubai-airport/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.travanya.ae/contact-us/</loc>
   <priority>0.80</priority>
 </url>
@@ -63,14 +43,7 @@ function generateSiteMap(posts) {
   <loc>https://www.travanya.ae/FAQ/</loc>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://www.travanya.ae/dummy-flight-ticket/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.travanya.ae/blog/</loc>
-  <priority>0.64</priority>
-</url>
+
      ${posts
       .map(page => {
         return `

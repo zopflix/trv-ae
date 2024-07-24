@@ -13,6 +13,11 @@ import { useState } from 'react'
 export default function Holidays() {
     const pathname = usePathname();
     const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleContent = () => {
+        setIsExpanded(!isExpanded);
+    };
 
     return (
         <>
@@ -46,12 +51,36 @@ export default function Holidays() {
                                 <h2 className="mb-3 fw-normal">Holiday <strong className="color-orange">Packages</strong></h2>
                             </div>
                         </div>
-                        <div className="col-12">
-                            <p className="fs-14">Planning a perfect holiday getaway? Check out our best <strong>holiday packages from UAE!</strong> Break free from the usual and find the world's wonders with our <strong>customized tour packages.</strong> Experience a vacation like no other with our <strong>holiday packages from Dubai, UAE</strong> provide an exceptional experience, offering a diverse range of options for your enjoyment. ensuring you have a truly memorable and enjoyable holiday.</p>
-                            <p className="fs-14">Our packages include great deals on flights and top-notch accommodations, offering you the best value. So, what are you waiting for? Grab your package now and start a journey to refresh your soul, mind, and body. Whether it’s exploring vibrant cities or lounging on sunny beaches, the choice is yours.</p>
-                            <p className="fs-14">Travanya knows exactly what every tourist desires and needs, which is why we cater to our valued customers with utmost care. Book your <strong>holiday packages</strong> now, relax, and let us manage everything for you. It’s time to realize all your travel dreams. Let us make you feel special in our unique way. Don't miss our exceptional <strong>tour package offers from the UAE,</strong> providing both thrilling and serene holidays. These <strong>holiday packages from Dubai, UAE</strong>, are sure to leave you amazed.</p>
-                        </div>
                         <DomesticTourPackages isHolidaysPage={true}></DomesticTourPackages>
+                        <div className="col-12 mt-2">
+                            <p className="fs-14">
+                                Planning a perfect holiday getaway? Check out our best <strong>holiday packages from UAE!</strong> Break free from the usual and find the world's wonders with our <strong>customized tour packages.</strong> Experience a vacation like no other with our <strong>holiday packages from Dubai, UAE</strong> provide an exceptional experience, offering a diverse range of options for your enjoyment, ensuring you have a truly memorable and enjoyable holiday.
+                                {!isExpanded && (
+                                    <button
+                                        className="fs-12 color-blue bg-white border-0 p-0 d-inline-block"
+                                        onClick={toggleContent}
+                                    >
+                                        Read More
+                                    </button>
+                                )}
+                            </p>
+                            {isExpanded && (
+                                <>
+                                    <p className="fs-14">
+                                        Our packages include great deals on flights and top-notch accommodations, offering you the best value. So, what are you waiting for? Grab your package now and start a journey to refresh your soul, mind, and body. Whether it’s exploring vibrant cities or lounging on sunny beaches, the choice is yours.
+                                    </p>
+                                    <p className="fs-14">
+                                        Travanya knows exactly what every tourist desires and needs, which is why we cater to our valued customers with utmost care. Book your <strong>holiday packages</strong> now, relax, and let us manage everything for you. It’s time to realize all your travel dreams. Let us make you feel special in our unique way. Don't miss our exceptional <strong>tour package offers from the UAE,</strong> providing both thrilling and serene holidays. These <strong>holiday packages from Dubai, UAE</strong>, are sure to leave you amazed. 
+                                        <button
+                                            className="fs-12 color-blue bg-white border-0 p-0 d-inline-block"
+                                            onClick={toggleContent}
+                                        >
+                                             Show Less
+                                        </button>
+                                    </p>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </section>

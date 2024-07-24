@@ -30,8 +30,8 @@ export default function HolidayCategories() {
 
     const handleClick = (destination) => {
         getHolidaysByDest(destination);
-        setOpenInquiryModal(true); 
-      };
+        setOpenInquiryModal(true);
+    };
 
     return (
         <>
@@ -49,7 +49,7 @@ export default function HolidayCategories() {
                         <div className="col-12 col-lg-5 mb-4">
                             <div className="HolidayCategoriesNavTabs bg-grey p-4 rounded-3">
                                 <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Maldives' && ' active'}`}>
+                                    <a target="_blank" href="https://www.travanya.ae/holidays/maldives-tour-packages/" className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Maldives' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -63,7 +63,9 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Maldives')}>
+                                            <div className="col-12 col-lg-10"
+                                            // onClick={() => handleClick('Maldives')}
+                                            >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Maldives</div>
@@ -77,8 +79,7 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </span>
-                                  
+                                    </a>
                                     <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Seychelles' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
@@ -108,7 +109,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Georgia' && ' active'}`}>
+                                    <a target="_blank" href="https://www.travanya.ae/holidays/georgia-tour-packages/" className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Georgia' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -122,7 +123,9 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Georgia')}>
+                                            <div className="col-12 col-lg-10"
+                                            // onClick={() => handleClick('Georgia')}
+                                            >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Georgia</div>
@@ -136,9 +139,8 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </span>
-                                 
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Mauritius' && ' active'}`}>
+                                    </a>
+                                    <a target="_blank" href="https://www.travanya.ae/holidays/mauritius-tour-packages/" className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Mauritius' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -152,7 +154,9 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Mauritius')}>
+                                            <div className="col-12 col-lg-10"
+                                            // onClick={() => handleClick('Mauritius')}
+                                            >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Mauritius</div>
@@ -166,8 +170,8 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Indonesia ' && ' active'}`}>
+                                    </a>
+                                    <a target="_blank" href="https://www.travanya.ae/holidays/indonesia-tour-packages/" className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Indonesia ' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -181,7 +185,9 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Indonesia ')}>
+                                            <div className="col-12 col-lg-10"
+                                            // onClick={() => handleClick('Indonesia ')}
+                                            >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Indonesia </div>
@@ -195,7 +201,7 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </span>
+                                    </a>
                                     <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Malaysia ' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
@@ -225,7 +231,7 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-                                    <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Azerbaijan' && ' active'}`}>
+                                    <a target="_blank" href="https://www.travanya.ae/holidays/azerbaijan-tour-packages/" className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Azerbaijan' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
                                                 <div className="HolidayThumImg">
@@ -239,7 +245,9 @@ export default function HolidayCategories() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-lg-10" onClick={() => handleClick('Azerbaijan')}>
+                                            <div className="col-12 col-lg-10"
+                                                // onClick={() => handleClick('Azerbaijan')}
+                                            >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>
                                                         <div>Azerbaijan</div>
@@ -253,7 +261,7 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </span>
+                                    </a>
                                     <span className={`p-0 my-2 bg-transparent w-100 nav-link d-inline-block text-center${selectedDest == 'Hong Kong' && ' active'}`}>
                                         <div className="row align-items-center">
                                             <div className="col-2 pe-0 d-none d-lg-inline">
@@ -283,16 +291,15 @@ export default function HolidayCategories() {
                                             </div>
                                         </div>
                                     </span>
-
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/holidays/'}${'singapore'}-tour-packages/${''}`;
-                                            window.open(path, '_blank');
-                                        }}>
+                                    let path = `${'/holidays/'}${'singapore'}-tour-packages/${''}`;
+                                    window.open(path, '_blank');
+                                }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -316,10 +323,10 @@ export default function HolidayCategories() {
                                         </div>
                                     </span>
                                 </div>
-                                <div className="col-12 col-md-6 mb-3 "onClick={() => {
-                                            let path = `${'/holidays/'}${'thailand'}-tour-packages/${''}`;
-                                            window.open(path, '_blank');
-                                        }}>
+                                <div className="col-12 col-md-6 mb-3 " onClick={() => {
+                                    let path = `${'/holidays/'}${'thailand'}-tour-packages/${''}`;
+                                    window.open(path, '_blank');
+                                }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -344,9 +351,9 @@ export default function HolidayCategories() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/holidays/'}${'armenia'}-tour-packages/${''}`;
-                                            window.open(path, '_blank');
-                                        }}>
+                                    let path = `${'/holidays/'}${'armenia'}-tour-packages/${''}`;
+                                    window.open(path, '_blank');
+                                }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -371,9 +378,9 @@ export default function HolidayCategories() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-6 mb-3" onClick={() => {
-                                            let path = `${'/holidays/'}${'saudi-arabia'}-tour-packages/${''}`;
-                                            window.open(path, '_blank');
-                                        }}>
+                                    let path = `${'/holidays/'}${'saudi-arabia'}-tour-packages/${''}`;
+                                    window.open(path, '_blank');
+                                }}>
                                     <span class="d-inline-block  w-100 VisaFreeBox position-relative cursor-pointer">
                                         <Image
                                             className="w-100"
@@ -403,14 +410,14 @@ export default function HolidayCategories() {
                 </div>
 
                 <Suspense><InquiryPopup
-                 openInquiryModal={openInquiryModal}
-                  setOpenInquiryModal={setOpenInquiryModal}
+                    openInquiryModal={openInquiryModal}
+                    setOpenInquiryModal={setOpenInquiryModal}
                     package={
-                       {"Title": selectedDest}
+                        { "Title": selectedDest }
                     }
                     travelDate={new Date((new Date()).getTime() + (15 * 24 * 60 * 60 * 1000))}
-                      location={selectedDest}
-                      /></Suspense>
+                    location={selectedDest}
+                /></Suspense>
 
             </section>
         </>

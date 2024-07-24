@@ -130,10 +130,11 @@ export default function SearchControl(props) {
                             </div>
                         }
                         {!isModifyComponent &&
-                            <div className='formTabs position-relative'>
+                            <div className="container">
+                                <div className='formTabs position-relative'>
 
-                                <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
-                                    {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
+                                    <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
+                                        {/* <li className={props?.selectedTab > 0 ? '' : 'active'} onClick={() => router.push('/')}>
                                 <div className='text-center'>
                                     <Image
                                         className="h-auto"
@@ -147,34 +148,35 @@ export default function SearchControl(props) {
                                 </div>
                             </li> */}
 
-                                    {/* <li className={props?.selectedTab == 0 ? "active" : ""} onClick={() => router.push('/holidays')}> */}
-                                    <li className="active">
-                                        <div className='text-center d-flex bg-white shadow py-2 px-4 mb-2 rounded-2'>
-                                            <Image
-                                                className="h-auto me-2"
-                                                loader={trvLoader}
-                                                // src={props?.selectedTab == 0 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
-                                                src="icon/holidayMenuIcon.svg"
-                                                alt="Flight Icon"
-                                                width={24}
-                                                height={24}
-                                            />
-                                            <div className='fs-14 fw-bold'>Holidays</div>
-                                        </div>
-                                    </li>
+                                        {/* <li className={props?.selectedTab == 0 ? "active" : ""} onClick={() => router.push('/holidays')}> */}
+                                        <li className="active">
+                                            <div className='text-center d-flex bg-white shadow py-2 px-4 mb-2 rounded-2'>
+                                                <Image
+                                                    className="h-auto me-2"
+                                                    loader={trvLoader}
+                                                    // src={props?.selectedTab == 0 ? "icon/holidays-white-icon.svg" : "icon/holidays-grey-icon.svg"}
+                                                    src="icon/holidayMenuIcon.svg"
+                                                    alt="Flight Icon"
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                                <div className='fs-14 fw-bold'>Holidays</div>
+                                            </div>
+                                        </li>
 
-                                </ul>
-                                <p className="d-none d-md-block float-end color-white fs-18 mb-0 position-absolute top-0 end-0 me-3">
-                                    <span className="pt-1 d-inline-block">Your DREAM DESTINATION Awaits - Pack Your Bags</span>
-                                    <Image
-                                        className="h-auto position-absolute top-0"
-                                        loader={trvLoader}
-                                        src="icon/hmBannerTitleIcon.png"
-                                        alt="Flight Icon"
-                                        width={24}
-                                        height={24}
-                                    />
-                                </p>
+                                    </ul>
+                                    <p className="d-none d-md-block float-end color-white fs-18 mb-0 position-absolute top-0 end-0 me-3">
+                                        <span className="pt-1 d-inline-block">Your DREAM DESTINATION Awaits - Pack Your Bags</span>
+                                        <Image
+                                            className="h-auto position-absolute top-0"
+                                            loader={trvLoader}
+                                            src="icon/hmBannerTitleIcon.png"
+                                            alt="Flight Icon"
+                                            width={24}
+                                            height={24}
+                                        />
+                                    </p>
+                                </div>
                             </div>
                         }
                         {props?.selectedTab == 0
