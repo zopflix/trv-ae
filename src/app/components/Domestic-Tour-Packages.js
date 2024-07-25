@@ -64,7 +64,7 @@ export default function DomesticTourPackages(props) {
                     })}
                 </div>
                 : <div className="row">
-                    <div className="col-12 position-relative p-0">
+                    <div className="col-12 position-relative p-md-0">
                         <Slider {...sliderSettings}>
                             {domesticPackages?.map((pkg, ix) => {
                                 return <div className="slider-items" key={ix}>

@@ -132,18 +132,20 @@ export default function HolidayEnquiryForm(props) {
     return (
         <>
             <section id="mainSearchForm" className="HoliDayModifyForm position-relative">
+
                 {props.bannerText && !props.isDetail &&
                     <Fragment>
 
                         {props?.bannerImgUrl ?
-                            <div className="position-relative BannerOverlyBg">< Image
-                                className="h-auto w-100 holiDayMainBanner"
-                                loader={sfLoader}
-                                src={props?.bannerImgUrl ? props.bannerImgUrl : ''}
-                                alt="Package Image"
-                                width={25}
-                                height={25}
-                            /> </div> :
+                            <div className="position-relative BannerOverlyBg">
+                                < Image
+                                    className="h-auto w-100 holiDayMainBanner"
+                                    loader={sfLoader}
+                                    src={props?.bannerImgUrl ? props.bannerImgUrl : ''}
+                                    alt="Package Image"
+                                    width={25}
+                                    height={25}
+                                /> </div> :
                             <Image
                                 className="h-auto w-100 holiDayMainBanner"
                                 loader={trvLoader}
