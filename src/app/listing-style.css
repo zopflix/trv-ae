@@ -497,13 +497,16 @@ body.custom-listing .ContactStrapMobilebox {
         position: absolute;
         left: 0px;
         right: 0px;
-        top: 70%;
+        bottom: 50px;
         z-index: 9;
-        transform: translate(0px, -50%);
     }
 }
 
 @media(max-width:991px) {
+
+    .FormBoxWrp{
+        padding: 20px 0px;
+    }
 
     .modifySearch {
         position: fixed;
