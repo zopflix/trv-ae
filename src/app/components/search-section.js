@@ -335,7 +335,7 @@ export default function SearchSection(props) {
       <Image
         className="h-auto w-100 holiDayMainBanner d-lg-none"
         loader={trvLoader}
-        src="TopBannerAe-HM-Mob.webp"
+        src="TopBannerAe-HM-Mobb.webp"
         alt="Package Image"
         width={25}
         height={25}
