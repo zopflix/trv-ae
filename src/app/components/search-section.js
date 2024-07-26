@@ -325,9 +325,17 @@ export default function SearchSection(props) {
   return (
     <div className='position-relative'>
       <Image
-        className="h-auto w-100 holiDayMainBanner"
+        className="h-auto w-100 holiDayMainBanner d-none d-lg-block"
         loader={trvLoader}
         src="TopBannerAe-HM.webp"
+        alt="Package Image"
+        width={25}
+        height={25}
+      />
+      <Image
+        className="h-auto w-100 holiDayMainBanner d-lg-none"
+        loader={trvLoader}
+        src="TopBannerAe-HM-Mob.webp"
         alt="Package Image"
         width={25}
         height={25}

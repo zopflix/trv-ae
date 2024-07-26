@@ -488,23 +488,21 @@ body.custom-listing .ContactStrapMobilebox {
     padding: 50px 0px;
 } */
 
-
+.FormBoxWrp {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    z-index: 9;
+}
 
 /* media start */
 
-@media(min-width:992px) {
-    .FormBoxWrp {
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: 50px;
-        z-index: 9;
-    }
-}
+@media(min-width:992px) {}
 
 @media(max-width:991px) {
 
-    .FormBoxWrp{
+    .FormBoxWrp {
         padding: 20px 0px;
     }
 
