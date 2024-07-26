@@ -324,22 +324,22 @@ export default function SearchSection(props) {
 
   return (
     <div className='position-relative'>
-      {/* <Image
-        className="h-auto w-100 d-none d-md-block"
+      <Image
+        className="h-auto w-100 holiDayMainBanner d-none d-lg-block"
         loader={trvLoader}
-        src="homeTopBgBanner.webp"
-        alt="User Icon"
-        width={20}
-        height={20}
+        src="TopBannerAe-HM.webp"
+        alt="Package Image"
+        width={25}
+        height={25}
       />
       <Image
-        className="h-auto w-100 d-md-none"
+        className="h-auto w-100 holiDayMainBanner d-lg-none"
         loader={trvLoader}
-        src="omeTopBgBanner.webp"
-        alt="User Icon"
-        width={20}
-        height={20}
-      /> */}
+        src="TopBannerAe-HM-Mobb.webp"
+        alt="Package Image"
+        width={25}
+        height={25}
+      />
       <div className='FormBoxWrp'>
         <SearchControl
           resultPagePassengers={resultPagePassengers}

@@ -480,30 +480,31 @@ body.custom-listing .ContactStrapMobilebox {
     max-width: 900px;
 }
 
-.FormBoxWrp {
+/* .FormBoxWrp {
     background-image: url('https://assets.travanya.com/banner-fm.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 50px 0px;
+} */
+
+.FormBoxWrp {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    z-index: 9;
 }
-
-
 
 /* media start */
 
-@media(min-width:992px) {
-    /* .FormBoxWrp {
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 50%;
-        z-index: 9;
-        transform: translate(0px, -50%);
-    } */
-}
+@media(min-width:992px) {}
 
 @media(max-width:991px) {
+
+    .FormBoxWrp {
+        padding: 20px 0px;
+    }
 
     .modifySearch {
         position: fixed;

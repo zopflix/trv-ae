@@ -419,7 +419,7 @@
     /* div.HolidDayForm {
         background-color: #fff;
     } */
-/* 
+    /* 
     .FormBoxWrp {
         margin-top: -50px;
         margin-bottom: 10PX;
@@ -557,10 +557,10 @@
 
 @media(min-width:768px) and (max-width:991px) {
 
-    /* .FormBoxWrp{
+    .FormBoxWrp {
         margin-top: -100px;
         margin-bottom: 20px;
-    } */
+    }
 
     .DepartDatePicer .react-datepicker-popper {
         transform: translate(-50px, 100px) !important;
