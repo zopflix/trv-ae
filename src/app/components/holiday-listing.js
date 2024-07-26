@@ -139,9 +139,9 @@ export default function HolidayListing(props) {
                           const pkgPrice = item.StandardPrice ? item.StandardPrice : (item.DeluxePrice ? item.DeluxePrice : item.PremiumPrice);
                           return <div key={ix} className="DealsListBox mb-4 bg-white p-3 rounded-3">
                             <div className="row">
-                              <div className="col-12 col-lg-4 py-1">
+                              <div className="col-12 col-lg-5 py-1">
                                 <Image
-                                  className=" w-100 rounded-3"
+                                  className=" w-100 rounded-3 h-auto"
                                   loader={sfLoader}
                                   src={!!item?.ImageUrl ? item.ImageUrl : ''}
                                   alt="pkg-img"
@@ -149,11 +149,13 @@ export default function HolidayListing(props) {
                                   height={170}
                                 />
                               </div>
-                              <div className="col-12 col-lg-8 py-1">
+                              <div className="col-12 col-lg-7 py-1">
                                 <div className="row justify-content-between">
-                                  <div className="col-6 py-1">
+                                  <div className="col-12">
+                                    <h3 className="color-black fw-bold fs-20">{item.Title}</h3>
+                                  </div>
+                                  <div className="col-5 py-1">
                                     <div className="DealsListContentBox">
-                                      <h3 className="color-black fw-bold fs-20">{item.Title}</h3>
                                       <div className="d-flex align-items-center">
                                         <div>
                                           <Image
@@ -181,7 +183,7 @@ export default function HolidayListing(props) {
                                       }
                                     </div>
                                   </div>
-                                  <div className="col-6 py-1 text-lg-end">
+                                  <div className="col-7 py-1 text-lg-end">
                                     <div className="DealsListContentBox float-end">
                                       {item.Cities?.length > 0 && <p className="fs-14 color-black fw-bold"><span className="color-grey">Cities:</span> {item.Cities.join(', ')}</p>}
                                       <h3 className="mb-0 fw-bold color-black fs-24">{aedNumberFormat(pkgPrice)?.split('.')[0]}.<sup>{aedNumberFormat(pkgPrice)?.split('.')[1]}</sup></h3>
