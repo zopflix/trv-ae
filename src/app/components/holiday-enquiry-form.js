@@ -447,9 +447,9 @@ export default function HolidayEnquiryForm(props) {
                                                     (!!fromAirport && !!toAirport) &&
                                                     <div className="col-12 PhnEmail border-top">
                                                         <div className="row">
-                                                            <div className="col-12 col-md-5 py-2">
+                                                            <div className="col-12 col-md-6 col-lg-5 py-2">
                                                                 <div className="row">
-                                                                    <div className="col-4 pe-0">
+                                                                    <div className="col-4 col-md-5 col-lg-4 pe-0">
                                                                         <PhoneInput
                                                                             country={"ae"}
                                                                             enableSearch={true}
@@ -459,7 +459,7 @@ export default function HolidayEnquiryForm(props) {
                                                                             onChange={(phone) => setPhoneCode(phone)}
                                                                         />
                                                                     </div>
-                                                                    <div className="col-8">
+                                                                    <div className="col-8 col-md-7 col-lg-8">
                                                                         <input
                                                                             className={(hasError && mobile.length < 10) ? "form-control border-red" : "form-control"}
                                                                             type="text"
@@ -505,7 +505,7 @@ export default function HolidayEnquiryForm(props) {
                                                                     </div> */}
                                                                 </div>
                                                             </div>
-                                                            <div className="col-12 col-md-5 py-2">
+                                                            <div className="col-12 col-md-6 col-lg-5 py-2">
                                                                 <div className="FormGroup mb-0 bg-white rounded-2">
                                                                     {/* <label className="mb-1">Email</label> */}
                                                                     <div className="position-relative">
@@ -541,7 +541,7 @@ export default function HolidayEnquiryForm(props) {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-12 col-md-2 py-2 mobForm">
+                                                            <div className="col-12 col-md-12 col-lg-2 py-2 mobForm">
                                                                 <button className={isSearchInProgress ? "buttonStyle1 border-0 color-white fs-14 px-2 w-100 rounded-3 disabled-btn" : "buttonStyle1 border-0 color-white fs-14 fw-bold px-2 w-100 rounded-3"}
                                                                     disabled={isSearchInProgress} onClick={() => submitEnquiry()}>
                                                                     {isSearchInProgress

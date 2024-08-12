@@ -106,8 +106,8 @@ export default function SearchControl(props) {
         <section id="mainSearchForm">
             <div className='container'>
                 <div className="row">
-                    <div className="col-12 col-lg-2 col-xl-1 col-xxl-12"></div>
-                    <div className="col-12 col-lg-8 col-xl-10 col-xxl-12">
+                    <div className="col-12"></div>
+                    <div className="col-12">
                         {
                             (!!props?.airlineTitle && !!props?.minPrice) &&
                             <div className="row d-lg-none">
@@ -889,7 +889,7 @@ export default function SearchControl(props) {
                             }
                         </div>
                     </div>
-                    <div className="col-12 col-lg-2 col-xl-1 col-xxl-12"></div>
+                    <div className="col-12"></div>
                 </div>
 
             </div>

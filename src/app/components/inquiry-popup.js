@@ -302,7 +302,7 @@ export default function InquiryPopup(props) {
                 <div className="FormGroup mb-2">
                   <label className="mb-1">Contact No.</label>
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-5 col-md-4">
                       <PhoneInput
                         className="p-0"
                         country={"ae"}
@@ -313,7 +313,7 @@ export default function InquiryPopup(props) {
                         onChange={(phone) => setPhoneCode(phone)}
                       />
                     </div>
-                    <div className="col-8">
+                    <div className="col-7 col-md-8">
                       <input
                         className={hasError && mobile.length < 10 ? "ps-3 form-control border-red" : "ps-3 form-control"}
                         type="text"
