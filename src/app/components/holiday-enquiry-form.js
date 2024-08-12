@@ -448,27 +448,18 @@ export default function HolidayEnquiryForm(props) {
                                                     <div className="col-12 PhnEmail border-top">
                                                         <div className="row">
                                                             <div className="col-12 col-md-5 py-2">
-                                                                <div className="FormGroup mb-0 bg-white rounded-2">
-                                                                    {/* <label className="mb-1">Contact No.</label> */}
-                                                                    <div className="position-relative PhoneNum">
-                                                                        <div className="icon position-absolute top-50 bottom-50 m-auto ">
-                                                                            {/* <Image
-                                                                                className=""
-                                                                                loader={trvLoader}
-                                                                                src="icon/india-flag.png"
-                                                                                alt="india flag"
-                                                                                width={20}
-                                                                                height={15}
-                                                                            /> <span>+91</span> */}
-                                                                            <PhoneInput
-                                                                                country={"ae"}
-                                                                                enableSearch={true}
-                                                                                enableClickOutside={true}
-                                                                                value={phoneCode}
-                                                                                inputProps={{ readOnly: true }}
-                                                                                onChange={(phone) => setPhoneCode(phone)}
-                                                                            />
-                                                                        </div>
+                                                                <div className="row">
+                                                                    <div className="col-4 pe-0">
+                                                                        <PhoneInput
+                                                                            country={"ae"}
+                                                                            enableSearch={true}
+                                                                            enableClickOutside={true}
+                                                                            value={phoneCode}
+                                                                            inputProps={{ readOnly: true }}
+                                                                            onChange={(phone) => setPhoneCode(phone)}
+                                                                        />
+                                                                    </div>
+                                                                    <div className="col-8">
                                                                         <input
                                                                             className={(hasError && mobile.length < 10) ? "form-control border-red" : "form-control"}
                                                                             type="text"
@@ -486,8 +477,32 @@ export default function HolidayEnquiryForm(props) {
                                                                                 }
                                                                                 setMobile(cVal);
                                                                             }} />
-
                                                                     </div>
+                                                                </div>
+
+                                                                <div className="FormGroup mb-0 bg-white rounded-2">
+
+                                                                    {/* <label className="mb-1">Contact No.</label> */}
+                                                                    {/* <div className="position-relative PhoneNum">
+                                                                        <div className="icon position-absolute top-50 bottom-50 m-auto ">
+                                                                            <Image
+                                                                                className=""
+                                                                                loader={trvLoader}
+                                                                                src="icon/india-flag.png"
+                                                                                alt="india flag"
+                                                                                width={20}
+                                                                                height={15}
+                                                                            /> <span>+91</span>
+                                                                            <PhoneInput
+                                                                                country={"ae"}
+                                                                                enableSearch={true}
+                                                                                enableClickOutside={true}
+                                                                                value={phoneCode}
+                                                                                inputProps={{ readOnly: true }}
+                                                                                onChange={(phone) => setPhoneCode(phone)}
+                                                                            />
+                                                                        </div>
+                                                                    </div> */}
                                                                 </div>
                                                             </div>
                                                             <div className="col-12 col-md-5 py-2">

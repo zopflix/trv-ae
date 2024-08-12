@@ -301,9 +301,42 @@ export default function InquiryPopup(props) {
                 </div>
                 <div className="FormGroup mb-2">
                   <label className="mb-1">Contact No.</label>
-                  <div className="position-relative">
+                  <div className="row">
+                    <div className="col-4">
+                      <PhoneInput
+                        className="p-0"
+                        country={"ae"}
+                        enableSearch={true}
+                        enableClickOutside={true}
+                        value={phoneCode}
+                        inputProps={{ readOnly: true }}
+                        onChange={(phone) => setPhoneCode(phone)}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <input
+                        className={hasError && mobile.length < 10 ? "ps-3 form-control border-red" : "ps-3 form-control"}
+                        type="text"
+                        pattern="[0-9]*"
+                        inputMode="numeric"
+                        onPaste={(e) => e.preventDefault()}
+                        maxLength={10}
+                        placeholder="Contact Number"
+                        value={mobile}
+                        onChange={(e) => {
+                          var allowedChars = "0123456789";
+                          let cVal = e.target.value;
+                          if (allowedChars.indexOf(e.target.value.substring(e.target.value.length - 1)) == -1) {
+                            cVal = cVal.substring(0, cVal.length - 1);
+                          }
+                          setMobile(cVal);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  {/* <div className="position-relative">
                     <div className="icon pt-2 position-absolute top-50 bottom-50 m-auto">
-                      {/* <span className="fs-14">+91</span> */}
+                      <span className="fs-14">+91</span>
                       <PhoneInput
                         country={"ae"}
                         enableSearch={true}
@@ -331,7 +364,7 @@ export default function InquiryPopup(props) {
                         setMobile(cVal);
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="FormGroup mb-2">
