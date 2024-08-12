@@ -6,8 +6,9 @@ import NumericInput from "react-numeric-input";
 import { getAirports } from "../services/flightService";
 import { sendHolidayInquiry } from "../services/holidayService";
 import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
-import axios from "axios";
 import { usePathname, useSearchParams } from "next/navigation";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
 
 export default function HolidayEnquiryForm(props) {
 
@@ -33,6 +34,7 @@ export default function HolidayEnquiryForm(props) {
     const [isValidEmail, setIsValidEmail] = useState(null);
     const searchParams = useSearchParams();
     const path = usePathname();
+    const [phoneCode, setPhoneCode] = useState('971');
 
 
     const DiableKeyboardOnMobile = forwardRef(({ value, onClick }, ref) => (
@@ -96,7 +98,7 @@ export default function HolidayEnquiryForm(props) {
                 packageName: `${toAirport.city}${!!toAirport.value ? '(' + toAirport.value + ')' : ''}`,
                 travelDate: getFormattedDate8(fromDate),
                 email: email,
-                mobile: '91-' + mobile,
+                mobile: phoneCode + '-' + mobile,
                 price: 0,
                 adults: adults,
                 children: children,
@@ -450,14 +452,22 @@ export default function HolidayEnquiryForm(props) {
                                                                     {/* <label className="mb-1">Contact No.</label> */}
                                                                     <div className="position-relative PhoneNum">
                                                                         <div className="icon position-absolute top-50 bottom-50 m-auto ">
-                                                                            <Image
+                                                                            {/* <Image
                                                                                 className=""
                                                                                 loader={trvLoader}
                                                                                 src="icon/india-flag.png"
                                                                                 alt="india flag"
                                                                                 width={20}
                                                                                 height={15}
-                                                                            /> <span>+91</span>
+                                                                            /> <span>+91</span> */}
+                                                                            <PhoneInput
+                                                                                country={"ae"}
+                                                                                enableSearch={true}
+                                                                                enableClickOutside={true}
+                                                                                value={phoneCode}
+                                                                                inputProps={{ readOnly: true }}
+                                                                                onChange={(phone) => setPhoneCode(phone)}
+                                                                            />
                                                                         </div>
                                                                         <input
                                                                             className={(hasError && mobile.length < 10) ? "form-control border-red" : "form-control"}
