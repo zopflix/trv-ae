@@ -6,8 +6,9 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { sendHolidayInquiry } from "../services/holidayService";
 import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
-import axios from "axios";
 import { useSearchParams } from "next/navigation";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
 
 export default function InquiryPopup(props) {
   const [packType, setPackType] = useState("Leisure");
@@ -18,6 +19,7 @@ export default function InquiryPopup(props) {
   const [isValidEmail, setIsValidEmail] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const searchParams = useSearchParams();
+  const [phoneCode, setPhoneCode] = useState('971');
 
   useEffect(() => {
     setTravelDate(props.travelDate);
@@ -26,14 +28,7 @@ export default function InquiryPopup(props) {
   const submitInquiry = async () => {
     setIsSubmitting(true);
     setHasError(false);
-    if (
-      !!props.package?.Title &&
-      travelDate &&
-      !!mobile &&
-      mobile.length == 10 &&
-      !!email &&
-      isValidEmail
-    ) {
+    if (!!props.package?.Title && travelDate && !!mobile && mobile.length == 10 && !!email && isValidEmail) {
       // const res = await axios.get("https://geolocation-db.com/json/");
       const res = '';
       let payload = {
@@ -42,10 +37,8 @@ export default function InquiryPopup(props) {
         packageName: props.package?.Title,
         travelDate: getFormattedDate8(travelDate),
         email: email,
-        mobile: "91-" + mobile,
-        price: props.totalPrice
-          ? props.totalPrice
-          : props.package?.StandardPrice,
+        mobile: phoneCode + "-" + mobile,
+        price: props.totalPrice ? props.totalPrice : props.package?.StandardPrice,
         adults: props.adults ? props.adults : 1,
         children: props.children ? props.children : 0,
         placeFrom: 'NA',
@@ -281,34 +274,21 @@ export default function InquiryPopup(props) {
                       />
                     </div>
                     <input
-                      className={
-                        (hasError && !email) || isValidEmail == false
-                          ? "form-control border-red"
-                          : "form-control"
-                      }
+                      className={(hasError && !email) || isValidEmail == false ? "form-control border-red" : "form-control"}
                       type="text"
                       placeholder="Email Address"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
-                        var validRegex =
-                          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                        if (
-                          e.target.value.match(validRegex) &&
-                          e.target.value.match(validRegex).length > 0
-                        )
+                        var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                        if (e.target.value.match(validRegex) && e.target.value.match(validRegex).length > 0)
                           setIsValidEmail(true);
                         else setIsValidEmail(null);
                       }}
                       onBlur={(e) => {
                         if (e.target.value.length > 0) {
-                          var validRegex =
-                            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                          setIsValidEmail(
-                            (e.target.value.match(validRegex) &&
-                              e.target.value.match(validRegex).length > 0) ==
-                              true
-                          );
+                          var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                          setIsValidEmail((e.target.value.match(validRegex) && e.target.value.match(validRegex).length > 0) == true);
                         }
                       }}
                       onFocus={(e) => {
@@ -321,16 +301,53 @@ export default function InquiryPopup(props) {
                 </div>
                 <div className="FormGroup mb-2">
                   <label className="mb-1">Contact No.</label>
-                  <div className="position-relative">
+                  <div className="row">
+                    <div className="col-5 col-md-4">
+                      <PhoneInput
+                        className="p-0"
+                        country={"ae"}
+                        enableSearch={true}
+                        enableClickOutside={true}
+                        value={phoneCode}
+                        inputProps={{ readOnly: true }}
+                        onChange={(phone) => setPhoneCode(phone)}
+                      />
+                    </div>
+                    <div className="col-7 col-md-8">
+                      <input
+                        className={hasError && mobile.length < 10 ? "ps-3 form-control border-red" : "ps-3 form-control"}
+                        type="text"
+                        pattern="[0-9]*"
+                        inputMode="numeric"
+                        onPaste={(e) => e.preventDefault()}
+                        maxLength={10}
+                        placeholder="Contact Number"
+                        value={mobile}
+                        onChange={(e) => {
+                          var allowedChars = "0123456789";
+                          let cVal = e.target.value;
+                          if (allowedChars.indexOf(e.target.value.substring(e.target.value.length - 1)) == -1) {
+                            cVal = cVal.substring(0, cVal.length - 1);
+                          }
+                          setMobile(cVal);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  {/* <div className="position-relative">
                     <div className="icon pt-2 position-absolute top-50 bottom-50 m-auto">
                       <span className="fs-14">+91</span>
+                      <PhoneInput
+                        country={"ae"}
+                        enableSearch={true}
+                        enableClickOutside={true}
+                        value={phoneCode}
+                        inputProps={{ readOnly: true }}
+                        onChange={(phone) => setPhoneCode(phone)}
+                      />
                     </div>
                     <input
-                      className={
-                        hasError && mobile.length < 10
-                          ? "form-control border-red"
-                          : "form-control"
-                      }
+                      className={hasError && mobile.length < 10 ? "form-control border-red" : "form-control"}
                       type="text"
                       pattern="[0-9]*"
                       inputMode="numeric"
@@ -341,17 +358,13 @@ export default function InquiryPopup(props) {
                       onChange={(e) => {
                         var allowedChars = "0123456789";
                         let cVal = e.target.value;
-                        if (
-                          allowedChars.indexOf(
-                            e.target.value.substring(e.target.value.length - 1)
-                          ) == -1
-                        ) {
+                        if (allowedChars.indexOf(e.target.value.substring(e.target.value.length - 1)) == -1) {
                           cVal = cVal.substring(0, cVal.length - 1);
                         }
                         setMobile(cVal);
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="FormGroup mb-2">
@@ -361,11 +374,10 @@ export default function InquiryPopup(props) {
                     disabled={isSubmitting}
                     onClick={() => submitInquiry()}
                   >
-                    {isSubmitting ? (
-                      <div className="spinner-border" role="status"></div>
-                    ) : (
-                      <span>Enquire</span>
-                    )}
+                    {isSubmitting
+                      ? <div className="spinner-border" role="status"></div>
+                      : <span>Enquire</span>
+                    }
                   </button>
                 </div>
               </form>

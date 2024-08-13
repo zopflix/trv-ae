@@ -490,10 +490,11 @@ body.custom-listing .ContactStrapMobilebox {
 
 .FormBoxWrp {
     position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 50px;
+    left: 0;
+    right: 0;
+    top: 50%;
     z-index: 9;
+    transform: translate(0px, -50%);
 }
 
 /* media start */
