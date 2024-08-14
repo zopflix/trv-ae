@@ -24,8 +24,8 @@ export default function GoogleReviews() {
 
     useEffect(() => {
         getGoogleReviews().then(res => {
-            let sorted = res?.reviews?.sort((a, b) => parseInt(b.time) - parseInt(a.time));
-            setTotalReviews(res?.company?.review_count);
+            let sorted = res?.data?.reviews?.sort((a, b) => parseInt(b.time) - parseInt(a.time));
+            setTotalReviews(res?.data?.user_ratings_total);
             setReviews(sorted);
         });
     }, []);
@@ -85,43 +85,41 @@ export default function GoogleReviews() {
                     <div className="col-12">
                         <div className="position-relative">
                             <Slider {...sliderSettings}>
-                                {reviews?.length > 0 &&
-                                    reviews?.map((review, ix) => {
-                                        return <div className="slider-items" key={ix}>
-                                            <div className="p-3 rounded-3">
-
-                                                <div className="d-flex">
-                                                    <div>
-                                                        <div className="GoogleReviewUserProfile">
-                                                            <Image
-                                                                className="me-2"
-                                                                loader={sfLoader}
-                                                                src={review.profile_photo_url}
-                                                                alt="profile img"
-                                                                width={50}
-                                                                height={50}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <a className="color-blue text-decoration-none fw-bold" href={review.author_url} target="_blank">{review.author_name}</a>
-                                                        <p className="mb-1 fs-12">{getDaysAgo(parseInt(review.time))}</p>
-                                                        <div className="GoogleReviewStar">
-                                                            <i className="fa fa-star color-orange fs-20"></i>
-                                                            <i className="fa fa-star color-orange fs-20"></i>
-                                                            <i className="fa fa-star color-orange fs-20"></i>
-                                                            <i className="fa fa-star color-orange fs-20"></i>
-                                                            {(parseInt(review.rating) > 4 && parseInt(review.rating) < 5) && <i className="fa fa-star-half color-orange fs-20"></i>}
-                                                            {(parseInt(review.rating) == 5) && <i className="fa fa-star color-orange fs-20"></i>}
-                                                        </div>
+                                {reviews?.length > 0 && reviews?.map((review, ix) => {
+                                    return <div className="slider-items" key={ix}>
+                                        <div className="p-3 rounded-3">
+                                            <div className="d-flex">
+                                                <div>
+                                                    <div className="GoogleReviewUserProfile">
+                                                        <Image
+                                                            className="me-2"
+                                                            loader={sfLoader}
+                                                            src={review.profile_photo_url}
+                                                            alt="profile img"
+                                                            width={50}
+                                                            height={50}
+                                                        />
                                                     </div>
                                                 </div>
-                                                <div className="viewContent mt-2">
-                                                    <p className="view fs-12 mb-0">{review.text}</p>
+                                                <div>
+                                                    <a className="color-blue text-decoration-none fw-bold" href={review.author_url} target="_blank">{review.author_name}</a>
+                                                    <p className="mb-1 fs-12">{getDaysAgo(parseInt(review.time))}</p>
+                                                    <div className="GoogleReviewStar">
+                                                        <i className="fa fa-star color-orange fs-20"></i>
+                                                        <i className="fa fa-star color-orange fs-20"></i>
+                                                        <i className="fa fa-star color-orange fs-20"></i>
+                                                        <i className="fa fa-star color-orange fs-20"></i>
+                                                        {(parseInt(review.rating) > 4 && parseInt(review.rating) < 5) && <i className="fa fa-star-half color-orange fs-20"></i>}
+                                                        {(parseInt(review.rating) == 5) && <i className="fa fa-star color-orange fs-20"></i>}
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div className="viewContent mt-2">
+                                                <p className="view fs-12 mb-0">{review.text}</p>
+                                            </div>
                                         </div>
-                                    })}
+                                    </div>
+                                })}
                             </Slider>
                         </div>
                     </div>
