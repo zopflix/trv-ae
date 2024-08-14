@@ -51,7 +51,7 @@ export default function Home() {
             />
           </div>
           <div className='spaceDivider'></div>
-          {/* <GoogleReviews /> */}
+          <GoogleReviews />
           <div className='spaceDivider'></div>
           <HolidayCategories />
           <SubscribeNewsletter></SubscribeNewsletter>
