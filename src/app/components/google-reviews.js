@@ -98,10 +98,10 @@ export default function GoogleReviews() {
                                                 <div>
                                                     <a className="color-blue text-decoration-none fw-bold" href={review.author_url} target="_blank">{review.author_name}</a>
                                                     <p className="mb-1 fs-12">{getDaysAgo(parseInt(review.time))}</p>
-                                                    <div className="GoogleReviewStar">
+                                                    {/* <div className="GoogleReviewStar">
                                                         {(parseInt(review.rating) > 4 && parseInt(review.rating) < 5) && <>test i tag</>}
                                                         {(parseInt(review.rating) == 5) && <>test i tag</>}
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                             <div className="viewContent mt-2">
