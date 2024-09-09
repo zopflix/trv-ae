@@ -208,8 +208,8 @@ export default function SeatSelectionDetail(props) {
                             segments.map((segment, index) => {
                                 return (
                                     <li className="nav-item pb-1" role="presentation">
-                                        <button className={`${index == selectedSegmentIndex ? 'nav-link active' : 'nav-link'}`} 
-                                        id="SeatTabOne-tab"
+                                        <button className={`${index == selectedSegmentIndex ? 'nav-link active' : 'nav-link'}`}
+                                            id="SeatTabOne-tab"
                                             data-bs-toggle="pill" data-bs-target={`#SeatTab_${index}`}
                                             type="button" role="tab" aria-controls="SeatTabOne" aria-selected="true"
                                             onClick={(e) => {
@@ -258,11 +258,9 @@ export default function SeatSelectionDetail(props) {
                                                                 {p.seat &&
                                                                     <span className="ms-2 position-relative SelectSeatDetail active">
                                                                         {p.seat.code}
-                                                                        <i className="fs-14 cursor-pointer fa-solid fa-circle-xmark color-red position-absolute end-0 top-0"
-                                                                            onClick={(e) => {
-                                                                                selectSeat(i, p.seat, true);
-                                                                            }}
-                                                                        ></i>
+                                                                        <p className="mb-0" onClick={(e) => {
+                                                                            selectSeat(i, p.seat, true);
+                                                                        }}>test i tag</p>
                                                                     </span>
                                                                 }
                                                             </div>

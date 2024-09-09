@@ -243,9 +243,6 @@ export default function HolidayForm(props) {
                                                 </button>
                                                 <div className="dropdown-menu p-0 rounded-0" aria-labelledby="fromCity">
                                                     <div className="SearchCityBox d-flex align-items-center">
-                                                        <div className="ms-3">
-                                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                                        </div>
                                                         <div>
                                                             <input className="border-0" autoComplete="off" type="text" placeholder="Where From?" id='fromAirport'
                                                                 value={fromInputValue}
@@ -333,9 +330,6 @@ export default function HolidayForm(props) {
                                                 </button>
                                                 <div className="dropdown-menu p-0 rounded-0" aria-labelledby="toCity">
                                                     <div className="SearchCityBox d-flex align-items-center">
-                                                        <div className="ms-3">
-                                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                                        </div>
                                                         <div>
                                                             <input className="border-0" autoComplete="off" type="text" id='toAirport' placeholder="Where To?"
                                                                 value={toInputValue}

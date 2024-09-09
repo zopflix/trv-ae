@@ -57,13 +57,7 @@ export default function GoogleReviews() {
                                     </div>
                                     <div className="d-flex align-items-center">
                                         <div>
-                                            <div className="GoogleReviewStar py-2">
-                                                <i className="fa fa-star color-orange fs-20"></i>
-                                                <i className="fa fa-star color-orange fs-20"></i>
-                                                <i className="fa fa-star color-orange fs-20"></i>
-                                                <i className="fa fa-star color-orange fs-20"></i>
-                                                <i className="fa fa-star-half color-orange fs-20"></i>
-                                            </div>
+                                            
                                         </div>
                                         <div>
                                             <p className="fs-12 mb-0">Based on {totalReviews} reviews</p>
@@ -105,12 +99,8 @@ export default function GoogleReviews() {
                                                     <a className="color-blue text-decoration-none fw-bold" href={review.author_url} target="_blank">{review.author_name}</a>
                                                     <p className="mb-1 fs-12">{getDaysAgo(parseInt(review.time))}</p>
                                                     <div className="GoogleReviewStar">
-                                                        <i className="fa fa-star color-orange fs-20"></i>
-                                                        <i className="fa fa-star color-orange fs-20"></i>
-                                                        <i className="fa fa-star color-orange fs-20"></i>
-                                                        <i className="fa fa-star color-orange fs-20"></i>
-                                                        {(parseInt(review.rating) > 4 && parseInt(review.rating) < 5) && <i className="fa fa-star-half color-orange fs-20"></i>}
-                                                        {(parseInt(review.rating) == 5) && <i className="fa fa-star color-orange fs-20"></i>}
+                                                        {(parseInt(review.rating) > 4 && parseInt(review.rating) < 5) && <>test i tag</>}
+                                                        {(parseInt(review.rating) == 5) && <>test i tag</>}
                                                     </div>
                                                 </div>
                                             </div>

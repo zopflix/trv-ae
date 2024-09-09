@@ -76,9 +76,6 @@ export default function SubscribeNewsletter() {
                                     <p className="color-white text-center fs-14">Save up to 50% on tours! Get exclusive access to members only deals by email.</p>
                                     <form>
                                         <div className="input-group mb-3">
-                                            {/* <span className="input-group-text" id="basic-addon1">
-                                                <i className="fa-regular fa-envelope"></i>
-                                            </span> */}
                                             <input type="email" className="form-control py-3 fs-12" id="email" placeholder="Enter email" name="email" required
                                                 onChange={(e) => {
                                                     var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

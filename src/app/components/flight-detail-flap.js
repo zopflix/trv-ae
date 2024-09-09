@@ -188,7 +188,6 @@ export default function FlightDetailFlap(props) {
                                                 {
                                                     (fl.departeddate != fl?.arrivalAt) &&
                                                     <div className="flight-time-alrt">
-                                                        {/* <i className="fa fa-exclamation-triangle" aria-hidden="true"></i> */}
                                                         <span className="orange-text">Arrives {getFormattedDate(fl.arrivalAt)}</span>
                                                     </div>
                                                 }
@@ -310,7 +309,6 @@ export default function FlightDetailFlap(props) {
                                                     {
                                                         (fl.departeddate != fl?.arrivalAt) &&
                                                         <div className="flight-time-alrt">
-                                                            {/* <i className="fa fa-exclamation-triangle" aria-hidden="true"></i> */}
                                                             <span className="orange-text">Arrives {getFormattedDate(fl.arrivalAt)}</span>
                                                         </div>
                                                     }

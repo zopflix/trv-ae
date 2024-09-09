@@ -1297,10 +1297,10 @@ export default function Results() {
                         <>
                           <h6 className="mb-0 fw-bolder">{fromCode}</h6>
                           {tripType == 1 && (
-                            <i className="mx-1 fa-solid fa-arrow-right"></i>
+                            <span>test i tag</span>
                           )}
                           {tripType == 2 && (
-                            <i className="fa-solid fa-arrow-right-arrow-left ms-2 me-2"></i>
+                            <span>test i tag</span>
                           )}
                           <h6 className="mb-0 fw-bolder">{toCode}</h6>
                         </>
@@ -1321,7 +1321,7 @@ export default function Results() {
                   )}
                 </div>
                 <div className="col-2">
-                  <i className="cursor-pointer fa-solid fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
+                  <span onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}>test i tag</span>
                 </div>
               </div>
             </div>
@@ -1375,7 +1375,6 @@ export default function Results() {
                     <h4 className="filter-sub-heading d-flex mb-0 align-items-center justify-content-between">
                       <span className="sub-heading-title dgc">Filter By</span>
                       <button className="transparent-btn sidebar-filter-close-btn" onClick={() => { setOpenFilters(false); document.body.classList.remove("filter-open"); }}>
-                        <i className="fa-solid fa-xmark"></i>
                       </button>
                     </h4>
                   </div>
@@ -2365,7 +2364,6 @@ export default function Results() {
                                                         }}
                                                       >
                                                         Details
-                                                        <i className="fa-solid fa-chevron-right"></i>
                                                       </button>
                                                     </div>
                                                   </div> */}
@@ -2575,7 +2573,7 @@ export default function Results() {
                                                     setFlightForFlap(fl);
                                                     setRtnFlightForFlap(null);
                                                     setShowContinueBtn(false);
-                                                  }}>Details <i className="fa-solid fa-chevron-right"></i></button>
+                                                  }}>Details</button>
                                                 </div>
                                               </div> */}
                                                 </div>
@@ -3161,12 +3159,12 @@ export default function Results() {
                             itemsCounter <= filteredFlights.length &&
                             returnTBOFlights.length == 0 && (
                               <button className="transparent-btn active" onClick={() => { let endValue = itemsCounter + 10; setItemsCounter(endValue); }}>
-                                <span>Show More Flights</span> <i className="fa-solid fa-arrow-down ms-2"></i>
+                                <span>Show More Flights</span>
                               </button>
                             )}
                           {(filteredFlights.length > 0 || rtnFilteredFlights.length > 0) && (
                             <button className="transparent-btn ms-2" onClick={() => window.scroll(0, 0)}>
-                              <span>Back to Top</span> <i className="fa-solid fa-arrow-up ms-2"></i>
+                              <span>Back to Top</span>
                             </button>
                           )}
                         </div>
@@ -3599,7 +3597,7 @@ export default function Results() {
                         setRtnFlightForFlap(rtnFl);
                       }
                       setShowContinueBtn(true);
-                    }}>Details<i className="fa-solid fa-chevron-right"></i></button> */}
+                    }}>Details</button> */}
                       <h2 className="my-2 dgc">{aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split(".")[0]}</h2>
                       <button
                         className="btn-style1 active float-end"
@@ -3643,7 +3641,7 @@ export default function Results() {
                           }
                           setShowContinueBtn(true);
                         }}
-                      >Details <i className="fs-12 ms-1 fa-solid fa-chevron-right"></i></button>
+                      >Details</button>
                     </div>
                   </div>
                   <div className="col-4 col-sm-4 col-md-4">

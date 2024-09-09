@@ -903,7 +903,7 @@ export default function Results(props) {
             //     <div className='col-5'>
             //       <div className='d-flex align-items-center'>
             //         <h6 className='mb-0 fw-bolder color-white'>{JSON.parse(state.searchCriteria).segments[0].fromCode}</h6>
-            //         <i className="fa-solid fa-arrow-right-arrow-left color-white ms-2 me-2"></i>
+            //         
             //         <h6 className='mb-0 color-white fw-bolder'>{JSON.parse(state.searchCriteria).segments[0].toCode}</h6>
             //       </div>
             //     </div>
@@ -913,7 +913,7 @@ export default function Results(props) {
             //       <span>{JSON.parse(state.searchCriteria).tripType == 2 ? "Round Trip" : "One Way"}</span>
             //     </div>
             //     <div className='col-2'>
-            //       <i className="fa-regular fa-pen-to-square float-end h4 mb-0 color-white" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
+            //       
             //     </div>
             //   </div>
             // </div>
@@ -926,7 +926,6 @@ export default function Results(props) {
                     currentFilters && currentFilters.segments && currentFilters.segments.length > 0 &&
                     <>
                       <h6 className='mb-0 fw-bolder'>{currentFilters.segments[0].fromCode}</h6>
-                      <i className="fa-solid fa-arrow-right-arrow-left ms-2 me-2"></i>
                       <h6 className='mb-0 fw-bolder'>{currentFilters.segments[0].toCode}</h6>
                     </>
                   }
@@ -944,7 +943,7 @@ export default function Results(props) {
                 }
               </div>
               <div className='col-2'>
-                <i className="fa-regular fa-pen-to-square float-end h4 mb-0" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
+                <span onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}>test tag</span>
               </div>
             </div>
           </div>
@@ -999,7 +998,6 @@ export default function Results(props) {
                         setOpenFilters(false);
                         document.body.classList.remove('filter-open');
                       }}>
-                        <i className="fa-solid fa-xmark"></i>
                       </button>
                     </h4>
                   </div>
@@ -1658,28 +1656,28 @@ export default function Results(props) {
                                     </div>
                                     <div className='col-4 col-md-7'>
                                       <div className='air-flight-price text-end'>
-                                      <button
-                                                className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center"
-                                                onClick={(e) => {
-                                                  e.stopPropagation();
-                                                  handleBookFlight(
-                                                    flightIndex,
-                                                    flight,
-                                                    avgPrice,
-                                                    totalPax
-                                                  );
-                                                }}
-                                              >
-                                                {showSpinnerIndex ===
-                                                  flightIndex ? (
-                                                  <span
-                                                    className="spinner-border text-white"
-                                                    role="status"
-                                                  ></span>
-                                                ) : (
-                                                  <span>Book</span>
-                                                )}
-                                              </button>
+                                        <button
+                                          className="bg-orange color-white rounded-2 fs-14 py-2 px-4 border-0 float-end text-center"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleBookFlight(
+                                              flightIndex,
+                                              flight,
+                                              avgPrice,
+                                              totalPax
+                                            );
+                                          }}
+                                        >
+                                          {showSpinnerIndex ===
+                                            flightIndex ? (
+                                            <span
+                                              className="spinner-border text-white"
+                                              role="status"
+                                            ></span>
+                                          ) : (
+                                            <span>Book</span>
+                                          )}
+                                        </button>
                                       </div>
                                     </div>
                                   </div>
@@ -1872,7 +1870,7 @@ export default function Results(props) {
                                                     setFlightForFlap(fl);
                                                     setRtnFlightForFlap(null);
                                                     setShowContinueBtn(false);
-                                                  }}>Details<i className="fa-solid fa-chevron-right"></i></button>
+                                                  }}>Details</button>
                                                 </div>
                                               </div>
                                             </div>
@@ -2039,7 +2037,7 @@ export default function Results(props) {
                                                     setFlightForFlap(fl);
                                                     setRtnFlightForFlap(null);
                                                     setShowContinueBtn(false);
-                                                  }}>Details <i className="fa-solid fa-chevron-right"></i></button>
+                                                  }}>Details</button>
                                                 </div>
                                               </div>
                                             </div>
@@ -2566,14 +2564,12 @@ export default function Results(props) {
                                 setItemsCounter(endValue);
                               }}>
                               <span>Show More Flights</span>
-                              <i className="fa-solid fa-arrow-down ms-2"></i>
                             </button>
                           }
                           {
                             (filteredFlights.length > 0 || rtnFilteredFlights.length > 0) &&
                             <button className='transparent-btn ms-2' onClick={() => window.scroll(0, 0)}>
                               <span>Back to Top</span>
-                              <i className="fa-solid fa-arrow-up ms-2"></i>
                             </button>
                           }
                         </div>
@@ -2929,7 +2925,7 @@ export default function Results(props) {
                         setRtnFlightForFlap(rtnFl);
                       }
                       setShowContinueBtn(true);
-                    }}>Details<i className="fa-solid fa-chevron-right"></i></button>
+                    }}>Details</button>
                     <h2 className="my-2 dgc">{aedNumberFormat(selectedDepartTBOFlight.totalPrice + selectedReturnTBOFlight.totalPrice).split('.')[0]}</h2>
                     <button className="btn-style1 active float-end" onClick={() => {
                       localStorage.setItem("departFlight", JSON.stringify(selectedDepartTBOFlight));
@@ -2961,7 +2957,7 @@ export default function Results(props) {
                         setRtnFlightForFlap(rtnFl);
                       }
                       setShowContinueBtn(true);
-                    }}>Details <i className="fa-solid fa-chevron-right"></i></button>
+                    }}>Details</button>
                   </div>
                 </div>
                 <div className='col-4 col-sm-4 col-md-4'>

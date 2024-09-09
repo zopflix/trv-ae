@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState,useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getFormattedDate8, getCreditCardYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, isJsonString, isValidCardExpiry, isValidDayOfMonth, aedNumberFormat, trackMixpanelEvent, gtag_report_conversion } from '../helpers/common';
 import Layout from '../components/inner-layout';
 import PhoneInput from 'react-phone-input-2';
@@ -15,7 +15,7 @@ import { getPlaceDetail } from '../services/flightService';
 import { Modal } from 'react-bootstrap';
 import axios from 'axios';
 import { bookFlight } from '../services/bookingService';
-import { contactNumber ,flightContactNumber, holidayContactNumber} from '../config';
+import { contactNumber, flightContactNumber, holidayContactNumber } from '../config';
 import Image from "next/image"
 import { airlineLogoLoader, trvLoader } from "../helpers/imageKitLoader"
 import InnterFooter from '../components/inner-footer';
@@ -115,59 +115,59 @@ export default function CheckoutPage() {
     }, [path, flightContactNumber]);
 
     const goToNextTab = (tab, checkValidation = false) => {
-     
+
         let validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (
-          !billingDetail.contactDetail.email.match(validRegex) ||
-          billingDetail.contactDetail.email.match(validRegex).length < 1
+            !billingDetail.contactDetail.email.match(validRegex) ||
+            billingDetail.contactDetail.email.match(validRegex).length < 1
         ) {
-          isInvalidContact = true;
-          setIsValidEmail(false);
+            isInvalidContact = true;
+            setIsValidEmail(false);
         } else setIsValidEmail(true);
-    
+
         if (billingDetail.contactDetail.contactNo.length != 10) {
-          isInvalidContact = true;
-          setIsValidPhoneNumber(false);
+            isInvalidContact = true;
+            setIsValidPhoneNumber(false);
         } else setIsValidPhoneNumber(true);
-    
+
         const hasInvalidAge = passangers.some((x) => x.isAgeValid == false);
         if (hasInvalidAge) return;
-    
+
         psgs = cloneData(passangers);
         setEditPsgs(psgs);
         invalidTravellers = passangers.filter(
-          (x) =>
-            !x.gender ||
-            x.gender <= 0 ||
-            !x.firstName ||
-            !x.lastName ||
-            !x.dayOfBirth ||
-            !x.monthOfBirth ||
-            !x.yearOFBirth ||
-            !x.paxTitle
+            (x) =>
+                !x.gender ||
+                x.gender <= 0 ||
+                !x.firstName ||
+                !x.lastName ||
+                !x.dayOfBirth ||
+                !x.monthOfBirth ||
+                !x.yearOFBirth ||
+                !x.paxTitle
         );
-    
+
         if (isInvalidContact) {
             errorInputRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
+                behavior: "smooth",
+                block: "center",
             });
-          } else {
+        } else {
             setIsInvalidTravellers(false);
-          }
-          if (invalidTravellers.length > 0 || isInvalidContact) {
+        }
+        if (invalidTravellers.length > 0 || isInvalidContact) {
             setIsInvalidTravellers(true);
             errorInputRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
+                behavior: "smooth",
+                block: "center",
             });
-          }
-           setIsInvalidTravellers(invalidTravellers.length > 0);
-          if (invalidTravellers.length > 0 || isInvalidContact) return;
-          setIsInvalidTravellers(false);
-    
-    return true
-      };
+        }
+        setIsInvalidTravellers(invalidTravellers.length > 0);
+        if (invalidTravellers.length > 0 || isInvalidContact) return;
+        setIsInvalidTravellers(false);
+
+        return true
+    };
 
     const isPassengerValid = (paxType, allPsgs, isUpdate = false) => {
         allPsgs.forEach((psg, index) => {
@@ -251,12 +251,12 @@ export default function CheckoutPage() {
             let addressInfoElement = document.getElementById("billing-information");
             if (!goToNextTabResult) return;
             addressInfoElement.scrollIntoView();
-          }
-      
+        }
+
 
         if (
-            !isInvalidDetail 
-           
+            !isInvalidDetail
+
         ) {
             passangers.forEach((psg) => {
                 // psg.dob = new Date(psg.yearOFBirth, psg.monthOfBirth - 1, psg.dayOfBirth).toLocaleDateString();
@@ -518,7 +518,14 @@ export default function CheckoutPage() {
                             <div className='row align-items-center'>
                                 <div className='tab-block col-12 col-md-4 col-lg-3 col-xl-2'>
                                     <button className='transparent-btn' onClick={async () => { setOpenBackModal(true); }}>
-                                        <i className="me-3 fa-solid fa-arrow-left"></i>
+                                        <Image
+                                            className="h-auto me-2"
+                                            loader={trvLoader}
+                                            src="icon/left-arrow.svg"
+                                            alt="left arrow icon"
+                                            width={7}
+                                            height={45}
+                                        />
                                         <span>Back to Results</span>
                                     </button>
                                 </div>
@@ -777,8 +784,8 @@ export default function CheckoutPage() {
                                             </div>
                                             <div className='row'>
                                                 <div className='col-12'>
-                                                    <div                             ref={errorInputRef}
- className='important-note mt-2'>
+                                                    <div ref={errorInputRef}
+                                                        className='important-note mt-2'>
                                                         <strong>Important!</strong>
                                                         <span> Provide your valid email and phone to recieve e-tickets and important messages. This will also be used as billing email id and phone number.</span>
                                                     </div>
@@ -993,7 +1000,7 @@ export default function CheckoutPage() {
                                                                         <button type="button" onClick={async () => {
                                                                             setShowManualAddress(true);
                                                                             await trackMixpanelEvent("Add_Manual_Address");
-                                                                        }}><i className="fa fa-plus"></i> Add Manually</button>
+                                                                        }}>Add Manually</button>
                                                                     }
                                                                     {
                                                                         ((billingDetail?.country == "United States" &&
@@ -1001,7 +1008,7 @@ export default function CheckoutPage() {
                                                                             billingDetail?.country == "Australia") || showManualAddress) &&
                                                                         <button type="button" onClick={() => {
                                                                             setShowManualAddress(false);
-                                                                        }}><i className="fa fa-search" aria-hidden="true"></i> Search Address</button>
+                                                                        }}>Search Address</button>
                                                                     }
                                                                 </div>
                                                             </div>

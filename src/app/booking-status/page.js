@@ -91,7 +91,7 @@ export default function Confirmation() {
                         <div className="modal-content">
 
                             <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close" onClick={() => redirectToSearch()}>
-                                <i className="fas fa-times"></i>
+                                
                             </button>
                             {
                                 <div className="modal-body">
@@ -105,7 +105,7 @@ export default function Confirmation() {
                                                 <p>We will call you and process this manually!!</p>
                                             </div>
                                             <div className="contact_number">
-                                                <a className="btn_common" href={"tel:" + displayContactNumber}>Call Now <i className="fas fa-phone-alt" ></i> {displayContactNumber}</a>
+                                                <a className="btn_common" href={"tel:" + displayContactNumber}>Call Now {displayContactNumber}</a>
                                             </div>
 
                                         </div>
