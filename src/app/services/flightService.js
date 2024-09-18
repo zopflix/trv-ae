@@ -188,7 +188,7 @@ const getSitemapData = async () => {
 
 const getGoogleReviews = async () => {
     try {
-        const response = await axios.post(`https://www.myticketstoindia.com.au/wp-content/themes/tickets/ajax.php?task=reviews`);
+        const response = await axios.post(`https://www.myticketstoindia.com.au/wp-content/themes/tickets/ajax.php?task=reviews_new`);
         return response.data;
     } catch (error) {
         return [];

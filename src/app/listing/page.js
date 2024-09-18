@@ -1355,8 +1355,7 @@ export default function Listing() {
           //     <div className='row align-items-center'>
           //       <div className='col-5'>
           //         <div className='d-flex align-items-center'>
-          //           <h6 className='mb-0 fw-bolder color-white'>{JSON.parse(state.searchCriteria).segments[0].fromCode}</h6>
-          //           <i className="fa-solid fa-arrow-right-arrow-left color-white ms-2 me-2"></i>
+          //           <h6 className='mb-0 fw-bolder color-white'>{JSON.parse(state.searchCriteria).segments[0].fromCode}</h6> 
           //           <h6 className='mb-0 color-white fw-bolder'>{JSON.parse(state.searchCriteria).segments[0].toCode}</h6>
           //         </div>
           //       </div>
@@ -1366,7 +1365,7 @@ export default function Listing() {
           //         <span>{JSON.parse(state.searchCriteria).tripType == 2 ? "Round Trip" : "One Way"}</span>
           //       </div>
           //       <div className='col-2'>
-          //         <i className="fa-regular fa-pen-to-square float-end h4 mb-0 color-white" onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></i>
+          //         
           //       </div>
           //     </div>
           //   </div>
@@ -1383,9 +1382,9 @@ export default function Listing() {
                             {currentFilters.segments[0].fromCode}
                           </h6>
                           {currentFilters.segments.length > 1 ? (
-                            <i className="fa-solid fa-arrow-right-arrow-left ms-2 me-2"></i>
+                            <span>test i tag</span>
                           ) : (
-                            <i className="fa-solid fa-arrow-right ms-2 me-2"></i>
+                            <span>test i tag</span>
                           )}
 
                           <h6 className="mb-0 fw-bolder">
@@ -1510,7 +1509,7 @@ export default function Listing() {
                           document.body.classList.remove("filter-open");
                         }}
                       >
-                        <i className="fa-solid fa-xmark"></i>
+                        <span>test i tag</span>
                       </button>
                     </h4>
                   </div>
@@ -4173,7 +4172,7 @@ export default function Listing() {
                                 }}
                               >
                                 <span>Show More</span>
-                                <i className="fa-solid fa-arrow-down ms-2"></i>
+                                <span>test i tag</span>
                               </button>
                             )}
                           <button
@@ -4181,7 +4180,7 @@ export default function Listing() {
                             onClick={() => window.scroll(0, 0)}
                           >
                             <span>Back to Top</span>
-                            <i className="fa-solid fa-arrow-up ms-2"></i>
+                            <span>test i tag</span>
                           </button>
                         </div>
                       </div>

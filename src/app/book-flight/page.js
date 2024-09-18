@@ -1,5 +1,5 @@
 "use client"
-import { Fragment, useEffect, useState,useRef } from 'react'
+import { Fragment, useEffect, useState, useRef } from 'react'
 import { Decrypt, cloneData, getAdultYearOptions, getAge, getBrowser, getChildYearOptions, getDeviceName, getDiffFromMinutes, getFirstAdultYearOptions, getFormattedDate4, getFormattedDate6, getFormattedDate7, getFormattedTime, getInfantsYearOptions, gtag_report_conversion, isJsonString, isValidDayOfMonth, aedNumberFormat, trackMixpanelEvent } from '../helpers/common';
 import Layout from '../components/inner-layout';
 import PhoneInput from 'react-phone-input-2';
@@ -129,7 +129,7 @@ export default function CheckoutPage() {
   }
 
   const goToNextTab = (tab, checkValidation = false) => {
-   
+
     let validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (
       !billingDetail.contactDetail.email.match(validRegex) ||
@@ -191,7 +191,7 @@ export default function CheckoutPage() {
         block: "center",
       });
     }
-     setIsInvalidTravellers(invalidTravellers.length > 0);
+    setIsInvalidTravellers(invalidTravellers.length > 0);
     if (invalidTravellers.length > 0 || isInvalidContact) return;
     setIsInvalidTravellers(false);
 
@@ -920,7 +920,14 @@ export default function CheckoutPage() {
                       onClick={async () => {
                         setOpenBackModal(true);
                       }}>
-                      <i className="me-3 fa-solid fa-arrow-left"></i>
+                      <Image
+                        className="h-auto me-2"
+                        loader={trvLoader}
+                        src="icon/left-arrow.svg"
+                        alt="left arrow icon"
+                        width={7}
+                        height={45}
+                      />
                       <span>Back to Results</span>
                     </button>
                   </div>
@@ -1428,7 +1435,7 @@ export default function CheckoutPage() {
                                       <button type="button" onClick={async () => {
                                         setShowManualAddress(true);
                                         await trackMixpanelEvent("Add_Manual_Address");
-                                      }}><i className="fa fa-plus"></i> Add Manually</button>
+                                      }}>Add Manually</button>
                                     }
                                     {
                                       ((billingDetail?.country == "United States" &&
@@ -1436,7 +1443,7 @@ export default function CheckoutPage() {
                                         billingDetail?.country == "Australia") || showManualAddress) &&
                                       <button type="button" onClick={() => {
                                         setShowManualAddress(false);
-                                      }}><i className="fa fa-search" aria-hidden="true"></i> Search Address</button>
+                                      }}> Search Address</button>
                                     }
                                   </div>
                                 </div>
@@ -1693,7 +1700,7 @@ export default function CheckoutPage() {
 
                         }
                       </div>
-                   
+
                       <div className='checkout-step-main-box bg-white p-3 mt-4 d-none'>
                         <div className="">
                           <div className="row align-items-center">
@@ -2222,8 +2229,8 @@ export default function CheckoutPage() {
                         </div>
                         <div className='col-12'>
                           <button className="border-0 fs-14 py-3 buttonStyle3 next w-100 d-none d-lg-inline" onClick={async () => { confirmBooking(); }}>
-                              <span className="confirm_btn">Make Payment</span>
-                            </button>
+                            <span className="confirm_btn">Make Payment</span>
+                          </button>
                         </div>
                       </div>
                       <div className="tab-content" id="nav-tabContent">
@@ -2607,7 +2614,7 @@ export default function CheckoutPage() {
         <Modal className='SeatSelectionModal' show={showSeatSelectionModal}>
           <Modal.Body >
             <button className='p-0 border-0 bg-transparent position-absolute end-0 me-4 mt-3 closePopup' onClick={() => setShowSeatSelectionModal(false)}>
-              <i className="color-white  fs-20 fa-solid fa-xmark"></i>
+              
             </button>
             <SeatSelection getPassengers={getPassengers} segments={segments} setSegments={setSegments} setShowSeatSelectionModal={setShowSeatSelectionModal} setTotalSeatPrice={setTotalSeatPrice} totalSeatPrice={totalSeatPrice} setDepartSeats={setDepartSeats} setReturnSeats={setReturnSeats} returnFlightSSRServices={returnFlightSSRServices} departFlightSSRServices={departFlightSSRServices} setSeatingSelectionDone={setSeatingSelectionDone} ></SeatSelection>
           </Modal.Body>

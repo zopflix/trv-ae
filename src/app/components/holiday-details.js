@@ -446,7 +446,7 @@ export default function HolidayDetails(props) {
                                         }}
                                       >
                                         {selectedAccommo == 0 && (
-                                          <i className="fa-solid fa-circle-check me-2"></i>
+                                          <>test i tag</>
                                         )}
                                         {selectedAccommo == 0 ? (
                                           <span className="fw-bold">Selected</span>
@@ -533,7 +533,7 @@ export default function HolidayDetails(props) {
                                         }}
                                       >
                                         {selectedAccommo == 1 && (
-                                          <i className="fa-solid fa-circle-check me-2"></i>
+                                          <>test i tag</>
                                         )}
                                         {selectedAccommo == 1 ? (
                                           <span className="fw-bold">
@@ -628,7 +628,7 @@ export default function HolidayDetails(props) {
                                         }}
                                       >
                                         {selectedAccommo == 2 && (
-                                          <i className="fa-solid fa-circle-check me-2"></i>
+                                          <>test i tag</>
                                         )}
                                         {selectedAccommo == 2 ? (
                                           <span className="fw-bold">
@@ -798,7 +798,6 @@ export default function HolidayDetails(props) {
               </p>
               <button className="btn p-0 color-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <span className="fs-12">Price Details</span>
-                <i className="fa-solid fa-chevron-right ms-2 fs-10"></i>
               </button>
 
             </div>

@@ -26,13 +26,7 @@ export default function RootLayout({ children }) {
 
         <meta name="google-site-verification" content="tNoNC9cmrm29qcMqxOk97Q-yYDyf90KXGXrc6kXSoI0" />
 
-        {/* Font Awsome */}
-        <Script
-          strategy="lazyOnload"
-          src="https://kit.fontawesome.com/2931c74514.js"
-          crossOrigin="anonymous"
-          defer
-        />
+        
         <Script
           strategy="lazyOnload"
           type="application/ld+json"

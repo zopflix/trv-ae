@@ -304,9 +304,7 @@ export default function SearchControl(props) {
                                                                     </button>
                                                                     <div className="dropdown-menu p-0 rounded-0" aria-labelledby="fromCity">
                                                                         <div className="SearchCityBox d-flex align-items-center">
-                                                                            <div className="ms-3">
-                                                                                <i className="fa-solid fa-magnifying-glass"></i>
-                                                                            </div>
+                                                                            
                                                                             <div><input className="border-0" type="text" autoComplete="off" placeholder="Where From?" id='fromAirport' onChange={(e) => { searchAirport(e.target.value); }} onFocus={(e) => e.target.value = ''} /></div>
                                                                         </div>
                                                                         <div className="SearchSectorTitle fw-bold fs-12 py-1 px-2">Searched Sectors</div>
@@ -423,9 +421,7 @@ export default function SearchControl(props) {
                                                                     </button>
                                                                     <div className="dropdown-menu p-0 rounded-0" aria-labelledby="toCity">
                                                                         <div className="SearchCityBox d-flex align-items-center">
-                                                                            <div className="ms-3">
-                                                                                <i className="fa-solid fa-magnifying-glass"></i>
-                                                                            </div>
+                                                                            
                                                                             <div>
                                                                                 <input className="border-0" type="text" autoComplete="off" id='toAirport' placeholder="Where To?" onChange={(e) => { searchAirport(e.target.value, false); }} onFocus={(e) => e.target.value = ''} />
                                                                             </div>

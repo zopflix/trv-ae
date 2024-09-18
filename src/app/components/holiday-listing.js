@@ -104,7 +104,6 @@ export default function HolidayListing(props) {
               <div className="col-12 col-sm-12 col-md-12 col-lg-3">
                 <div className="d-lg-none mb-4">
                   <button className="btn py-2 mb-3 d-flex align-items-center border border-blue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <i className="fa-solid fa-bars me-2 fs-20 color-blue"></i>
                     <span className="fs-16 fw-bold color-blue">Filter</span>
                   </button>
                   <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">

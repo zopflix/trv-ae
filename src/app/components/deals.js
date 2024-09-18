@@ -61,14 +61,12 @@ export default function DealsOffers() {
                                                                 <p className="mb-0 color-black fs-10 fw-bold me-1">USE CODE:</p>
                                                                 <p className="mb-0 color-black fs-10 fw-bold">{offer.name}</p>
                                                                 <p className="opacity-75 mb-0 color-black fs-12 mx-2">|</p>
-                                                                <i className="opacity-75 mb-0 color-black fs-16 fa-regular fa-copy"></i>
                                                             </div>
                                                             : <div className="PromoCode d-flex align-items-center p-2 rounded-2 ">
                                                                 <p className="mb-0 fs-10 fw-bold me-1 color-green">Copied</p>
                                                                 <p className="opacity-75 mb-0 color-black fs-12 mx-2">|</p>
                                                                 <p className="mb-0 color-green fs-10 fw-bold">{offer.name}</p>
                                                                 <p className="opacity-75 mb-0 color-black fs-12 mx-2">|</p>
-                                                                <i className="fa-solid fa-check fs-16 color-green"></i>
                                                             </div>
                                                         }
                                                     </CopyToClipboard>

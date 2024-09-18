@@ -2321,15 +2321,6 @@ a.btn-style1.call-btn {
     z-index: 99 !important;
 }
 
-.select-bagin .dropdown-toggle:after {
-    right: 15px;
-    position: absolute;
-    top: 7px;
-    content: "\f078";
-    font-family: FontAwesome;
-    border: 0;
-}
-
 .select-bagin .dropdown-menu li button:hover {
     background-color: #e0feff !important;
 }
@@ -2418,15 +2409,6 @@ a.btn-style1.call-btn {
     margin: 8px 0;
     position: relative;
     padding-left: 15px;
-}
-
-#fare-rules-tab div ul li:before {
-    position: absolute;
-    left: 0;
-    right: 2px;
-    content: "\f00c";
-    font-family: FontAwesome;
-    color: var(--color-blue);
 }
 
 .SeatSelectionDetailsTable .nav-pills .nav-item .nav-link {
