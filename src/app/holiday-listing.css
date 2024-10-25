@@ -775,8 +775,90 @@ button.btn-style1.active {
     width: 70px;
 }
 
-.protection-plan-footer .form-check label {
-    font-size: 14px;
+.HolidayPackageContent a {
+    color: var(--color-blue);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.HolidayPackageContent a:hover {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-blue);
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.HolidayPackageContent p {
+    font-size: 15px;
+    text-align: justify;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    line-height: 24px;
+}
+
+.HolidayPackageContent p a {
+    color: var(--color-blue) !important;
+    font-weight: 500 !important;
+}
+
+.HolidayPackageContent ul li,
+.HolidayPackageContent ol li {
+    font-size: 15px;
+    margin: 10px 0px;
+    word-spacing: 2px;
+}
+
+.HolidayPackageContent ul li strong,
+.HolidayPackageContent ol li strong {
+    color: var(--color-blue);
+}
+
+.HolidayPackageContent ul li::marker {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent img {
+    height: auto;
+}
+
+.HolidayPackageContent h1>strong,
+.HolidayPackageContent h2>strong,
+.HolidayPackageContent h3>strong {
+    font-weight: 600 !important;
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1>span,
+.HolidayPackageContent h2>span,
+.HolidayPackageContent h3>span {
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1,
+.HolidayPackageContent h2,
+.HolidayPackageContent h3,
+.HolidayPackageContent h4,
+.HolidayPackageContent h5,
+.HolidayPackageContent h6 {
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1 {
+    font-size: 30px;
+}
+
+.HolidayPackageContent h3 {
+    font-size: 18px;
+}
+
+.HolidayPackageContent h4 {
+    font-size: 18px;
 }
 
 .protection-plan-footer h6 {
@@ -3703,4 +3785,91 @@ img.img-fluid.entire-trip-bag {
 
 .dual-tickets-tooltip .dropdown-menu li ul li {
     font-size: 12px;
+}
+
+
+.HolidayPackageContent a {
+    color: var(--color-blue);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.HolidayPackageContent a:hover {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-blue);
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.HolidayPackageContent p {
+    font-size: 15px;
+    text-align: justify;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    line-height: 24px;
+}
+
+.HolidayPackageContent p a {
+    color: var(--color-blue) !important;
+    font-weight: 500 !important;
+}
+
+.HolidayPackageContent ul li,
+.HolidayPackageContent ol li {
+    font-size: 15px;
+    margin: 10px 0px;
+    word-spacing: 2px;
+}
+
+.HolidayPackageContent ul li strong,
+.HolidayPackageContent ol li strong {
+    color: var(--color-blue);
+}
+
+.HolidayPackageContent ul li::marker {
+    color: var(--color-orange);
+}
+
+.HolidayPackageContent img {
+    height: auto;
+}
+
+.HolidayPackageContent h1>strong,
+.HolidayPackageContent h2>strong,
+.HolidayPackageContent h3>strong {
+    font-weight: 600 !important;
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1>span,
+.HolidayPackageContent h2>span,
+.HolidayPackageContent h3>span {
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1,
+.HolidayPackageContent h2,
+.HolidayPackageContent h3,
+.HolidayPackageContent h4,
+.HolidayPackageContent h5,
+.HolidayPackageContent h6 {
+    color: var(--color-blue) !important;
+}
+
+.HolidayPackageContent h1 {
+    font-size: 30px;
+}
+
+.HolidayPackageContent h3 {
+    font-size: 18px;
+}
+
+.HolidayPackageContent h4 {
+    font-size: 18px;
 }
