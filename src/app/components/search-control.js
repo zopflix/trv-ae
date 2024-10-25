@@ -129,9 +129,9 @@ export default function SearchControl(props) {
                                 </div>
                             </div>
                         }
-                        <div className="bg-white pt-1 rounded-3">
+                        <div className=" pt-1 rounded-3">
                             {!isModifyComponent &&
-                                <div className="">
+                                <div className="mb-2">
                                     <div className='formTabs position-relative'>
 
                                         <ul className='ps-0 d-flex formTabsButton mb-0 list-style-none'>
@@ -166,17 +166,6 @@ export default function SearchControl(props) {
                                             </li>
 
                                         </ul>
-                                        <p className="d-none d-md-block float-end color-blue fs-16 mb-0 position-absolute top-0 end-0 me-3">
-                                            <span className="pt-2 d-inline-block fw-bold">Your DREAM DESTINATION Awaits - Pack Your Bags</span>
-                                            {/* <Image
-                                                className="h-auto position-absolute top-0"
-                                                loader={trvLoader}
-                                                src="icon/hmBannerTitleIcon.png"
-                                                alt="Flight Icon"
-                                                width={24}
-                                                height={24}
-                                            /> */}
-                                        </p>
                                     </div>
                                 </div>
                             }
@@ -184,10 +173,10 @@ export default function SearchControl(props) {
                                 ? <div className="HolidDayForm">
                                     <Suspense><HolidayEnquiryForm /></Suspense>
                                 </div>
-                                : <div className={isModifyComponent ? 'flightSearchWrp rounded-3 bg-white p-0' : 'flightSearchWrp rounded-3 bg-white p-4'}>
+                                : <div className={isModifyComponent ? 'flightSearchWrp rounded-3 bg-white p-0' : 'flightSearchWrp rounded-3 bg-white p-3'}>
                                     {(!isModifyComponent || !isBrowser)/*home page*/ &&
                                         <div className="row  align-itmes-center">
-                                            <div className="col-12 col-md-6 col-xl-4 py-2">
+                                            <div className="col-12 col-md-6 col-xl-4 px-2">
                                                 <div className="d-flex">
                                                     <div>
                                                         <label className={tripType == 1 ? "cursor-pointer form-check-label fs-14 bg-orange color-white px-3 py-1 rounded-pill active" : "cursor-pointer form-check-label fs-14 bg-grey px-3 py-1 rounded-pill"} htmlFor="onway1" onClick={() => {
@@ -211,12 +200,12 @@ export default function SearchControl(props) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-md-6 col-xl-8 py-2 text-end d-none d-md-inline"><h2 className="mb-0 color-blue fw-bold fs-20">Discover The Joy Of Flying At The Cheapest Prices!</h2></div>
+                                            <div className="col-12 col-md-6 col-xl-8 py-2 text-end d-none d-md-inline"><h2 className="mb-0 color-blue fw-bold fs-20">Your DREAM DESTINATION Awaits - Pack Your Bags</h2></div>
 
                                         </div>
                                     }
 
-                                    <div className={isModifyComponent ? "mainFlightSearchBox border py-0 px-2" : "mainFlightSearchBox border py-3 px-3"}>
+                                    <div className={isModifyComponent ? "mainFlightSearchBox border py-0 px-2" : "mainFlightSearchBox border px-3"}>
                                         <div className="row align-items-center">
                                             <div className="mobForm FieldA col-12 col-lg-5">
                                                 <div className="fromTofromBox">
@@ -611,7 +600,7 @@ export default function SearchControl(props) {
                                                                     setTripType(2);
                                                                     updateReturnDate();
 
-                                                                }}>Tap to add a return date for bigger discounts</p>
+                                                                }}>Tap to add a return date</p>
                                                             </div>
                                                         </div>
                                                     }
