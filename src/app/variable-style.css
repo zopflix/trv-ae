@@ -241,13 +241,7 @@ div .bg-transparent {
     opacity: 0.4;
 }
 
-
-.unorderList.HandList {
-    list-style-type: none;
-    padding: 0;
-}
-
-.unorderList.HandList li {
+.unorderList.earth li {
     display: flex;
     align-items: flex-start;
     padding: 15px;
