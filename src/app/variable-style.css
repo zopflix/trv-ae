@@ -87,7 +87,7 @@ div .border-color-orange {
     font-size: 24px;
 }
 
-.bg-red{
+.bg-red {
     background-color: var(--color-red);
 }
 
@@ -103,7 +103,7 @@ div .border-color-orange {
     background-color: var(--color-blue) !important;
 }
 
-.color-green{
+.color-green {
     color: green;
 }
 
@@ -239,4 +239,67 @@ div .bg-transparent {
 
 .disabled-btn {
     opacity: 0.4;
+}
+
+.unorderList.earth li {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background: #e9f7fe;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.unorderList.earth li:hover {
+    background: #d9effc;
+}
+
+.unorderList.earth li::before {
+    content: "🌏";
+    font-size: 24px;
+    margin-right: 15px;
+    color: #0073e6;
+    flex-shrink: 0;
+}
+
+
+.HandList li {
+    background-image: url('https://assets.travanya.com/icon/hand-orange-icon.svg');
+}
+
+.AirPlaneList li {
+    background-image: url('https://assets.travanya.com/icon/AirPlane-orange-icon.svg');
+}
+
+.BlubList li {
+    background-image: url('https://assets.travanya.com/icon/bulb-orange-icon.svg');
+    background-size: 15px !important;
+    padding-left: 20px !important;
+}
+
+.CheckList li {
+    background-image: url('https://assets.travanya.com/icon/check-orange-icon.svg');
+    background-size: 13px !important;
+    padding-left: 20px !important;
+}
+
+.DiscList li {
+    background-image: url('https://assets.travanya.com/icon/dot-orange-icon.svg');
+    background-size: 10px !important;
+    padding-left: 20px !important;
+}
+
+ul.unorderList li {
+    padding-left: 30px;
+    background-position: left 6px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    margin-top: 0px !important;
+}
+
+ul.unorderList {
+    list-style-type: none !important;
+    padding-left: 0px !important;
 }
