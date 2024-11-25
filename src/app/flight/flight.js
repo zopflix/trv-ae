@@ -13,7 +13,7 @@ export default function FlightPage() {
             <SearchSection />
 
             <PartnerLogo />
-            <section className="bg-grey py-5">
+            <section className="bg-grey pt-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -25,7 +25,7 @@ export default function FlightPage() {
                     </div>
                 </div>
             </section>
-            <section id="FlightsCards" className="py-5">
+            <section id="FlightsCards" className="bg-grey pb-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-3 my-3">
@@ -71,14 +71,14 @@ export default function FlightPage() {
                                             />
                                             <div className="frontDetail">
                                                 <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Maldives</h2>
                                             </div>
                                         </div>
                                         <div className="flip-card-back rounded-4">
                                             <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
-                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
-                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Maldives</h2>
+                                            <p className="fs-12 my-2">The Maldives is a dream destination known for its beautiful beaches & crystal-clear waters. Travelers from the UAE can find great flight options, these routes often offer affordable fares, making it easier to escape to paradise & enjoy a relaxing getaway in this tropical haven.</p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Maldives, Abu Dhabi to Maldives & Sharjah to Maldives</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,14 +99,14 @@ export default function FlightPage() {
                                             />
                                             <div className="frontDetail">
                                                 <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Singapore</h2>
                                             </div>
                                         </div>
                                         <div className="flip-card-back rounded-4">
                                             <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
-                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
-                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Singapore</h2>
+                                            <p className="fs-12 my-2">Singapore is a sparkling city-state known for its modern attractions & cultural heritage. Travelers from the UAE can take advantage of affordable flights on popular routes. These routes frequently feature competitive prices, allowing you to explore the iconic sights, delicious cuisine, & diverse neighborhoods of this amazing destination on a budget. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Singapore, Abu Dhabi to Singapore & Sharjah to Singapore</p>
                                         </div>
                                     </div>
                                 </div>
@@ -127,14 +127,14 @@ export default function FlightPage() {
                                             />
                                             <div className="frontDetail">
                                                 <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Thailand</h2>
                                             </div>
                                         </div>
                                         <div className="flip-card-back rounded-4">
                                             <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
-                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
-                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Thailand</h2>
+                                            <p className="fs-12 my-2">Thailand is a popular travel destination famed for its beautiful beaches, crowded cities, & delicious food. From the UAE, travelers can find great flight deals on popular routes. These routes offer reasonable fares, making it easy to experience Thailand's culture, landscapes, & markets, Thailand is just a flight away!</p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Thailand, Abu Dhabi to Thailand & Sharjah to Thailand</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,14 +155,14 @@ export default function FlightPage() {
                                             />
                                             <div className="frontDetail">
                                                 <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">USA</h2>
                                             </div>
                                         </div>
                                         <div className="flip-card-back rounded-4">
                                             <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
-                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
-                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">USA</h2>
+                                            <p className="fs-12 my-2">The USA offers a diverse range of experiences, from iconic landmarks to vibrant cities. Travelers from the UAE can find reasonable flight options, that frequently feature competitive prices, making it easier to explore everything. Whether you're planning a family vacation or a solo adventure.</p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to USA, Abu Dhabi to USA & Sharjah to USA</p>
                                         </div>
                                     </div>
                                 </div>
@@ -183,14 +183,14 @@ export default function FlightPage() {
                                             />
                                             <div className="frontDetail">
                                                 <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Canada</h2>
                                             </div>
                                         </div>
                                         <div className="flip-card-back rounded-4">
                                             <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
-                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
-                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Canada</h2>
+                                            <p className="fs-12 my-2">Canada is a pretty country known for its unique nature & cities. If you're traveling from the UAE, you can find economical flight options these routes often provide attractive fares, allowing you to immerse yourself in Canada's rich culture, landscapes, & friendly communities.  </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Canada, Abu Dhabi to Canada & Sharjah to Canada</p>
                                         </div>
                                     </div>
                                 </div>
@@ -240,20 +240,18 @@ export default function FlightPage() {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className="bg-grey">
                 <div className="container">
-                    <Image
-                        className="w-100 h-auto my-3"
-                        loader={trvLoader}
-                        src=""
-                        alt="Flights Banner"
-                        width={35}
-                        height={35}
-                    />
-                </div>
-            </section>
-            <section>
-                <div className="container">
+                    <div className="col-12">
+                        <Image
+                            className="w-100 h-auto my-3"
+                            loader={trvLoader}
+                            src=""
+                            alt="Flights Banner"
+                            width={35}
+                            height={35}
+                        />
+                    </div>
                     <div className="row">
                         <div className="col-12">
                             <h2 className="color-blue fw-bold fs-24">Money-Saving Tips to Find Cheap Flights from UAE</h2>
