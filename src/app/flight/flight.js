@@ -256,7 +256,16 @@ export default function FlightPage() {
                         <div className="col-12">
                             <h2 className="color-blue fw-bold fs-24">Money-Saving Tips to Find Cheap Flights from UAE</h2>
                         </div>
-                        <div className="col-12 col-md-6 my-2"></div>
+                        <div className="col-12 col-md-6 my-2">
+                            <Image
+                                className="w-100 h-auto my-3"
+                                loader={trvLoader}
+                                src=""
+                                alt="Flights Banner"
+                                width={35}
+                                height={35}
+                            />
+                        </div>
                         <div className="col-12 col-md-6 my-2">
                             <div className="">
                                 <div className="row">
@@ -276,6 +285,16 @@ export default function FlightPage() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12"></div>
+                        <div className="col-12">
+                            
                         </div>
                     </div>
                 </div>
