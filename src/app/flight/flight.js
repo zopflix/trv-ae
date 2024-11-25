@@ -25,36 +25,177 @@ export default function FlightPage() {
                     </div>
                 </div>
             </section>
-            <section id="FlightsCards">
+            <section id="FlightsCards" className="py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-3"></div>
-                        <div className="col-12 col-md-6">
+                        <div className="col-12 col-md-3 my-3">
                             <div className="cards">
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
-                                        <div className="flip-card-front">
-                                            <img src="https://assets.superfares.com/deals/frontierairlines.webp" alt="frontierairlines" ></img>
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-georgia.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
                                             <div className="frontDetail">
-                                                <h2 className="airlineName">Frontier Airlines</h2>
-                                                <div className="flightinfo">
-                                                    <span className="flightDetail">Las Vegas–Phoenix</span>
-                                                    <span>$70.96</span>
-                                                </div>
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
                                             </div>
                                         </div>
-                                        <div className="flip-card-back">
-                                            <h2 className="airlineName">Frontier Airlines</h2>
-                                            <span className="flightDetail">Las Vegas–Phoenix</span>
-                                            <span className="flightprice">$70.96*</span>
-                                            <p>Frontier Airlines: Your gateway to affordable travel. Discover our low fares, exceptional service, and a wide network of destinations. Whether you're seeking city excitement or serene beaches, we've got you covered. Enjoy comfortable seating, friendly crew, and stress-free bookings. Start your next adventure with Frontier Airlines today and make memories that will last a lifetime.</p>
-                                            <a className="flightContinue">Continue</a>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-3"></div>
+                        <div className="col-12 col-md-6 my-3">
+                            <div className="cards">
+                                <div className="flip-card">
+                                    <div className="flip-card-inner">
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-maldivas.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <div className="frontDetail">
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                            </div>
+                                        </div>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-3 my-3">
+                            <div className="cards">
+                                <div className="flip-card">
+                                    <div className="flip-card-inner">
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-singapore.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <div className="frontDetail">
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                            </div>
+                                        </div>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-6 my-3">
+                            <div className="cards">
+                                <div className="flip-card">
+                                    <div className="flip-card-inner">
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-thailand.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <div className="frontDetail">
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                            </div>
+                                        </div>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-3 my-3">
+                            <div className="cards">
+                                <div className="flip-card">
+                                    <div className="flip-card-inner">
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-usa.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <div className="frontDetail">
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                            </div>
+                                        </div>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-3 my-3">
+                            <div className="cards">
+                                <div className="flip-card">
+                                    <div className="flip-card-inner">
+                                        <div className="flip-card-front rounded-4">
+                                            <Image
+                                                className="w-100 h-auto rounded-4"
+                                                loader={trvLoader}
+                                                src="cheap-flight-canada.webp"
+                                                alt="cheap-flight-canada"
+                                                width={35}
+                                                height={35}
+                                            />
+                                            <div className="frontDetail">
+                                                <p className="flightinfo color-white mb-0">Cheap Flights To</p>
+                                                <h2 className="airlineName color-white fs-20 fw-bold">Frontier Airlines</h2>
+                                            </div>
+                                        </div>
+                                        <div className="flip-card-back rounded-4">
+                                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Frontier Airlines</h2>
+                                            <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
+                                            <p className="fs-12 mb-0 color-blue fw-bold">Dubai to Georgia, Abu Dhabi to Georgia & Sharjah to Georgia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
