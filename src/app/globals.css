@@ -826,11 +826,15 @@ footer .footerWrp h3 {
     color: #fff !important;
 }
 
-.CheapFlightsFromUAE{
+.CheapFlightsFromUAE {
     background-image: url('https://assets.travanya.com/flight-map-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#FlightsCards .flip-card-back {
+    overflow: auto;
 }
 
 /* media start */
@@ -1131,6 +1135,14 @@ footer .footerWrp h3 {
 
 @media(min-width:768px) and (max-width:991px) {
 
+    #FlightsCards .flightinfo {
+        font-size: 12px;
+    }
+
+    #FlightsCards .airlineName {
+        font-size: 14px;
+    }
+
     .ReviewLogoBar>div img {
         height: 30px !important;
     }
@@ -1165,5 +1177,29 @@ footer .footerWrp h3 {
 
     .VisaFreeBox img {
         height: 340px !important;
+    }
+}
+
+
+@media(min-width:768px) {
+    .CheapFlightsFromUAEList {
+        max-height: 450px;
+        overflow: auto;
+        padding-right: 15px;
+    }
+
+    /* width */
+    .CheapFlightsFromUAEList::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    .CheapFlightsFromUAEList::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    .CheapFlightsFromUAEList::-webkit-scrollbar-thumb {
+        background: var(--color-orange);
     }
 }

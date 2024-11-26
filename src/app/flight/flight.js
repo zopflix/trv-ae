@@ -240,7 +240,7 @@ export default function FlightPage() {
                     </div>
                 </div>
             </section>
-            <section className="bg-grey">
+            <section className="bg-grey pb-4">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -270,7 +270,7 @@ export default function FlightPage() {
                                 />
                             </div>
                             <div className="col-12 col-md-6 my-2">
-                                <div className="">
+                                <div className="CheapFlightsFromUAEList">
                                     <div className="row align-items-center">
                                         <div className="col-4 col-md-3 col-lg-2">
                                             <Image
