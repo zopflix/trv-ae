@@ -405,12 +405,135 @@ export default function FlightPage() {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className="py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12"></div>
                         <div className="col-12">
-
+                            <h2 className="mb-0 fw-bold fs-22 color-blue py-3 rounded-top-2">Frequently Asked Questions</h2>
+                        </div>
+                        <div className="col-12">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ1">
+                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question1" aria-expanded="true" aria-controls="question1">
+                                            <span className="fs-14 fw-bold">Q: How early should I book to get the cheapest fares?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question1" className="accordion-collapse collapse show" aria-labelledby="FAQ1" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: For international flights, it's recommended to book at least 2-3 months in advance. However, for some short-haul or budget airlines, booking 4-6 weeks ahead can also secure good deals. Keep an eye out for seasonal sales and last-minute promotions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ2">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question2" aria-expanded="false" aria-controls="question2">
+                                            <span className="fs-14 fw-bold">Q: Which budget airlines offer cheap flights from UAE?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question2" className="accordion-collapse collapse" aria-labelledby="FAQ2" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Some popular budget airlines offering affordable flights from the UAE include Flydubai, Air Arabia, Wizz Air, & Air India Express. These airlines frequently offer promotions & discounts, especially for regional destinations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ3">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question3" aria-expanded="false" aria-controls="question3">
+                                            <span className="fs-14 fw-bold">Q: What are the cheapest destinations to fly to from UAE?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question3" className="accordion-collapse collapse" aria-labelledby="FAQ3" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Commonly, destinations such as Georgia, India, Sri Lanka, & Egypt are among the cheapest to fly to from the UAE. Regional destinations in Southeast Asia, like Thailand & the Maldives, can also have competitive fares, especially during off-peak seasons.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ4">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question4" aria-expanded="false" aria-controls="question4">
+                                            <span className="fs-14 fw-bold">Q: How can I find the best deals on flights from UAE?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question4" className="accordion-collapse collapse" aria-labelledby="FAQ4" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Use flight comparison websites such as Skyscanner or Google Flights to compare prices. Setting fare alerts, being flexible with travel dates, & booking during sales periods (e.g., New Year, Ramadan) are all great ways to find cheap flights.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ5">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question5" aria-expanded="false" aria-controls="question5">
+                                            <span className="fs-14 fw-bold">Q: What’s the best time of year to book cheap flights from UAE?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question5" className="accordion-collapse collapse" aria-labelledby="FAQ5" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: The best time to book cheap flights is during off-peak travel seasons. For example, January to April & September to November are typically less crowded travel times. Sales often occur around UAE public holidays & festivals such as UAE National Day, Ramadan, & Black Friday.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ6">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question6" aria-expanded="false" aria-controls="question6">
+                                            <span className="fs-14 fw-bold">Q: Can I get discounts for booking group flights?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question6" className="accordion-collapse collapse" aria-labelledby="FAQ6" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Yes, many airlines and travel agencies offer discounts for group bookings. It's best to inquire directly with the airline or use a travel agency to secure better deals for group travelers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ7">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question7" aria-expanded="false" aria-controls="question7">
+                                            <span className="fs-14 fw-bold">Q: Are there any hidden fees with budget airlines?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question7" className="accordion-collapse collapse" aria-labelledby="FAQ7" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Yes, budget airlines often charge for additional services like checked baggage, seat selection, meals, & extra legroom. It’s important to review the airline's fee structure before booking to avoid unexpected costs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ8">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question8" aria-expanded="false" aria-controls="question8">
+                                            <span className="fs-14 fw-bold">Q: How do I get last-minute flight deals from UAE?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question8" className="accordion-collapse collapse" aria-labelledby="FAQ8" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Last-minute deals can sometimes be found on airline websites or flight aggregator platforms, especially if an airline needs to fill remaining seats. However, be flexible with your travel dates & destinations to take advantage of these offers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ9">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question9" aria-expanded="false" aria-controls="question9">
+                                            <span className="fs-14 fw-bold">Q: Can I use frequent flyer miles or credit card points to reduce flight costs?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question9" className="accordion-collapse collapse" aria-labelledby="FAQ9" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Absolutely! Many airlines, including Emirates & Etihad, have frequent flyer programs where you can earn & redeem miles. Additionally, UAE credit cards often offer travel points or cashback that can be used towards flight bookings. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="FAQ10">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question10" aria-expanded="false" aria-controls="question10">
+                                            <span className="fs-14 fw-bold">Q: How can I avoid high prices during peak seasons?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="question10" className="accordion-collapse collapse" aria-labelledby="FAQ20" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
+                                            <p className="mb-0 fs-14">A: Book well in advance, avoid popular travel dates (such as school holidays and Eid), & consider flying on weekdays or early in the morning to find cheaper options. Being flexible with your travel dates can significantly lower costs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
