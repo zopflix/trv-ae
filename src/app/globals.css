@@ -810,7 +810,7 @@ footer .footerWrp h3 {
     transform: rotateY(180deg);
     position: absolute;
     top: 0;
-    padding: 7% 6%;
+    padding: 20px;
     border-radius: 9px;
 }
 
@@ -824,6 +824,13 @@ footer .footerWrp h3 {
 #CheapFlightUAE .nav-link.active {
     background-color: var(--color-orange) !important;
     color: #fff !important;
+}
+
+.CheapFlightsFromUAE{
+    background-image: url('https://assets.travanya.com/flight-map-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* media start */

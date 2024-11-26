@@ -242,46 +242,162 @@ export default function FlightPage() {
             </section>
             <section className="bg-grey">
                 <div className="container">
-                    <div className="col-12">
-                        <Image
-                            className="w-100 h-auto my-3"
-                            loader={trvLoader}
-                            src=""
-                            alt="Flights Banner"
-                            width={35}
-                            height={35}
-                        />
-                    </div>
                     <div className="row">
                         <div className="col-12">
-                            <h2 className="color-blue fw-bold fs-24">Money-Saving Tips to Find Cheap Flights from UAE</h2>
-                        </div>
-                        <div className="col-12 col-md-6 my-2">
                             <Image
-                                className="w-100 h-auto my-3"
+                                className="w-100 h-auto my-5 rounded-4"
                                 loader={trvLoader}
-                                src=""
+                                src="banner/flights-travller-banner-ae.webp"
                                 alt="Flights Banner"
                                 width={35}
                                 height={35}
                             />
                         </div>
-                        <div className="col-12 col-md-6 my-2">
-                            <div className="">
-                                <div className="row">
-                                    <div className="col-4 col-md-3 col-lg-2">
-                                        <Image
-                                            className="w-100 h-auto"
-                                            loader={trvLoader}
-                                            src=""
-                                            alt=""
-                                            width={35}
-                                            height={35}
-                                        />
+                    </div>
+                    <div className="CheapFlightsFromUAE">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className="color-blue fw-bold fs-24">Money-Saving Tips to Find Cheap Flights from UAE</h2>
+                            </div>
+                            <div className="col-12 col-md-6 my-2">
+                                <Image
+                                    className="w-100 h-auto my-3"
+                                    loader={trvLoader}
+                                    src="saving-tips-img.webp"
+                                    alt="Flights Banner"
+                                    width={35}
+                                    height={35}
+                                />
+                            </div>
+                            <div className="col-12 col-md-6 my-2">
+                                <div className="">
+                                    <div className="row align-items-center">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="bundling-flights-accommodations.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Bundling Flights with Accommodations:</h3>
+                                            <p className="fs-12 mb-0">Look for travel package deals that combine flights & hotels, as this can often save you money compared to booking separately.</p>
+                                        </div>
                                     </div>
-                                    <div className="col-8 col-md-9 col-lg-10">
-                                        <h3 className="fs-18 fw-bold color-blue">Bundling Flights with Accommodations:</h3>
-                                        <p className="fs-12">Look for travel package deals that combine flights & hotels, as this can often save you money compared to booking separately.</p>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="booking-flights-hotels-together.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Booking Flights & Hotels Together:</h3>
+                                            <p className="fs-12 mb-0">Many travel websites offer discounts when you book your flight & hotel together, making your trip more affordable.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="leveraging-currency-exchanges.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Leveraging Currency Exchanges:</h3>
+                                            <p className="fs-12 mb-0">When traveling, consider paying in the local currency to avoid extra fees from currency conversion.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="paying-in-local-currency.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Paying in Local Currency:</h3>
+                                            <p className="fs-12 mb-0">If given the option, always choose to pay in the local currency of your destination to minimize additional charges.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="avoiding-unnecessary-foreign.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Avoiding Unnecessary Foreign Transaction Fees:</h3>
+                                            <p className="fs-12 mb-0">Use a credit or debit card that does not charge foreign transaction fees to save money while traveling abroad.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="sign-up-alerts.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Sign Up for Alerts:</h3>
+                                            <p className="fs-12 mb-0">Subscribe to fare alerts from airlines & travel websites to get notifications about price drops & special promotions.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center mt-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="be-flexible-travel.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Be Flexible with Travel Dates:</h3>
+                                            <p className="fs-12 mb-0">If possible, adjust your travel dates to find cheaper flights, as prices can vary significantly depending on the day of the week.</p>
+                                        </div>
+                                    </div>
+                                    <div className="row align-items-center my-3">
+                                        <div className="col-4 col-md-3 col-lg-2">
+                                            <Image
+                                                className="w-100 h-auto"
+                                                loader={trvLoader}
+                                                src="book-in-advance.webp"
+                                                alt="listing img"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div className="col-8 col-md-9 col-lg-10">
+                                            <h3 className="fs-18 fw-bold color-blue">Book in Advance:</h3>
+                                            <p className="fs-12 mb-0">Try to book your flights several weeks or months ahead of your travel date to secure better deals.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +410,7 @@ export default function FlightPage() {
                     <div className="row">
                         <div className="col-12"></div>
                         <div className="col-12">
-                            
+
                         </div>
                     </div>
                 </div>
