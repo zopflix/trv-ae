@@ -819,9 +819,11 @@ footer .footerWrp h3 {
     color: #000;
     font-weight: bold !important;
     display: table;
+    padding: 10px 30px;
 }
 
-#CheapFlightUAE .nav-link.active {
+#CheapFlightUAE .nav-link.active,
+#CheapFlightUAE .nav-link:hover {
     background-color: var(--color-orange) !important;
     color: #fff !important;
 }

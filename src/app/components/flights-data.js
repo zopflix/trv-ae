@@ -73,14 +73,14 @@ export default function FlightsData(props) {
 
       {path === '/flights/'
         ? <Fragment>
-          <section className="bg-grey pt-5">
-            <div className="text-center d-table m-auto">
-              <h1 className="color-blue fw-bold">Cheap Flights from the UAE</h1>
-              <hr className="w-50 m-auto border-blue border-2 opacity-100" />
-            </div>
+          <section className="pt-5">
             <div className="container">
               <div className="row">
                 <div className="col-12">
+                  <div className="text-center d-table m-auto mb-5">
+                    <h1 className="color-blue fw-bold">Cheap Flights from the UAE</h1>
+                    <hr className="w-50 m-auto border-blue border-2 opacity-100" />
+                  </div>
                   <h2 className="fw-bold color-blue fs-24">Finding Cheap Flights from the UAE to Other Countries?</h2>
                   <p className="fs-14">The United Arab Emirates (UAE) is a vibrant international travel hub, known for its modern infrastructure & well-connected airports. With its strategic location, it serves as a gateway for travelers seeking to explore various destinations across the globe.For those looking to maximize their travel budget, finding affordable flights is essential. In this guide, we will provide you with a step-by-step approach to searching for & booking cheap flights from the UAE to various countries. Whether you're planning a quick getaway or an extensive trip, these tips will help you navigate the process & secure the best deals available.</p>
                   <h2 className="fw-bold color-blue fs-24">Top Destinations with Cheap Flights from UAE</h2>
@@ -89,7 +89,7 @@ export default function FlightsData(props) {
               </div>
             </div>
           </section>
-          <section id="FlightsCards" className="bg-grey pb-5">
+          <section id="FlightsCards" className="bg-grey py-5 mt-5">
             <div className="container">
               <div className="row">
                 <div className="col-12 col-md-3 my-3">
