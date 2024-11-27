@@ -839,6 +839,21 @@ footer .footerWrp h3 {
     overflow: auto;
 }
 
+/* width */
+#FlightsCards .flip-card-back::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+#FlightsCards .flip-card-back::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#FlightsCards .flip-card-back::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+}
+
 /* media start */
 
 @media(max-width:767px) {
