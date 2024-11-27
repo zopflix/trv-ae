@@ -16,9 +16,6 @@ export default function Header() {
     const [displayContactNumber, setDisplayContactNumber] = useState(contactNumber);
 
     useEffect(() => {
-        if (path == "/ae/thank-you/") {
-            setDisplayContactNumber(uaeContact);
-        }
 
         if (path.includes("/") || path.includes("/holidays") || path.includes("/international-tour-packages") || path.includes("/india-tour-packages")) {
             setDisplayContactNumber(holidayContactNumber);

@@ -8,39 +8,75 @@ import Layout from "@/app/components/_layout";
 function FlightPages(props) {
     return (
         <Layout>
-            <Head>
-                <title>{props.data.metaTitle}</title>
-                <meta name="description" content={props.data.metaDescription} />
-                <link rel="canonical" href={`${appBaseURL}${props.data.parent}`} />
-                <meta name='robots' content={`index, ${props.data.canIndex ? 'follow' : 'nofollow'}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={props.data.metaTitle} />
-                <meta property="og:description" content={props.data.metaDescription} />
-                <meta property="og:url" content={`${appBaseURL}${props.data.parent}`} />
-                <meta property="og:site_name" content="Travanya" />
-                <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
-                <meta property="og:image:type" content="image/webp" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@TravanyaHoliday" />
-                <meta name="twitter:title" content={props.data.metaTitle} />
-                <meta name="twitter:description" content={props.data.metaDescription} />
-                <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
-                {props.faqObjs.length > 0 && !!props.faqObjs[0].name &&
+            {props.page == 'flights'
+                ? <Head>
+                    <title>Cheap Flights from UAE | Book Affordable Airline Tickets</title>
+                    <meta name="description" content="Discover reasonable prices on flights from the UAE. Explore top destinations worldwide with our cheap flight deals. Book your affordable tickets today!" />
+                    <link rel="canonical" href={`${appBaseURL}flights/`} />
+                    <meta name='robots' content={`index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+                    <meta property="og:locale" content="en_US" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Cheap Flights from UAE | Book Affordable Airline Tickets" />
+                    <meta property="og:description" content="Discover reasonable prices on flights from the UAE. Explore top destinations worldwide with our cheap flight deals. Book your affordable tickets today!" />
+                    <meta property="og:url" content={`${appBaseURL}flights/`} />
+                    <meta property="og:site_name" content="Travanya" />
+                    <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
+                    <meta property="og:image:type" content="image/webp" />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:site" content="@TravanyaHoliday" />
+                    <meta name="twitter:title" content="Cheap Flights from UAE | Book Affordable Airline Tickets" />
+                    <meta name="twitter:description" content="Discover reasonable prices on flights from the UAE. Explore top destinations worldwide with our cheap flight deals. Book your affordable tickets today!" />
+                    <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
+                    {/* {props.faqObjs.length > 0 && !!props.faqObjs[0].name &&
+                        <script type="application/ld+json" dangerouslySetInnerHTML={{
+                            __html: `{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": ${JSON.stringify(props.faqObjs)}
+                }`
+                        }}>
+                        </script>
+                    }
                     <script type="application/ld+json" dangerouslySetInnerHTML={{
-                        __html: `{
+                        __html: JSON.stringify(props.breadcrumbObj)
+                    }}>
+                    </script> */}
+                </Head>
+
+                : <Head>
+                    <title>{props.data.metaTitle}</title>
+                    <meta name="description" content={props.data.metaDescription} />
+                    <link rel="canonical" href={`${appBaseURL}${props.data.parent}`} />
+                    <meta name='robots' content={`index, ${props.data.canIndex ? 'follow' : 'nofollow'}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+                    <meta property="og:locale" content="en_US" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content={props.data.metaTitle} />
+                    <meta property="og:description" content={props.data.metaDescription} />
+                    <meta property="og:url" content={`${appBaseURL}${props.data.parent}`} />
+                    <meta property="og:site_name" content="Travanya" />
+                    <meta property="og:image" content="https://assets.travanya.com/logo.webp" />
+                    <meta property="og:image:type" content="image/webp" />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:site" content="@TravanyaHoliday" />
+                    <meta name="twitter:title" content={props.data.metaTitle} />
+                    <meta name="twitter:description" content={props.data.metaDescription} />
+                    <meta name="twitter:image" content="https://assets.travanya.com/logo.webp" />
+                    {props.faqObjs.length > 0 && !!props.faqObjs[0].name &&
+                        <script type="application/ld+json" dangerouslySetInnerHTML={{
+                            __html: `{
                         "@context": "https://schema.org",
                         "@type": "FAQPage",
                         "mainEntity": ${JSON.stringify(props.faqObjs)}
                     }`
+                        }}>
+                        </script>
+                    }
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(props.breadcrumbObj)
                     }}>
                     </script>
-                }
-                <script type="application/ld+json" dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(props.breadcrumbObj)
-                }}>
-                </script>
-            </Head>
+                </Head>
+            }
             <FlightsData data={props.data} />
         </Layout >
     )
@@ -48,6 +84,11 @@ function FlightPages(props) {
 
 export async function getServerSideProps(context) {
     // Fetch data based on the context
+    if (context.params.flights == 'flights')
+        return {
+            props: { data: null, page: context.params.flights }
+        }
+
     const data = await getFlightsPageData({ parent: context.params.flights, tenantId: tenantId });
     if (!data) {
         return {
@@ -79,7 +120,7 @@ export async function getServerSideProps(context) {
     }
 
     return {
-        props: { data: data, faqObjs, breadcrumbObj },
+        props: { data: data, faqObjs, breadcrumbObj, page: context.params.flights },
     };
 }
 export default FlightPages;
