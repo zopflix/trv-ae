@@ -747,6 +747,113 @@ footer .footerWrp h3 {
     transform: translate(0%, -50%);
 }
 
+/* .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 100%;
+    width: 100%;
+} */
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.flip-card-front {
+    color: black;
+    position: relative
+}
+
+.flip-card-front .frontDetail {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.5574087078651686) 0%, rgba(9, 9, 121, 0) 55%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.flip-card-front img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.flip-card-back {
+    cursor: default;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(222, 222, 231, 1) 70%, rgba(209, 209, 209, 1) 100%);
+    color: black;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    border-radius: 9px;
+}
+
+#CheapFlightUAE .nav-link {
+    background-color: #fff !important;
+    color: #000;
+    font-weight: bold !important;
+    display: table;
+    padding: 10px 30px;
+}
+
+#CheapFlightUAE .nav-link.active,
+#CheapFlightUAE .nav-link:hover {
+    background-color: var(--color-orange) !important;
+    color: #fff !important;
+}
+
+.CheapFlightsFromUAE {
+    background-image: url('https://assets.travanya.com/flight-map-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#FlightsCards .flip-card-back {
+    overflow: auto;
+}
+
+/* width */
+#FlightsCards .flip-card-back::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+#FlightsCards .flip-card-back::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#FlightsCards .flip-card-back::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+}
 
 /* media start */
 
@@ -1046,6 +1153,14 @@ footer .footerWrp h3 {
 
 @media(min-width:768px) and (max-width:991px) {
 
+    #FlightsCards .flightinfo {
+        font-size: 12px;
+    }
+
+    #FlightsCards .airlineName {
+        font-size: 14px;
+    }
+
     .ReviewLogoBar>div img {
         height: 30px !important;
     }
@@ -1080,5 +1195,29 @@ footer .footerWrp h3 {
 
     .VisaFreeBox img {
         height: 340px !important;
+    }
+}
+
+
+@media(min-width:768px) {
+    .CheapFlightsFromUAEList {
+        max-height: 450px;
+        overflow: auto;
+        padding-right: 15px;
+    }
+
+    /* width */
+    .CheapFlightsFromUAEList::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    .CheapFlightsFromUAEList::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    .CheapFlightsFromUAEList::-webkit-scrollbar-thumb {
+        background: var(--color-orange);
     }
 }

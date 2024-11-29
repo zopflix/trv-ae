@@ -43,6 +43,10 @@ function generateSiteMap(posts) {
   <loc>https://www.travanya.ae/FAQ/</loc>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.travanya.ae/flights</loc>
+  <priority>0.80</priority>
+</url>
 
      ${posts
       .map(page => {

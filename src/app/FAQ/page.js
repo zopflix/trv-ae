@@ -22,7 +22,7 @@ export default function SiteMap() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className="mb-0 fw-bold fs-22 color-blue p-3 rounded-top-2">Frequently Asked Questions</h2>
+                            <h2 className="mb-0 fw-bold fs-22 color-blue py-3 rounded-top-2">Frequently Asked Questions</h2>
                         </div>
                     </div>
                     <div className="accordion" id="accordionExample">
