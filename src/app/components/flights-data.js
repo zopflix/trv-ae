@@ -73,7 +73,7 @@ export default function FlightsData(props) {
 
       {path === '/flights/'
         ? <Fragment>
-          <section className="pt-5">
+          <section className="pt-3">
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -89,7 +89,7 @@ export default function FlightsData(props) {
               </div>
             </div>
           </section>
-          <section id="FlightsCards" className="bg-grey py-5 mt-5">
+          <section id="FlightsCards" className="bg-grey py-2 mt-2">
             <div className="container">
               <div className="row">
                 <div className="col-12 col-md-3 my-3">
@@ -541,7 +541,7 @@ export default function FlightsData(props) {
               </div>
             </div>
           </section>
-          <section className="py-5">
+          <section className="py-3">
             <div className="container">
               <div className="row">
                 <div className="col-12">
