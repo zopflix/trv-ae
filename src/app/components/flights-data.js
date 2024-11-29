@@ -106,18 +106,27 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">Georgia</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">Georgia</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 631</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Georgia</h2>
+                          <a href="/flights/uae-to-georgia-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Georgia</h2>
+                          </a>
                           <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to Georgia - AED 4475</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to Georgia - AED </a></li>
-                            <li><a className="color-blue" href="#">Sharjah to Georgia - AED </a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-georgia-flight/" target="_blank" rel="noreferrer">Dubai to Georgia - AED 896</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-georgia-flight/" target="_blank" rel="noreferrer">Abu Dhabi to Georgia - AED 731</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-georgia-flight/from-sharjah-shj/" target="_blank" rel="noreferrer">Sharjah to Georgia - AED 631</a></li>
                           </ul>
                         </div>
                       </div>
@@ -138,18 +147,26 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">Maldives</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">Maldives</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 383</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Maldives</h2>
+                          <a href="/flights/uae-to-maldives-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Maldives</h2>
+                          </a>
                           <p className="fs-12 my-2">The Maldives is a dream destination known for its beautiful beaches & crystal-clear waters. Travelers from the UAE can find great flight options, these routes often offer affordable fares, making it easier to escape to paradise & enjoy a relaxing getaway in this tropical haven.</p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to Maldives - AED</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to Maldives - AED</a></li>
-                            <li><a className="color-blue" href="#">Sharjah to Maldives - AED</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-maldives-flight/from-dubai-dxb/" target="_blank" rel="noreferrer">Dubai to Maldives Flights - AED 462</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-maldives-flight/from-abu-dhabi-auh/" target="_blank" rel="noreferrer">Abu Dhabi to Maldives Flights - AED 383</a></li>
                           </ul>
                         </div>
                       </div>
@@ -170,18 +187,26 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">Singapore</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">Singapore</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 764</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Singapore</h2>
+                          <a href="/flights/uae-to-singapore-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Singapore</h2>
+                          </a>
                           <p className="fs-12 my-2">Singapore is a sparkling city-state known for its modern attractions & cultural heritage. Travelers from the UAE can take advantage of affordable flights on popular routes. These routes frequently feature competitive prices, allowing you to explore the iconic sights, delicious cuisine, & diverse neighborhoods of this amazing destination on a budget. </p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to Singapore - AED</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to Singapore - AED</a></li>
-                            <li><a className="color-blue" href="#">Sharjah to Singapore - AED</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-singapore-flight/from-dubai-dxb/" target="_blank" rel="noreferrer">Dubai to Singapore Flights - AED 1,472</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-singapore-flight/from-abu-dhabi-auh/" target="_blank" rel="noreferrer">Abu Dhabi to Singapore Flights - AED 764</a></li>
                           </ul>
                         </div>
                       </div>
@@ -202,18 +227,26 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">Thailand</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">Thailand</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 821</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Thailand</h2>
+                          <a href="/flights/uae-to-thailand-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Thailand</h2>
+                          </a>
                           <p className="fs-12 my-2">Thailand is a popular travel destination famed for its beautiful beaches, crowded cities, & delicious food. From the UAE, travelers can find great flight deals on popular routes. These routes offer reasonable fares, making it easy to experience Thailand's culture, landscapes, & markets, Thailand is just a flight away!</p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to Thailand - AED</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to Thailand - AED</a></li>
-                            <li><a className="color-blue" href="#">Sharjah to Thailand - AED</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-thailand-flight/from-dubai-dxb/" target="_blank" rel="noreferrer">Dubai to Thailand Flights - AED 821</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-thailand-flight/from-abu-dhabi-auh/" target="_blank" rel="noreferrer">Abu Dhabi to Thailand Flights - AED 845</a></li>
                           </ul>
                         </div>
                       </div>
@@ -234,18 +267,25 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">USA</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">USA</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 2,444</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">USA</h2>
+                          <a href="/flights/uae-to-usa-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">USA</h2>
+                          </a>
                           <p className="fs-12 my-2">The USA offers a diverse range of experiences, from iconic landmarks to vibrant cities. Travelers from the UAE can find reasonable flight options, that frequently feature competitive prices, making it easier to explore everything. Whether you're planning a family vacation or a solo adventure.</p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to USA - AED</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to USA - AED</a></li>
-                            <li><a className="color-blue" href="#">Sharjah to USA - AED</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-usa-flight/from-dubai-dxb/" target="_blank" rel="noreferrer">Dubai to USA Flights - AED 2,444</a></li>
                           </ul>
                         </div>
                       </div>
@@ -266,18 +306,26 @@ export default function FlightsData(props) {
                             height={35}
                           />
                           <div className="frontDetail">
-                            <p className="flightinfo color-white mb-0">Cheap Flights To</p>
-                            <h2 className="airlineName color-white fs-20 fw-bold">Canada</h2>
+                            <div className="d-flex justify-content-between">
+                              <div>
+                                <p className="flightinfo color-white mb-0 fw-bold">Cheap Flights To</p>
+                                <h2 className="airlineName color-white fs-20 fw-bold">Canada</h2>
+                              </div>
+                              <div className="text-end">
+                                <p className="mb-0 color-white fs-18 fw-bold">AED 1,619</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="flip-card-back rounded-4">
-                          <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
-                          <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Canada</h2>
+                          <a href="/flights/uae-to-canada-flight/" target="_blank" rel="noreferrer">
+                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Canada</h2>
+                          </a>
                           <p className="fs-12 my-2">Canada is a pretty country known for its unique nature & cities. If you're traveling from the UAE, you can find economical flight options these routes often provide attractive fares, allowing you to immerse yourself in Canada's rich culture, landscapes, & friendly communities.  </p>
                           <ul className="fs-12 ms-0 ps-3">
-                            <li><a className="color-blue" href="#">Dubai to Canada - AED</a></li>
-                            <li><a className="color-blue" href="#">Abu Dhabi to Canada - AED</a></li>
-                            <li><a className="color-blue" href="#">Sharjah to Canada - AED</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-canada-flight/from-dubai-dxb/" target="_blank" rel="noreferrer">Dubai to Canada Flights - AED 2,421</a></li>
+                            <li><a className="color-blue" href="/flights/uae-to-canada-flight/from-abu-dhabi-auh/" target="_blank" rel="noreferrer">Abu Dhabi to Canada Flights - AED 1,619</a></li>
                           </ul>
                         </div>
                       </div>
