@@ -4,17 +4,18 @@ import { capitalizeEachWord } from "../helpers/common";
 import PartnerLogo from "./partner-logo";
 import SearchSection from "./search-section";
 import { usePathname } from 'next/navigation';
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 
 export default function FlightsData(props) {
   const path = usePathname();
+  const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
 
   return (
     <>
       <Layout />
-      <SearchSection />
+      <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
       <PartnerLogo></PartnerLogo>
 
       <div className="container py-3">
