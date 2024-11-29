@@ -4,17 +4,18 @@ import { capitalizeEachWord } from "../helpers/common";
 import PartnerLogo from "./partner-logo";
 import SearchSection from "./search-section";
 import { usePathname } from 'next/navigation';
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 
 export default function FlightsData(props) {
   const path = usePathname();
+  const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
 
   return (
     <>
       <Layout />
-      <SearchSection />
+      <SearchSection setNoOfPassengers={setNoOfPassengers} selectedTab={0} />
       <PartnerLogo></PartnerLogo>
 
       <div className="container py-3">
@@ -73,7 +74,7 @@ export default function FlightsData(props) {
 
       {path === '/flights/'
         ? <Fragment>
-          <section className="pt-5">
+          <section className="pt-3">
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -89,7 +90,7 @@ export default function FlightsData(props) {
               </div>
             </div>
           </section>
-          <section id="FlightsCards" className="bg-grey py-5 mt-5">
+          <section id="FlightsCards" className="bg-grey py-2 mt-2">
             <div className="container">
               <div className="row">
                 <div className="col-12 col-md-3 my-3">
@@ -541,7 +542,7 @@ export default function FlightsData(props) {
               </div>
             </div>
           </section>
-          <section className="py-5">
+          <section className="py-3">
             <div className="container">
               <div className="row">
                 <div className="col-12">
