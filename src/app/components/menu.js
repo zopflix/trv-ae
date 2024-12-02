@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
 
 export default function MainMenu() {
@@ -12,21 +12,23 @@ export default function MainMenu() {
         getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
             if (res && res.length > 0)
                 setpackagesMenu(res);
-
         });
     }, []);
-    
+
 
     return (
         <ul className="navbar-nav px-2 px-lg-0 me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
-                <a className={pathname == '/deals' ? "nav-link active" : 'nav-link'} href="/about-us">About Us</a>
+                <a className={pathname == '/flights/' ? "nav-link active" : 'nav-link'} href="/flights/">Flights</a>
             </li>
             <li className="nav-item mx-1">
-                <a className={pathname == '/cheap-flights' ? "nav-link active" : 'nav-link'} href="/contact-us">Contact Us</a>
+                <a className={pathname == '/about-us/' ? "nav-link active" : 'nav-link'} href="/about-us/">About Us</a>
+            </li>
+            <li className="nav-item mx-1">
+                <a className={pathname == '/contact-us/' ? "nav-link active" : 'nav-link'} href="/contact-us/">Contact Us</a>
             </li>
             <li className="nav-item mx-1 dropdown">
-                <a className="nav-link dropdown-toggle" href="/holidays" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holiday</a>
+                <a className={pathname == '/holidays/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/holidays" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holiday</a>
                 <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
                     <li>
                         <div className="row m-0">
@@ -48,25 +50,25 @@ export default function MainMenu() {
                                     <div className="col-12 pt-2">
                                         <div className="row">
                                             {
-                                                packagesMenu.length > 0 && packagesMenu.map((obj, index)=>(
+                                                packagesMenu.length > 0 && packagesMenu.map((obj, index) => (
                                                     <div key={index} className="col-12 col-lg-3 py-1">
-                                                    <a className="text-decoration-none d-flex align-items-center" href={`/holidays/${obj.slug}-tour-packages/`}>
-                                                        <Image
-                                                            className="h-auto me-2"
-                                                            loader={trvLoader}
-                                                            src="icon/umbrella-beach.png"
-                                                            alt="umbrella icon"
-                                                            width={15}
-                                                            height={20}
-                                                        />
-                                                        <span>{obj.name +" " +"Tour Package"} </span>
-                                                    </a>
-                                                </div>
-                                             
+                                                        <a className="text-decoration-none d-flex align-items-center" href={`/holidays/${obj.slug}-tour-packages/`}>
+                                                            <Image
+                                                                className="h-auto me-2"
+                                                                loader={trvLoader}
+                                                                src="icon/umbrella-beach.png"
+                                                                alt="umbrella icon"
+                                                                width={15}
+                                                                height={20}
+                                                            />
+                                                            <span>{obj.name + " " + "Tour Package"} </span>
+                                                        </a>
+                                                    </div>
+
                                                 ))
                                             }
-                                           
-                                            
+
+
                                         </div>
                                     </div>
                                 </div>
