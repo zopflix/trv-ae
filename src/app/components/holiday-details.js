@@ -744,24 +744,28 @@ export default function HolidayDetails(props) {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="tab-pane fade"
-                        id="Notes"
-                        role="tabpanel"
-                        aria-labelledby="Notes-tab"
-                      >
+                      <div className="tab-pane fade" id="Notes" role="tabpanel" aria-labelledby="Notes-tab">
                         <div className="border rounded-3 p-3 float-start w-100">
                           <div className="col-12">
-                            <h2 className="mb-2 color-blue fs-16 fw-bold">
-                              Important Notes:
-                            </h2>
+                            <h2 className="mb-2 color-blue fs-16 fw-bold">Important Notes:</h2>
                             <hr className="color-orange my-2 w-25"></hr>
-                            <div
-                              id="SquareOrangeList"
-                              dangerouslySetInnerHTML={{
-                                __html: packageData.Notes,
-                              }}
-                            />
+                            <div id="SquareOrangeList">
+                              <ul>
+                                <li>We try to provide the exact hotel accommodations as specified in your package, in case the selected hotel is unavailable due to some reasons such as overbooking or maintenance issues, we will ensure that a similar standard hotel is arranged for your stay.</li>
+                                <li>In case of any unprecedented hike in airfare, hotel charges, or other service charges, they will be levied extra.</li>
+                                <li>No bookings are made at the time of quotation</li>
+                                <li>The booking amount of AED 500 - per person is non-refundable. If the package cost is less than AED 500, 50% of the package cost will be non-refundable.</li>
+                                <li>The hotel and services as mentioned in the itinerary are subject to confirmation.</li>
+                                <li>Hotel City Taxes are to be paid locally at the hotel.</li>
+                                <li>Rates and availability of the services are subject to change before any confirmation</li>
+                                <li>Any changes in govt. taxes, policies, or visa fees may be levied before the departure date.</li>
+                                <li>Any extra services to be paid directly</li>
+                                <li>05% GST applicable + 05% TCS if travelling internationally. ROE will be considered on the day when the payment will be processed, ROE is subject to change.</li>
+                                <li>Passports should have at least six months of validity for any international travel.</li>
+                                <li>Driver tips to be paid directly</li>
+                                <li>Travanya is not responsible for visa acceptance/rejections.</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
