@@ -120,7 +120,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-georgia-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Georgia</h2>
                           </a>
                           <p className="fs-12 my-2">If you're looking to explore the charming landscapes and rich culture of Georgia, you're in luck! These routes often feature competitive prices, making it easier for travelers to enjoy everything this beautiful country has to offer. </p>
@@ -161,7 +161,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-maldives-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Maldives</h2>
                           </a>
                           <p className="fs-12 my-2">The Maldives is a dream destination known for its beautiful beaches & crystal-clear waters. Travelers from the UAE can find great flight options, these routes often offer affordable fares, making it easier to escape to paradise & enjoy a relaxing getaway in this tropical haven.</p>
@@ -201,7 +201,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-singapore-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Singapore</h2>
                           </a>
                           <p className="fs-12 my-2">Singapore is a sparkling city-state known for its modern attractions & cultural heritage. Travelers from the UAE can take advantage of affordable flights on popular routes. These routes frequently feature competitive prices, allowing you to explore the iconic sights, delicious cuisine, & diverse neighborhoods of this amazing destination on a budget. </p>
@@ -241,7 +241,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-thailand-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Thailand</h2>
                           </a>
                           <p className="fs-12 my-2">Thailand is a popular travel destination famed for its beautiful beaches, crowded cities, & delicious food. From the UAE, travelers can find great flight deals on popular routes. These routes offer reasonable fares, making it easy to experience Thailand's culture, landscapes, & markets, Thailand is just a flight away!</p>
@@ -281,7 +281,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-usa-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">USA</h2>
                           </a>
                           <p className="fs-12 my-2">The USA offers a diverse range of experiences, from iconic landmarks to vibrant cities. Travelers from the UAE can find reasonable flight options, that frequently feature competitive prices, making it easier to explore everything. Whether you're planning a family vacation or a solo adventure.</p>
@@ -320,7 +320,7 @@ export default function FlightsData(props) {
                         </div>
                         <div className="flip-card-back rounded-4">
                           <a href="/flights/uae-to-canada-flight/" target="_blank" rel="noreferrer">
-                            <p className="flightinfo color-blue mb-0">Cheap Flights To</p>
+                            <p className="flightinfo color-blue mb-0 fw-bold">Cheap Flights To</p>
                             <h2 className="mn-0 airlineName color-blue fs-20 fw-bold">Canada</h2>
                           </a>
                           <p className="fs-12 my-2">Canada is a pretty country known for its unique nature & cities. If you're traveling from the UAE, you can find economical flight options these routes often provide attractive fares, allowing you to immerse yourself in Canada's rich culture, landscapes, & friendly communities.  </p>
