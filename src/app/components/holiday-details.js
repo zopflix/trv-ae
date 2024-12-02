@@ -760,7 +760,7 @@ export default function HolidayDetails(props) {
                                 <li>Rates and availability of the services are subject to change before any confirmation</li>
                                 <li>Any changes in govt. taxes, policies, or visa fees may be levied before the departure date.</li>
                                 <li>Any extra services to be paid directly</li>
-                                <li>05% GST applicable + 05% TCS if travelling internationally. ROE will be considered on the day when the payment will be processed, ROE is subject to change.</li>
+                                <li>05% VAT applicable + 05% TCS if traveling internationally. ROE (Rate of Exchange) will be considered on the day the payment is processed and is subject to change. Additional UAE-specific taxes or fees, if any, will apply.</li>
                                 <li>Passports should have at least six months of validity for any international travel.</li>
                                 <li>Driver tips to be paid directly</li>
                                 <li>Travanya is not responsible for visa acceptance/rejections.</li>
