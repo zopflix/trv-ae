@@ -16,7 +16,8 @@ export {
     getFlightsPageData,
     getSitemapData,
     getGoogleReviews,
-    getMostSearchFlights
+    getMostSearchFlights,
+    getBlogs
 }
 
 const getAirports = async () => {
@@ -203,3 +204,12 @@ const subscribeNewsletter = async (email) => {
         return [];
     }
 };
+
+const getBlogs = async () => {
+    try {
+      const response = await axios.post(cmsAPIURL + `public/GetRecentBlogs?site=trvae`);
+      return response;
+    } catch (error) {
+      return [];
+    }
+  };
