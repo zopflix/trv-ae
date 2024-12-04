@@ -445,9 +445,6 @@ export default function HolidayDetails(props) {
                                           changeRating(0);
                                         }}
                                       >
-                                        {selectedAccommo == 0 && (
-                                          <>test i tag</>
-                                        )}
                                         {selectedAccommo == 0 ? (
                                           <span className="fw-bold">Selected</span>
                                         ) : (
