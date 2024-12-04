@@ -19,9 +19,9 @@ export default function ContactUs() {
             </section >
 
             <section>
-                <div className="container pb-5">
+                <div className="container pb-3">
                     <div className="row py-5 d-flex flex-column flex-md-row align-items-center">
-                        <div className="col-12 col-md-7  py-3 py-md-0">
+                        <div className="col-12 col-md-7 py-3 py-md-0">
                             <div className="row subHeading">
                                 <h2 className="mb-0 fw-normal mb-2">
                                     <strong className="color-orange">Contact Us</strong>

@@ -98,7 +98,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="bg-light mb-5   ">
+            <section className="bg-light mb-1">
                 <div className="container py-5 ">
                     <div className="row py-5">
                         <div className="col-12 col-md-12">

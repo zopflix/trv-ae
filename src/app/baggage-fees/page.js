@@ -11,7 +11,7 @@ export default function BaggageFees() {
     return (
         <>
             <Header></Header>
-            <div className="airline-bag-fee-main-wrp bg-grey py-5 mb-5">
+            <div className="airline-bag-fee-main-wrp bg-grey py-5 mb-1">
                 <h2 className='text-center fw-bold mb-5'>Airlines Baggage Fees</h2>
                 <div className="container">
                     <div className="row">

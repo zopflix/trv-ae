@@ -18,7 +18,7 @@ export default function SiteMap() {
                 </div>
             </section>
 
-            <section className="py-5 bg-grey mb-5">
+            <section className="py-5 bg-grey mb-1">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
