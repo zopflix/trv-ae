@@ -97,7 +97,7 @@ export default function HolidayListing(props) {
         </div>
       }
 
-      <section className="py-5 bg-grey mb-5">
+      <section className="py-5 bg-grey mb-1">
         {holidayPackages.length > 0 &&
           <div className="container">
             <div className="row">
@@ -337,7 +337,7 @@ export default function HolidayListing(props) {
         }
 
         {(faqs?.length > 0 && !!faqs[0]?.Question && !!faqs[0]?.Answer) &&
-          <section className="bg-grey py-5 mb-5">
+          <section className="bg-grey py-2 mb-2">
             <div className="container">
               <div className="row">
                 <div className="col-12">

@@ -29,7 +29,7 @@ export default function CheckIn() {
                 </div>
             </section>
 
-            <section className="mb-5 bg-grey py-5">
+            <section className="mb-1 bg-grey py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 text-center">

@@ -45,7 +45,7 @@ export default function Footer() {
             
             <BlogSlider />
 
-            <footer className="FooterLayoutOne">
+            <footer className="FooterLayoutOne mt-2">
                 <Image
                     className="h-auto w-100 d-none d-md-block"
                     loader={trvLoader}
