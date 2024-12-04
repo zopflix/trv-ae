@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic'
 import Layout from './components/_layout'
 import SearchSection from './components/search-section'
 import PartnerLogo from './components/partner-logo'
-import BlogSlider from './components/blog-slider'
 // const Header = dynamic(() => import('./components/header'), { suspense: true })
 const Footer = dynamic(() => import('./components/footer'), { ssr: false })
 // const SearchSection = dynamic(() => import('./components/search-section'), { suspense: true })
@@ -47,7 +46,7 @@ export default function Home() {
             <Image
               className="h-auto w-100"
               loader={trvLoader}
-              src="Travanya-ae-banner.webp"
+              src="banner/flights-travller-banner-ae.webp"
               alt="Flight Banner"
               width={176}
               height={43}
@@ -206,7 +205,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <BlogSlider />
           <Footer></Footer>
         </Fragment>
       }
