@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic'
 import Layout from './components/_layout'
 import SearchSection from './components/search-section'
 import PartnerLogo from './components/partner-logo'
+import BlogSlider from './components/blog-slider'
+import { getBlogs } from './services/flightService'
 // const Header = dynamic(() => import('./components/header'), { suspense: true })
 const Footer = dynamic(() => import('./components/footer'), { ssr: false })
 // const SearchSection = dynamic(() => import('./components/search-section'), { suspense: true })
@@ -20,9 +22,18 @@ export default function Home() {
 
   const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
   const [isFirstRender, setFirstRender] = useState(true);
+  const [blogs, setBlogs] = useState([]);
+
+
   useEffect(() => {
     setFirstRender(false);
-  },)
+    fetchBlogs();
+  }, []);
+
+  const fetchBlogs = async () => {
+    const res = await getBlogs();
+    setBlogs(res.data);
+};
 
   return (
     <Layout>
@@ -203,6 +214,9 @@ export default function Home() {
               </div>
             </div>
           </section>
+          {blogs && blogs.length > 0 &&
+            <BlogSlider blogs={blogs} />
+          }
           <Footer></Footer>
         </Fragment>
       }
