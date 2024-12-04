@@ -2,11 +2,13 @@ import Slider from "react-slick";
 import { isDesktop, isTablet } from "react-device-detect";
 import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import throttle from "lodash.throttle";
+import { getBlogs } from "../services/flightService";
 
-export default function BlogSlider({ blogs }) {
+export default function BlogSlider() {
     const sliderRef = useRef(null); // Slider ref to access methods
     const [scrollTop, setScrollTop] = useState(0);
     const [sliderScrolled, setSliderScrolled] = useState(false);
+    const [blogs, setBlogs] = useState([]);
 
     // Memoize slider settings to avoid re-calculation on every render
     const sliderSettings = useMemo(() => ({
@@ -33,11 +35,20 @@ export default function BlogSlider({ blogs }) {
 
     }, 200), [scrollTop, sliderScrolled]);
 
+    const fetchBlogs = async () => {
+        const res = await getBlogs();
+        setBlogs(res.data);
+    };
+
     // Set up scroll listener with clean-up
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [handleScroll]);
+
+    useEffect(() => {
+        fetchBlogs();
+    }, []);
 
     return (
         <section className="blogSlider py-5 bg-light-blue">

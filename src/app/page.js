@@ -6,12 +6,10 @@ import dynamic from 'next/dynamic'
 import Layout from './components/_layout'
 import SearchSection from './components/search-section'
 import PartnerLogo from './components/partner-logo'
-import BlogSlider from './components/blog-slider'
-import { getBlogs } from './services/flightService'
 // const Header = dynamic(() => import('./components/header'), { suspense: true })
 const Footer = dynamic(() => import('./components/footer'), { ssr: false })
 // const SearchSection = dynamic(() => import('./components/search-section'), { suspense: true })
-const TopFlightDeals = dynamic(() => import('./components/top-flight-deals'), { ssr: true })
+// const TopFlightDeals = dynamic(() => import('./components/top-flight-deals'), { ssr: true })
 const DomesticPackageDeals = dynamic(() => import('./components/domestic-package-deals'), { ssr: true })
 const SubscribeNewsletter = dynamic(() => import('./components/subscribe-newsletter'), { ssr: true })
 const GoogleReviews = dynamic(() => import('./components/google-reviews'), { ssr: true })
@@ -22,18 +20,11 @@ export default function Home() {
 
   const [noOfPassengers, setNoOfPassengers] = useState({ adults: 0, children: 0, infants: 0, cabin: '' });
   const [isFirstRender, setFirstRender] = useState(true);
-  const [blogs, setBlogs] = useState([]);
 
 
   useEffect(() => {
     setFirstRender(false);
-    fetchBlogs();
   }, []);
-
-  const fetchBlogs = async () => {
-    const res = await getBlogs();
-    setBlogs(res.data);
-};
 
   return (
     <Layout>
@@ -55,7 +46,7 @@ export default function Home() {
             <Image
               className="h-auto w-100"
               loader={trvLoader}
-              src="Travanya-ae-banner.webp"
+              src="banner/flights-travller-banner-ae.webp"
               alt="Flight Banner"
               width={176}
               height={43}
@@ -214,9 +205,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {blogs && blogs.length > 0 &&
-            <BlogSlider blogs={blogs} />
-          }
           <Footer></Footer>
         </Fragment>
       }

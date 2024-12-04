@@ -6,6 +6,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
+import BlogSlider from "./blog-slider";
 
 export default function Footer() {
     const path = usePathname();
@@ -41,6 +42,8 @@ export default function Footer() {
     return (
         <>
             <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></Script>
+            
+            <BlogSlider />
 
             <footer className="FooterLayoutOne">
                 <Image
