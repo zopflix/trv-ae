@@ -20,7 +20,7 @@ export default function MainMenu() {
     return (
         <ul className="navbar-nav px-2 px-lg-0 me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1 dropdown">
-                <a className={pathname == '/flights/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/flights" id="navbarFlightsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Flights</a>
+                <a className={pathname == '/flights/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/flights/" id="navbarFlightsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Flights</a>
                 <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
                     <li>
                         <div className="row m-0">
@@ -64,14 +64,9 @@ export default function MainMenu() {
                     </li>
                 </ul>
             </li>
-            <li className="nav-item mx-1">
-                <a className={pathname == '/about-us/' ? "nav-link active" : 'nav-link'} href="/about-us/">About Us</a>
-            </li>
-            <li className="nav-item mx-1">
-                <a className={pathname == '/contact-us/' ? "nav-link active" : 'nav-link'} href="/contact-us/">Contact Us</a>
-            </li>
+
             <li className="nav-item mx-1 dropdown">
-                <a className={pathname == '/holidays/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/holidays" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holiday</a>
+                <a className={pathname == '/holidays/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/holidays/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Holidays</a>
                 <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
                     <li>
                         <div className="row m-0">
@@ -455,6 +450,16 @@ export default function MainMenu() {
                         </div>
                     </li>
                 </ul>
+            </li>
+
+            <li className="nav-item mx-1">
+                <a className={pathname == '/about-us/' ? "nav-link active" : 'nav-link'} href="/about-us/">About Us</a>
+            </li>
+            <li className="nav-item mx-1">
+                <a className={pathname == '/contact-us/' ? "nav-link active" : 'nav-link'} href="/contact-us/">Contact Us</a>
+            </li>
+            <li className="nav-item mx-1">
+                <a className='nav-link' href="https://www.travanya.ae/blog/">Blog</a>
             </li>
         </ul>
     )
