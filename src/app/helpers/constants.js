@@ -155,6 +155,36 @@ export const flightMenuPages = [
     { name: 'Dubai to Malaysia Flights', url: '/flights/uae-to-Malaysia-flight/from-dubai-dxb/' }
 ];
 
+export const flightFooterPages = [
+    { name: 'Dubai to Morocco Flights', url: '/flights/uae-to-morocco-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Switzerland Flights', url: '/flights/uae-to-switzerland-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Jordan Flights', url: '/flights/uae-to-jordan-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Lebanon Flights', url: '/flights/uae-to-lebanon-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Nigeria Flights', url: '/flights/uae-to-nigeria-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Australia Flights', url: '/flights/uae-to-australia-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Greece Flights', url: '/flights/uae-to-greece-flight/from-dubai-dxb/' },
+    { name: 'Dubai to USA Flights', url: '/flights/uae-to-usa-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Indonesia Flights', url: '/flights/uae-to-indonesia-flight/from-dubai-dxb/' },
+    { name: 'Dubai to New Zealand Flights', url: '/flights/uae-to-new-zealand-flight/from-dubai-dxb/' },
+    { name: 'Dubai to France Flights', url: '/flights/uae-to-france-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Netherlands Flights', url: '/flights/uae-to-netherlands-flight/from-dubai-dxb/' }
+];
+
+export const flightFooterOtherPages = [
+    { name: 'UAE to Pakistan Flights', url: '/flights/uae-to-pakistan-flight/' },
+    { name: 'UAE to Georgia Flights', url: '/flights/uae-to-georgia-flight/' },
+    { name: 'UAE to Japan Flights', url: '/flights/uae-to-japan-flight/' },
+    { name: 'UAE to Philippines Flights', url: '/flights/uae-to-philippines-flight/' },
+    { name: 'UAE to Qatar Flights', url: '/flights/uae-to-qatar-flight/' },
+    { name: 'Abu Dhabi to Sri Lanka Flights', url: '/flights/uae-to-sri-lanka-flight/from-abu-dhabi-auh/' },
+    { name: 'Abu Dhabi to Kuwait Flights', url: '/flights/uae-to-kuwait-flight/from-abu-dhabi-auh/' },
+    { name: 'Abu Dhabi to Maldives Flights', url: '/flights/uae-to-maldives-flight/from-abu-dhabi-auh/' },
+    { name: 'Abu Dhabi to Singapore Flights', url: '/flights/uae-to-singapore-flight/from-abu-dhabi-auh/' },
+    { name: 'Abu Dhabi to Qatar Flights', url: '/flights/uae-to-qatar-flight/from-abu-dhabi-auh/' },
+    { name: 'Sharjah to Georgia Flights', url: '/flights/uae-to-georgia-flight/from-sharjah-shj/' },
+    { name: 'Sharjah to Oman Flights', url: '/flights/uae-to-oman-flight/from-sharjah-shj/' },  
+];
+
 export const GDSNames =
 {
     Amadeus: "Amadeus",
