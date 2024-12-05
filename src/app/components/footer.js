@@ -5,13 +5,13 @@ import { contactNumber, holidayContactNumber, flightContactNumber } from "../con
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getDestinationAndPackages } from "../services/holidayService";
 import BlogSlider from "./blog-slider";
+import { flightFooterOtherPages, flightFooterPages } from "../helpers/constants";
 
 export default function Footer() {
     const path = usePathname();
     const [displayContactNumber, setDisplayContactNumber] = useState(contactNumber);
-    const [packagesMenu, setpackagesMenu] = useState([]);
+    // const [packagesMenu, setpackagesMenu] = useState([]);
 
     useEffect(() => {
         let numberToDisplay = contactNumber;
@@ -31,18 +31,18 @@ export default function Footer() {
 
 
 
-    useEffect(() => {
-        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
-            if (res && res.length > 0)
-                setpackagesMenu(res);
+    // useEffect(() => {
+    //     getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
+    //         if (res && res.length > 0)
+    //             setpackagesMenu(res);
 
-        });
-    }, []);
+    //     });
+    // }, []);
 
     return (
         <>
             <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></Script>
-            
+
             <BlogSlider />
 
             <footer className="FooterLayoutOne mt-2">
@@ -96,22 +96,30 @@ export default function Footer() {
                                 </ul>
 
                             </div>
-                            <div className="col-12 col-md-8 col-lg-5">
-                                <h2 className="fw-bold fs-16">Holiday Packages</h2>
-                                <div className="row list-style-none">
-                                    {
-                                        packagesMenu.length > 0 && packagesMenu.map((obj, key) => (
-                                            <div className="col-6 ps-0" key={key}>
-                                                <a className="fs-12 text-decoration-none color-white" href={`/holidays/${obj.slug}-tour-packages/`}>{obj.name + " " + "Tour Package"}</a>
-                                            </div>
 
-                                        ))
-                                    }
-
-                                </div>
-
+                            <div className="col-12 col-md-4 col-lg-3 mt-3 mt-md-0">
+                                <h2 className="fw-bold mb-0 fs-16">Top Flights from Dubai</h2>
+                                <ul className="list-style-none">
+                                    {flightFooterPages.map((obj, key) => (
+                                        <li className="col-12 ps-0" key={key}>
+                                            <a className="fs-12 text-decoration-none color-white" href={obj.url}>{obj.name}</a>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <div className="col-12 col-md-12 col-lg-5 mt-4 mt-lg-0">
+
+                            <div className="col-12 col-md-4 col-lg-3 mt-3 mt-md-0">
+                                <h2 className="fw-bold mb-0 fs-16">Top Flights from UAE</h2>
+                                <ul className="list-style-none">
+                                    {flightFooterOtherPages.map((obj, key) => (
+                                        <li className="col-12 ps-0" key={key}>
+                                            <a className="fs-12 text-decoration-none color-white" href={obj.url}>{obj.name}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="col-12 col-md-12 col-lg-4 mt-4 mt-lg-0">
                                 <h2 className="fw-bold fs-16">Get in Touch with us</h2>
                                 <h2>Creating extraordinary travel experiences.</h2>
                                 <p className="fs-12">Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
