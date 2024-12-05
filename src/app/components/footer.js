@@ -84,14 +84,15 @@ export default function Footer() {
                             <div className="col-12 col-md-4 col-lg-2">
                                 <h2 className="fw-bold fs-16">Company</h2>
                                 <ul className="list-style-none">
-                                    <li><a className="fs-12 text-decoration-none" href="/about-us">About Us</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/contact-us">Contact Us</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/privacy-policy">Privacy Policy</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/terms-conditions">Terms & Conditions</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/disclaimer">Disclaimer</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/baggage-fees">Baggage Fees</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/check-in">Check In</a></li>
-                                    <li><a className="fs-12 text-decoration-none" href="/FAQ">FAQ</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/about-us/">About Us</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/contact-us/">Contact Us</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/privacy-policy/">Privacy Policy</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/terms-conditions/">Terms & Conditions</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/disclaimer/">Disclaimer</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/baggage-fees/">Baggage Fees</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/check-in/">Check In</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="/FAQ/">FAQ</a></li>
+                                    <li><a className="fs-12 text-decoration-none" href="www.travanya.ae/blog/">Our Blog</a></li>
                                 </ul>
 
                             </div>
