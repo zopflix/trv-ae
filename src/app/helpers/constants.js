@@ -133,12 +133,34 @@ export const dayOptions = [
     }
 ]
 
+export const flightMenuPages = [
+    { name: 'Dubai to Oman Flights', url: '/flights/uae-to-oman-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Qatar Flights', url: '/flights/uae-to-Qatar-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Bahrain Flights', url: '/flights/uae-to-bahrain-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Maldives Flights', url: '/flights/uae-to-maldives-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Philippines Flights', url: '/flights/uae-to-philippines-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Singapore Flights', url: '/flights/uae-to-singapore-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Thailand Flights', url: '/flights/uae-to-thailand-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Sri lanka Flights', url: '/flights/uae-to-sri-lanka-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Japan Flights', url: '/flights/uae-to-japan-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Nepal Flights', url: '/flights/uae-to-nepal-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Azerbaijan Flights', url: '/flights/uae-to-azerbaijan-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Kuwait Flights', url: '/flights/uae-to-kuwait-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Pakistan Flights', url: '/flights/uae-to-pakistan-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Saudi Arabia Flights', url: '/flights/uae-to-saudi-arabia-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Canada Flights', url: '/flights/uae-to-canada-flight/from-dubai-dxb/' },
+    { name: 'Dubai to China Flights', url: '/flights/uae-to-china-flight/from-dubai-dxb/' },
+    { name: 'Dubai to UK Flights', url: '/flights/uae-to-uk-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Egypt Flights', url: '/flights/uae-to-egypt-flight/from-dubai-dxb/' },
+    { name: 'Dubai to Malaysia Flights', url: '/flights/uae-to-Malaysia-flight/from-dubai-dxb/' }
+];
+
 export const GDSNames =
 {
     Amadeus: "Amadeus",
     TravelFusion: "TravelFusion",
     Kiwi: "Kiwi",
-    Tbo:"TBO"
+    Tbo: "TBO"
 }
 
 export const BaseImageUrl = "https://assets.faremaze.com/";
