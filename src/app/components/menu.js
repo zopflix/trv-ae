@@ -3,6 +3,7 @@ import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
+import { flightMenuPages } from "../helpers/constants";
 
 export default function MainMenu() {
     const pathname = usePathname();
@@ -18,8 +19,50 @@ export default function MainMenu() {
 
     return (
         <ul className="navbar-nav px-2 px-lg-0 me-auto mb-2 mb-lg-0">
-            <li className="nav-item mx-1">
-                <a className={pathname == '/flights/' ? "nav-link active" : 'nav-link'} href="/flights/">Flights</a>
+            <li className="nav-item mx-1 dropdown">
+                <a className={pathname == '/flights/' ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} href="/flights" id="navbarFlightsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Flights</a>
+                <ul className="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
+                    <li>
+                        <div className="row m-0">
+                            <div className="col-md-12 col-lg-12 py-2">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <a href="/flights/" className="title d-flex text-decoration-none">
+                                            <Image
+                                                className="h-auto"
+                                                loader={trvLoader}
+                                                src="icon/international-menu-icon.svg"
+                                                alt="umbrella icon"
+                                                width={20}
+                                                height={20}
+                                            />
+                                            <span className="fw-bold ps-2">Popular Flights</span>
+                                        </a>
+                                    </div>
+                                    <div className="col-12 pt-2">
+                                        <div className="row">
+                                            {flightMenuPages.map((obj, index) => (
+                                                <div key={index} className="col-12 col-lg-3 py-1">
+                                                    <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
+                                                        <Image
+                                                            className="h-auto me-2"
+                                                            loader={trvLoader}
+                                                            src="icon/AirPlane-orange-icon.svg"
+                                                            alt="plane icon"
+                                                            width={20}
+                                                            height={20}
+                                                        />
+                                                        <span>{obj.name} </span>
+                                                    </a>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </li>
             <li className="nav-item mx-1">
                 <a className={pathname == '/about-us/' ? "nav-link active" : 'nav-link'} href="/about-us/">About Us</a>
