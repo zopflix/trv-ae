@@ -6,7 +6,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import BlogSlider from "./blog-slider";
-import { flightFooterOtherPages, flightFooterPages } from "../helpers/constants";
+import { flightFooterPages, flightMenuPages } from "../helpers/constants";
 
 export default function Footer() {
     const path = usePathname();
@@ -109,9 +109,9 @@ export default function Footer() {
                             </div>
 
                             <div className="col-12 col-md-4 col-lg-3 mt-3 mt-md-0">
-                                <h2 className="fw-bold mb-0 fs-16">Top Flights from UAE</h2>
+                                <h2 className="fw-bold mb-0 fs-16">Other Flights from Dubai</h2>
                                 <ul className="list-style-none">
-                                    {flightFooterOtherPages.map((obj, key) => (
+                                    {flightMenuPages.map((obj, key) => (
                                         <li className="col-12 ps-0" key={key}>
                                             <a className="fs-12 text-decoration-none color-white" href={obj.url}>{obj.name}</a>
                                         </li>
