@@ -133,7 +133,7 @@ export default function HolidayEnquiryForm(props) {
 
     return (
         <>
-            <section id="mainSearchForm" className="HoliDayModifyForm position-relative border-top">
+            <div id="mainSearchForm" className="HoliDayModifyForm position-relative">
 
                 {props.bannerText && !props.isDetail &&
                     <Fragment>
@@ -163,13 +163,13 @@ export default function HolidayEnquiryForm(props) {
                     </Fragment>
                 }
                 <div className={props.bannerText && !props.isDetail ? "HolidayFormBox position-absolute bottom-0 start-0 end-0 mb-lg-5" : ""}>
-                    <div className='container'>
-                        <div className='flightSearchWrp rounded-3 bg-white'>
+                    <div className={path.includes('/holidays/') ? ' container' : ''}>
+                        <div className='flightSearchWrp rounded-3 bg-white shadow'>
                             <div className="mainFlightSearchBox py-1 px-3">
                                 <div className="row align-items-center">
                                     <div className="mobForm FieldA col-12">
                                         <div className="fromTofromBox">
-                                            <div className="row">
+                                            <div className="row mx-0">
                                                 <div className='col-6 col-lg-3 py-2 border-end position-relative FromCodeSearchBox'>
                                                     <div className="bg-white">
                                                         <Image
@@ -565,7 +565,7 @@ export default function HolidayEnquiryForm(props) {
                         </div>
                     </div>
                 </div>
-            </section >
+            </div >
         </>
     )
 }

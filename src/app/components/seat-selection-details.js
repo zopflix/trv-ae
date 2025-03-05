@@ -260,7 +260,7 @@ export default function SeatSelectionDetail(props) {
                                                                         {p.seat.code}
                                                                         <p className="mb-0" onClick={(e) => {
                                                                             selectSeat(i, p.seat, true);
-                                                                        }}>test i tag</p>
+                                                                        }}></p>
                                                                     </span>
                                                                 }
                                                             </div>

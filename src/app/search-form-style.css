@@ -416,15 +416,6 @@
 
 @media(max-width:767px) {
 
-    /* div.HolidDayForm {
-        background-color: #fff;
-    } */
-    /* 
-    .FormBoxWrp {
-        margin-top: -50px;
-        margin-bottom: 10PX;
-    } */
-
     .trv-datepicker>.react-datepicker-wrapper {
         bottom: 50%;
     }
@@ -483,9 +474,6 @@
         background-color: transparent !important;
     }
 
-    .mainFlightSearchBox {
-        border: 0px !important;
-    }
 
     .ToCodeSearchBox .dropdown-menu {
         right: 0px !important;
@@ -511,11 +499,6 @@
         font-size: 10px !important;
     }
 
-    div.mainFlightSearchBox {
-        padding: 0px 10px !important;
-        border: 0px !important;
-    }
-
     .ReturnDateBox {
         border-right: 0px !important;
     }
@@ -538,7 +521,6 @@
 
     div.flightSearchWrp {
         border-radius: 5px !important;
-        background: transparent !important;
     }
 
     .formTabsButton li:hover {
@@ -557,10 +539,6 @@
 
 @media(min-width:768px) and (max-width:991px) {
 
-    .FormBoxWrp {
-        margin-top: -100px;
-        margin-bottom: 20px;
-    }
 
     .DepartDatePicer .react-datepicker-popper {
         transform: translate(-50px, 100px) !important;

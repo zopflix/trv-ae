@@ -530,7 +530,7 @@ export default function HolidayDetails(props) {
                                         }}
                                       >
                                         {selectedAccommo == 1 && (
-                                          <>test i tag</>
+                                          <></>
                                         )}
                                         {selectedAccommo == 1 ? (
                                           <span className="fw-bold">
@@ -625,7 +625,7 @@ export default function HolidayDetails(props) {
                                         }}
                                       >
                                         {selectedAccommo == 2 && (
-                                          <>test i tag</>
+                                          <></>
                                         )}
                                         {selectedAccommo == 2 ? (
                                           <span className="fw-bold">
