@@ -480,33 +480,10 @@ body.custom-listing .ContactStrapMobilebox {
     max-width: 900px;
 }
 
-/* .FormBoxWrp {
-    background-image: url('https://assets.travanya.com/banner-fm.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0px;
-} */
-
-.FormBoxWrp {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 9;
-    transform: translate(0px, -50%);
-}
-
 /* media start */
 
-@media(min-width:992px) {}
 
 @media(max-width:991px) {
-
-    .FormBoxWrp {
-        padding: 20px 0px;
-    }
-
     .modifySearch {
         position: fixed;
         left: 0;

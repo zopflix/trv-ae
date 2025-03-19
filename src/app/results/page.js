@@ -1297,10 +1297,10 @@ export default function Results() {
                         <>
                           <h6 className="mb-0 fw-bolder">{fromCode}</h6>
                           {tripType == 1 && (
-                            <span>test i tag</span>
+                            <></>
                           )}
                           {tripType == 2 && (
-                            <span>test i tag</span>
+                            <></>
                           )}
                           <h6 className="mb-0 fw-bolder">{toCode}</h6>
                         </>
@@ -1321,7 +1321,7 @@ export default function Results() {
                   )}
                 </div>
                 <div className="col-2">
-                  <span onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}>test i tag</span>
+                  <span onClick={() => setMobSideFilterClicked(!mobSideFilterClicked)}></span>
                 </div>
               </div>
             </div>

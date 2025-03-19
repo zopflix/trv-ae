@@ -1382,9 +1382,10 @@ export default function Listing() {
                             {currentFilters.segments[0].fromCode}
                           </h6>
                           {currentFilters.segments.length > 1 ? (
-                            <span>test i tag</span>
+                            <></>
+
                           ) : (
-                            <span>test i tag</span>
+                            <></>
                           )}
 
                           <h6 className="mb-0 fw-bolder">
@@ -1509,7 +1510,7 @@ export default function Listing() {
                           document.body.classList.remove("filter-open");
                         }}
                       >
-                        <span>test i tag</span>
+                        <></>
                       </button>
                     </h4>
                   </div>
@@ -4172,7 +4173,7 @@ export default function Listing() {
                                 }}
                               >
                                 <span>Show More</span>
-                                <span>test i tag</span>
+                                <></>
                               </button>
                             )}
                           <button
@@ -4180,7 +4181,7 @@ export default function Listing() {
                             onClick={() => window.scroll(0, 0)}
                           >
                             <span>Back to Top</span>
-                            <span>test i tag</span>
+                            <></>
                           </button>
                         </div>
                       </div>

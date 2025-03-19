@@ -1,7 +1,6 @@
 import { displayAirlines } from "./display-airlines"
 import moment from 'moment';
-import mixpanel from 'mixpanel-browser';
-import axios from "axios";
+// import mixpanel from 'mixpanel-browser';
 import { webCheckInAirlines } from "./web-checkin-airlines";
 import CryptoJS from 'crypto-js'
 
@@ -223,204 +222,204 @@ const calculateBannerPrice = (flightData) => {
 }
 
 const trackMixpanelEvent = async (eventName, currentFlight, isVerified = false, billingDetails = null, searchCriteria = null, deeplinkObj = null) => {
+    return;
+    // mixpanel.init('684babb71cd3a20ed0ffc82ddd17f3b0');
 
-    mixpanel.init('684babb71cd3a20ed0ffc82ddd17f3b0');
+    // if (eventName == "Deeplink_Listing_Load" && searchCriteria) {
+    //     mixpanel.register({
+    //         Utm_Source: searchCriteria.utm_source,
+    //         Utm_Term: searchCriteria.utm_term,
+    //         Referer: searchCriteria.referer
+    //     });
+    // }
+    // if (eventName == "Go_Back"
+    //     || eventName == "India_Call_Listing"
+    //     || eventName == "Add_Manual_Address"
+    //     || eventName == "UC_Listing_CallBanner"
+    //     || eventName == "Make-Payment-Button-International"
+    //     || eventName == "Make-Payment-Button-Domestic"
+    //     || eventName == "Dummy_Ticket_Search"
+    //     || eventName == "Dummy_Ticket_Download_Button"
+    //     || eventName == "Dummy_Ticket_Load"
+    //     || eventName == "View_Seat_Map") {
+    //     mixpanel.track(eventName);
+    //     return;
+    // }
 
-    if (eventName == "Deeplink_Listing_Load" && searchCriteria) {
-        mixpanel.register({
-            Utm_Source: searchCriteria.utm_source,
-            Utm_Term: searchCriteria.utm_term,
-            Referer: searchCriteria.referer
-        });
-    }
-    if (eventName == "Go_Back"
-        || eventName == "India_Call_Listing"
-        || eventName == "Add_Manual_Address"
-        || eventName == "UC_Listing_CallBanner"
-        || eventName == "Make-Payment-Button-International"
-        || eventName == "Make-Payment-Button-Domestic"
-        || eventName == "Dummy_Ticket_Search"
-        || eventName == "Dummy_Ticket_Download_Button"
-        || eventName == "Dummy_Ticket_Load"
-        || eventName == "View_Seat_Map") {
-        mixpanel.track(eventName);
-        return;
-    }
+    // if ((eventName == "Holiday_Inquiry_Submitted" || eventName == 'Holiday_Inquiry_Popup') && searchCriteria != null) {
+    //     mixpanel.track(eventName, {
+    //         email: searchCriteria.email,
+    //         mobile: searchCriteria.mobile,
+    //         From: searchCriteria.placeFrom,
+    //         adults: searchCriteria.adults,
+    //         children: searchCriteria.children
+    //     });
 
-    if ((eventName == "Holiday_Inquiry_Submitted" || eventName == 'Holiday_Inquiry_Popup') && searchCriteria != null) {
-        mixpanel.track(eventName, {
-            email: searchCriteria.email,
-            mobile: searchCriteria.mobile,
-            From: searchCriteria.placeFrom,
-            adults: searchCriteria.adults,
-            children: searchCriteria.children
-        });
+    //     return;
+    // }
 
-        return;
-    }
+    // // const res = await axios.get('https://geolocation-db.com/json/')
 
-    // const res = await axios.get('https://geolocation-db.com/json/')
+    // if (eventName == "Go_to_Home" || eventName == "Bottom_Strip_Call") {
+    //     mixpanel.track(eventName, {
+    //         User_IP: ''
+    //     })
+    //     return;
+    // }
 
-    if (eventName == "Go_to_Home" || eventName == "Bottom_Strip_Call") {
-        mixpanel.track(eventName, {
-            User_IP: ''
-        })
-        return;
-    }
+    // if (eventName == "Deeplink_Banner" && (deeplinkObj != null)) {
+    //     mixpanel.track(eventName, {
+    //         Origin: deeplinkObj.Origin,
+    //         Destination: deeplinkObj.Destination,
+    //         Departure_Date: deeplinkObj.Departure_Date,
+    //         Return_Date: deeplinkObj.Return_Date,
+    //         Trip_Type: deeplinkObj.Trip_Type,
+    //         User_IP: '',
+    //         Email: deeplinkObj.Email,
+    //         Phone: deeplinkObj.Phone
+    //     })
+    //     return;
+    // }
 
-    if (eventName == "Deeplink_Banner" && (deeplinkObj != null)) {
-        mixpanel.track(eventName, {
-            Origin: deeplinkObj.Origin,
-            Destination: deeplinkObj.Destination,
-            Departure_Date: deeplinkObj.Departure_Date,
-            Return_Date: deeplinkObj.Return_Date,
-            Trip_Type: deeplinkObj.Trip_Type,
-            User_IP: '',
-            Email: deeplinkObj.Email,
-            Phone: deeplinkObj.Phone
-        })
-        return;
-    }
+    // if ((eventName == "Deeplink_Listing_Load" || eventName == "No_Result" || eventName == "Home_Widget_Search") && searchCriteria != null) {
+    //     let formattedFromDate = moment(searchCriteria.segments[0].departureDate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
+    //     let formattedToDate = "";
+    //     if (searchCriteria.segments.length > 1)
+    //         formattedToDate = moment(searchCriteria.segments[1].departureDate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
 
-    if ((eventName == "Deeplink_Listing_Load" || eventName == "No_Result" || eventName == "Home_Widget_Search") && searchCriteria != null) {
-        let formattedFromDate = moment(searchCriteria.segments[0].departureDate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
-        let formattedToDate = "";
-        if (searchCriteria.segments.length > 1)
-            formattedToDate = moment(searchCriteria.segments[1].departureDate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
+    //     mixpanel.track(eventName, {
+    //         Origin: searchCriteria.segments[0].fromCode,
+    //         Destination: searchCriteria.segments[0].toCode,
+    //         Departure_Date: formattedFromDate,
+    //         Return_Date: formattedToDate,
+    //         Trip_Type: searchCriteria.tripType == 2 ? "RoundTrip" : "One Way",
+    //         Adult: searchCriteria.noOfAdult,
+    //         Child: searchCriteria.child,
+    //         Inf: searchCriteria.noOfLapInfant,
+    //         Class: getDisplayClass(searchCriteria.cabin),
+    //         User_IP: '',
+    //         Search_ID: searchCriteria.searchId
+    //     });
+    //     return null;
+    // }
 
-        mixpanel.track(eventName, {
-            Origin: searchCriteria.segments[0].fromCode,
-            Destination: searchCriteria.segments[0].toCode,
-            Departure_Date: formattedFromDate,
-            Return_Date: formattedToDate,
-            Trip_Type: searchCriteria.tripType == 2 ? "RoundTrip" : "One Way",
-            Adult: searchCriteria.noOfAdult,
-            Child: searchCriteria.child,
-            Inf: searchCriteria.noOfLapInfant,
-            Class: getDisplayClass(searchCriteria.cabin),
-            User_IP: '',
-            Search_ID: searchCriteria.searchId
-        });
-        return null;
-    }
+    // let formattedFromDate = moment(currentFlight?.trips[0].listOfFlight[0].departeddate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
+    // let formattedToDate = "";
+    // if (currentFlight?.trips.length > 1)
+    //     formattedToDate = moment(currentFlight?.trips[1].listOfFlight[0].departeddate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
+    // let segmentsAirlines = currentFlight?.trips[0].listOfFlight.map(x => x.marketingCarrier);
+    // if (currentFlight?.trips.length > 1) {
+    //     let returnSegmentAirlineCodes = currentFlight?.trips[1].listOfFlight.map(x => x.marketingCarrier);
+    //     segmentsAirlines.push(...returnSegmentAirlineCodes)
+    // }
+    // let noOfAdults = currentFlight?.fareDetails.find(x => x.paxType == 1).noofPax;
+    // let noOfChilds = 0;
+    // let noInfants = 0;
 
-    let formattedFromDate = moment(currentFlight?.trips[0].listOfFlight[0].departeddate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
-    let formattedToDate = "";
-    if (currentFlight?.trips.length > 1)
-        formattedToDate = moment(currentFlight?.trips[1].listOfFlight[0].departeddate).format("YYYY-MM-DD").replace("/", "-").replace("/", "-") + "T12:34:56";
-    let segmentsAirlines = currentFlight?.trips[0].listOfFlight.map(x => x.marketingCarrier);
-    if (currentFlight?.trips.length > 1) {
-        let returnSegmentAirlineCodes = currentFlight?.trips[1].listOfFlight.map(x => x.marketingCarrier);
-        segmentsAirlines.push(...returnSegmentAirlineCodes)
-    }
-    let noOfAdults = currentFlight?.fareDetails.find(x => x.paxType == 1).noofPax;
-    let noOfChilds = 0;
-    let noInfants = 0;
+    // let childPax = currentFlight?.fareDetails.find(x => x.paxType == 3);
+    // if (childPax)
+    //     noOfChilds = childPax.noofPax;
+    // let infantPax = currentFlight?.fareDetails.find(x => x.paxType == 5);
+    // if (infantPax)
+    //     noInfants = infantPax.noofPax;
 
-    let childPax = currentFlight?.fareDetails.find(x => x.paxType == 3);
-    if (childPax)
-        noOfChilds = childPax.noofPax;
-    let infantPax = currentFlight?.fareDetails.find(x => x.paxType == 5);
-    if (infantPax)
-        noInfants = infantPax.noofPax;
+    // if (eventName == "Listing_Itineary_Select" || eventName == "FlightDetail_Continue" || eventName == "Payment_page_Load" || eventName == "Listing_Itineary_Select_Mobile" || eventName == "Flap_Close") {
+    //     /* Track a Select button clicked */
+    //     mixpanel.track(eventName, {
+    //         Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
+    //         Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
+    //         Departure_Date: formattedFromDate,
+    //         Return_Date: formattedToDate,
+    //         Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
+    //         Adult: noOfAdults,
+    //         Child: noOfChilds,
+    //         Inf: noInfants,
+    //         Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
+    //         User_IP: '',
+    //         Segment_Airline: segmentsAirlines.join(),
+    //         Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
+    //         Price: currentFlight?.totalPrice.toFixed(2),
+    //         Departure_Flight_Time: getFormattedTime(currentFlight?.trips[0].listOfFlight[0].departureTime),
+    //         Return_Flight_Time: currentFlight?.trips.length > 1 ? getFormattedTime(currentFlight?.trips[1].listOfFlight[0].departureTime) : "",
+    //         Departure_Flight_No: currentFlight?.trips[0].listOfFlight.map(x => x.flightNumber).join(),
+    //         Return_Flight_No: currentFlight?.trips.length > 1 ? currentFlight?.trips[1].listOfFlight.map(x => x.flightNumber).join() : ""
+    //     });
+    // }
+    // else if ((eventName == "Book_Button_Success" || eventName == "Contact_Information") && billingDetails != null) {
+    //     let returnObj = {
+    //         Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
+    //         Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
+    //         Departure_Date: formattedFromDate,
+    //         Return_Date: formattedToDate,
+    //         Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
+    //         Adult: noOfAdults,
+    //         Child: noOfChilds,
+    //         Inf: noInfants,
+    //         Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
+    //         User_IP: '', //
+    //         Segment_Airline: segmentsAirlines?.join(),
+    //         Airline: segmentsAirlines?.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
+    //         Price: currentFlight?.totalPrice.toFixed(2),
+    //         Departure_Flight_Time: getFormattedTime(currentFlight?.trips[0].listOfFlight[0].departureTime),
+    //         Return_Flight_Time: currentFlight?.trips.length > 1 ? getFormattedTime(currentFlight?.trips[1].listOfFlight[0].departureTime) : "",
+    //         Departure_Flight_No: currentFlight?.trips[0].listOfFlight.map(x => x.flightNumber).join(),
+    //         Return_Flight_No: currentFlight?.trips.length > 1 ? currentFlight?.trips[1].listOfFlight.map(x => x.flightNumber).join() : "",
+    //         isVerified: isVerified,
+    //         Contact_No: billingDetails?.contactDetail?.contactNo,
+    //         Email: billingDetails?.contactDetail?.email
+    //     }
+    //     mixpanel.track(eventName, returnObj);
+    //     return returnObj;
+    // }
+    // else if (eventName == "UC_Banner_Call" || eventName == "UC_Banner_Appear") {/* Track a call  button clicked and Popup appears */
+    //     mixpanel.track(eventName, {
+    //         Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
+    //         Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
+    //         Departure_Date: formattedFromDate,
+    //         Return_Date: formattedToDate,
+    //         Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
+    //         Adult: noOfAdults,
+    //         Child: noOfChilds,
+    //         Inf: noInfants,
+    //         Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
+    //         User_IP: '', //
+    //         Unique_ID: parseInt(generateRandomNumber(6)),
+    //         UC_Price_Display: calculateBannerPrice(currentFlight).toFixed(2),
+    //         Segment_Airline: segmentsAirlines.join(),
+    //         Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
+    //         Departure_Flight_Time: getFormattedTime(currentFlight.trips[0].listOfFlight[0].departureTime),
+    //         Return_Flight_Time: currentFlight.trips.length > 1 ? getFormattedTime(currentFlight.trips[1].listOfFlight[0].departureTime) : "",
+    //         Departure_Flight_No: currentFlight.trips[0].listOfFlight.map(x => x.flightNumber).join(),
+    //         Return_Flight_No: currentFlight.trips.length > 1 ? currentFlight.trips[1].listOfFlight.map(x => x.flightNumber).join() : ""
+    //     });
 
-    if (eventName == "Listing_Itineary_Select" || eventName == "FlightDetail_Continue" || eventName == "Payment_page_Load" || eventName == "Listing_Itineary_Select_Mobile" || eventName == "Flap_Close") {
-        /* Track a Select button clicked */
-        mixpanel.track(eventName, {
-            Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
-            Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
-            Departure_Date: formattedFromDate,
-            Return_Date: formattedToDate,
-            Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
-            Adult: noOfAdults,
-            Child: noOfChilds,
-            Inf: noInfants,
-            Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: '',
-            Segment_Airline: segmentsAirlines.join(),
-            Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
-            Price: currentFlight?.totalPrice.toFixed(2),
-            Departure_Flight_Time: getFormattedTime(currentFlight?.trips[0].listOfFlight[0].departureTime),
-            Return_Flight_Time: currentFlight?.trips.length > 1 ? getFormattedTime(currentFlight?.trips[1].listOfFlight[0].departureTime) : "",
-            Departure_Flight_No: currentFlight?.trips[0].listOfFlight.map(x => x.flightNumber).join(),
-            Return_Flight_No: currentFlight?.trips.length > 1 ? currentFlight?.trips[1].listOfFlight.map(x => x.flightNumber).join() : ""
-        });
-    }
-    else if ((eventName == "Book_Button_Success" || eventName == "Contact_Information") && billingDetails != null) {
-        let returnObj = {
-            Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
-            Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
-            Departure_Date: formattedFromDate,
-            Return_Date: formattedToDate,
-            Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
-            Adult: noOfAdults,
-            Child: noOfChilds,
-            Inf: noInfants,
-            Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: '', //
-            Segment_Airline: segmentsAirlines?.join(),
-            Airline: segmentsAirlines?.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
-            Price: currentFlight?.totalPrice.toFixed(2),
-            Departure_Flight_Time: getFormattedTime(currentFlight?.trips[0].listOfFlight[0].departureTime),
-            Return_Flight_Time: currentFlight?.trips.length > 1 ? getFormattedTime(currentFlight?.trips[1].listOfFlight[0].departureTime) : "",
-            Departure_Flight_No: currentFlight?.trips[0].listOfFlight.map(x => x.flightNumber).join(),
-            Return_Flight_No: currentFlight?.trips.length > 1 ? currentFlight?.trips[1].listOfFlight.map(x => x.flightNumber).join() : "",
-            isVerified: isVerified,
-            Contact_No: billingDetails?.contactDetail?.contactNo,
-            Email: billingDetails?.contactDetail?.email
-        }
-        mixpanel.track(eventName, returnObj);
-        return returnObj;
-    }
-    else if (eventName == "UC_Banner_Call" || eventName == "UC_Banner_Appear") {/* Track a call  button clicked and Popup appears */
-        mixpanel.track(eventName, {
-            Origin: currentFlight?.trips[0].listOfFlight[0].fromCode,
-            Destination: currentFlight?.trips[0].listOfFlight[currentFlight?.trips[0].listOfFlight.length - 1].toCode,
-            Departure_Date: formattedFromDate,
-            Return_Date: formattedToDate,
-            Trip_Type: currentFlight?.trips.length > 1 ? "RoundTrip" : "One Way",
-            Adult: noOfAdults,
-            Child: noOfChilds,
-            Inf: noInfants,
-            Class: getDisplayClass(currentFlight?.trips[0].listOfFlight[0].classOfService),
-            User_IP: '', //
-            Unique_ID: parseInt(generateRandomNumber(6)),
-            UC_Price_Display: calculateBannerPrice(currentFlight).toFixed(2),
-            Segment_Airline: segmentsAirlines.join(),
-            Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
-            Departure_Flight_Time: getFormattedTime(currentFlight.trips[0].listOfFlight[0].departureTime),
-            Return_Flight_Time: currentFlight.trips.length > 1 ? getFormattedTime(currentFlight.trips[1].listOfFlight[0].departureTime) : "",
-            Departure_Flight_No: currentFlight.trips[0].listOfFlight.map(x => x.flightNumber).join(),
-            Return_Flight_No: currentFlight.trips.length > 1 ? currentFlight.trips[1].listOfFlight.map(x => x.flightNumber).join() : ""
-        });
-
-    }
-    else if (eventName == "CNF_Fired") {
-        mixpanel.track(eventName, {
-            Origin: currentFlight.trips[0].listOfFlight[0].fromCode,
-            Destination: currentFlight.trips[0].listOfFlight[currentFlight.trips[0].listOfFlight.length - 1].toCode,
-            Departure_Date: formattedFromDate,
-            Return_Date: formattedToDate,
-            Trip_Type: currentFlight.trips.length > 1 ? "RoundTrip" : "One Way",
-            Adult: noOfAdults,
-            Child: noOfChilds,
-            Inf: noInfants,
-            Class: getDisplayClass(currentFlight.trips[0].listOfFlight[0].classOfService),
-            User_IP: '', //
-            Segment_Airline: segmentsAirlines.join(),
-            Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
-            Price: currentFlight.totalPrice.toFixed(2),
-            Departure_Flight_Time: getFormattedTime(currentFlight.trips[0].listOfFlight[0].departureTime),
-            Return_Flight_Time: currentFlight.trips.length > 1 ? getFormattedTime(currentFlight.trips[1].listOfFlight[0].departureTime) : "",
-            Departure_Flight_No: currentFlight.trips[0].listOfFlight.map(x => x.flightNumber).join(),
-            Return_Flight_No: currentFlight.trips.length > 1 ? currentFlight.trips[1].listOfFlight.map(x => x.flightNumber).join() : "",
-            Payment: currentFlight.paymentStatus,
-            BookingId: currentFlight.bookingId,
-            PNR: currentFlight.pnr,
-            Email: currentFlight.email,
-            Phone: currentFlight.cellCountryCode + '-' + currentFlight.phone
-        });
-    }
+    // }
+    // else if (eventName == "CNF_Fired") {
+    //     mixpanel.track(eventName, {
+    //         Origin: currentFlight.trips[0].listOfFlight[0].fromCode,
+    //         Destination: currentFlight.trips[0].listOfFlight[currentFlight.trips[0].listOfFlight.length - 1].toCode,
+    //         Departure_Date: formattedFromDate,
+    //         Return_Date: formattedToDate,
+    //         Trip_Type: currentFlight.trips.length > 1 ? "RoundTrip" : "One Way",
+    //         Adult: noOfAdults,
+    //         Child: noOfChilds,
+    //         Inf: noInfants,
+    //         Class: getDisplayClass(currentFlight.trips[0].listOfFlight[0].classOfService),
+    //         User_IP: '', //
+    //         Segment_Airline: segmentsAirlines.join(),
+    //         Airline: segmentsAirlines.every(v => v === segmentsAirlines[0]) ? segmentsAirlines[0] : "MIX",
+    //         Price: currentFlight.totalPrice.toFixed(2),
+    //         Departure_Flight_Time: getFormattedTime(currentFlight.trips[0].listOfFlight[0].departureTime),
+    //         Return_Flight_Time: currentFlight.trips.length > 1 ? getFormattedTime(currentFlight.trips[1].listOfFlight[0].departureTime) : "",
+    //         Departure_Flight_No: currentFlight.trips[0].listOfFlight.map(x => x.flightNumber).join(),
+    //         Return_Flight_No: currentFlight.trips.length > 1 ? currentFlight.trips[1].listOfFlight.map(x => x.flightNumber).join() : "",
+    //         Payment: currentFlight.paymentStatus,
+    //         BookingId: currentFlight.bookingId,
+    //         PNR: currentFlight.pnr,
+    //         Email: currentFlight.email,
+    //         Phone: currentFlight.cellCountryCode + '-' + currentFlight.phone
+    //     });
+    // }
 
 }
 

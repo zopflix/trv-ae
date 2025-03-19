@@ -340,7 +340,7 @@ export default function SearchSection(props) {
         width={25}
         height={25}
       />
-      <div className='FormBoxWrp'>
+      <div className='FormBoxWrp position-absolute top-50 w-100 translate-middle-y'>
         <SearchControl
           resultPagePassengers={resultPagePassengers}
           resultPageFromDate={resultPageFromDate}
