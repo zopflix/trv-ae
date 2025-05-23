@@ -55,7 +55,7 @@ export default function Header() {
                                 <Image
                                     className="h-auto w-100"
                                     loader={trvLoader}
-                                    src="travanya-logo.webp"
+                                    src="logo/TravanyaLogoBlue.png"
                                     alt="Travanya Logo"
                                     width={176}
                                     height={43}
@@ -234,7 +234,7 @@ export default function Header() {
                             <Image
                                 className="h-auto"
                                 loader={trvLoader}
-                                src="travanya-logo.webp"
+                                src="logo/TravanyaLogoBlue.png"
                                 alt="Travanya Logo"
                                 width={150}
                                 height={43}
