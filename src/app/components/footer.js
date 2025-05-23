@@ -206,7 +206,7 @@ export default function Footer() {
                         </div>
                         <div className="row">
                             <div className="col-12">
-                                <p className="text-center fs-12 pt-3">Copyright © 2024 <a className="color-white text-decoration-none fw-bold" href="https://www.travanya.ae/">Travanya.ae</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
+                                <p className="text-center fs-12 pt-3">Copyright © 2025 <a className="color-white text-decoration-none fw-bold" href="https://www.travanya.ae/">Travanya.ae</a>, Powered by SHIPRA TRAVELS PVT. LTD. All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
