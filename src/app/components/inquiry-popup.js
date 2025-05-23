@@ -83,8 +83,8 @@ export default function InquiryPopup(props) {
               <Image
                 className="mb-3 h-auto"
                 loader={trvLoader}
-                src="icon/travnya-white-logo.png"
-                alt="Package Icon"
+                src="logo/TravanyaLogoWhite.png"
+                alt="Travanya Logo"
                 width={150}
                 height={25}
               />
