@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { sendHolidayInquiry } from "../services/holidayService";
-import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
+import { Decrypt, getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 
@@ -48,8 +48,8 @@ export default function InquiryPopup(props) {
           : props.package?.StandardPrice,
         adults: props.adults ? props.adults : 1,
         children: props.children ? props.children : 0,
-        placeFrom: props?.location ? props?.location :"",
-        placeTo: props?.location ? props?.location :"",
+        placeFrom: props?.location ? props?.location : "",
+        placeTo: props?.location ? props?.location : "",
         ip: !!res?.data?.IPv4 ? res?.data?.IPv4 : '',
         referer: searchParams?.get('utm_source') ? (searchParams?.get('utm_source') + ((searchParams?.get('utm_medium') ? (' | ' + searchParams?.get('utm_medium')) : '') + (searchParams?.get('utm_campaign') ? ' | ' + searchParams?.get('utm_campaign') : ''))) : '',
         location: props?.package?.isDomestic ? "Domestic" : props?.location
@@ -57,11 +57,16 @@ export default function InquiryPopup(props) {
 
       await trackMixpanelEvent("Holiday_Inquiry_Popup", null, false, null, payload);
 
-      sendHolidayInquiry(payload).then(res => {
-        if (res) {
-          props.setOpenInquiryModal(false);
-          setIsSubmitting(false);
-          window.location.href = `/holidays/thank-you/?id=${res}`;
+      sendHolidayInquiry(payload).then(resData => {
+        const decryptedData = Decrypt(resData);
+        const parsedRes = JSON.parse(decryptedData);
+
+        if (parsedRes) {
+          setTimeout(() => {
+            props.setOpenInquiryModal(false);
+            setIsSubmitting(false);
+            window.location.href = `/holidays/thank-you/?id=${parsedRes}`;
+          }, 2000);
         } else {
           setHasError(true);
           setIsSubmitting(false);
@@ -308,7 +313,7 @@ export default function InquiryPopup(props) {
                           setIsValidEmail(
                             (e.target.value.match(validRegex) &&
                               e.target.value.match(validRegex).length > 0) ==
-                              true
+                            true
                           );
                         }
                       }}

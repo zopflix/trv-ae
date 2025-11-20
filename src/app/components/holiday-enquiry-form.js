@@ -5,7 +5,7 @@ import ReactDatePicker from "react-datepicker";
 import NumericInput from "react-numeric-input";
 import { getAirports } from "../services/flightService";
 import { sendHolidayInquiry } from "../services/holidayService";
-import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
+import { Decrypt, getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
 import { usePathname, useSearchParams } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
@@ -111,10 +111,14 @@ export default function HolidayEnquiryForm(props) {
 
             await trackMixpanelEvent("Holiday_Inquiry_Submitted", null, false, null, payload);
 
-            sendHolidayInquiry(payload).then(res => {
-                if (res) {
-                    setSearchInProgress(false);
-                    window.location.href = `/holidays/thank-you/?id=${res}`;
+            sendHolidayInquiry(payload).then(resData => {
+                const decryptedData = Decrypt(resData);
+                const parsedRes = JSON.parse(decryptedData);
+                if (parsedRes) {
+                    setTimeout(() => {
+                        setSearchInProgress(false);
+                        window.location.href = `/holidays/thank-you/?id=${parsedRes}`;
+                    }, 2000);
                 }
                 else {
                     setHasError(true);

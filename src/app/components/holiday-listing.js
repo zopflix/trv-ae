@@ -8,14 +8,13 @@ import { tenantId } from "../config";
 import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { aedNumberFormat } from "../helpers/common";
+import { aedNumberFormat, Decrypt, Encrypt } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import { Modal } from "react-bootstrap";
 import Footer from "./footer";
 import PartnerLogo from "./partner-logo";
 
 export default function HolidayListing(props) {
-  debugger;
   const title = props?.packageData?.Data?.Title;
   const description = props?.packageData?.Data?.Description;
   const content = props?.packageData?.Data?.Content;
@@ -50,16 +49,37 @@ export default function HolidayListing(props) {
       // setContent(res?.Data?.Content);
       // setFaqs(res?.Data?.FAQs);
 
-      getAllHolidayPackages(tenantId, props?.packageData?.Data?.Name).then(res => {
+      const dataToSend = {
+        TenantId: tenantId,
+        Destination: props?.packageData?.Data?.Name
+      }
+      const encryptedPayload = Encrypt(JSON.stringify(dataToSend));
+
+
+      getAllHolidayPackages({ Request: encryptedPayload }).then(resData => {
+        const decrypted = Decrypt(resData);
+        const res = JSON.parse(decrypted);
 
         if (res?.Success) {
           setHolidayPackages(res?.Data);
           setFilteredHolidayPackages(res?.Data);
           setIsLoading(false);
-          getDurations().then(response => {
-            if (response?.data?.Success)
-              setDurations(response.data.Data);
-          })
+          getDurations().then(resData => {
+
+            try {
+              if (resData) {
+
+                const decrypted = Decrypt(resData?.data);
+                const response = JSON.parse(decrypted);
+
+                if (response?.success) {
+                  setDurations(response?.data);
+                }
+              }
+            } catch (error) {
+              console.error("Error decrypting durations:", error);
+            }
+          });
         }
         else {
           setIsLoading(false);

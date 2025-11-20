@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { isDesktop, isTablet } from "react-device-detect";
 import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
-import { aedNumberFormat } from "../helpers/common";
+import { aedNumberFormat, Decrypt, Encrypt } from "../helpers/common";
 
 
 export default function InternationalTourPackages() {
@@ -23,8 +23,12 @@ export default function InternationalTourPackages() {
     };
 
     useEffect(() => {
-        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
-            if (res && res.length > 0)
+        const dataToSend = { TenantId: 7, IsDomestic: false }
+        const encryptedPayload = Encrypt(JSON.stringify(dataToSend));
+        getDestinationAndPackages({ Request: encryptedPayload }).then(resData => {
+            const decrypted = Decrypt(resData)
+            const res = JSON.parse(decrypted)
+            if (res.length > 0)
                 setInternationalPackages(res);
         });
     }, []);
