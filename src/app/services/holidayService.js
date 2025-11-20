@@ -41,7 +41,7 @@ const getHolidayPackageById = async (id) => {
 
 const getHolidayPackageBySlug = async (slug, destination, tenantId) => {
   try {
-    const response = await axios.get(cmsAPIURL + `HolidayPackage/GetPackageBySlug?slug=${slug}&destination=${destination}&tenantId=${tenantId}`).then(res => res).catch(err => err);
+    const response = await axios.get(cmsAPIURL + `HolidayPackage/GetPackageBySlug?slug=${slug}&tenantId=${tenantId}`).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];
