@@ -40,7 +40,6 @@ export default function InternationalDestinationPage({ data, breadcrumbObj }) {
 
 export async function generateMetadata({ params }) {
     const data = await getHolidayPackageBySlug(params.package, params.destination, tenantId);
-
     return {
         title: data?.Data?.MetaTitle,
         description: data?.Data?.MetaDescription,
