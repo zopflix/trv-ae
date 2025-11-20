@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { sendHolidayInquiry } from "../services/holidayService";
-import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
+import { Decrypt, getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
 import { useSearchParams } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
@@ -49,11 +49,15 @@ export default function InquiryPopup(props) {
 
       await trackMixpanelEvent("Holiday_Inquiry_Popup", null, false, null, payload);
 
-      sendHolidayInquiry(payload).then(res => {
-        if (res) {
-          props.setOpenInquiryModal(false);
-          setIsSubmitting(false);
-          window.location.href = `/holidays/thank-you/?id=${res}`;
+      sendHolidayInquiry(payload).then(resData => {
+        const decryptedData = Decrypt(resData);
+        const parsedRes = JSON.parse(decryptedData);
+        if (parsedRes) {
+          setTimeout(() => {
+            props.setOpenInquiryModal(false);
+            setIsSubmitting(false);
+            window.location.href = `/holidays/thank-you/?id=${parsedRes}`;
+          }, 2000);
         } else {
           setHasError(true);
           setIsSubmitting(false);

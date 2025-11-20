@@ -6,7 +6,7 @@ import FlightInfoSideBar from "../components/flight-info-sidebar";
 import { Suspense, useEffect, useState } from "react";
 import { getDurations, getRelatedPackages } from "../services/holidayService";
 import HolidayEnquiryForm from "./holiday-enquiry-form";
-import { capitalizeEachWord, aedNumberFormat } from "../helpers/common";
+import { capitalizeEachWord, aedNumberFormat, Decrypt } from "../helpers/common";
 import InquiryPopup from "./inquiry-popup";
 import Footer from "./footer";
 import RelatedPackages from "./related-packages";
@@ -61,8 +61,14 @@ export default function HolidayDetails(props) {
     setDestinationSlug(destSlug);
     let dest = capitalizeEachWord(destSlug.split("-").slice(0, -2).join(" "));
     setDestinationName(dest);
-    getDurations().then((response) => {
-      if (response?.data?.Success) setDurations(response.data.Data);
+   getDurations().then((resData) => {
+      
+      const decrypted = Decrypt(resData?.data);
+      const response = JSON.parse(decrypted);
+
+      if (response?.success) {
+        setDurations(response?.data);
+      }
     });
     getRelatedPackages(slug, destSlug).then(res => {
       if (res?.length > 0) {

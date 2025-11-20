@@ -4,14 +4,19 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { getDestinationAndPackages } from "../services/holidayService";
 import { abuDhabiSharjahFlights, DubaiFlights1, DubaiFlights2, headerUAEFlights } from "../helpers/constants";
+import { Decrypt, Encrypt } from "../helpers/common";
 
 export default function MainMenu() {
     const pathname = usePathname();
     const [packagesMenu, setpackagesMenu] = useState([]);
 
     useEffect(() => {
-        getDestinationAndPackages({ TenantId: 7, IsDomestic: false }).then(res => {
-            if (res && res.length > 0)
+        const dataToSend = { TenantId: 7, IsDomestic: false };
+        const encryptedPayload = Encrypt(JSON.stringify(dataToSend));
+        getDestinationAndPackages({ Request: encryptedPayload }).then(resData => {
+             const decrypted = Decrypt(resData)
+            const res = JSON.parse(decrypted)
+            if (res.length > 0)
                 setpackagesMenu(res);
         });
     }, []);
@@ -43,78 +48,78 @@ export default function MainMenu() {
                                         <div className="row">
                                             <div className="col-12 col-lg-3">
                                                 {headerUAEFlights?.map((obj, index) => (
-                                                        <ul className="list-style-none m-0 p-0" key={index}>
-                                                            <li className="py-1">
-                                                                <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
-                                                                    <Image
-                                                                        className="h-auto me-2"
-                                                                        loader={trvLoader}
-                                                                        src="icon/AirPlane-orange-icon.svg"
-                                                                        alt="plane icon"
-                                                                        width={20}
-                                                                        height={20}
-                                                                    />
-                                                                    <span>{obj.name} </span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                    <ul className="list-style-none m-0 p-0" key={index}>
+                                                        <li className="py-1">
+                                                            <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
+                                                                <Image
+                                                                    className="h-auto me-2"
+                                                                    loader={trvLoader}
+                                                                    src="icon/AirPlane-orange-icon.svg"
+                                                                    alt="plane icon"
+                                                                    width={20}
+                                                                    height={20}
+                                                                />
+                                                                <span>{obj.name} </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 ))}
                                             </div>
                                             <div className="col-12 col-lg-3">
                                                 {abuDhabiSharjahFlights?.map((obj, index) => (
-                                                        <ul className="list-style-none m-0 p-0" key={index}>
-                                                            <li className="py-1">
-                                                                <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
-                                                                    <Image
-                                                                        className="h-auto me-2"
-                                                                        loader={trvLoader}
-                                                                        src="icon/AirPlane-orange-icon.svg"
-                                                                        alt="plane icon"
-                                                                        width={20}
-                                                                        height={20}
-                                                                    />
-                                                                    <span>{obj.name} </span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                    <ul className="list-style-none m-0 p-0" key={index}>
+                                                        <li className="py-1">
+                                                            <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
+                                                                <Image
+                                                                    className="h-auto me-2"
+                                                                    loader={trvLoader}
+                                                                    src="icon/AirPlane-orange-icon.svg"
+                                                                    alt="plane icon"
+                                                                    width={20}
+                                                                    height={20}
+                                                                />
+                                                                <span>{obj.name} </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 ))}
                                             </div>
                                             <div className="col-12 col-lg-3">
                                                 {DubaiFlights1?.map((obj, index) => (
-                                                        <ul className="list-style-none m-0 p-0" key={index}>
-                                                            <li className="py-1">
-                                                                <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
-                                                                    <Image
-                                                                        className="h-auto me-2"
-                                                                        loader={trvLoader}
-                                                                        src="icon/AirPlane-orange-icon.svg"
-                                                                        alt="plane icon"
-                                                                        width={20}
-                                                                        height={20}
-                                                                    />
-                                                                    <span>{obj.name} </span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                    <ul className="list-style-none m-0 p-0" key={index}>
+                                                        <li className="py-1">
+                                                            <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
+                                                                <Image
+                                                                    className="h-auto me-2"
+                                                                    loader={trvLoader}
+                                                                    src="icon/AirPlane-orange-icon.svg"
+                                                                    alt="plane icon"
+                                                                    width={20}
+                                                                    height={20}
+                                                                />
+                                                                <span>{obj.name} </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 ))}
                                             </div>
                                             <div className="col-12 col-lg-3">
                                                 {DubaiFlights2?.map((obj, index) => (
-                                                        <ul className="list-style-none m-0 p-0" key={index}>
-                                                            <li className="py-1">
-                                                                <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
-                                                                    <Image
-                                                                        className="h-auto me-2"
-                                                                        loader={trvLoader}
-                                                                        src="icon/AirPlane-orange-icon.svg"
-                                                                        alt="plane icon"
-                                                                        width={20}
-                                                                        height={20}
-                                                                    />
-                                                                    <span>{obj.name} </span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                    <ul className="list-style-none m-0 p-0" key={index}>
+                                                        <li className="py-1">
+                                                            <a className="text-decoration-none d-flex align-items-center" href={obj.url}>
+                                                                <Image
+                                                                    className="h-auto me-2"
+                                                                    loader={trvLoader}
+                                                                    src="icon/AirPlane-orange-icon.svg"
+                                                                    alt="plane icon"
+                                                                    width={20}
+                                                                    height={20}
+                                                                />
+                                                                <span>{obj.name} </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 ))}
                                             </div>
                                         </div>

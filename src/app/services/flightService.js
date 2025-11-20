@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { apiURL, cmsAPIURL, tenantId } from '../config';
+import { Decrypt } from '../helpers/common';
 
 
 export {
@@ -21,12 +22,13 @@ export {
 }
 
 const getAirports = async () => {
-    try {
-        const response = await axios.get(apiURL + "Flights/GetAirportsDataNew");
-        return response.data;
-    } catch (error) {
-        return [];
-    }
+  try {
+    const response = await axios.get(apiURL + "Flights/airports-enc");
+    return JSON.parse(Decrypt(response.data));
+  } catch (error) {
+    console.error("Error fetching airports:", error);
+    return { error: error };
+  }
 };
 
 const searchFlights = async (data) => {
