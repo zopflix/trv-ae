@@ -58,6 +58,7 @@ export {
     getTimeOfDay,
     capitalizeEachWord,
     Decrypt,
+    Encrypt,
     getDaysAgo,
     getLastDateOfCurrentMonth,
     gtag_report_conversion,
@@ -78,6 +79,22 @@ const flightClassOptions = [{
 const dec2hex = (dec) => {
     return dec.toString(16).padStart(2, "0")
 }
+
+
+const Encrypt = (str) => {
+  const key = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
+  const iv = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
+  var encrypted = CryptoJS.AES.encrypt(str, key, {
+    keySize: 128 / 8,
+    iv: iv,
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7,
+  });
+  return encrypted.toString();
+};
+
+
+
 
 const generateId = (len) => {
     var arr = new Uint8Array((len || 40) / 2)

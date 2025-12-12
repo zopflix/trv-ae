@@ -56,7 +56,7 @@ export default function InnerHeader() {
                             <Image
                                 className="h-auto w-100"
                                 loader={trvLoader}
-                                src="travanya-logo.webp"
+                                src="logo/TravanyaLogoBlue.png"
                                 alt="Travanya Logo"
                                 width={176}
                                 height={43}

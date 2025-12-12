@@ -3,7 +3,7 @@ import { sfLoader, trvLoader } from "../helpers/imageKitLoader";
 import { tenantId } from "../config";
 import { getAllHolidayPackages } from "../services/holidayService";
 import { Suspense, useEffect, useState } from "react";
-import { aedNumberFormat } from "../helpers/common";
+import { aedNumberFormat, Decrypt, Encrypt } from "../helpers/common";
 import InquiryPopup from "./holiday-inquiry-popup";
 
 export default function HolidayCategories() {
@@ -12,7 +12,16 @@ export default function HolidayCategories() {
     const [openInquiryModal, setOpenInquiryModal] = useState(false);
 
     const getHolidaysByDest = (dest) => {
-        getAllHolidayPackages(tenantId, dest).then(res => {
+        const dataToSend = {
+            TenantId: tenantId,
+            Destination: dest
+        }
+
+
+        const encryptedPayload = Encrypt(JSON.stringify(dataToSend));
+        getAllHolidayPackages({ Request: encryptedPayload }).then(resData => {
+            const decrypted = Decrypt(resData);
+            const res = JSON.parse(decrypted);
             if (res?.Success) {
                 if (res.Data.length > 4)
                     setHolidayPackages(res.Data.slice(0, 4));
@@ -246,7 +255,7 @@ export default function HolidayCategories() {
                                                 </div>
                                             </div>
                                             <div className="col-12 col-lg-10"
-                                                // onClick={() => handleClick('Azerbaijan')}
+                                            // onClick={() => handleClick('Azerbaijan')}
                                             >
                                                 <div className="d-flex HolidayTitle align-items-center justify-content-between cursor-pointer">
                                                     <div>

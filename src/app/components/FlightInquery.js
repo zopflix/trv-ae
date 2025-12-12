@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
+import { Decrypt, getFormattedDate8, trackMixpanelEvent } from "../helpers/common";
 import { trvLoader } from "../helpers/imageKitLoader";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -89,13 +89,17 @@ export default function FlightInqueryForm(props) {
    
       await trackMixpanelEvent("Holiday_Inquiry_Popup", null, false, null, payload);
 
-      sendHolidayInquiry(payload).then(res => {
-        if (res) {
+      sendHolidayInquiry(payload).then(resData => {
+         const decryptedData = Decrypt(resData);
+        const parsedRes = JSON.parse(decryptedData);
+        if (parsedRes) {
           props.setopenFlightEnquiryForm(false);
           setIsSubmitting(false);
-          if(res){
-            window.location.href = `/thank-you/?id=${res}`;
+          if(parsedRes){
+            window.location.href = `/thank-you/?id=${parsedRes}`;
           }
+
+          
         } else {
           setHasError(true);
           setIsSubmitting(false);

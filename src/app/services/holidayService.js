@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Encrypt } from "../helpers/common";
 
 const { cmsAPIURL, crmAPIURL, tenantId } = require("../config");
 
@@ -16,18 +17,18 @@ export {
 
 // DURATIONS APIS
 const getDurations = async () => {
-  return axios.get(cmsAPIURL + 'HolidayPackage/GetDurations').then(res => res).catch(err => err);
+  return axios.get(cmsAPIURL + 'HolidayPackage/GetDurationsEnc').then(res => res).catch(err => err);
 }
 
 // HOLIDAY PACKAGE APIS
-const getAllHolidayPackages = async (tenantId, destination) => {
+const getAllHolidayPackages = async (data) => {
   try {
-    const response = await axios.get(cmsAPIURL + `HolidayPackage/GetAll?tenantId=${tenantId}&destination=${destination}`);
+    const response = await axios.post(cmsAPIURL + `HolidayPackage/GetAllEnc`, data).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];
   }
-};
+}
 
 const getHolidayPackageById = async (id) => {
   try {
@@ -40,7 +41,7 @@ const getHolidayPackageById = async (id) => {
 
 const getHolidayPackageBySlug = async (slug, destination, tenantId) => {
   try {
-    const response = await axios.get(cmsAPIURL + `HolidayPackage/GetPackageBySlug?slug=${slug}&destination=${destination}&tenantId=${tenantId}`).then(res => res).catch(err => err);
+    const response = await axios.get(cmsAPIURL + `HolidayPackage/GetPackageBySlug?slug=${slug}&tenantId=${tenantId}`).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];
@@ -50,8 +51,10 @@ const getHolidayPackageBySlug = async (slug, destination, tenantId) => {
 const sendHolidayInquiry = async (data) => {
   try {
     let params = `?r[source]=3&r[ip]=${data.ip}&r[referer]=${data.referer}&r[pack_type]=${data.packType}&r[place_from]=${data.placeFrom}&r[place_to]=${data.packageName}&r[return_date]=${data.returnDate}&r[travel_date]=${data.travelDate}&r[site]=${'TRVAE'}&r[mode]=${data.mode ? 2 : 1}&r[adults]=${data.adults}&r[childs]=${data.children}&r[name]=${data.name}&r[email]=${data.email}&r[mobile]=${data.mobile}&r[currency]=AED&r[budget]=${data.price}&loc=${data.location}`;
-    let dataToSend = { payload: params };
-    const response = await axios.post(`${crmAPIURL}public/SubmitHolidayInquiry`, dataToSend);
+    // let dataToSend = { payload: params };
+    const encryptedPayload = Encrypt(JSON.stringify(params));
+
+    const response = await axios.post(`${crmAPIURL}public/SubmitHolidayInquiryEnc`, { Request: encryptedPayload });
     return response.data;
   } catch (error) {
     return [];
@@ -60,7 +63,7 @@ const sendHolidayInquiry = async (data) => {
 
 const getDestinationAndPackages = async (data) => {
   try {
-    const response = await axios.post(cmsAPIURL + `Public/GetDestinationAndPackages`, data).then(res => res).catch(err => err);
+    const response = await axios.post(cmsAPIURL + `Public/GetDestinationAndPackagesEnc`, data).then(res => res).catch(err => err);
     return response.data;
   } catch (error) {
     return [];
