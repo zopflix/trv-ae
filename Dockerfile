@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install only production dependencies
-RUN npm i --force
+RUN npm ci
 
 # Copy source files and build the Next.js app
 COPY . .
