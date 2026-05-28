@@ -82,8 +82,8 @@ const dec2hex = (dec) => {
 
 
 const Encrypt = (str) => {
-  const key = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
-  const iv = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
+  const key = CryptoJS.enc.Utf8.parse("E#KeySh!pra@@0#0");
+  const iv = CryptoJS.enc.Utf8.parse("E#KeySh!pra@@0#0");
   var encrypted = CryptoJS.AES.encrypt(str, key, {
     keySize: 128 / 8,
     iv: iv,
@@ -844,8 +844,8 @@ const capitalizeEachWord = (str) => {
 }
 
 const Decrypt = (str) => {
-    const key = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
-    const iv = CryptoJS.enc.Utf8.parse("12@22Sh!pra@@0#0");
+    const key = CryptoJS.enc.Utf8.parse("E#KeySh!pra@@0#0");
+    const iv = CryptoJS.enc.Utf8.parse("E#KeySh!pra@@0#0");
     var decrypt = CryptoJS.AES.decrypt(str, key, {
         keySize: 128 / 8,
         iv: iv,
