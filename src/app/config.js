@@ -12,7 +12,10 @@ export const indiaUSAFlightContact = "+1-844-659-0101";
 export const appBaseURL = "https://www.travanya.ae/";
 export const uaeContact = "+971-506581980";
 export const holidayContactNumber = "+971 506 58 1980";
-export const flightContactNumber ="+971 506 58 1980"
+export const flightContactNumber ="+971 506 58 1980";
+
+export const gtmId = "GTM-KJ3ZC7DD";
+
 
 export const currentCoupons = [
     { name: "TRAVANYAFIRST", discount: 200, minPrice: 0, minPax: 0, discountPercentage: 10, isReturnCouponOnly: false },
